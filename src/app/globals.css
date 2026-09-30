@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+/* Charte Maisons & Hôtels Sibuet (relevée sur maisonsethotels-sibuet.com) */
+@theme {
+  --color-cream: #f6f5f3;
+  --color-sand: #eeebe7;
+  --color-line: #e3dfda;
+  --color-greige: #aea79f;
+  --color-taupe: #aa9b8e;
+  --color-ink: #34342e;
+  --color-ink-soft: #616365;
+  --color-brown: #4c3327;
+  --color-brick: #9c4a2f;
+  --color-ochre: #b08a4a;
+  --color-olive: #6f7456;
+  --color-sage: #8f948a;
+
+  --font-display: var(--font-garamond), "Garamond", Georgia, serif;
+  --font-sans: var(--font-source-sans), "Source Sans Pro", system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Petites capitales espacées, signature typographique du site Sibuet */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-greige) transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brown);
+  outline-offset: 2px;
 }

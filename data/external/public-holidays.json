@@ -1,0 +1,1013 @@
+{
+ "source": "Nager.Date (date.nager.at)",
+ "items": [
+  {
+   "country": "FR",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Jour de l'an"
+  },
+  {
+   "country": "FR",
+   "date": "2026-04-06",
+   "name": "Easter Monday",
+   "localName": "Lundi de Pâques"
+  },
+  {
+   "country": "FR",
+   "date": "2026-05-01",
+   "name": "Labour Day",
+   "localName": "Fête du Travail"
+  },
+  {
+   "country": "FR",
+   "date": "2026-05-08",
+   "name": "Victory in Europe Day",
+   "localName": "Victoire 1945"
+  },
+  {
+   "country": "FR",
+   "date": "2026-05-14",
+   "name": "Ascension Day",
+   "localName": "Ascension"
+  },
+  {
+   "country": "FR",
+   "date": "2026-05-25",
+   "name": "Whit Monday",
+   "localName": "Lundi de Pentecôte"
+  },
+  {
+   "country": "FR",
+   "date": "2026-07-14",
+   "name": "Bastille Day",
+   "localName": "Fête nationale"
+  },
+  {
+   "country": "FR",
+   "date": "2026-08-15",
+   "name": "Assumption Day",
+   "localName": "Assomption"
+  },
+  {
+   "country": "FR",
+   "date": "2026-11-01",
+   "name": "All Saints' Day",
+   "localName": "Toussaint"
+  },
+  {
+   "country": "FR",
+   "date": "2026-11-11",
+   "name": "Armistice Day",
+   "localName": "Armistice 1918"
+  },
+  {
+   "country": "FR",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Noël"
+  },
+  {
+   "country": "FR",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Jour de l'an"
+  },
+  {
+   "country": "FR",
+   "date": "2027-03-29",
+   "name": "Easter Monday",
+   "localName": "Lundi de Pâques"
+  },
+  {
+   "country": "FR",
+   "date": "2027-05-01",
+   "name": "Labour Day",
+   "localName": "Fête du Travail"
+  },
+  {
+   "country": "FR",
+   "date": "2027-05-06",
+   "name": "Ascension Day",
+   "localName": "Ascension"
+  },
+  {
+   "country": "FR",
+   "date": "2027-05-08",
+   "name": "Victory in Europe Day",
+   "localName": "Victoire 1945"
+  },
+  {
+   "country": "FR",
+   "date": "2027-05-17",
+   "name": "Whit Monday",
+   "localName": "Lundi de Pentecôte"
+  },
+  {
+   "country": "FR",
+   "date": "2027-07-14",
+   "name": "Bastille Day",
+   "localName": "Fête nationale"
+  },
+  {
+   "country": "FR",
+   "date": "2027-08-15",
+   "name": "Assumption Day",
+   "localName": "Assomption"
+  },
+  {
+   "country": "FR",
+   "date": "2027-11-01",
+   "name": "All Saints' Day",
+   "localName": "Toussaint"
+  },
+  {
+   "country": "FR",
+   "date": "2027-11-11",
+   "name": "Armistice Day",
+   "localName": "Armistice 1918"
+  },
+  {
+   "country": "FR",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Noël"
+  },
+  {
+   "country": "GB",
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "localName": "Good Friday"
+  },
+  {
+   "country": "GB",
+   "date": "2026-05-04",
+   "name": "Early May Bank Holiday",
+   "localName": "Early May Bank Holiday"
+  },
+  {
+   "country": "GB",
+   "date": "2026-05-25",
+   "name": "Spring Bank Holiday",
+   "localName": "Spring Bank Holiday"
+  },
+  {
+   "country": "GB",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Christmas Day"
+  },
+  {
+   "country": "GB",
+   "date": "2026-12-28",
+   "name": "St. Stephen's Day",
+   "localName": "Boxing Day"
+  },
+  {
+   "country": "GB",
+   "date": "2027-03-26",
+   "name": "Good Friday",
+   "localName": "Good Friday"
+  },
+  {
+   "country": "GB",
+   "date": "2027-05-03",
+   "name": "Early May Bank Holiday",
+   "localName": "Early May Bank Holiday"
+  },
+  {
+   "country": "GB",
+   "date": "2027-05-31",
+   "name": "Spring Bank Holiday",
+   "localName": "Spring Bank Holiday"
+  },
+  {
+   "country": "GB",
+   "date": "2027-12-27",
+   "name": "Christmas Day",
+   "localName": "Christmas Day"
+  },
+  {
+   "country": "GB",
+   "date": "2027-12-28",
+   "name": "St. Stephen's Day",
+   "localName": "Boxing Day"
+  },
+  {
+   "country": "NL",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Nieuwjaarsdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-04-05",
+   "name": "Easter Sunday",
+   "localName": "Eerste Paasdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-04-06",
+   "name": "Easter Monday",
+   "localName": "Tweede Paasdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-04-27",
+   "name": "King's Day",
+   "localName": "Koningsdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-05-14",
+   "name": "Ascension Day",
+   "localName": "Hemelvaartsdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-05-24",
+   "name": "Pentecost",
+   "localName": "Eerste Pinksterdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-05-25",
+   "name": "Whit Monday",
+   "localName": "Tweede Pinksterdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Eerste Kerstdag"
+  },
+  {
+   "country": "NL",
+   "date": "2026-12-26",
+   "name": "St. Stephen's Day",
+   "localName": "Tweede Kerstdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Nieuwjaarsdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-03-28",
+   "name": "Easter Sunday",
+   "localName": "Eerste Paasdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-03-29",
+   "name": "Easter Monday",
+   "localName": "Tweede Paasdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-04-27",
+   "name": "King's Day",
+   "localName": "Koningsdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-05-06",
+   "name": "Ascension Day",
+   "localName": "Hemelvaartsdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-05-16",
+   "name": "Pentecost",
+   "localName": "Eerste Pinksterdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-05-17",
+   "name": "Whit Monday",
+   "localName": "Tweede Pinksterdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Eerste Kerstdag"
+  },
+  {
+   "country": "NL",
+   "date": "2027-12-26",
+   "name": "St. Stephen's Day",
+   "localName": "Tweede Kerstdag"
+  },
+  {
+   "country": "BE",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Nieuwjaar"
+  },
+  {
+   "country": "BE",
+   "date": "2026-04-05",
+   "name": "Easter Sunday",
+   "localName": "Pasen"
+  },
+  {
+   "country": "BE",
+   "date": "2026-04-06",
+   "name": "Easter Monday",
+   "localName": "Paasmaandag"
+  },
+  {
+   "country": "BE",
+   "date": "2026-05-01",
+   "name": "Labour Day",
+   "localName": "Dag van de arbeid"
+  },
+  {
+   "country": "BE",
+   "date": "2026-05-14",
+   "name": "Ascension Day",
+   "localName": "Onze Lieve Heer hemel"
+  },
+  {
+   "country": "BE",
+   "date": "2026-05-25",
+   "name": "Whit Monday",
+   "localName": "Pinkstermaandag"
+  },
+  {
+   "country": "BE",
+   "date": "2026-07-21",
+   "name": "Belgian National Day",
+   "localName": "Nationale feestdag"
+  },
+  {
+   "country": "BE",
+   "date": "2026-08-15",
+   "name": "Assumption Day",
+   "localName": "Onze Lieve Vrouw hemelvaart"
+  },
+  {
+   "country": "BE",
+   "date": "2026-11-01",
+   "name": "All Saints' Day",
+   "localName": "Allerheiligen"
+  },
+  {
+   "country": "BE",
+   "date": "2026-11-11",
+   "name": "Armistice Day",
+   "localName": "Wapenstilstand"
+  },
+  {
+   "country": "BE",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Kerstdag"
+  },
+  {
+   "country": "BE",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Nieuwjaar"
+  },
+  {
+   "country": "BE",
+   "date": "2027-03-28",
+   "name": "Easter Sunday",
+   "localName": "Pasen"
+  },
+  {
+   "country": "BE",
+   "date": "2027-03-29",
+   "name": "Easter Monday",
+   "localName": "Paasmaandag"
+  },
+  {
+   "country": "BE",
+   "date": "2027-05-01",
+   "name": "Labour Day",
+   "localName": "Dag van de arbeid"
+  },
+  {
+   "country": "BE",
+   "date": "2027-05-06",
+   "name": "Ascension Day",
+   "localName": "Onze Lieve Heer hemel"
+  },
+  {
+   "country": "BE",
+   "date": "2027-05-17",
+   "name": "Whit Monday",
+   "localName": "Pinkstermaandag"
+  },
+  {
+   "country": "BE",
+   "date": "2027-07-21",
+   "name": "Belgian National Day",
+   "localName": "Nationale feestdag"
+  },
+  {
+   "country": "BE",
+   "date": "2027-08-15",
+   "name": "Assumption Day",
+   "localName": "Onze Lieve Vrouw hemelvaart"
+  },
+  {
+   "country": "BE",
+   "date": "2027-11-01",
+   "name": "All Saints' Day",
+   "localName": "Allerheiligen"
+  },
+  {
+   "country": "BE",
+   "date": "2027-11-11",
+   "name": "Armistice Day",
+   "localName": "Wapenstilstand"
+  },
+  {
+   "country": "BE",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Kerstdag"
+  },
+  {
+   "country": "CH",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Neujahr"
+  },
+  {
+   "country": "CH",
+   "date": "2026-05-14",
+   "name": "Ascension Day",
+   "localName": "Auffahrt"
+  },
+  {
+   "country": "CH",
+   "date": "2026-08-01",
+   "name": "Swiss National Day",
+   "localName": "Bundesfeier"
+  },
+  {
+   "country": "CH",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Weihnachten"
+  },
+  {
+   "country": "CH",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Neujahr"
+  },
+  {
+   "country": "CH",
+   "date": "2027-05-06",
+   "name": "Ascension Day",
+   "localName": "Auffahrt"
+  },
+  {
+   "country": "CH",
+   "date": "2027-08-01",
+   "name": "Swiss National Day",
+   "localName": "Bundesfeier"
+  },
+  {
+   "country": "CH",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Weihnachten"
+  },
+  {
+   "country": "DE",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Neujahr"
+  },
+  {
+   "country": "DE",
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "localName": "Karfreitag"
+  },
+  {
+   "country": "DE",
+   "date": "2026-04-06",
+   "name": "Easter Monday",
+   "localName": "Ostermontag"
+  },
+  {
+   "country": "DE",
+   "date": "2026-05-01",
+   "name": "Labour Day",
+   "localName": "Tag der Arbeit"
+  },
+  {
+   "country": "DE",
+   "date": "2026-05-14",
+   "name": "Ascension Day",
+   "localName": "Christi Himmelfahrt"
+  },
+  {
+   "country": "DE",
+   "date": "2026-05-25",
+   "name": "Whit Monday",
+   "localName": "Pfingstmontag"
+  },
+  {
+   "country": "DE",
+   "date": "2026-10-03",
+   "name": "German Unity Day",
+   "localName": "Tag der Deutschen Einheit"
+  },
+  {
+   "country": "DE",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Erster Weihnachtstag"
+  },
+  {
+   "country": "DE",
+   "date": "2026-12-26",
+   "name": "St. Stephen's Day",
+   "localName": "Zweiter Weihnachtstag"
+  },
+  {
+   "country": "DE",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Neujahr"
+  },
+  {
+   "country": "DE",
+   "date": "2027-03-26",
+   "name": "Good Friday",
+   "localName": "Karfreitag"
+  },
+  {
+   "country": "DE",
+   "date": "2027-03-29",
+   "name": "Easter Monday",
+   "localName": "Ostermontag"
+  },
+  {
+   "country": "DE",
+   "date": "2027-05-01",
+   "name": "Labour Day",
+   "localName": "Tag der Arbeit"
+  },
+  {
+   "country": "DE",
+   "date": "2027-05-06",
+   "name": "Ascension Day",
+   "localName": "Christi Himmelfahrt"
+  },
+  {
+   "country": "DE",
+   "date": "2027-05-17",
+   "name": "Whit Monday",
+   "localName": "Pfingstmontag"
+  },
+  {
+   "country": "DE",
+   "date": "2027-10-03",
+   "name": "German Unity Day",
+   "localName": "Tag der Deutschen Einheit"
+  },
+  {
+   "country": "DE",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Erster Weihnachtstag"
+  },
+  {
+   "country": "DE",
+   "date": "2027-12-26",
+   "name": "St. Stephen's Day",
+   "localName": "Zweiter Weihnachtstag"
+  },
+  {
+   "country": "IT",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Capodanno"
+  },
+  {
+   "country": "IT",
+   "date": "2026-01-06",
+   "name": "Epiphany",
+   "localName": "Epifania"
+  },
+  {
+   "country": "IT",
+   "date": "2026-04-05",
+   "name": "Easter Sunday",
+   "localName": "Pasqua"
+  },
+  {
+   "country": "IT",
+   "date": "2026-04-06",
+   "name": "Easter Monday",
+   "localName": "Lunedì dell'Angelo"
+  },
+  {
+   "country": "IT",
+   "date": "2026-04-25",
+   "name": "Liberation Day",
+   "localName": "Festa della Liberazione"
+  },
+  {
+   "country": "IT",
+   "date": "2026-05-01",
+   "name": "International Workers Day",
+   "localName": "Festa del Lavoro"
+  },
+  {
+   "country": "IT",
+   "date": "2026-06-02",
+   "name": "Republic Day",
+   "localName": "Festa della Repubblica"
+  },
+  {
+   "country": "IT",
+   "date": "2026-08-15",
+   "name": "Assumption Day",
+   "localName": "Ferragosto o Assunzione"
+  },
+  {
+   "country": "IT",
+   "date": "2026-10-04",
+   "name": "St. Francis of Assisi's Day",
+   "localName": "San Francesco d'Assisi"
+  },
+  {
+   "country": "IT",
+   "date": "2026-11-01",
+   "name": "All Saints Day",
+   "localName": "Tutti i Santi"
+  },
+  {
+   "country": "IT",
+   "date": "2026-12-08",
+   "name": "Immaculate Conception",
+   "localName": "Immacolata Concezione"
+  },
+  {
+   "country": "IT",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Natale"
+  },
+  {
+   "country": "IT",
+   "date": "2026-12-26",
+   "name": "St. Stephen's Day",
+   "localName": "Santo Stefano"
+  },
+  {
+   "country": "IT",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Capodanno"
+  },
+  {
+   "country": "IT",
+   "date": "2027-01-06",
+   "name": "Epiphany",
+   "localName": "Epifania"
+  },
+  {
+   "country": "IT",
+   "date": "2027-03-28",
+   "name": "Easter Sunday",
+   "localName": "Pasqua"
+  },
+  {
+   "country": "IT",
+   "date": "2027-03-29",
+   "name": "Easter Monday",
+   "localName": "Lunedì dell'Angelo"
+  },
+  {
+   "country": "IT",
+   "date": "2027-04-25",
+   "name": "Liberation Day",
+   "localName": "Festa della Liberazione"
+  },
+  {
+   "country": "IT",
+   "date": "2027-05-01",
+   "name": "International Workers Day",
+   "localName": "Festa del Lavoro"
+  },
+  {
+   "country": "IT",
+   "date": "2027-06-02",
+   "name": "Republic Day",
+   "localName": "Festa della Repubblica"
+  },
+  {
+   "country": "IT",
+   "date": "2027-08-15",
+   "name": "Assumption Day",
+   "localName": "Ferragosto o Assunzione"
+  },
+  {
+   "country": "IT",
+   "date": "2027-10-04",
+   "name": "St. Francis of Assisi's Day",
+   "localName": "San Francesco d'Assisi"
+  },
+  {
+   "country": "IT",
+   "date": "2027-11-01",
+   "name": "All Saints Day",
+   "localName": "Tutti i Santi"
+  },
+  {
+   "country": "IT",
+   "date": "2027-12-08",
+   "name": "Immaculate Conception",
+   "localName": "Immacolata Concezione"
+  },
+  {
+   "country": "IT",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Natale"
+  },
+  {
+   "country": "IT",
+   "date": "2027-12-26",
+   "name": "St. Stephen's Day",
+   "localName": "Santo Stefano"
+  },
+  {
+   "country": "US",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "New Year's Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-01-19",
+   "name": "Martin Luther King, Jr. Day",
+   "localName": "Martin Luther King, Jr. Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-02-16",
+   "name": "Presidents Day",
+   "localName": "Washington's Birthday"
+  },
+  {
+   "country": "US",
+   "date": "2026-05-25",
+   "name": "Memorial Day",
+   "localName": "Memorial Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-06-19",
+   "name": "Juneteenth National Independence Day",
+   "localName": "Juneteenth National Independence Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-07-03",
+   "name": "Independence Day",
+   "localName": "Independence Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-09-07",
+   "name": "Labour Day",
+   "localName": "Labor Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-11-11",
+   "name": "Veterans Day",
+   "localName": "Veterans Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-11-26",
+   "name": "Thanksgiving Day",
+   "localName": "Thanksgiving Day"
+  },
+  {
+   "country": "US",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Christmas Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "New Year's Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-01-18",
+   "name": "Martin Luther King, Jr. Day",
+   "localName": "Martin Luther King, Jr. Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-02-15",
+   "name": "Presidents Day",
+   "localName": "Washington's Birthday"
+  },
+  {
+   "country": "US",
+   "date": "2027-05-31",
+   "name": "Memorial Day",
+   "localName": "Memorial Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-06-18",
+   "name": "Juneteenth National Independence Day",
+   "localName": "Juneteenth National Independence Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-07-05",
+   "name": "Independence Day",
+   "localName": "Independence Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-09-06",
+   "name": "Labour Day",
+   "localName": "Labor Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-11-11",
+   "name": "Veterans Day",
+   "localName": "Veterans Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-11-25",
+   "name": "Thanksgiving Day",
+   "localName": "Thanksgiving Day"
+  },
+  {
+   "country": "US",
+   "date": "2027-12-24",
+   "name": "Christmas Day",
+   "localName": "Christmas Day"
+  },
+  {
+   "country": "BR",
+   "date": "2026-01-01",
+   "name": "New Year's Day",
+   "localName": "Confraternização Universal"
+  },
+  {
+   "country": "BR",
+   "date": "2026-04-03",
+   "name": "Good Friday",
+   "localName": "Sexta-feira Santa"
+  },
+  {
+   "country": "BR",
+   "date": "2026-04-05",
+   "name": "Easter Sunday",
+   "localName": "Domingo de Páscoa"
+  },
+  {
+   "country": "BR",
+   "date": "2026-04-21",
+   "name": "Tiradentes",
+   "localName": "Dia de Tiradentes"
+  },
+  {
+   "country": "BR",
+   "date": "2026-05-01",
+   "name": "Labour Day",
+   "localName": "Dia do Trabalhador"
+  },
+  {
+   "country": "BR",
+   "date": "2026-06-04",
+   "name": "Corpus Christi",
+   "localName": "Corpus Christi"
+  },
+  {
+   "country": "BR",
+   "date": "2026-09-07",
+   "name": "Independence Day",
+   "localName": "Dia da Independência"
+  },
+  {
+   "country": "BR",
+   "date": "2026-10-12",
+   "name": "Our Lady of Aparecida",
+   "localName": "Nossa Senhora Aparecida"
+  },
+  {
+   "country": "BR",
+   "date": "2026-11-02",
+   "name": "All Souls' Day",
+   "localName": "Dia de Finados"
+  },
+  {
+   "country": "BR",
+   "date": "2026-11-15",
+   "name": "Republic Proclamation Day",
+   "localName": "Proclamação da República"
+  },
+  {
+   "country": "BR",
+   "date": "2026-11-20",
+   "name": "Black Awareness Day",
+   "localName": "Dia da Consciência Negra"
+  },
+  {
+   "country": "BR",
+   "date": "2026-12-25",
+   "name": "Christmas Day",
+   "localName": "Natal"
+  },
+  {
+   "country": "BR",
+   "date": "2027-01-01",
+   "name": "New Year's Day",
+   "localName": "Confraternização Universal"
+  },
+  {
+   "country": "BR",
+   "date": "2027-03-26",
+   "name": "Good Friday",
+   "localName": "Sexta-feira Santa"
+  },
+  {
+   "country": "BR",
+   "date": "2027-03-28",
+   "name": "Easter Sunday",
+   "localName": "Domingo de Páscoa"
+  },
+  {
+   "country": "BR",
+   "date": "2027-04-21",
+   "name": "Tiradentes",
+   "localName": "Dia de Tiradentes"
+  },
+  {
+   "country": "BR",
+   "date": "2027-05-01",
+   "name": "Labour Day",
+   "localName": "Dia do Trabalhador"
+  },
+  {
+   "country": "BR",
+   "date": "2027-05-27",
+   "name": "Corpus Christi",
+   "localName": "Corpus Christi"
+  },
+  {
+   "country": "BR",
+   "date": "2027-09-07",
+   "name": "Independence Day",
+   "localName": "Dia da Independência"
+  },
+  {
+   "country": "BR",
+   "date": "2027-10-12",
+   "name": "Our Lady of Aparecida",
+   "localName": "Nossa Senhora Aparecida"
+  },
+  {
+   "country": "BR",
+   "date": "2027-11-02",
+   "name": "All Souls' Day",
+   "localName": "Dia de Finados"
+  },
+  {
+   "country": "BR",
+   "date": "2027-11-15",
+   "name": "Republic Proclamation Day",
+   "localName": "Proclamação da República"
+  },
+  {
+   "country": "BR",
+   "date": "2027-11-20",
+   "name": "Black Awareness Day",
+   "localName": "Dia da Consciência Negra"
+  },
+  {
+   "country": "BR",
+   "date": "2027-12-25",
+   "name": "Christmas Day",
+   "localName": "Natal"
+  }
+ ]
+}
