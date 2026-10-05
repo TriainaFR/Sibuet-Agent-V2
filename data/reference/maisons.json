@@ -1,0 +1,81 @@
+{
+ "source": "maisonsethotels-sibuet.com et audit GSC/GA4 de Jérôme (24 août 2026)",
+ "pilote": "lodge-park",
+ "maisons": [
+  {
+   "id": "lodge-park",
+   "nom": "Lodge Park",
+   "destination": "Megève",
+   "tagline": "Repaire chic du centre de Megève",
+   "capacite": "35 chambres et suites",
+   "site": "lodgepark.com",
+   "gsc": "sc-domain:lodgepark.com",
+   "ga4": "281196949",
+   "image": "/hotels/lodge-park.jpg",
+   "url": "https://www.maisonsethotels-sibuet.com/hotels/lodge-park",
+   "pilote": true,
+   "point_meteo": {
+    "lat": 45.857,
+    "lon": 6.617,
+    "altitude": 1113
+   },
+   "agenda": "https://www.megeve-tourisme.fr/tout-lagenda/",
+   "base_de_marque": "à produire"
+  },
+  {
+   "id": "fermes-de-marie",
+   "nom": "Les Fermes de Marie",
+   "destination": "Megève",
+   "tagline": "Plus qu'un hôtel, un lieu",
+   "capacite": "70 chambres dont 10 suites et 5 chambres enfants",
+   "site": "fermesdemarie.com",
+   "image": "/hotels/les-fermes-de-marie.jpg",
+   "pilote": false,
+   "base_de_marque": "disponible (14 blocs, 27 règles)"
+  },
+  {
+   "id": "hotel-mont-blanc",
+   "nom": "Hôtel Mont-Blanc",
+   "destination": "Megève",
+   "tagline": "Terriblement élégant",
+   "capacite": "38 chambres dont 11 suites",
+   "site": "hotelmontblanc.com",
+   "image": "/hotels/hotel-mont-blanc.jpg",
+   "pilote": false,
+   "base_de_marque": "disponible (27 sections)"
+  },
+  {
+   "id": "bastide-de-marie",
+   "nom": "La Bastide de Marie",
+   "destination": "Ménerbes",
+   "tagline": "Une bastide les pieds dans la vigne",
+   "capacite": "11 chambres dont 6 suites",
+   "site": "labastidedemarie.com",
+   "image": "/hotels/la-bastide-de-marie.jpg",
+   "pilote": false,
+   "base_de_marque": "à produire"
+  },
+  {
+   "id": "villa-marie",
+   "nom": "Villa Marie Saint-Tropez",
+   "destination": "Saint-Tropez",
+   "tagline": "Une douce ambiance de Riviera",
+   "capacite": "45 chambres dont 5 suites",
+   "site": "villamarie-saint-tropez.com",
+   "image": "/hotels/villa-marie-saint-tropez.jpg",
+   "pilote": false,
+   "base_de_marque": "à produire"
+  },
+  {
+   "id": "gyp-sea",
+   "nom": "Gyp Sea Hotel",
+   "destination": "Saint-Barth",
+   "tagline": "Tropical chic boutique hotel",
+   "capacite": "20 bungalows et villas",
+   "site": "gypsea-stbarth.com",
+   "image": "/hotels/gyp-sea-hotel.jpg",
+   "pilote": false,
+   "base_de_marque": "à produire"
+  }
+ ]
+}

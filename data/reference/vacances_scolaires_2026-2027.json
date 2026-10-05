@@ -1,0 +1,189 @@
+{
+ "saison": "2026-2027",
+ "note": "FR: arrêté du 22 octobre 2025. Angleterre: semaine majoritaire des conseils locaux, certains 8 au 12 février. Genève et Vaud: calendriers cantonaux. Belgique, Pays-Bas, USA: dates typiques à vérifier avant usage.",
+ "marches": [
+  {
+   "id": "frc",
+   "nom": "France zone C",
+   "zone_fr": "C",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-19",
+     "fin": "2027-01-04"
+    },
+    {
+     "nom": "Hiver",
+     "debut": "2027-02-06",
+     "fin": "2027-02-22"
+    }
+   ],
+   "source": "education.gouv.fr",
+   "verifie": true
+  },
+  {
+   "id": "fra",
+   "nom": "France zone A",
+   "zone_fr": "A",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-19",
+     "fin": "2027-01-04"
+    },
+    {
+     "nom": "Hiver",
+     "debut": "2027-02-13",
+     "fin": "2027-03-01"
+    }
+   ],
+   "source": "education.gouv.fr",
+   "verifie": true
+  },
+  {
+   "id": "frb",
+   "nom": "France zone B",
+   "zone_fr": "B",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-19",
+     "fin": "2027-01-04"
+    },
+    {
+     "nom": "Hiver",
+     "debut": "2027-02-20",
+     "fin": "2027-03-08"
+    }
+   ],
+   "source": "education.gouv.fr",
+   "verifie": true
+  },
+  {
+   "id": "ge",
+   "nom": "Genève",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-24",
+     "fin": "2027-01-10"
+    },
+    {
+     "nom": "Février",
+     "debut": "2027-02-13",
+     "fin": "2027-02-21"
+    }
+   ],
+   "source": "ge.ch DIP",
+   "verifie": true
+  },
+  {
+   "id": "vd",
+   "nom": "Vaud",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-24",
+     "fin": "2027-01-10"
+    },
+    {
+     "nom": "Relâches",
+     "debut": "2027-02-06",
+     "fin": "2027-02-14"
+    }
+   ],
+   "source": "vd.ch",
+   "verifie": true
+  },
+  {
+   "id": "uk",
+   "nom": "Royaume-Uni",
+   "periodes": [
+    {
+     "nom": "Christmas",
+     "debut": "2026-12-19",
+     "fin": "2027-01-03"
+    },
+    {
+     "nom": "Half-term",
+     "debut": "2027-02-13",
+     "fin": "2027-02-21"
+    },
+    {
+     "nom": "Easter",
+     "debut": "2027-03-26",
+     "fin": "2027-04-11"
+    }
+   ],
+   "source": "conseils locaux, gov.uk",
+   "verifie": true
+  },
+  {
+   "id": "be",
+   "nom": "Belgique",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-19",
+     "fin": "2027-01-03"
+    },
+    {
+     "nom": "Détente carnaval",
+     "debut": "2027-02-15",
+     "fin": "2027-02-28"
+    }
+   ],
+   "source": "enseignement.be",
+   "verifie": false,
+   "ecart_controle": "OpenHolidays : congé de détente du 8 au 14 février en Flandre et du 22 février au 7 mars en Fédération Wallonie-Bruxelles. La période saisie, 15 au 28 février, ne correspond à aucune des deux communautés."
+  },
+  {
+   "id": "nl",
+   "nom": "Pays-Bas",
+   "periodes": [
+    {
+     "nom": "Kerst",
+     "debut": "2026-12-19",
+     "fin": "2027-01-03"
+    },
+    {
+     "nom": "Voorjaar Zuid",
+     "debut": "2027-02-13",
+     "fin": "2027-02-21"
+    },
+    {
+     "nom": "Voorjaar Noord",
+     "debut": "2027-02-20",
+     "fin": "2027-02-28"
+    },
+    {
+     "nom": "Voorjaar Midden",
+     "debut": "2027-02-27",
+     "fin": "2027-03-07"
+    }
+   ],
+   "source": "rijksoverheid.nl",
+   "verifie": false,
+   "ecart_controle": "OpenHolidays : Noord et Midden du 20 au 28 février, Zuid à partir du 13 février. La période Midden saisie, 27 février au 7 mars, n'est pas confirmée."
+  },
+  {
+   "id": "us",
+   "nom": "États-Unis",
+   "periodes": [
+    {
+     "nom": "Christmas",
+     "debut": "2026-12-19",
+     "fin": "2027-01-03"
+    },
+    {
+     "nom": "Presidents Day",
+     "debut": "2027-02-13",
+     "fin": "2027-02-21"
+    }
+   ],
+   "source": "calendrier fédéral",
+   "verifie": true
+  }
+ ],
+ "controle_2026-10-05": "Recoupement automatique avec l'API OpenHolidays le 5 oct. 2026. Les écarts sont signalés, les dates saisies par Jérôme restent celles du calcul."
+}

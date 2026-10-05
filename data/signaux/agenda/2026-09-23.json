@@ -1,0 +1,1767 @@
+{
+ "source": "agenda",
+ "collecte_le": "2026-09-23",
+ "horodatage": "2026-09-23T06:00:00.000Z",
+ "mode": "import",
+ "origine": "Agenda de la station (collecteur de Jérôme, snapshot du 23 sept. 2026) et saisie manuelle 04_donnees/evenements_megeve_2026-2027.json. Le collecteur collect_agenda_megeve.py remplacera ce fichier.",
+ "resume": "73 événements retenus (ponctuels, temps forts et décors)",
+ "donnees": {
+  "destination": "megeve",
+  "evenements": [
+   {
+    "nom": "Micro-Folie : « Ordure »",
+    "debut": "2026-09-23",
+    "fin": "2026-09-23",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Rallye Megève to Megève",
+    "debut": "2026-09-24",
+    "fin": "2026-09-26",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Hockey sur Glace - Coupe de France Mont-Blanc VS Valence",
+    "debut": "2026-09-26",
+    "fin": "2026-09-26",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "MENTISSA",
+    "debut": "2026-10-02",
+    "fin": "2026-10-02",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Conférence : Comment donner une voix à la vie sauvage ?",
+    "debut": "2026-10-03",
+    "fin": "2026-10-03",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Concours aux poulains",
+    "debut": "2026-10-10",
+    "fin": "2026-10-10",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "La Mégevanne",
+    "debut": "2026-10-10",
+    "fin": "2026-10-10",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Concert : Duo Odun",
+    "debut": "2026-10-10",
+    "fin": "2026-10-10",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Concours agricole de la race Abondance",
+    "debut": "2026-10-11",
+    "fin": "2026-10-11",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Toquicimes, cuisine de montagne",
+    "debut": "2026-10-16",
+    "fin": "2026-10-18",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Poterie en duo",
+    "debut": "2026-10-19",
+    "fin": "2026-10-26",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Animation Ludo-Clic",
+    "debut": "2026-10-21",
+    "fin": "2026-10-28",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Festival Les Petits Asticots - Spectacle « Comment attraper une étoile »",
+    "debut": "2026-10-21",
+    "fin": "2026-10-21",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Les Petits Princes de l’Automne : L’Art et les Couleurs Primaires",
+    "debut": "2026-10-23",
+    "fin": "2026-10-30",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Matinée Yoga « On n’est pas des Marmottes »",
+    "debut": "2026-10-24",
+    "fin": "2026-10-24",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Conférence « Harry Potter, 25 ans de magie »",
+    "debut": "2026-10-24",
+    "fin": "2026-10-24",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Hockey sur Glace Match de Division 1 Mont-Blanc vs Valence",
+    "debut": "2026-10-24",
+    "fin": "2026-10-24",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Hockey sur Glace - Trophée des Jeunes Talents",
+    "debut": "2026-10-28",
+    "fin": "2026-10-31",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Braderie de Megève d’automne",
+    "debut": "2026-10-30",
+    "fin": "2026-11-01",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Concours de citrouille en duo",
+    "debut": "2026-10-30",
+    "fin": "2026-10-30",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Ciné ados « Fais-toi peur »",
+    "debut": "2026-10-31",
+    "fin": "2026-10-31",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Soirée Givrée Halloween",
+    "debut": "2026-10-31",
+    "fin": "2026-10-31",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Rencontre-échanges jardin grainothèque",
+    "debut": "2026-11-06",
+    "fin": "2026-11-06",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Projection - échange Chemin des Toiles : Les oubliés de la Belle Étoile",
+    "debut": "2026-11-07",
+    "fin": "2026-11-07",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Strasbourg",
+    "debut": "2026-11-10",
+    "fin": "2026-11-10",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Projection Chemin des Toiles : Bye Bye Tibériade",
+    "debut": "2026-11-12",
+    "fin": "2026-11-12",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Projection - conférence Ouzbekistan",
+    "debut": "2026-11-13",
+    "fin": "2026-11-13",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "MATHIEU STEPSON",
+    "debut": "2026-11-27",
+    "fin": "2026-11-27",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Spectacle bébés lecteurs : Moon",
+    "debut": "2026-11-28",
+    "fin": "2026-11-28",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Villard de Lans",
+    "debut": "2026-12-01",
+    "fin": "2026-12-01",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Illumination du sapin",
+    "debut": "2026-12-05",
+    "fin": "2026-12-05",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Jardin de la glisse",
+    "debut": "2026-12-06",
+    "fin": "2027-02-14",
+    "type": "décor",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "THE BLACK BLUES BROTHERS « Let’s Twist Again »",
+    "debut": "2026-12-12",
+    "fin": "2026-12-12",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Matinée Yoga « Le mal de dos »",
+    "debut": "2026-12-19",
+    "fin": "2026-12-19",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Le Village de Noël",
+    "debut": "2026-12-21",
+    "fin": "2026-12-31",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Lyon",
+    "debut": "2026-12-22",
+    "fin": "2026-12-22",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Aquagames",
+    "debut": "2026-12-22",
+    "fin": "2027-03-04",
+    "type": "décor",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "Découverte curling",
+    "debut": "2026-12-22",
+    "fin": "2027-03-30",
+    "type": "décor",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "La Parade du Père Noël",
+    "debut": "2026-12-24",
+    "fin": "2026-12-24",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Match de gala Hockey sur Glace",
+    "debut": "2026-12-29",
+    "fin": "2026-12-29",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Descente aux flambeaux ESF",
+    "debut": "2026-12-31",
+    "fin": "2026-12-31",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Nuit lumineuse à la balnéoforme",
+    "debut": "2027-01-06",
+    "fin": "2027-03-03",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "Micro-Folie : Collections « Paris » et « Nouvelle Aquitaine »",
+    "debut": "2027-01-08",
+    "fin": "2027-01-08",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Grande Odyssée, étape Megève",
+    "debut": "2027-01-10",
+    "fin": "2027-01-22",
+    "type": "temps fort",
+    "confirme": false,
+    "source": "récurrent, dates 2026 reprises, date 2027 à confirmer"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Nantes",
+    "debut": "2027-01-12",
+    "fin": "2027-01-12",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "L'Élégance a du cœur, automobiles",
+    "debut": "2027-01-15",
+    "fin": "2027-01-17",
+    "type": "temps fort",
+    "confirme": false,
+    "source": "presse, date 2027 à confirmer"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Chambéry",
+    "debut": "2027-01-19",
+    "fin": "2027-01-19",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "JEROME COMMANDEUR",
+    "debut": "2027-01-23",
+    "fin": "2027-01-23",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Micro-Folie : Playlist « Les masques » suivi de l’atelier « Mascarade »",
+    "debut": "2027-01-27",
+    "fin": "2027-01-27",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Soirée Luge Rochebrune",
+    "debut": "2027-02-09",
+    "fin": "2027-03-02",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "Ciné-rencontre « Alpes Himalaya : La route des cimes »",
+    "debut": "2027-02-11",
+    "fin": "2027-02-11",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Soirée Luge Mont d'Arbois",
+    "debut": "2027-02-11",
+    "fin": "2027-03-04",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "Soirée escalade, grimper à la frontale",
+    "debut": "2027-02-11",
+    "fin": "2027-03-04",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "ESF fête ses étoiles",
+    "debut": "2027-02-12",
+    "fin": "2027-03-05",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026 (cité dans les fiches)"
+   },
+   {
+    "nom": "Fête des enfants ESF",
+    "debut": "2027-02-12",
+    "fin": "2027-03-05",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-ski.com, vendredis 12, 19, 26 février et 5 mars"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Tours",
+    "debut": "2027-02-16",
+    "fin": "2027-02-16",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Micro-Folie : « Familiarités »",
+    "debut": "2027-02-17",
+    "fin": "2027-02-17",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Soirée givrée",
+    "debut": "2027-02-17",
+    "fin": "2027-02-24",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "GAROU Solo tour",
+    "debut": "2027-02-19",
+    "fin": "2027-02-19",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Spectacle jeunesse : Voyage de Rézé",
+    "debut": "2027-02-26",
+    "fin": "2027-02-26",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Hockey sur Glace Match Division 1 Mont-Blanc vs Épinal",
+    "debut": "2027-02-27",
+    "fin": "2027-02-27",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Megève Leadership, Du ciel aux abysses",
+    "debut": "2027-03-05",
+    "fin": "2027-03-10",
+    "type": "période",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Micro-Folie : Playlist commentée « Femmes artistes »",
+    "debut": "2027-03-05",
+    "fin": "2027-03-05",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Back to Back Invitational, freeski",
+    "debut": "2027-03-19",
+    "fin": "2027-03-21",
+    "type": "temps fort",
+    "confirme": false,
+    "source": "récurrent, dates 2026 reprises, à confirmer"
+   },
+   {
+    "nom": "VIRILES - Compagnie KYNLAUS",
+    "debut": "2027-03-20",
+    "fin": "2027-03-20",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "27e Ski Open Coq d’Or",
+    "debut": "2027-03-24",
+    "fin": "2027-03-27",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Classiquicime, musique classique",
+    "debut": "2027-03-25",
+    "fin": "2027-03-28",
+    "type": "temps fort",
+    "confirme": false,
+    "source": "récurrent, dates 2026 reprises, à confirmer"
+   },
+   {
+    "nom": "AMBRE Tour 2027",
+    "debut": "2027-04-03",
+    "fin": "2027-04-03",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Micro-Folie : « 20 ans déjà ! Joyeux Archiversaire » suivie de « Ma-quête est belle ! »",
+    "debut": "2027-04-21",
+    "fin": "2027-04-21",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Théâtre - NUMERO DEUX",
+    "debut": "2027-04-30",
+    "fin": "2027-04-30",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Commémoration de la Victoire du 8 mai 1945",
+    "debut": "2027-05-08",
+    "fin": "2027-05-08",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "Fete de la nature « Megève fête ses oiseaux et sa nature »",
+    "debut": "2027-05-21",
+    "fin": "2027-05-22",
+    "type": "temps fort",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   },
+   {
+    "nom": "PABLO MIRA",
+    "debut": "2027-05-22",
+    "fin": "2027-05-22",
+    "type": "ponctuel",
+    "confirme": true,
+    "source": "megeve-tourisme.fr, agenda, snapshot du 23 sept. 2026"
+   }
+  ]
+ },
+ "signaux": [
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Micro-Folie : « Ordure »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-09-23",
+    "fin": "2026-09-23"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Rallye Megève to Megève",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-09-24",
+    "fin": "2026-09-26"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace - Coupe de France Mont-Blanc VS Valence",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-09-26",
+    "fin": "2026-09-26"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "MENTISSA",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-02",
+    "fin": "2026-10-02"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Conférence : Comment donner une voix à la vie sauvage ?",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-03",
+    "fin": "2026-10-03"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Concours aux poulains",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-10",
+    "fin": "2026-10-10"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "La Mégevanne",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-10",
+    "fin": "2026-10-10"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Concert : Duo Odun",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-10",
+    "fin": "2026-10-10"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Concours agricole de la race Abondance",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-11",
+    "fin": "2026-10-11"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Toquicimes, cuisine de montagne",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-16",
+    "fin": "2026-10-18"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Poterie en duo",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-19",
+    "fin": "2026-10-26"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Animation Ludo-Clic",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-21",
+    "fin": "2026-10-28"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Festival Les Petits Asticots - Spectacle « Comment attraper une étoile »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-21",
+    "fin": "2026-10-21"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Les Petits Princes de l’Automne : L’Art et les Couleurs Primaires",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-23",
+    "fin": "2026-10-30"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Matinée Yoga « On n’est pas des Marmottes »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-24",
+    "fin": "2026-10-24"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Conférence « Harry Potter, 25 ans de magie »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-24",
+    "fin": "2026-10-24"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match de Division 1 Mont-Blanc vs Valence",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-24",
+    "fin": "2026-10-24"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace - Trophée des Jeunes Talents",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-28",
+    "fin": "2026-10-31"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Braderie de Megève d’automne",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-30",
+    "fin": "2026-11-01"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Concours de citrouille en duo",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-30",
+    "fin": "2026-10-30"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Ciné ados « Fais-toi peur »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-31",
+    "fin": "2026-10-31"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Soirée Givrée Halloween",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-10-31",
+    "fin": "2026-10-31"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Rencontre-échanges jardin grainothèque",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-06",
+    "fin": "2026-11-06"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Projection - échange Chemin des Toiles : Les oubliés de la Belle Étoile",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-07",
+    "fin": "2026-11-07"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Strasbourg",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-10",
+    "fin": "2026-11-10"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Projection Chemin des Toiles : Bye Bye Tibériade",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-12",
+    "fin": "2026-11-12"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Projection - conférence Ouzbekistan",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-13",
+    "fin": "2026-11-13"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "MATHIEU STEPSON",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-27",
+    "fin": "2026-11-27"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Spectacle bébés lecteurs : Moon",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-11-28",
+    "fin": "2026-11-28"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Villard de Lans",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-01",
+    "fin": "2026-12-01"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Illumination du sapin",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-05",
+    "fin": "2026-12-05"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Jardin de la glisse",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-06",
+    "fin": "2027-02-14"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "THE BLACK BLUES BROTHERS « Let’s Twist Again »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-12",
+    "fin": "2026-12-12"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Matinée Yoga « Le mal de dos »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-19",
+    "fin": "2026-12-19"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Le Village de Noël",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-21",
+    "fin": "2026-12-31"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Lyon",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-22",
+    "fin": "2026-12-22"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Aquagames",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-22",
+    "fin": "2027-03-04"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Découverte curling",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-22",
+    "fin": "2027-03-30"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "La Parade du Père Noël",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-24",
+    "fin": "2026-12-24"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Match de gala Hockey sur Glace",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-29",
+    "fin": "2026-12-29"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Descente aux flambeaux ESF",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2026-12-31",
+    "fin": "2026-12-31"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Nuit lumineuse à la balnéoforme",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-06",
+    "fin": "2027-03-03"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Micro-Folie : Collections « Paris » et « Nouvelle Aquitaine »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-08",
+    "fin": "2027-01-08"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Grande Odyssée, étape Megève",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-10",
+    "fin": "2027-01-22"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Nantes",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-12",
+    "fin": "2027-01-12"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "L'Élégance a du cœur, automobiles",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-15",
+    "fin": "2027-01-17"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Chambéry",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-19",
+    "fin": "2027-01-19"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "JEROME COMMANDEUR",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-23",
+    "fin": "2027-01-23"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Micro-Folie : Playlist « Les masques » suivi de l’atelier « Mascarade »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-01-27",
+    "fin": "2027-01-27"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Soirée Luge Rochebrune",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-09",
+    "fin": "2027-03-02"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Ciné-rencontre « Alpes Himalaya : La route des cimes »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-11",
+    "fin": "2027-02-11"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Soirée Luge Mont d'Arbois",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-11",
+    "fin": "2027-03-04"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Soirée escalade, grimper à la frontale",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-11",
+    "fin": "2027-03-04"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "ESF fête ses étoiles",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-12",
+    "fin": "2027-03-05"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Fête des enfants ESF",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-12",
+    "fin": "2027-03-05"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Tours",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-16",
+    "fin": "2027-02-16"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Micro-Folie : « Familiarités »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-17",
+    "fin": "2027-02-17"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Soirée givrée",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-17",
+    "fin": "2027-02-24"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "GAROU Solo tour",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-19",
+    "fin": "2027-02-19"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Spectacle jeunesse : Voyage de Rézé",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-26",
+    "fin": "2027-02-26"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Hockey sur Glace Match Division 1 Mont-Blanc vs Épinal",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-02-27",
+    "fin": "2027-02-27"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Megève Leadership, Du ciel aux abysses",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-03-05",
+    "fin": "2027-03-10"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Micro-Folie : Playlist commentée « Femmes artistes »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-03-05",
+    "fin": "2027-03-05"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Back to Back Invitational, freeski",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-03-19",
+    "fin": "2027-03-21"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "VIRILES - Compagnie KYNLAUS",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-03-20",
+    "fin": "2027-03-20"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "27e Ski Open Coq d’Or",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-03-24",
+    "fin": "2027-03-27"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Classiquicime, musique classique",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-03-25",
+    "fin": "2027-03-28"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "AMBRE Tour 2027",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-04-03",
+    "fin": "2027-04-03"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Micro-Folie : « 20 ans déjà ! Joyeux Archiversaire » suivie de « Ma-quête est belle ! »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-04-21",
+    "fin": "2027-04-21"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Théâtre - NUMERO DEUX",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-04-30",
+    "fin": "2027-04-30"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Commémoration de la Victoire du 8 mai 1945",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-05-08",
+    "fin": "2027-05-08"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "Fete de la nature « Megève fête ses oiseaux et sa nature »",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-05-21",
+    "fin": "2027-05-22"
+   }
+  },
+  {
+   "source": "agenda",
+   "type": "contexte",
+   "maison": null,
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "evenement",
+   "valeur": null,
+   "valeur_texte": "PABLO MIRA",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "debut": "2027-05-22",
+    "fin": "2027-05-22"
+   }
+  }
+ ]
+}

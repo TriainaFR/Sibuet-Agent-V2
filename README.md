@@ -1,58 +1,66 @@
-# Calendrier d'activation · Maisons & Hôtels Sibuet
+# Agent Sibuet
 
-Outil d'aide à la décision marketing : **de quoi parler, quand, à qui, avec quels leviers**, pour chaque maison du groupe.
-Prototype Triaina. La démo porte sur Les Fermes de Marie (Megève) et La Bastide de Marie (Ménerbes).
+Détecteur d'opportunités marketing multicanal pour Maisons & Hôtels Sibuet.
+Maison pilote : **Lodge Park, Megève, hiver 2026-2027**. Construit sur le cadrage et les données d'Allin Conseil (Jérôme Hoerlé), dossier de transfert du 5 octobre 2026.
 
-## Lancer
+Le système croise trois choses : ce que les gens cherchent, ce que la maison est en train de remplir, ce que ça coûte. Il produit des fiches de thèmes : un sujet, sa période, le moment où chaque marché réserve, les actions par canal en vagues, datées, avec indicateur et ligne de base. **Le système propose, l'équipe valide. Aucune publication autonome.**
+
+## Lancer la démo
 
 ```bash
 npm install
-cp .env.example .env.local   # ajouter ANTHROPIC_API_KEY pour « Rédiger avec Claude »
-npm run dev                  # http://localhost:3000
+npm run dev          # http://localhost:3000
 ```
 
-## Ce que fait l'outil
+Tout fonctionne sans base de données ni clé :
+- les données réelles collectées (Semrush, Search Console, agenda, neige, vacances, plan newsletters) sont dans `data/signaux/` ;
+- les briefs par canal sont produits au gabarit P4 sans IA, ou par Claude si `ANTHROPIC_API_KEY` est renseignée dans `.env.local` ;
+- un interrupteur « données fictives » (page Sources) invente réservations, performance des newsletters et Google Ads pour montrer la boucle complète. Ces données sont marquées « fictif » partout.
 
-1. **Calendrier** (`/`) : une timeline de 12 mois avec des fiches thématiques, filtrables par maison, marché et levier. Deux vues : « Quand agir » (date de lancement) et « Quand ça se passe » (date de l'événement).
-2. **Fiche** (`/fiches/[id]`) : objectif, message, frise des fenêtres de décision par nationalité, plan d'actions daté par levier (RP, SEO/GEO, CRM, newsletter, Instagram, Google Ads, LinkedIn), données qui justifient la fiche, indicateurs à suivre. Le bouton **Rédiger avec Claude** génère les contenus (carrousel, annonces, articles, newsletters) dans le ton Sibuet et dans la langue de chaque marché.
-3. **Fenêtres de réservation** (`/fenetres`) : délai médian entre la réservation et l'arrivée, par nationalité × mois, plus le rythme des réservations comparé à l'an dernier.
-4. **Sources de données** (`/sources`) : statut de chaque source (réelle, simulée, en attente) et colonnes attendues.
+## Les pages
 
-## Comment la date de lancement est calculée
+| Page | Rôle |
+|---|---|
+| À faire | Les actions des six prochaines semaines, datées, avec ce qui les bloque. Ce qui a changé depuis le calcul précédent. |
+| Vos données | Saisie par le client de ce qui manque : ouverture et fermeture, délais par pays, remplissage par sujet, commission et panier moyen, taux des newsletters, accès Ads. Recalcul immédiat, marquage « saisi » ou « estimation », remplacement automatique par un flux. |
+| Calendrier | Une ligne par sujet : réservation en pointillés, séjour en plein, newsletters prévues, vacances scolaires, densité d'événements. |
+| Sujets | Classés par urgence puis intérêt. Fiche en cinq onglets : l'essentiel, par pays, actions (validation et brief), sur Google, pour aller plus loin. Export texte au gabarit P3. |
+| Mesure | Résultat de chaque action, les quatre cas, propositions de recalibrage (délais, CRM, coûts des canaux, seuil neige). |
+| Sources | Connecteurs et leur état, routine, historique des calculs, paramètres du calcul. |
 
-Pour chaque moment × maison, le moteur (`src/lib/engine/plan.ts`) :
+Aucun chiffre d'indice n'est affiché au client : urgence élevée, moyenne ou basse ; intérêt haut, moyen ou bas ; visibilité peu visible, visible mais peu cliquée, bien placée.
 
-- prend les nationalités présentes sur la même période les années précédentes (booking engine) ;
-- calcule leur **fenêtre de réservation** (médiane, 25e et 75e centiles) : c'est la période où chaque marché prend sa décision ;
-- fixe le lancement 14 jours avant que la moitié du volume (en nuitées) entre en décision. Les marchés précoces (long-courrier) sont adressés plus tôt via Ads et CRM ;
-- cale chaque levier : RP 100 jours avant, SEO 6 semaines avant le pic de recherche (Search Console), newsletter par langue, Ads par pays pendant la fenêtre de chaque marché ;
-- calcule une **priorité** à partir du volume des marchés, du retard de réservation vs N-1, de l'occupation de l'an dernier, de la résonance, de la demande de recherche et de l'urgence.
+## La routine du lundi
 
-Toutes les règles (délais, seuils) sont regroupées dans `RULES`, en haut de `plan.ts`.
+```bash
+npm run routine                    # collecte complète, calcul, alertes (à planifier chaque lundi à 6 h)
+npm run routine -- --rapide        # agenda limité aux prochaines semaines
+npm run routine -- --sans-collecte # recalcul seul
+npm run controle                   # rejoue le calcul du 23 sept. et le compare au calcul n° 5 de Jérôme
+```
+
+Chaque collecte produit un relevé daté dans `data/signaux/<source>/<date>.json`, jamais écrasé. Le contrôle donne aujourd'hui 67 fenêtres d'achat identiques sur 67 au calcul de Jérôme.
 
 ## Modifier sans galère
 
 | Je veux… | Fichier |
 |---|---|
-| Ajouter ou modifier un événement, un marronnier ou un temps fort | `src/config/moments.ts` (copier un bloc) |
-| Corriger une maison (saisons, description, répartition des nationalités) | `src/config/hotels.ts` |
-| Ajouter une nationalité ou modifier un levier | `src/config/markets.ts` |
-| Vacances scolaires GB / US / BR | `src/config/holidays-manual.ts` |
-| Ajuster les délais et les seuils du moteur | `RULES` dans `src/lib/engine/plan.ts` |
-| Changer le ton de Claude | `BRAND_VOICE` dans `src/app/api/draft/route.ts` |
-| Couleurs et typographies de la charte | `src/app/globals.css` |
+| Ajouter ou réviser un sujet, ses requêtes, ses événements, ses envois liés | `data/reference/sujets/lodge-park_hiver-2026-2027.json` |
+| Corriger un marché ou son délai de référence | `data/reference/marches.json` |
+| Mettre à jour les vacances scolaires | `data/reference/vacances_scolaires_2026-2027.json` |
+| Ajuster une règle du calcul (délais, seuils, vagues, neige) | `src/lib/engine/regles.ts` |
+| Modifier les prompts de Jérôme (P0 à P5) | `prompts/` |
+| Brancher une source | `src/connecteurs/` (voir `docs/ARCHITECTURE.md`) |
+| Couleurs et typographies | `src/app/globals.css` |
 
-## Données
+## Documentation
 
-```bash
-npm run data:fetch   # met à jour la météo, les vacances scolaires et les jours fériés (APIs gratuites)
-npm run data:demo    # régénère les réservations et la Search Console simulées
-npm run plan:check   # affiche toutes les fiches calculées dans le terminal
-```
+- `docs/ARCHITECTURE.md` : les couches, et comment passer en production (base de données, API, connecteurs, authentification, hébergement).
+- `docs/donnees-a-obtenir.md` : ce qui manque encore, par ordre d'urgence.
+- `docs/cadrage/` : brief, modèle de données, registre des sources et schéma SQL de Jérôme.
 
-- `data/external/` : données réelles (Open-Meteo, OpenHolidays, Nager.Date).
-- `data/imports/` : exports clients. **Déposer les vrais fichiers à la place des simulés** (voir `data/imports/README.md`).
+## Règles du projet
 
-## Stack
+Français. Pas de tiret long. Pas de dièse ni d'astérisque comme marqueur de texte. Chiffres sourcés et datés. Hypothèses déclarées comme telles. Rien de nominatif dans la base, réservations agrégées avant stockage. Le calendrier existant du client est complété ou déplacé, jamais ignoré. Une maison à la fois pour le pilote.
 
-Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · SDK Anthropic (Claude Opus 5.5). Pas de base de données : les fichiers de `data/` suffisent pour la démo. Déployable tel quel sur Vercel.
+Stack : Next.js 16, TypeScript, Tailwind CSS 4, SDK Anthropic. Données en fichiers JSON pour la démo.

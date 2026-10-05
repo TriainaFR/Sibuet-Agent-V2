@@ -1,94 +1,91 @@
-import {
-  BriefcaseBusiness,
-  Camera,
-  HeartHandshake,
-  Mail,
-  MousePointerClick,
-  Newspaper,
-  Search,
-  type LucideIcon,
-} from "lucide-react";
-import { levers, marketByCode } from "@/config/markets";
-import type { DataOrigin, FicheStatus, LeverId, MarketCode, MomentKind } from "@/lib/types";
+import type { ReactNode } from "react";
+import type { Marche, Origine, StatutCode } from "@/lib/types";
 
-export const leverIcons: Record<LeverId, LucideIcon> = {
-  instagram: Camera,
-  "google-ads": MousePointerClick,
-  seo: Search,
-  newsletter: Mail,
-  crm: HeartHandshake,
-  rp: Newspaper,
-  linkedin: BriefcaseBusiness,
+// Composants de base, sans état.
+
+export type Ton = "vert" | "ocre" | "brique" | "gris" | "bleu" | "brun";
+
+const tons: Record<Ton, string> = {
+  vert: "bg-sage/12 text-sage ring-sage/25",
+  ocre: "bg-ochre/12 text-[#8a6a32] ring-ochre/30",
+  brique: "bg-brick/10 text-brick ring-brick/25",
+  gris: "bg-sand text-ink-soft ring-line",
+  bleu: "bg-sky/10 text-sky ring-sky/25",
+  brun: "bg-brown text-white ring-brown",
 };
 
-export const kindLabels: Record<MomentKind, string> = {
-  saison: "Saison",
-  "evenement-local": "Événement local",
-  marronnier: "Marronnier",
-  vacances: "Vacances",
-  meteo: "Météo",
-  "b2b-rh": "RH / B2B",
-};
-
-const statusStyles: Record<FicheStatus, string> = {
-  urgent: "bg-brick text-white",
-  "à lancer": "bg-ochre text-white",
-  "à venir": "bg-sand text-ink-soft",
-  "en cours": "bg-olive text-white",
-};
-
-const statusLabels: Record<FicheStatus, string> = {
-  urgent: "En retard",
-  "à lancer": "À lancer",
-  "à venir": "À venir",
-  "en cours": "En cours",
-};
-
-export function StatusBadge({ status }: { status: FicheStatus }) {
-  return <span className={`eyebrow shrink-0 whitespace-nowrap rounded-full px-2 py-0.5 text-[0.6rem] ${statusStyles[status]}`}>{statusLabels[status]}</span>;
-}
-
-export function PriorityBadge({ level, score }: { level: "haute" | "moyenne" | "basse"; score: number }) {
-  const color = level === "haute" ? "text-brick border-brick/40" : level === "moyenne" ? "text-ochre border-ochre/40" : "text-sage border-sage/40";
+export function Puce({ ton = "gris", children, title }: { ton?: Ton; children: ReactNode; title?: string }) {
   return (
-    <span className={`eyebrow inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-[0.6rem] ${color}`} title={`Score de priorité : ${score}/100`}>
-      <span className={`h-1.5 w-1.5 rounded-full ${level === "haute" ? "bg-brick" : level === "moyenne" ? "bg-ochre" : "bg-sage"}`} />
-      Priorité {level}
+    <span title={title} className={`inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset ${tons[ton]}`}>
+      {children}
     </span>
   );
 }
 
-export function Flags({ codes, size = "text-sm" }: { codes: MarketCode[]; size?: string }) {
+export const tonStatut: Record<StatutCode, Ton> = {
+  a_lancer: "vert",
+  a_creer: "vert",
+  declencher: "brique",
+  en_retard: "brique",
+  existant: "ocre",
+  bloque: "brique",
+  suspendu: "gris",
+  a_confirmer: "gris",
+  veille: "bleu",
+  ferme: "gris",
+};
+
+export function PuceStatut({ code, libelle }: { code: StatutCode; libelle: string }) {
+  return <Puce ton={tonStatut[code]}>{libelle}</Puce>;
+}
+
+export function Niveau({ libelle }: { libelle: string }) {
+  const ton: Ton = /Élevée|Haut|Peu visible/.test(libelle) ? "brique" : /Moyenne|Moyen|peu cliquée/.test(libelle) ? "ocre" : /Bien placée/.test(libelle) ? "vert" : "gris";
+  return <Puce ton={ton}>{libelle}</Puce>;
+}
+
+export function Origine({ origine }: { origine: Origine | null }) {
+  if (!origine) return <span className="rounded bg-sand px-1.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-ink-soft">manquant</span>;
+  const style = origine === "saisi" ? "bg-sky/12 text-sky" : origine === "mesuré" ? "bg-sage/15 text-sage" : origine === "fictif" ? "bg-brick/10 text-brick" : "bg-ochre/12 text-[#8a6a32]";
+  return <span className={`rounded px-1.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide ${style}`}>{origine}</span>;
+}
+
+export function Marches({ ids, marches, max = 4 }: { ids: string[]; marches: Marche[]; max?: number }) {
+  const liste = ids.map((id) => marches.find((m) => m.id === id)).filter(Boolean) as Marche[];
   return (
-    <span className={`inline-flex gap-0.5 ${size}`}>
-      {codes.map((c) => (
-        <span key={c} title={marketByCode[c].name}>
-          {marketByCode[c].flag}
+    <span className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1">
+      {liste.slice(0, max).map((m) => (
+        <span key={m.id} className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm">
+          <span className="h-2 w-2 rounded-full" style={{ background: m.couleur }} />
+          {m.nom}
         </span>
       ))}
+      {liste.length > max && <span className="text-xs text-ink-soft">+ {liste.length - max}</span>}
     </span>
   );
 }
 
-export function LeverIcon({ lever, className = "h-3.5 w-3.5" }: { lever: LeverId; className?: string }) {
-  const Icon = leverIcons[lever];
-  return <Icon className={className} aria-label={levers[lever].label} strokeWidth={1.6} />;
-}
-
-export function LeverChips({ ids }: { ids: LeverId[] }) {
+export function TitreSection({ eyebrow, titre, children }: { eyebrow?: string; titre: string; children?: ReactNode }) {
   return (
-    <span className="inline-flex flex-wrap gap-1">
-      {ids.map((l) => (
-        <span key={l} title={levers[l].label} className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-sand text-ink-soft">
-          <LeverIcon lever={l} />
-        </span>
-      ))}
-    </span>
+    <div className="flex flex-wrap items-end justify-between gap-3">
+      <div>
+        {eyebrow && <p className="eyebrow text-taupe">{eyebrow}</p>}
+        <h2 className="mt-1 font-display text-[1.75rem] leading-tight">{titre}</h2>
+      </div>
+      {children}
+    </div>
   );
 }
 
-export function OriginBadge({ origin }: { origin: DataOrigin }) {
-  const style =
-    origin === "réel" ? "bg-olive/15 text-olive" : origin === "simulé" ? "bg-ochre/15 text-ochre" : "bg-sand text-ink-soft";
-  return <span className={`eyebrow rounded px-1.5 py-0.5 text-[0.56rem] ${style}`}>{origin}</span>;
+export function Champ({ label, children }: { label: string; children: ReactNode }) {
+  return (
+    <div>
+      <p className="eyebrow text-[0.6rem] text-taupe">{label}</p>
+      <div className="mt-1 text-[0.92rem] leading-relaxed">{children}</div>
+    </div>
+  );
+}
+
+export function Vide({ children }: { children: ReactNode }) {
+  return <p className="rounded-lg border border-dashed border-line px-4 py-6 text-center text-sm text-ink-soft">{children}</p>;
 }

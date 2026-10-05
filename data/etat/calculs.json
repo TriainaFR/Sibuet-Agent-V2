@@ -1,0 +1,450 @@
+[
+ {
+  "numero": 1,
+  "date": "2026-09-28",
+  "horodatage": "2026-10-05T18:09:02.263Z",
+  "sources": {
+   "semrush": "2026-09-19",
+   "gsc": "2026-09-23",
+   "meteo": "2026-09-16",
+   "agenda": "2026-09-23",
+   "newsletters": "2026-09-16"
+  },
+  "sujets": [
+   {
+    "id": "fetes",
+    "ordre": 12.75,
+    "score": 12.75,
+    "urgence": 1,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "fetes:uk:2026-12-19",
+     "fetes:us:2026-12-19"
+    ]
+   },
+   {
+    "id": "fevrier",
+    "ordre": 14.95,
+    "score": 15.78,
+    "urgence": 0.98,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "sapin",
+    "ordre": 7.32,
+    "score": 7.79,
+    "urgence": 0.94,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "sapin:uk:2026-12-04",
+     "sapin:be:2026-12-04",
+     "sapin:nl:2026-12-04",
+     "sapin:us:2026-12-04"
+    ]
+   },
+   {
+    "id": "early",
+    "ordre": 10.33,
+    "score": 12.75,
+    "urgence": 0.81,
+    "besoin": [
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "spa",
+    "ordre": 7.8,
+    "score": 10.26,
+    "urgence": 0.76,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "spa:uk:2027-01-05",
+     "spa:us:2027-01-05"
+    ]
+   },
+   {
+    "id": "janvier",
+    "ordre": 5.47,
+    "score": 7.96,
+    "urgence": 0.76,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "janvier:uk:2027-01-05",
+     "janvier:us:2027-01-05"
+    ]
+   },
+   {
+    "id": "printemps",
+    "ordre": 9.88,
+    "score": 14.75,
+    "urgence": 0.67,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "neige",
+    "ordre": 3.63,
+    "score": 6.05,
+    "urgence": 0.6,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "paques",
+    "ordre": 6.78,
+    "score": 11.89,
+    "urgence": 0.57,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "mice",
+    "ordre": 1.6,
+    "score": 5.16,
+    "urgence": 0.31,
+    "besoin": [
+     0.5
+    ],
+    "fenetresOuvertes": []
+   }
+  ],
+  "alertes": [
+   {
+    "type": "fenetre",
+    "gravite": "action",
+    "sujetId": "fevrier",
+    "titre": "Vacances d'hiver, marché par marché : une fenêtre s'ouvre",
+    "detail": "États-Unis le 2 oct."
+   }
+  ]
+ },
+ {
+  "numero": 2,
+  "date": "2026-10-05",
+  "horodatage": "2026-10-05T18:32:21.150Z",
+  "sources": {
+   "semrush": "2026-09-19",
+   "gsc": "2026-09-23",
+   "meteo": "2026-10-05",
+   "agenda": "2026-10-05",
+   "newsletters": "2026-09-16"
+  },
+  "sujets": [
+   {
+    "id": "fevrier",
+    "ordre": 15.5,
+    "score": 15.99,
+    "urgence": 1,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "fevrier:us:2027-02-13"
+    ]
+   },
+   {
+    "id": "fetes",
+    "ordre": 12.75,
+    "score": 12.75,
+    "urgence": 1,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "fetes:uk:2026-12-19",
+     "fetes:nl:2026-12-19",
+     "fetes:us:2026-12-19"
+    ]
+   },
+   {
+    "id": "sapin",
+    "ordre": 7.63,
+    "score": 7.79,
+    "urgence": 0.98,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "sapin:uk:2026-12-04",
+     "sapin:be:2026-12-04",
+     "sapin:nl:2026-12-04",
+     "sapin:us:2026-12-04"
+    ]
+   },
+   {
+    "id": "early",
+    "ordre": 10.84,
+    "score": 12.75,
+    "urgence": 0.85,
+    "besoin": [
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "spa",
+    "ordre": 8.32,
+    "score": 10.4,
+    "urgence": 0.8,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "spa:uk:2027-01-05",
+     "spa:us:2027-01-05"
+    ]
+   },
+   {
+    "id": "janvier",
+    "ordre": 5.83,
+    "score": 7.96,
+    "urgence": 0.8,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "janvier:uk:2027-01-05",
+     "janvier:us:2027-01-05"
+    ]
+   },
+   {
+    "id": "printemps",
+    "ordre": 10.65,
+    "score": 15,
+    "urgence": 0.71,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "paques",
+    "ordre": 7.47,
+    "score": 12.25,
+    "urgence": 0.61,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "neige",
+    "ordre": 3.71,
+    "score": 6.18,
+    "urgence": 0.6,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "mice",
+    "ordre": 1.86,
+    "score": 5.31,
+    "urgence": 0.35,
+    "besoin": [
+     0.5
+    ],
+    "fenetresOuvertes": []
+   }
+  ],
+  "alertes": [
+   {
+    "type": "fenetre",
+    "gravite": "action",
+    "sujetId": "fevrier",
+    "titre": "Vacances d'hiver, marché par marché : une fenêtre s'ouvre",
+    "detail": "États-Unis le 2 oct."
+   },
+   {
+    "type": "fenetre",
+    "gravite": "action",
+    "sujetId": "sapin",
+    "titre": "Ouverture et illumination du sapin : des fenêtres s'ouvrent",
+    "detail": "France zone C le 9 oct., France zone B le 9 oct."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "titre": "Nouvel événement : Micro-Folie : « l’Art à savourer »",
+    "detail": "16 oct. 2026."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "titre": "Nouvel événement : Toquicimes : Le Festival de la cuisine de montagne",
+    "detail": "16 oct. 2026 au 18 oct. 2026."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "titre": "Nouvel événement : Micro folie « L’art et les couleurs primaire » »",
+    "detail": "26 oct. 2026."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "titre": "Nouvel événement : Micro-Folie « La vie en noir et blanc »",
+    "detail": "30 oct. 2026."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "sujetId": "sapin",
+    "titre": "Nouvel événement : After-Ski aux Loges Blanches 4*",
+    "detail": "11 déc. 2026 au 13 déc. 2026, pendant « Ouverture et illumination du sapin »."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "sujetId": "fetes",
+    "titre": "Nouvel événement : Micro-Folie: « Noël : Histoire et Traditions «",
+    "detail": "22 déc. 2026, pendant « Fêtes de fin d'année »."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "titre": "3 autres événements datés",
+    "detail": "Voir le calendrier."
+   }
+  ]
+ }
+]

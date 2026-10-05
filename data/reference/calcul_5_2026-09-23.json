@@ -1,0 +1,2705 @@
+[
+ {
+  "nom": "Vacances d'hiver, marché par marché",
+  "theme": "Les familles. Quatre semaines françaises, trois régions néerlandaises, deux cantons suisses, une semaine anglaise et américaine.",
+  "grille": [
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2027-02-13",
+     "2027-02-21"
+    ],
+    "fenetre": [
+     "2026-10-02",
+     "2026-12-25"
+    ],
+    "score": 17.98,
+    "urgence": 0.95,
+    "ordre": 17.09,
+    "ecart": 0.86,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2027-02-13",
+     "2027-02-21"
+    ],
+    "fenetre": [
+     "2026-11-04",
+     "2027-01-06"
+    ],
+    "score": 15.98,
+    "urgence": 0.77,
+    "ordre": 12.29,
+    "ecart": 0.81,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2027-02-06",
+     "2027-02-22"
+    ],
+    "fenetre": [
+     "2026-12-12",
+     "2027-01-16"
+    ],
+    "score": 17.24,
+    "urgence": 0.56,
+    "ordre": 9.66,
+    "ecart": 0.69,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2027-02-20",
+     "2027-03-08"
+    ],
+    "fenetre": [
+     "2026-12-26",
+     "2027-01-30"
+    ],
+    "score": 17.24,
+    "urgence": 0.48,
+    "ordre": 8.34,
+    "ecart": 0.69,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2027-02-13",
+     "2027-03-01"
+    ],
+    "fenetre": [
+     "2026-12-30",
+     "2027-01-27"
+    ],
+    "score": 17.24,
+    "urgence": 0.46,
+    "ordre": 7.96,
+    "ecart": 0.69,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2027-02-15",
+     "2027-02-28"
+    ],
+    "fenetre": [
+     "2026-12-10",
+     "2027-01-21"
+    ],
+    "score": 11.66,
+    "urgence": 0.57,
+    "ordre": 6.66,
+    "ecart": 0.61,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2027-02-06",
+     "2027-02-14"
+    ],
+    "fenetre": [
+     "2027-01-09",
+     "2027-01-26"
+    ],
+    "score": 11.93,
+    "urgence": 0.41,
+    "ordre": 4.85,
+    "ecart": 0.69,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2027-02-13",
+     "2027-02-21"
+    ],
+    "fenetre": [
+     "2027-01-16",
+     "2027-02-02"
+    ],
+    "score": 11.93,
+    "urgence": 0.37,
+    "ordre": 4.39,
+    "ecart": 0.69,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-02-13",
+     "2027-02-21"
+    ],
+    "fenetre": [
+     "2026-11-27",
+     "2027-01-15"
+    ],
+    "score": 3.36,
+    "urgence": 0.64,
+    "ordre": 2.16,
+    "ecart": 0.22,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-02-20",
+     "2027-02-28"
+    ],
+    "fenetre": [
+     "2026-12-04",
+     "2027-01-22"
+    ],
+    "score": 3.36,
+    "urgence": 0.6,
+    "ordre": 2.03,
+    "ecart": 0.22,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-02-27",
+     "2027-03-07"
+    ],
+    "fenetre": [
+     "2026-12-11",
+     "2027-01-29"
+    ],
+    "score": 3.36,
+    "urgence": 0.57,
+    "ordre": 1.9,
+    "ecart": 0.22,
+    "manquants": "besoin, marge"
+   }
+  ],
+  "activations": [
+   {
+    "canal": "seo",
+    "vague": "Vague 1",
+    "debut": "2026-10-01",
+    "fin": "2026-11-15",
+    "marches": "France zone C, Pays-Bas, États-Unis",
+    "message": "Les vacances d'hiver a Megeve semaine par semaine, dates de chaque zone scolaire et ce que la station propose aux familles.",
+    "kpi": "KPI : impressions et clics requetes cibles a 8 semaines, position, presence Peec. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "meta",
+    "vague": "Vague 1",
+    "debut": "2026-10-02",
+    "fin": "2026-12-25",
+    "marches": "États-Unis",
+    "message": "Megeve pour les vacances de fevrier, au depart de Geneve, avec les dates du marche.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "meta",
+    "vague": "Vague 2",
+    "debut": "2026-11-04",
+    "fin": "2027-01-06",
+    "marches": "Royaume-Uni",
+    "message": "Megeve pour les vacances de fevrier, au depart de Geneve, avec les dates du marche.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "meta",
+    "vague": "Vague 3",
+    "debut": "2026-11-27",
+    "fin": "2027-01-22",
+    "marches": "Pays-Bas",
+    "message": "Megeve pour les vacances de fevrier, au depart de Geneve, avec les dates du marche.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "meta",
+    "vague": "Vague 4",
+    "debut": "2026-12-11",
+    "fin": "2027-01-29",
+    "marches": "Pays-Bas",
+    "message": "Megeve pour les vacances de fevrier, au depart de Geneve, avec les dates du marche.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 1",
+    "debut": "2026-10-30",
+    "fin": "2026-12-25",
+    "marches": "États-Unis",
+    "message": "Les dates de vacances du marche, ce que la station donne aux enfants sur ces semaines, la raison de reserver maintenant.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 2",
+    "debut": "2026-11-25",
+    "fin": "2027-01-06",
+    "marches": "Royaume-Uni",
+    "message": "Les dates de vacances du marche, ce que la station donne aux enfants sur ces semaines, la raison de reserver maintenant.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 3",
+    "debut": "2026-12-23",
+    "fin": "2027-01-15",
+    "marches": "Belgique, France zone C, Pays-Bas",
+    "message": "Les dates de vacances du marche, ce que la station donne aux enfants sur ces semaines, la raison de reserver maintenant.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 4",
+    "debut": "2027-01-06",
+    "fin": "2027-01-29",
+    "marches": "France zone A, France zone B, Pays-Bas, Vaud",
+    "message": "Les dates de vacances du marche, ce que la station donne aux enfants sur ces semaines, la raison de reserver maintenant.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 5",
+    "debut": "2027-01-31",
+    "fin": "2027-02-02",
+    "marches": "Genève",
+    "message": "Les dates de vacances du marche, ce que la station donne aux enfants sur ces semaines, la raison de reserver maintenant.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 1",
+    "debut": "2026-12-12",
+    "fin": "2027-01-16",
+    "marches": "France zone C",
+    "message": "Sejour en famille a Megeve sur les dates de la zone du visiteur.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 2",
+    "debut": "2026-12-26",
+    "fin": "2027-01-30",
+    "marches": "France zone A, France zone B",
+    "message": "Sejour en famille a Megeve sur les dates de la zone du visiteur.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 3",
+    "debut": "2027-01-09",
+    "fin": "2027-02-02",
+    "marches": "Genève, Vaud",
+    "message": "Sejour en famille a Megeve sur les dates de la zone du visiteur.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "social",
+    "vague": "Vague 1",
+    "debut": "2026-12-22",
+    "fin": "2027-03-08",
+    "marches": "France zone C, États-Unis",
+    "message": "Ce qui se passe a Megeve le soir pendant les vacances : luge, curling, escalade a la frontale, soiree givree.",
+    "kpi": "KPI : portee, enregistrements, clics sortants. pas de référence. Statut brouillon."
+   }
+  ],
+  "gsc_requetes": [
+   {
+    "requete": "hotel megeve",
+    "usage": "achat",
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   },
+   {
+    "requete": "megeve hotel",
+    "usage": "achat",
+    "impressions": 16041,
+    "clics": 20,
+    "position": 12.8
+   },
+   {
+    "requete": "megeve hotels",
+    "usage": "achat",
+    "impressions": 8096,
+    "clics": 14,
+    "position": 12.0
+   },
+   {
+    "requete": "megeve ski resort",
+    "usage": "achat",
+    "impressions": 174,
+    "clics": 0,
+    "position": 33.9
+   },
+   {
+    "requete": "megeve ski",
+    "usage": "achat",
+    "impressions": 148,
+    "clics": 0,
+    "position": 58.9
+   },
+   {
+    "requete": "megeve skigebied",
+    "usage": "achat",
+    "impressions": 78,
+    "clics": 1,
+    "position": 1.5
+   },
+   {
+    "requete": "megeve skiing",
+    "usage": "achat",
+    "impressions": 22,
+    "clics": 0,
+    "position": 48.8
+   },
+   {
+    "requete": "geneva to megeve",
+    "usage": "veille",
+    "impressions": 8,
+    "clics": 0,
+    "position": 2.0
+   },
+   {
+    "requete": "megeve ski holidays",
+    "usage": "achat",
+    "impressions": 4,
+    "clics": 0,
+    "position": 35.5
+   },
+   {
+    "requete": "domaine skiable megeve",
+    "usage": "achat",
+    "impressions": 2,
+    "clics": 0,
+    "position": 3.5
+   }
+  ],
+  "gsc_absentes": [
+   "sejour ski tout compris",
+   "forfait megeve",
+   "geneva to megeve transfer",
+   "ski en famille",
+   "sejour ski"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/",
+    "impressions": 22287,
+    "clics": 77,
+    "position": 13.0,
+    "decision": "creer"
+   },
+   {
+    "page": "/le-beef-lodge-megeve",
+    "impressions": 7213,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/spa",
+    "impressions": 7213,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/chambres-suites",
+    "impressions": 7208,
+    "clics": 0,
+    "position": 12.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "/bar-du-lodge-apres-ski-megeve",
+    "impressions": 7146,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en",
+    "impressions": 6150,
+    "clics": 18,
+    "position": 12.3,
+    "decision": "conserver"
+   },
+   {
+    "page": "/a-propos-de-nous",
+    "impressions": 5131,
+    "clics": 0,
+    "position": 13.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 4866,
+    "clics": 32,
+    "position": 13.3,
+    "decision": "conserver"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Performance passée des envois et des campagnes : 26 activation(s) sans ligne de base, aucune cible chiffrée n'est possible"
+  ],
+  "id": "fevrier"
+ },
+ {
+  "nom": "Fêtes de fin d'année",
+  "theme": "Noël et Nouvel An à la montagne, la haute saison courte où toutes les nationalités se retrouvent.",
+  "grille": [
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    "fenetre": [
+     "2026-09-09",
+     "2026-11-11"
+    ],
+    "score": 13.43,
+    "urgence": 1.0,
+    "ordre": 13.43,
+    "ecart": 1.0,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-04"
+    ],
+    "fenetre": [
+     "2026-10-24",
+     "2026-11-28"
+    ],
+    "score": 8.1,
+    "urgence": 0.83,
+    "ordre": 6.72,
+    "ecart": 0.4,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-04"
+    ],
+    "fenetre": [
+     "2026-10-24",
+     "2026-11-28"
+    ],
+    "score": 8.1,
+    "urgence": 0.83,
+    "ordre": 6.72,
+    "ecart": 0.4,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2026-12-24",
+     "2027-01-10"
+    ],
+    "fenetre": [
+     "2026-11-26",
+     "2026-12-13"
+    ],
+    "score": 9.78,
+    "urgence": 0.65,
+    "ordre": 6.34,
+    "ecart": 0.59,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2026-12-24",
+     "2027-01-10"
+    ],
+    "fenetre": [
+     "2026-11-26",
+     "2026-12-13"
+    ],
+    "score": 9.78,
+    "urgence": 0.65,
+    "ordre": 6.34,
+    "ecart": 0.59,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-04"
+    ],
+    "fenetre": [
+     "2026-11-04",
+     "2026-12-02"
+    ],
+    "score": 8.1,
+    "urgence": 0.77,
+    "ordre": 6.23,
+    "ecart": 0.4,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    "fenetre": [
+     "2026-08-07",
+     "2026-10-30"
+    ],
+    "score": 2.5,
+    "urgence": 1.0,
+    "ordre": 2.5,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    "fenetre": [
+     "2026-10-02",
+     "2026-11-20"
+    ],
+    "score": 2.5,
+    "urgence": 0.95,
+    "ordre": 2.38,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    "fenetre": [
+     "2026-10-13",
+     "2026-11-24"
+    ],
+    "score": 2.5,
+    "urgence": 0.89,
+    "ordre": 2.23,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   }
+  ],
+  "activations": [
+   {
+    "canal": "meta",
+    "vague": "Vague 1",
+    "debut": "2026-09-23",
+    "fin": "2026-11-11",
+    "marches": "Royaume-Uni",
+    "message": "Christmas and New Year in Megeve, at the heart of the Alps, one hour from Geneva.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "seo",
+    "vague": "Vague 1",
+    "debut": "2026-09-24",
+    "fin": "2026-10-15",
+    "marches": "France zone C, Royaume-Uni",
+    "message": "Noel et Nouvel An a Megeve : programme jour par jour, dates des vacances de chaque marche, ou dormir.",
+    "kpi": "KPI : impressions et clics requetes cibles a 8 semaines, position, presence Peec. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 1",
+    "debut": "2026-09-30",
+    "fin": "2026-11-11",
+    "marches": "Royaume-Uni",
+    "message": "Noel et Nouvel An a Megeve : village de Noel, parade du 24, descente aux flambeaux du 31, et les dates encore ouvertes.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 2",
+    "debut": "2026-11-12",
+    "fin": "2026-11-28",
+    "marches": "France zone A, France zone B, France zone C",
+    "message": "Noel et Nouvel An a Megeve : village de Noel, parade du 24, descente aux flambeaux du 31, et les dates encore ouvertes.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 3",
+    "debut": "2026-12-02",
+    "fin": "2026-12-13",
+    "marches": "Genève, Vaud",
+    "message": "Noel et Nouvel An a Megeve : village de Noel, parade du 24, descente aux flambeaux du 31, et les dates encore ouvertes.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 1",
+    "debut": "2026-10-24",
+    "fin": "2026-11-28",
+    "marches": "France zone B, France zone C",
+    "message": "Noel et Nouvel An a Megeve, sejour en montagne aux dates des fetes.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 2",
+    "debut": "2026-11-04",
+    "fin": "2026-12-02",
+    "marches": "France zone A",
+    "message": "Noel et Nouvel An a Megeve, sejour en montagne aux dates des fetes.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 3",
+    "debut": "2026-11-26",
+    "fin": "2026-12-13",
+    "marches": "Genève, Vaud",
+    "message": "Noel et Nouvel An a Megeve, sejour en montagne aux dates des fetes.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "social",
+    "vague": "Vague 1",
+    "debut": "2026-12-21",
+    "fin": "2027-01-03",
+    "marches": "France zone C",
+    "message": "Le village de Noel, la parade du 24 decembre, la descente aux flambeaux du 31.",
+    "kpi": "KPI : portee, enregistrements, clics sortants. pas de référence. Statut brouillon."
+   }
+  ],
+  "gsc_requetes": [
+   {
+    "requete": "hotel megeve",
+    "usage": "achat",
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   },
+   {
+    "requete": "megeve hotel",
+    "usage": "achat",
+    "impressions": 16041,
+    "clics": 20,
+    "position": 12.8
+   },
+   {
+    "requete": "hotel 5 etoiles megeve",
+    "usage": "achat, source GSC",
+    "impressions": 11937,
+    "clics": 32,
+    "position": 12.7
+   },
+   {
+    "requete": "hotel megeve 5 etoiles",
+    "usage": "achat, source GSC",
+    "impressions": 8936,
+    "clics": 19,
+    "position": 12.1
+   },
+   {
+    "requete": "megeve hotels",
+    "usage": "sejour",
+    "impressions": 8096,
+    "clics": 14,
+    "position": 12.0
+   },
+   {
+    "requete": "hotel megeve luxe",
+    "usage": "achat, source GSC",
+    "impressions": 7301,
+    "clics": 12,
+    "position": 11.8
+   },
+   {
+    "requete": "hotel luxe megeve",
+    "usage": "sejour",
+    "impressions": 6332,
+    "clics": 22,
+    "position": 14.1
+   },
+   {
+    "requete": "megeve hotel 5 etoiles",
+    "usage": "achat, source GSC",
+    "impressions": 6083,
+    "clics": 9,
+    "position": 13.2
+   },
+   {
+    "requete": "megeve christmas",
+    "usage": "sejour",
+    "impressions": 1600,
+    "clics": 0,
+    "position": 14.5
+   },
+   {
+    "requete": "nouvel an megeve",
+    "usage": "sejour",
+    "impressions": 879,
+    "clics": 78,
+    "position": 8.6
+   },
+   {
+    "requete": "four seasons megeve",
+    "usage": "sejour",
+    "impressions": 8,
+    "clics": 0,
+    "position": 11.4
+   },
+   {
+    "requete": "megeve ski holidays",
+    "usage": "achat",
+    "impressions": 4,
+    "clics": 0,
+    "position": 35.5
+   }
+  ],
+  "gsc_absentes": [
+   "forfait megeve"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/",
+    "impressions": 40147,
+    "clics": 149,
+    "position": 11.9,
+    "decision": "conserver"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 12105,
+    "clics": 48,
+    "position": 11.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "/le-beef-lodge-megeve",
+    "impressions": 9163,
+    "clics": 0,
+    "position": 12.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/spa",
+    "impressions": 9151,
+    "clics": 0,
+    "position": 12.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/chambres-suites",
+    "impressions": 9130,
+    "clics": 0,
+    "position": 12.5,
+    "decision": "conserver"
+   },
+   {
+    "page": "/bar-du-lodge-apres-ski-megeve",
+    "impressions": 8961,
+    "clics": 0,
+    "position": 12.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en",
+    "impressions": 6457,
+    "clics": 18,
+    "position": 12.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/a-propos-de-nous",
+    "impressions": 6024,
+    "clics": 0,
+    "position": 13.0,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/actualites-agenda/celebrate-christmas-and-new-year-in-megeve",
+    "impressions": 879,
+    "clics": 0,
+    "position": 14.9,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/actualites-agenda/votre-soiree-du-nouvel-an-a-megeve",
+    "impressions": 635,
+    "clics": 70,
+    "position": 5.3,
+    "decision": "mettre a jour"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Aucune requête achat sur la base Semrush de ce marché : rien à mesurer, la sémantique du sujet est à compléter sur ce marché",
+   "Performance passée des envois et des campagnes : 15 activation(s) sans ligne de base, aucune cible chiffrée n'est possible"
+  ],
+  "id": "fetes"
+ },
+ {
+  "nom": "Early booking hiver 2027-2028",
+  "theme": "Vendre l'hiver prochain avant l'été, aux marchés qui réservent tôt. Séjour : Hiver 2027-2028",
+  "grille": [
+   {
+    "marche": "tous marchés",
+    "sejour": [
+     "2026-11-01",
+     "2026-11-30"
+    ],
+    "fenetre": [
+     "2026-11-01",
+     "2026-11-30"
+    ],
+    "score": 13.43,
+    "urgence": 0.79,
+    "ordre": 10.55,
+    "ecart": 1.0,
+    "manquants": "besoin, marge"
+   }
+  ],
+  "activations": [],
+  "gsc_requetes": [
+   {
+    "requete": "megeve ski holidays",
+    "usage": "achat",
+    "impressions": 4,
+    "clics": 0,
+    "position": 35.5
+   }
+  ],
+  "gsc_absentes": [],
+  "gsc_pages": [
+   {
+    "page": "/en/offres/ski-and-spa-offer",
+    "impressions": 2,
+    "clics": 0,
+    "position": 25.0,
+    "decision": "creer"
+   },
+   {
+    "page": "/",
+    "impressions": 1,
+    "clics": 0,
+    "position": 31.0,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/megeve-in-winter",
+    "impressions": 1,
+    "clics": 0,
+    "position": 61.0,
+    "decision": "conserver"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes"
+  ],
+  "id": "early"
+ },
+ {
+  "nom": "Wellness et spa en hiver",
+  "theme": "Le spa comme raison de venir, pas comme service de l'hôtel. Couples, Saint-Valentin, après-ski.",
+  "grille": [
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-11-10",
+     "2026-12-15"
+    ],
+    "score": 13.29,
+    "urgence": 0.74,
+    "ordre": 9.79,
+    "ecart": 0.6,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-11-10",
+     "2026-12-15"
+    ],
+    "score": 13.29,
+    "urgence": 0.74,
+    "ordre": 9.79,
+    "ecart": 0.6,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-11-21",
+     "2026-12-19"
+    ],
+    "score": 13.29,
+    "urgence": 0.68,
+    "ordre": 8.98,
+    "ecart": 0.6,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-12-08",
+     "2026-12-25"
+    ],
+    "score": 9.1,
+    "urgence": 0.58,
+    "ordre": 5.3,
+    "ecart": 0.62,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-12-08",
+     "2026-12-25"
+    ],
+    "score": 9.1,
+    "urgence": 0.58,
+    "ordre": 5.3,
+    "ecart": 0.62,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-08-24",
+     "2026-11-16"
+    ],
+    "score": 2.5,
+    "urgence": 1.0,
+    "ordre": 2.5,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-09-26",
+     "2026-11-28"
+    ],
+    "score": 2.5,
+    "urgence": 0.98,
+    "ordre": 2.46,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-10-19",
+     "2026-12-07"
+    ],
+    "score": 2.5,
+    "urgence": 0.86,
+    "ordre": 2.14,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2027-01-05",
+     "2027-03-21"
+    ],
+    "fenetre": [
+     "2026-10-30",
+     "2026-12-11"
+    ],
+    "score": 2.5,
+    "urgence": 0.8,
+    "ordre": 1.99,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   }
+  ],
+  "activations": [
+   {
+    "canal": "seo",
+    "vague": "Vague 1",
+    "debut": "2026-09-28",
+    "fin": "2026-11-10",
+    "marches": "France zone C",
+    "message": "Spa et wellness a Megeve en hiver : soins, acces, tarifs, et quand venir pour avoir le spa a soi.",
+    "kpi": "KPI : impressions et clics requetes cibles a 8 semaines, position, presence Peec. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 1",
+    "debut": "2026-11-10",
+    "fin": "2026-12-15",
+    "marches": "France zone B, France zone C",
+    "message": "Spa a Megeve, sejour wellness en montagne.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 2",
+    "debut": "2026-11-21",
+    "fin": "2026-12-19",
+    "marches": "France zone A",
+    "message": "Spa a Megeve, sejour wellness en montagne.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 3",
+    "debut": "2026-12-08",
+    "fin": "2026-12-25",
+    "marches": "Genève, Vaud",
+    "message": "Spa a Megeve, sejour wellness en montagne.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 1",
+    "debut": "2026-11-30",
+    "fin": "2026-12-15",
+    "marches": "France zone A, France zone B, France zone C",
+    "message": "Le spa comme raison de venir : deux jours en montagne autour du soin, hors vacances scolaires.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 2",
+    "debut": "2026-12-14",
+    "fin": "2026-12-25",
+    "marches": "Genève, Vaud",
+    "message": "Le spa comme raison de venir : deux jours en montagne autour du soin, hors vacances scolaires.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "social",
+    "vague": "Vague 1",
+    "debut": "2027-01-05",
+    "fin": "2027-03-21",
+    "marches": "France zone C",
+    "message": "Le spa en hiver : lumiere du matin sur la neige, soin, retour au calme.",
+    "kpi": "KPI : portee, enregistrements, clics sortants. pas de référence. Statut brouillon."
+   }
+  ],
+  "gsc_requetes": [
+   {
+    "requete": "spa megeve",
+    "usage": "achat",
+    "impressions": 21986,
+    "clics": 666,
+    "position": 10.8
+   },
+   {
+    "requete": "hotel spa megeve",
+    "usage": "achat",
+    "impressions": 11897,
+    "clics": 45,
+    "position": 17.7
+   },
+   {
+    "requete": "massage megeve",
+    "usage": "achat, source GSC",
+    "impressions": 8065,
+    "clics": 126,
+    "position": 15.0
+   }
+  ],
+  "gsc_absentes": [
+   "hotel spa montagne"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/spa",
+    "impressions": 26955,
+    "clics": 735,
+    "position": 7.9,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 3707,
+    "clics": 30,
+    "position": 8.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "/actualites-agenda/massage-en-duo-a-megeve",
+    "impressions": 3650,
+    "clics": 50,
+    "position": 16.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/actualites-agenda/les-plus-beaux-spas-de-megeve",
+    "impressions": 2004,
+    "clics": 4,
+    "position": 44.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "/",
+    "impressions": 1551,
+    "clics": 2,
+    "position": 30.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/spa",
+    "impressions": 1071,
+    "clics": 13,
+    "position": 8.8,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/espace-bien-etre",
+    "impressions": 694,
+    "clics": 0,
+    "position": 55.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "https://en.lodgepark.com/spa",
+    "impressions": 201,
+    "clics": 0,
+    "position": 10.7,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/es/spa",
+    "impressions": 24,
+    "clics": 0,
+    "position": 6.8,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "https://es.lodgepark.com/spa",
+    "impressions": 4,
+    "clics": 0,
+    "position": 10.2,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/ar/spa",
+    "impressions": 1,
+    "clics": 0,
+    "position": 11.0,
+    "decision": "mettre a jour"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Aucune requête achat sur la base Semrush de ce marché : rien à mesurer, la sémantique du sujet est à compléter sur ce marché",
+   "Performance passée des envois et des campagnes : 12 activation(s) sans ligne de base, aucune cible chiffrée n'est possible"
+  ],
+  "id": "spa"
+ },
+ {
+  "nom": "Ski de printemps et fin de saison",
+  "theme": "Soleil, terrasses, neige de printemps. Les dernières semaines avant fermeture, à remplir sans brader.",
+  "grille": [
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2026-11-27",
+     "2027-01-29"
+    ],
+    "score": 15.17,
+    "urgence": 0.64,
+    "ordre": 9.75,
+    "ecart": 0.92,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-11",
+     "2027-02-15"
+    ],
+    "score": 8.25,
+    "urgence": 0.4,
+    "ordre": 3.26,
+    "ecart": 0.38,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-11",
+     "2027-02-15"
+    ],
+    "score": 8.25,
+    "urgence": 0.4,
+    "ordre": 3.26,
+    "ecart": 0.38,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-22",
+     "2027-02-19"
+    ],
+    "score": 8.25,
+    "urgence": 0.34,
+    "ordre": 2.77,
+    "ecart": 0.38,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2026-10-25",
+     "2027-01-17"
+    ],
+    "score": 2.5,
+    "urgence": 0.82,
+    "ordre": 2.06,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2026-12-20",
+     "2027-02-07"
+    ],
+    "score": 2.5,
+    "urgence": 0.52,
+    "ordre": 1.29,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2026-12-31",
+     "2027-02-11"
+    ],
+    "score": 2.5,
+    "urgence": 0.46,
+    "ordre": 1.14,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-02-08",
+     "2027-02-25"
+    ],
+    "score": 3.05,
+    "urgence": 0.3,
+    "ordre": 0.91,
+    "ecart": 0.25,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2027-03-08",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-02-08",
+     "2027-02-25"
+    ],
+    "score": 3.05,
+    "urgence": 0.3,
+    "ordre": 0.91,
+    "ecart": 0.25,
+    "manquants": "besoin, marge"
+   }
+  ],
+  "activations": [],
+  "gsc_requetes": [
+   {
+    "requete": "hotel megeve",
+    "usage": "achat",
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   },
+   {
+    "requete": "spa megeve",
+    "usage": "achat",
+    "impressions": 21986,
+    "clics": 666,
+    "position": 10.8
+   },
+   {
+    "requete": "megeve ski resort",
+    "usage": "achat",
+    "impressions": 174,
+    "clics": 0,
+    "position": 33.9
+   },
+   {
+    "requete": "megeve ski",
+    "usage": "sejour",
+    "impressions": 148,
+    "clics": 0,
+    "position": 58.9
+   },
+   {
+    "requete": "domaine skiable megeve",
+    "usage": "sejour",
+    "impressions": 2,
+    "clics": 0,
+    "position": 3.5
+   }
+  ],
+  "gsc_absentes": [
+   "ski de printemps"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/spa",
+    "impressions": 23467,
+    "clics": 632,
+    "position": 8.3,
+    "decision": "creer"
+   },
+   {
+    "page": "/",
+    "impressions": 18339,
+    "clics": 70,
+    "position": 13.2,
+    "decision": "conserver"
+   },
+   {
+    "page": "/le-beef-lodge-megeve",
+    "impressions": 6027,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/chambres-suites",
+    "impressions": 6025,
+    "clics": 0,
+    "position": 12.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "/bar-du-lodge-apres-ski-megeve",
+    "impressions": 5976,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 4493,
+    "clics": 50,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/a-propos-de-nous",
+    "impressions": 4361,
+    "clics": 0,
+    "position": 13.0,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en",
+    "impressions": 1843,
+    "clics": 2,
+    "position": 12.2,
+    "decision": "conserver"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Aucune requête achat sur la base Semrush de ce marché : rien à mesurer, la sémantique du sujet est à compléter sur ce marché",
+   "Date de fermeture de la maison : le score de ce sujet la suppose ouverte jusqu'au bout"
+  ],
+  "id": "printemps"
+ },
+ {
+  "nom": "Ouverture et illumination du sapin",
+  "theme": "La station se rallume, la maison rouvre. Premier week-end, premières neiges, Noël avant Noël.",
+  "grille": [
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-10-09",
+     "2026-11-13"
+    ],
+    "score": 8.39,
+    "urgence": 0.91,
+    "ordre": 7.65,
+    "ecart": 0.4,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-10-09",
+     "2026-11-13"
+    ],
+    "score": 8.39,
+    "urgence": 0.91,
+    "ordre": 7.65,
+    "ecart": 0.4,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-10-20",
+     "2026-11-17"
+    ],
+    "score": 8.39,
+    "urgence": 0.85,
+    "ordre": 7.14,
+    "ecart": 0.4,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-11-06",
+     "2026-11-23"
+    ],
+    "score": 5.06,
+    "urgence": 0.76,
+    "ordre": 3.84,
+    "ecart": 0.3,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-11-06",
+     "2026-11-23"
+    ],
+    "score": 5.06,
+    "urgence": 0.76,
+    "ordre": 3.84,
+    "ecart": 0.3,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-09-17",
+     "2026-11-05"
+    ],
+    "score": 2.5,
+    "urgence": 1.0,
+    "ordre": 2.5,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-08-25",
+     "2026-10-27"
+    ],
+    "score": 2.5,
+    "urgence": 1.0,
+    "ordre": 2.5,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-07-23",
+     "2026-10-15"
+    ],
+    "score": 2.5,
+    "urgence": 1.0,
+    "ordre": 2.5,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2026-12-04",
+     "2026-12-18"
+    ],
+    "fenetre": [
+     "2026-09-28",
+     "2026-11-09"
+    ],
+    "score": 2.5,
+    "urgence": 0.97,
+    "ordre": 2.43,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   }
+  ],
+  "activations": [
+   {
+    "canal": "seo",
+    "vague": "Vague 1",
+    "debut": "2026-09-24",
+    "fin": "2026-10-09",
+    "marches": "France zone C",
+    "message": "L'illumination du sapin et le premier week-end de la saison a Megeve, dates, programme, ou dormir.",
+    "kpi": "KPI : impressions et clics requetes cibles a 8 semaines, position, presence Peec. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 1",
+    "debut": "2026-10-09",
+    "fin": "2026-11-13",
+    "marches": "France zone B, France zone C",
+    "message": "Premier week-end de la saison a Megeve, illumination du sapin le 5 decembre.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 2",
+    "debut": "2026-10-20",
+    "fin": "2026-11-17",
+    "marches": "France zone A",
+    "message": "Premier week-end de la saison a Megeve, illumination du sapin le 5 decembre.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 3",
+    "debut": "2026-11-06",
+    "fin": "2026-11-23",
+    "marches": "Genève, Vaud",
+    "message": "Premier week-end de la saison a Megeve, illumination du sapin le 5 decembre.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 1",
+    "debut": "2026-10-23",
+    "fin": "2026-11-13",
+    "marches": "France zone A, France zone B, France zone C",
+    "message": "La station se rallume le 5 decembre et la maison rouvre : premier week-end, avant la haute saison et a son tarif.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 2",
+    "debut": "2026-11-12",
+    "fin": "2026-11-23",
+    "marches": "Genève, Vaud",
+    "message": "La station se rallume le 5 decembre et la maison rouvre : premier week-end, avant la haute saison et a son tarif.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "social",
+    "vague": "Vague 1",
+    "debut": "2026-11-25",
+    "fin": "2026-12-18",
+    "marches": "France zone C",
+    "message": "Le sapin s'allume, la saison commence : illumination du 5 decembre et jardin de la glisse.",
+    "kpi": "KPI : portee, enregistrements, clics sortants. pas de référence. Statut brouillon."
+   }
+  ],
+  "gsc_requetes": [
+   {
+    "requete": "hotel megeve",
+    "usage": "achat",
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   },
+   {
+    "requete": "megeve hotel",
+    "usage": "achat",
+    "impressions": 16041,
+    "clics": 20,
+    "position": 12.8
+   },
+   {
+    "requete": "hotel spa megeve",
+    "usage": "sejour",
+    "impressions": 11897,
+    "clics": 45,
+    "position": 17.7
+   },
+   {
+    "requete": "illumination sapin megeve",
+    "usage": "sejour",
+    "impressions": 1753,
+    "clics": 273,
+    "position": 2.2
+   },
+   {
+    "requete": "megeve noel",
+    "usage": "achat",
+    "impressions": 596,
+    "clics": 7,
+    "position": 11.2
+   },
+   {
+    "requete": "marche de noel megeve",
+    "usage": "sejour",
+    "impressions": 33,
+    "clics": 0,
+    "position": 46.3
+   },
+   {
+    "requete": "enneigement megeve",
+    "usage": "sejour",
+    "impressions": 1,
+    "clics": 0,
+    "position": 5.0
+   }
+  ],
+  "gsc_absentes": [],
+  "gsc_pages": [
+   {
+    "page": "/",
+    "impressions": 23262,
+    "clics": 78,
+    "position": 13.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "/spa",
+    "impressions": 12319,
+    "clics": 32,
+    "position": 11.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 7177,
+    "clics": 42,
+    "position": 10.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "/le-beef-lodge-megeve",
+    "impressions": 7164,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/chambres-suites",
+    "impressions": 7160,
+    "clics": 0,
+    "position": 12.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "/bar-du-lodge-apres-ski-megeve",
+    "impressions": 7098,
+    "clics": 0,
+    "position": 12.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/a-propos-de-nous",
+    "impressions": 5100,
+    "clics": 0,
+    "position": 13.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en",
+    "impressions": 3576,
+    "clics": 8,
+    "position": 12.2,
+    "decision": "conserver"
+   },
+   {
+    "page": "/actualites-agenda/illumination-du-sapin",
+    "impressions": 2162,
+    "clics": 279,
+    "position": 4.1,
+    "decision": "mettre a jour"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Aucune requête achat sur la base Semrush de ce marché : rien à mesurer, la sémantique du sujet est à compléter sur ce marché",
+   "Performance passée des envois et des campagnes : 12 activation(s) sans ligne de base, aucune cible chiffrée n'est possible"
+  ],
+  "id": "sapin"
+ },
+ {
+  "nom": "Pâques des familles britanniques",
+  "theme": "Pâques des familles britanniques, du 26 mars au 11 avril. Sujet conditionné à la date de fermeture de la maison, non connue à ce jour.",
+  "grille": [
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2026-12-15",
+     "2027-02-16"
+    ],
+    "score": 12.56,
+    "urgence": 0.54,
+    "ordre": 6.83,
+    "ecart": 0.6,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2026-11-12",
+     "2027-02-04"
+    ],
+    "score": 2.5,
+    "urgence": 0.72,
+    "ordre": 1.81,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-07",
+     "2027-02-25"
+    ],
+    "score": 2.5,
+    "urgence": 0.42,
+    "ordre": 1.04,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-18",
+     "2027-03-01"
+    ],
+    "score": 2.5,
+    "urgence": 0.36,
+    "ordre": 0.89,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-02-09",
+     "2027-03-09"
+    ],
+    "score": 2.5,
+    "urgence": 0.3,
+    "ordre": 0.75,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-29",
+     "2027-03-05"
+    ],
+    "score": 2.5,
+    "urgence": 0.3,
+    "ordre": 0.75,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-01-29",
+     "2027-03-05"
+    ],
+    "score": 2.5,
+    "urgence": 0.3,
+    "ordre": 0.75,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-02-26",
+     "2027-03-15"
+    ],
+    "score": 2.5,
+    "urgence": 0.3,
+    "ordre": 0.75,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2027-03-26",
+     "2027-04-11"
+    ],
+    "fenetre": [
+     "2027-02-26",
+     "2027-03-15"
+    ],
+    "score": 2.5,
+    "urgence": 0.3,
+    "ordre": 0.75,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   }
+  ],
+  "activations": [],
+  "gsc_requetes": [
+   {
+    "requete": "megeve hotels",
+    "usage": "achat",
+    "impressions": 8096,
+    "clics": 14,
+    "position": 12.0
+   },
+   {
+    "requete": "megeve ski resort",
+    "usage": "achat",
+    "impressions": 174,
+    "clics": 0,
+    "position": 33.9
+   },
+   {
+    "requete": "megeve snow conditions",
+    "usage": "achat",
+    "impressions": 1,
+    "clics": 0,
+    "position": 6.0
+   }
+  ],
+  "gsc_absentes": [
+   "geneva to megeve transfer"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/en",
+    "impressions": 2704,
+    "clics": 10,
+    "position": 12.8,
+    "decision": "creer"
+   },
+   {
+    "page": "https://en.lodgepark.com/",
+    "impressions": 1283,
+    "clics": 1,
+    "position": 10.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/le-beef-lodge-megeve",
+    "impressions": 494,
+    "clics": 0,
+    "position": 10.5,
+    "decision": "conserver"
+   },
+   {
+    "page": "/",
+    "impressions": 458,
+    "clics": 1,
+    "position": 16.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/bar-du-lodge-apres-ski-megeve",
+    "impressions": 452,
+    "clics": 0,
+    "position": 10.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/spa",
+    "impressions": 447,
+    "clics": 0,
+    "position": 10.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/hotel-megeve",
+    "impressions": 355,
+    "clics": 0,
+    "position": 10.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 349,
+    "clics": 0,
+    "position": 15.7,
+    "decision": "conserver"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Aucune requête achat sur la base Semrush de ce marché : rien à mesurer, la sémantique du sujet est à compléter sur ce marché",
+   "Date de fermeture de la maison : le score de ce sujet la suppose ouverte jusqu'au bout"
+  ],
+  "id": "paques"
+ },
+ {
+  "nom": "Janvier, la semaine des connaisseurs",
+  "theme": "Après les fêtes, avant les vacances : les pistes calmes, la neige la plus sûre, la Grande Odyssée en fond.",
+  "grille": [
+   {
+    "marche": "France zone B",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-11-10",
+     "2026-12-15"
+    ],
+    "score": 8.04,
+    "urgence": 0.74,
+    "ordre": 5.92,
+    "ecart": 0.35,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone C",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-11-10",
+     "2026-12-15"
+    ],
+    "score": 8.04,
+    "urgence": 0.74,
+    "ordre": 5.92,
+    "ecart": 0.35,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-11-21",
+     "2026-12-19"
+    ],
+    "score": 8.04,
+    "urgence": 0.68,
+    "ordre": 5.43,
+    "ecart": 0.35,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-12-08",
+     "2026-12-25"
+    ],
+    "score": 8.68,
+    "urgence": 0.58,
+    "ordre": 5.06,
+    "ecart": 0.51,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-12-08",
+     "2026-12-25"
+    ],
+    "score": 8.68,
+    "urgence": 0.58,
+    "ordre": 5.06,
+    "ecart": 0.51,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "États-Unis",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-08-24",
+     "2026-11-16"
+    ],
+    "score": 2.5,
+    "urgence": 1.0,
+    "ordre": 2.5,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Royaume-Uni",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-09-26",
+     "2026-11-28"
+    ],
+    "score": 2.5,
+    "urgence": 0.98,
+    "ordre": 2.46,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Pays-Bas",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-10-19",
+     "2026-12-07"
+    ],
+    "score": 2.5,
+    "urgence": 0.86,
+    "ordre": 2.14,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   },
+   {
+    "marche": "Belgique",
+    "sejour": [
+     "2027-01-05",
+     "2027-02-05"
+    ],
+    "fenetre": [
+     "2026-10-30",
+     "2026-12-11"
+    ],
+    "score": 2.5,
+    "urgence": 0.8,
+    "ordre": 1.99,
+    "ecart": 0.5,
+    "manquants": "visibilite, besoin, marge"
+   }
+  ],
+  "activations": [
+   {
+    "canal": "seo",
+    "vague": "Vague 1",
+    "debut": "2026-09-28",
+    "fin": "2026-11-10",
+    "marches": "France zone C",
+    "message": "Skier a Megeve en janvier : enneigement, affluence, Grande Odyssee, et ce que vaut la semaine hors vacances.",
+    "kpi": "KPI : impressions et clics requetes cibles a 8 semaines, position, presence Peec. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 1",
+    "debut": "2026-11-10",
+    "fin": "2026-12-15",
+    "marches": "France zone B, France zone C",
+    "message": "Janvier a Megeve, pistes calmes et neige sure, hors vacances scolaires.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 2",
+    "debut": "2026-11-21",
+    "fin": "2026-12-19",
+    "marches": "France zone A",
+    "message": "Janvier a Megeve, pistes calmes et neige sure, hors vacances scolaires.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "sea",
+    "vague": "Vague 3",
+    "debut": "2026-12-08",
+    "fin": "2026-12-25",
+    "marches": "Genève, Vaud",
+    "message": "Janvier a Megeve, pistes calmes et neige sure, hors vacances scolaires.",
+    "kpi": "KPI : CPA, reservations attribuees, ROAS. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 1",
+    "debut": "2026-11-30",
+    "fin": "2026-12-15",
+    "marches": "France zone A, France zone B, France zone C",
+    "message": "Janvier a Megeve : les pistes calmes, la neige la plus sure de la saison, la Grande Odyssee en fond.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "crm",
+    "vague": "Vague 2",
+    "debut": "2026-12-14",
+    "fin": "2026-12-25",
+    "marches": "Genève, Vaud",
+    "message": "Janvier a Megeve : les pistes calmes, la neige la plus sure de la saison, la Grande Odyssee en fond.",
+    "kpi": "KPI : ouvertures, clics, reservations directes J+10. pas de référence. Statut brouillon."
+   },
+   {
+    "canal": "social",
+    "vague": "Vague 1",
+    "debut": "2027-01-05",
+    "fin": "2027-02-05",
+    "marches": "France zone C",
+    "message": "Janvier, les pistes pour soi : enneigement, Grande Odyssee, matchs de hockey.",
+    "kpi": "KPI : portee, enregistrements, clics sortants. pas de référence. Statut brouillon."
+   }
+  ],
+  "gsc_requetes": [
+   {
+    "requete": "hotel megeve",
+    "usage": "achat",
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   },
+   {
+    "requete": "spa megeve",
+    "usage": "achat",
+    "impressions": 21986,
+    "clics": 666,
+    "position": 10.8
+   },
+   {
+    "requete": "megeve hotel",
+    "usage": "achat",
+    "impressions": 16041,
+    "clics": 20,
+    "position": 12.8
+   },
+   {
+    "requete": "hotel 5 etoiles megeve",
+    "usage": "achat, source GSC",
+    "impressions": 11937,
+    "clics": 32,
+    "position": 12.7
+   },
+   {
+    "requete": "hotel megeve 5 etoiles",
+    "usage": "achat, source GSC",
+    "impressions": 8936,
+    "clics": 19,
+    "position": 12.1
+   },
+   {
+    "requete": "hotel megeve luxe",
+    "usage": "achat, source GSC",
+    "impressions": 7301,
+    "clics": 12,
+    "position": 11.8
+   },
+   {
+    "requete": "hotel luxe megeve",
+    "usage": "achat",
+    "impressions": 6332,
+    "clics": 22,
+    "position": 14.1
+   },
+   {
+    "requete": "megeve hotel 5 etoiles",
+    "usage": "achat, source GSC",
+    "impressions": 6083,
+    "clics": 9,
+    "position": 13.2
+   },
+   {
+    "requete": "grande odyssee",
+    "usage": "sejour",
+    "impressions": 84,
+    "clics": 0,
+    "position": 22.1
+   },
+   {
+    "requete": "domaine skiable megeve",
+    "usage": "achat",
+    "impressions": 2,
+    "clics": 0,
+    "position": 3.5
+   }
+  ],
+  "gsc_absentes": [
+   "sejour ski tout compris",
+   "forfait megeve",
+   "geneva to megeve transfer",
+   "sejour ski"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/",
+    "impressions": 39804,
+    "clics": 148,
+    "position": 12.0,
+    "decision": "conserver"
+   },
+   {
+    "page": "/spa",
+    "impressions": 26528,
+    "clics": 632,
+    "position": 8.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "[http]/",
+    "impressions": 12705,
+    "clics": 68,
+    "position": 11.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/le-beef-lodge-megeve",
+    "impressions": 9088,
+    "clics": 0,
+    "position": 12.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/chambres-suites",
+    "impressions": 9068,
+    "clics": 0,
+    "position": 12.5,
+    "decision": "conserver"
+   },
+   {
+    "page": "/bar-du-lodge-apres-ski-megeve",
+    "impressions": 8899,
+    "clics": 0,
+    "position": 12.4,
+    "decision": "conserver"
+   },
+   {
+    "page": "/a-propos-de-nous",
+    "impressions": 5986,
+    "clics": 0,
+    "position": 13.0,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en",
+    "impressions": 3756,
+    "clics": 8,
+    "position": 12.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "/actualites-agenda/la-grande-odyssee",
+    "impressions": 56,
+    "clics": 0,
+    "position": 29.7,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/es/actualites-agenda/la-grande-odyssee",
+    "impressions": 16,
+    "clics": 0,
+    "position": 6.2,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/en/actualites-agenda/la-grande-odyssee",
+    "impressions": 9,
+    "clics": 0,
+    "position": 7.3,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "https://lodgepark.com/en/actualites-agenda/la-grande-odyssee",
+    "impressions": 3,
+    "clics": 0,
+    "position": 7.3,
+    "decision": "mettre a jour"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes",
+   "Aucune requête achat sur la base Semrush de ce marché : rien à mesurer, la sémantique du sujet est à compléter sur ce marché",
+   "Performance passée des envois et des campagnes : 12 activation(s) sans ligne de base, aucune cible chiffrée n'est possible"
+  ],
+  "id": "janvier"
+ },
+ {
+  "nom": "Neige : le déclencheur de dernière minute",
+  "theme": "Pas un thème de séjour, un déclencheur. Quand il neige ou qu'il va neiger, les marchés courts réservent.",
+  "grille": [
+   {
+    "marche": "France zone A",
+    "sejour": [
+     "2026-12-04",
+     "2027-04-11"
+    ],
+    "fenetre": null,
+    "score": 5.0,
+    "urgence": 0.6,
+    "ordre": 3.02,
+    "ecart": 0.2,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Genève",
+    "sejour": [
+     "2026-12-04",
+     "2027-04-11"
+    ],
+    "fenetre": null,
+    "score": 5.0,
+    "urgence": 0.6,
+    "ordre": 3.02,
+    "ecart": 0.2,
+    "manquants": "besoin, marge"
+   },
+   {
+    "marche": "Vaud",
+    "sejour": [
+     "2026-12-04",
+     "2027-04-11"
+    ],
+    "fenetre": null,
+    "score": 5.0,
+    "urgence": 0.6,
+    "ordre": 3.02,
+    "ecart": 0.2,
+    "manquants": "besoin, marge"
+   }
+  ],
+  "activations": [],
+  "gsc_requetes": [
+   {
+    "requete": "meteo megeve",
+    "usage": "achat",
+    "impressions": 80,
+    "clics": 4,
+    "position": 5.6
+   },
+   {
+    "requete": "megeve snow report",
+    "usage": "sejour",
+    "impressions": 52,
+    "clics": 1,
+    "position": 4.7
+   },
+   {
+    "requete": "megeve webcam",
+    "usage": "sejour",
+    "impressions": 10,
+    "clics": 1,
+    "position": 4.7
+   },
+   {
+    "requete": "webcam megeve",
+    "usage": "achat",
+    "impressions": 2,
+    "clics": 0,
+    "position": 11.0
+   },
+   {
+    "requete": "domaine skiable megeve",
+    "usage": "achat",
+    "impressions": 2,
+    "clics": 0,
+    "position": 3.5
+   },
+   {
+    "requete": "enneigement megeve",
+    "usage": "achat",
+    "impressions": 1,
+    "clics": 0,
+    "position": 5.0
+   },
+   {
+    "requete": "megeve snow conditions",
+    "usage": "sejour",
+    "impressions": 1,
+    "clics": 0,
+    "position": 6.0
+   },
+   {
+    "requete": "megeve weer",
+    "usage": "sejour",
+    "impressions": 1,
+    "clics": 0,
+    "position": 4.0
+   }
+  ],
+  "gsc_absentes": [
+   "megeve sneeuwhoogte"
+  ],
+  "gsc_pages": [
+   {
+    "page": "/en/megeve-city-guide",
+    "impressions": 128,
+    "clics": 5,
+    "position": 5.0,
+    "decision": "creer"
+   },
+   {
+    "page": "https://en.lodgepark.com/megeve-city-guide",
+    "impressions": 19,
+    "clics": 1,
+    "position": 6.1,
+    "decision": "conserver"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes"
+  ],
+  "id": "neige"
+ },
+ {
+  "nom": "Séminaires et groupes",
+  "theme": "Le marché B2B décide au printemps pour l'automne et l'hiver suivants. Séjour : Séminaires d'automne 2027 et d'hiver 2027-2028",
+  "grille": [
+   {
+    "marche": "tous marchés",
+    "sejour": [
+     "2027-02-01",
+     "2027-03-31"
+    ],
+    "fenetre": [
+     "2027-02-01",
+     "2027-03-31"
+    ],
+    "score": 9.25,
+    "urgence": 0.3,
+    "ordre": 2.77,
+    "ecart": 0.8,
+    "manquants": "besoin, marge"
+   }
+  ],
+  "activations": [],
+  "gsc_requetes": [
+   {
+    "requete": "event venue megeve",
+    "usage": "achat, source GSC",
+    "impressions": 11880,
+    "clics": 0,
+    "position": 38.6
+   },
+   {
+    "requete": "seminaire megeve",
+    "usage": "achat",
+    "impressions": 795,
+    "clics": 0,
+    "position": 18.2
+   }
+  ],
+  "gsc_absentes": [],
+  "gsc_pages": [
+   {
+    "page": "/en/wedding-events",
+    "impressions": 3313,
+    "clics": 0,
+    "position": 7.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/evenements/mariages-et-evenements",
+    "impressions": 2627,
+    "clics": 0,
+    "position": 24.1,
+    "decision": "conserver"
+   },
+   {
+    "page": "/evenements/seminaires-et-incentives",
+    "impressions": 2180,
+    "clics": 0,
+    "position": 50.7,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/en/actualites-agenda/the-lodge-park-megeve-luxury-in-the-heart-of-the-alps-for-your-exceptional-events",
+    "impressions": 1049,
+    "clics": 0,
+    "position": 69.6,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/evenements/seminaires-et-incentives",
+    "impressions": 890,
+    "clics": 0,
+    "position": 46.9,
+    "decision": "mettre a jour"
+   },
+   {
+    "page": "/actualites-agenda/le-lodge-park-megeve-le-luxe-au-coeur-des-alpes-pour-vos-evenements-dexception",
+    "impressions": 861,
+    "clics": 0,
+    "position": 91.5,
+    "decision": "conserver"
+   },
+   {
+    "page": "/mariages-evenements",
+    "impressions": 503,
+    "clics": 0,
+    "position": 37.7,
+    "decision": "conserver"
+   },
+   {
+    "page": "/en/mariages-evenements",
+    "impressions": 373,
+    "clics": 0,
+    "position": 5.8,
+    "decision": "conserver"
+   },
+   {
+    "page": "https://en.lodgepark.com/evenements/seminaires-et-incentives",
+    "impressions": 4,
+    "clics": 0,
+    "position": 41.0,
+    "decision": "mettre a jour"
+   }
+  ],
+  "manque": [
+   "Asterio : on the books et pickup contre N-1, par semaine et par marché",
+   "Commissions OTA et coût par acquisition des campagnes"
+  ],
+  "id": "mice"
+ }
+]

@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* Charte Maisons & Hôtels Sibuet (relevée sur maisonsethotels-sibuet.com) */
+/* Charte Maisons & Hôtels Sibuet (relevée sur maisonsethotels-sibuet.com), tons clairs. */
 @theme {
-  --color-cream: #f6f5f3;
-  --color-sand: #eeebe7;
-  --color-line: #e3dfda;
+  --color-cream: #f7f5f1;
+  --color-sand: #efebe5;
+  --color-line: #e4dfd8;
   --color-greige: #aea79f;
-  --color-taupe: #aa9b8e;
+  --color-taupe: #9a8b7e;
   --color-ink: #34342e;
-  --color-ink-soft: #616365;
+  --color-ink-soft: #66665f;
   --color-brown: #4c3327;
-  --color-brick: #9c4a2f;
+  --color-brick: #a4553a;
   --color-ochre: #b08a4a;
-  --color-olive: #6f7456;
-  --color-sage: #8f948a;
+  --color-sage: #6f8a5f;
+  --color-sky: #5f7f99;
 
   --font-display: var(--font-garamond), "Garamond", Georgia, serif;
   --font-sans: var(--font-source-sans), "Source Sans Pro", system-ui, sans-serif;
@@ -34,13 +34,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@layer components {
 /* Petites capitales espacées, signature typographique du site Sibuet */
 .eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+.carte {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: 0.6rem;
 }
 
 .scrollbar-thin {
@@ -48,7 +55,19 @@ body {
   scrollbar-color: var(--color-greige) transparent;
 }
 
+/* Fenêtre d'achat : pointillés (convention de la maquette de Jérôme) */
+.fenetre-achat {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  border: 1.5px dashed currentColor;
+  border-radius: 999px;
+}
+}
+
 :focus-visible {
   outline: 2px solid var(--color-brown);
   outline-offset: 2px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 0.4;
 }

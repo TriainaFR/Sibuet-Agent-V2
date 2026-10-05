@@ -27,10 +27,10 @@ export function formatDate(s: string, withYear = false) {
 export function formatRange(a: string, b: string) {
   if (a === b) return formatDate(a, true);
   const sameYear = a.slice(0, 4) === b.slice(0, 4);
-  return `${formatDate(a, !sameYear)} → ${formatDate(b, true)}`;
+  return `${formatDate(a, !sameYear)} au ${formatDate(b, true)}`;
 }
 
-/** Date du jour pour l'outil. Peut être figée avec DEMO_TODAY=2026-09-30 dans .env.local. */
+/** Date du jour pour l'outil. Peut être figée avec DEMO_TODAY=AAAA-MM-JJ dans .env.local (rejouer un calcul passé). */
 export function today(): string {
   return process.env.DEMO_TODAY ?? iso(new Date());
 }
@@ -39,4 +39,13 @@ export function overlapDays(aStart: string, aEnd: string, bStart: string, bEnd: 
   const s = maxDate(aStart, bStart);
   const e = minDate(aEnd, bEnd);
   return s > e ? 0 : diffDays(e, s) + 1;
+}
+
+const JOURS = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+export const jourSemaine = (s: string) => JOURS[toDate(s).getUTCDay()];
+
+/** Lundi de la semaine d'une date. */
+export function lundi(s: string) {
+  const j = toDate(s).getUTCDay();
+  return addDays(s, -((j + 6) % 7));
 }

@@ -1,0 +1,112 @@
+{
+ "source": "meteo_prevision",
+ "collecte_le": "2026-09-16",
+ "horodatage": "2026-09-16T06:00:00.000Z",
+ "mode": "import",
+ "origine": "Open-Meteo, prévision 16 jours au point Megève 1113 m (collecte de Jérôme)",
+ "resume": "0 cm sur 5 jours, 0 cm sur 16 jours",
+ "donnees": {
+  "point": "megeve",
+  "jours": [
+   {
+    "date": "2026-09-16",
+    "neige_cm": 0,
+    "tmin": 12.2,
+    "tmax": 19.9
+   },
+   {
+    "date": "2026-09-17",
+    "neige_cm": 0,
+    "tmin": 9.2,
+    "tmax": 16.4
+   },
+   {
+    "date": "2026-09-18",
+    "neige_cm": 0,
+    "tmin": 8.4,
+    "tmax": 16.7
+   },
+   {
+    "date": "2026-09-19",
+    "neige_cm": 0,
+    "tmin": 6.5,
+    "tmax": 19.5
+   },
+   {
+    "date": "2026-09-20",
+    "neige_cm": 0,
+    "tmin": 9.0,
+    "tmax": 20.6
+   },
+   {
+    "date": "2026-09-21",
+    "neige_cm": 0,
+    "tmin": 10.1,
+    "tmax": 19.3
+   },
+   {
+    "date": "2026-09-22",
+    "neige_cm": 0,
+    "tmin": 11.4,
+    "tmax": 19.8
+   },
+   {
+    "date": "2026-09-23",
+    "neige_cm": 0,
+    "tmin": 7.6,
+    "tmax": 18.4
+   },
+   {
+    "date": "2026-09-24",
+    "neige_cm": 0,
+    "tmin": 4.2,
+    "tmax": 18.9
+   },
+   {
+    "date": "2026-09-25",
+    "neige_cm": 0,
+    "tmin": 5.5,
+    "tmax": 20.6
+   },
+   {
+    "date": "2026-09-26",
+    "neige_cm": 0,
+    "tmin": 6.6,
+    "tmax": 20.7
+   },
+   {
+    "date": "2026-09-27",
+    "neige_cm": 0,
+    "tmin": 9.3,
+    "tmax": 21.8
+   },
+   {
+    "date": "2026-09-28",
+    "neige_cm": 0,
+    "tmin": 10.8,
+    "tmax": 18.1
+   },
+   {
+    "date": "2026-09-29",
+    "neige_cm": 0,
+    "tmin": 9.5,
+    "tmax": 22.1
+   },
+   {
+    "date": "2026-09-30",
+    "neige_cm": 0,
+    "tmin": 9.2,
+    "tmax": 16.3
+   },
+   {
+    "date": "2026-10-01",
+    "neige_cm": 0,
+    "tmin": 9.2,
+    "tmax": 12.1
+   }
+  ],
+  "neige_5j": 0,
+  "neige_16j": 0
+ },
+ "signaux": []
+}

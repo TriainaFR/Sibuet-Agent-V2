@@ -1,0 +1,626 @@
+{
+ "maison": "lodge-park",
+ "saison": "hiver 2026-2027",
+ "version": "reprise du 5 oct. 2026 depuis les fiches du 23 sept. et la maquette UX de Jérôme Hoerlé",
+ "note": "Le fichier 04_donnees/sujets_lodge_park_hiver_2026-2027.json du poste de Jérôme fait foi. Ce fichier en est la reconstitution à partir du dossier de transfert : à remplacer dès réception.",
+ "sujets": [
+  {
+   "id": "fetes",
+   "nom": "Fêtes de fin d'année",
+   "famille": "saisonnier",
+   "sejour": {
+    "debut": "2026-12-19",
+    "fin": "2027-01-10"
+   },
+   "periode_par_marche": {
+    "vacances": [
+     "Noël",
+     "Christmas",
+     "Kerst"
+    ]
+   },
+   "cibles": "Familles et groupes familiaux, toutes nationalités.",
+   "theme": "Noël et Nouvel An, la haute saison la plus courte et la plus chère de l'hiver. Elle se vend sur le programme de la station, pas sur la neige.",
+   "requetes": [
+    {
+     "requete": "hotel megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "four seasons megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "four seasons megeve",
+     "base": "us",
+     "usage": "veille"
+    },
+    {
+     "requete": "hotel megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve hotels",
+     "base": "uk",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve hotel",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve hotels",
+     "base": "us",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve ski holidays",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel luxe megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "forfait megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel megeve",
+     "base": "be",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve christmas",
+     "base": "us",
+     "usage": "sejour"
+    },
+    {
+     "requete": "nouvel an megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve hotel",
+     "base": "be",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve hotel",
+     "base": "nl",
+     "usage": "sejour"
+    }
+   ],
+   "evenements": [
+    "Le Village de Noël",
+    "La Parade du Père Noël",
+    "Descente aux flambeaux ESF",
+    "Aquagames"
+   ],
+   "envois": [
+    "Fêtes de fin d'année à Megève",
+    "Repasse nouveau LP, fêtes, offres",
+    "Repasse fêtes, offres"
+   ],
+   "angle": "Le programme de la station semaine par semaine : village de Noël, parade du 24 décembre, descente aux flambeaux du 31."
+  },
+  {
+   "id": "sapin",
+   "nom": "Ouverture et illumination du sapin",
+   "famille": "evenementiel",
+   "sejour": {
+    "debut": "2026-12-04",
+    "fin": "2026-12-18"
+   },
+   "cibles": "Couples et courts séjours, France et Suisse romande, hors vacances scolaires.",
+   "theme": "La station se rallume le 5 décembre, la maison rouvre. Deux semaines sans vacances scolaires : premier week-end, premières neiges, Noël avant Noël.",
+   "requetes": [
+    {
+     "requete": "hotel megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "enneigement megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "hotel megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel spa megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve hotel",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "marche de noel megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "illumination sapin megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve noel",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "enneigement megeve",
+     "base": "ch",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [
+    "Illumination du sapin",
+    "Jardin de la glisse"
+   ],
+   "envois": [
+    "Ouverture décembre",
+    "Réouverture saisonnière"
+   ],
+   "angle": "Premier week-end de la saison à Megève, illumination du sapin le 5 décembre, avant la haute saison et à son tarif."
+  },
+  {
+   "id": "janvier",
+   "nom": "Janvier, la semaine des connaisseurs",
+   "famille": "saisonnier",
+   "sejour": {
+    "debut": "2027-01-05",
+    "fin": "2027-02-05"
+   },
+   "cibles": "Couples et skieurs confirmés, France et Suisse romande, hors vacances scolaires.",
+   "theme": "Quatre semaines sans vacances scolaires, la neige la plus régulière de l'hiver, la Grande Odyssée en fond. Des pistes calmes, à vendre comme telles.",
+   "requetes": [
+    {
+     "requete": "hotel megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "sejour ski tout compris",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "spa megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "forfait megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "domaine skiable megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "geneva to megeve transfer",
+     "base": "uk",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve hotel",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel luxe megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "grande odyssee",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "spa megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "forfait megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "sejour ski",
+     "base": "ch",
+     "usage": "sejour"
+    }
+   ],
+   "evenements": [
+    "Grande Odyssée, étape Megève",
+    "L'Élégance a du cœur, automobiles"
+   ],
+   "envois": [],
+   "angle": "Les pistes sans les vacances scolaires, la semaine du 11 janvier la mieux enneigée de l'hiver sur cinq saisons."
+  },
+  {
+   "id": "spa",
+   "nom": "Wellness et spa en hiver",
+   "famille": "saisonnier",
+   "sejour": {
+    "debut": "2027-01-05",
+    "fin": "2027-03-21"
+   },
+   "cibles": "Couples, Saint-Valentin, après-ski. France et Suisse romande.",
+   "theme": "Le spa comme raison de venir, pas comme service de l'hôtel. Se décide en novembre et décembre, se consomme jusqu'en mars.",
+   "requetes": [
+    {
+     "requete": "spa megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel spa montagne",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel spa megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "spa megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel spa montagne",
+     "base": "ch",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [],
+   "evenements_candidats": [
+    "Nuit lumineuse à la balnéoforme"
+   ],
+   "envois": [
+    "Boost mars, Wellness break"
+   ],
+   "angle": "Le spa Pure Altitude du Lodge Park comme destination de l'hiver, avec Saint-Valentin au milieu de la période."
+  },
+  {
+   "id": "fevrier",
+   "nom": "Vacances d'hiver, marché par marché",
+   "famille": "saisonnier",
+   "sejour": {
+    "debut": "2027-02-06",
+    "fin": "2027-03-08"
+   },
+   "periode_par_marche": {
+    "vacances": [
+     "Hiver",
+     "Février",
+     "Relâches",
+     "Half-term",
+     "Détente carnaval",
+     "Voorjaar",
+     "Presidents Day"
+    ]
+   },
+   "cibles": "Les familles. Quatre semaines françaises, trois régions néerlandaises, deux cantons suisses, une semaine anglaise et américaine.",
+   "theme": "Les vacances d'hiver de chaque marché, du 6 février au 8 mars. Les marchés lointains décident en premier, les marchés courts en dernier.",
+   "requetes": [
+    {
+     "requete": "sejour ski tout compris",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "forfait megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "domaine skiable megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve ski resort",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve ski resort",
+     "base": "us",
+     "usage": "achat"
+    },
+    {
+     "requete": "hotel megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "geneva to megeve transfer",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve hotels",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "ski en famille",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve skigebied",
+     "base": "nl",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve ski",
+     "base": "be",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve skigebied",
+     "base": "be",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [
+    "ESF fête ses étoiles",
+    "Soirée Luge Rochebrune",
+    "Soirée Luge Mont d'Arbois",
+    "Soirée escalade, grimper à la frontale",
+    "Soirée givrée",
+    "Découverte curling",
+    "Spectacle jeunesse : Voyage de Rézé",
+    "Fête des enfants ESF"
+   ],
+   "envois": [
+    "Hiver 2, luxe ultime au coeur des Alpes",
+    "Hiver 2",
+    "Vacances d'hiver à Megève",
+    "Nos adresses pour les vacances d'hiver"
+   ],
+   "angle": "Les vacances d'hiver à Megève semaine par semaine, avec les dates de chaque zone scolaire et ce que la station propose aux familles sur ces dates."
+  },
+  {
+   "id": "printemps",
+   "nom": "Ski de printemps et fin de saison",
+   "famille": "saisonnier",
+   "sejour": {
+    "debut": "2027-03-08",
+    "fin": "2027-04-11"
+   },
+   "legere": true,
+   "cibles": "Couples et familles, terrasses et neige de printemps.",
+   "theme": "Soleil, terrasses, neige de printemps. Les dernières semaines avant fermeture, à remplir sans brader.",
+   "requetes": [
+    {
+     "requete": "hotel megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "spa megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve ski resort",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "domaine skiable megeve",
+     "base": "fr",
+     "usage": "sejour"
+    },
+    {
+     "requete": "ski de printemps",
+     "base": "fr",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [
+    "Megève Leadership, Du ciel aux abysses",
+    "Back to Back Invitational, freeski",
+    "27e Ski Open Coq d’Or",
+    "Classiquicime, musique classique"
+   ],
+   "envois": [],
+   "conditionne_fermeture": true,
+   "angle": "Le ski au soleil et les déjeuners en terrasse, jusqu'à la fermeture."
+  },
+  {
+   "id": "paques",
+   "nom": "Pâques des familles britanniques",
+   "famille": "saisonnier",
+   "sejour": {
+    "debut": "2027-03-26",
+    "fin": "2027-04-11"
+   },
+   "legere": true,
+   "cibles": "Familles britanniques, vacances de Pâques.",
+   "theme": "Du 26 mars au 11 avril, les vacances de Pâques anglaises. Sujet conditionné à la date de fermeture de la maison.",
+   "requetes": [
+    {
+     "requete": "megeve hotels",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve ski resort",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve snow conditions",
+     "base": "uk",
+     "usage": "achat"
+    },
+    {
+     "requete": "geneva to megeve transfer",
+     "base": "uk",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [],
+   "envois": [],
+   "conditionne_fermeture": true,
+   "angle": "Megève pour Pâques, au départ de Genève, sur les dates des vacances anglaises."
+  },
+  {
+   "id": "neige",
+   "nom": "Neige, le déclencheur de dernière minute",
+   "famille": "declencheur",
+   "sejour": {
+    "debut": "2026-12-04",
+    "fin": "2027-04-11"
+   },
+   "legere": true,
+   "marches": [
+    "fra",
+    "ge",
+    "vd"
+   ],
+   "cibles": "Marchés courts : Genève, Vaud, France zone A.",
+   "theme": "Pas un thème de séjour, un déclencheur. Quand il neige ou qu'il va neiger, les marchés courts réservent.",
+   "requetes": [
+    {
+     "requete": "meteo megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "webcam megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "domaine skiable megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "enneigement megeve",
+     "base": "fr",
+     "usage": "achat"
+    },
+    {
+     "requete": "meteo megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "enneigement megeve",
+     "base": "ch",
+     "usage": "achat"
+    },
+    {
+     "requete": "megeve snow report",
+     "base": "us",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve webcam",
+     "base": "nl",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve weer",
+     "base": "nl",
+     "usage": "sejour"
+    },
+    {
+     "requete": "megeve snow conditions",
+     "base": "uk",
+     "usage": "sejour"
+    }
+   ],
+   "evenements": [],
+   "envois": [],
+   "seuil_neige_5j_cm": 20,
+   "angle": "Il vient de neiger, ou il va neiger : une chambre ce week-end, à une heure de Genève."
+  },
+  {
+   "id": "early",
+   "nom": "Early booking hiver 2027-2028",
+   "famille": "b2b",
+   "fenetre_fixe": {
+    "debut": "2026-11-01",
+    "fin": "2026-11-30"
+   },
+   "legere": true,
+   "marches": [
+    "uk"
+   ],
+   "cibles": "Marchés qui réservent tôt, agences et clients fidèles.",
+   "theme": "Vendre l'hiver prochain avant l'été, aux marchés qui réservent tôt. Séjour : hiver 2027-2028.",
+   "requetes": [
+    {
+     "requete": "megeve ski holidays",
+     "base": "uk",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [],
+   "envois": [
+    "Early booking hiver 2027-2028"
+   ],
+   "angle": "Réserver l'hiver 2027-2028 dès maintenant, aux conditions de la réservation anticipée."
+  },
+  {
+   "id": "mice",
+   "nom": "Séminaires et groupes",
+   "famille": "b2b",
+   "fenetre_fixe": {
+    "debut": "2027-02-01",
+    "fin": "2027-03-31"
+   },
+   "legere": true,
+   "marches": [
+    "fra"
+   ],
+   "cibles": "Entreprises et agences événementielles. Décident au printemps pour l'automne et l'hiver suivants.",
+   "theme": "Le marché B2B décide au printemps pour l'automne et l'hiver suivants. Séjour : séminaires d'automne 2027 et d'hiver 2027-2028.",
+   "requetes": [
+    {
+     "requete": "seminaire megeve",
+     "base": "fr",
+     "usage": "achat"
+    }
+   ],
+   "evenements": [
+    "Megève Leadership, Du ciel aux abysses"
+   ],
+   "envois": [],
+   "angle": "Un séminaire à Megève en dehors de la haute saison, avec la page séminaires comme destination."
+  }
+ ]
+}

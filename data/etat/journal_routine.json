@@ -1,0 +1,52 @@
+[
+ {
+  "horodatage": "2026-10-05T18:32:21.163Z",
+  "lignes": [
+   "calcul n° 2 du 2026-10-05 : 10 sujets, 9 alertes"
+  ]
+ },
+ {
+  "horodatage": "2026-10-05T18:31:19.109Z",
+  "lignes": [
+   "✓ Performance des newsletters : relevé 2026-10-05 (fictif)",
+   "✓ Réservations (PMS Asterio) : relevé 2026-10-05 (fictif)",
+   "✓ Google Ads : relevé 2026-10-05 (fictif)",
+   "calcul n° 3 du 2026-10-05 : 10 sujets, 3 alertes"
+  ]
+ },
+ {
+  "horodatage": "2026-10-05T18:15:53.455Z",
+  "lignes": [
+   "météo : 0 cm prévus sur 5 jours, 0 cm sur 16 jours",
+   "✓ Prévision neige (Open-Meteo) : relevé 2026-10-05 (réel)",
+   "agenda : 1251 occurrences lues jusqu'au 2027-12-07, 91 événements, 13 repris du relevé précédent",
+   "✓ Agenda de la station (megeve-tourisme.fr) : relevé 2026-10-05 (réel)",
+   "calcul n° 2 du 2026-10-05 : 10 sujets, 9 alertes"
+  ]
+ },
+ {
+  "horodatage": "2026-10-05T18:12:17.469Z",
+  "lignes": [
+   "météo : 0 cm prévus sur 5 jours, 0 cm sur 16 jours",
+   "✓ Prévision neige (Open-Meteo) : relevé 2026-10-05 (réel)",
+   "neige historique : déjà collectée pour la saison, rien à faire",
+   "agenda : 1251 occurrences lues jusqu'au 2027-12-07, 91 événements, 23 repris du relevé précédent",
+   "✓ Agenda de la station (megeve-tourisme.fr) : relevé 2026-10-05 (réel)",
+   "vacances : contrôle de moins d'un an, rien à faire",
+   "· Fréquentation et conversions (GA4) : à brancher",
+   "· Performance des newsletters : à brancher",
+   "· Réservations (PMS Asterio) : à brancher",
+   "· Commissions des plateformes : à brancher",
+   "· Google Ads : à brancher",
+   "· Meta Ads : à brancher",
+   "· Instagram : à brancher",
+   "calcul n° 2 du 2026-10-05 : 10 sujets, 9 alertes"
+  ]
+ },
+ {
+  "horodatage": "2026-10-05T18:09:02.265Z",
+  "lignes": [
+   "calcul n° 1 du 2026-09-28 : 10 sujets, 1 alertes"
+  ]
+ }
+]

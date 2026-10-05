@@ -1,0 +1,95 @@
+{
+ "source": "Jérôme Hoerlé, 04_donnees/delais_reservation_hypotheses.json (17 sept. 2026). Délais = hypothèses de médiane en semaines, q1 = 0,6 x médiane, q3 = 1,6 x médiane, à remplacer par Asterio.",
+ "marches": [
+  {
+   "id": "frc",
+   "nom": "France zone C",
+   "pays": "FR",
+   "langue": "fr",
+   "semrush_db": "fr",
+   "delai_semaines": 5,
+   "court": true,
+   "couleur": "#4f6d8a"
+  },
+  {
+   "id": "fra",
+   "nom": "France zone A",
+   "pays": "FR",
+   "langue": "fr",
+   "semrush_db": "fr",
+   "delai_semaines": 4,
+   "court": true,
+   "couleur": "#6f8aa6"
+  },
+  {
+   "id": "frb",
+   "nom": "France zone B",
+   "pays": "FR",
+   "langue": "fr",
+   "semrush_db": "fr",
+   "delai_semaines": 5,
+   "court": true,
+   "couleur": "#8ea6bf"
+  },
+  {
+   "id": "ge",
+   "nom": "Genève",
+   "pays": "CH",
+   "langue": "fr",
+   "semrush_db": "ch",
+   "delai_semaines": 2.5,
+   "court": true,
+   "couleur": "#b5683f"
+  },
+  {
+   "id": "vd",
+   "nom": "Vaud",
+   "pays": "CH",
+   "langue": "fr",
+   "semrush_db": "ch",
+   "delai_semaines": 2.5,
+   "court": true,
+   "couleur": "#c98a63"
+  },
+  {
+   "id": "uk",
+   "nom": "Royaume-Uni",
+   "pays": "GB",
+   "langue": "en",
+   "semrush_db": "uk",
+   "delai_semaines": 9,
+   "court": false,
+   "couleur": "#6f7456"
+  },
+  {
+   "id": "be",
+   "nom": "Belgique",
+   "pays": "BE",
+   "langue": "fr",
+   "semrush_db": "be",
+   "delai_semaines": 6,
+   "court": false,
+   "couleur": "#b08a4a"
+  },
+  {
+   "id": "nl",
+   "nom": "Pays-Bas",
+   "pays": "NL",
+   "langue": "nl",
+   "semrush_db": "nl",
+   "delai_semaines": 7,
+   "court": false,
+   "couleur": "#c4a05c"
+  },
+  {
+   "id": "us",
+   "nom": "États-Unis",
+   "pays": "US",
+   "langue": "en",
+   "semrush_db": "us",
+   "delai_semaines": 12,
+   "court": false,
+   "couleur": "#8a6f8a"
+  }
+ ]
+}

@@ -1,141 +1,136 @@
 import { connection } from "next/server";
-import { fileInfo } from "@/lib/data";
+import { connecteurs } from "@/connecteurs";
+import { BoutonRoutine, InterrupteurFictif } from "@/components/pilotage";
+import { Puce, type Ton } from "@/components/ui";
+import { REGLES } from "@/lib/engine/regles";
 import { formatDate } from "@/lib/dates";
+import { lireCalculs, lireJournal, lireParametres } from "@/services/reference";
+import { depot } from "@/stockage/depot";
 
-type Status = "réel" | "simulé" | "en attente" | "éditorial";
+const tonStatut: Record<string, Ton> = { branché: "vert", import: "ocre", "à brancher": "gris" };
 
-interface Source {
-  name: string;
-  status: Status;
-  from: string;
-  file: string;
-  usage: string;
-  columns?: string;
-}
-
-const sources: Source[] = [
-  {
-    name: "Booking engine · réservations",
-    status: "simulé",
-    from: "Chloé / Clara (via Jérôme) · export des 24 derniers mois",
-    file: "data/imports/bookings.csv",
-    usage: "Fenêtres de réservation par nationalité et par période, répartition des marchés, rythme de réservation vs N-1, anciens clients à recontacter.",
-    columns: "id_reservation, maison, date_reservation, date_arrivee, nb_nuits, pays, nb_adultes, nb_enfants, canal, montant_eur, statut",
-  },
-  {
-    name: "Google Search Console",
-    status: "simulé",
-    from: "Jérôme · export requêtes × mois × pays (16 mois)",
-    file: "data/imports/gsc.csv",
-    usage: "Pic de recherche de chaque sujet, pour caler la publication des articles ~6 semaines avant ; volume de demande pour la priorité.",
-    columns: "mois (AAAA-MM), requete, page, pays, clics, impressions, position",
-  },
-  {
-    name: "Google Analytics 4",
-    status: "en attente",
-    from: "Jérôme · sessions et conversions par pays, mois, source et page",
-    file: "data/imports/ga4.csv",
-    usage: "Prévu : pondérer les marchés selon leur conversion réelle et repérer les pages saisonnières qui performent.",
-    columns: "mois, pays, source_support, page_destination, sessions, conversions",
-  },
-  {
-    name: "Google Ads",
-    status: "en attente",
-    from: "Jérôme · campagnes et mots-clés par mois et par pays",
-    file: "data/imports/google-ads.csv",
-    usage: "Prévu : calibrer les budgets, reprendre les mots-clés qui convertissent, CPA par marché.",
-    columns: "mois, campagne, groupe, mot_cle, pays, impressions, clics, cout, conversions",
-  },
-  {
-    name: "Newsletters",
-    status: "en attente",
-    from: "Jérôme (mails) + Chloé / Clara (performances)",
-    file: "data/imports/newsletters.csv",
-    usage: "Prévu : meilleur jour et heure d'envoi par langue, rythme d'envoi à respecter, sujets qui performent.",
-    columns: "date_envoi, langue, objet, cible, envois, ouvertures, clics, desinscriptions",
-  },
-  {
-    name: "Météo · normales et prévisions",
-    status: "réel",
-    from: "Open-Meteo (gratuit, sans clé) · archive 2019-2025 + prévisions à 7 jours",
-    file: "data/external/weather-normals.json",
-    usage: "Premières neiges, ensoleillement, météo habituelle de la période ; alertes « neige annoncée » en page d'accueil.",
-  },
-  {
-    name: "Vacances scolaires",
-    status: "réel",
-    from: "OpenHolidays API (FR, BE, NL, DE, CH) + saisie manuelle (GB, US, BR)",
-    file: "data/external/school-holidays.json",
-    usage: "Génère automatiquement les fiches « vacances » par marché et les rapproche des moments éditoriaux.",
-  },
-  {
-    name: "Jours fériés",
-    status: "réel",
-    from: "Nager.Date · 9 pays",
-    file: "data/external/public-holidays.json",
-    usage: "Ponts et longs week-ends par marché (Ascension, Pentecôte, Thanksgiving…).",
-  },
-  {
-    name: "Temps forts locaux",
-    status: "éditorial",
-    from: "Offices de tourisme (Megève, Luberon, Saint-Tropez, Saint-Barth) · à alimenter par le crawler de Jérôme",
-    file: "src/config/moments.ts",
-    usage: "Catalogue des événements et marronniers : dates, angle, marchés concernés, mots-clés.",
-  },
-  {
-    name: "Maisons",
-    status: "réel",
-    from: "maisonsethotels-sibuet.com",
-    file: "src/config/hotels.ts",
-    usage: "Descriptions, capacités, restaurants et spas, visuels. Saisons et prix moyens à confirmer.",
-  },
-];
-
-const badge: Record<Status, string> = {
-  réel: "bg-olive/15 text-olive",
-  simulé: "bg-ochre/15 text-ochre",
-  "en attente": "bg-brick/10 text-brick",
-  éditorial: "bg-sand text-ink-soft",
-};
-
-export default async function SourcesPage() {
+export default async function Sources() {
   await connection();
+  const d = depot();
+  const { donneesFictives } = lireParametres();
+  const calculs = [...lireCalculs()].reverse();
+  const journal = lireJournal()[0];
+
   return (
-    <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">
-      <p className="eyebrow text-taupe">Transparence des données</p>
-      <h1 className="mt-2 font-display text-4xl">Sources de données</h1>
-      <p className="mt-3 max-w-2xl text-ink-soft">
-        Pour passer d&apos;une donnée simulée à une donnée réelle, il suffit de déposer l&apos;export dans le fichier indiqué, avec les mêmes colonnes. Le
-        calendrier se recalcule seul.
+    <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
+      <p className="eyebrow text-taupe">Coulisses</p>
+      <h1 className="mt-2 font-display text-4xl">Sources et routine</h1>
+      <p className="mt-2 max-w-3xl text-ink-soft">
+        Chaque source entre dans le système sous forme de relevés datés, jamais écrasés. La routine du lundi collecte, recalcule les opportunités et signale ce
+        qui a changé. Pour brancher une source, il suffit de remplacer son connecteur : le reste ne bouge pas.
       </p>
-      <div className="mt-8 space-y-3">
-        {sources.map((s) => {
-          const info = fileInfo(s.file.replace(/^data\//, ""));
-          return (
-            <div key={s.name} className="grid gap-3 rounded-md border border-line bg-white p-5 md:grid-cols-[1fr_1.3fr]">
-              <div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="font-display text-xl">{s.name}</h2>
-                  <span className={`eyebrow rounded px-2 py-0.5 text-[0.58rem] ${badge[s.status]}`}>{s.status}</span>
-                </div>
-                <p className="mt-1 text-sm text-ink-soft">{s.from}</p>
-                <p className="mt-2 font-mono text-[0.7rem] text-taupe">
-                  {s.file}
-                  {s.file.startsWith("data/") && (info ? ` · ${info.sizeKb} ko · ${formatDate(info.updatedAt.slice(0, 10), true)}` : " · fichier absent")}
-                </p>
-              </div>
-              <div className="text-sm">
-                <p>{s.usage}</p>
-                {s.columns && (
-                  <p className="mt-2 text-[0.75rem] text-ink-soft">
-                    <span className="font-semibold text-ink">Colonnes : </span>
-                    {s.columns}
-                  </p>
-                )}
-              </div>
+
+      <div className="mt-7 grid gap-5 lg:grid-cols-[1fr_380px]">
+        <section className="carte overflow-hidden">
+          <div className="border-b border-line px-5 py-4">
+            <h2 className="font-display text-2xl">Les connecteurs</h2>
+          </div>
+          <ul className="divide-y divide-line">
+            {connecteurs.map((c) => {
+              const releves = d.listerReleves(c.id);
+              const dernier = d.lireReleve(c.id);
+              const visible = dernier && (dernier.mode !== "fictif" || donneesFictives);
+              return (
+                <li key={c.id} className="grid gap-3 px-5 py-4 md:grid-cols-[1fr_1.1fr]">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="font-semibold">{c.nom}</h3>
+                      <Puce ton={tonStatut[c.statut]}>{c.statut}</Puce>
+                      {visible && dernier.mode === "fictif" && <Puce ton="brique">fictif</Puce>}
+                    </div>
+                    <p className="mt-1 text-sm text-ink-soft">{c.apporte}</p>
+                    <p className="mt-1 text-xs text-taupe">
+                      {c.categorie} · {c.cadence}
+                    </p>
+                  </div>
+                  <div className="text-sm">
+                    {visible ? (
+                      <p>
+                        <span className="font-semibold">Dernier relevé : {formatDate(dernier.collecte_le, true)}</span>
+                        <span className="block text-ink-soft">{dernier.resume}</span>
+                        <span className="block text-xs text-taupe">
+                          {releves.length} relevé{releves.length > 1 ? "s" : ""} conservé{releves.length > 1 ? "s" : ""} · {dernier.origine}
+                        </span>
+                      </p>
+                    ) : (
+                      <p className="text-ink-soft">Aucun relevé.</p>
+                    )}
+                    <p className="mt-2 text-xs text-ink-soft">
+                      <span className="font-semibold text-ink">Pour brancher : </span>
+                      {c.pourBrancher}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+
+        <aside className="space-y-5">
+          <section className="carte p-5">
+            <h2 className="font-display text-xl">Routine du lundi</h2>
+            <p className="mt-1 text-sm text-ink-soft">
+              En production : <code className="rounded bg-sand px-1">npm run routine</code> chaque lundi à 6 h sur le serveur. Ici, une version rapide (agenda des
+              prochaines semaines).
+            </p>
+            <div className="mt-4">
+              <BoutonRoutine />
             </div>
-          );
-        })}
+            {journal && (
+              <p className="mt-3 text-xs text-ink-soft">
+                Dernière exécution le {formatDate(journal.horodatage.slice(0, 10), true)} à {journal.horodatage.slice(11, 16)} (UTC), {journal.lignes.length} lignes de journal.
+              </p>
+            )}
+          </section>
+
+          <section className="carte p-5">
+            <h2 className="font-display text-xl">Mode démonstration</h2>
+            <div className="mt-3">
+              <InterrupteurFictif actif={donneesFictives} />
+            </div>
+            <p className="mt-3 text-xs text-ink-soft">
+              Les données fictives sont signalées partout. Elles ne servent qu&apos;à montrer le fonctionnement : besoin de remplissage, marge, lignes de base,
+              mesure.
+            </p>
+            {!d.persistant && <p className="mt-2 text-xs text-brick">Hébergement en lecture seule : les modifications sont gardées en mémoire, sans être conservées.</p>}
+          </section>
+
+          <section className="carte p-5">
+            <h2 className="font-display text-xl">Historique des calculs</h2>
+            <ul className="mt-2 divide-y divide-line/60 text-sm">
+              {calculs.map((c) => (
+                <li key={c.numero} className="py-2">
+                  <span className="font-semibold">
+                    N° {c.numero}, {formatDate(c.date, true)}
+                  </span>
+                  <span className="block text-xs text-ink-soft">
+                    {c.alertes.length} alerte{c.alertes.length > 1 ? "s" : ""} · sources : {Object.entries(c.sources).map(([k, v]) => `${k} ${v}`).join(", ")}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="carte p-5">
+            <h2 className="font-display text-xl">Paramètres du calcul</h2>
+            <ul className="mt-2 space-y-1.5 text-xs text-ink-soft">
+              <li>Fenêtre d&apos;achat : début du séjour moins {REGLES.q3SurMediane} fois le délai médian, jusqu&apos;au début moins {REGLES.q1SurMediane} fois.</li>
+              <li>Score : demande × reste à gagner sur Google × besoin × marge. Facteur absent : {REGLES.facteurAbsent}, déclaré manquant.</li>
+              <li>Urgence : maximale quand la fenêtre est ouverte, nulle quand elle est passée, décroissante sur {REGLES.urgenceHorizonSemaines} semaines avant.</li>
+              <li>
+                Vagues : dates au premier tiers de la fenêtre, marchés à moins de {REGLES.ecartVagueJours} jours regroupés, {REGLES.maxActivations} canaux au plus.
+              </li>
+              <li>Référencement : en ligne {REGLES.seoAvantPicJours / 7} semaines avant le pic de recherche.</li>
+              <li>Déclencheur neige : {REGLES.seuilNeige5jCm} cm prévus sur 5 jours.</li>
+              <li>Réglables dans src/lib/engine/regles.ts.</li>
+            </ul>
+          </section>
+        </aside>
       </div>
     </div>
   );

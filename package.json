@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "data:fetch": "tsx scripts/fetch-external.ts",
-    "data:demo": "tsx scripts/generate-demo-data.ts",
-    "plan:check": "tsx --conditions=react-server scripts/check-plan.ts"
+    "routine": "tsx --conditions=react-server scripts/routine.ts",
+    "controle": "tsx --conditions=react-server scripts/controle.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.129.0",

@@ -1,0 +1,112 @@
+{
+ "source": "newsletters",
+ "collecte_le": "2026-09-16",
+ "horodatage": "2026-09-16T06:00:00.000Z",
+ "mode": "import",
+ "origine": "Newsletters-Septembre_2025-Septembre_2026.xlsx (client), lignes Lodge Park, Megève multi-maisons et MHS",
+ "resume": "14 envois, dates 2025-2026 reportées",
+ "donnees": {
+  "statut": "Calendrier 2026-2027 non arrêté par le client : dates 2025-2026 reportées au même jour. À remplacer par le calendrier validé.",
+  "envois": [
+   {
+    "date": "2026-10-16",
+    "cible": "clients",
+    "maison": "Megève (multi)",
+    "theme": "Fêtes de fin d'année à Megève",
+    "base": "Full bases clients"
+   },
+   {
+    "date": "2026-10-23",
+    "cible": "clients",
+    "maison": "Lodge Park",
+    "theme": "Ouverture décembre",
+    "base": "Clients LP et inscrits news"
+   },
+   {
+    "date": "2026-10-23",
+    "cible": "agences",
+    "maison": "Lodge Park",
+    "theme": "Réouverture saisonnière",
+    "base": "Agences"
+   },
+   {
+    "date": "2026-11-20",
+    "cible": "clients",
+    "maison": "Lodge Park",
+    "theme": "Repasse nouveau LP, fêtes, offres",
+    "base": "Clients LP et inscrits news"
+   },
+   {
+    "date": "2026-11-27",
+    "cible": "agences",
+    "maison": "Lodge Park",
+    "theme": "Repasse fêtes, offres",
+    "base": "Agences"
+   },
+   {
+    "date": "2026-12-24",
+    "cible": "clients",
+    "maison": "Lodge Park",
+    "theme": "Nouvelles chambres, nouvelles images",
+    "base": "Clients LP et inscrits news"
+   },
+   {
+    "date": "2027-01-06",
+    "cible": "agences",
+    "maison": "Lodge Park",
+    "theme": "Nouvelles chambres, nouvelles images",
+    "base": "Agences"
+   },
+   {
+    "date": "2027-01-31",
+    "cible": "clients",
+    "maison": "Lodge Park",
+    "theme": "Hiver 2, luxe ultime au coeur des Alpes",
+    "base": "Clients LP et inscrits news"
+   },
+   {
+    "date": "2027-02-03",
+    "cible": "agences",
+    "maison": "Lodge Park",
+    "theme": "Hiver 2",
+    "base": "Agences"
+   },
+   {
+    "date": "2027-02-03",
+    "cible": "clients",
+    "maison": "Megève (multi)",
+    "theme": "Vacances d'hiver à Megève",
+    "base": "Full bases"
+   },
+   {
+    "date": "2027-02-05",
+    "cible": "agences",
+    "maison": "Megève (multi)",
+    "theme": "Nos adresses pour les vacances d'hiver",
+    "base": "Agences"
+   },
+   {
+    "date": "2027-02-12",
+    "cible": "agences",
+    "maison": "Megève (multi)",
+    "theme": "Magazine L'Art de Vivre Sibuet",
+    "base": "Agences"
+   },
+   {
+    "date": "2027-03-07",
+    "cible": "clients",
+    "maison": "Lodge Park",
+    "theme": "Boost mars, Wellness break",
+    "base": "Clients"
+   },
+   {
+    "date": "2027-04-09",
+    "cible": "agences",
+    "maison": "MHS",
+    "theme": "Early booking hiver 2027-2028",
+    "base": "Agences"
+   }
+  ]
+ },
+ "signaux": []
+}

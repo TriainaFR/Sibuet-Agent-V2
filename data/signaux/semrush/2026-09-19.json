@@ -1,0 +1,2398 @@
+{
+ "source": "semrush",
+ "collecte_le": "2026-09-19",
+ "horodatage": "2026-09-19T06:00:00.000Z",
+ "mode": "import",
+ "origine": "Export Semrush transmis par Jérôme Hoerlé (collectes des 17 et 19 sept. 2026), tendance juin 2025 à mai 2026",
+ "resume": "70 requêtes, 6 bases pays",
+ "donnees": {
+  "periode_tendance": [
+   "2025-06",
+   "2026-05"
+  ],
+  "lignes": [
+   {
+    "requete": "illumination sapin megeve",
+    "base": "fr",
+    "volume": 140,
+    "tendance": {
+     "2025-06": 0.01,
+     "2025-07": 0.01,
+     "2025-08": 0.01,
+     "2025-09": 0.03,
+     "2025-10": 0.05,
+     "2025-11": 0.3,
+     "2025-12": 0.76,
+     "2026-01": 0.01,
+     "2026-02": 0.01,
+     "2026-03": 0.01,
+     "2026-04": 0.01,
+     "2026-05": 0.01
+    }
+   },
+   {
+    "requete": "marche de noel megeve",
+    "base": "fr",
+    "volume": 170,
+    "tendance": {
+     "2025-06": 0.01,
+     "2025-07": 0.03,
+     "2025-08": 0.05,
+     "2025-09": 0.07,
+     "2025-10": 0.11,
+     "2025-11": 0.48,
+     "2025-12": 1.0,
+     "2026-01": 0.03,
+     "2026-02": 0.02,
+     "2026-03": 0.02,
+     "2026-04": 0.02,
+     "2026-05": 0.02
+    }
+   },
+   {
+    "requete": "megeve noel",
+    "base": "fr",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.04,
+     "2025-07": 0.14,
+     "2025-08": 0.14,
+     "2025-09": 0.35,
+     "2025-10": 0.43,
+     "2025-11": 0.81,
+     "2025-12": 0.66,
+     "2026-01": 0.08,
+     "2026-02": 0.06,
+     "2026-03": 0.04,
+     "2026-04": 0.04,
+     "2026-05": 0.08
+    }
+   },
+   {
+    "requete": "nouvel an megeve",
+    "base": "fr",
+    "volume": 70,
+    "tendance": {
+     "2025-06": 0.03,
+     "2025-07": 0.03,
+     "2025-08": 0.03,
+     "2025-09": 0.05,
+     "2025-10": 0.15,
+     "2025-11": 0.28,
+     "2025-12": 0.54,
+     "2026-01": 0.05,
+     "2026-02": 0.03,
+     "2026-03": 0.03,
+     "2026-04": 0.03,
+     "2026-05": 0.03
+    }
+   },
+   {
+    "requete": "hotel luxe megeve",
+    "base": "fr",
+    "volume": 260,
+    "tendance": {
+     "2025-06": 0.18,
+     "2025-07": 0.28,
+     "2025-08": 0.35,
+     "2025-09": 0.35,
+     "2025-10": 0.44,
+     "2025-11": 0.54,
+     "2025-12": 0.81,
+     "2026-01": 0.81,
+     "2026-02": 0.66,
+     "2026-03": 0.54,
+     "2026-04": 0.44,
+     "2026-05": 0.44
+    }
+   },
+   {
+    "requete": "hotel megeve",
+    "base": "fr",
+    "volume": 3600,
+    "tendance": {
+     "2025-06": 0.19,
+     "2025-07": 0.24,
+     "2025-08": 0.24,
+     "2025-09": 0.24,
+     "2025-10": 0.24,
+     "2025-11": 0.44,
+     "2025-12": 0.44,
+     "2026-01": 0.44,
+     "2026-02": 0.24,
+     "2026-03": 0.16,
+     "2026-04": 0.1,
+     "2026-05": 0.1
+    }
+   },
+   {
+    "requete": "four seasons megeve",
+    "base": "fr",
+    "volume": 2400,
+    "tendance": {
+     "2025-06": 0.35,
+     "2025-07": 0.35,
+     "2025-08": 0.53,
+     "2025-09": 0.53,
+     "2025-10": 0.44,
+     "2025-11": 0.35,
+     "2025-12": 0.81,
+     "2026-01": 0.66,
+     "2026-02": 0.35,
+     "2026-03": 0.35,
+     "2026-04": 0.18,
+     "2026-05": 0.24
+    }
+   },
+   {
+    "requete": "enneigement megeve",
+    "base": "fr",
+    "volume": 1000,
+    "tendance": {
+     "2025-06": 0.0,
+     "2025-07": 0.0,
+     "2025-08": 0.0,
+     "2025-09": 0.01,
+     "2025-10": 0.01,
+     "2025-11": 0.1,
+     "2025-12": 0.54,
+     "2026-01": 0.44,
+     "2026-02": 0.44,
+     "2026-03": 0.12,
+     "2026-04": 0.02,
+     "2026-05": 0.0
+    }
+   },
+   {
+    "requete": "meteo megeve",
+    "base": "fr",
+    "volume": 27100,
+    "tendance": {
+     "2025-06": 0.16,
+     "2025-07": 0.44,
+     "2025-08": 0.44,
+     "2025-09": 0.13,
+     "2025-10": 0.16,
+     "2025-11": 0.24,
+     "2025-12": 0.44,
+     "2026-01": 1.0,
+     "2026-02": 0.81,
+     "2026-03": 0.36,
+     "2026-04": 0.08,
+     "2026-05": 0.13
+    }
+   },
+   {
+    "requete": "webcam megeve",
+    "base": "fr",
+    "volume": 22200,
+    "tendance": {
+     "2025-06": 0.03,
+     "2025-07": 0.07,
+     "2025-08": 0.05,
+     "2025-09": 0.05,
+     "2025-10": 0.2,
+     "2025-11": 0.66,
+     "2025-12": 0.81,
+     "2026-01": 1.0,
+     "2026-02": 1.0,
+     "2026-03": 0.36,
+     "2026-04": 0.08,
+     "2026-05": 0.1
+    }
+   },
+   {
+    "requete": "forfait megeve",
+    "base": "fr",
+    "volume": 1600,
+    "tendance": {
+     "2025-06": 0.01,
+     "2025-07": 0.02,
+     "2025-08": 0.03,
+     "2025-09": 0.05,
+     "2025-10": 0.08,
+     "2025-11": 0.15,
+     "2025-12": 0.54,
+     "2026-01": 0.81,
+     "2026-02": 0.66,
+     "2026-03": 0.28,
+     "2026-04": 0.03,
+     "2026-05": 0.01
+    }
+   },
+   {
+    "requete": "domaine skiable megeve",
+    "base": "fr",
+    "volume": 1300,
+    "tendance": {
+     "2025-06": 0.07,
+     "2025-07": 0.16,
+     "2025-08": 0.24,
+     "2025-09": 0.13,
+     "2025-10": 0.16,
+     "2025-11": 0.2,
+     "2025-12": 1.0,
+     "2026-01": 1.0,
+     "2026-02": 1.0,
+     "2026-03": 0.82,
+     "2026-04": 0.13,
+     "2026-05": 0.07
+    }
+   },
+   {
+    "requete": "grande odyssee",
+    "base": "fr",
+    "volume": 210,
+    "tendance": {
+     "2025-06": 0.01,
+     "2025-07": 0.01,
+     "2025-08": 0.02,
+     "2025-09": 0.04,
+     "2025-10": 0.05,
+     "2025-11": 0.07,
+     "2025-12": 0.1,
+     "2026-01": 0.54,
+     "2026-02": 0.02,
+     "2026-03": 0.01,
+     "2026-04": 0.01,
+     "2026-05": 0.0
+    }
+   },
+   {
+    "requete": "sejour ski tout compris",
+    "base": "fr",
+    "volume": 2900,
+    "tendance": {
+     "2025-06": 0.03,
+     "2025-07": 0.1,
+     "2025-08": 0.12,
+     "2025-09": 0.19,
+     "2025-10": 0.24,
+     "2025-11": 0.29,
+     "2025-12": 0.29,
+     "2026-01": 0.36,
+     "2026-02": 0.24,
+     "2026-03": 0.12,
+     "2026-04": 0.06,
+     "2026-05": 0.08
+    }
+   },
+   {
+    "requete": "ski en famille",
+    "base": "fr",
+    "volume": 390,
+    "tendance": {
+     "2025-06": 0.39,
+     "2025-07": 0.32,
+     "2025-08": 0.26,
+     "2025-09": 0.39,
+     "2025-10": 0.32,
+     "2025-11": 0.32,
+     "2025-12": 0.59,
+     "2026-01": 0.59,
+     "2026-02": 0.72,
+     "2026-03": 0.59,
+     "2026-04": 0.26,
+     "2026-05": 0.26
+    }
+   },
+   {
+    "requete": "hotel spa megeve",
+    "base": "fr",
+    "volume": 390,
+    "tendance": {
+     "2025-06": 0.15,
+     "2025-07": 0.36,
+     "2025-08": 0.36,
+     "2025-09": 0.54,
+     "2025-10": 0.66,
+     "2025-11": 0.54,
+     "2025-12": 0.81,
+     "2026-01": 0.81,
+     "2026-02": 0.54,
+     "2026-03": 0.44,
+     "2026-04": 0.44,
+     "2026-05": 0.66
+    }
+   },
+   {
+    "requete": "hotel spa montagne",
+    "base": "fr",
+    "volume": 880,
+    "tendance": {
+     "2025-06": 0.16,
+     "2025-07": 0.24,
+     "2025-08": 0.24,
+     "2025-09": 0.3,
+     "2025-10": 0.44,
+     "2025-11": 0.44,
+     "2025-12": 0.65,
+     "2026-01": 0.44,
+     "2026-02": 0.24,
+     "2026-03": 0.2,
+     "2026-04": 0.08,
+     "2026-05": 0.13
+    }
+   },
+   {
+    "requete": "spa megeve",
+    "base": "fr",
+    "volume": 1600,
+    "tendance": {
+     "2025-06": 0.13,
+     "2025-07": 0.27,
+     "2025-08": 0.36,
+     "2025-09": 0.27,
+     "2025-10": 0.27,
+     "2025-11": 0.36,
+     "2025-12": 0.8,
+     "2026-01": 0.8,
+     "2026-02": 0.8,
+     "2026-03": 0.44,
+     "2026-04": 0.2,
+     "2026-05": 0.24
+    }
+   },
+   {
+    "requete": "ski de printemps",
+    "base": "fr",
+    "volume": 170,
+    "tendance": {
+     "2025-06": 0.06,
+     "2025-07": 0.53,
+     "2025-08": 0.65,
+     "2025-09": 0.28,
+     "2025-10": 0.65,
+     "2025-11": 0.28,
+     "2025-12": 0.34,
+     "2026-01": 0.65,
+     "2026-02": 0.81,
+     "2026-03": 1.0,
+     "2026-04": 0.81,
+     "2026-05": 0.65
+    }
+   },
+   {
+    "requete": "seminaire megeve",
+    "base": "fr",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.06,
+     "2025-07": 0.12,
+     "2025-08": 0.09,
+     "2025-09": 0.21,
+     "2025-10": 0.28,
+     "2025-11": 0.15,
+     "2025-12": 0.21,
+     "2026-01": 0.15,
+     "2026-02": 1.0,
+     "2026-03": 0.81,
+     "2026-04": 0.43,
+     "2026-05": 0.34
+    }
+   },
+   {
+    "requete": "mariage megeve",
+    "base": "fr",
+    "volume": 170,
+    "tendance": {
+     "2025-06": 0.05,
+     "2025-07": 0.28,
+     "2025-08": 0.28,
+     "2025-09": 0.23,
+     "2025-10": 0.23,
+     "2025-11": 0.53,
+     "2025-12": 1.0,
+     "2026-01": 0.82,
+     "2026-02": 0.35,
+     "2026-03": 0.35,
+     "2026-04": 0.43,
+     "2026-05": 0.43
+    }
+   },
+   {
+    "requete": "megeve ete",
+    "base": "fr",
+    "volume": 720,
+    "tendance": {
+     "2025-06": 0.68,
+     "2025-07": 1.0,
+     "2025-08": 0.84,
+     "2025-09": 0.16,
+     "2025-10": 0.07,
+     "2025-11": 0.11,
+     "2025-12": 0.13,
+     "2026-01": 0.25,
+     "2026-02": 0.31,
+     "2026-03": 0.25,
+     "2026-04": 0.2,
+     "2026-05": 0.37
+    }
+   },
+   {
+    "requete": "jumping megeve",
+    "base": "fr",
+    "volume": 720,
+    "tendance": {
+     "2025-06": 0.07,
+     "2025-07": 1.0,
+     "2025-08": 0.01,
+     "2025-09": 0.01,
+     "2025-10": 0.01,
+     "2025-11": 0.01,
+     "2025-12": 0.0,
+     "2026-01": 0.01,
+     "2026-02": 0.01,
+     "2026-03": 0.02,
+     "2026-04": 0.03,
+     "2026-05": 0.04
+    }
+   },
+   {
+    "requete": "randonnee megeve",
+    "base": "fr",
+    "volume": 260,
+    "tendance": {
+     "2025-06": 0.14,
+     "2025-07": 0.32,
+     "2025-08": 0.59,
+     "2025-09": 0.21,
+     "2025-10": 0.21,
+     "2025-11": 0.26,
+     "2025-12": 0.26,
+     "2026-01": 0.21,
+     "2026-02": 0.26,
+     "2026-03": 0.26,
+     "2026-04": 0.26,
+     "2026-05": 0.32
+    }
+   },
+   {
+    "requete": "megeve ski holidays",
+    "base": "uk",
+    "volume": 260,
+    "tendance": {
+     "2025-06": 0.28,
+     "2025-07": 0.66,
+     "2025-08": 1.0,
+     "2025-09": 0.82,
+     "2025-10": 0.66,
+     "2025-11": 1.0,
+     "2025-12": 0.66,
+     "2026-01": 0.53,
+     "2026-02": 0.53,
+     "2026-03": 0.66,
+     "2026-04": 0.28,
+     "2026-05": 0.28
+    }
+   },
+   {
+    "requete": "megeve ski resort",
+    "base": "uk",
+    "volume": 1300,
+    "tendance": {
+     "2025-06": 0.05,
+     "2025-07": 0.13,
+     "2025-08": 0.16,
+     "2025-09": 0.22,
+     "2025-10": 0.22,
+     "2025-11": 0.36,
+     "2025-12": 0.54,
+     "2026-01": 0.81,
+     "2026-02": 0.54,
+     "2026-03": 0.29,
+     "2026-04": 0.1,
+     "2026-05": 0.08
+    }
+   },
+   {
+    "requete": "megeve snow conditions",
+    "base": "uk",
+    "volume": 720,
+    "tendance": {
+     "2025-06": 0.0,
+     "2025-07": 0.02,
+     "2025-08": 0.01,
+     "2025-09": 0.0,
+     "2025-10": 0.01,
+     "2025-11": 0.07,
+     "2025-12": 0.55,
+     "2026-01": 1.0,
+     "2026-02": 0.82,
+     "2026-03": 0.34,
+     "2026-04": 0.03,
+     "2026-05": 0.01
+    }
+   },
+   {
+    "requete": "geneva to megeve transfer",
+    "base": "uk",
+    "volume": 390,
+    "tendance": {
+     "2025-06": 0.02,
+     "2025-07": 0.29,
+     "2025-08": 0.54,
+     "2025-09": 0.44,
+     "2025-10": 0.66,
+     "2025-11": 0.81,
+     "2025-12": 0.81,
+     "2026-01": 1.0,
+     "2026-02": 0.81,
+     "2026-03": 0.81,
+     "2026-04": 0.15,
+     "2026-05": 0.15
+    }
+   },
+   {
+    "requete": "megeve hotels",
+    "base": "uk",
+    "volume": 390,
+    "tendance": {
+     "2025-06": 0.04,
+     "2025-07": 0.07,
+     "2025-08": 0.08,
+     "2025-09": 0.11,
+     "2025-10": 0.13,
+     "2025-11": 0.2,
+     "2025-12": 0.24,
+     "2026-01": 0.24,
+     "2026-02": 0.16,
+     "2026-03": 0.07,
+     "2026-04": 0.07,
+     "2026-05": 0.07
+    }
+   },
+   {
+    "requete": "hotel megeve",
+    "base": "ch",
+    "volume": 480,
+    "tendance": {
+     "2025-06": 0.36,
+     "2025-07": 0.44,
+     "2025-08": 0.36,
+     "2025-09": 0.55,
+     "2025-10": 0.67,
+     "2025-11": 1.0,
+     "2025-12": 1.0,
+     "2026-01": 0.67,
+     "2026-02": 0.36,
+     "2026-03": 0.16,
+     "2026-04": 0.19,
+     "2026-05": 0.3
+    }
+   },
+   {
+    "requete": "megeve",
+    "base": "ch",
+    "volume": 5400,
+    "tendance": {
+     "2025-06": 0.36,
+     "2025-07": 0.36,
+     "2025-08": 0.36,
+     "2025-09": 0.36,
+     "2025-10": 0.55,
+     "2025-11": 1.0,
+     "2025-12": 1.0,
+     "2026-01": 0.82,
+     "2026-02": 0.55,
+     "2026-03": 0.24,
+     "2026-04": 0.24,
+     "2026-05": 0.24
+    }
+   },
+   {
+    "requete": "spa megeve",
+    "base": "ch",
+    "volume": 170,
+    "tendance": {
+     "2025-06": 0.28,
+     "2025-07": 0.28,
+     "2025-08": 0.53,
+     "2025-09": 0.53,
+     "2025-10": 0.53,
+     "2025-11": 1.0,
+     "2025-12": 1.0,
+     "2026-01": 1.0,
+     "2026-02": 0.44,
+     "2026-03": 0.16,
+     "2026-04": 0.16,
+     "2026-05": 0.09
+    }
+   },
+   {
+    "requete": "forfait megeve",
+    "base": "ch",
+    "volume": 170,
+    "tendance": {
+     "2025-06": 0.02,
+     "2025-07": 0.03,
+     "2025-08": 0.08,
+     "2025-09": 0.24,
+     "2025-10": 0.29,
+     "2025-11": 0.54,
+     "2025-12": 1.0,
+     "2026-01": 0.81,
+     "2026-02": 0.36,
+     "2026-03": 0.08,
+     "2026-04": 0.02,
+     "2026-05": 0.02
+    }
+   },
+   {
+    "requete": "enneigement megeve",
+    "base": "ch",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.02,
+     "2025-07": 0.0,
+     "2025-08": 0.02,
+     "2025-09": 0.02,
+     "2025-10": 0.02,
+     "2025-11": 1.0,
+     "2025-12": 0.44,
+     "2026-01": 0.24,
+     "2026-02": 0.44,
+     "2026-03": 0.12,
+     "2026-04": 0.0,
+     "2026-05": 0.0
+    }
+   },
+   {
+    "requete": "meteo megeve",
+    "base": "ch",
+    "volume": 2900,
+    "tendance": {
+     "2025-06": 0.3,
+     "2025-07": 0.23,
+     "2025-08": 0.16,
+     "2025-09": 0.16,
+     "2025-10": 0.2,
+     "2025-11": 0.44,
+     "2025-12": 1.0,
+     "2026-01": 1.0,
+     "2026-02": 0.54,
+     "2026-03": 0.11,
+     "2026-04": 0.12,
+     "2026-05": 0.16
+    }
+   },
+   {
+    "requete": "webcam megeve",
+    "base": "ch",
+    "volume": 1900,
+    "tendance": {
+     "2025-06": 0.05,
+     "2025-07": 0.04,
+     "2025-08": 0.05,
+     "2025-09": 0.24,
+     "2025-10": 0.54,
+     "2025-11": 0.81,
+     "2025-12": 1.0,
+     "2026-01": 1.0,
+     "2026-02": 0.35,
+     "2026-03": 0.06,
+     "2026-04": 0.07,
+     "2026-05": 0.05
+    }
+   },
+   {
+    "requete": "megeve ski",
+    "base": "ch",
+    "volume": 320,
+    "tendance": {
+     "2025-06": 0.44,
+     "2025-07": 0.1,
+     "2025-08": 0.05,
+     "2025-09": 0.19,
+     "2025-10": 0.05,
+     "2025-11": 0.06,
+     "2025-12": 0.08,
+     "2026-01": 0.12,
+     "2026-02": 0.3,
+     "2026-03": 0.82,
+     "2026-04": 1.0,
+     "2026-05": 0.82
+    }
+   },
+   {
+    "requete": "domaine skiable megeve",
+    "base": "ch",
+    "volume": 90,
+    "tendance": {
+     "2025-06": 0.65,
+     "2025-07": 0.15,
+     "2025-08": 0.04,
+     "2025-09": 0.08,
+     "2025-10": 0.08,
+     "2025-11": 0.08,
+     "2025-12": 0.19,
+     "2026-01": 0.19,
+     "2026-02": 0.42,
+     "2026-03": 0.81,
+     "2026-04": 1.0,
+     "2026-05": 0.27
+    }
+   },
+   {
+    "requete": "sejour ski",
+    "base": "ch",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.54,
+     "2025-07": 0.35,
+     "2025-08": 0.54,
+     "2025-09": 0.12,
+     "2025-10": 0.15,
+     "2025-11": 0.19,
+     "2025-12": 0.15,
+     "2026-01": 1.0,
+     "2026-02": 1.0,
+     "2026-03": 0.27,
+     "2026-04": 0.42,
+     "2026-05": 0.04
+    }
+   },
+   {
+    "requete": "hotel spa montagne",
+    "base": "ch",
+    "volume": 70,
+    "tendance": {
+     "2025-06": 0.02,
+     "2025-07": 0.02,
+     "2025-08": 0.02,
+     "2025-09": 0.08,
+     "2025-10": 0.23,
+     "2025-11": 1.0,
+     "2025-12": 0.02,
+     "2026-01": 0.02,
+     "2026-02": 0.02,
+     "2026-03": 0.15,
+     "2026-04": 0.04,
+     "2026-05": 0.02
+    }
+   },
+   {
+    "requete": "megeve hotel",
+    "base": "ch",
+    "volume": 320,
+    "tendance": {
+     "2025-06": 0.44,
+     "2025-07": 0.54,
+     "2025-08": 0.44,
+     "2025-09": 0.44,
+     "2025-10": 0.81,
+     "2025-11": 1.0,
+     "2025-12": 1.0,
+     "2026-01": 0.81,
+     "2026-02": 0.36,
+     "2026-03": 0.19,
+     "2026-04": 0.15,
+     "2026-05": 0.29
+    }
+   },
+   {
+    "requete": "hotel megeve",
+    "base": "be",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.18,
+     "2025-07": 0.22,
+     "2025-08": 0.18,
+     "2025-09": 0.18,
+     "2025-10": 0.35,
+     "2025-11": 0.22,
+     "2025-12": 0.43,
+     "2026-01": 0.35,
+     "2026-02": 0.29,
+     "2026-03": 0.1,
+     "2026-04": 0.04,
+     "2026-05": 0.08
+    }
+   },
+   {
+    "requete": "megeve",
+    "base": "be",
+    "volume": 1900,
+    "tendance": {
+     "2025-06": 0.24,
+     "2025-07": 0.35,
+     "2025-08": 0.29,
+     "2025-09": 0.18,
+     "2025-10": 0.29,
+     "2025-11": 0.44,
+     "2025-12": 0.66,
+     "2026-01": 0.81,
+     "2026-02": 0.66,
+     "2026-03": 0.24,
+     "2026-04": 0.13,
+     "2026-05": 0.1
+    }
+   },
+   {
+    "requete": "forfait megeve",
+    "base": "be",
+    "volume": 50,
+    "tendance": {
+     "2025-06": 0.09,
+     "2025-07": 0.09,
+     "2025-08": 0.09,
+     "2025-09": 0.09,
+     "2025-10": 0.09,
+     "2025-11": 0.19,
+     "2025-12": 0.42,
+     "2026-01": 1.0,
+     "2026-02": 0.52,
+     "2026-03": 0.09,
+     "2026-04": 0.09,
+     "2026-05": 0.14
+    }
+   },
+   {
+    "requete": "enneigement megeve",
+    "base": "be",
+    "volume": 40,
+    "tendance": {
+     "2025-06": 0.09,
+     "2025-07": 0.0,
+     "2025-08": 0.09,
+     "2025-09": 0.09,
+     "2025-10": 0.09,
+     "2025-11": 0.09,
+     "2025-12": 0.66,
+     "2026-01": 0.52,
+     "2026-02": 0.52,
+     "2026-03": 0.09,
+     "2026-04": 0.09,
+     "2026-05": 0.0
+    }
+   },
+   {
+    "requete": "meteo megeve",
+    "base": "be",
+    "volume": 480,
+    "tendance": {
+     "2025-06": 0.3,
+     "2025-07": 0.55,
+     "2025-08": 0.3,
+     "2025-09": 0.06,
+     "2025-10": 0.1,
+     "2025-11": 0.13,
+     "2025-12": 0.45,
+     "2026-01": 0.67,
+     "2026-02": 1.0,
+     "2026-03": 0.24,
+     "2026-04": 0.05,
+     "2026-05": 0.05
+    }
+   },
+   {
+    "requete": "webcam megeve",
+    "base": "be",
+    "volume": 390,
+    "tendance": {
+     "2025-06": 0.01,
+     "2025-07": 0.04,
+     "2025-08": 0.04,
+     "2025-09": 0.04,
+     "2025-10": 0.1,
+     "2025-11": 0.36,
+     "2025-12": 0.55,
+     "2026-01": 0.55,
+     "2026-02": 0.81,
+     "2026-03": 0.24,
+     "2026-04": 0.06,
+     "2026-05": 0.05
+    }
+   },
+   {
+    "requete": "megeve ski",
+    "base": "be",
+    "volume": 210,
+    "tendance": {
+     "2025-06": 0.04,
+     "2025-07": 0.04,
+     "2025-08": 0.06,
+     "2025-09": 0.08,
+     "2025-10": 0.1,
+     "2025-11": 0.2,
+     "2025-12": 0.24,
+     "2026-01": 0.36,
+     "2026-02": 0.3,
+     "2026-03": 0.08,
+     "2026-04": 0.04,
+     "2026-05": 0.03
+    }
+   },
+   {
+    "requete": "sejour ski",
+    "base": "be",
+    "volume": 210,
+    "tendance": {
+     "2025-06": 0.06,
+     "2025-07": 0.23,
+     "2025-08": 0.35,
+     "2025-09": 0.44,
+     "2025-10": 0.44,
+     "2025-11": 0.44,
+     "2025-12": 0.54,
+     "2026-01": 0.81,
+     "2026-02": 0.35,
+     "2026-03": 0.44,
+     "2026-04": 0.11,
+     "2026-05": 0.15
+    }
+   },
+   {
+    "requete": "megeve hotel",
+    "base": "be",
+    "volume": 50,
+    "tendance": {
+     "2025-06": 0.09,
+     "2025-07": 0.14,
+     "2025-08": 0.19,
+     "2025-09": 0.14,
+     "2025-10": 0.14,
+     "2025-11": 0.33,
+     "2025-12": 0.33,
+     "2026-01": 0.52,
+     "2026-02": 0.42,
+     "2026-03": 0.09,
+     "2026-04": 0.09,
+     "2026-05": 0.09
+    }
+   },
+   {
+    "requete": "megeve skigebied",
+    "base": "be",
+    "volume": 210,
+    "tendance": {
+     "2025-06": 0.06,
+     "2025-07": 0.1,
+     "2025-08": 0.22,
+     "2025-09": 0.29,
+     "2025-10": 0.35,
+     "2025-11": 0.43,
+     "2025-12": 0.81,
+     "2026-01": 1.0,
+     "2026-02": 1.0,
+     "2026-03": 0.35,
+     "2026-04": 0.14,
+     "2026-05": 0.06
+    }
+   },
+   {
+    "requete": "megeve",
+    "base": "nl",
+    "volume": 1000,
+    "tendance": {
+     "2025-06": 0.1,
+     "2025-07": 0.18,
+     "2025-08": 0.24,
+     "2025-09": 0.13,
+     "2025-10": 0.16,
+     "2025-11": 0.16,
+     "2025-12": 0.29,
+     "2026-01": 0.44,
+     "2026-02": 0.35,
+     "2026-03": 0.16,
+     "2026-04": 0.08,
+     "2026-05": 0.08
+    }
+   },
+   {
+    "requete": "megeve skigebied",
+    "base": "nl",
+    "volume": 260,
+    "tendance": {
+     "2025-06": 0.03,
+     "2025-07": 0.06,
+     "2025-08": 0.13,
+     "2025-09": 0.13,
+     "2025-10": 0.16,
+     "2025-11": 0.24,
+     "2025-12": 0.36,
+     "2026-01": 0.55,
+     "2026-02": 0.3,
+     "2026-03": 0.16,
+     "2026-04": 0.05,
+     "2026-05": 0.03
+    }
+   },
+   {
+    "requete": "megeve weer",
+    "base": "nl",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.05,
+     "2025-07": 0.1,
+     "2025-08": 0.28,
+     "2025-09": 0.07,
+     "2025-10": 0.05,
+     "2025-11": 0.12,
+     "2025-12": 0.82,
+     "2026-01": 0.82,
+     "2026-02": 1.0,
+     "2026-03": 0.28,
+     "2026-04": 0.05,
+     "2026-05": 0.05
+    }
+   },
+   {
+    "requete": "megeve webcam",
+    "base": "nl",
+    "volume": 90,
+    "tendance": {
+     "2025-06": 0.02,
+     "2025-07": 0.02,
+     "2025-08": 0.02,
+     "2025-09": 0.02,
+     "2025-10": 0.03,
+     "2025-11": 0.14,
+     "2025-12": 0.21,
+     "2026-01": 0.26,
+     "2026-02": 0.32,
+     "2026-03": 0.07,
+     "2026-04": 0.03,
+     "2026-05": 0.02
+    }
+   },
+   {
+    "requete": "megeve frankrijk",
+    "base": "nl",
+    "volume": 90,
+    "tendance": {
+     "2025-06": 0.08,
+     "2025-07": 0.28,
+     "2025-08": 0.23,
+     "2025-09": 0.18,
+     "2025-10": 0.03,
+     "2025-11": 0.03,
+     "2025-12": 0.18,
+     "2026-01": 0.28,
+     "2026-02": 0.23,
+     "2026-03": 0.11,
+     "2026-04": 0.05,
+     "2026-05": 0.05
+    }
+   },
+   {
+    "requete": "chalet megeve",
+    "base": "nl",
+    "volume": 40,
+    "tendance": {
+     "2025-06": 0.11,
+     "2025-07": 0.29,
+     "2025-08": 0.29,
+     "2025-09": 0.52,
+     "2025-10": 0.29,
+     "2025-11": 0.29,
+     "2025-12": 0.29,
+     "2026-01": 0.29,
+     "2026-02": 0.17,
+     "2026-03": 0.23,
+     "2026-04": 0.23,
+     "2026-05": 0.29
+    }
+   },
+   {
+    "requete": "megeve hotel",
+    "base": "nl",
+    "volume": 20,
+    "tendance": {
+     "2025-06": 0.14,
+     "2025-07": 0.28,
+     "2025-08": 0.42,
+     "2025-09": 0.28,
+     "2025-10": 0.28,
+     "2025-11": 0.28,
+     "2025-12": 0.57,
+     "2026-01": 0.42,
+     "2026-02": 0.28,
+     "2026-03": 0.28,
+     "2026-04": 0.28,
+     "2026-05": 0.28
+    }
+   },
+   {
+    "requete": "megeve sneeuwhoogte",
+    "base": "nl",
+    "volume": 20,
+    "tendance": {
+     "2025-06": 0.0,
+     "2025-07": 0.0,
+     "2025-08": 0.0,
+     "2025-09": 0.0,
+     "2025-10": 0.11,
+     "2025-11": 0.11,
+     "2025-12": 0.29,
+     "2026-01": 0.41,
+     "2026-02": 0.11,
+     "2026-03": 0.11,
+     "2026-04": 0.11,
+     "2026-05": 0.11
+    }
+   },
+   {
+    "requete": "megeve",
+    "base": "us",
+    "volume": 2900,
+    "tendance": {
+     "2025-06": 0.13,
+     "2025-07": 0.1,
+     "2025-08": 0.13,
+     "2025-09": 0.13,
+     "2025-10": 0.13,
+     "2025-11": 0.16,
+     "2025-12": 0.36,
+     "2026-01": 0.29,
+     "2026-02": 0.19,
+     "2026-03": 0.13,
+     "2026-04": 0.07,
+     "2026-05": 0.07
+    }
+   },
+   {
+    "requete": "megeve france",
+    "base": "us",
+    "volume": 2400,
+    "tendance": {
+     "2025-06": 0.04,
+     "2025-07": 0.05,
+     "2025-08": 0.05,
+     "2025-09": 0.05,
+     "2025-10": 0.05,
+     "2025-11": 0.07,
+     "2025-12": 0.13,
+     "2026-01": 0.13,
+     "2026-02": 0.08,
+     "2026-03": 0.05,
+     "2026-04": 0.03,
+     "2026-05": 0.04
+    }
+   },
+   {
+    "requete": "megeve hotels",
+    "base": "us",
+    "volume": 320,
+    "tendance": {
+     "2025-06": 0.13,
+     "2025-07": 0.16,
+     "2025-08": 0.2,
+     "2025-09": 0.24,
+     "2025-10": 0.24,
+     "2025-11": 0.24,
+     "2025-12": 0.36,
+     "2026-01": 0.36,
+     "2026-02": 0.2,
+     "2026-03": 0.13,
+     "2026-04": 0.13,
+     "2026-05": 0.13
+    }
+   },
+   {
+    "requete": "megeve ski resort",
+    "base": "us",
+    "volume": 880,
+    "tendance": {
+     "2025-06": 0.2,
+     "2025-07": 0.2,
+     "2025-08": 0.31,
+     "2025-09": 0.31,
+     "2025-10": 0.37,
+     "2025-11": 0.37,
+     "2025-12": 1.0,
+     "2026-01": 1.0,
+     "2026-02": 0.68,
+     "2026-03": 0.46,
+     "2026-04": 0.25,
+     "2026-05": 0.16
+    }
+   },
+   {
+    "requete": "megeve ski",
+    "base": "us",
+    "volume": 170,
+    "tendance": {
+     "2025-06": 0.03,
+     "2025-07": 0.04,
+     "2025-08": 0.05,
+     "2025-09": 0.05,
+     "2025-10": 0.05,
+     "2025-11": 0.13,
+     "2025-12": 0.1,
+     "2026-01": 0.1,
+     "2026-02": 0.08,
+     "2026-03": 0.07,
+     "2026-04": 0.04,
+     "2026-05": 0.03
+    }
+   },
+   {
+    "requete": "megeve luxury hotels",
+    "base": "us",
+    "volume": 70,
+    "tendance": {
+     "2025-06": 0.05,
+     "2025-07": 0.17,
+     "2025-08": 0.17,
+     "2025-09": 0.28,
+     "2025-10": 0.17,
+     "2025-11": 0.17,
+     "2025-12": 0.12,
+     "2026-01": 0.23,
+     "2026-02": 0.12,
+     "2026-03": 0.12,
+     "2026-04": 0.28,
+     "2026-05": 0.23
+    }
+   },
+   {
+    "requete": "megeve snow report",
+    "base": "us",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.05,
+     "2025-07": 0.05,
+     "2025-08": 0.05,
+     "2025-09": 0.05,
+     "2025-10": 0.05,
+     "2025-11": 0.23,
+     "2025-12": 1.0,
+     "2026-01": 1.0,
+     "2026-02": 0.66,
+     "2026-03": 0.28,
+     "2026-04": 0.05,
+     "2026-05": 0.05
+    }
+   },
+   {
+    "requete": "four seasons megeve",
+    "base": "us",
+    "volume": 880,
+    "tendance": {
+     "2025-06": 0.2,
+     "2025-07": 0.34,
+     "2025-08": 0.2,
+     "2025-09": 1.0,
+     "2025-10": 0.3,
+     "2025-11": 0.34,
+     "2025-12": 0.34,
+     "2026-01": 0.3,
+     "2026-02": 0.2,
+     "2026-03": 0.16,
+     "2026-04": 0.16,
+     "2026-05": 0.2
+    }
+   },
+   {
+    "requete": "megeve skiing",
+    "base": "us",
+    "volume": 110,
+    "tendance": {
+     "2025-06": 0.15,
+     "2025-07": 0.15,
+     "2025-08": 0.26,
+     "2025-09": 0.15,
+     "2025-10": 0.34,
+     "2025-11": 0.42,
+     "2025-12": 1.0,
+     "2026-01": 0.8,
+     "2026-02": 0.8,
+     "2026-03": 0.26,
+     "2026-04": 0.11,
+     "2026-05": 0.15
+    }
+   },
+   {
+    "requete": "geneva to megeve",
+    "base": "us",
+    "volume": 140,
+    "tendance": {
+     "2025-06": 0.42,
+     "2025-07": 0.65,
+     "2025-08": 0.65,
+     "2025-09": 0.8,
+     "2025-10": 0.53,
+     "2025-11": 0.53,
+     "2025-12": 0.8,
+     "2026-01": 1.0,
+     "2026-02": 0.42,
+     "2026-03": 0.26,
+     "2026-04": 0.26,
+     "2026-05": 0.65
+    }
+   },
+   {
+    "requete": "megeve christmas",
+    "base": "us",
+    "volume": 90,
+    "tendance": {
+     "2025-06": 0.07,
+     "2025-07": 0.07,
+     "2025-08": 0.07,
+     "2025-09": 0.07,
+     "2025-10": 0.11,
+     "2025-11": 0.26,
+     "2025-12": 0.8,
+     "2026-01": 1.0,
+     "2026-02": 0.65,
+     "2026-03": 0.34,
+     "2026-04": 0.42,
+     "2026-05": 0.42
+    }
+   }
+  ]
+ },
+ "signaux": [
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 140,
+   "valeur_texte": "illumination sapin megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 170,
+   "valeur_texte": "marche de noel megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "megeve noel",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 70,
+   "valeur_texte": "nouvel an megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 260,
+   "valeur_texte": "hotel luxe megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 3600,
+   "valeur_texte": "hotel megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 2400,
+   "valeur_texte": "four seasons megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1000,
+   "valeur_texte": "enneigement megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 27100,
+   "valeur_texte": "meteo megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 22200,
+   "valeur_texte": "webcam megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1600,
+   "valeur_texte": "forfait megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1300,
+   "valeur_texte": "domaine skiable megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 210,
+   "valeur_texte": "grande odyssee",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 2900,
+   "valeur_texte": "sejour ski tout compris",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 390,
+   "valeur_texte": "ski en famille",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 390,
+   "valeur_texte": "hotel spa megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 880,
+   "valeur_texte": "hotel spa montagne",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1600,
+   "valeur_texte": "spa megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 170,
+   "valeur_texte": "ski de printemps",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "seminaire megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 170,
+   "valeur_texte": "mariage megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 720,
+   "valeur_texte": "megeve ete",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 720,
+   "valeur_texte": "jumping megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 260,
+   "valeur_texte": "randonnee megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "fr"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 260,
+   "valeur_texte": "megeve ski holidays",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "uk"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1300,
+   "valeur_texte": "megeve ski resort",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "uk"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 720,
+   "valeur_texte": "megeve snow conditions",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "uk"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 390,
+   "valeur_texte": "geneva to megeve transfer",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "uk"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 390,
+   "valeur_texte": "megeve hotels",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "uk"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 480,
+   "valeur_texte": "hotel megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 5400,
+   "valeur_texte": "megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 170,
+   "valeur_texte": "spa megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 170,
+   "valeur_texte": "forfait megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "enneigement megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 2900,
+   "valeur_texte": "meteo megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1900,
+   "valeur_texte": "webcam megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 320,
+   "valeur_texte": "megeve ski",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 90,
+   "valeur_texte": "domaine skiable megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "sejour ski",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 70,
+   "valeur_texte": "hotel spa montagne",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 320,
+   "valeur_texte": "megeve hotel",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "ch"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "hotel megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1900,
+   "valeur_texte": "megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 50,
+   "valeur_texte": "forfait megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 40,
+   "valeur_texte": "enneigement megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 480,
+   "valeur_texte": "meteo megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 390,
+   "valeur_texte": "webcam megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 210,
+   "valeur_texte": "megeve ski",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 210,
+   "valeur_texte": "sejour ski",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 50,
+   "valeur_texte": "megeve hotel",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 210,
+   "valeur_texte": "megeve skigebied",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "be"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 1000,
+   "valeur_texte": "megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 260,
+   "valeur_texte": "megeve skigebied",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "megeve weer",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 90,
+   "valeur_texte": "megeve webcam",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 90,
+   "valeur_texte": "megeve frankrijk",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 40,
+   "valeur_texte": "chalet megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 20,
+   "valeur_texte": "megeve hotel",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 20,
+   "valeur_texte": "megeve sneeuwhoogte",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "nl"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 2900,
+   "valeur_texte": "megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 2400,
+   "valeur_texte": "megeve france",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 320,
+   "valeur_texte": "megeve hotels",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 880,
+   "valeur_texte": "megeve ski resort",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 170,
+   "valeur_texte": "megeve ski",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 70,
+   "valeur_texte": "megeve luxury hotels",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "megeve snow report",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 880,
+   "valeur_texte": "four seasons megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 110,
+   "valeur_texte": "megeve skiing",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 140,
+   "valeur_texte": "geneva to megeve",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  },
+  {
+   "source": "semrush",
+   "type": "demande",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "volume",
+   "valeur": 90,
+   "valeur_texte": "megeve christmas",
+   "observe_le": "2026-09-19",
+   "detail": {
+    "base": "us"
+   }
+  }
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "source": "meteo_historique",
+ "collecte_le": "2026-09-18",
+ "horodatage": "2026-09-18T06:00:00.000Z",
+ "mode": "import",
+ "origine": "Open-Meteo, archive cinq saisons 2021-2026 au point Megève, chutes cumulées à J-10 par semaine (calcul de Jérôme)",
+ "resume": "20 semaines, de décembre à avril",
+ "donnees": {
+  "point": "megeve",
+  "saisons": [
+   "2021-22",
+   "2022-23",
+   "2023-24",
+   "2024-25",
+   "2025-26"
+  ],
+  "semaines": [
+   {
+    "semaine": "2026-12-07",
+    "neige_j10_moyenne": 32.5,
+    "par_saison": [
+     67.6,
+     13.6,
+     65.1,
+     2.4,
+     13.7
+    ],
+    "tmoy": -0.6
+   },
+   {
+    "semaine": "2026-12-14",
+    "neige_j10_moyenne": 35.2,
+    "par_saison": [
+     75.7,
+     40.1,
+     37.0,
+     19.2,
+     3.9
+    ],
+    "tmoy": 1.1
+   },
+   {
+    "semaine": "2026-12-21",
+    "neige_j10_moyenne": 15.8,
+    "par_saison": [
+     4.3,
+     23.0,
+     24.0,
+     25.0,
+     2.7
+    ],
+    "tmoy": 0.9
+   },
+   {
+    "semaine": "2026-12-28",
+    "neige_j10_moyenne": 14.8,
+    "par_saison": [
+     7.1,
+     2.2,
+     12.3,
+     49.4,
+     2.8
+    ],
+    "tmoy": 1.7
+   },
+   {
+    "semaine": "2027-01-04",
+    "neige_j10_moyenne": 13.2,
+    "par_saison": [
+     33.2,
+     6.9,
+     12.2,
+     13.5,
+     0.3
+    ],
+    "tmoy": -1.1
+   },
+   {
+    "semaine": "2027-01-11",
+    "neige_j10_moyenne": 32.4,
+    "par_saison": [
+     35.2,
+     21.5,
+     25.8,
+     44.2,
+     35.5
+    ],
+    "tmoy": -1.9
+   },
+   {
+    "semaine": "2027-01-18",
+    "neige_j10_moyenne": 26.6,
+    "par_saison": [
+     18.6,
+     51.0,
+     11.9,
+     14.9,
+     36.6
+    ],
+    "tmoy": -3.1
+   },
+   {
+    "semaine": "2027-01-25",
+    "neige_j10_moyenne": 14.8,
+    "par_saison": [
+     2.5,
+     37.2,
+     24.7,
+     5.9,
+     3.9
+    ],
+    "tmoy": -1.0
+   },
+   {
+    "semaine": "2027-02-01",
+    "neige_j10_moyenne": 16.6,
+    "par_saison": [
+     5.6,
+     0.1,
+     2.0,
+     41.7,
+     33.5
+    ],
+    "tmoy": -0.4
+   },
+   {
+    "semaine": "2027-02-08",
+    "neige_j10_moyenne": 14.8,
+    "par_saison": [
+     44.1,
+     2.4,
+     1.5,
+     6.0,
+     19.8
+    ],
+    "tmoy": 0.6
+   },
+   {
+    "semaine": "2027-02-15",
+    "neige_j10_moyenne": 23.0,
+    "par_saison": [
+     35.4,
+     2.4,
+     9.7,
+     17.9,
+     49.6
+    ],
+    "tmoy": 2.2
+   },
+   {
+    "semaine": "2027-02-22",
+    "neige_j10_moyenne": 29.4,
+    "par_saison": [
+     35.0,
+     0,
+     4.1,
+     15.1,
+     92.5
+    ],
+    "tmoy": 0.7
+   },
+   {
+    "semaine": "2027-03-01",
+    "neige_j10_moyenne": 19.6,
+    "par_saison": [
+     22.1,
+     3.9,
+     19.0,
+     22.8,
+     30.0
+    ],
+    "tmoy": 0.6
+   },
+   {
+    "semaine": "2027-03-08",
+    "neige_j10_moyenne": 6.6,
+    "par_saison": [
+     0,
+     5.2,
+     14.8,
+     13.0,
+     0
+    ],
+    "tmoy": 2.5
+   },
+   {
+    "semaine": "2027-03-15",
+    "neige_j10_moyenne": 26.1,
+    "par_saison": [
+     5.5,
+     68.6,
+     16.8,
+     15.3,
+     24.4
+    ],
+    "tmoy": 3.6
+   },
+   {
+    "semaine": "2027-03-22",
+    "neige_j10_moyenne": 19.0,
+    "par_saison": [
+     6.4,
+     29.3,
+     14.2,
+     20.6,
+     24.4
+    ],
+    "tmoy": 2.6
+   },
+   {
+    "semaine": "2027-03-29",
+    "neige_j10_moyenne": 15.1,
+    "par_saison": [
+     0,
+     24.3,
+     26.1,
+     0,
+     25.1
+    ],
+    "tmoy": 2.9
+   },
+   {
+    "semaine": "2027-04-05",
+    "neige_j10_moyenne": 19.5,
+    "par_saison": [
+     26.9,
+     24.1,
+     35.9,
+     0.4,
+     10.1
+    ],
+    "tmoy": 6.9
+   },
+   {
+    "semaine": "2027-04-12",
+    "neige_j10_moyenne": 6.5,
+    "par_saison": [
+     16.9,
+     7.8,
+     7.7,
+     0,
+     0
+    ],
+    "tmoy": 7.6
+   },
+   {
+    "semaine": "2027-04-19",
+    "neige_j10_moyenne": 16.4,
+    "par_saison": [
+     5.9,
+     17.9,
+     25.6,
+     32.5,
+     0
+    ],
+    "tmoy": 6.2
+   }
+  ]
+ },
+ "signaux": []
+}

@@ -1,0 +1,1526 @@
+{
+ "source": "gsc",
+ "collecte_le": "2026-09-23",
+ "horodatage": "2026-09-23T06:00:00.000Z",
+ "mode": "import",
+ "origine": "Snapshot lodge-park_gsc_2026-09-23.json de Jérôme (tous pays), repris de la page générée du calcul n° 5.",
+ "resume": "42 requêtes suivies, pages par sujet, 12 mois",
+ "donnees": {
+  "site": "lodgepark.com",
+  "propriete": "sc-domain:lodgepark.com",
+  "periode": [
+   "2025-09-21",
+   "2026-09-20"
+  ],
+  "requetes": {
+   "hotel megeve": {
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   },
+   "megeve hotel": {
+    "impressions": 16041,
+    "clics": 20,
+    "position": 12.8
+   },
+   "megeve hotels": {
+    "impressions": 8096,
+    "clics": 14,
+    "position": 12.0
+   },
+   "megeve ski resort": {
+    "impressions": 174,
+    "clics": 0,
+    "position": 33.9
+   },
+   "megeve ski": {
+    "impressions": 148,
+    "clics": 0,
+    "position": 58.9
+   },
+   "megeve skigebied": {
+    "impressions": 78,
+    "clics": 1,
+    "position": 1.5
+   },
+   "megeve skiing": {
+    "impressions": 22,
+    "clics": 0,
+    "position": 48.8
+   },
+   "geneva to megeve": {
+    "impressions": 8,
+    "clics": 0,
+    "position": 2.0
+   },
+   "megeve ski holidays": {
+    "impressions": 4,
+    "clics": 0,
+    "position": 35.5
+   },
+   "domaine skiable megeve": {
+    "impressions": 2,
+    "clics": 0,
+    "position": 3.5
+   },
+   "sejour ski tout compris": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "forfait megeve": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "geneva to megeve transfer": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "ski en famille": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "sejour ski": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "hotel 5 etoiles megeve": {
+    "impressions": 11937,
+    "clics": 32,
+    "position": 12.7
+   },
+   "hotel megeve 5 etoiles": {
+    "impressions": 8936,
+    "clics": 19,
+    "position": 12.1
+   },
+   "hotel megeve luxe": {
+    "impressions": 7301,
+    "clics": 12,
+    "position": 11.8
+   },
+   "hotel luxe megeve": {
+    "impressions": 6332,
+    "clics": 22,
+    "position": 14.1
+   },
+   "megeve hotel 5 etoiles": {
+    "impressions": 6083,
+    "clics": 9,
+    "position": 13.2
+   },
+   "megeve christmas": {
+    "impressions": 1600,
+    "clics": 0,
+    "position": 14.5
+   },
+   "nouvel an megeve": {
+    "impressions": 879,
+    "clics": 78,
+    "position": 8.6
+   },
+   "four seasons megeve": {
+    "impressions": 8,
+    "clics": 0,
+    "position": 11.4
+   },
+   "spa megeve": {
+    "impressions": 21986,
+    "clics": 666,
+    "position": 10.8
+   },
+   "hotel spa megeve": {
+    "impressions": 11897,
+    "clics": 45,
+    "position": 17.7
+   },
+   "massage megeve": {
+    "impressions": 8065,
+    "clics": 126,
+    "position": 15.0
+   },
+   "hotel spa montagne": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "ski de printemps": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "illumination sapin megeve": {
+    "impressions": 1753,
+    "clics": 273,
+    "position": 2.2
+   },
+   "megeve noel": {
+    "impressions": 596,
+    "clics": 7,
+    "position": 11.2
+   },
+   "marche de noel megeve": {
+    "impressions": 33,
+    "clics": 0,
+    "position": 46.3
+   },
+   "enneigement megeve": {
+    "impressions": 1,
+    "clics": 0,
+    "position": 5.0
+   },
+   "megeve snow conditions": {
+    "impressions": 1,
+    "clics": 0,
+    "position": 6.0
+   },
+   "grande odyssee": {
+    "impressions": 84,
+    "clics": 0,
+    "position": 22.1
+   },
+   "meteo megeve": {
+    "impressions": 80,
+    "clics": 4,
+    "position": 5.6
+   },
+   "megeve snow report": {
+    "impressions": 52,
+    "clics": 1,
+    "position": 4.7
+   },
+   "megeve webcam": {
+    "impressions": 10,
+    "clics": 1,
+    "position": 4.7
+   },
+   "webcam megeve": {
+    "impressions": 2,
+    "clics": 0,
+    "position": 11.0
+   },
+   "megeve weer": {
+    "impressions": 1,
+    "clics": 0,
+    "position": 4.0
+   },
+   "megeve sneeuwhoogte": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   },
+   "event venue megeve": {
+    "impressions": 11880,
+    "clics": 0,
+    "position": 38.6
+   },
+   "seminaire megeve": {
+    "impressions": 795,
+    "clics": 0,
+    "position": 18.2
+   }
+  },
+  "pages_par_sujet": {
+   "fevrier": [
+    {
+     "page": "/",
+     "impressions": 22287,
+     "clics": 77,
+     "position": 13.0,
+     "decision": "creer"
+    },
+    {
+     "page": "/le-beef-lodge-megeve",
+     "impressions": 7213,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/spa",
+     "impressions": 7213,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/chambres-suites",
+     "impressions": 7208,
+     "clics": 0,
+     "position": 12.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "/bar-du-lodge-apres-ski-megeve",
+     "impressions": 7146,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en",
+     "impressions": 6150,
+     "clics": 18,
+     "position": 12.3,
+     "decision": "conserver"
+    },
+    {
+     "page": "/a-propos-de-nous",
+     "impressions": 5131,
+     "clics": 0,
+     "position": 13.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 4866,
+     "clics": 32,
+     "position": 13.3,
+     "decision": "conserver"
+    }
+   ],
+   "fetes": [
+    {
+     "page": "/",
+     "impressions": 40147,
+     "clics": 149,
+     "position": 11.9,
+     "decision": "conserver"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 12105,
+     "clics": 48,
+     "position": 11.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "/le-beef-lodge-megeve",
+     "impressions": 9163,
+     "clics": 0,
+     "position": 12.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/spa",
+     "impressions": 9151,
+     "clics": 0,
+     "position": 12.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/chambres-suites",
+     "impressions": 9130,
+     "clics": 0,
+     "position": 12.5,
+     "decision": "conserver"
+    },
+    {
+     "page": "/bar-du-lodge-apres-ski-megeve",
+     "impressions": 8961,
+     "clics": 0,
+     "position": 12.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en",
+     "impressions": 6457,
+     "clics": 18,
+     "position": 12.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/a-propos-de-nous",
+     "impressions": 6024,
+     "clics": 0,
+     "position": 13.0,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/actualites-agenda/celebrate-christmas-and-new-year-in-megeve",
+     "impressions": 879,
+     "clics": 0,
+     "position": 14.9,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/actualites-agenda/votre-soiree-du-nouvel-an-a-megeve",
+     "impressions": 635,
+     "clics": 70,
+     "position": 5.3,
+     "decision": "mettre a jour"
+    }
+   ],
+   "early": [
+    {
+     "page": "/en/offres/ski-and-spa-offer",
+     "impressions": 2,
+     "clics": 0,
+     "position": 25.0,
+     "decision": "creer"
+    },
+    {
+     "page": "/",
+     "impressions": 1,
+     "clics": 0,
+     "position": 31.0,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/megeve-in-winter",
+     "impressions": 1,
+     "clics": 0,
+     "position": 61.0,
+     "decision": "conserver"
+    }
+   ],
+   "spa": [
+    {
+     "page": "/spa",
+     "impressions": 26955,
+     "clics": 735,
+     "position": 7.9,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 3707,
+     "clics": 30,
+     "position": 8.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "/actualites-agenda/massage-en-duo-a-megeve",
+     "impressions": 3650,
+     "clics": 50,
+     "position": 16.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/actualites-agenda/les-plus-beaux-spas-de-megeve",
+     "impressions": 2004,
+     "clics": 4,
+     "position": 44.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "/",
+     "impressions": 1551,
+     "clics": 2,
+     "position": 30.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/spa",
+     "impressions": 1071,
+     "clics": 13,
+     "position": 8.8,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/espace-bien-etre",
+     "impressions": 694,
+     "clics": 0,
+     "position": 55.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "https://en.lodgepark.com/spa",
+     "impressions": 201,
+     "clics": 0,
+     "position": 10.7,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/es/spa",
+     "impressions": 24,
+     "clics": 0,
+     "position": 6.8,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "https://es.lodgepark.com/spa",
+     "impressions": 4,
+     "clics": 0,
+     "position": 10.2,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/ar/spa",
+     "impressions": 1,
+     "clics": 0,
+     "position": 11.0,
+     "decision": "mettre a jour"
+    }
+   ],
+   "printemps": [
+    {
+     "page": "/spa",
+     "impressions": 23467,
+     "clics": 632,
+     "position": 8.3,
+     "decision": "creer"
+    },
+    {
+     "page": "/",
+     "impressions": 18339,
+     "clics": 70,
+     "position": 13.2,
+     "decision": "conserver"
+    },
+    {
+     "page": "/le-beef-lodge-megeve",
+     "impressions": 6027,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/chambres-suites",
+     "impressions": 6025,
+     "clics": 0,
+     "position": 12.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "/bar-du-lodge-apres-ski-megeve",
+     "impressions": 5976,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 4493,
+     "clics": 50,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/a-propos-de-nous",
+     "impressions": 4361,
+     "clics": 0,
+     "position": 13.0,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en",
+     "impressions": 1843,
+     "clics": 2,
+     "position": 12.2,
+     "decision": "conserver"
+    }
+   ],
+   "sapin": [
+    {
+     "page": "/",
+     "impressions": 23262,
+     "clics": 78,
+     "position": 13.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "/spa",
+     "impressions": 12319,
+     "clics": 32,
+     "position": 11.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 7177,
+     "clics": 42,
+     "position": 10.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "/le-beef-lodge-megeve",
+     "impressions": 7164,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/chambres-suites",
+     "impressions": 7160,
+     "clics": 0,
+     "position": 12.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "/bar-du-lodge-apres-ski-megeve",
+     "impressions": 7098,
+     "clics": 0,
+     "position": 12.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/a-propos-de-nous",
+     "impressions": 5100,
+     "clics": 0,
+     "position": 13.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en",
+     "impressions": 3576,
+     "clics": 8,
+     "position": 12.2,
+     "decision": "conserver"
+    },
+    {
+     "page": "/actualites-agenda/illumination-du-sapin",
+     "impressions": 2162,
+     "clics": 279,
+     "position": 4.1,
+     "decision": "mettre a jour"
+    }
+   ],
+   "paques": [
+    {
+     "page": "/en",
+     "impressions": 2704,
+     "clics": 10,
+     "position": 12.8,
+     "decision": "creer"
+    },
+    {
+     "page": "https://en.lodgepark.com/",
+     "impressions": 1283,
+     "clics": 1,
+     "position": 10.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/le-beef-lodge-megeve",
+     "impressions": 494,
+     "clics": 0,
+     "position": 10.5,
+     "decision": "conserver"
+    },
+    {
+     "page": "/",
+     "impressions": 458,
+     "clics": 1,
+     "position": 16.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/bar-du-lodge-apres-ski-megeve",
+     "impressions": 452,
+     "clics": 0,
+     "position": 10.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/spa",
+     "impressions": 447,
+     "clics": 0,
+     "position": 10.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/hotel-megeve",
+     "impressions": 355,
+     "clics": 0,
+     "position": 10.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 349,
+     "clics": 0,
+     "position": 15.7,
+     "decision": "conserver"
+    }
+   ],
+   "janvier": [
+    {
+     "page": "/",
+     "impressions": 39804,
+     "clics": 148,
+     "position": 12.0,
+     "decision": "conserver"
+    },
+    {
+     "page": "/spa",
+     "impressions": 26528,
+     "clics": 632,
+     "position": 8.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "[http]/",
+     "impressions": 12705,
+     "clics": 68,
+     "position": 11.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/le-beef-lodge-megeve",
+     "impressions": 9088,
+     "clics": 0,
+     "position": 12.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/chambres-suites",
+     "impressions": 9068,
+     "clics": 0,
+     "position": 12.5,
+     "decision": "conserver"
+    },
+    {
+     "page": "/bar-du-lodge-apres-ski-megeve",
+     "impressions": 8899,
+     "clics": 0,
+     "position": 12.4,
+     "decision": "conserver"
+    },
+    {
+     "page": "/a-propos-de-nous",
+     "impressions": 5986,
+     "clics": 0,
+     "position": 13.0,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en",
+     "impressions": 3756,
+     "clics": 8,
+     "position": 12.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "/actualites-agenda/la-grande-odyssee",
+     "impressions": 56,
+     "clics": 0,
+     "position": 29.7,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/es/actualites-agenda/la-grande-odyssee",
+     "impressions": 16,
+     "clics": 0,
+     "position": 6.2,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/en/actualites-agenda/la-grande-odyssee",
+     "impressions": 9,
+     "clics": 0,
+     "position": 7.3,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "https://lodgepark.com/en/actualites-agenda/la-grande-odyssee",
+     "impressions": 3,
+     "clics": 0,
+     "position": 7.3,
+     "decision": "mettre a jour"
+    }
+   ],
+   "neige": [
+    {
+     "page": "/en/megeve-city-guide",
+     "impressions": 128,
+     "clics": 5,
+     "position": 5.0,
+     "decision": "creer"
+    },
+    {
+     "page": "https://en.lodgepark.com/megeve-city-guide",
+     "impressions": 19,
+     "clics": 1,
+     "position": 6.1,
+     "decision": "conserver"
+    }
+   ],
+   "mice": [
+    {
+     "page": "/en/wedding-events",
+     "impressions": 3313,
+     "clics": 0,
+     "position": 7.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/evenements/mariages-et-evenements",
+     "impressions": 2627,
+     "clics": 0,
+     "position": 24.1,
+     "decision": "conserver"
+    },
+    {
+     "page": "/evenements/seminaires-et-incentives",
+     "impressions": 2180,
+     "clics": 0,
+     "position": 50.7,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/en/actualites-agenda/the-lodge-park-megeve-luxury-in-the-heart-of-the-alps-for-your-exceptional-events",
+     "impressions": 1049,
+     "clics": 0,
+     "position": 69.6,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/evenements/seminaires-et-incentives",
+     "impressions": 890,
+     "clics": 0,
+     "position": 46.9,
+     "decision": "mettre a jour"
+    },
+    {
+     "page": "/actualites-agenda/le-lodge-park-megeve-le-luxe-au-coeur-des-alpes-pour-vos-evenements-dexception",
+     "impressions": 861,
+     "clics": 0,
+     "position": 91.5,
+     "decision": "conserver"
+    },
+    {
+     "page": "/mariages-evenements",
+     "impressions": 503,
+     "clics": 0,
+     "position": 37.7,
+     "decision": "conserver"
+    },
+    {
+     "page": "/en/mariages-evenements",
+     "impressions": 373,
+     "clics": 0,
+     "position": 5.8,
+     "decision": "conserver"
+    },
+    {
+     "page": "https://en.lodgepark.com/evenements/seminaires-et-incentives",
+     "impressions": 4,
+     "clics": 0,
+     "position": 41.0,
+     "decision": "mettre a jour"
+    }
+   ]
+  }
+ },
+ "signaux": [
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 64603,
+   "valeur_texte": "hotel megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 64603,
+    "clics": 106,
+    "position": 13.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 16041,
+   "valeur_texte": "megeve hotel",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 16041,
+    "clics": 20,
+    "position": 12.8
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 8096,
+   "valeur_texte": "megeve hotels",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 8096,
+    "clics": 14,
+    "position": 12.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 174,
+   "valeur_texte": "megeve ski resort",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 174,
+    "clics": 0,
+    "position": 33.9
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 148,
+   "valeur_texte": "megeve ski",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 148,
+    "clics": 0,
+    "position": 58.9
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 78,
+   "valeur_texte": "megeve skigebied",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 78,
+    "clics": 1,
+    "position": 1.5
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 22,
+   "valeur_texte": "megeve skiing",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 22,
+    "clics": 0,
+    "position": 48.8
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 8,
+   "valeur_texte": "geneva to megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 8,
+    "clics": 0,
+    "position": 2.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 4,
+   "valeur_texte": "megeve ski holidays",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 4,
+    "clics": 0,
+    "position": 35.5
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 2,
+   "valeur_texte": "domaine skiable megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 2,
+    "clics": 0,
+    "position": 3.5
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "sejour ski tout compris",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "forfait megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "geneva to megeve transfer",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "ski en famille",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "sejour ski",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 11937,
+   "valeur_texte": "hotel 5 etoiles megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 11937,
+    "clics": 32,
+    "position": 12.7
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 8936,
+   "valeur_texte": "hotel megeve 5 etoiles",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 8936,
+    "clics": 19,
+    "position": 12.1
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 7301,
+   "valeur_texte": "hotel megeve luxe",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 7301,
+    "clics": 12,
+    "position": 11.8
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 6332,
+   "valeur_texte": "hotel luxe megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 6332,
+    "clics": 22,
+    "position": 14.1
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 6083,
+   "valeur_texte": "megeve hotel 5 etoiles",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 6083,
+    "clics": 9,
+    "position": 13.2
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 1600,
+   "valeur_texte": "megeve christmas",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 1600,
+    "clics": 0,
+    "position": 14.5
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 879,
+   "valeur_texte": "nouvel an megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 879,
+    "clics": 78,
+    "position": 8.6
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 8,
+   "valeur_texte": "four seasons megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 8,
+    "clics": 0,
+    "position": 11.4
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 21986,
+   "valeur_texte": "spa megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 21986,
+    "clics": 666,
+    "position": 10.8
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 11897,
+   "valeur_texte": "hotel spa megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 11897,
+    "clics": 45,
+    "position": 17.7
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 8065,
+   "valeur_texte": "massage megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 8065,
+    "clics": 126,
+    "position": 15.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "hotel spa montagne",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "ski de printemps",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 1753,
+   "valeur_texte": "illumination sapin megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 1753,
+    "clics": 273,
+    "position": 2.2
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 596,
+   "valeur_texte": "megeve noel",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 596,
+    "clics": 7,
+    "position": 11.2
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 33,
+   "valeur_texte": "marche de noel megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 33,
+    "clics": 0,
+    "position": 46.3
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 1,
+   "valeur_texte": "enneigement megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 1,
+    "clics": 0,
+    "position": 5.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 1,
+   "valeur_texte": "megeve snow conditions",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 1,
+    "clics": 0,
+    "position": 6.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 84,
+   "valeur_texte": "grande odyssee",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 84,
+    "clics": 0,
+    "position": 22.1
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 80,
+   "valeur_texte": "meteo megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 80,
+    "clics": 4,
+    "position": 5.6
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 52,
+   "valeur_texte": "megeve snow report",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 52,
+    "clics": 1,
+    "position": 4.7
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 10,
+   "valeur_texte": "megeve webcam",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 10,
+    "clics": 1,
+    "position": 4.7
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 2,
+   "valeur_texte": "webcam megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 2,
+    "clics": 0,
+    "position": 11.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 1,
+   "valeur_texte": "megeve weer",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 1,
+    "clics": 0,
+    "position": 4.0
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 0,
+   "valeur_texte": "megeve sneeuwhoogte",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 0,
+    "clics": 0,
+    "position": null
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 11880,
+   "valeur_texte": "event venue megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 11880,
+    "clics": 0,
+    "position": 38.6
+   }
+  },
+  {
+   "source": "gsc",
+   "type": "demande captée",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "impressions",
+   "valeur": 795,
+   "valeur_texte": "seminaire megeve",
+   "observe_le": "2026-09-23",
+   "detail": {
+    "impressions": 795,
+    "clics": 0,
+    "position": 18.2
+   }
+  }
+ ]
+}
