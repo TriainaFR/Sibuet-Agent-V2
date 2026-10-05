@@ -1,30 +1,33 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import type { Marche, Origine, StatutCode } from "@/lib/types";
 
-// Composants de base, sans état.
+// Composants de base, dans l'esprit du site Sibuet : sobres, angles droits, capitales espacées.
 
-export type Ton = "vert" | "ocre" | "brique" | "gris" | "bleu" | "brun";
+export type Ton = "vert" | "ocre" | "brique" | "gris" | "bleu" | "nuit" | "cognac";
 
 const tons: Record<Ton, string> = {
-  vert: "bg-sage/12 text-sage ring-sage/25",
-  ocre: "bg-ochre/12 text-[#8a6a32] ring-ochre/30",
-  brique: "bg-brick/10 text-brick ring-brick/25",
-  gris: "bg-sand text-ink-soft ring-line",
-  bleu: "bg-sky/10 text-sky ring-sky/25",
-  brun: "bg-brown text-white ring-brown",
+  vert: "border-sage/40 bg-sage/8 text-sage",
+  ocre: "border-ochre/45 bg-ochre/8 text-[#86672f]",
+  brique: "border-brick/40 bg-brick/7 text-brick",
+  gris: "border-line bg-sand/60 text-ink-soft",
+  bleu: "border-sky/40 bg-sky/8 text-sky",
+  nuit: "border-nuit bg-nuit text-white",
+  cognac: "border-cognac/45 bg-cognac/8 text-cognac",
 };
 
+/** Étiquette : petit texte en capitales, filet fin, angles droits. */
 export function Puce({ ton = "gris", children, title }: { ton?: Ton; children: ReactNode; title?: string }) {
   return (
-    <span title={title} className={`inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset ${tons[ton]}`}>
+    <span title={title} className={`inline-flex items-center gap-1.5 whitespace-nowrap border px-2 py-[3px] text-[0.66rem] font-semibold uppercase tracking-[0.1em] ${tons[ton]}`}>
       {children}
     </span>
   );
 }
 
 export const tonStatut: Record<StatutCode, Ton> = {
-  a_lancer: "vert",
-  a_creer: "vert",
+  a_lancer: "nuit",
+  a_creer: "nuit",
   declencher: "brique",
   en_retard: "brique",
   existant: "ocre",
@@ -39,53 +42,121 @@ export function PuceStatut({ code, libelle }: { code: StatutCode; libelle: strin
   return <Puce ton={tonStatut[code]}>{libelle}</Puce>;
 }
 
-export function Niveau({ libelle }: { libelle: string }) {
-  const ton: Ton = /Élevée|Haut|Peu visible/.test(libelle) ? "brique" : /Moyenne|Moyen|peu cliquée/.test(libelle) ? "ocre" : /Bien placée/.test(libelle) ? "vert" : "gris";
-  return <Puce ton={ton}>{libelle}</Puce>;
+/** Niveau lisible (urgence, intérêt, visibilité) : trois points pleins ou vides et un mot. */
+export function Niveau({ libelle, compact = false }: { libelle: string; compact?: boolean }) {
+  const n = /Élevée|Haut|Peu visible|Jamais/.test(libelle) ? 3 : /Moyenne|Moyen|peu cliquée/.test(libelle) ? 2 : /Non mesurée/.test(libelle) ? 0 : 1;
+  const couleur = n === 3 ? "bg-cognac" : n === 2 ? "bg-ochre" : "bg-greige";
+  return (
+    <span className="inline-flex items-center gap-2 whitespace-nowrap">
+      <span className="inline-flex gap-[3px]">
+        {[1, 2, 3].map((i) => (
+          <span key={i} className={`h-[7px] w-[7px] rounded-full ${i <= n ? couleur : "bg-line"}`} />
+        ))}
+      </span>
+      <span className={compact ? "text-xs text-ink-soft" : "text-sm"}>{libelle}</span>
+    </span>
+  );
 }
 
 export function Origine({ origine }: { origine: Origine | null }) {
-  if (!origine) return <span className="rounded bg-sand px-1.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-ink-soft">manquant</span>;
-  const style = origine === "saisi" ? "bg-sky/12 text-sky" : origine === "mesuré" ? "bg-sage/15 text-sage" : origine === "fictif" ? "bg-brick/10 text-brick" : "bg-ochre/12 text-[#8a6a32]";
-  return <span className={`rounded px-1.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide ${style}`}>{origine}</span>;
+  if (!origine) return <span className="border border-line px-1.5 py-[1px] text-[0.6rem] font-semibold uppercase tracking-wider text-ink-soft">manquant</span>;
+  const style = origine === "saisi" ? "border-sky/40 text-sky" : origine === "mesuré" ? "border-sage/40 text-sage" : origine === "fictif" ? "border-brick/40 text-brick" : "border-ochre/45 text-[#86672f]";
+  return <span className={`border px-1.5 py-[1px] text-[0.6rem] font-semibold uppercase tracking-wider ${style}`}>{origine}</span>;
 }
 
 export function Marches({ ids, marches, max = 4 }: { ids: string[]; marches: Marche[]; max?: number }) {
   const liste = ids.map((id) => marches.find((m) => m.id === id)).filter(Boolean) as Marche[];
   return (
-    <span className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1">
+    <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
       {liste.slice(0, max).map((m) => (
         <span key={m.id} className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm">
           <span className="h-2 w-2 rounded-full" style={{ background: m.couleur }} />
           {m.nom}
         </span>
       ))}
-      {liste.length > max && <span className="text-xs text-ink-soft">+ {liste.length - max}</span>}
+      {liste.length > max && <span className="text-xs text-ink-soft">et {liste.length - max} autres</span>}
     </span>
   );
 }
 
-export function TitreSection({ eyebrow, titre, children }: { eyebrow?: string; titre: string; children?: ReactNode }) {
+/** Titre de section centré, comme « À découvrir aussi à l'hôtel Lodge Park… ». */
+export function TitreCentre({ eyebrow, titre, texte }: { eyebrow?: string; titre: string; texte?: ReactNode }) {
   return (
-    <div className="flex flex-wrap items-end justify-between gap-3">
-      <div>
-        {eyebrow && <p className="eyebrow text-taupe">{eyebrow}</p>}
-        <h2 className="mt-1 font-display text-[1.75rem] leading-tight">{titre}</h2>
-      </div>
-      {children}
+    <div className="mx-auto max-w-2xl text-center">
+      {eyebrow && <p className="eyebrow text-taupe">{eyebrow}</p>}
+      <h2 className="mt-2 font-display text-[2.4rem] leading-[1.05] sm:text-5xl">{titre}</h2>
+      {texte && <p className="mt-3 text-ink-soft">{texte}</p>}
     </div>
+  );
+}
+
+/** Bandeau greige du site, avec grand titre blanc, capitales et filigrane. */
+export function Bandeau({
+  eyebrow,
+  titre,
+  sousTitre,
+  children,
+  photo,
+  photo2,
+  filigrane = "Lodge Park",
+}: {
+  eyebrow?: string;
+  titre: string;
+  sousTitre?: string;
+  children?: ReactNode;
+  photo?: string;
+  photo2?: string;
+  filigrane?: string;
+}) {
+  return (
+    <section className="relative overflow-hidden bg-greige text-white">
+      <span className="filigrane absolute -bottom-6 left-0 text-[9rem] sm:text-[13rem]">{filigrane}</span>
+      <div className="relative mx-auto grid max-w-[1320px] items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:py-16">
+        <div className="apparition">
+          {eyebrow && <p className="eyebrow text-white/85">{eyebrow}</p>}
+          <h1 className="mt-3 font-display text-[2.6rem] leading-[1.02] sm:text-6xl">{titre}</h1>
+          {sousTitre && <p className="eyebrow mt-4 text-[0.78rem] tracking-[0.2em]">{sousTitre}</p>}
+          {children && <div className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-white/95">{children}</div>}
+        </div>
+        {photo && (
+          <div className="relative hidden h-[300px] lg:block">
+            <div className="absolute left-0 top-0 h-[270px] w-[62%] overflow-hidden shadow-xl">
+              <Image src={photo} alt="" fill className="object-cover" sizes="400px" priority />
+            </div>
+            {photo2 && (
+              <div className="absolute bottom-0 right-0 h-[200px] w-[48%] overflow-hidden border-[6px] border-white shadow-xl">
+                <Image src={photo2} alt="" fill className="object-cover" sizes="300px" />
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
 export function Champ({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div>
-      <p className="eyebrow text-[0.6rem] text-taupe">{label}</p>
-      <div className="mt-1 text-[0.92rem] leading-relaxed">{children}</div>
+      <p className="eyebrow text-[0.62rem] text-taupe">{label}</p>
+      <div className="mt-1.5 text-[0.93rem] leading-relaxed">{children}</div>
     </div>
   );
 }
 
 export function Vide({ children }: { children: ReactNode }) {
-  return <p className="rounded-lg border border-dashed border-line px-4 py-6 text-center text-sm text-ink-soft">{children}</p>;
+  return <p className="border border-dashed border-line bg-white/50 px-4 py-8 text-center text-sm text-ink-soft">{children}</p>;
+}
+
+/** Encadré d'aide : explique en une phrase comment lire un écran. */
+export function Aide({ children }: { children: ReactNode }) {
+  return (
+    <details className="group border-l-2 border-greige bg-white/60 px-4 py-2.5 text-sm text-ink-soft">
+      <summary className="cursor-pointer select-none font-semibold text-ink">
+        <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full border border-ink-soft text-[0.62rem]">?</span>
+        Comment lire cet écran
+      </summary>
+      <div className="mt-2 leading-relaxed">{children}</div>
+    </details>
+  );
 }

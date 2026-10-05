@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { connection } from "next/server";
 import { BoutonAppliquer, BoutonExemple, FormResultat } from "@/components/mesure-ui";
-import { Puce, Vide } from "@/components/ui";
+import { Bandeau, Puce, Vide } from "@/components/ui";
 import { formatDate } from "@/lib/dates";
 import { canalLibelle } from "@/lib/format";
 import { etatSaison } from "@/services/etat";
@@ -17,13 +17,14 @@ export default async function Mesure() {
   const { propositions: props, attentes } = propositions(ctx, resultats, sujets);
 
   return (
-    <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
-      <p className="eyebrow text-taupe">Mesure et apprentissage</p>
-      <h1 className="mt-2 font-display text-4xl">Ce que les actions ont donné</h1>
-      <p className="mt-2 max-w-3xl text-ink-soft">
-        Après chaque période de séjour : le résultat de chaque action sur son indicateur, et sur la mesure commune, le remplissage de la semaine visée par rapport
+    <>
+      <Bandeau eyebrow="Mesure et apprentissage" titre="Ce que les actions ont donné" sousTitre="Après chaque période de séjour" filigrane="Mesure" photo="/lodge/lp-10.jpg" photo2="/lodge/lp-11.jpg">
+        <p>
+          Après chaque période de séjour : le résultat de chaque action sur son indicateur, et sur la mesure commune, le remplissage de la semaine visée par rapport
         à l&apos;an dernier. Les recalibrages proposés ne s&apos;appliquent qu&apos;après validation.
-      </p>
+        </p>
+      </Bandeau>
+    <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
 
       <div className="mt-7 grid gap-6 lg:grid-cols-[1fr_400px]">
         <section className="space-y-4">
@@ -106,5 +107,6 @@ export default async function Mesure() {
         </aside>
       </div>
     </div>
+    </>
   );
 }

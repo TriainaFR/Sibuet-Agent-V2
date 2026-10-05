@@ -93,7 +93,7 @@ export function GrilleMarches({ sujet, marches, neige, date }: { sujet: SujetCal
             }
             droite={<Puce ton={ton}>{o.verdict}</Puce>}
           >
-            {o.sejour && <span className="absolute top-2.5 h-2 rounded-full bg-brown/15" style={{ left: x(o.sejour.debut), width: w(o.sejour.debut, o.sejour.fin) }} title={`Séjour du ${formatDate(o.sejour.debut)} au ${formatDate(o.sejour.fin)}`} />}
+            {o.sejour && <span className="absolute top-2.5 h-2 rounded-full bg-nuit/15" style={{ left: x(o.sejour.debut), width: w(o.sejour.debut, o.sejour.fin) }} title={`Séjour du ${formatDate(o.sejour.debut)} au ${formatDate(o.sejour.fin)}`} />}
             {o.fenetre && (
               <span
                 className={`fenetre-achat absolute top-1.5 h-4 ${couleur}`}
@@ -126,7 +126,7 @@ export function GrilleMarches({ sujet, marches, neige, date }: { sujet: SujetCal
           <span className="h-2.5 w-2.5 rotate-45 bg-sky" /> Newsletter prévue (agences)
         </span>
         <span className="inline-flex items-center gap-1.5">
-          <span className="h-2 w-6 rounded-full bg-brown/15" /> Séjour
+          <span className="h-2 w-6 rounded-full bg-nuit/15" /> Séjour
         </span>
         <span>Vert : à créer · ocre : elle tombe au bon moment · rouge : elle arrive trop tard ou trop tôt · gris : pas de demande</span>
       </div>

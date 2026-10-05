@@ -69,6 +69,8 @@ export interface SujetDef {
   conditionne_fermeture?: boolean;
   seuil_neige_5j_cm?: number;
   vocabulaire_marque?: string[];
+  /** Photo d'illustration (public/). */
+  image?: string;
   vocabulaire_interdit?: string[];
 }
 
@@ -310,6 +312,8 @@ export interface SujetCalcule {
 export interface ActionAFaire {
   date: string;
   quoi: string;
+  /** Phrase d'action lisible : « Envoyer la newsletter aux Américains ». */
+  titre: string;
   sujetId: string;
   sujetNom: string;
   activationCle: string;

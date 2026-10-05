@@ -5,7 +5,7 @@ import { useState, useTransition } from "react";
 import { appliquerDelai, enregistrerResultat, exempleMesure } from "@/app/actions";
 import type { Resultat } from "@/lib/types";
 
-const champ = "w-full rounded-md border border-line bg-white px-2.5 py-1.5 text-sm outline-none focus:border-greige";
+const champ = "w-full border border-line bg-white px-2.5 py-1.5 text-sm outline-none focus:border-greige";
 
 export function FormResultat({ cle, kpi, existant, date }: { cle: string; kpi: string; existant?: Resultat; date: string }) {
   const [r, setR] = useState<Resultat>(
@@ -62,7 +62,7 @@ export function FormResultat({ cle, kpi, existant, date }: { cle: string; kpi: s
         <input value={r.commentaire} onChange={(e) => setR({ ...r, commentaire: e.target.value })} className={`${champ} mt-1`} />
       </label>
       <div className="flex items-end">
-        <button disabled={enCours} className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-brown px-4 py-2 text-sm font-semibold text-white hover:bg-ink disabled:opacity-60">
+        <button disabled={enCours} className="bouton w-full disabled:opacity-60">
           {ok ? <Check className="h-4 w-4" /> : null} Enregistrer
         </button>
       </div>
@@ -73,7 +73,7 @@ export function FormResultat({ cle, kpi, existant, date }: { cle: string; kpi: s
 export function BoutonAppliquer({ marche, valeur }: { marche: string; valeur: string }) {
   const [enCours, demarrer] = useTransition();
   return (
-    <button disabled={enCours} onClick={() => demarrer(() => appliquerDelai(marche, valeur))} className="rounded-full bg-brown px-3 py-1 text-xs font-semibold text-white hover:bg-ink disabled:opacity-60">
+    <button disabled={enCours} onClick={() => demarrer(() => appliquerDelai(marche, valeur))} className="bouton !px-3 !py-2 disabled:opacity-60">
       Valider et appliquer
     </button>
   );
@@ -82,7 +82,7 @@ export function BoutonAppliquer({ marche, valeur }: { marche: string; valeur: st
 export function BoutonExemple({ cles }: { cles: string[] }) {
   const [enCours, demarrer] = useTransition();
   return (
-    <button disabled={enCours || !cles.length} onClick={() => demarrer(() => exempleMesure(cles))} className="inline-flex items-center gap-1.5 rounded-full border border-brick/40 bg-white px-3.5 py-1.5 text-sm text-brick hover:bg-brick/5 disabled:opacity-50">
+    <button disabled={enCours || !cles.length} onClick={() => demarrer(() => exempleMesure(cles))} className="inline-flex items-center gap-1.5 border border-brick/40 bg-white px-3.5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-brick hover:bg-brick/5 disabled:opacity-50">
       <FlaskConical className="h-3.5 w-3.5" /> Remplir un exemple fictif
     </button>
   );

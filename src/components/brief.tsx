@@ -34,7 +34,7 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
 
   const problemes = etat === "fini" ? controlerTexte(texte) : [];
   return (
-    <div className="rounded-lg border border-line bg-cream/60 p-4">
+    <div className="border border-line bg-cream/60 p-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <p className="flex items-center gap-2 text-sm font-semibold">
           <FileText className="h-4 w-4 text-taupe" /> Brief exécutable du canal
@@ -47,7 +47,7 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
                 setCopie(true);
                 setTimeout(() => setCopie(false), 1500);
               }}
-              className="inline-flex items-center gap-1 rounded-full border border-line bg-white px-3 py-1 text-xs hover:border-greige"
+              className="inline-flex items-center gap-1 border border-line bg-white px-3 py-1.5 text-xs hover:border-ink"
             >
               {copie ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />} Copier
             </button>
@@ -56,7 +56,7 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
             disabled={!actif || etat === "encours"}
             onClick={produire}
             title={actif ? "" : "Le brief est produit après validation de l'activation"}
-            className="rounded-full bg-brown px-3.5 py-1 text-xs font-semibold text-white hover:bg-ink disabled:cursor-not-allowed disabled:bg-greige"
+            className="bouton !px-4 !py-2"
           >
             {etat === "encours" ? "Rédaction…" : etat === "fini" ? "Refaire le brief" : "Produire le brief"}
           </button>
@@ -64,7 +64,7 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
       </div>
       {!actif && etat === "repos" && <p className="mt-2 text-xs text-ink-soft">Disponible après validation de l&apos;activation.</p>}
       {texte && (
-        <div className="mt-3 max-h-[60vh] overflow-y-auto whitespace-pre-wrap rounded-md border border-line bg-white p-4 text-sm leading-relaxed">{texte}</div>
+        <div className="mt-3 max-h-[60vh] overflow-y-auto whitespace-pre-wrap border border-line bg-white p-4 text-sm leading-relaxed">{texte}</div>
       )}
       {etat === "fini" && (
         <p className={`mt-2 flex items-center gap-1.5 text-xs ${problemes.length ? "text-brick" : "text-sage"}`}>

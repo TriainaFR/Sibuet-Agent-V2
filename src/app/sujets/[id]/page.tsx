@@ -1,4 +1,6 @@
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, ChevronDown, Download } from "lucide-react";
+import Image from "next/image";
+import { IconeCanal } from "@/components/icones";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
@@ -6,9 +8,9 @@ import { Suspense } from "react";
 import { Brief } from "@/components/brief";
 import { GrilleMarches, TableauMarches } from "@/components/grille-marches";
 import { Onglets } from "@/components/onglets";
-import { Champ, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
+import { Aide, Champ, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
 import { Validation } from "@/components/validation";
-import { formatDate, formatRange, monthName } from "@/lib/dates";
+import { formatDate, formatRange, monthName, relatif } from "@/lib/dates";
 import { canalLibelle, interetLibelle, nombre, urgenceLibelle, visibiliteLibelle } from "@/lib/format";
 import type { LigneSemrush } from "@/lib/types";
 import { etatSaison } from "@/services/etat";
@@ -53,47 +55,36 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
 
   const essentiel = (
     <div className="space-y-6">
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="carte p-4">
-          <p className="eyebrow text-[0.6rem] text-taupe">Urgence</p>
-          <div className="mt-2">
-            <Niveau libelle={urgenceLibelle(s.urgence)} />
+      <div className="grid grid-cols-2 border border-line bg-white lg:grid-cols-4">
+        {[
+          { label: "Urgence", contenu: <Niveau libelle={urgenceLibelle(s.urgence)} />, texte: s.fenetre ? `Les clients réservent du ${formatRange(s.fenetre.debut, s.fenetre.fin)}` : "Sur prévision de neige" },
+          { label: "Intérêt", contenu: <Niveau libelle={interetLibelle(interet(s))} />, texte: "Demande mesurée sur Google, par pays" },
+          { label: "Sur Google, la maison est", contenu: <Niveau libelle={visibiliteLibelle(s.ecart)} />, texte: "Sur les requêtes d'achat du sujet" },
+          {
+            label: "Première action",
+            contenu: <span className="font-display text-2xl leading-none">{s.premiereAction ? (s.premiereAction <= ctx.date ? "Maintenant" : formatDate(s.premiereAction, true)) : "Aucune"}</span>,
+            texte: s.premiereAction && s.premiereAction > ctx.date ? relatif(s.premiereAction, ctx.date) : "Voir l'onglet Actions",
+          },
+        ].map((x, i) => (
+          <div key={x.label} className={`p-5 ${i % 2 ? "border-l border-line" : ""} ${i >= 2 ? "border-t border-line lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}>
+            <p className="eyebrow text-[0.6rem] text-taupe">{x.label}</p>
+            <div className="mt-2.5">{x.contenu}</div>
+            <p className="mt-2 text-sm text-ink-soft">{x.texte}</p>
           </div>
-          <p className="mt-2 text-sm text-ink-soft">{s.fenetre ? `Les clients réservent du ${formatRange(s.fenetre.debut, s.fenetre.fin)}` : "Sur prévision de neige"}</p>
-        </div>
-        <div className="carte p-4">
-          <p className="eyebrow text-[0.6rem] text-taupe">Intérêt</p>
-          <div className="mt-2">
-            <Niveau libelle={interetLibelle(interet(s))} />
-          </div>
-          <p className="mt-2 text-sm text-ink-soft">Demande mesurée sur Google, par pays</p>
-        </div>
-        <div className="carte p-4">
-          <p className="eyebrow text-[0.6rem] text-taupe">Sur Google, la maison est</p>
-          <div className="mt-2">
-            <Niveau libelle={visibiliteLibelle(s.ecart)} />
-          </div>
-          <p className="mt-2 text-sm text-ink-soft">Sur les requêtes d&apos;achat du sujet</p>
-        </div>
-        <div className="carte p-4">
-          <p className="eyebrow text-[0.6rem] text-taupe">Première action</p>
-          <p className="mt-1.5 font-display text-2xl">{s.premiereAction ? (s.premiereAction <= ctx.date ? "Maintenant" : formatDate(s.premiereAction, true)) : "Aucune"}</p>
-          <p className="text-sm text-ink-soft">Voir l&apos;onglet Actions</p>
-        </div>
+        ))}
       </div>
-      <div className="grid gap-4 lg:grid-cols-3">
-        <div className="carte p-5">
-          <p className="eyebrow text-taupe">Pourquoi ce sujet</p>
-          <p className="mt-2 leading-relaxed">{s.pourquoi}</p>
-        </div>
-        <div className="carte p-5">
-          <p className="eyebrow text-taupe">Pourquoi maintenant</p>
-          <p className="mt-2 leading-relaxed">{s.maintenant || "Rien de pressant à cette date."}</p>
-        </div>
-        <div className="carte p-5">
-          <p className="eyebrow text-taupe">Ce qui change dans le plan</p>
-          <p className="mt-2 leading-relaxed">{s.changement}</p>
-        </div>
+      <div className="grid gap-px overflow-hidden border border-line bg-line lg:grid-cols-3">
+        {[
+          ["01", "Pourquoi ce sujet", s.pourquoi],
+          ["02", "Pourquoi maintenant", s.maintenant || "Rien de pressant à cette date."],
+          ["03", "Ce qui change dans le plan", s.changement],
+        ].map(([n, t, x]) => (
+          <div key={n} className="bg-white p-6">
+            <p className="font-display text-4xl text-greige">{n}</p>
+            <p className="titre-capitales mt-2 text-lg">{t}</p>
+            <p className="mt-2 leading-relaxed text-ink-soft">{x}</p>
+          </div>
+        ))}
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
         <div className="carte p-5">
@@ -122,7 +113,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
         <div className="carte p-5">
           <p className="eyebrow text-taupe">Cible et angle</p>
           <p className="mt-2 text-sm leading-relaxed">{d.cibles}</p>
-          <p className="mt-3 font-display text-lg italic leading-snug text-brown">{d.angle}</p>
+          <p className="mt-3 border-l-2 border-cognac pl-4 font-display text-xl italic leading-snug text-ink">« {d.angle} »</p>
           <p className="mt-3 text-xs text-ink-soft">Vocabulaire interdit : {[...new Set(s.activations.flatMap((a) => a.interdits))].join(", ") || "écrin, cocon, havre de paix, luxe ultime"}.</p>
         </div>
       </div>
@@ -146,77 +137,93 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
   const actions = (
     <div className="space-y-5">
       {s.activations.length === 0 && <Vide>Aucune activation proposée à cette date : aucune fenêtre ouverte ou à venir avec une demande mesurée.</Vide>}
-      {s.activations.map((a) => {
+      <Aide>
+        Chaque canal est une proposition, en brouillon. Dépliez-la pour lire l&apos;objectif, le message, les dates de chaque vague et ce qui change par rapport au
+        plan existant. Une fois validée, l&apos;activation donne accès à son brief exécutable.
+      </Aide>
+      {s.activations.map((a, index) => {
         const dec = decisions[a.cle];
+        const premiere = a.vagues[0];
+        const derniere = a.vagues.at(-1)!;
         return (
-          <article key={a.cle} className="carte overflow-hidden">
-            <header className="flex flex-wrap items-center gap-3 border-b border-line bg-cream/50 px-5 py-4">
+          <details key={a.cle} open={index === 0} className="group/act border border-line bg-white open:shadow-sm">
+            <summary className="flex cursor-pointer flex-wrap items-center gap-4 px-5 py-4 transition hover:bg-cream/60">
+              <IconeCanal canal={a.canal} taille="h-11 w-11" />
               <div className="min-w-0 flex-1">
-                <p className="eyebrow text-[0.6rem] text-taupe">
-                  {a.type} · {a.vagues.length} vague{a.vagues.length > 1 ? "s" : ""}
+                <p className="titre-capitales text-xl leading-tight">{canalLibelle[a.canal]}</p>
+                <p className="mt-0.5 text-sm text-ink-soft">
+                  {a.vagues.length} vague{a.vagues.length > 1 ? "s" : ""}, {premiere.debut === derniere.fin ? formatDate(premiere.debut, true) : `du ${formatDate(premiere.debut)} au ${formatDate(derniere.fin, true)}`}
+                  {dec?.etat === "validee" ? ` · validée par ${dec.par}` : dec?.etat === "rejetee" ? " · rejetée" : " · brouillon"}
                 </p>
-                <h3 className="font-display text-2xl leading-tight">{canalLibelle[a.canal]}</h3>
               </div>
               <PuceStatut code={a.statut.code} libelle={a.statut.libelle} />
-              <Validation cle={a.cle} decision={dec} />
-            </header>
-            <div className="grid gap-5 p-5 lg:grid-cols-2">
-              <Champ label="Objectif">{a.objectif}</Champ>
-              <Champ label="Marché et segment">{a.cible}</Champ>
-              <Champ label="Message clé">{a.message}</Champ>
-              <Champ label="Sémantique cible">
-                {a.semantique.length ? (
-                  <span className="flex flex-wrap gap-1.5">
-                    {a.semantique.map((q) => (
-                      <span key={q} className="rounded bg-sand px-2 py-0.5 text-xs">
-                        {q}
-                      </span>
-                    ))}
-                  </span>
-                ) : (
-                  <span className="text-ink-soft">Sans objet.</span>
-                )}
-              </Champ>
-              <Champ label="Assets">{a.assets}</Champ>
-              <Champ label="Déclencheur">{a.declencheur}</Champ>
-              <Champ label="Budget ou effort">{a.effort}</Champ>
-              <Champ label="Indicateur et ligne de base">
-                {a.kpi}
-                <span className="mt-1 block text-sm text-ink-soft">{a.ligneBase}</span>
-              </Champ>
-            </div>
-            <div className="border-t border-line px-5 py-4">
-              <p className="eyebrow text-[0.6rem] text-taupe">Timing, en vagues</p>
-              <div className="mt-2 overflow-x-auto">
-                <table className="w-full min-w-[640px] text-sm">
-                  <tbody>
-                    {a.vagues.map((v) => (
-                      <tr key={v.numero} className="border-b border-line/60 last:border-0">
-                        <td className="w-20 py-2 font-semibold">Vague {v.numero}</td>
-                        <td className="w-48 py-2">{v.debut === v.fin ? formatDate(v.debut, true) : `${formatDate(v.debut)} au ${formatDate(v.fin, true)}`}</td>
-                        <td className="py-2">
-                          <Marches ids={v.marches} marches={ctx.marches} max={5} />
-                          <span className="block text-xs text-ink-soft">{v.note}</span>
-                        </td>
-                        <td className="py-2 text-right">
-                          <PuceStatut code={v.statut.code} libelle={v.statut.libelle} />
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <ChevronDown className="h-4 w-4 text-taupe transition group-open/act:rotate-180" />
+            </summary>
+            <div className="border-t border-line">
+              <div className="flex flex-wrap items-center justify-between gap-3 bg-cream/60 px-5 py-3">
+                <p className="text-sm text-ink-soft">
+                  Type <strong className="text-ink">{a.type}</strong>. Rien ne part sans validation.
+                </p>
+                <Validation cle={a.cle} decision={dec} />
               </div>
-              <p className="mt-3 text-sm text-ink-soft">
-                <strong className="text-ink">Justification.</strong> {a.justification}
-              </p>
-              <p className="mt-1 text-sm text-ink-soft">
-                <strong className="text-ink">Ce qui change par rapport au plan.</strong> {a.changement}
-              </p>
+              <div className="grid gap-6 p-5 lg:grid-cols-2">
+                <Champ label="Objectif">{a.objectif}</Champ>
+                <Champ label="Marché et segment">{a.cible}</Champ>
+                <Champ label="Message clé">
+                  <span className="font-display text-lg italic">« {a.message} »</span>
+                </Champ>
+                <Champ label="Sémantique cible">
+                  {a.semantique.length ? (
+                    <span className="flex flex-wrap gap-1.5">
+                      {a.semantique.map((q) => (
+                        <span key={q} className="border border-line bg-cream px-2 py-0.5 text-xs">
+                          {q}
+                        </span>
+                      ))}
+                    </span>
+                  ) : (
+                    <span className="text-ink-soft">Sans objet.</span>
+                  )}
+                </Champ>
+                <Champ label="Assets">{a.assets}</Champ>
+                <Champ label="Déclencheur">{a.declencheur}</Champ>
+                <Champ label="Budget ou effort">{a.effort}</Champ>
+                <Champ label="Indicateur et ligne de base">
+                  {a.kpi}
+                  <span className="mt-1 block text-sm text-ink-soft">{a.ligneBase}</span>
+                </Champ>
+              </div>
+              <div className="border-t border-line px-5 py-5">
+                <p className="eyebrow text-[0.62rem] text-taupe">Les vagues</p>
+                <ol className="mt-3 space-y-3">
+                  {a.vagues.map((v) => (
+                    <li key={v.numero} className="grid items-start gap-3 sm:grid-cols-[110px_190px_1fr_auto]">
+                      <span className="titre-capitales text-base">Vague {v.numero}</span>
+                      <span className="text-sm">{v.debut === v.fin ? formatDate(v.debut, true) : `${formatDate(v.debut)} au ${formatDate(v.fin, true)}`}</span>
+                      <span>
+                        <Marches ids={v.marches} marches={ctx.marches} max={5} />
+                        <span className="block text-xs text-ink-soft">{v.note}</span>
+                      </span>
+                      <PuceStatut code={v.statut.code} libelle={v.statut.libelle} />
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-5 grid gap-4 text-sm text-ink-soft lg:grid-cols-2">
+                  <p>
+                    <span className="eyebrow block text-[0.6rem] text-taupe">Pourquoi ces dates</span>
+                    {a.justification}
+                  </p>
+                  <p>
+                    <span className="eyebrow block text-[0.6rem] text-taupe">Ce qui change par rapport au plan</span>
+                    {a.changement}
+                  </p>
+                </div>
+              </div>
+              <div className="border-t border-line px-5 py-4">
+                <Brief sujetId={d.id} activationCle={a.cle} actif={dec?.etat === "validee"} />
+              </div>
             </div>
-            <div className="border-t border-line px-5 py-4">
-              <Brief sujetId={d.id} activationCle={a.cle} actif={dec?.etat === "validee"} />
-            </div>
-          </article>
+          </details>
         );
       })}
     </div>
@@ -363,34 +370,39 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
     </div>
   );
 
+  const picsAchat = [...new Set(lignesSemrush.filter((x) => x.l && x.q.usage === "achat").slice(0, 3).flatMap(({ l }) => Object.entries(l!.tendance).filter(([, v]) => v >= 0.8).map(([k]) => Number(k.slice(5, 7)))))]
+    .sort((a, b) => ((a + 3) % 12) - ((b + 3) % 12))
+    .map(monthName);
+
   return (
-    <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
-      <Link href="/sujets" className="inline-flex items-center gap-1.5 text-sm text-ink-soft hover:text-ink">
-        <ArrowLeft className="h-3.5 w-3.5" /> Tous les sujets
-      </Link>
-      <header className="mt-4">
-        <p className="eyebrow text-taupe">
-          {familles[d.famille]} · Lodge Park · hiver 2026-2027
-        </p>
-        <h1 className="mt-2 font-display text-4xl leading-tight sm:text-5xl">{d.nom}</h1>
-        <p className="mt-3 max-w-3xl text-lg leading-relaxed text-ink-soft">{d.theme}</p>
-        <p className="mt-3 text-sm">
-          {d.sejour && <>Séjour du {formatRange(d.sejour.debut, d.sejour.fin)}. </>}
-          {d.fenetre_fixe && <>Fenêtre de décision du {formatRange(d.fenetre_fixe.debut, d.fenetre_fixe.fin)}. </>}
-          {d.requetes.length} requêtes suivies, pic de recherche en{" "}
-          {[...new Set(lignesSemrush.filter((x) => x.l && x.q.usage === "achat").slice(0, 3).flatMap(({ l }) => Object.entries(l!.tendance).filter(([, v]) => v >= 0.8).map(([k]) => Number(k.slice(5, 7)))))]
-            .sort((a, b) => ((a + 3) % 12) - ((b + 3) % 12))
-            .map(monthName)
-            .join(", ") || "n.d."}
-          .
-        </p>
+    <>
+      <header className="relative isolate overflow-hidden bg-ink text-white">
+        <Image src={d.image ?? "/hotels/lodge-park.jpg"} alt="" fill priority className="-z-10 object-cover opacity-75" sizes="100vw" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
+        <div className="mx-auto max-w-[1320px] px-4 pb-12 pt-6 sm:px-6">
+          <Link href="/sujets" className="eyebrow inline-flex items-center gap-2 text-white/85 hover:text-white">
+            <ArrowLeft className="h-3.5 w-3.5" /> Tous les sujets
+          </Link>
+          <div className="apparition mt-24 max-w-3xl sm:mt-32">
+            <p className="eyebrow text-white/85">
+              {familles[d.famille]} · Lodge Park · hiver 2026-2027
+            </p>
+            <h1 className="mt-3 font-display text-[2.6rem] leading-[1.02] sm:text-6xl">{d.nom}</h1>
+            <p className="mt-4 text-lg leading-relaxed text-white/90">{d.theme}</p>
+            <p className="eyebrow mt-5 text-white/80">
+              {d.sejour ? `Séjour du ${formatRange(d.sejour.debut, d.sejour.fin)}` : d.fenetre_fixe ? `Décision du ${formatRange(d.fenetre_fixe.debut, d.fenetre_fixe.fin)}` : ""}
+              {picsAchat.length ? ` · Recherches au plus haut en ${picsAchat.join(", ")}` : ""}
+            </p>
+          </div>
+        </div>
       </header>
-      {!s.ouvert && <p className="mt-5 rounded-lg border border-line bg-sand px-4 py-3 text-sm">La maison est fermée sur cette période d&apos;après vos dates : aucune action n&apos;est proposée.</p>}
+      <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
+      {!s.ouvert && <p className="mt-5 border border-line bg-sand px-4 py-3 text-sm">La maison est fermée sur cette période d&apos;après vos dates : aucune action n&apos;est proposée.</p>}
       {s.ouvert && s.remplissage === "plein" && (
-        <p className="mt-5 rounded-lg border border-line bg-sand px-4 py-3 text-sm">Vous indiquez que ce sujet est déjà bien vendu : les actions payantes sont suspendues, on garde les newsletters prévues.</p>
+        <p className="mt-5 border border-line bg-sand px-4 py-3 text-sm">Vous indiquez que ce sujet est déjà bien vendu : les actions payantes sont suspendues, on garde les newsletters prévues.</p>
       )}
       {s.ouvert && s.remplissage === "bas" && (
-        <p className="mt-5 rounded-lg border border-brick/30 bg-brick/5 px-4 py-3 text-sm">Vous indiquez un remplissage bas : sujet prioritaire, les actions sont à lancer en premier.</p>
+        <p className="mt-5 border border-brick/30 bg-brick/5 px-4 py-3 text-sm">Vous indiquez un remplissage bas : sujet prioritaire, les actions sont à lancer en premier.</p>
       )}
       <div className="mt-6">
         <Suspense>
@@ -405,6 +417,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           />
         </Suspense>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

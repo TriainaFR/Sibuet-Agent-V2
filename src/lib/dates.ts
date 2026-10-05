@@ -49,3 +49,15 @@ export function lundi(s: string) {
   const j = toDate(s).getUTCDay();
   return addDays(s, -((j + 6) % 7));
 }
+
+/** Date relative, pour une lecture rapide : « aujourd'hui », « dans 3 jours », « dans 2 semaines ». */
+export function relatif(d: string, ref: string) {
+  const n = diffDays(d, ref);
+  if (n === 0) return "aujourd'hui";
+  if (n === 1) return "demain";
+  if (n === -1) return "hier";
+  if (n < 0) return n > -14 ? `il y a ${-n} jours` : `il y a ${Math.round(-n / 7)} semaines`;
+  if (n < 14) return `dans ${n} jours`;
+  if (n < 60) return `dans ${Math.round(n / 7)} semaines`;
+  return `dans ${Math.round(n / 30)} mois`;
+}

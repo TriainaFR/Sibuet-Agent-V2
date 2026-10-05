@@ -1,68 +1,107 @@
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { connection } from "next/server";
-import { Niveau, Puce } from "@/components/ui";
-import { formatDate, formatRange } from "@/lib/dates";
+import { Bandeau, Niveau, Puce } from "@/components/ui";
+import { formatDate, formatRange, relatif } from "@/lib/dates";
 import { interetLibelle, urgenceLibelle, visibiliteLibelle } from "@/lib/format";
 import { etatSaison } from "@/services/etat";
 
-const familles: Record<string, string> = { saisonnier: "Saisonnier", evenementiel: "Événementiel", declencheur: "Déclencheur", b2b: "B2B" };
+const familles: Record<string, string> = { saisonnier: "Saisonnier", evenementiel: "Événementiel", declencheur: "Déclencheur", b2b: "Séminaires et B2B" };
 
 export default async function Sujets() {
   await connection();
   const { sujets, interet, ctx } = etatSaison();
+  const [premier, ...autres] = sujets;
   return (
-    <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
-      <p className="eyebrow text-taupe">Lodge Park, hiver 2026-2027</p>
-      <h1 className="mt-2 font-display text-4xl">Les sujets</h1>
-      <p className="mt-2 max-w-3xl text-ink-soft">
-        Classés par urgence puis par intérêt. Un sujet très intéressant mais lointain passe après un sujet moyen qu&apos;il faut lancer cette semaine.
-      </p>
-      <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {sujets.map((s) => {
-          const nbActions = s.activations.reduce((t, a) => t + a.vagues.length, 0);
-          return (
-            <Link key={s.def.id} href={`/sujets/${s.def.id}`} className={`carte group flex flex-col p-5 transition hover:-translate-y-0.5 hover:border-greige hover:shadow-sm ${s.ouvert ? "" : "opacity-60"}`}>
-              <div className="flex items-center justify-between gap-2">
-                <span className="eyebrow text-[0.6rem] text-taupe">{familles[s.def.famille]}</span>
-                {!s.ouvert ? <Puce>Maison fermée</Puce> : s.remplissage === "plein" ? <Puce>Déjà bien vendu</Puce> : s.remplissage === "bas" ? <Puce ton="brique">Remplissage bas</Puce> : null}
-              </div>
-              <h2 className="mt-2 font-display text-[1.45rem] leading-snug group-hover:text-brown">{s.def.nom}</h2>
-              <p className="mt-1 text-sm text-ink-soft">
-                {s.def.sejour ? `Séjour du ${formatRange(s.def.sejour.debut, s.def.sejour.fin)}` : s.def.fenetre_fixe ? `Fenêtre de décision du ${formatRange(s.def.fenetre_fixe.debut, s.def.fenetre_fixe.fin)}` : ""}
-              </p>
-              <p className="mt-3 line-clamp-3 text-sm leading-relaxed">{s.def.theme}</p>
-              <dl className="mt-4 grid grid-cols-3 gap-2 border-t border-line pt-4 text-xs">
-                <div>
-                  <dt className="text-taupe">Urgence</dt>
-                  <dd className="mt-1">
-                    <Niveau libelle={urgenceLibelle(s.urgence)} />
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-taupe">Intérêt</dt>
-                  <dd className="mt-1">
-                    <Niveau libelle={interetLibelle(interet(s))} />
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-taupe">Sur Google</dt>
-                  <dd className="mt-1">
-                    <Niveau libelle={visibiliteLibelle(s.ecart)} />
-                  </dd>
-                </div>
+    <>
+      <Bandeau eyebrow="Lodge Park, hiver 2026-2027" titre="Les sujets de la saison" sousTitre={`${sujets.length} sujets, classés par urgence puis intérêt`} filigrane="Sujets">
+        <p>Un sujet très intéressant mais lointain passe après un sujet moyen qu&apos;il faut lancer cette semaine.</p>
+      </Bandeau>
+
+      <div className="mx-auto max-w-[1320px] px-4 py-12 sm:px-6">
+        {premier && (
+          <Link href={`/sujets/${premier.def.id}`} className="group grid overflow-hidden border border-line bg-white md:grid-cols-[1.3fr_1fr]">
+            <div className="relative min-h-[300px] overflow-hidden">
+              <Image src={premier.def.image ?? "/hotels/lodge-park.jpg"} alt="" fill className="object-cover transition duration-700 group-hover:scale-[1.03]" sizes="(min-width: 768px) 60vw, 100vw" priority />
+              <span className="absolute left-4 top-4">
+                <Puce ton="nuit">À travailler en premier</Puce>
+              </span>
+            </div>
+            <div className="flex flex-col justify-center p-8 sm:p-10">
+              <p className="eyebrow text-taupe">{familles[premier.def.famille]}</p>
+              <h2 className="titre-capitales mt-3 text-3xl leading-tight sm:text-[2.2rem]">{premier.def.nom}</h2>
+              <p className="mt-1 text-sm text-ink-soft">{premier.def.sejour && `Séjour du ${formatRange(premier.def.sejour.debut, premier.def.sejour.fin)}`}</p>
+              <p className="mt-4 leading-relaxed text-ink-soft">{premier.def.theme}</p>
+              <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-line pt-5 text-xs">
+                <Indicateurs s={premier} interet={interetLibelle(interet(premier))} />
               </dl>
-              <div className="mt-auto flex items-center justify-between pt-4 text-sm">
-                <span className="text-ink-soft">
-                  {s.premiereAction ? (s.premiereAction <= ctx.date ? "Première action : maintenant" : `Première action le ${formatDate(s.premiereAction)}`) : "Aucune action proposée"}
-                  {nbActions ? ` · ${nbActions} action${nbActions > 1 ? "s" : ""}` : ""}
-                </span>
-                <ArrowRight className="h-4 w-4 text-taupe transition group-hover:translate-x-0.5 group-hover:text-brown" />
-              </div>
-            </Link>
-          );
-        })}
+              <span className="lien-charme mt-6 text-ink">Ouvrir la fiche</span>
+            </div>
+          </Link>
+        )}
+
+        <div className="mt-10 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
+          {autres.map((s, i) => {
+            const nb = s.activations.reduce((t, a) => t + a.vagues.length, 0);
+            return (
+              <Link key={s.def.id} href={`/sujets/${s.def.id}`} className={`apparition group flex flex-col ${s.ouvert ? "" : "opacity-60"}`} style={{ animationDelay: `${i * 40}ms` }}>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image src={s.def.image ?? "/hotels/lodge-park.jpg"} alt="" fill className="object-cover transition duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" />
+                  <div className="absolute left-3 top-3 flex gap-2">
+                    {!s.ouvert ? <Puce>Maison fermée</Puce> : s.remplissage === "plein" ? <Puce>Déjà bien vendu</Puce> : s.remplissage === "bas" ? <Puce ton="brique">Remplissage bas</Puce> : null}
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col border-x border-b border-line bg-white p-6">
+                  <p className="eyebrow text-[0.62rem] text-taupe">
+                    {familles[s.def.famille]}
+                    {s.def.sejour ? ` · ${formatRange(s.def.sejour.debut, s.def.sejour.fin)}` : ""}
+                  </p>
+                  <h2 className="titre-capitales mt-2 text-[1.45rem] leading-snug group-hover:text-cognac">{s.def.nom}</h2>
+                  <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft">{s.def.theme}</p>
+                  <dl className="mt-5 grid grid-cols-3 gap-2 border-t border-line pt-4 text-xs">
+                    <Indicateurs s={s} interet={interetLibelle(interet(s))} />
+                  </dl>
+                  <div className="mt-auto flex items-center justify-between pt-5 text-sm text-ink-soft">
+                    <span>
+                      {s.premiereAction ? (s.premiereAction <= ctx.date ? "Première action : maintenant" : `Première action ${relatif(s.premiereAction, ctx.date)}`) : "Aucune action à cette date"}
+                      {nb ? ` · ${nb} action${nb > 1 ? "s" : ""}` : ""}
+                    </span>
+                    <span className="lien-charme text-ink" aria-hidden>
+                      {""}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+        <p className="mt-10 text-center text-xs text-ink-soft">Données au {formatDate(ctx.date, true)}. Les sujets se révisent chaque saison dans le fichier de référence.</p>
       </div>
-    </div>
+    </>
+  );
+}
+
+function Indicateurs({ s, interet }: { s: { urgence: number; ecart: number | null }; interet: string }) {
+  return (
+    <>
+      <div>
+        <dt className="eyebrow text-[0.58rem] text-taupe">Urgence</dt>
+        <dd className="mt-1.5">
+          <Niveau libelle={urgenceLibelle(s.urgence)} compact />
+        </dd>
+      </div>
+      <div>
+        <dt className="eyebrow text-[0.58rem] text-taupe">Intérêt</dt>
+        <dd className="mt-1.5">
+          <Niveau libelle={interet} compact />
+        </dd>
+      </div>
+      <div>
+        <dt className="eyebrow text-[0.58rem] text-taupe">Sur Google</dt>
+        <dd className="mt-1.5">
+          <Niveau libelle={visibiliteLibelle(s.ecart)} compact />
+        </dd>
+      </div>
+    </>
   );
 }

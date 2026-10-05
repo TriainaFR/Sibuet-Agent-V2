@@ -1,7 +1,7 @@
 import { connection } from "next/server";
 import { connecteurs } from "@/connecteurs";
 import { BoutonRoutine, InterrupteurFictif } from "@/components/pilotage";
-import { Puce, type Ton } from "@/components/ui";
+import { Bandeau, Puce, type Ton } from "@/components/ui";
 import { REGLES } from "@/lib/engine/regles";
 import { formatDate } from "@/lib/dates";
 import { lireCalculs, lireJournal, lireParametres } from "@/services/reference";
@@ -17,13 +17,14 @@ export default async function Sources() {
   const journal = lireJournal()[0];
 
   return (
-    <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
-      <p className="eyebrow text-taupe">Coulisses</p>
-      <h1 className="mt-2 font-display text-4xl">Sources et routine</h1>
-      <p className="mt-2 max-w-3xl text-ink-soft">
-        Chaque source entre dans le système sous forme de relevés datés, jamais écrasés. La routine du lundi collecte, recalcule les opportunités et signale ce
+    <>
+      <Bandeau eyebrow="Coulisses" titre="Sources et routine" sousTitre="Chaque lundi, les signaux de la semaine" filigrane="Sources" photo="/lodge/lp-3.jpg" photo2="/lodge/lp-18.jpg">
+        <p>
+          Chaque source entre dans le système sous forme de relevés datés, jamais écrasés. La routine du lundi collecte, recalcule les opportunités et signale ce
         qui a changé. Pour brancher une source, il suffit de remplacer son connecteur : le reste ne bouge pas.
-      </p>
+        </p>
+      </Bandeau>
+    <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
 
       <div className="mt-7 grid gap-5 lg:grid-cols-[1fr_380px]">
         <section className="carte overflow-hidden">
@@ -133,5 +134,6 @@ export default async function Sources() {
         </aside>
       </div>
     </div>
+    </>
   );
 }

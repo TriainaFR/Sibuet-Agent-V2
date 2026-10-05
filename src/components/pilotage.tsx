@@ -20,13 +20,13 @@ export function BoutonRoutine() {
             setResume(`Calcul n° ${r.numero}, ${r.alertes} alerte${r.alertes > 1 ? "s" : ""}.`);
           })
         }
-        className="inline-flex items-center gap-2 rounded-full bg-brown px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink disabled:opacity-60"
+        className="bouton disabled:opacity-60"
       >
         {enCours ? <RefreshCw className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4" />}
         {enCours ? "Collecte en cours, une à deux minutes…" : "Lancer la routine maintenant"}
       </button>
       {lignes && (
-        <div className="mt-3 rounded-lg border border-line bg-cream/60 p-3 text-xs leading-relaxed">
+        <div className="mt-3 border border-line bg-cream/60 p-3 text-xs leading-relaxed">
           <p className="mb-1 font-semibold">{resume}</p>
           {lignes.map((l, i) => (
             <p key={i} className={l.startsWith("✗") ? "text-brick" : l.startsWith("✓") ? "text-sage" : "text-ink-soft"}>

@@ -109,7 +109,8 @@
     "Repasse nouveau LP, fêtes, offres",
     "Repasse fêtes, offres"
    ],
-   "angle": "Le programme de la station semaine par semaine : village de Noël, parade du 24 décembre, descente aux flambeaux du 31."
+   "angle": "Le programme de la station semaine par semaine : village de Noël, parade du 24 décembre, descente aux flambeaux du 31.",
+   "image": "/lodge/lp-7.jpg"
   },
   {
    "id": "sapin",
@@ -176,7 +177,8 @@
     "Ouverture décembre",
     "Réouverture saisonnière"
    ],
-   "angle": "Premier week-end de la saison à Megève, illumination du sapin le 5 décembre, avant la haute saison et à son tarif."
+   "angle": "Premier week-end de la saison à Megève, illumination du sapin le 5 décembre, avant la haute saison et à son tarif.",
+   "image": "/hotels/megeve.jpg"
   },
   {
    "id": "janvier",
@@ -260,7 +262,8 @@
     "L'Élégance a du cœur, automobiles"
    ],
    "envois": [],
-   "angle": "Les pistes sans les vacances scolaires, la semaine du 11 janvier la mieux enneigée de l'hiver sur cinq saisons."
+   "angle": "Les pistes sans les vacances scolaires, la semaine du 11 janvier la mieux enneigée de l'hiver sur cinq saisons.",
+   "image": "/lodge/megeve-village.jpg"
   },
   {
    "id": "spa",
@@ -306,7 +309,8 @@
    "envois": [
     "Boost mars, Wellness break"
    ],
-   "angle": "Le spa Pure Altitude du Lodge Park comme destination de l'hiver, avec Saint-Valentin au milieu de la période."
+   "angle": "Le spa Pure Altitude du Lodge Park comme destination de l'hiver, avec Saint-Valentin au milieu de la période.",
+   "image": "/lodge/lp-6.jpg"
   },
   {
    "id": "fevrier",
@@ -407,7 +411,8 @@
     "Vacances d'hiver à Megève",
     "Nos adresses pour les vacances d'hiver"
    ],
-   "angle": "Les vacances d'hiver à Megève semaine par semaine, avec les dates de chaque zone scolaire et ce que la station propose aux familles sur ces dates."
+   "angle": "Les vacances d'hiver à Megève semaine par semaine, avec les dates de chaque zone scolaire et ce que la station propose aux familles sur ces dates.",
+   "image": "/lodge/lp-5.jpg"
   },
   {
    "id": "printemps",
@@ -455,7 +460,8 @@
    ],
    "envois": [],
    "conditionne_fermeture": true,
-   "angle": "Le ski au soleil et les déjeuners en terrasse, jusqu'à la fermeture."
+   "angle": "Le ski au soleil et les déjeuners en terrasse, jusqu'à la fermeture.",
+   "image": "/lodge/bar-2.jpg"
   },
   {
    "id": "paques",
@@ -493,7 +499,8 @@
    "evenements": [],
    "envois": [],
    "conditionne_fermeture": true,
-   "angle": "Megève pour Pâques, au départ de Genève, sur les dates des vacances anglaises."
+   "angle": "Megève pour Pâques, au départ de Genève, sur les dates des vacances anglaises.",
+   "image": "/lodge/lp-2.jpg"
   },
   {
    "id": "neige",
@@ -566,7 +573,8 @@
    "evenements": [],
    "envois": [],
    "seuil_neige_5j_cm": 20,
-   "angle": "Il vient de neiger, ou il va neiger : une chambre ce week-end, à une heure de Genève."
+   "angle": "Il vient de neiger, ou il va neiger : une chambre ce week-end, à une heure de Genève.",
+   "image": "/hotels/lodge-park.jpg"
   },
   {
    "id": "early",
@@ -593,7 +601,8 @@
    "envois": [
     "Early booking hiver 2027-2028"
    ],
-   "angle": "Réserver l'hiver 2027-2028 dès maintenant, aux conditions de la réservation anticipée."
+   "angle": "Réserver l'hiver 2027-2028 dès maintenant, aux conditions de la réservation anticipée.",
+   "image": "/lodge/lp-10.jpg"
   },
   {
    "id": "mice",
@@ -620,7 +629,8 @@
     "Megève Leadership, Du ciel aux abysses"
    ],
    "envois": [],
-   "angle": "Un séminaire à Megève en dehors de la haute saison, avec la page séminaires comme destination."
+   "angle": "Un séminaire à Megève en dehors de la haute saison, avec la page séminaires comme destination.",
+   "image": "/lodge/lp-12.jpg"
   }
  ]
 }

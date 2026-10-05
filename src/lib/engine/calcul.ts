@@ -747,9 +747,30 @@ export function aFaire(ctx: Contexte, sujets: SujetCalcule[]): ActionAFaire[] {
           a.canal === "seo"
             ? `${canalCourt.seo} ${s.def.nom.toLowerCase()} : ${v.note.charAt(0).toLowerCase()}${v.note.slice(1)}`
             : `${canalCourt[a.canal]} ${s.def.nom.toLowerCase()}${a.vagues.length > 1 ? `, vague ${v.numero}` : ""}`;
+        const qui = v.libelleMarches;
+        const seo = s.activations.find((x) => x.canal === "seo");
+        const titre =
+          a.canal === "crm"
+            ? v.statut.code === "existant"
+              ? `Garder l'envoi prévu, pour ${qui}`
+              : `Envoyer la newsletter${a.vagues.length > 1 ? ` (vague ${v.numero})` : ""} à ${qui}`
+            : a.canal === "agences"
+              ? `Écrire aux agences et entreprises, ${qui}`
+              : a.canal === "seo"
+                ? seo?.assets.startsWith("Mettre à jour")
+                  ? `Mettre à jour la page ${seo.assets.split(" ")[3]}, en ligne au plus tard le ${formatDate(v.fin)}`
+                  : `Créer la page « ${s.def.nom} », en ligne au plus tard le ${formatDate(v.fin)}`
+                : a.canal === "sea"
+                  ? `Lancer Google Ads pour ${qui}`
+                  : a.canal === "meta"
+                    ? `Lancer Meta Ads pour ${qui}`
+                    : a.canal === "social"
+                      ? `Publier sur Instagram${s.evenementsLies[0] ? ` autour de « ${s.evenementsLies[0].nom} »` : ""}`
+                      : "Activer le déclencheur neige";
         out.push({
           date: enRetard ? ctx.date : v.debut,
           quoi,
+          titre,
           sujetId: s.def.id,
           sujetNom: s.def.nom,
           activationCle: a.cle,

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { Bandeau } from "@/components/ui";
 import Link from "next/link";
 import { connection } from "next/server";
 import { addDays, diffDays, formatDate, lundi, maxDate, minDate } from "@/lib/dates";
@@ -47,17 +49,18 @@ export default async function Calendrier() {
 
 
   return (
-    <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
-      <p className="eyebrow text-taupe">Lodge Park, hiver 2026-2027</p>
-      <h1 className="mt-2 font-display text-4xl">Calendrier des sujets</h1>
-      <p className="mt-2 max-w-3xl text-ink-soft">
-        Pour chaque sujet : en pointillés, le moment où les clients réservent ; en plein, le moment où ils séjournent. Les losanges sont les newsletters déjà
+    <>
+      <Bandeau eyebrow="Lodge Park, hiver 2026-2027" titre="Le calendrier de la saison" sousTitre="Quand ils réservent, quand ils séjournent" filigrane="Calendrier" photo="/lodge/megeve-village.jpg" photo2="/lodge/lp-7.jpg">
+        <p>
+          Pour chaque sujet : en pointillés, le moment où les clients réservent ; en plein, le moment où ils séjournent. Les losanges sont les newsletters déjà
         prévues. Cliquez un sujet pour ouvrir sa fiche.
-      </p>
+        </p>
+      </Bandeau>
+    <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
 
       <div className="carte mt-7 overflow-x-auto p-5">
         <div className="min-w-[980px]">
-          <div className="grid grid-cols-[230px_1fr] gap-4">
+          <div className="grid grid-cols-[260px_1fr] gap-4">
             <div />
             <div className="relative h-6 text-xs text-taupe">
               {mois.map((m) => (
@@ -72,22 +75,27 @@ export default async function Calendrier() {
           </div>
           <div className="mt-2 divide-y divide-line/60">
             {sujets.map((s) => (
-              <div key={s.def.id} className={`grid grid-cols-[230px_1fr] items-center gap-4 py-1.5 ${s.ouvert ? "" : "opacity-45"}`}>
-                <Link href={`/sujets/${s.def.id}`} className="group min-w-0">
-                  <span className="block truncate text-sm font-semibold group-hover:text-brown">{s.def.nom}</span>
+              <div key={s.def.id} className={`grid grid-cols-[260px_1fr] items-center gap-4 py-1.5 ${s.ouvert ? "" : "opacity-45"}`}>
+                <Link href={`/sujets/${s.def.id}`} className="group flex min-w-0 items-center gap-3">
+                  <span className="relative h-10 w-12 shrink-0 overflow-hidden">
+                    <Image src={s.def.image ?? "/hotels/lodge-park.jpg"} alt="" fill className="object-cover" sizes="48px" />
+                  </span>
+                  <span className="min-w-0">
+                  <span className="block truncate text-sm font-semibold group-hover:text-cognac">{s.def.nom}</span>
                   <span className="text-xs text-ink-soft">{!s.ouvert ? "Maison fermée" : s.urgence >= 0.85 ? "À travailler maintenant" : s.urgence >= 0.6 ? "À préparer" : "Plus tard"}</span>
+                  </span>
                 </Link>
                 <Grille {...piste}>
                   {s.fenetre && s.ouvert && (
                     <span
-                      className="fenetre-achat absolute top-2.5 h-4 text-ochre"
+                      className="fenetre-achat absolute top-2.5 h-4 text-cognac"
                       style={{ left: `${x(s.fenetre.debut)}%`, width: `${w(s.fenetre.debut, s.fenetre.fin)}%` }}
                       title={`Les clients réservent du ${formatDate(s.fenetre.debut)} au ${formatDate(s.fenetre.fin)} · urgence ${urgenceLibelle(s.urgence).toLowerCase()}`}
                     />
                   )}
                   {s.def.sejour && (
                     <span
-                      className={`absolute top-3 h-3 rounded-full ${s.def.famille === "declencheur" ? "bg-sky/40" : "bg-brown/75"}`}
+                      className={`absolute top-3 h-3 rounded-full ${s.def.famille === "declencheur" ? "bg-sky/40" : "bg-nuit/80"}`}
                       style={{ left: `${x(s.def.sejour.debut)}%`, width: `${w(s.def.sejour.debut, s.def.sejour.fin)}%` }}
                       title={`Séjour du ${formatDate(s.def.sejour.debut)} au ${formatDate(s.def.sejour.fin)}`}
                     />
@@ -95,7 +103,7 @@ export default async function Calendrier() {
                 </Grille>
               </div>
             ))}
-            <div className="grid grid-cols-[230px_1fr] items-center gap-4 py-1.5">
+            <div className="grid grid-cols-[260px_1fr] items-center gap-4 py-1.5">
               <span className="text-sm font-semibold">Newsletters déjà prévues</span>
               <Grille {...piste}>
                 {envois.map((e, i) => (
@@ -108,7 +116,7 @@ export default async function Calendrier() {
                 ))}
               </Grille>
             </div>
-            <div className="grid grid-cols-[230px_1fr] items-center gap-4 py-1.5">
+            <div className="grid grid-cols-[260px_1fr] items-center gap-4 py-1.5">
               <span>
                 <span className="block text-sm font-semibold">Événements de la station</span>
                 <span className="text-xs text-ink-soft">nombre par semaine, hors décors</span>
@@ -127,10 +135,10 @@ export default async function Calendrier() {
           </div>
           <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-4 text-xs text-ink-soft">
             <span className="inline-flex items-center gap-2">
-              <span className="fenetre-achat h-3 w-8 text-ochre" /> Les clients réservent
+              <span className="fenetre-achat h-3 w-8 text-cognac" /> Les clients réservent
             </span>
             <span className="inline-flex items-center gap-2">
-              <span className="h-3 w-8 rounded-full bg-brown/75" /> Les clients séjournent
+              <span className="h-3 w-8 rounded-full bg-nuit/80" /> Les clients séjournent
             </span>
             <span className="inline-flex items-center gap-2">
               <span className="h-3 w-3 rotate-45 bg-ochre" /> Envoi clients
@@ -183,5 +191,6 @@ export default async function Calendrier() {
         </div>
       </section>
     </div>
+    </>
   );
 }

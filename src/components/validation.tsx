@@ -15,7 +15,7 @@ export function Validation({ cle, decision }: { cle: string; decision?: Decision
   if (etat !== "brouillon") {
     return (
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 font-semibold ${etat === "validee" ? "bg-sage/15 text-sage" : "bg-sand text-ink-soft"}`}>
+        <span className={`inline-flex items-center gap-1 px-3 py-1.5 font-semibold ${etat === "validee" ? "bg-sage/15 text-sage" : "bg-sand text-ink-soft"}`}>
           {etat === "validee" ? <Check className="h-3.5 w-3.5" /> : <X className="h-3.5 w-3.5" />}
           {etat === "validee" ? "Validée" : "Rejetée"} par {decision?.par}, le {decision?.le.split("-").reverse().join("/")}
         </span>
@@ -27,17 +27,17 @@ export function Validation({ cle, decision }: { cle: string; decision?: Decision
   }
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="rounded-full bg-sand px-3 py-1 text-xs font-semibold text-ink-soft">Brouillon</span>
+      <span className="border border-line bg-sand px-3 py-1.5 text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-ink-soft">Brouillon</span>
       <input
         value={nom}
         onChange={(e) => setNom(e.target.value)}
         placeholder="Validé par…"
-        className="w-36 rounded-full border border-line bg-white px-3 py-1 text-sm outline-none focus:border-greige"
+        className="w-36 border border-line bg-white px-3 py-2 text-sm outline-none focus:border-ink"
       />
-      <button disabled={enCours} onClick={() => decider("validee")} className="inline-flex items-center gap-1 rounded-full bg-brown px-3.5 py-1.5 text-sm font-semibold text-white hover:bg-ink disabled:opacity-50">
+      <button disabled={enCours} onClick={() => decider("validee")} className="bouton !px-4 !py-2.5 disabled:opacity-50">
         <Check className="h-3.5 w-3.5" /> Valider
       </button>
-      <button disabled={enCours} onClick={() => decider("rejetee")} className="inline-flex items-center gap-1 rounded-full border border-line px-3.5 py-1.5 text-sm hover:border-greige disabled:opacity-50">
+      <button disabled={enCours} onClick={() => decider("rejetee")} className="bouton-clair !px-4 !py-2 disabled:opacity-50">
         <X className="h-3.5 w-3.5" /> Rejeter
       </button>
     </div>
