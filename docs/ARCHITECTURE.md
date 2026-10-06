@@ -50,7 +50,7 @@ Chaque connecteur renvoie un `Releve` au même format : le moteur et l'interface
 
 ### 4. Sécurité et accès
 
-- Ajouter une authentification avant toute mise en ligne : les actions serveur sont accessibles par requête POST directe. Un proxy (`src/proxy.ts`) avec une connexion par lien magique ou SSO Google suffit.
+- Connexion par mot de passe déjà en place (`src/proxy.ts`, `src/lib/session.ts`, page `/connexion`) : elle s'active dès que `APP_PASSWORD` est défini, et protège les pages, les actions serveur et les routes `/api`. Variables : `APP_USER` (facultatif), `APP_PASSWORD`, `SESSION_SECRET`. Pour plusieurs comptes nominatifs, passer ensuite à un SSO Google ou à des liens magiques.
 - Clé Claude côté serveur uniquement (`ANTHROPIC_API_KEY`).
 - Rien de nominatif : agréger les réservations Asterio avant stockage.
 - Le dépôt GitHub doit être privé : il contient des données du client.

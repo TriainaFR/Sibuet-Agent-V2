@@ -8,8 +8,7 @@ import { lireDecisions, lireParametres, lireResultats, lireSaisie, saisieVide } 
 import { lancerRoutine } from "@/services/routine";
 import { depot } from "@/stockage/depot";
 
-// Actions serveur. En démo, aucune authentification : à ajouter avant toute mise en ligne
-// (les actions sont accessibles par requête POST directe).
+// Actions serveur. Elles sont protégées par le proxy (src/proxy.ts) dès que APP_PASSWORD est défini.
 
 const rafraichir = () => revalidatePath("/", "layout");
 

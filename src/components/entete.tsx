@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { LogOut } from "lucide-react";
+import { seDeconnecter } from "@/app/connexion/actions";
 import { formatDate } from "@/lib/dates";
+import { protectionActive } from "@/lib/session";
 import { lireCalculs, lireMaisons, lireParametres } from "@/services/reference";
 import { Navigation } from "./navigation";
 
@@ -27,6 +30,13 @@ export function Entete() {
               Mis à jour le {formatDate(dernier.date, true)}
               <span className="block text-[0.68rem] text-greige-dark">calcul n° {dernier.numero}</span>
             </span>
+          )}
+          {protectionActive() && (
+            <form action={seDeconnecter}>
+              <button title="Se déconnecter" className="inline-flex h-8 w-8 items-center justify-center border border-line text-ink-soft transition hover:border-ink hover:text-ink">
+                <LogOut className="h-3.5 w-3.5" strokeWidth={1.6} />
+              </button>
+            </form>
           )}
         </div>
       </div>
