@@ -121,7 +121,7 @@ export default async function Sources() {
             <h2 className="font-display text-xl">Paramètres du calcul</h2>
             <ul className="mt-2 space-y-1.5 text-xs text-ink-soft">
               <li>Fenêtre d&apos;achat : début du séjour moins {REGLES.q3SurMediane} fois le délai médian, jusqu&apos;au début moins {REGLES.q1SurMediane} fois.</li>
-              <li>Score : demande × reste à gagner sur Google × besoin × marge. Facteur absent : {REGLES.facteurAbsent}, déclaré manquant.</li>
+              <li>Score : demande × reste à gagner sur Google × besoin de remplissage. Facteur absent : {REGLES.facteurAbsent}, déclaré manquant.</li>
               <li>Urgence : maximale quand la fenêtre est ouverte, nulle quand elle est passée, décroissante sur {REGLES.urgenceHorizonSemaines} semaines avant.</li>
               <li>
                 Vagues : dates au premier tiers de la fenêtre, marchés à moins de {REGLES.ecartVagueJours} jours regroupés, {REGLES.maxActivations} canaux au plus.

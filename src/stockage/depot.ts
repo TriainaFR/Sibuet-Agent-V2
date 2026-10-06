@@ -67,7 +67,7 @@ class DepotFichiers implements Depot {
     const dir = path.join(DATA, "signaux", source);
     const enMemoire = [...this.memoire.keys()].filter((k) => k.startsWith(`signaux/${source}/`)).map((k) => path.basename(k, ".json"));
     const surDisque = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, "")) : [];
-    return [...new Set([...surDisque, ...enMemoire])].sort();
+    return [...new Set([...surDisque, ...enMemoire])].sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
   }
 
   lireReleve<T>(source: SourceId, cle?: string) {

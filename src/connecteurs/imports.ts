@@ -101,7 +101,7 @@ export const asterio: Connecteur = {
   statut: "à brancher",
   fictif: true,
   apporte: "Nuitées déjà réservées par semaine et par marché contre l'an dernier, délais de réservation réels. Le facteur besoin et la mesure finale.",
-  pourBrancher: "Interface OnSite V3 à créer par Septeo dans Asterio (login dédié), avec une brique d'agrégation : seuls des comptages par semaine, marché et canal sont conservés, rien de nominatif. En attendant : export Excel agrégé, à déposer en CSV dans data/depot/asterio/ (delais.csv : marche;delai_q1;delai_med;delai_q3 et otb.csv : sujet;marche;otb;otb_n1).",
+  pourBrancher: "Interface OnSite V3 à créer par Septeo dans Asterio (login dédié), avec une brique d'agrégation : seuls des comptages par semaine, marché et canal sont conservés, rien de nominatif. En attendant : charger l'export des réservations (une ligne par réservation) depuis « Vos données », ou déposer un export déjà agrégé en CSV dans data/depot/asterio/ (delais.csv : marche;delai_q1;delai_med;delai_q3 et otb.csv : sujet;marche;otb;otb_n1).",
   async collecter(ctx) {
     const fichiers = ctx.depot.listerDepot("asterio");
     const delaisF = fichiers.filter((f) => f.nom.startsWith("delais")).at(-1);

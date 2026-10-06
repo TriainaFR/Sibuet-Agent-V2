@@ -27,8 +27,6 @@ export const REGLES = {
   /** Besoin saisi par le client faute d'Asterio (formulaire « Vos données »). */
   besoinSaisi: { bas: 0.9, normal: 0.5, plein: 0.1 } as Record<string, number>,
 
-  /** Marge : coût attendu par canal, en euros par réservation (hypothèses de reprise, à remplacer par les CPA observés). */
-  coutCanal: { crm: 15, seo: 60, sea: 180, meta: 220 } as Record<string, number>,
 
   /** Urgence : 1 si la fenêtre d'achat est ouverte, 0 si elle est fermée, sinon décroît sur 26 semaines avec un plancher (maquette UX). */
   urgenceHorizonSemaines: 26,

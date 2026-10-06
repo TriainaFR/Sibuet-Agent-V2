@@ -30,7 +30,6 @@ export default async function AFaire() {
     { ok: Boolean(saisie.ouverture && saisie.fermeture), label: "Dates d'ouverture et de fermeture" },
     { ok: Object.values(saisie.delais).some((v) => Number(v) > 0) || Boolean(ctx.asterio), label: "Délais de réservation par pays" },
     { ok: Object.values(saisie.rempl).some((v) => v !== "inconnu") || Boolean(ctx.asterio), label: "Remplissage par sujet" },
-    { ok: Number(saisie.commission) > 0 && Number(saisie.panier) > 0, label: "Commission et panier moyen" },
     { ok: saisie.acces_google_ads && saisie.acces_meta, label: "Accès Google Ads et Meta" },
   ];
   const faits = manquants.filter((m) => m.ok).length;

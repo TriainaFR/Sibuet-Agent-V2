@@ -6,7 +6,7 @@ import type { Canal, Origine } from "@/lib/types";
 export const urgenceLibelle = (u: number) => (u >= 0.85 ? "Élevée" : u >= 0.6 ? "Moyenne" : "Basse");
 export const urgenceTon = (u: number) => (u >= 0.85 ? "fort" : u >= 0.6 ? "moyen" : "faible");
 
-/** Intérêt = demande × reste à gagner en visibilité, ramené à l'échelle du score sans besoin ni marge. */
+/** Intérêt = demande × reste à gagner en visibilité, ramené à l'échelle du score sans le besoin. */
 export const interetLibelle = (demandeFoisVisibilite: number) => (demandeFoisVisibilite >= 0.48 ? "Haut" : demandeFoisVisibilite >= 0.28 ? "Moyen" : "Bas");
 
 export const visibiliteLibelle = (ecart: number | null) =>

@@ -39,8 +39,6 @@ export const saisieVide = (maison = MAISON_PILOTE): SaisieClient => ({
   maison,
   ouverture: "",
   fermeture: "",
-  commission: "",
-  panier: "",
   ouv: "",
   clic: "",
   acces_google_ads: false,

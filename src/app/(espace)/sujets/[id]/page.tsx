@@ -337,7 +337,6 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
               ["Demande", o.facteurs.demande],
               ["Reste à gagner sur Google", o.facteurs.visibilite],
               ["Besoin de remplissage", o.facteurs.besoin],
-              ["Marge", o.facteurs.marge],
             ] as const;
             return (
               <ul className="mt-3 space-y-3 text-sm">

@@ -9,8 +9,10 @@ interface Props {
   saisie: SaisieClient;
   marches: Marche[];
   sujets: { id: string; nom: string }[];
-  /** Délais fournis par un flux (Asterio) : ils remplacent la saisie. */
+  /** Délais fournis par un flux (réservations chargées ou Asterio) : ils remplacent la saisie. */
   flux: Partial<Record<string, { med: number; mode: string }>>;
+  /** Remplissage mesuré par sujet, depuis les réservations chargées : remplace la saisie. */
+  fluxRemplissage: Record<string, string>;
 }
 
 const champ = "w-full border border-line bg-white px-3 py-2 text-sm outline-none transition focus:border-greige focus:ring-2 focus:ring-sand";
@@ -29,7 +31,7 @@ function Numero({ n, ok }: { n: number; ok: boolean }) {
   );
 }
 
-export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
+export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissage }: Props) {
   const [v, setV] = useState(saisie);
   const [etat, setEtat] = useState<"" | "enregistrement" | "ok" | "memoire">("");
   const [enCours, demarrer] = useTransition();
@@ -42,8 +44,8 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
     setEtat("enregistrement");
     const t = setTimeout(() => {
       demarrer(async () => {
-        const { ouverture, fermeture, commission, panier, ouv, clic, acces_google_ads, acces_meta, delais, rempl } = v;
-        const r = await enregistrerSaisie({ ouverture, fermeture, commission, panier, ouv, clic, acces_google_ads, acces_meta, delais, rempl });
+        const { ouverture, fermeture, ouv, clic, acces_google_ads, acces_meta, delais, rempl } = v;
+        const r = await enregistrerSaisie({ ouverture, fermeture, ouv, clic, acces_google_ads, acces_meta, delais, rempl });
         enregistre.current = JSON.stringify(v);
         setEtat(r.persistant ? "ok" : "memoire");
       });
@@ -52,16 +54,14 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
   }, [v]);
 
   const maj = <K extends keyof SaisieClient>(k: K, val: SaisieClient[K]) => setV((x) => ({ ...x, [k]: val }));
-  const valeurDirecte = Number(v.commission) > 0 && Number(v.panier) > 0 ? Math.round((Number(v.panier) * Number(v.commission)) / 100) : null;
 
 
   const etapes = [
     { ok: Boolean(v.ouverture && v.fermeture), label: "Les dates de la maison" },
-    { ok: Number(v.commission) > 0 && Number(v.panier) > 0, label: "La valeur d'une réservation directe" },
     { ok: Number(v.ouv) > 0, label: "Vos newsletters" },
     { ok: v.acces_google_ads || v.acces_meta, label: "Les accès" },
     { ok: Object.values(v.delais).some((x) => Number(x) > 0) || Object.keys(flux).length > 0, label: "Les délais par pays" },
-    { ok: Object.values(v.rempl).some((x) => x !== "inconnu"), label: "Le remplissage" },
+    { ok: Object.values(v.rempl).some((x) => x !== "inconnu") || Object.keys(fluxRemplissage).length > 0, label: "Le remplissage" },
   ];
   const faits = etapes.filter((e) => e.ok).length;
 
@@ -74,7 +74,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
           </p>
           <p className="text-xs text-ink-soft">Chaque information remplace une estimation et affine les dates proposées.</p>
         </div>
-        <div className="mt-3 grid grid-cols-6 gap-1">
+        <div className="mt-3 grid grid-cols-5 gap-1">
           {etapes.map((e) => (
             <div key={e.label} title={e.label} className={`h-1.5 ${e.ok ? "bg-sage" : "bg-sand"}`} />
           ))}
@@ -109,7 +109,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
             onClick={() =>
               demarrer(async () => {
                 await revenirAuxEstimations();
-                const vide = { ...v, ouverture: "", fermeture: "", commission: "", panier: "", ouv: "", clic: "", acces_google_ads: false, acces_meta: false, delais: {}, rempl: {} };
+                const vide = { ...v, ouverture: "", fermeture: "", ouv: "", clic: "", acces_google_ads: false, acces_meta: false, delais: {}, rempl: {} };
                 enregistre.current = JSON.stringify(vide);
                 setV(vide);
               })
@@ -144,24 +144,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
           </section>
 
           <section className="carte p-6">
-            <p className="flex items-center gap-3"><Numero n={2} ok={etapes[1].ok} /><span className="titre-capitales text-lg leading-tight">Ce que vaut une réservation directe</span></p>
-            <label className="mt-3 block text-sm">
-              Commission moyenne des plateformes, en pourcentage
-              <input type="number" min="0" max="40" step="0.5" value={v.commission} onChange={(e) => maj("commission", e.target.value)} placeholder="ex. 18" className={`${champ} mt-1`} />
-            </label>
-            <label className="mt-3 block text-sm">
-              Panier moyen d&apos;un séjour, en euros
-              <input type="number" min="0" step="50" value={v.panier} onChange={(e) => maj("panier", e.target.value)} placeholder="ex. 3 500" className={`${champ} mt-1`} />
-            </label>
-            <p className="mt-3 text-sm text-ink-soft">
-              {valeurDirecte
-                ? `Une réservation directe fait économiser environ ${valeurDirecte.toLocaleString("fr-FR")} € par séjour : c'est la marge dont dispose une action pour être rentable.`
-                : "Avec la commission et le panier moyen, on saura ce que vaut une réservation directe, donc si une action est rentable."}
-            </p>
-          </section>
-
-          <section className="carte p-6">
-            <p className="flex items-center gap-3"><Numero n={3} ok={etapes[2].ok} /><span className="titre-capitales text-lg leading-tight">Vos newsletters</span></p>
+            <p className="flex items-center gap-3"><Numero n={2} ok={etapes[1].ok} /><span className="titre-capitales text-lg leading-tight">Vos newsletters</span></p>
             <div className="mt-3 grid grid-cols-2 gap-3">
               <label className="text-sm">
                 Taux d&apos;ouverture moyen, %
@@ -176,7 +159,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
           </section>
 
           <section className="carte p-6">
-            <p className="flex items-center gap-3"><Numero n={4} ok={etapes[3].ok} /><span className="titre-capitales text-lg leading-tight">Accès ouverts</span></p>
+            <p className="flex items-center gap-3"><Numero n={3} ok={etapes[2].ok} /><span className="titre-capitales text-lg leading-tight">Accès ouverts</span></p>
             {(
               [
                 ["acces_google_ads", "Google Ads, en lecture"],
@@ -194,7 +177,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
 
         {/* Colonne 2 */}
         <section className="carte p-6">
-          <p className="flex items-center gap-3"><Numero n={5} ok={etapes[4].ok} /><span className="titre-capitales text-lg leading-tight">Combien de semaines avant l&apos;arrivée vos clients réservent-ils ?</span></p>
+          <p className="flex items-center gap-3"><Numero n={4} ok={etapes[3].ok} /><span className="titre-capitales text-lg leading-tight">Combien de semaines avant l&apos;arrivée vos clients réservent-ils ?</span></p>
           <p className="mt-1 text-sm text-ink-soft">En médiane, par pays. Vide = notre estimation.</p>
           <div className="mt-4 space-y-2.5">
             {marches.map((m) => {
@@ -230,18 +213,24 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux }: Props) {
               );
             })}
           </div>
-          <p className="mt-4 text-xs text-ink-soft">Le jour où les réservations Asterio arrivent, leurs délais remplacent la saisie sans rien changer d&apos;autre.</p>
+          <p className="mt-4 text-xs text-ink-soft">Dès qu&apos;un fichier de réservations est chargé (ou qu&apos;Asterio est branché), les délais mesurés remplacent la saisie sans rien changer d&apos;autre.</p>
         </section>
 
         {/* Colonne 3 */}
         <section className="carte p-6">
-          <p className="flex items-center gap-3"><Numero n={6} ok={etapes[5].ok} /><span className="titre-capitales text-lg leading-tight">Où en est le remplissage, à ce jour ?</span></p>
+          <p className="flex items-center gap-3"><Numero n={5} ok={etapes[4].ok} /><span className="titre-capitales text-lg leading-tight">Où en est le remplissage, à ce jour ?</span></p>
           <p className="mt-1 text-sm text-ink-soft">Un sujet déjà bien vendu voit ses actions payantes suspendues.</p>
           <div className="mt-4 space-y-3">
             {sujets.map((s) => (
               <label key={s.id} className="block text-sm">
                 {s.nom}
+                {fluxRemplissage[s.id] && (
+                  <span className="mt-1 flex items-center gap-2 border border-sage/40 bg-sage/8 px-3 py-2 text-xs text-sage">
+                    <span className="font-semibold uppercase tracking-wide">réservations</span> {fluxRemplissage[s.id]}
+                  </span>
+                )}
                 <select
+                  hidden={Boolean(fluxRemplissage[s.id])}
                   value={v.rempl[s.id] ?? "inconnu"}
                   onChange={(e) => maj("rempl", { ...v.rempl, [s.id]: e.target.value as Remplissage })}
                   className={`${champ} mt-1`}

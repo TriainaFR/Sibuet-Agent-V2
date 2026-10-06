@@ -7,7 +7,7 @@ import { releve } from "./types";
 // Données FICTIVES pour la démonstration, produites seulement quand le mode
 // « données fictives » est activé (page Sources). Elles sont marquées « fictif »
 // partout dans l'interface et ne doivent jamais servir à une décision réelle.
-// Elles permettent de montrer la boucle complète : besoin, marge, lignes de base, mesure.
+// Elles permettent de montrer la boucle complète : besoin, lignes de base, mesure.
 // ─────────────────────────────────────────────────────────────────────────────
 
 /** Pseudo-aléatoire déterministe : la démo est identique à chaque exécution. */

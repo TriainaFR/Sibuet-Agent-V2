@@ -96,7 +96,6 @@ export type SourceId =
   | "newsletters_perf"
   | "vacances_controle"
   | "asterio"
-  | "commissions"
   | "google_ads"
   | "meta_ads"
   | "instagram";
@@ -166,9 +165,25 @@ export interface Envoi {
   langues?: string[];
 }
 
+export interface ResumeReservations {
+  fichier: string;
+  lignes: number;
+  retenues: number;
+  ignorees: { raison: string; nombre: number }[];
+  colonnes: Record<string, string>;
+  arrivees: [string, string] | null;
+  parPays: { pays: string; marche: MarcheId | null; reservations: number; nuitees: number; personnesMoyennes: number | null; delaiMedianSemaines: number }[];
+  typesChambres: { type: string; part: number }[];
+  /** Nuitées-chambres réservées à date par sujet, tous marchés suivis, chaque réservation comptée une fois. */
+  remplissage?: { sujet: string; otb: number; otb_n1: number }[];
+  chambresMoyennes: number | null;
+}
+
 export interface DonneesAsterio {
-  delais: Partial<Record<MarcheId, { q1: number; med: number; q3: number }>>;
+  delais: Partial<Record<MarcheId, { q1: number; med: number; q3: number; n?: number }>>;
   otb: { sujet: string; marche: MarcheId; otb: number; otb_n1: number }[];
+  /** Synthèse agrégée du fichier chargé (aucune ligne nominative). */
+  resume?: ResumeReservations;
 }
 
 export interface PerfNewsletter {
@@ -215,7 +230,7 @@ export interface Opportunite {
   sejour: { debut: string; fin: string } | null;
   fenetre: { debut: string; fin: string } | null;
   delai: { mediane: number; q1: number; q3: number; origine: Origine };
-  facteurs: { demande: Facteur; visibilite: Facteur; besoin: Facteur; marge: Facteur };
+  facteurs: { demande: Facteur; visibilite: Facteur; besoin: Facteur };
   score: number;
   urgence: number;
   ordre: number;
@@ -346,8 +361,6 @@ export interface SaisieClient {
   maison: string;
   ouverture: string;
   fermeture: string;
-  commission: string;
-  panier: string;
   ouv: string;
   clic: string;
   acces_google_ads: boolean;

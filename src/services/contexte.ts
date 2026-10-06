@@ -1,7 +1,7 @@
 import "server-only";
 import { today } from "@/lib/dates";
 import type { Contexte, Source } from "@/lib/engine/calcul";
-import type { Releve, SourceId } from "@/lib/types";
+import type { DonneesAsterio, Releve, SourceId } from "@/lib/types";
 import { depot } from "@/stockage/depot";
 import { lireMaison, lireMarches, lireParametres, lireSaisie, lireSujets, lireVacances } from "./reference";
 
@@ -23,6 +23,8 @@ function dernier<T>(source: SourceId, fictifs: boolean, date: string): Source<T>
 export function construireContexte(date = today()): Contexte {
   const { donneesFictives } = lireParametres();
   const sujets = lireSujets();
+  // Un relevé de réservations vide signifie « fichier retiré » : on revient aux saisies et estimations.
+  const asterio = dernier<DonneesAsterio>("asterio", donneesFictives, date);
   return {
     date,
     maison: lireMaison(sujets.maison),
@@ -35,7 +37,7 @@ export function construireContexte(date = today()): Contexte {
     prevision: dernier("meteo_prevision", donneesFictives, date),
     agenda: dernier("agenda", donneesFictives, date),
     envois: dernier("newsletters", donneesFictives, date),
-    asterio: dernier("asterio", donneesFictives, date),
+    asterio: asterio && (asterio.donnees.otb.length || Object.keys(asterio.donnees.delais).length) ? asterio : null,
     perfNl: dernier("newsletters_perf", donneesFictives, date),
     ads: dernier("google_ads", donneesFictives, date),
     saisie: lireSaisie(),

@@ -3,7 +3,10 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { today } from "@/lib/dates";
-import type { Decision, Marche, Resultat, SaisieClient } from "@/lib/types";
+import { releve } from "@/connecteurs/types";
+import type { Decision, DonneesAsterio, Marche, Resultat, SaisieClient } from "@/lib/types";
+import { construireContexte } from "@/services/contexte";
+import { agregerReservations } from "@/services/reservations";
 import { lireDecisions, lireParametres, lireResultats, lireSaisie, saisieVide } from "@/services/reference";
 import { lancerRoutine } from "@/services/routine";
 import { depot } from "@/stockage/depot";
@@ -15,8 +18,6 @@ const rafraichir = () => revalidatePath("/", "layout");
 const schemaSaisie = z.object({
   ouverture: z.string().regex(/^(\d{4}-\d{2}-\d{2})?$/),
   fermeture: z.string().regex(/^(\d{4}-\d{2}-\d{2})?$/),
-  commission: z.string().max(6),
-  panier: z.string().max(8),
   ouv: z.string().max(6),
   clic: z.string().max(6),
   acces_google_ads: z.boolean(),
@@ -91,5 +92,34 @@ export async function exempleMesure(cles: string[]) {
     commentaire: "Exemple fictif de démonstration.",
   }));
   depot().ecrireEtat("resultats", [...existants.filter((r) => !cles.includes(r.activationCle)), ...exemples]);
+  rafraichir();
+}
+
+/**
+ * Chargement d'un fichier de réservations (export PMS, Excel ou CSV).
+ * Le fichier est lu en mémoire et agrégé : seuls des comptages par marché et par sujet sont enregistrés,
+ * jamais les lignes ni le fichier lui-même.
+ */
+export async function importerReservations(_: unknown, formData: FormData): Promise<{ ok: boolean; message: string }> {
+  const fichier = formData.get("fichier");
+  if (!(fichier instanceof File) || fichier.size === 0) return { ok: false, message: "Choisissez un fichier Excel (.xlsx) ou CSV." };
+  if (!/\.(xlsx|csv|txt)$/i.test(fichier.name)) return { ok: false, message: "Format non pris en charge : enregistrez le fichier en .xlsx ou .csv." };
+  if (fichier.size > 7 * 1024 * 1024) return { ok: false, message: "Fichier trop lourd (7 Mo au plus). Exportez seulement les colonnes utiles." };
+  try {
+    const ctx = construireContexte();
+    const { donnees, resume } = await agregerReservations(Buffer.from(await fichier.arrayBuffer()), fichier.name, ctx);
+    const nom = fichier.name.slice(0, 120);
+    depot().ecrireReleve(
+      releve("asterio", today(), "import", `Fichier de réservations chargé : ${nom}`, `${resume.retenues} réservations, ${Object.keys(donnees.delais).length} délais, ${donnees.otb.length} lignes de remplissage`, donnees),
+    );
+    rafraichir();
+    return { ok: true, message: `${resume.retenues} réservations prises en compte sur ${resume.lignes}.` };
+  } catch (e) {
+    return { ok: false, message: e instanceof Error ? e.message : "Lecture du fichier impossible." };
+  }
+}
+
+export async function retirerReservations() {
+  depot().ecrireReleve(releve<DonneesAsterio>("asterio", today(), "import", "Fichier de réservations retiré", "aucune réservation", { delais: {}, otb: [] }));
   rafraichir();
 }

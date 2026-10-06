@@ -84,23 +84,6 @@ export function propositions(ctx: Contexte, resultats: Resultat[], sujets: Sujet
     attentes.push("Taux de réponse par thème et par marché : en attente de la performance des newsletters.");
   }
 
-  // 3. Poids des canaux : CPA observé contre coût estimé
-  const camp = ctx.ads?.donnees.campagnes ?? [];
-  if (camp.length) {
-    const cpa = camp.reduce((t, c) => t + c.budget, 0) / Math.max(1, camp.reduce((t, c) => t + c.conversions, 0));
-    out.push({
-      cle: "cout.sea",
-      libelle: "Coût d'une réservation par Google Ads",
-      ancienne: `${REGLES.coutCanal.sea} € (estimation)`,
-      nouvelle: `${Math.round(cpa)} €`,
-      preuve: `${camp.length} campagnes, CPA moyen observé (${ctx.ads!.mode === "fictif" ? "fictif" : "Google Ads"}). À reporter dans regles.ts après validation.`,
-      date: ctx.ads!.collecte_le,
-      applicable: false,
-    });
-  } else {
-    attentes.push("Poids des canaux : en attente des coûts par acquisition Google Ads et Meta.");
-  }
-
   // 4. Seuil du déclencheur neige
   attentes.push(`Seuil du déclencheur neige (${REGLES.seuilNeige5jCm} cm sur 5 jours) : à recaler sur la corrélation entre chutes à J-10 et réservations à J-7 des marchés proches, après la saison.`);
 

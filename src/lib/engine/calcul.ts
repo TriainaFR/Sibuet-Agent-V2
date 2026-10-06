@@ -185,7 +185,7 @@ function facteurBesoin(ctx: Contexte, s: SujetDef, m: Marche): { f: Facteur; otb
     const v = clamp(1 - ligne.otb / ligne.otb_n1, REGLES.besoinPlancher, 1);
     const pct = Math.round((ligne.otb / ligne.otb_n1 - 1) * 100);
     return {
-      f: { valeur: r2(v), manquant: false, origine: origineMode(ctx.asterio!.mode), detail: `${ligne.otb} nuitées réservées contre ${ligne.otb_n1} l'an dernier à la même date (${pct >= 0 ? "+" : ""}${pct} %).`, source: src(ctx.asterio!, "Asterio") },
+      f: { valeur: r2(v), manquant: false, origine: origineMode(ctx.asterio!.mode), detail: `${ligne.otb} nuitées réservées contre ${ligne.otb_n1} l'an dernier à la même date (${pct >= 0 ? "+" : ""}${pct} %).`, source: src(ctx.asterio!, ctx.asterio!.origine.startsWith("Fichier") ? "Réservations chargées" : "Asterio") },
       otb: ligne,
     };
   }
@@ -197,42 +197,12 @@ function facteurBesoin(ctx: Contexte, s: SujetDef, m: Marche): { f: Facteur; otb
   return { f: { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: "Non disponible : on ne sait pas encore ce qui est déjà vendu.", source: "Asterio (à brancher)" } };
 }
 
-// ── Marge (commission évitée contre coût du canal) ───────────────────────────
-
-function facteurMarge(ctx: Contexte, s: SujetDef, m: Marche, canal: "crm" | "seo" | "sea" | "meta"): Facteur {
-  const commission = Number(ctx.saisie.commission);
-  const panier = Number(ctx.saisie.panier);
-  if (!(commission > 0 && panier > 0)) {
-    return { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: "Non disponible : commission des plateformes et panier moyen inconnus.", source: "Vos données ou commissions" };
-  }
-  const valeur = (panier * commission) / 100;
-  const cpa = ctx.ads?.donnees.campagnes.filter((c) => c.marche === m.id && (c.sujet === s.id || !c.sujet));
-  let cout = REGLES.coutCanal[canal];
-  let origineCout = "coût moyen estimé";
-  if (canal === "sea" && cpa && cpa.length) {
-    cout = cpa.reduce((t, c) => t + c.cpa, 0) / cpa.length;
-    origineCout = ctx.ads!.mode === "fictif" ? "CPA observé (fictif)" : "CPA observé";
-  }
-  return {
-    valeur: r2(clamp(valeur / (valeur + cout), 0.05, 1)),
-    manquant: false,
-    origine: "saisi",
-    detail: `Une réservation directe évite ${nombre(Math.round(valeur))} € de commission ; le canal ${canalCourt[canal]} coûte environ ${nombre(Math.round(cout))} € par réservation (${origineCout}).`,
-    source: "Vos données",
-  };
-}
-
 // ── Canal déduit du temps restant ────────────────────────────────────────────
 
 export function canalParDelai(joursAvantSejour: number) {
   return REGLES.canalParDelai.find((c) => joursAvantSejour > c.auDela)?.canal ?? REGLES.canalParDelai.at(-1)!.canal;
 }
 
-function canalPrincipal(jours: number, court: boolean): "crm" | "seo" | "sea" | "meta" {
-  if (jours > 84) return "seo";
-  if (jours > 28) return court ? "crm" : "meta";
-  return "sea";
-}
 
 // ── Plan newsletters ─────────────────────────────────────────────────────────
 
@@ -261,7 +231,7 @@ function verdictEnvoi(envoisSujet: Envoi[], fenetre: { debut: string; fin: strin
 
 // ── Opportunités d'un sujet ──────────────────────────────────────────────────
 
-function periodesDuMarche(ctx: Contexte, s: SujetDef, m: Marche): { libelle: string; sejour: { debut: string; fin: string } | null; vacances: string | null }[] {
+export function periodesDuMarche(ctx: Contexte, s: SujetDef, m: Marche): { libelle: string; sejour: { debut: string; fin: string } | null; vacances: string | null }[] {
   if (s.fenetre_fixe) return [{ libelle: m.nom, sejour: null, vacances: null }];
   if (s.periode_par_marche && s.sejour) {
     const v = ctx.vacances.find((x) => x.id === m.id);
@@ -309,8 +279,7 @@ export function opportunites(ctx: Contexte, s: SujetDef, volumeMax: number): Opp
       const demande = facteurDemande(ctx, s, m, volumeMax);
       const visibilite = facteurVisibilite(ctx, s, m);
       const { f: besoin, otb } = facteurBesoin(ctx, s, m);
-      const marge = facteurMarge(ctx, s, m, canalPrincipal(jours, m.court));
-      const score = r2(demande.valeur * visibilite.valeur * besoin.valeur * marge.valeur * 100);
+      const score = r2(demande.valeur * visibilite.valeur * besoin.valeur * 100);
       const urgence = r2(urgenceDe(ctx.date, fenetre));
       const demandeDetectee = demande.valeur > REGLES.demandePlancher || (demande.manquant && !ctx.semrush);
       const close = Boolean(fenetre && ctx.date > fenetre.fin);
@@ -322,7 +291,7 @@ export function opportunites(ctx: Contexte, s: SujetDef, volumeMax: number): Opp
         sejour: p.sejour,
         fenetre,
         delai: { mediane: r2(delai.mediane), q1: r2(delai.q1), q3: r2(delai.q3), origine: delai.origine },
-        facteurs: { demande, visibilite, besoin, marge },
+        facteurs: { demande, visibilite, besoin },
         score,
         urgence,
         ordre: r2(score * urgence),
@@ -549,8 +518,6 @@ export function activations(ctx: Contexte, s: SujetDef, ops: Opportunite[], ouve
       note: g.map((o) => `${o.libelle} du ${formatDate(maxDate(ctx.date, o.fenetre!.debut))} au ${formatDate(o.fenetre!.fin)}`).join(" ; "),
       statut: reserve(st),
     }));
-    const commission = Number(ctx.saisie.commission);
-    const panier = Number(ctx.saisie.panier);
     out.push({
       ...base,
       cle: `${s.id}:${canal}`,
@@ -562,7 +529,7 @@ export function activations(ctx: Contexte, s: SujetDef, ops: Opportunite[], ouve
       declencheur: "Ouverture de la fenêtre d'achat de chaque marché, diffusion continue jusqu'à sa fermeture.",
       justification: "Une diffusion démarre à l'ouverture de la fenêtre, pas à son premier tiers ; chaque marché reste borné par sa propre fenêtre.",
       changement: "Rien au plan d'envois.",
-      effort: commission > 0 && panier > 0 ? `Budget à fixer, plafond de coût par réservation : ${nombre(Math.round((panier * commission) / 100))} € (commission évitée).` : "Budget à fixer.",
+      effort: "Budget à fixer avec l'équipe, à partir de l'historique des campagnes.",
       kpi: "Coût par acquisition, réservations attribuées, retour sur dépense publicitaire.",
       ligneBase: canal === "sea" ? ligneBaseSea(ctx, s) : "Pas de référence : aucun historique de campagne communiqué.",
       vagues,
@@ -682,8 +649,6 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
     manque.push("Le remplissage : on the books et rythme contre l'an dernier par semaine et par marché (Asterio), ou à défaut le remplissage saisi dans Vos données. Sans lui, rien ne distingue une semaine à remplir d'une semaine déjà vendue.");
   if (ops.some((o) => o.delai.origine === "estimation"))
     manque.push("Les délais de réservation réels par pays (Asterio) : toutes les fenêtres reposent sur des estimations ; deux semaines d'écart déplacent la moitié des dates proposées.");
-  if (ops.some((o) => o.facteurs.marge.manquant))
-    manque.push("La commission moyenne des plateformes et le panier moyen : sans eux, l'arbitrage entre Google Ads, Meta et CRM se fait sans savoir ce que rapporte une réservation directe.");
   const sansVisibilite = [...new Set(ops.filter((o) => o.facteurs.visibilite.manquant && o.demandeDetectee).map((o) => o.libelle))];
   if (sansVisibilite.length) manque.push(`Requêtes d'achat suivies dans la Search Console pour ${sansVisibilite.join(", ")} : la visibilité y est estimée.`);
   const sansDemande = [...new Set(ops.filter((o) => !o.demandeDetectee).map((o) => o.libelle))];

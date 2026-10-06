@@ -68,21 +68,13 @@ export const connecteurs: Connecteur[] = [
     async (ctx) => (ctx.fictif ? newslettersPerfFictif(ctx) : null),
   ),
   asterio,
-  aBrancher({
-    id: "commissions",
-    nom: "Commissions des plateformes",
-    categorie: "coûts",
-    cadence: "chaque mois",
-    apporte: "Commission versée par plateforme : ce que vaut une réservation directe. Facteur marge du score.",
-    pourBrancher: "Taux négociés et volumes par plateforme (extranets ou contrôle de gestion). En attendant : saisie dans « Vos données ».",
-  }),
   aBrancher(
     {
       id: "google_ads",
       nom: "Google Ads",
       categorie: "coûts",
       cadence: "chaque mois",
-      apporte: "Campagnes, budgets, clics, conversions, coût par acquisition. Marge du canal et ligne de base SEA.",
+      apporte: "Campagnes, budgets, clics, conversions, coût par acquisition. Ligne de base des activations Google Ads.",
       pourBrancher: "Accès lecture au compte Google Ads (identifiant client à 10 chiffres) pour l'adresse de service.",
     },
     async (ctx) => (ctx.fictif ? googleAdsFictif(ctx, ctx.sujets) : null),
