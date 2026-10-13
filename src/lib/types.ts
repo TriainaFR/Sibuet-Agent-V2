@@ -174,6 +174,8 @@ export interface ResumeReservations {
   arrivees: [string, string] | null;
   parPays: { pays: string; marche: MarcheId | null; reservations: number; nuitees: number; personnesMoyennes: number | null; delaiMedianSemaines: number }[];
   typesChambres: { type: string; part: number }[];
+  /** Villes d'origine les plus fréquentes (comptage seulement), base de la météo au départ. */
+  villes?: { ville: string; pays: string; reservations: number }[];
   /** Nuitées-chambres réservées à date par sujet, tous marchés suivis, chaque réservation comptée une fois. */
   remplissage?: { sujet: string; otb: number; otb_n1: number }[];
   chambresMoyennes: number | null;

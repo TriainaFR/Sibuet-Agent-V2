@@ -25,7 +25,7 @@ Les connecteurs Semrush, Peec, ga4-gsc et Firecrawl sont rattachés à son compt
 |---|---|---|
 | Accès lecture Google Ads et Meta | 10 actions bloquées dans « À faire » au 5 octobre, dont la fenêtre américaine ouverte depuis le 2 octobre | Aucun |
 | Dates d'ouverture et de fermeture du Lodge Park | Coupe ou maintient les sujets d'ouverture, de printemps et de Pâques | Saisie dans Vos données |
-| Export des réservations (une ligne par réservation : date de réservation, pays d'origine, arrivée et départ, guests, chambres, type de chambre), saison 2025-2026 et saison en cours | Facteur besoin, délais réels par pays, mesure finale. Se charge directement dans Vos données, sans nom ni e-mail | Remplissage et délais saisis dans Vos données |
+| Export des réservations (une ligne par réservation : date de réservation, pays et ville d'origine, arrivée et départ, guests, chambres, type de chambre), saison 2025-2026 et saison en cours | Facteur besoin, délais réels par pays, mesure finale. Se charge directement dans Vos données, sans nom ni e-mail | Remplissage et délais saisis dans Vos données |
 | Réservations Asterio en flux (interface OnSite V3) | La même chose, mise à jour chaque lundi sans manipulation | Chargement manuel du fichier |
 | Performance des newsletters et calendrier 2026-2027 arrêté | Lignes de base CRM, dates réelles des envois | Taux saisis dans Vos données |
 | Accès Instagram | Résonance des sujets | Aucun |

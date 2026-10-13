@@ -66,14 +66,15 @@ export const SOURCES_FLUX: SourceFlux[] = [
     nom: "Vos réservations",
     famille: "vous",
     question: "Qui réserve, d'où, et combien de temps avant ?",
-    recupere: ["Date de réservation", "Pays d'origine", "Dates de séjour", "Nombre de guests", "Nombre de chambres", "Type de chambre"],
+    recupere: ["Date de réservation", "Pays et ville d'origine", "Dates de séjour", "Nombre de guests", "Nombre de chambres", "Type de chambre"],
     jamais: ["Nom", "E-mail", "Téléphone", "Numéro de réservation", "Montant payé"],
     pourquoi:
-      "C'est la seule source qui dit ce qui est vraiment vendu. Le nombre de guests distingue un couple d'une famille ou d'un groupe d'amis, et donc le message à leur envoyer.",
+      "C'est la seule source qui dit ce qui est vraiment vendu. Le nombre de guests distingue un couple d'une famille ou d'un groupe d'amis, et donc le message à leur envoyer. La ville d'origine permet de savoir quel temps il faisait chez le client quand il a réservé.",
     traitement: [
       "Délai réel entre réservation et arrivée, pays par pays : il fixe la date de chaque envoi.",
       "Nuitées déjà vendues contre l'an dernier à la même date : un sujet en retard passe devant.",
       "Composition des séjours par pays : famille pendant les vacances scolaires, couple en janvier.",
+      "Ville d'origine : rapprochée de la météo du jour de la réservation (voir La météo au départ).",
       "Le fichier est lu puis oublié : seuls des totaux par pays et par semaine sont gardés.",
     ],
     exemple:
@@ -194,8 +195,8 @@ export const SOURCES_FLUX: SourceFlux[] = [
     nom: "La météo au départ",
     famille: "contexte",
     question: "Quel temps faisait-il chez le client quand il a réservé ?",
-    recupere: ["Pluie, soleil et température des villes d'origine (Londres, Paris, Lyon, Bruxelles, Amsterdam, Genève, New York)", "Jour par jour, sur les saisons passées"],
-    jamais: ["Ville ou adresse d'un client précis : on part du pays, ou du code postal agrégé"],
+    recupere: ["Pays et ville d'origine de chaque réservation", "Pluie, soleil et température de cette ville, le jour de la réservation et les jours d'avant", "Les mêmes relevés à Megève au même moment"],
+    jamais: ["Nom ou adresse du client : seule la ville est utilisée, et seuls des totaux par ville sont gardés"],
     pourquoi: "L'envie de montagne naît souvent sous un ciel gris. Croisée avec la date de réservation, la météo du départ dit quand un pays est le plus réceptif.",
     traitement: [
       "Chaque réservation passée est rapprochée du temps qu'il faisait dans son pays ce jour-là.",
@@ -205,7 +206,7 @@ export const SOURCES_FLUX: SourceFlux[] = [
     exemple: "Si les Londoniens réservent davantage après trois jours de pluie, une semaine grise annoncée à Londres avec de la neige à Megève déclenche la campagne anglaise.",
     nourrit: ["alertes", "afaire", "mesure"],
     etat: "pret",
-    etatDetail: "Source publique gratuite. Elle s'active dès que l'historique des réservations est chargé.",
+    etatDetail: "Source publique gratuite. Elle s'active dès que les réservations sont chargées avec leur ville d'origine.",
     cadence: "chaque jour",
     depot: null,
   },

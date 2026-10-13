@@ -7,14 +7,14 @@ import type { DonneesAsterio, MarcheId, ResumeReservations } from "@/lib/types";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Chargement d'un fichier de réservations (export du PMS, Excel ou CSV).
-// Colonnes reconnues : date de réservation, pays d'origine, dates de séjour
+// Colonnes reconnues : date de réservation, pays et ville d'origine (la ville sert à la météo au départ), dates de séjour
 // (arrivée et départ, ou nuits), nombre de personnes, nombre de chambres, type de chambre.
 //
 // Règle du projet : rien de nominatif n'est conservé. Le fichier est lu en mémoire,
 // seuls des comptages agrégés par marché et par sujet sont enregistrés.
 // ─────────────────────────────────────────────────────────────────────────────
 
-type Champ = "reservation" | "pays" | "arrivee" | "depart" | "sejour" | "nuits" | "personnes" | "enfants" | "chambres" | "type" | "statut";
+type Champ = "reservation" | "ville" | "pays" | "arrivee" | "depart" | "sejour" | "nuits" | "personnes" | "enfants" | "chambres" | "type" | "statut";
 
 const norm = (s: string) =>
   String(s ?? "")
@@ -35,6 +35,7 @@ const SYNONYMES: [Champ, string[]][] = [
   ["personnes", ["nombre de guests", "nombre de personnes", "nb personnes", "guests", "personnes", "pax", "adultes", "adults", "occupants"]],
   ["chambres", ["nombre de chambres", "nb chambres", "chambres", "rooms", "room count", "nombre de logements"]],
   ["type", ["types de chambres", "type de chambre", "type chambre", "categorie de chambre", "categorie", "room type", "typologie"]],
+  ["ville", ["ville d origine", "ville origine", "ville de residence", "ville", "city", "town", "localite", "commune"]],
   ["pays", ["pays d origine", "pays origine", "pays", "country", "nationalite", "nationality", "origine", "provenance"]],
   ["statut", ["statut", "status", "etat", "annulation", "cancelled", "annule"]],
 ];
@@ -115,8 +116,15 @@ interface Resa {
   chambres: number;
   type: string | null;
   pays: string;
+  ville: string | null;
   marches: MarcheId[];
 }
+
+/** « LONDON », « london » → « London » ; vide → null. */
+const nomVille = (v: unknown) => {
+  const s = String(v ?? "").trim().replace(/\s+/g, " ");
+  return s ? s.toLowerCase().replace(/(^|[\s'-])\p{L}/gu, (c) => c.toUpperCase()).slice(0, 60) : null;
+};
 
 const quantile = (t: number[], q: number) => {
   if (!t.length) return 0;
@@ -187,6 +195,7 @@ export async function agregerReservations(contenu: Buffer, nom: string, ctx: Con
       chambres: entier(cell(row, colonnes.chambres), 1),
       type: colonnes.type !== undefined ? String(cell(row, colonnes.type) ?? "").trim() || null : null,
       pays,
+      ville: colonnes.ville !== undefined ? nomVille(cell(row, colonnes.ville)) : null,
       marches,
     });
   }
@@ -231,6 +240,15 @@ export async function agregerReservations(contenu: Buffer, nom: string, ctx: Con
   // Synthèse lisible (agrégée)
   const parPays = new Map<string, Resa[]>();
   for (const r of resas) parPays.set(r.pays, [...(parPays.get(r.pays) ?? []), r]);
+  // Villes d'origine : comptage seulement, base de la météo au départ.
+  const villes = new Map<string, { ville: string; pays: string; reservations: number }>();
+  for (const r of resas) {
+    if (!r.ville) continue;
+    const cle = `${r.ville}|${r.pays}`;
+    const v = villes.get(cle) ?? { ville: r.ville, pays: r.pays, reservations: 0 };
+    v.reservations++;
+    villes.set(cle, v);
+  }
   const types = new Map<string, number>();
   for (const r of resas) if (r.type) types.set(r.type, (types.get(r.type) ?? 0) + r.chambres);
   const totalTypes = [...types.values()].reduce((a, b) => a + b, 0);
@@ -238,6 +256,7 @@ export async function agregerReservations(contenu: Buffer, nom: string, ctx: Con
   const libelles: Record<Champ, string> = {
     reservation: "Date de réservation",
     pays: "Pays d'origine",
+    ville: "Ville d'origine",
     arrivee: "Arrivée",
     depart: "Départ",
     sejour: "Dates de séjour",
@@ -275,6 +294,7 @@ export async function agregerReservations(contenu: Buffer, nom: string, ctx: Con
       .sort((a, b) => b.part - a.part)
       .slice(0, 8),
     remplissage,
+    villes: [...villes.values()].sort((a, b) => b.reservations - a.reservations).slice(0, 12),
     chambresMoyennes: r1(resas.reduce((t, r) => t + r.chambres, 0) / resas.length),
   };
   return { donnees: { delais, otb, resume }, resume };

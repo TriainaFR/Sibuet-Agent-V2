@@ -1,1014 +1,1013 @@
-﻿Date de réservation;Pays d'origine;Arrivée;Départ;Nombre de guests;Nombre de chambres;Type de chambre;Statut
-09/01/2026;FR;21/02/2026;26/02/2026;2;1;Junior Suite;Confirmée
-03/01/2026;FR;28/02/2026;04/03/2026;2;1;Suite;Confirmée
-07/11/2025;CH;23/12/2025;26/12/2025;4;1;Chambre Supérieure;Confirmée
-10/11/2025;FR;27/12/2025;01/01/2026;6;2;Chambre Supérieure;Confirmée
-04/02/2026;FR;13/03/2026;18/03/2026;3;1;Chambre Supérieure;Confirmée
-08/11/2025;France;01/01/2026;08/01/2026;2;1;Chambre Classique;Confirmée
-17/11/2025;FR;12/12/2025;15/12/2025;2;1;Suite;Confirmée
-18/01/2026;FR;25/02/2026;01/03/2026;2;1;Appartement;Confirmée
-01/11/2025;US;09/02/2026;14/02/2026;2;1;Junior Suite;Confirmée
-09/02/2026;IT;09/03/2026;13/03/2026;3;1;Chambre Classique;Confirmée
-24/10/2025;FR;21/12/2025;24/12/2025;6;2;Chambre Supérieure;Annulée
-28/09/2025;GB;12/01/2026;18/01/2026;2;1;Chambre Classique;Confirmée
-29/11/2025;GB;20/02/2026;25/02/2026;4;2;Chambre Supérieure;Confirmée
-10/02/2026;CH;23/02/2026;26/02/2026;2;1;Chambre Classique;Confirmée
-01/02/2026;GB;07/04/2026;13/04/2026;2;1;Chambre Classique;Confirmée
-06/12/2025;FR;17/01/2026;19/01/2026;2;1;Junior Suite;Confirmée
-03/02/2026;FR;25/02/2026;03/03/2026;2;1;Chambre Supérieure;Confirmée
-19/10/2025;FR;30/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
-03/02/2026;CH;27/02/2026;02/03/2026;3;1;Chambre Supérieure;Confirmée
-05/11/2025;GB;21/01/2026;24/01/2026;2;1;Chambre Classique;Confirmée
-16/03/2026;Suisse;31/03/2026;03/04/2026;2;1;Appartement;Confirmée
-18/11/2025;France;17/12/2025;23/12/2025;4;1;Junior Suite;Confirmée
-22/12/2025;US;22/02/2026;26/02/2026;3;1;Junior Suite;Annulée
-24/12/2025;FR;21/02/2026;27/02/2026;3;1;Chambre Classique;Confirmée
-12/02/2026;FR;10/03/2026;15/03/2026;3;1;Suite;Confirmée
-28/11/2025;FR;30/12/2025;03/01/2026;1;1;Chambre Supérieure;Confirmée
-10/03/2026;FR;27/03/2026;01/04/2026;3;1;Suite;Confirmée
-04/01/2026;GB;20/02/2026;24/02/2026;2;1;Appartement;Confirmée
-16/02/2026;FR;10/03/2026;16/03/2026;2;1;Junior Suite;Confirmée
-06/02/2026;CH;24/02/2026;01/03/2026;1;1;Chambre Classique;Confirmée
-22/01/2026;FR;07/02/2026;13/02/2026;4;1;Junior Suite;Confirmée
-16/01/2026;GB;09/04/2026;14/04/2026;3;1;Chambre Supérieure;Annulée
-02/02/2026;FR;22/02/2026;26/02/2026;2;1;Chambre Supérieure;Confirmée
-03/02/2026;BE;09/04/2026;12/04/2026;1;1;Suite;Confirmée
-05/02/2026;GB;20/03/2026;22/03/2026;3;1;Chambre Classique;Confirmée
-18/11/2025;FR;22/12/2025;29/12/2025;2;1;Chambre Classique;Confirmée
-07/02/2026;France;23/02/2026;25/02/2026;4;1;Chambre Supérieure;Confirmée
-10/02/2026;FR;06/03/2026;09/03/2026;1;1;Chambre Classique;Confirmée
-19/10/2025;CH;21/12/2025;24/12/2025;2;1;Junior Suite;Confirmée
-18/03/2026;FR;05/04/2026;10/04/2026;2;1;Junior Suite;Confirmée
-15/11/2025;CH;17/12/2025;23/12/2025;2;1;Chambre Supérieure;Confirmée
-26/12/2025;BE;05/02/2026;11/02/2026;4;2;Chambre Supérieure;Confirmée
-21/08/2025;US;13/02/2026;15/02/2026;3;1;Chambre Classique;Confirmée
-28/11/2025;FR;03/01/2026;06/01/2026;3;1;Chambre Classique;Confirmée
-24/12/2025;FR;24/01/2026;27/01/2026;2;1;Junior Suite;Confirmée
-27/02/2026;BE;30/03/2026;01/04/2026;2;1;Chambre Classique;Confirmée
-01/12/2025;BE;09/02/2026;14/02/2026;2;1;Chambre Classique;Annulée
-04/01/2026;France;23/01/2026;27/01/2026;2;1;Suite;Annulée
-19/01/2026;FR;16/02/2026;18/02/2026;2;1;Chambre Supérieure;Confirmée
-07/01/2026;NL;01/02/2026;05/02/2026;2;1;Suite;Confirmée
-04/01/2026;FR;16/02/2026;20/02/2026;2;1;Suite;Confirmée
-07/11/2025;CH;28/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
-28/01/2026;FR;08/03/2026;14/03/2026;2;1;Chambre Classique;Confirmée
-12/12/2025;NL;22/02/2026;28/02/2026;6;3;Chambre Classique;Confirmée
-31/08/2025;FR;28/12/2025;03/01/2026;2;1;Chambre Supérieure;Confirmée
-10/01/2026;France;03/02/2026;09/02/2026;2;1;Junior Suite;Confirmée
-10/01/2026;GB;08/02/2026;12/02/2026;9;3;Junior Suite;Confirmée
-09/11/2025;DE;06/02/2026;08/02/2026;8;2;Suite;Confirmée
-06/11/2025;FR;19/01/2026;24/01/2026;2;1;Junior Suite;Confirmée
-19/01/2026;France;19/02/2026;25/02/2026;2;1;Appartement;Confirmée
-26/01/2026;CH;05/02/2026;11/02/2026;8;2;Chambre Classique;Confirmée
-31/01/2026;Suisse;15/02/2026;19/02/2026;2;1;Chambre Supérieure;Confirmée
-04/06/2025;GB;19/12/2025;24/12/2025;9;3;Chambre Supérieure;Confirmée
-20/12/2025;CH;19/01/2026;25/01/2026;4;1;Junior Suite;Confirmée
-25/02/2026;NL;06/04/2026;08/04/2026;2;1;Chambre Classique;Confirmée
-08/12/2025;GB;21/01/2026;25/01/2026;6;2;Chambre Classique;Annulée
-27/12/2025;GB;07/04/2026;13/04/2026;4;1;Suite;Confirmée
-25/01/2026;US;04/03/2026;08/03/2026;2;1;Chambre Classique;Confirmée
-08/01/2026;FR;10/03/2026;14/03/2026;2;1;Junior Suite;Annulée
-09/12/2025;CH;30/12/2025;05/01/2026;2;1;Chambre Supérieure;Confirmée
-14/01/2026;FR;07/02/2026;11/02/2026;8;2;Chambre Supérieure;Confirmée
-08/12/2025;CH;23/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
-14/01/2026;FR;23/02/2026;25/02/2026;3;1;Chambre Supérieure;Annulée
-16/01/2026;CH;15/02/2026;17/02/2026;2;1;Chambre Classique;Confirmée
-08/12/2025;GB;27/02/2026;05/03/2026;2;1;Chambre Classique;Annulée
-03/12/2025;CH;23/12/2025;25/12/2025;1;1;Chambre Supérieure;Confirmée
-10/01/2026;NL;28/02/2026;03/03/2026;3;1;Chambre Classique;Confirmée
-10/03/2026;FR;28/03/2026;31/03/2026;4;2;Chambre Supérieure;Confirmée
-04/01/2026;France;17/03/2026;21/03/2026;2;1;Chambre Supérieure;Annulée
-28/12/2025;US;22/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
-16/12/2025;GB;24/01/2026;30/01/2026;1;1;Chambre Supérieure;Confirmée
-09/01/2026;BE;01/04/2026;03/04/2026;4;1;Junior Suite;Confirmée
-26/01/2026;CH;21/02/2026;23/02/2026;3;1;Appartement;Confirmée
-21/12/2025;FR;07/01/2026;09/01/2026;4;1;Chambre Supérieure;Annulée
-15/11/2025;FR;23/12/2025;28/12/2025;2;1;Chambre Classique;Confirmée
-29/01/2026;FR;16/02/2026;20/02/2026;3;1;Chambre Classique;Annulée
-29/01/2026;GB;25/03/2026;31/03/2026;4;1;Suite;Confirmée
-14/02/2026;BE;07/03/2026;10/03/2026;2;1;Chambre Classique;Confirmée
-17/11/2025;CH;25/12/2025;01/01/2026;4;2;Chambre Supérieure;Confirmée
-09/12/2025;DE;15/02/2026;17/02/2026;3;1;Chambre Classique;Confirmée
-04/03/2026;GB;05/04/2026;11/04/2026;2;1;Chambre Supérieure;Confirmée
-26/01/2026;CH;04/02/2026;07/02/2026;6;2;Junior Suite;Confirmée
-16/11/2025;GB;06/02/2026;11/02/2026;2;1;Suite;Confirmée
-02/01/2026;GB;02/02/2026;05/02/2026;1;1;Junior Suite;Annulée
-20/09/2025;US;13/02/2026;16/02/2026;4;1;Chambre Supérieure;Confirmée
-09/12/2025;GB;20/02/2026;24/02/2026;3;1;Appartement;Confirmée
-21/09/2025;FR;29/12/2025;03/01/2026;2;1;Junior Suite;Confirmée
-07/01/2026;Suisse;03/02/2026;06/02/2026;2;1;Chambre Supérieure;Confirmée
-09/10/2025;US;12/12/2025;18/12/2025;4;1;Chambre Classique;Confirmée
-02/03/2026;CH;26/03/2026;28/03/2026;8;2;Chambre Classique;Confirmée
-05/09/2025;FR;22/12/2025;29/12/2025;3;1;Chambre Classique;Confirmée
-19/11/2025;FR;21/12/2025;26/12/2025;6;3;Junior Suite;Confirmée
-08/01/2026;NL;12/02/2026;17/02/2026;2;1;Chambre Classique;Confirmée
-16/12/2025;Suisse;20/01/2026;26/01/2026;6;3;Chambre Classique;Confirmée
-02/01/2026;CH;03/02/2026;08/02/2026;2;1;Chambre Supérieure;Confirmée
-12/09/2025;GB;06/01/2026;11/01/2026;4;1;Chambre Classique;Confirmée
-19/11/2025;CH;29/12/2025;03/01/2026;2;1;Chambre Supérieure;Confirmée
-05/02/2026;France;09/03/2026;13/03/2026;3;1;Chambre Supérieure;Confirmée
-20/01/2026;FR;28/03/2026;02/04/2026;2;1;Appartement;Confirmée
-03/12/2025;CH;21/12/2025;28/12/2025;2;1;Chambre Supérieure;Confirmée
-01/12/2025;US;05/04/2026;07/04/2026;1;1;Chambre Classique;Confirmée
-18/01/2026;FR;05/03/2026;10/03/2026;9;3;Chambre Classique;Confirmée
-28/12/2025;GB;02/04/2026;05/04/2026;2;1;Chambre Classique;Confirmée
-25/10/2025;FR;27/12/2025;02/01/2026;2;1;Chambre Supérieure;Confirmée
-20/04/2025;US;21/12/2025;26/12/2025;2;1;Suite;Annulée
-21/01/2026;DE;19/02/2026;24/02/2026;3;1;Junior Suite;Confirmée
-02/03/2026;FR;02/04/2026;07/04/2026;4;1;Chambre Supérieure;Confirmée
-03/12/2025;FR;04/02/2026;09/02/2026;3;1;Chambre Supérieure;Confirmée
-29/01/2026;BE;05/03/2026;07/03/2026;1;1;Junior Suite;Confirmée
-27/01/2026;FR;12/02/2026;17/02/2026;2;1;Junior Suite;Annulée
-20/02/2026;FR;08/03/2026;10/03/2026;1;1;Appartement;Annulée
-20/01/2026;FR;06/02/2026;12/02/2026;2;1;Chambre Supérieure;Confirmée
-24/01/2026;FR;14/02/2026;17/02/2026;2;1;Chambre Supérieure;Confirmée
-02/01/2026;GB;06/02/2026;08/02/2026;3;1;Chambre Classique;Confirmée
-20/09/2025;FR;25/12/2025;30/12/2025;6;3;Chambre Classique;Confirmée
-20/01/2026;NL;31/03/2026;06/04/2026;2;1;Appartement;Confirmée
-11/01/2026;GB;08/04/2026;11/04/2026;4;2;Chambre Classique;Confirmée
-19/12/2025;FR;03/02/2026;08/02/2026;2;1;Junior Suite;Confirmée
-26/01/2026;France;14/02/2026;17/02/2026;3;1;Junior Suite;Confirmée
-22/03/2026;FR;10/04/2026;12/04/2026;3;1;Suite;Confirmée
-12/11/2025;BE;20/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
-15/09/2025;BE;27/12/2025;31/12/2025;2;1;Chambre Classique;Confirmée
-27/09/2025;GB;18/12/2025;21/12/2025;4;1;Junior Suite;Confirmée
-29/12/2025;CH;22/01/2026;24/01/2026;4;1;Junior Suite;Confirmée
-29/11/2025;FR;04/02/2026;09/02/2026;2;1;Junior Suite;Confirmée
-11/01/2026;FR;02/02/2026;04/02/2026;6;2;Junior Suite;Confirmée
-28/12/2025;NL;22/01/2026;28/01/2026;2;1;Chambre Supérieure;Confirmée
-26/11/2025;FR;14/12/2025;17/12/2025;4;1;Junior Suite;Confirmée
-08/01/2026;DE;09/02/2026;11/02/2026;4;1;Suite;Confirmée
-13/02/2026;BE;12/04/2026;16/04/2026;3;1;Chambre Classique;Confirmée
-07/02/2026;CH;22/02/2026;28/02/2026;4;1;Junior Suite;Confirmée
-21/11/2025;FR;12/12/2025;15/12/2025;2;1;Junior Suite;Confirmée
-07/01/2026;FR;05/02/2026;08/02/2026;2;1;Junior Suite;Confirmée
-16/02/2026;FR;10/04/2026;15/04/2026;3;1;Chambre Classique;Confirmée
-24/01/2026;FR;04/03/2026;07/03/2026;4;2;Junior Suite;Confirmée
-04/03/2026;CH;13/03/2026;15/03/2026;3;1;Suite;Confirmée
-21/08/2025;FR;23/12/2025;30/12/2025;6;2;Junior Suite;Confirmée
-01/12/2025;FR;22/01/2026;24/01/2026;2;1;Suite;Confirmée
-13/01/2026;FR;01/02/2026;04/02/2026;3;1;Chambre Classique;Confirmée
-15/02/2026;FR;04/03/2026;10/03/2026;3;1;Chambre Supérieure;Confirmée
-28/01/2026;CH;05/02/2026;11/02/2026;4;2;Chambre Classique;Confirmée
-14/08/2025;FR;25/12/2025;27/12/2025;4;1;Junior Suite;Annulée
-04/02/2026;DE;13/03/2026;18/03/2026;4;2;Chambre Classique;Confirmée
-12/03/2026;CH;22/03/2026;27/03/2026;2;1;Suite;Confirmée
-01/12/2025;GB;21/02/2026;24/02/2026;4;1;Appartement;Confirmée
-18/01/2026;FR;03/02/2026;08/02/2026;3;1;Appartement;Confirmée
-05/01/2026;FR;06/02/2026;08/02/2026;2;1;Chambre Classique;Confirmée
-27/01/2026;FR;13/03/2026;19/03/2026;2;1;Junior Suite;Confirmée
-10/02/2026;CH;27/02/2026;01/03/2026;2;1;Chambre Supérieure;Annulée
-09/11/2025;Suisse;24/12/2025;26/12/2025;4;1;Chambre Classique;Confirmée
-15/11/2025;FR;18/01/2026;22/01/2026;2;1;Chambre Supérieure;Confirmée
-08/11/2025;GB;14/03/2026;19/03/2026;4;1;Appartement;Confirmée
-09/01/2026;BE;07/04/2026;10/04/2026;2;1;Chambre Supérieure;Confirmée
-20/09/2025;FR;03/01/2026;10/01/2026;2;1;Junior Suite;Confirmée
-20/03/2026;CH;01/04/2026;04/04/2026;4;1;Chambre Classique;Confirmée
-10/12/2025;GB;09/01/2026;15/01/2026;3;1;Junior Suite;Confirmée
-24/12/2025;GB;13/02/2026;19/02/2026;2;1;Chambre Classique;Confirmée
-11/01/2026;CH;12/02/2026;14/02/2026;6;3;Chambre Supérieure;Annulée
-24/11/2025;GB;07/02/2026;11/02/2026;2;1;Chambre Supérieure;Confirmée
-12/10/2025;GB;31/12/2025;07/01/2026;3;1;Chambre Classique;Confirmée
-13/01/2026;FR;09/02/2026;13/02/2026;3;1;Chambre Classique;Confirmée
-11/01/2026;FR;06/02/2026;12/02/2026;4;2;Junior Suite;Confirmée
-19/10/2025;US;24/01/2026;30/01/2026;3;1;Suite;Annulée
-28/10/2025;CH;22/12/2025;26/12/2025;2;1;Appartement;Confirmée
-26/01/2026;FR;13/03/2026;19/03/2026;2;1;Chambre Supérieure;Confirmée
-08/02/2026;BE;28/02/2026;05/03/2026;2;1;Chambre Supérieure;Confirmée
-13/11/2025;FR;31/12/2025;06/01/2026;4;1;Chambre Supérieure;Confirmée
-01/11/2025;CH;31/12/2025;04/01/2026;2;1;Suite;Confirmée
-12/07/2025;NL;02/01/2026;04/01/2026;2;1;Chambre Classique;Confirmée
-08/12/2025;CH;14/01/2026;19/01/2026;1;1;Chambre Classique;Confirmée
-19/12/2025;CH;07/01/2026;12/01/2026;2;1;Junior Suite;Confirmée
-14/01/2026;CH;23/01/2026;28/01/2026;2;1;Chambre Supérieure;Confirmée
-13/02/2026;GB;17/03/2026;21/03/2026;2;1;Chambre Classique;Confirmée
-25/01/2026;FR;10/04/2026;14/04/2026;2;1;Suite;Confirmée
-14/12/2025;FR;05/01/2026;09/01/2026;8;2;Junior Suite;Annulée
-30/10/2025;FR;28/12/2025;03/01/2026;3;1;Chambre Classique;Confirmée
-11/06/2025;NL;21/12/2025;23/12/2025;4;2;Chambre Classique;Confirmée
-08/02/2026;CH;21/02/2026;23/02/2026;3;1;Junior Suite;Confirmée
-10/12/2025;BE;08/03/2026;10/03/2026;4;1;Suite;Confirmée
-26/11/2025;GB;01/02/2026;06/02/2026;3;1;Chambre Classique;Confirmée
-11/02/2026;FR;21/03/2026;26/03/2026;3;1;Chambre Classique;Confirmée
-11/01/2026;France;05/03/2026;08/03/2026;2;1;Chambre Supérieure;Confirmée
-04/09/2025;FR;02/01/2026;05/01/2026;2;1;Chambre Classique;Confirmée
-05/03/2026;CH;14/03/2026;17/03/2026;3;1;Chambre Supérieure;Confirmée
-06/11/2025;FR;18/12/2025;22/12/2025;4;1;Chambre Supérieure;Confirmée
-09/02/2026;FR;28/02/2026;04/03/2026;2;1;Chambre Supérieure;Confirmée
-02/02/2026;FR;05/04/2026;10/04/2026;4;1;Suite;Confirmée
-07/11/2025;GB;26/02/2026;04/03/2026;3;1;Chambre Classique;Confirmée
-18/09/2025;GB;23/12/2025;26/12/2025;2;1;Chambre Classique;Confirmée
-29/10/2025;France;02/01/2026;07/01/2026;2;1;Junior Suite;Confirmée
-28/08/2025;US;02/01/2026;04/01/2026;2;1;Junior Suite;Confirmée
-05/02/2026;Suisse;14/02/2026;17/02/2026;4;2;Junior Suite;Confirmée
-30/11/2025;GB;28/02/2026;03/03/2026;2;1;Appartement;Confirmée
-20/11/2025;GB;07/02/2026;12/02/2026;3;1;Chambre Classique;Confirmée
-04/01/2026;CH;11/02/2026;16/02/2026;2;1;Chambre Classique;Confirmée
-20/03/2026;CH;28/03/2026;31/03/2026;3;1;Chambre Classique;Confirmée
-19/02/2026;CH;20/03/2026;22/03/2026;3;1;Junior Suite;Confirmée
-17/11/2025;FR;29/12/2025;31/12/2025;3;1;Chambre Classique;Confirmée
-24/01/2026;BE;16/02/2026;21/02/2026;3;1;Chambre Classique;Confirmée
-17/10/2025;US;03/04/2026;08/04/2026;3;1;Appartement;Confirmée
-25/01/2026;FR;12/02/2026;17/02/2026;3;1;Chambre Classique;Annulée
-06/12/2025;BE;28/02/2026;05/03/2026;2;1;Chambre Supérieure;Confirmée
-30/10/2025;FR;11/01/2026;16/01/2026;2;1;Appartement;Confirmée
-12/01/2026;CH;03/02/2026;06/02/2026;3;1;Suite;Confirmée
-09/12/2025;CH;31/12/2025;04/01/2026;1;1;Suite;Confirmée
-14/01/2026;BE;04/02/2026;09/02/2026;4;1;Junior Suite;Confirmée
-26/11/2025;DE;18/12/2025;23/12/2025;2;1;Chambre Classique;Confirmée
-29/09/2025;FR;21/12/2025;23/12/2025;2;1;Chambre Supérieure;Confirmée
-13/02/2025;US;22/12/2025;27/12/2025;2;1;Chambre Supérieure;Confirmée
-23/03/2026;FR;09/04/2026;14/04/2026;9;3;Chambre Supérieure;Confirmée
-30/12/2025;GB;24/03/2026;30/03/2026;2;1;Junior Suite;Confirmée
-29/01/2026;CH;10/02/2026;15/02/2026;3;1;Chambre Supérieure;Confirmée
-10/02/2026;CH;10/03/2026;12/03/2026;4;2;Junior Suite;Confirmée
-19/11/2025;FR;12/12/2025;14/12/2025;4;2;Suite;Confirmée
-13/07/2025;DE;25/12/2025;31/12/2025;2;1;Suite;Confirmée
-17/02/2026;GB;06/04/2026;08/04/2026;4;1;Junior Suite;Confirmée
-05/02/2026;DE;21/03/2026;25/03/2026;2;1;Chambre Supérieure;Confirmée
-15/01/2026;BE;14/03/2026;19/03/2026;2;1;Chambre Classique;Confirmée
-30/12/2025;DE;25/01/2026;28/01/2026;2;1;Chambre Supérieure;Confirmée
-20/10/2025;FR;24/12/2025;26/12/2025;3;1;Junior Suite;Confirmée
-12/02/2026;BE;23/03/2026;26/03/2026;3;1;Chambre Supérieure;Confirmée
-05/03/2026;FR;28/03/2026;01/04/2026;6;2;Chambre Supérieure;Confirmée
-02/02/2026;CH;10/03/2026;14/03/2026;6;2;Junior Suite;Annulée
-27/02/2026;FR;23/03/2026;28/03/2026;3;1;Suite;Confirmée
-21/12/2025;GB;17/03/2026;21/03/2026;2;1;Suite;Confirmée
-29/12/2025;Suisse;15/01/2026;21/01/2026;8;2;Appartement;Confirmée
-10/02/2026;France;08/04/2026;10/04/2026;3;1;Junior Suite;Confirmée
-28/09/2025;US;24/12/2025;27/12/2025;2;1;Chambre Supérieure;Confirmée
-19/01/2026;BE;08/03/2026;10/03/2026;2;1;Chambre Classique;Confirmée
-21/11/2025;FR;01/01/2026;04/01/2026;4;1;Junior Suite;Confirmée
-06/11/2025;GB;27/02/2026;01/03/2026;12;3;Chambre Supérieure;Confirmée
-03/02/2026;CH;13/02/2026;18/02/2026;3;1;Chambre Supérieure;Confirmée
-21/02/2026;CH;16/03/2026;22/03/2026;6;2;Chambre Classique;Confirmée
-25/02/2026;FR;26/03/2026;29/03/2026;3;1;Suite;Confirmée
-20/11/2025;DE;04/02/2026;07/02/2026;3;1;Chambre Supérieure;Confirmée
-01/01/2026;DE;05/03/2026;11/03/2026;2;1;Chambre Classique;Confirmée
-28/11/2025;NL;06/03/2026;10/03/2026;4;1;Suite;Confirmée
-12/01/2026;FR;15/02/2026;19/02/2026;8;2;Suite;Confirmée
-12/01/2026;FR;19/02/2026;21/02/2026;3;1;Chambre Supérieure;Confirmée
-22/12/2025;GB;05/02/2026;11/02/2026;4;2;Chambre Supérieure;Confirmée
-09/12/2025;FR;20/02/2026;23/02/2026;2;1;Chambre Supérieure;Confirmée
-06/11/2025;NL;31/12/2025;02/01/2026;4;1;Chambre Supérieure;Confirmée
-07/12/2025;BE;03/02/2026;07/02/2026;4;2;Chambre Supérieure;Confirmée
-01/10/2025;GB;05/01/2026;08/01/2026;8;2;Appartement;Annulée
-12/09/2025;US;09/01/2026;14/01/2026;2;1;Chambre Supérieure;Confirmée
-25/12/2025;FR;24/01/2026;26/01/2026;2;1;Chambre Supérieure;Confirmée
-26/01/2026;CH;06/02/2026;08/02/2026;2;1;Chambre Supérieure;Confirmée
-28/01/2026;FR;06/04/2026;08/04/2026;3;1;Suite;Confirmée
-01/09/2025;FR;03/01/2026;10/01/2026;4;2;Junior Suite;Confirmée
-07/02/2026;FR;22/03/2026;28/03/2026;6;3;Chambre Classique;Confirmée
-22/10/2025;GB;24/12/2025;31/12/2025;4;1;Junior Suite;Confirmée
-02/03/2026;CH;20/03/2026;22/03/2026;3;1;Suite;Confirmée
-13/02/2026;DE;09/03/2026;11/03/2026;3;1;Chambre Supérieure;Confirmée
-02/10/2025;IT;29/12/2025;03/01/2026;2;1;Chambre Supérieure;Confirmée
-08/10/2025;DE;01/01/2026;04/01/2026;2;1;Chambre Supérieure;Confirmée
-20/12/2025;FR;22/02/2026;24/02/2026;6;3;Chambre Supérieure;Confirmée
-09/01/2026;BE;20/02/2026;22/02/2026;2;1;Chambre Classique;Confirmée
-16/03/2026;CH;07/04/2026;12/04/2026;4;1;Chambre Supérieure;Confirmée
-10/12/2025;GB;19/02/2026;21/02/2026;2;1;Chambre Supérieure;Confirmée
-02/02/2026;Suisse;17/02/2026;19/02/2026;2;1;Junior Suite;Confirmée
-18/01/2026;GB;16/02/2026;22/02/2026;2;1;Chambre Classique;Confirmée
-03/12/2025;CH;15/12/2025;21/12/2025;3;1;Chambre Classique;Confirmée
-01/12/2025;CH;13/12/2025;18/12/2025;2;1;Chambre Classique;Confirmée
-18/01/2026;France;26/02/2026;02/03/2026;1;1;Junior Suite;Confirmée
-27/01/2026;FR;27/02/2026;01/03/2026;2;1;Suite;Annulée
-21/01/2026;France;09/02/2026;12/02/2026;3;1;Chambre Classique;Confirmée
-02/02/2026;BE;24/02/2026;02/03/2026;4;2;Junior Suite;Confirmée
-26/08/2025;France;01/01/2026;08/01/2026;4;2;Chambre Supérieure;Confirmée
-27/11/2025;NL;07/01/2026;09/01/2026;6;2;Junior Suite;Confirmée
-09/01/2026;FR;23/02/2026;27/02/2026;2;1;Chambre Supérieure;Confirmée
-26/01/2026;FR;15/02/2026;21/02/2026;2;1;Chambre Supérieure;Annulée
-09/10/2025;FR;30/12/2025;06/01/2026;3;1;Chambre Classique;Confirmée
-24/09/2025;France;03/01/2026;08/01/2026;2;1;Junior Suite;Confirmée
-22/11/2025;BE;14/12/2025;19/12/2025;3;1;Chambre Supérieure;Annulée
-24/12/2025;France;06/02/2026;10/02/2026;4;1;Chambre Supérieure;Confirmée
-03/12/2025;BE;16/01/2026;21/01/2026;4;1;Junior Suite;Confirmée
-06/12/2025;US;02/03/2026;06/03/2026;2;1;Chambre Classique;Confirmée
-11/01/2026;FR;05/02/2026;11/02/2026;6;2;Chambre Classique;Confirmée
-29/01/2026;CH;23/02/2026;28/02/2026;1;1;Suite;Confirmée
-17/02/2026;FR;08/03/2026;14/03/2026;2;1;Junior Suite;Confirmée
-26/09/2025;FR;30/12/2025;06/01/2026;3;1;Chambre Supérieure;Confirmée
-12/11/2025;GB;12/12/2025;14/12/2025;2;1;Suite;Confirmée
-27/11/2025;US;06/01/2026;08/01/2026;4;2;Chambre Supérieure;Confirmée
-29/08/2025;FR;27/12/2025;03/01/2026;1;1;Junior Suite;Confirmée
-31/08/2025;FR;22/12/2025;25/12/2025;3;1;Chambre Classique;Confirmée
-08/02/2026;BE;14/03/2026;16/03/2026;3;1;Junior Suite;Confirmée
-03/03/2026;FR;08/04/2026;13/04/2026;2;1;Junior Suite;Confirmée
-19/11/2025;FR;22/12/2025;27/12/2025;2;1;Chambre Supérieure;Confirmée
-28/01/2026;FR;28/03/2026;03/04/2026;2;1;Junior Suite;Confirmée
-18/01/2026;US;19/03/2026;23/03/2026;2;1;Chambre Supérieure;Confirmée
-19/03/2026;FR;07/04/2026;09/04/2026;3;1;Suite;Confirmée
-29/01/2026;FR;05/04/2026;07/04/2026;1;1;Junior Suite;Confirmée
-14/02/2026;FR;10/03/2026;15/03/2026;2;1;Junior Suite;Confirmée
-07/12/2025;FR;16/02/2026;19/02/2026;2;1;Suite;Confirmée
-14/07/2025;US;26/12/2025;29/12/2025;2;1;Chambre Supérieure;Annulée
-24/03/2026;Suisse;01/04/2026;03/04/2026;2;1;Suite;Confirmée
-30/01/2026;CH;07/02/2026;13/02/2026;2;1;Appartement;Confirmée
-10/11/2025;FR;02/01/2026;08/01/2026;4;1;Chambre Supérieure;Confirmée
-15/11/2025;NL;24/01/2026;29/01/2026;3;1;Chambre Supérieure;Confirmée
-17/10/2025;FR;01/01/2026;04/01/2026;4;1;Chambre Classique;Confirmée
-30/12/2025;CH;20/01/2026;25/01/2026;4;1;Chambre Classique;Confirmée
-07/03/2026;IT;24/03/2026;27/03/2026;2;1;Chambre Supérieure;Confirmée
-07/01/2026;FR;13/03/2026;19/03/2026;2;1;Chambre Classique;Confirmée
-08/03/2026;FR;31/03/2026;04/04/2026;3;1;Chambre Supérieure;Confirmée
-16/12/2025;NL;15/01/2026;18/01/2026;2;1;Chambre Classique;Confirmée
-30/12/2025;US;27/03/2026;01/04/2026;4;1;Chambre Classique;Annulée
-02/11/2025;GB;23/02/2026;26/02/2026;4;1;Chambre Supérieure;Confirmée
-11/11/2025;FR;26/12/2025;31/12/2025;2;1;Chambre Classique;Confirmée
-15/02/2026;FR;15/03/2026;18/03/2026;12;3;Chambre Classique;Confirmée
-28/02/2026;FR;20/03/2026;23/03/2026;3;1;Chambre Supérieure;Confirmée
-14/01/2026;FR;01/03/2026;05/03/2026;4;1;Suite;Confirmée
-20/10/2025;FR;19/12/2025;26/12/2025;4;1;Chambre Classique;Confirmée
-24/10/2025;FR;24/12/2025;28/12/2025;3;1;Chambre Classique;Confirmée
-10/02/2026;FR;06/03/2026;08/03/2026;4;1;Chambre Supérieure;Confirmée
-19/12/2025;BE;02/03/2026;07/03/2026;2;1;Junior Suite;Confirmée
-28/02/2026;FR;01/04/2026;06/04/2026;3;1;Appartement;Confirmée
-15/02/2026;CH;24/02/2026;02/03/2026;3;1;Chambre Supérieure;Annulée
-08/08/2025;FR;26/12/2025;29/12/2025;4;1;Chambre Supérieure;Confirmée
-09/03/2026;CH;18/03/2026;23/03/2026;2;1;Chambre Classique;Confirmée
-02/02/2026;FR;27/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
-26/11/2025;NL;15/02/2026;20/02/2026;8;2;Suite;Confirmée
-19/11/2025;Suisse;26/12/2025;29/12/2025;2;1;Chambre Supérieure;Confirmée
-29/12/2025;France;23/01/2026;25/01/2026;2;1;Chambre Supérieure;Confirmée
-09/12/2025;US;21/03/2026;25/03/2026;2;1;Chambre Classique;Confirmée
-27/09/2025;IT;30/12/2025;04/01/2026;2;1;Chambre Classique;Confirmée
-04/10/2025;FR;24/12/2025;30/12/2025;2;1;Appartement;Confirmée
-01/02/2026;GB;07/04/2026;13/04/2026;2;1;Chambre Classique;Confirmée
-29/08/2025;US;24/12/2025;28/12/2025;2;1;Appartement;Confirmée
-01/03/2026;FR;25/03/2026;31/03/2026;3;1;Chambre Classique;Confirmée
-02/02/2026;FR;28/02/2026;02/03/2026;2;1;Chambre Supérieure;Confirmée
-14/01/2026;NL;19/02/2026;25/02/2026;3;1;Chambre Supérieure;Confirmée
-13/12/2025;FR;18/02/2026;24/02/2026;2;1;Chambre Classique;Confirmée
-11/12/2025;FR;28/01/2026;31/01/2026;6;3;Junior Suite;Confirmée
-04/10/2025;FR;21/12/2025;23/12/2025;4;1;Chambre Classique;Confirmée
-02/02/2026;CH;11/02/2026;15/02/2026;4;2;Chambre Classique;Confirmée
-27/02/2026;CH;07/03/2026;10/03/2026;6;2;Chambre Supérieure;Confirmée
-25/01/2026;FR;22/02/2026;28/02/2026;2;1;Junior Suite;Confirmée
-25/01/2026;Suisse;27/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
-04/11/2025;FR;16/12/2025;20/12/2025;2;1;Chambre Classique;Confirmée
-03/12/2025;GB;28/01/2026;30/01/2026;4;1;Chambre Classique;Confirmée
-09/01/2026;BE;07/04/2026;09/04/2026;6;3;Chambre Supérieure;Confirmée
-21/12/2025;GB;22/02/2026;25/02/2026;2;1;Appartement;Confirmée
-02/01/2026;FR;12/02/2026;16/02/2026;4;1;Appartement;Confirmée
-14/10/2025;US;26/12/2025;29/12/2025;2;1;Chambre Classique;Confirmée
-27/12/2025;CH;31/01/2026;04/02/2026;2;1;Chambre Supérieure;Confirmée
-19/11/2025;FR;29/12/2025;31/12/2025;4;2;Chambre Supérieure;Confirmée
-29/01/2026;FR;24/02/2026;26/02/2026;2;1;Suite;Confirmée
-11/03/2026;FR;29/03/2026;31/03/2026;4;1;Chambre Classique;Confirmée
-27/07/2025;DE;26/12/2025;01/01/2026;2;1;Chambre Classique;Confirmée
-04/11/2025;FR;26/12/2025;30/12/2025;2;1;Junior Suite;Confirmée
-01/01/2026;France;21/02/2026;27/02/2026;2;1;Chambre Classique;Confirmée
-09/12/2025;FR;21/01/2026;25/01/2026;3;1;Chambre Supérieure;Confirmée
-12/08/2025;NL;19/12/2025;24/12/2025;4;1;Chambre Supérieure;Confirmée
-03/10/2025;BE;23/12/2025;28/12/2025;4;1;Chambre Supérieure;Confirmée
-21/11/2025;France;31/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
-14/11/2025;GB;08/02/2026;13/02/2026;2;1;Chambre Classique;Confirmée
-04/01/2026;FR;23/01/2026;25/01/2026;2;1;Chambre Classique;Confirmée
-02/01/2026;CH;04/02/2026;07/02/2026;3;1;Chambre Classique;Confirmée
-11/11/2025;DE;23/12/2025;29/12/2025;3;1;Chambre Classique;Confirmée
-02/11/2025;CH;30/12/2025;05/01/2026;4;1;Chambre Classique;Confirmée
-04/12/2025;CH;24/12/2025;30/12/2025;2;1;Chambre Classique;Confirmée
-21/01/2026;FR;06/02/2026;12/02/2026;2;1;Chambre Supérieure;Confirmée
-24/11/2025;FR;27/01/2026;02/02/2026;4;1;Junior Suite;Confirmée
-28/12/2025;BE;30/03/2026;04/04/2026;2;1;Junior Suite;Confirmée
-15/03/2026;CH;10/04/2026;13/04/2026;1;1;Chambre Supérieure;Confirmée
-29/01/2026;FR;01/04/2026;06/04/2026;9;3;Chambre Supérieure;Confirmée
-13/11/2025;FR;19/12/2025;22/12/2025;3;1;Chambre Supérieure;Confirmée
-11/12/2025;GB;11/04/2026;16/04/2026;2;1;Chambre Classique;Confirmée
-18/01/2026;FR;15/02/2026;19/02/2026;4;1;Junior Suite;Annulée
-24/10/2025;GB;01/02/2026;06/02/2026;2;1;Chambre Supérieure;Confirmée
-30/12/2025;FR;26/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
-29/01/2026;FR;21/02/2026;26/02/2026;4;1;Appartement;Annulée
-30/10/2025;GB;12/12/2025;15/12/2025;2;1;Junior Suite;Confirmée
-27/08/2025;US;17/02/2026;23/02/2026;3;1;Chambre Supérieure;Annulée
-26/12/2025;FR;11/02/2026;14/02/2026;3;1;Chambre Supérieure;Confirmée
-17/03/2026;FR;07/04/2026;09/04/2026;2;1;Chambre Classique;Annulée
-29/11/2025;BE;25/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
-07/11/2025;DE;21/12/2025;28/12/2025;8;2;Junior Suite;Confirmée
-06/03/2026;FR;27/03/2026;01/04/2026;2;1;Chambre Supérieure;Confirmée
-14/01/2026;FR;23/03/2026;25/03/2026;3;1;Chambre Classique;Confirmée
-12/03/2026;CH;11/04/2026;15/04/2026;3;1;Chambre Classique;Confirmée
-20/03/2026;CH;06/04/2026;09/04/2026;2;1;Chambre Classique;Confirmée
-28/11/2025;France;02/01/2026;04/01/2026;3;1;Junior Suite;Confirmée
-13/02/2026;FR;05/04/2026;07/04/2026;2;1;Chambre Classique;Confirmée
-19/10/2025;GB;10/01/2026;13/01/2026;4;1;Chambre Supérieure;Confirmée
-15/11/2025;FR;24/12/2025;26/12/2025;2;1;Chambre Supérieure;Confirmée
-29/01/2026;FR;12/04/2026;17/04/2026;2;1;Junior Suite;Confirmée
-28/09/2025;GB;28/12/2025;03/01/2026;2;1;Junior Suite;Confirmée
-23/12/2025;NL;04/02/2026;08/02/2026;2;1;Chambre Supérieure;Confirmée
-08/12/2025;CH;02/01/2026;04/01/2026;8;2;Appartement;Confirmée
-27/01/2026;FR;11/03/2026;13/03/2026;2;1;Chambre Classique;Confirmée
-25/10/2025;GB;13/12/2025;19/12/2025;4;1;Chambre Classique;Confirmée
-27/09/2025;BE;27/12/2025;29/12/2025;4;2;Chambre Supérieure;Confirmée
-04/11/2025;NL;19/12/2025;25/12/2025;3;1;Chambre Classique;Confirmée
-24/12/2025;FR;25/02/2026;03/03/2026;1;1;Appartement;Confirmée
-27/12/2025;GB;23/02/2026;26/02/2026;4;1;Appartement;Confirmée
-24/01/2026;FR;11/02/2026;15/02/2026;4;1;Chambre Supérieure;Confirmée
-09/03/2026;CH;02/04/2026;04/04/2026;1;1;Chambre Supérieure;Confirmée
-01/09/2025;NL;25/12/2025;31/12/2025;3;1;Chambre Classique;Confirmée
-30/01/2026;BE;19/02/2026;23/02/2026;2;1;Chambre Classique;Confirmée
-16/12/2025;FR;17/01/2026;22/01/2026;4;2;Junior Suite;Confirmée
-25/01/2026;NL;21/02/2026;26/02/2026;2;1;Chambre Classique;Confirmée
-26/12/2025;FR;11/01/2026;14/01/2026;2;1;Junior Suite;Confirmée
-16/01/2026;FR;01/02/2026;06/02/2026;2;1;Suite;Confirmée
-01/01/2026;FR;09/02/2026;15/02/2026;2;1;Suite;Confirmée
-19/11/2025;FR;08/01/2026;12/01/2026;2;1;Suite;Confirmée
-02/12/2025;FR;30/12/2025;03/01/2026;3;1;Appartement;Confirmée
-28/01/2026;FR;31/03/2026;05/04/2026;4;1;Chambre Classique;Confirmée
-20/01/2026;FR;24/03/2026;28/03/2026;2;1;Chambre Classique;Confirmée
-05/02/2026;FR;23/02/2026;28/02/2026;4;2;Chambre Supérieure;Annulée
-13/01/2026;FR;16/02/2026;20/02/2026;3;1;Chambre Supérieure;Confirmée
-07/01/2026;FR;28/01/2026;02/02/2026;2;1;Junior Suite;Confirmée
-28/12/2025;BE;12/02/2026;16/02/2026;4;2;Chambre Supérieure;Confirmée
-13/02/2026;GB;15/03/2026;20/03/2026;2;1;Chambre Classique;Confirmée
-26/01/2026;CH;07/02/2026;13/02/2026;2;1;Junior Suite;Confirmée
-24/01/2026;US;26/03/2026;29/03/2026;3;1;Suite;Confirmée
-18/03/2026;CH;08/04/2026;11/04/2026;2;1;Chambre Classique;Confirmée
-25/12/2025;FR;25/02/2026;01/03/2026;2;1;Junior Suite;Confirmée
-17/12/2025;BE;25/01/2026;28/01/2026;3;1;Appartement;Confirmée
-13/09/2025;FR;03/01/2026;09/01/2026;3;1;Chambre Supérieure;Confirmée
-13/12/2025;NL;12/02/2026;17/02/2026;4;1;Chambre Classique;Confirmée
-16/01/2026;CH;23/02/2026;25/02/2026;2;1;Chambre Classique;Confirmée
-26/01/2026;BE;05/03/2026;11/03/2026;2;1;Chambre Classique;Confirmée
-18/01/2026;FR;20/02/2026;24/02/2026;3;1;Chambre Classique;Confirmée
-05/12/2025;NL;01/02/2026;05/02/2026;4;1;Junior Suite;Confirmée
-27/01/2026;FR;18/02/2026;22/02/2026;2;1;Chambre Supérieure;Confirmée
-09/01/2026;US;16/02/2026;20/02/2026;2;1;Suite;Confirmée
-22/01/2026;FR;03/04/2026;06/04/2026;3;1;Chambre Classique;Confirmée
-10/02/2026;DE;20/03/2026;22/03/2026;2;1;Chambre Supérieure;Confirmée
-11/02/2026;FR;08/03/2026;14/03/2026;2;1;Chambre Classique;Confirmée
-14/11/2025;GB;21/03/2026;26/03/2026;8;2;Chambre Classique;Confirmée
-06/12/2025;US;14/02/2026;18/02/2026;3;1;Chambre Supérieure;Annulée
-01/12/2025;GB;25/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
-05/09/2025;FR;27/12/2025;29/12/2025;2;1;Chambre Classique;Confirmée
-27/12/2025;Suisse;30/01/2026;01/02/2026;2;1;Junior Suite;Confirmée
-14/12/2025;FR;02/02/2026;06/02/2026;2;1;Chambre Supérieure;Confirmée
-23/10/2025;BE;19/12/2025;25/12/2025;2;1;Suite;Annulée
-21/02/2026;France;11/03/2026;17/03/2026;3;1;Chambre Supérieure;Confirmée
-20/11/2025;FR;30/12/2025;01/01/2026;2;1;Appartement;Confirmée
-12/10/2025;France;31/12/2025;04/01/2026;4;2;Junior Suite;Confirmée
-06/12/2025;GB;07/02/2026;11/02/2026;2;1;Chambre Supérieure;Confirmée
-08/02/2026;GB;26/03/2026;31/03/2026;2;1;Chambre Supérieure;Confirmée
-02/12/2025;FR;19/01/2026;21/01/2026;2;1;Chambre Supérieure;Confirmée
-05/01/2026;BE;19/02/2026;21/02/2026;4;2;Chambre Classique;Confirmée
-07/06/2025;GB;31/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
-22/02/2026;FR;17/03/2026;19/03/2026;3;1;Suite;Confirmée
-26/02/2026;FR;14/03/2026;16/03/2026;4;1;Junior Suite;Confirmée
-11/01/2026;NL;10/04/2026;16/04/2026;4;2;Suite;Confirmée
-28/11/2025;FR;30/12/2025;04/01/2026;1;1;Chambre Classique;Confirmée
-10/01/2026;FR;09/02/2026;15/02/2026;6;3;Chambre Supérieure;Confirmée
-15/12/2025;CH;09/01/2026;12/01/2026;2;1;Chambre Classique;Annulée
-03/11/2025;CH;01/01/2026;05/01/2026;3;1;Chambre Classique;Confirmée
-11/01/2026;FR;21/02/2026;23/02/2026;3;1;Junior Suite;Confirmée
-07/12/2025;FR;04/01/2026;10/01/2026;2;1;Suite;Confirmée
-15/10/2025;BE;27/12/2025;01/01/2026;6;3;Chambre Supérieure;Confirmée
-13/02/2026;CH;04/03/2026;10/03/2026;3;1;Appartement;Annulée
-06/02/2026;CH;04/03/2026;07/03/2026;2;1;Chambre Supérieure;Confirmée
-24/02/2026;NL;26/03/2026;01/04/2026;12;3;Chambre Classique;Confirmée
-17/01/2026;Suisse;01/02/2026;03/02/2026;3;1;Suite;Annulée
-28/02/2026;FR;12/04/2026;14/04/2026;6;3;Junior Suite;Confirmée
-09/01/2026;GB;14/03/2026;19/03/2026;2;1;Chambre Classique;Confirmée
-06/11/2025;CH;19/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
-19/12/2025;FR;28/01/2026;02/02/2026;2;1;Chambre Supérieure;Confirmée
-03/11/2025;GB;23/01/2026;28/01/2026;3;1;Chambre Supérieure;Confirmée
-15/07/2025;GB;22/12/2025;27/12/2025;2;1;Chambre Supérieure;Confirmée
-27/09/2025;FR;19/12/2025;26/12/2025;2;1;Chambre Supérieure;Confirmée
-16/01/2026;BE;14/02/2026;17/02/2026;3;1;Chambre Supérieure;Confirmée
-16/12/2025;FR;02/02/2026;06/02/2026;2;1;Junior Suite;Confirmée
-10/01/2026;FR;14/02/2026;19/02/2026;2;1;Junior Suite;Confirmée
-12/11/2025;CH;18/12/2025;24/12/2025;2;1;Chambre Supérieure;Confirmée
-16/01/2026;FR;21/02/2026;27/02/2026;4;1;Chambre Supérieure;Confirmée
-18/02/2026;FR;07/03/2026;11/03/2026;2;1;Appartement;Confirmée
-20/01/2026;FR;09/02/2026;14/02/2026;8;2;Chambre Classique;Confirmée
-27/10/2025;GB;22/12/2025;29/12/2025;2;1;Chambre Classique;Confirmée
-12/09/2025;FR;02/01/2026;04/01/2026;2;1;Junior Suite;Confirmée
-04/02/2026;FR;08/03/2026;13/03/2026;2;1;Chambre Supérieure;Confirmée
-01/12/2025;Suisse;13/12/2025;16/12/2025;3;1;Chambre Classique;Confirmée
-24/01/2026;FR;22/02/2026;24/02/2026;2;1;Chambre Classique;Confirmée
-01/11/2025;FR;01/01/2026;07/01/2026;3;1;Chambre Classique;Confirmée
-21/11/2025;FR;14/01/2026;19/01/2026;4;1;Junior Suite;Confirmée
-30/12/2025;GB;04/02/2026;08/02/2026;4;1;Chambre Classique;Confirmée
-30/11/2025;FR;17/12/2025;21/12/2025;4;2;Chambre Classique;Confirmée
-24/10/2025;GB;08/02/2026;10/02/2026;2;1;Suite;Confirmée
-12/10/2025;FR;27/12/2025;29/12/2025;4;1;Chambre Supérieure;Confirmée
-14/10/2025;GB;23/02/2026;01/03/2026;2;1;Chambre Classique;Confirmée
-21/10/2025;France;24/12/2025;27/12/2025;2;1;Suite;Annulée
-25/03/2026;CH;03/04/2026;08/04/2026;2;1;Suite;Confirmée
-05/11/2025;US;16/12/2025;21/12/2025;2;1;Junior Suite;Confirmée
-25/02/2026;Suisse;30/03/2026;02/04/2026;3;1;Junior Suite;Confirmée
-14/10/2025;FR;28/12/2025;04/01/2026;4;2;Junior Suite;Confirmée
-02/01/2026;FR;14/02/2026;18/02/2026;2;1;Junior Suite;Confirmée
-28/03/2026;Suisse;05/04/2026;07/04/2026;8;2;Chambre Classique;Confirmée
-13/08/2025;US;31/12/2025;03/01/2026;3;1;Chambre Supérieure;Confirmée
-10/09/2025;US;06/02/2026;11/02/2026;4;1;Chambre Supérieure;Confirmée
-09/11/2025;BE;16/01/2026;19/01/2026;4;1;Chambre Supérieure;Confirmée
-18/08/2025;GB;13/12/2025;19/12/2025;2;1;Junior Suite;Confirmée
-22/03/2026;Suisse;02/04/2026;04/04/2026;6;2;Chambre Classique;Confirmée
-24/01/2026;BE;27/02/2026;01/03/2026;2;1;Chambre Classique;Confirmée
-18/11/2025;France;15/12/2025;20/12/2025;4;2;Appartement;Annulée
-12/12/2025;CH;03/01/2026;05/01/2026;6;2;Chambre Supérieure;Confirmée
-08/10/2025;GB;27/12/2025;31/12/2025;3;1;Suite;Confirmée
-28/11/2025;FR;26/12/2025;29/12/2025;1;1;Chambre Classique;Confirmée
-23/10/2025;NL;24/12/2025;31/12/2025;4;1;Chambre Supérieure;Confirmée
-19/12/2025;DE;31/01/2026;06/02/2026;2;1;Junior Suite;Confirmée
-14/12/2025;CH;18/01/2026;23/01/2026;3;1;Junior Suite;Confirmée
-24/07/2025;GB;19/12/2025;22/12/2025;2;1;Chambre Classique;Confirmée
-26/10/2025;CH;02/01/2026;05/01/2026;4;1;Chambre Classique;Confirmée
-18/08/2025;FR;21/12/2025;28/12/2025;3;1;Junior Suite;Confirmée
-06/11/2025;BE;08/01/2026;12/01/2026;3;1;Chambre Classique;Confirmée
-09/10/2025;US;24/02/2026;01/03/2026;2;1;Appartement;Confirmée
-02/10/2025;GB;03/01/2026;07/01/2026;2;1;Appartement;Confirmée
-20/02/2026;FR;08/04/2026;14/04/2026;2;1;Junior Suite;Confirmée
-10/02/2025;US;21/12/2025;27/12/2025;4;2;Chambre Classique;Confirmée
-21/11/2025;GB;07/02/2026;10/02/2026;2;1;Chambre Classique;Annulée
-10/08/2025;US;25/12/2025;30/12/2025;2;1;Chambre Supérieure;Confirmée
-15/08/2025;US;21/12/2025;25/12/2025;2;1;Chambre Supérieure;Confirmée
-13/11/2025;BE;12/12/2025;15/12/2025;2;1;Appartement;Annulée
-11/12/2025;NL;13/01/2026;17/01/2026;2;1;Junior Suite;Confirmée
-16/12/2025;DE;21/01/2026;25/01/2026;2;1;Chambre Classique;Confirmée
-13/02/2026;NL;09/03/2026;14/03/2026;2;1;Chambre Classique;Confirmée
-28/11/2025;France;19/01/2026;23/01/2026;4;2;Chambre Supérieure;Confirmée
-20/09/2025;US;16/12/2025;19/12/2025;2;1;Chambre Classique;Confirmée
-09/09/2025;DE;25/12/2025;30/12/2025;2;1;Junior Suite;Confirmée
-23/01/2026;FR;13/02/2026;18/02/2026;2;1;Chambre Classique;Confirmée
-27/02/2026;FR;17/03/2026;21/03/2026;2;1;Chambre Supérieure;Confirmée
-10/12/2025;US;20/01/2026;23/01/2026;4;1;Junior Suite;Confirmée
-24/02/2026;CH;30/03/2026;02/04/2026;3;1;Suite;Confirmée
-10/12/2025;GB;17/02/2026;22/02/2026;3;1;Chambre Supérieure;Confirmée
-09/01/2026;FR;06/02/2026;10/02/2026;2;1;Chambre Supérieure;Confirmée
-23/01/2026;FR;04/03/2026;07/03/2026;4;2;Junior Suite;Confirmée
-03/02/2026;CH;27/02/2026;02/03/2026;3;1;Chambre Supérieure;Confirmée
-01/11/2025;FR;23/12/2025;30/12/2025;4;2;Chambre Supérieure;Confirmée
-13/02/2026;CH;04/03/2026;10/03/2026;2;1;Chambre Supérieure;Confirmée
-01/02/2026;FR;26/02/2026;04/03/2026;2;1;Chambre Classique;Confirmée
-29/11/2025;FR;28/12/2025;01/01/2026;2;1;Chambre Supérieure;Confirmée
-30/01/2026;FR;12/03/2026;18/03/2026;2;1;Chambre Classique;Confirmée
-27/12/2025;FR;24/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
-16/02/2026;CH;14/03/2026;20/03/2026;2;1;Chambre Classique;Confirmée
-27/02/2026;FR;29/03/2026;04/04/2026;9;3;Chambre Supérieure;Confirmée
-26/08/2025;FR;03/01/2026;07/01/2026;4;1;Junior Suite;Confirmée
-28/10/2025;NL;15/01/2026;21/01/2026;2;1;Suite;Confirmée
-30/12/2025;GB;02/02/2026;04/02/2026;4;1;Chambre Classique;Confirmée
-19/11/2025;FR;22/12/2025;25/12/2025;4;1;Junior Suite;Confirmée
-12/03/2026;CH;24/03/2026;28/03/2026;2;1;Junior Suite;Confirmée
-20/12/2025;GB;29/01/2026;04/02/2026;3;1;Chambre Supérieure;Confirmée
-09/10/2025;FR;12/12/2025;16/12/2025;3;1;Suite;Confirmée
-10/10/2025;BE;30/12/2025;01/01/2026;3;1;Chambre Classique;Confirmée
-13/12/2025;US;22/02/2026;26/02/2026;2;1;Junior Suite;Confirmée
-24/12/2025;FR;06/02/2026;12/02/2026;2;1;Chambre Classique;Confirmée
-23/12/2025;GB;20/02/2026;23/02/2026;12;3;Appartement;Confirmée
-11/12/2025;CH;11/01/2026;14/01/2026;4;1;Chambre Classique;Confirmée
-22/09/2025;FR;28/12/2025;03/01/2026;4;1;Chambre Classique;Confirmée
-24/09/2025;FR;02/01/2026;07/01/2026;2;1;Chambre Classique;Confirmée
-05/03/2026;FR;29/03/2026;03/04/2026;2;1;Suite;Confirmée
-16/03/2026;FR;05/04/2026;11/04/2026;2;1;Suite;Confirmée
-24/11/2025;BE;24/02/2026;26/02/2026;3;1;Chambre Classique;Confirmée
-10/12/2025;GB;15/02/2026;21/02/2026;2;1;Chambre Supérieure;Annulée
-08/12/2025;FR;09/01/2026;13/01/2026;1;1;Chambre Supérieure;Confirmée
-20/01/2026;NL;18/03/2026;24/03/2026;2;1;Chambre Classique;Annulée
-08/08/2025;GB;28/12/2025;30/12/2025;3;1;Chambre Supérieure;Confirmée
-03/12/2025;FR;11/02/2026;17/02/2026;2;1;Junior Suite;Confirmée
-22/12/2025;FR;19/02/2026;21/02/2026;4;2;Junior Suite;Confirmée
-17/01/2026;DE;06/03/2026;08/03/2026;1;1;Chambre Classique;Confirmée
-05/06/2025;US;29/12/2025;04/01/2026;4;2;Chambre Classique;Confirmée
-15/01/2026;US;26/02/2026;04/03/2026;2;1;Chambre Classique;Confirmée
-05/02/2026;FR;24/02/2026;02/03/2026;2;1;Chambre Classique;Confirmée
-10/03/2026;Suisse;22/03/2026;25/03/2026;3;1;Chambre Classique;Confirmée
-01/01/2026;FR;20/02/2026;26/02/2026;3;1;Chambre Classique;Confirmée
-16/12/2025;US;09/02/2026;12/02/2026;2;1;Chambre Classique;Confirmée
-11/11/2025;FR;30/12/2025;02/01/2026;6;3;Chambre Supérieure;Confirmée
-05/01/2026;GB;12/03/2026;18/03/2026;2;1;Chambre Classique;Confirmée
-29/01/2026;GB;06/03/2026;09/03/2026;2;1;Chambre Supérieure;Confirmée
-05/03/2026;FR;21/03/2026;26/03/2026;2;1;Junior Suite;Confirmée
-12/11/2025;FR;21/01/2026;24/01/2026;2;1;Chambre Classique;Confirmée
-19/10/2025;US;27/12/2025;01/01/2026;2;1;Chambre Supérieure;Confirmée
-22/12/2025;FR;23/02/2026;27/02/2026;3;1;Chambre Supérieure;Confirmée
-06/11/2025;NL;23/12/2025;27/12/2025;6;2;Chambre Classique;Confirmée
-15/01/2026;FR;02/03/2026;08/03/2026;2;1;Appartement;Confirmée
-02/01/2026;BE;31/03/2026;02/04/2026;2;1;Junior Suite;Confirmée
-25/01/2026;BE;07/04/2026;10/04/2026;4;1;Chambre Supérieure;Confirmée
-12/10/2025;GB;31/01/2026;03/02/2026;4;1;Junior Suite;Confirmée
-02/02/2026;BE;22/02/2026;24/02/2026;3;1;Chambre Supérieure;Confirmée
-15/01/2026;FR;23/02/2026;28/02/2026;2;1;Chambre Supérieure;Confirmée
-04/10/2025;DE;16/12/2025;21/12/2025;1;1;Chambre Supérieure;Confirmée
-16/01/2026;GB;07/03/2026;12/03/2026;2;1;Chambre Supérieure;Confirmée
-02/12/2025;BE;20/01/2026;22/01/2026;6;2;Appartement;Confirmée
-24/02/2026;BE;07/04/2026;10/04/2026;4;1;Chambre Classique;Confirmée
-25/01/2026;FR;13/02/2026;15/02/2026;4;2;Chambre Classique;Confirmée
-08/11/2025;CH;25/12/2025;31/12/2025;2;1;Chambre Supérieure;Annulée
-21/08/2025;US;20/02/2026;24/02/2026;2;1;Junior Suite;Confirmée
-29/12/2025;DE;20/01/2026;22/01/2026;3;1;Chambre Classique;Confirmée
-05/01/2026;FR;06/03/2026;09/03/2026;4;2;Chambre Supérieure;Confirmée
-01/02/2026;NL;26/02/2026;28/02/2026;2;1;Chambre Supérieure;Confirmée
-04/10/2025;GB;01/01/2026;03/01/2026;6;2;Chambre Classique;Confirmée
-30/08/2025;US;31/12/2025;04/01/2026;2;1;Junior Suite;Confirmée
-01/12/2025;US;07/02/2026;13/02/2026;2;1;Chambre Supérieure;Confirmée
-10/11/2025;GB;18/01/2026;21/01/2026;3;1;Junior Suite;Confirmée
-05/03/2026;BE;11/04/2026;14/04/2026;3;1;Chambre Classique;Confirmée
-21/09/2025;GB;04/02/2026;10/02/2026;2;1;Suite;Confirmée
-26/11/2025;BE;02/01/2026;04/01/2026;2;1;Junior Suite;Confirmée
-10/11/2025;GB;24/02/2026;27/02/2026;4;1;Chambre Classique;Confirmée
-11/01/2026;BE;06/02/2026;08/02/2026;2;1;Junior Suite;Confirmée
-25/10/2025;GB;24/02/2026;28/02/2026;4;1;Chambre Classique;Confirmée
-14/02/2026;CH;28/02/2026;04/03/2026;2;1;Suite;Confirmée
-22/09/2025;US;20/02/2026;24/02/2026;2;1;Chambre Classique;Confirmée
-28/02/2026;BE;21/03/2026;27/03/2026;2;1;Chambre Classique;Confirmée
-03/11/2025;GB;13/02/2026;19/02/2026;3;1;Junior Suite;Confirmée
-20/07/2025;BE;01/01/2026;05/01/2026;2;1;Chambre Classique;Confirmée
-17/01/2026;GB;17/02/2026;23/02/2026;4;1;Chambre Supérieure;Confirmée
-12/01/2026;FR;27/02/2026;01/03/2026;2;1;Chambre Supérieure;Annulée
-08/01/2026;CH;02/02/2026;06/02/2026;6;2;Suite;Confirmée
-07/02/2026;CH;24/02/2026;28/02/2026;2;1;Chambre Supérieure;Confirmée
-10/03/2026;GB;09/04/2026;11/04/2026;3;1;Chambre Classique;Confirmée
-21/08/2025;NL;26/12/2025;02/01/2026;2;1;Chambre Supérieure;Confirmée
-12/11/2025;FR;29/12/2025;31/12/2025;2;1;Chambre Supérieure;Confirmée
-27/12/2025;FR;03/02/2026;09/02/2026;3;1;Junior Suite;Confirmée
-13/11/2025;FR;19/01/2026;23/01/2026;2;1;Chambre Supérieure;Annulée
-16/12/2025;FR;10/01/2026;15/01/2026;2;1;Chambre Classique;Confirmée
-25/10/2025;US;10/01/2026;15/01/2026;1;1;Chambre Classique;Confirmée
-25/09/2025;FR;22/12/2025;26/12/2025;2;1;Chambre Supérieure;Annulée
-23/10/2025;FR;24/12/2025;28/12/2025;2;1;Chambre Supérieure;Confirmée
-07/02/2026;Suisse;19/02/2026;24/02/2026;3;1;Suite;Confirmée
-13/02/2026;FR;02/03/2026;08/03/2026;3;1;Chambre Classique;Confirmée
-11/12/2025;CH;31/12/2025;06/01/2026;4;1;Junior Suite;Confirmée
-14/02/2026;CH;23/02/2026;26/02/2026;2;1;Chambre Supérieure;Confirmée
-11/01/2026;FR;05/02/2026;08/02/2026;2;1;Chambre Classique;Confirmée
-27/12/2025;BE;19/02/2026;23/02/2026;3;1;Suite;Confirmée
-07/01/2026;GB;01/04/2026;05/04/2026;2;1;Chambre Classique;Confirmée
-02/03/2026;CH;27/03/2026;30/03/2026;1;1;Chambre Classique;Confirmée
-09/03/2026;FR;26/03/2026;01/04/2026;3;1;Chambre Supérieure;Confirmée
-12/02/2026;BE;24/03/2026;29/03/2026;3;1;Appartement;Confirmée
-16/02/2026;FR;01/04/2026;03/04/2026;4;1;Chambre Classique;Annulée
-03/10/2025;US;30/03/2026;01/04/2026;2;1;Chambre Classique;Confirmée
-25/12/2025;CH;18/01/2026;24/01/2026;3;1;Suite;Confirmée
-08/02/2026;FR;25/02/2026;27/02/2026;3;1;Junior Suite;Confirmée
-15/02/2026;US;31/03/2026;04/04/2026;3;1;Chambre Supérieure;Confirmée
-29/12/2025;DE;24/02/2026;01/03/2026;2;1;Junior Suite;Confirmée
-17/11/2025;CH;17/12/2025;20/12/2025;2;1;Chambre Classique;Confirmée
-02/12/2025;FR;02/01/2026;08/01/2026;2;1;Chambre Supérieure;Annulée
-30/10/2025;CH;31/12/2025;04/01/2026;4;1;Chambre Supérieure;Confirmée
-26/11/2025;DE;18/12/2025;21/12/2025;2;1;Chambre Supérieure;Confirmée
-16/01/2026;FR;05/02/2026;08/02/2026;3;1;Junior Suite;Confirmée
-05/11/2025;FR;27/12/2025;31/12/2025;6;2;Chambre Classique;Confirmée
-26/12/2025;CH;04/01/2026;10/01/2026;4;1;Chambre Classique;Confirmée
-05/01/2026;BE;08/02/2026;11/02/2026;2;1;Chambre Supérieure;Confirmée
-07/02/2026;FR;09/03/2026;15/03/2026;2;1;Junior Suite;Confirmée
-07/03/2026;CH;16/03/2026;22/03/2026;2;1;Chambre Classique;Confirmée
-21/12/2025;NL;19/02/2026;25/02/2026;4;2;Chambre Supérieure;Annulée
-20/10/2025;France;20/12/2025;24/12/2025;4;1;Chambre Classique;Confirmée
-29/01/2026;FR;24/02/2026;27/02/2026;4;1;Chambre Classique;Confirmée
-22/01/2026;France;13/02/2026;16/02/2026;2;1;Chambre Supérieure;Confirmée
-02/02/2026;BE;08/03/2026;10/03/2026;2;1;Chambre Classique;Confirmée
-06/10/2025;FR;02/01/2026;09/01/2026;2;1;Chambre Supérieure;Confirmée
-04/12/2025;CH;31/12/2025;04/01/2026;4;1;Junior Suite;Confirmée
-01/01/2026;GB;17/02/2026;21/02/2026;4;1;Chambre Supérieure;Annulée
-16/10/2025;GB;11/02/2026;16/02/2026;4;1;Chambre Classique;Confirmée
-27/02/2026;CH;09/03/2026;13/03/2026;2;1;Suite;Confirmée
-08/02/2026;US;26/03/2026;28/03/2026;4;2;Chambre Supérieure;Confirmée
-17/09/2025;NL;21/12/2025;28/12/2025;8;2;Junior Suite;Confirmée
-21/01/2026;France;22/02/2026;25/02/2026;2;1;Chambre Supérieure;Confirmée
-01/01/2026;Suisse;10/01/2026;14/01/2026;2;1;Chambre Classique;Confirmée
-02/10/2025;FR;27/12/2025;29/12/2025;2;1;Suite;Confirmée
-12/12/2025;FR;23/01/2026;25/01/2026;3;1;Chambre Supérieure;Confirmée
-15/02/2026;CH;23/02/2026;27/02/2026;3;1;Chambre Supérieure;Confirmée
-20/01/2026;FR;08/03/2026;14/03/2026;2;1;Chambre Classique;Confirmée
-15/10/2025;GB;13/02/2026;15/02/2026;1;1;Chambre Classique;Confirmée
-13/02/2026;FR;12/03/2026;18/03/2026;3;1;Chambre Classique;Confirmée
-31/01/2026;FR;18/02/2026;24/02/2026;2;1;Chambre Supérieure;Confirmée
-20/08/2025;US;29/12/2025;31/12/2025;8;2;Suite;Confirmée
-24/09/2025;FR;01/01/2026;08/01/2026;3;1;Chambre Classique;Confirmée
-27/11/2025;FR;16/12/2025;21/12/2025;3;1;Appartement;Confirmée
-30/10/2025;FR;22/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
-27/02/2026;FR;01/04/2026;07/04/2026;3;1;Chambre Classique;Confirmée
-21/12/2025;CH;09/01/2026;12/01/2026;3;1;Chambre Classique;Confirmée
-05/12/2025;FR;11/02/2026;13/02/2026;2;1;Chambre Classique;Annulée
-14/10/2025;CH;22/12/2025;27/12/2025;3;1;Chambre Classique;Confirmée
-12/01/2026;DE;18/02/2026;23/02/2026;2;1;Chambre Supérieure;Confirmée
-28/02/2026;FR;09/04/2026;14/04/2026;2;1;Chambre Classique;Confirmée
-27/01/2026;Suisse;06/02/2026;12/02/2026;3;1;Junior Suite;Confirmée
-06/12/2025;CH;26/12/2025;02/01/2026;3;1;Chambre Supérieure;Confirmée
-18/11/2025;FR;20/12/2025;23/12/2025;4;1;Chambre Supérieure;Confirmée
-01/11/2025;US;24/02/2026;01/03/2026;2;1;Chambre Classique;Confirmée
-19/12/2025;NL;08/02/2026;11/02/2026;4;1;Chambre Supérieure;Confirmée
-03/01/2026;BE;02/02/2026;06/02/2026;2;1;Chambre Classique;Confirmée
-06/11/2025;France;20/12/2025;22/12/2025;3;1;Junior Suite;Confirmée
-15/11/2025;IT;06/01/2026;10/01/2026;2;1;Chambre Supérieure;Annulée
-13/09/2025;GB;19/01/2026;22/01/2026;3;1;Suite;Confirmée
-17/09/2025;FR;31/12/2025;06/01/2026;3;1;Chambre Supérieure;Confirmée
-05/12/2025;CH;25/12/2025;01/01/2026;2;1;Chambre Classique;Confirmée
-08/02/2026;FR;06/04/2026;12/04/2026;2;1;Chambre Classique;Confirmée
-27/01/2026;FR;29/03/2026;03/04/2026;2;1;Junior Suite;Confirmée
-28/11/2025;US;01/02/2026;06/02/2026;1;1;Junior Suite;Confirmée
-05/01/2026;GB;14/02/2026;16/02/2026;2;1;Chambre Supérieure;Confirmée
-12/01/2026;FR;06/03/2026;10/03/2026;3;1;Chambre Classique;Confirmée
-31/10/2025;GB;18/01/2026;21/01/2026;2;1;Appartement;Confirmée
-05/01/2026;BE;09/02/2026;12/02/2026;2;1;Chambre Supérieure;Confirmée
-05/03/2026;France;23/03/2026;27/03/2026;4;1;Chambre Supérieure;Confirmée
-22/11/2025;US;04/02/2026;08/02/2026;3;1;Chambre Supérieure;Confirmée
-22/01/2026;FR;12/02/2026;17/02/2026;2;1;Junior Suite;Confirmée
-24/10/2025;BE;31/12/2025;05/01/2026;2;1;Suite;Confirmée
-13/02/2026;FR;08/03/2026;13/03/2026;4;1;Appartement;Confirmée
-25/08/2025;FR;29/12/2025;03/01/2026;2;1;Chambre Supérieure;Confirmée
-27/01/2026;CH;11/02/2026;15/02/2026;4;1;Appartement;Confirmée
-07/12/2025;DE;28/01/2026;30/01/2026;4;2;Chambre Supérieure;Confirmée
-27/10/2025;GB;28/12/2025;02/01/2026;2;1;Appartement;Confirmée
-04/01/2026;CH;24/01/2026;30/01/2026;3;1;Chambre Supérieure;Confirmée
-12/10/2025;GB;09/01/2026;11/01/2026;2;1;Chambre Classique;Confirmée
-31/01/2026;DE;16/03/2026;22/03/2026;9;3;Chambre Classique;Annulée
-29/10/2025;NL;19/12/2025;23/12/2025;3;1;Chambre Supérieure;Confirmée
-14/01/2026;FR;03/02/2026;09/02/2026;6;2;Chambre Supérieure;Confirmée
-20/01/2026;GB;19/02/2026;23/02/2026;3;1;Chambre Supérieure;Confirmée
-23/01/2026;FR;01/03/2026;05/03/2026;2;1;Junior Suite;Confirmée
-08/10/2025;FR;01/01/2026;05/01/2026;6;3;Junior Suite;Confirmée
-13/12/2025;FR;13/01/2026;17/01/2026;3;1;Chambre Classique;Confirmée
-20/02/2026;CH;28/02/2026;02/03/2026;6;3;Chambre Classique;Confirmée
-31/12/2025;CH;28/01/2026;02/02/2026;1;1;Junior Suite;Confirmée
-09/09/2025;GB;28/12/2025;02/01/2026;2;1;Suite;Confirmée
-05/12/2025;DE;14/01/2026;16/01/2026;3;1;Appartement;Confirmée
-27/01/2026;GB;02/04/2026;05/04/2026;2;1;Suite;Confirmée
-10/02/2026;Suisse;20/02/2026;22/02/2026;3;1;Chambre Supérieure;Confirmée
-09/11/2025;BE;02/01/2026;09/01/2026;2;1;Suite;Confirmée
-13/02/2026;FR;09/03/2026;12/03/2026;1;1;Chambre Supérieure;Confirmée
-04/03/2026;BE;02/04/2026;04/04/2026;4;1;Suite;Confirmée
-23/10/2025;NL;17/01/2026;23/01/2026;6;3;Chambre Supérieure;Confirmée
-05/03/2026;CH;16/03/2026;21/03/2026;6;3;Chambre Supérieure;Confirmée
-29/10/2025;GB;15/12/2025;21/12/2025;3;1;Chambre Supérieure;Confirmée
-13/11/2025;FR;30/12/2025;04/01/2026;3;1;Chambre Supérieure;Confirmée
-28/09/2025;GB;20/12/2025;23/12/2025;2;1;Junior Suite;Confirmée
-18/03/2026;FR;04/04/2026;10/04/2026;3;1;Chambre Classique;Confirmée
-21/02/2026;CH;28/03/2026;03/04/2026;3;1;Chambre Classique;Confirmée
-06/02/2026;DE;12/03/2026;17/03/2026;2;1;Chambre Classique;Confirmée
-10/12/2025;FR;26/01/2026;31/01/2026;3;1;Appartement;Confirmée
-15/02/2026;FR;26/03/2026;31/03/2026;4;1;Junior Suite;Confirmée
-02/03/2026;FR;24/03/2026;28/03/2026;4;2;Chambre Supérieure;Confirmée
-15/11/2025;FR;28/12/2025;30/12/2025;9;3;Chambre Supérieure;Confirmée
-21/01/2026;France;21/02/2026;24/02/2026;2;1;Suite;Confirmée
-14/12/2025;DE;09/02/2026;15/02/2026;2;1;Suite;Confirmée
-29/01/2026;FR;27/02/2026;02/03/2026;2;1;Chambre Supérieure;Annulée
-13/02/2026;BE;03/04/2026;05/04/2026;3;1;Chambre Supérieure;Confirmée
-01/01/2026;FR;06/02/2026;10/02/2026;2;1;Chambre Classique;Confirmée
-30/01/2026;FR;15/02/2026;20/02/2026;2;1;Chambre Classique;Confirmée
-19/11/2025;FR;11/01/2026;15/01/2026;2;1;Chambre Classique;Confirmée
-20/10/2025;FR;12/12/2025;16/12/2025;4;1;Chambre Classique;Confirmée
-01/01/2026;BE;30/01/2026;04/02/2026;2;1;Junior Suite;Confirmée
-29/12/2025;NL;14/02/2026;16/02/2026;2;1;Chambre Classique;Confirmée
-27/02/2026;FR;19/03/2026;25/03/2026;2;1;Chambre Supérieure;Confirmée
-23/11/2025;CH;01/01/2026;06/01/2026;2;1;Suite;Confirmée
-20/02/2026;IT;25/03/2026;27/03/2026;2;1;Chambre Supérieure;Confirmée
-13/10/2025;FR;28/12/2025;04/01/2026;4;2;Junior Suite;Annulée
-01/01/2026;GB;01/02/2026;06/02/2026;4;1;Chambre Supérieure;Confirmée
-08/11/2025;CH;23/12/2025;27/12/2025;4;2;Chambre Supérieure;Confirmée
-23/12/2025;US;01/02/2026;05/02/2026;2;1;Chambre Classique;Confirmée
-12/01/2026;CH;08/02/2026;10/02/2026;2;1;Chambre Classique;Confirmée
-14/09/2025;GB;30/12/2025;03/01/2026;2;1;Chambre Classique;Confirmée
-06/02/2026;FR;06/03/2026;11/03/2026;3;1;Suite;Confirmée
-08/01/2026;FR;04/02/2026;09/02/2026;3;1;Chambre Supérieure;Confirmée
-06/02/2026;BE;04/03/2026;09/03/2026;6;2;Chambre Classique;Confirmée
-04/02/2026;CH;24/02/2026;28/02/2026;2;1;Chambre Supérieure;Confirmée
-16/01/2026;NL;19/02/2026;23/02/2026;6;3;Chambre Supérieure;Confirmée
-18/02/2026;FR;17/03/2026;21/03/2026;2;1;Appartement;Confirmée
-30/12/2025;DE;15/02/2026;20/02/2026;2;1;Appartement;Confirmée
-07/01/2026;CH;23/01/2026;28/01/2026;3;1;Chambre Supérieure;Confirmée
-17/11/2025;FR;31/12/2025;02/01/2026;6;2;Chambre Supérieure;Confirmée
-25/12/2025;CH;29/01/2026;31/01/2026;4;1;Chambre Classique;Confirmée
-13/10/2025;GB;12/12/2025;15/12/2025;2;1;Chambre Supérieure;Confirmée
-18/01/2026;FR;27/03/2026;01/04/2026;3;1;Chambre Classique;Confirmée
-31/12/2025;FR;14/02/2026;16/02/2026;12;3;Chambre Supérieure;Confirmée
-03/02/2026;GB;23/03/2026;28/03/2026;2;1;Appartement;Confirmée
-29/10/2025;GB;31/12/2025;06/01/2026;2;1;Chambre Classique;Confirmée
-20/12/2025;FR;23/01/2026;28/01/2026;4;2;Chambre Supérieure;Confirmée
-22/08/2025;GB;31/12/2025;05/01/2026;3;1;Chambre Supérieure;Confirmée
-08/01/2026;FR;03/03/2026;09/03/2026;2;1;Chambre Supérieure;Confirmée
-24/12/2025;FR;23/01/2026;27/01/2026;3;1;Suite;Confirmée
-12/01/2026;FR;30/01/2026;02/02/2026;2;1;Chambre Classique;Confirmée
-24/12/2025;GB;22/03/2026;27/03/2026;2;1;Junior Suite;Confirmée
-20/11/2025;FR;25/12/2025;31/12/2025;2;1;Junior Suite;Annulée
-10/01/2026;GB;04/03/2026;08/03/2026;2;1;Chambre Classique;Annulée
-19/11/2025;NL;26/02/2026;28/02/2026;6;3;Chambre Supérieure;Confirmée
-01/03/2026;CH;11/03/2026;17/03/2026;3;1;Suite;Confirmée
-03/01/2026;FR;23/01/2026;29/01/2026;4;1;Junior Suite;Confirmée
-26/11/2025;CH;26/12/2025;02/01/2026;4;2;Junior Suite;Annulée
-29/09/2025;FR;25/12/2025;31/12/2025;8;2;Chambre Supérieure;Confirmée
-12/02/2026;FR;28/03/2026;03/04/2026;2;1;Junior Suite;Confirmée
-20/02/2026;CH;16/03/2026;22/03/2026;2;1;Junior Suite;Annulée
-03/12/2025;US;14/02/2026;16/02/2026;2;1;Junior Suite;Confirmée
-26/02/2026;FR;16/03/2026;22/03/2026;2;1;Suite;Confirmée
-20/11/2025;DE;18/12/2025;21/12/2025;3;1;Chambre Supérieure;Confirmée
-22/09/2025;GB;17/12/2025;20/12/2025;3;1;Chambre Classique;Confirmée
-16/02/2026;FR;06/03/2026;08/03/2026;2;1;Chambre Supérieure;Confirmée
-29/12/2025;France;02/02/2026;05/02/2026;2;1;Suite;Confirmée
-20/10/2025;FR;31/12/2025;03/01/2026;6;3;Chambre Classique;Annulée
-02/03/2025;US;25/12/2025;30/12/2025;2;1;Chambre Supérieure;Confirmée
-22/12/2025;France;23/02/2026;28/02/2026;2;1;Appartement;Confirmée
-08/03/2026;FR;08/04/2026;11/04/2026;3;1;Suite;Confirmée
-12/02/2026;CH;23/02/2026;27/02/2026;2;1;Chambre Supérieure;Confirmée
-17/11/2025;DE;14/12/2025;17/12/2025;3;1;Junior Suite;Confirmée
-08/01/2026;FR;15/02/2026;18/02/2026;6;3;Appartement;Confirmée
-24/03/2026;CH;02/04/2026;04/04/2026;2;1;Chambre Classique;Confirmée
-04/11/2025;FR;31/12/2025;07/01/2026;2;1;Chambre Supérieure;Confirmée
-20/01/2026;CH;10/02/2026;12/02/2026;2;1;Chambre Classique;Confirmée
-11/12/2025;FR;01/02/2026;06/02/2026;2;1;Chambre Classique;Confirmée
-12/10/2025;GB;19/12/2025;21/12/2025;4;2;Suite;Confirmée
-14/01/2026;FR;02/02/2026;06/02/2026;2;1;Chambre Classique;Confirmée
-14/12/2025;FR;18/02/2026;22/02/2026;2;1;Junior Suite;Confirmée
-30/09/2025;NL;03/01/2026;05/01/2026;2;1;Chambre Classique;Confirmée
-16/11/2025;CH;15/12/2025;21/12/2025;2;1;Chambre Classique;Confirmée
-06/03/2026;CH;15/03/2026;18/03/2026;2;1;Chambre Classique;Confirmée
-24/01/2026;FR;11/04/2026;15/04/2026;2;1;Junior Suite;Confirmée
-12/12/2025;CH;26/12/2025;30/12/2025;2;1;Chambre Classique;Confirmée
-17/11/2025;GB;28/01/2026;02/02/2026;2;1;Chambre Supérieure;Annulée
-24/11/2025;FR;01/01/2026;05/01/2026;3;1;Appartement;Confirmée
-05/01/2026;GB;28/03/2026;03/04/2026;4;2;Suite;Confirmée
-20/12/2025;FR;08/01/2026;13/01/2026;2;1;Appartement;Confirmée
-11/02/2026;FR;06/03/2026;08/03/2026;2;1;Junior Suite;Annulée
-11/11/2025;CH;23/12/2025;30/12/2025;4;1;Chambre Classique;Confirmée
-18/08/2025;FR;03/01/2026;10/01/2026;3;1;Appartement;Confirmée
-08/02/2026;FR;27/02/2026;01/03/2026;3;1;Appartement;Confirmée
-15/02/2026;CH;26/02/2026;03/03/2026;3;1;Junior Suite;Confirmée
-26/02/2026;France;19/03/2026;22/03/2026;3;1;Chambre Supérieure;Confirmée
-02/11/2025;FR;30/12/2025;03/01/2026;4;2;Chambre Classique;Confirmée
-27/12/2025;FR;08/02/2026;11/02/2026;3;1;Appartement;Confirmée
-24/12/2025;GB;03/02/2026;07/02/2026;2;1;Chambre Classique;Confirmée
-28/02/2026;CH;23/03/2026;29/03/2026;2;1;Suite;Confirmée
-13/11/2025;FR;04/01/2026;10/01/2026;2;1;Chambre Classique;Confirmée
-05/01/2026;France;31/01/2026;02/02/2026;2;1;Chambre Classique;Confirmée
-29/12/2025;DE;06/02/2026;10/02/2026;3;1;Chambre Supérieure;Confirmée
-12/01/2026;FR;22/02/2026;26/02/2026;4;1;Chambre Supérieure;Confirmée
-27/08/2025;FR;30/12/2025;04/01/2026;4;1;Chambre Classique;Confirmée
-11/01/2026;BE;15/02/2026;17/02/2026;2;1;Chambre Supérieure;Confirmée
-08/11/2025;FR;16/12/2025;20/12/2025;2;1;Junior Suite;Annulée
-11/01/2026;DE;02/03/2026;08/03/2026;6;3;Chambre Supérieure;Confirmée
-03/02/2026;FR;06/04/2026;08/04/2026;4;1;Suite;Confirmée
-12/01/2026;CH;06/02/2026;11/02/2026;3;1;Junior Suite;Confirmée
-04/12/2025;FR;01/01/2026;06/01/2026;2;1;Chambre Classique;Confirmée
-14/02/2026;BE;06/03/2026;09/03/2026;4;1;Chambre Classique;Confirmée
-02/02/2026;CH;26/02/2026;02/03/2026;6;3;Junior Suite;Confirmée
-07/11/2025;CH;03/01/2026;06/01/2026;2;1;Chambre Supérieure;Confirmée
-26/01/2026;FR;01/03/2026;04/03/2026;2;1;Chambre Supérieure;Confirmée
-01/03/2026;BE;07/04/2026;10/04/2026;4;1;Chambre Classique;Confirmée
-02/03/2026;FR;24/03/2026;26/03/2026;2;1;Appartement;Confirmée
-04/12/2025;FR;12/01/2026;15/01/2026;2;1;Junior Suite;Confirmée
-26/01/2026;FR;16/02/2026;18/02/2026;3;1;Chambre Classique;Confirmée
-05/01/2026;GB;17/02/2026;23/02/2026;3;1;Chambre Supérieure;Confirmée
-24/02/2026;BE;18/03/2026;22/03/2026;4;2;Chambre Classique;Confirmée
-07/01/2026;US;17/02/2026;22/02/2026;4;1;Chambre Supérieure;Confirmée
-14/12/2025;GB;12/01/2026;18/01/2026;4;1;Chambre Classique;Confirmée
-30/12/2025;FR;05/02/2026;11/02/2026;3;1;Chambre Classique;Confirmée
-13/12/2025;FR;08/02/2026;12/02/2026;3;1;Junior Suite;Confirmée
-19/01/2026;FR;22/02/2026;25/02/2026;2;1;Suite;Annulée
-13/01/2026;US;24/02/2026;27/02/2026;3;1;Appartement;Annulée
-02/12/2025;FR;11/01/2026;17/01/2026;2;1;Chambre Supérieure;Confirmée
-26/01/2026;FR;20/02/2026;26/02/2026;2;1;Chambre Supérieure;Annulée
-12/02/2026;GB;24/03/2026;30/03/2026;2;1;Chambre Classique;Confirmée
-18/12/2025;DE;10/02/2026;16/02/2026;2;1;Suite;Confirmée
-14/02/2026;CH;22/02/2026;25/02/2026;1;1;Chambre Supérieure;Confirmée
-25/12/2025;GB;09/03/2026;14/03/2026;2;1;Appartement;Confirmée
-14/02/2026;GB;28/03/2026;01/04/2026;4;1;Suite;Confirmée
-01/01/2026;BE;14/02/2026;18/02/2026;2;1;Appartement;Confirmée
-16/02/2026;CH;09/03/2026;11/03/2026;2;1;Suite;Confirmée
-14/11/2025;Suisse;22/12/2025;29/12/2025;2;1;Suite;Confirmée
-01/12/2025;CH;20/12/2025;25/12/2025;8;2;Chambre Supérieure;Confirmée
-06/02/2026;BE;21/03/2026;24/03/2026;4;2;Chambre Classique;Confirmée
-23/02/2026;DE;20/03/2026;22/03/2026;2;1;Chambre Classique;Confirmée
-26/10/2025;FR;22/12/2025;24/12/2025;2;1;Chambre Supérieure;Confirmée
-20/01/2026;FR;08/03/2026;12/03/2026;2;1;Chambre Classique;Confirmée
-25/12/2025;BE;05/03/2026;10/03/2026;4;1;Chambre Supérieure;Confirmée
-17/12/2025;FR;10/01/2026;15/01/2026;6;2;Chambre Classique;Confirmée
-03/02/2026;FR;23/02/2026;01/03/2026;9;3;Chambre Classique;Confirmée
-07/10/2025;BE;17/12/2025;23/12/2025;2;1;Chambre Supérieure;Confirmée
-13/02/2026;FR;03/04/2026;05/04/2026;2;1;Chambre Classique;Confirmée
-16/01/2026;Suisse;06/02/2026;10/02/2026;2;1;Chambre Supérieure;Confirmée
-22/11/2025;GB;13/02/2026;15/02/2026;2;1;Chambre Classique;Confirmée
-29/11/2025;US;28/02/2026;04/03/2026;2;1;Chambre Classique;Confirmée
-03/02/2026;FR;21/02/2026;27/02/2026;1;1;Chambre Supérieure;Confirmée
-12/01/2026;FR;07/02/2026;11/02/2026;6;3;Chambre Classique;Confirmée
-16/02/2026;GB;08/04/2026;12/04/2026;8;2;Chambre Supérieure;Confirmée
-24/12/2025;BE;21/03/2026;24/03/2026;2;1;Suite;Confirmée
-15/05/2025;US;26/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
-30/12/2025;BE;20/02/2026;24/02/2026;3;1;Junior Suite;Confirmée
-24/10/2025;FR;25/12/2025;31/12/2025;2;1;Chambre Classique;Confirmée
-17/11/2025;NL;03/02/2026;07/02/2026;2;1;Suite;Confirmée
-29/11/2025;FR;13/02/2026;16/02/2026;2;1;Chambre Classique;Confirmée
-23/11/2025;CH;19/12/2025;25/12/2025;3;1;Chambre Supérieure;Confirmée
-25/10/2025;CH;27/12/2025;02/01/2026;4;1;Suite;Confirmée
-13/12/2025;FR;09/02/2026;11/02/2026;1;1;Suite;Confirmée
-02/12/2025;FR;09/02/2026;14/02/2026;3;1;Suite;Confirmée
-19/10/2025;US;06/02/2026;12/02/2026;3;1;Chambre Classique;Confirmée
-16/11/2025;US;26/01/2026;31/01/2026;4;1;Chambre Classique;Confirmée
-09/12/2025;FR;15/01/2026;19/01/2026;1;1;Suite;Confirmée
-03/02/2026;FR;15/03/2026;18/03/2026;8;2;Junior Suite;Confirmée
-04/08/2026;France;19/12/2026;22/12/2026;6;3;Chambre Classique;Confirmée
-29/07/2026;DE;21/12/2026;25/12/2026;6;3;Chambre Classique;Confirmée
-16/08/2026;BE;29/12/2026;04/01/2027;4;2;Junior Suite;Confirmée
-04/07/2026;GB;26/12/2026;01/01/2027;1;1;Appartement;Confirmée
-24/08/2026;FR;26/12/2026;31/12/2026;3;1;Chambre Supérieure;Annulée
-14/08/2026;GB;25/12/2026;31/12/2026;2;1;Chambre Supérieure;Confirmée
-17/09/2026;France;20/12/2026;22/12/2026;3;1;Junior Suite;Confirmée
-27/06/2026;GB;27/12/2026;01/01/2027;4;2;Junior Suite;Confirmée
-07/09/2026;GB;29/12/2026;31/12/2026;2;1;Chambre Classique;Confirmée
-11/09/2026;FR;28/12/2026;03/01/2027;2;1;Chambre Classique;Confirmée
-06/10/2026;FR;30/12/2026;05/01/2027;3;1;Suite;Confirmée
-18/08/2026;US;14/01/2027;17/01/2027;2;1;Chambre Supérieure;Confirmée
-25/08/2026;FR;29/12/2026;01/01/2027;6;3;Appartement;Confirmée
-06/10/2026;FR;26/12/2026;01/01/2027;2;1;Chambre Supérieure;Confirmée
-03/10/2026;FR;29/12/2026;05/01/2027;3;1;Chambre Classique;Confirmée
-08/09/2026;GB;22/12/2026;25/12/2026;2;1;Chambre Classique;Confirmée
-01/09/2026;GB;25/12/2026;29/12/2026;8;2;Junior Suite;Confirmée
-23/09/2026;FR;31/12/2026;03/01/2027;4;2;Junior Suite;Confirmée
-07/08/2026;FR;19/12/2026;24/12/2026;2;1;Junior Suite;Confirmée
-13/07/2026;GB;27/12/2026;31/12/2026;3;1;Chambre Supérieure;Confirmée
-06/06/2026;GB;02/01/2027;04/01/2027;2;1;Suite;Confirmée
-21/08/2026;FR;21/12/2026;24/12/2026;2;1;Chambre Classique;Confirmée
-25/06/2026;US;28/12/2026;04/01/2027;1;1;Chambre Supérieure;Confirmée
-02/09/2026;BE;22/12/2026;29/12/2026;3;1;Chambre Supérieure;Annulée
-14/06/2026;GB;29/12/2026;01/01/2027;6;3;Chambre Supérieure;Confirmée
-18/08/2026;FR;29/12/2026;03/01/2027;6;2;Junior Suite;Annulée
-22/09/2026;GB;13/12/2026;15/12/2026;4;1;Junior Suite;Confirmée
-21/08/2026;FR;02/01/2027;09/01/2027;2;1;Chambre Classique;Confirmée
-12/08/2026;NL;22/12/2026;26/12/2026;2;1;Chambre Supérieure;Confirmée
-08/09/2026;GB;30/12/2026;02/01/2027;2;1;Chambre Classique;Confirmée
-23/06/2026;GB;01/01/2027;08/01/2027;3;1;Chambre Classique;Confirmée
-25/06/2026;US;27/12/2026;29/12/2026;2;1;Junior Suite;Confirmée
-20/09/2026;FR;20/12/2026;25/12/2026;3;1;Chambre Supérieure;Confirmée
-12/09/2026;US;31/12/2026;04/01/2027;1;1;Chambre Classique;Confirmée
-21/08/2026;US;17/02/2027;20/02/2027;2;1;Chambre Classique;Confirmée
-12/09/2026;NL;29/12/2026;04/01/2027;2;1;Chambre Supérieure;Annulée
-30/08/2026;US;22/12/2026;28/12/2026;2;1;Suite;Confirmée
-20/09/2026;FR;23/12/2026;29/12/2026;2;1;Chambre Classique;Confirmée
-17/08/2026;FR;29/12/2026;03/01/2027;6;2;Chambre Supérieure;Confirmée
-19/08/2026;France;25/12/2026;01/01/2027;3;1;Chambre Classique;Confirmée
-01/09/2026;FR;30/12/2026;06/01/2027;3;1;Appartement;Annulée
-17/09/2026;US;07/01/2027;10/01/2027;2;1;Chambre Classique;Confirmée
-21/09/2026;FR;19/12/2026;26/12/2026;2;1;Junior Suite;Confirmée
-14/09/2026;France;20/12/2026;27/12/2026;9;3;Chambre Classique;Confirmée
-07/09/2026;US;23/12/2026;26/12/2026;2;1;Chambre Supérieure;Confirmée
-28/09/2026;DE;22/12/2026;26/12/2026;4;1;Suite;Confirmée
-06/10/2026;FR;23/12/2026;28/12/2026;3;1;Chambre Supérieure;Confirmée
-01/09/2026;BE;19/12/2026;25/12/2026;3;1;Chambre Supérieure;Confirmée
-25/03/2026;US;27/12/2026;31/12/2026;4;1;Chambre Supérieure;Confirmée
-30/09/2026;FR;28/12/2026;31/12/2026;4;1;Appartement;Confirmée
-27/06/2026;US;12/12/2026;16/12/2026;2;1;Junior Suite;Confirmée
-06/09/2026;US;08/02/2027;11/02/2027;2;1;Chambre Classique;Confirmée
-20/09/2026;FR;21/12/2026;28/12/2026;3;1;Suite;Confirmée
-21/08/2026;GB;14/12/2026;17/12/2026;3;1;Chambre Supérieure;Confirmée
-21/08/2026;BE;26/12/2026;01/01/2027;3;1;Junior Suite;Confirmée
-14/09/2026;GB;02/01/2027;07/01/2027;2;1;Suite;Annulée
-26/09/2026;GB;08/02/2027;12/02/2027;2;1;Junior Suite;Confirmée
-31/08/2026;FR;19/12/2026;21/12/2026;3;1;Chambre Classique;Confirmée
-26/09/2026;FR;19/12/2026;25/12/2026;1;1;Chambre Classique;Confirmée
-27/09/2026;FR;24/12/2026;30/12/2026;3;1;Chambre Supérieure;Confirmée
-17/09/2026;FR;23/12/2026;27/12/2026;2;1;Junior Suite;Confirmée
-14/09/2026;GB;10/01/2027;13/01/2027;3;1;Junior Suite;Confirmée
-19/06/2026;US;22/12/2026;25/12/2026;2;1;Chambre Supérieure;Confirmée
-25/08/2026;FR;23/12/2026;30/12/2026;2;1;Chambre Classique;Confirmée
-06/08/2026;GB;28/12/2026;01/01/2027;3;1;Junior Suite;Confirmée
-31/08/2026;GB;23/12/2026;25/12/2026;2;1;Chambre Classique;Confirmée
-15/06/2026;GB;28/12/2026;02/01/2027;2;1;Appartement;Confirmée
-11/06/2026;GB;26/12/2026;29/12/2026;2;1;Suite;Confirmée
-26/08/2026;US;03/02/2027;08/02/2027;4;2;Chambre Supérieure;Confirmée
-29/08/2026;US;26/02/2027;03/03/2027;2;1;Chambre Classique;Confirmée
-27/07/2026;GB;27/12/2026;31/12/2026;2;1;Chambre Classique;Confirmée
-14/08/2026;FR;20/12/2026;23/12/2026;4;1;Junior Suite;Confirmée
-19/08/2026;GB;11/12/2026;16/12/2026;4;1;Appartement;Confirmée
-05/09/2026;FR;24/12/2026;31/12/2026;1;1;Chambre Classique;Confirmée
-01/10/2026;France;29/12/2026;02/01/2027;9;3;Chambre Classique;Confirmée
-02/03/2026;US;23/12/2026;25/12/2026;4;1;Appartement;Annulée
-27/09/2026;FR;20/12/2026;22/12/2026;4;1;Chambre Classique;Annulée
-08/07/2026;NL;29/12/2026;01/01/2027;6;3;Chambre Supérieure;Confirmée
-08/08/2026;GB;11/12/2026;13/12/2026;3;1;Chambre Supérieure;Confirmée
-21/07/2026;US;23/12/2026;30/12/2026;6;3;Chambre Classique;Confirmée
-20/09/2026;NL;02/01/2027;04/01/2027;2;1;Chambre Classique;Confirmée
-10/08/2026;FR;19/12/2026;25/12/2026;9;3;Junior Suite;Confirmée
-25/08/2026;FR;01/01/2027;06/01/2027;6;2;Junior Suite;Confirmée
-06/09/2026;FR;19/12/2026;23/12/2026;4;2;Chambre Supérieure;Confirmée
-13/09/2026;FR;20/12/2026;27/12/2026;3;1;Chambre Classique;Confirmée
-19/09/2026;US;03/01/2027;06/01/2027;8;2;Chambre Supérieure;Confirmée
-02/10/2026;GB;02/01/2027;05/01/2027;2;1;Chambre Supérieure;Confirmée
-27/09/2026;GB;23/12/2026;29/12/2026;2;1;Chambre Classique;Confirmée
-07/09/2026;FR;01/01/2027;03/01/2027;2;1;Suite;Confirmée
-30/06/2026;GB;01/01/2027;05/01/2027;8;2;Junior Suite;Confirmée
-20/08/2026;DE;20/12/2026;27/12/2026;3;1;Chambre Classique;Confirmée
-17/09/2026;US;07/02/2027;13/02/2027;1;1;Chambre Supérieure;Confirmée
-28/05/2026;US;31/12/2026;04/01/2027;3;1;Chambre Classique;Confirmée
-05/08/2026;BE;28/12/2026;03/01/2027;6;2;Chambre Supérieure;Confirmée
-05/10/2026;DE;26/12/2026;29/12/2026;6;2;Suite;Confirmée
-02/09/2026;US;11/12/2026;14/12/2026;4;1;Chambre Classique;Annulée
-18/05/2026;GB;19/12/2026;21/12/2026;2;1;Chambre Classique;Confirmée
-15/09/2026;NL;25/12/2026;29/12/2026;4;1;Chambre Classique;Confirmée
-27/09/2026;GB;11/02/2027;16/02/2027;3;1;Chambre Classique;Confirmée
-20/09/2026;US;14/02/2027;16/02/2027;2;1;Suite;Confirmée
-28/09/2026;FR;13/12/2026;17/12/2026;2;1;Suite;Confirmée
-21/09/2026;FR;24/12/2026;29/12/2026;6;2;Chambre Supérieure;Confirmée
-04/09/2026;DE;20/12/2026;27/12/2026;2;1;Chambre Classique;Confirmée
-20/09/2026;IT;31/12/2026;05/01/2027;2;1;Junior Suite;Confirmée
-28/04/2026;GB;02/01/2027;08/01/2027;3;1;Chambre Supérieure;Annulée
-06/10/2026;France;15/12/2026;20/12/2026;2;1;Chambre Supérieure;Confirmée
-21/09/2026;FR;25/12/2026;31/12/2026;2;1;Chambre Classique;Confirmée
-14/07/2026;US;29/12/2026;05/01/2027;2;1;Suite;Confirmée
-29/07/2026;GB;29/12/2026;04/01/2027;4;1;Chambre Classique;Confirmée
-21/09/2026;US;28/12/2026;03/01/2027;1;1;Appartement;Confirmée
-17/08/2026;GB;24/12/2026;31/12/2026;4;1;Appartement;Confirmée
-17/07/2026;GB;27/12/2026;01/01/2027;2;1;Chambre Classique;Confirmée
-13/08/2026;US;22/01/2027;28/01/2027;4;1;Chambre Supérieure;Confirmée
+﻿Date de réservation;Pays d'origine;Ville d'origine;Arrivée;Départ;Nombre de guests;Nombre de chambres;Type de chambre;Statut
+09/01/2026;FR;Bordeaux;21/02/2026;26/02/2026;2;1;Junior Suite;Confirmée
+28/01/2026;FR;Lyon;09/03/2026;12/03/2026;4;1;Chambre Supérieure;Confirmée
+23/08/2025;US;New York;22/01/2026;26/01/2026;2;1;Chambre Supérieure;Confirmée
+26/12/2025;GB;Edinburgh;05/02/2026;11/02/2026;2;1;Chambre Classique;Confirmée
+16/09/2025;GB;Bristol;22/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
+03/11/2025;GB;London;24/12/2025;27/12/2025;2;1;Suite;Confirmée
+18/01/2026;FR;NANTES;25/02/2026;01/03/2026;2;1;Chambre Supérieure;Confirmée
+04/01/2026;FR;Nantes;17/02/2026;20/02/2026;3;1;Chambre Classique;Confirmée
+30/12/2025;NL;Amsterdam;23/02/2026;25/02/2026;4;2;Chambre Classique;Confirmée
+27/10/2025;BE;Gand;31/12/2025;02/01/2026;4;1;Suite;Confirmée
+05/11/2025;FR;Lille;12/12/2025;17/12/2025;2;1;Chambre Classique;Confirmée
+18/09/2025;GB;LONDON;30/12/2025;05/01/2026;2;1;Chambre Supérieure;Confirmée
+27/01/2026;CH;Zurich;25/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
+07/01/2026;FR;Paris;26/01/2026;28/01/2026;4;1;Appartement;Confirmée
+13/10/2025;NL;Rotterdam;22/12/2025;25/12/2025;4;1;Suite;Confirmée
+06/12/2025;GB;LONDON;10/02/2026;15/02/2026;2;1;Chambre Supérieure;Confirmée
+05/11/2025;GB;London;21/01/2026;24/01/2026;2;1;Appartement;Confirmée
+26/12/2025;NL;Amsterdam;29/01/2026;02/02/2026;3;1;Chambre Classique;Confirmée
+09/09/2025;US;Boston;06/01/2026;11/01/2026;4;1;Junior Suite;Confirmée
+11/05/2025;US;New York;21/12/2025;26/12/2025;4;1;Chambre Classique;Confirmée
+30/04/2025;US;New York;30/12/2025;02/01/2026;12;3;Suite;Confirmée
+28/11/2025;FR;Paris;30/12/2025;03/01/2026;1;1;Suite;Confirmée
+11/09/2025;FR;Paris;19/12/2025;24/12/2025;2;1;Junior Suite;Confirmée
+19/11/2025;CH;GENÈVE;23/12/2025;27/12/2025;4;1;Junior Suite;Confirmée
+24/12/2025;CH;Lausanne;30/01/2026;03/02/2026;2;1;Chambre Classique;Confirmée
+30/08/2025;FR;Marseille;19/12/2025;22/12/2025;2;1;Appartement;Confirmée
+28/11/2025;BE;Bruxelles;27/02/2026;04/03/2026;3;1;Chambre Supérieure;Annulée
+02/02/2026;FR;Paris;22/02/2026;26/02/2026;2;1;Appartement;Confirmée
+12/02/2026;FR;LYON;06/03/2026;08/03/2026;3;1;Chambre Classique;Confirmée
+24/01/2026;CH;GENÈVE;16/02/2026;19/02/2026;2;1;Suite;Confirmée
+27/12/2025;US;New York;06/02/2026;11/02/2026;2;1;Suite;Confirmée
+10/12/2025;CH;Genève;30/12/2025;01/01/2026;2;1;Chambre Classique;Annulée
+18/02/2026;FR;Nantes;26/03/2026;01/04/2026;2;1;Chambre Supérieure;Confirmée
+10/12/2025;FR;LYON;07/01/2026;11/01/2026;2;1;Chambre Supérieure;Confirmée
+23/01/2026;NL;Utrecht;03/03/2026;05/03/2026;2;1;Chambre Supérieure;Confirmée
+22/03/2026;CH;Genève;06/04/2026;12/04/2026;4;1;Junior Suite;Confirmée
+07/12/2025;FR;BORDEAUX;05/02/2026;07/02/2026;2;1;Suite;Confirmée
+14/03/2026;FR;Lyon;05/04/2026;08/04/2026;3;1;Appartement;Confirmée
+09/12/2025;GB;London;11/01/2026;14/01/2026;2;1;Suite;Confirmée
+20/02/2026;CH;Genève;28/02/2026;02/03/2026;2;1;Chambre Supérieure;Confirmée
+28/02/2026;CH;GENÈVE;08/03/2026;10/03/2026;2;1;Chambre Classique;Confirmée
+07/03/2026;CH;Genève;08/04/2026;14/04/2026;3;1;Suite;Confirmée
+04/01/2026;FR;MARSEILLE;16/02/2026;20/02/2026;2;1;Chambre Classique;Confirmée
+17/01/2026;BE;ANVERS;10/03/2026;12/03/2026;2;1;Chambre Supérieure;Confirmée
+13/03/2026;Suisse;Genève;24/03/2026;27/03/2026;8;2;Appartement;Confirmée
+17/12/2025;FR;Paris;06/01/2026;09/01/2026;6;2;Chambre Supérieure;Confirmée
+10/01/2026;France;Lyon;03/02/2026;09/02/2026;2;1;Chambre Supérieure;Confirmée
+08/11/2025;FR;Lyon;13/12/2025;19/12/2025;2;1;Appartement;Confirmée
+16/01/2026;FR;Paris;30/03/2026;04/04/2026;4;1;Junior Suite;Confirmée
+31/01/2026;FR;Lille;27/02/2026;05/03/2026;2;1;Junior Suite;Confirmée
+23/09/2025;DE;Munich;26/12/2025;30/12/2025;4;1;Junior Suite;Confirmée
+27/11/2025;CH;Genève;03/01/2026;05/01/2026;2;1;Appartement;Annulée
+29/01/2026;NL;Amsterdam;24/02/2026;02/03/2026;3;1;Chambre Supérieure;Confirmée
+15/09/2025;US;Miami;23/12/2025;29/12/2025;3;1;Chambre Classique;Confirmée
+12/09/2025;FR;Lyon;21/12/2025;27/12/2025;3;1;Chambre Classique;Confirmée
+21/01/2026;FR;Marseille;06/02/2026;11/02/2026;2;1;Junior Suite;Confirmée
+18/12/2025;GB;London;24/03/2026;26/03/2026;2;1;Chambre Classique;Confirmée
+08/01/2026;FR;BORDEAUX;10/03/2026;14/03/2026;2;1;Chambre Classique;Confirmée
+21/11/2025;CH;GENÈVE;02/01/2026;05/01/2026;3;1;Chambre Classique;Confirmée
+10/02/2026;FR;Paris;23/03/2026;27/03/2026;2;1;Chambre Classique;Confirmée
+10/11/2025;NL;Rotterdam;20/12/2025;26/12/2025;4;1;Chambre Classique;Confirmée
+07/01/2026;FR;Paris;16/02/2026;22/02/2026;1;1;Chambre Classique;Confirmée
+08/12/2025;GB;LONDON;27/02/2026;05/03/2026;2;1;Chambre Classique;Confirmée
+08/11/2025;GB;Edinburgh;29/12/2025;31/12/2025;3;1;Junior Suite;Confirmée
+14/10/2025;GB;LONDON;20/12/2025;22/12/2025;2;1;Suite;Confirmée
+20/11/2025;CH;GENÈVE;29/12/2025;02/01/2026;4;2;Chambre Supérieure;Confirmée
+19/05/2025;GB;MANCHESTER;19/12/2025;24/12/2025;4;2;Chambre Supérieure;Confirmée
+06/01/2026;FR;Paris;21/02/2026;24/02/2026;2;1;Junior Suite;Confirmée
+24/12/2025;FR;Lyon;13/01/2026;19/01/2026;3;1;Junior Suite;Annulée
+30/12/2025;BE;Bruxelles;16/02/2026;22/02/2026;2;1;Chambre Classique;Confirmée
+13/11/2025;US;New York;22/02/2026;24/02/2026;2;1;Chambre Supérieure;Confirmée
+16/01/2026;FR;Paris;02/03/2026;04/03/2026;2;1;Chambre Classique;Confirmée
+09/10/2025;FR;Nantes;14/12/2025;18/12/2025;4;1;Suite;Confirmée
+14/02/2026;BE;Bruxelles;07/03/2026;10/03/2026;2;1;Chambre Classique;Confirmée
+14/10/2025;GB;London;18/02/2026;21/02/2026;2;1;Suite;Confirmée
+10/10/2025;France;Paris;28/12/2025;03/01/2026;4;1;Appartement;Confirmée
+01/12/2025;GB;London;11/02/2026;15/02/2026;1;1;Chambre Classique;Confirmée
+26/11/2025;GB;London;10/02/2026;15/02/2026;2;1;Chambre Supérieure;Confirmée
+27/01/2026;CH;LAUSANNE;19/02/2026;22/02/2026;2;1;Chambre Supérieure;Confirmée
+05/03/2026;CH;Genève;17/03/2026;23/03/2026;2;1;Junior Suite;Confirmée
+03/02/2026;CH;Genève;12/02/2026;15/02/2026;3;1;Chambre Supérieure;Confirmée
+15/12/2025;CH;GENÈVE;13/01/2026;18/01/2026;4;1;Chambre Supérieure;Confirmée
+24/01/2026;FR;Lille;09/02/2026;12/02/2026;4;1;Chambre Classique;Confirmée
+02/03/2026;CH;GENÈVE;26/03/2026;28/03/2026;8;2;Chambre Classique;Confirmée
+12/01/2026;France;LYON;15/03/2026;21/03/2026;1;1;Chambre Supérieure;Confirmée
+20/10/2025;Suisse;ZURICH;25/12/2025;28/12/2025;2;1;Junior Suite;Confirmée
+01/12/2025;CH;Zurich;21/12/2025;24/12/2025;4;1;Suite;Confirmée
+08/11/2025;GB;London;05/01/2026;11/01/2026;3;1;Junior Suite;Confirmée
+03/02/2026;NL;AMSTERDAM;27/02/2026;03/03/2026;2;1;Chambre Supérieure;Confirmée
+23/03/2026;CH;GENÈVE;06/04/2026;10/04/2026;4;1;Chambre Supérieure;Confirmée
+05/02/2026;US;Boston;20/03/2026;26/03/2026;8;2;Chambre Classique;Confirmée
+19/03/2026;FR;PARIS;06/04/2026;08/04/2026;3;1;Chambre Supérieure;Confirmée
+01/12/2025;US;New York;05/04/2026;07/04/2026;1;1;Junior Suite;Confirmée
+11/01/2026;FR;Paris;22/02/2026;28/02/2026;2;1;Junior Suite;Confirmée
+19/12/2025;FR;Lyon;05/01/2026;09/01/2026;3;1;Junior Suite;Confirmée
+22/11/2025;CH;LAUSANNE;25/12/2025;27/12/2025;6;3;Chambre Supérieure;Confirmée
+08/02/2026;FR;Paris;23/03/2026;26/03/2026;3;1;Junior Suite;Confirmée
+02/03/2026;FR;LYON;02/04/2026;07/04/2026;4;1;Chambre Supérieure;Annulée
+01/12/2025;US;Miami;21/03/2026;27/03/2026;2;1;Suite;Confirmée
+17/02/2026;FR;PARIS;06/03/2026;08/03/2026;2;1;Chambre Classique;Confirmée
+08/01/2026;FR;LYON;15/03/2026;17/03/2026;1;1;Junior Suite;Confirmée
+09/10/2025;US;New York;20/12/2025;23/12/2025;4;1;Chambre Supérieure;Confirmée
+24/01/2026;FR;LYON;14/02/2026;17/02/2026;2;1;Chambre Supérieure;Confirmée
+12/11/2025;NL;AMSTERDAM;25/12/2025;01/01/2026;3;1;Junior Suite;Confirmée
+21/09/2025;US;New York;11/02/2026;13/02/2026;4;1;Chambre Supérieure;Confirmée
+10/02/2026;DE;BERLIN;12/04/2026;17/04/2026;2;1;Chambre Supérieure;Confirmée
+22/01/2026;CH;GENÈVE;04/02/2026;06/02/2026;2;1;Junior Suite;Confirmée
+26/01/2026;France;Lyon;14/02/2026;17/02/2026;3;1;Appartement;Confirmée
+15/11/2025;BE;ANVERS;24/12/2025;31/12/2025;2;1;Suite;Confirmée
+10/11/2025;Suisse;Lausanne;23/12/2025;27/12/2025;3;1;Chambre Supérieure;Confirmée
+01/11/2025;GB;London;12/12/2025;14/12/2025;4;1;Suite;Confirmée
+06/01/2026;GB;Manchester;26/02/2026;03/03/2026;2;1;Junior Suite;Confirmée
+25/01/2026;CH;Lausanne;08/02/2026;13/02/2026;3;1;Chambre Supérieure;Confirmée
+28/09/2025;US;Miami;30/12/2025;04/01/2026;2;1;Suite;Confirmée
+07/09/2025;US;NEW YORK;06/01/2026;11/01/2026;1;1;Chambre Supérieure;Confirmée
+27/06/2025;GB;London;01/01/2026;07/01/2026;2;1;Chambre Classique;Confirmée
+07/02/2026;Suisse;Genève;21/02/2026;27/02/2026;12;3;Chambre Supérieure;Confirmée
+12/01/2026;FR;Paris;19/02/2026;23/02/2026;2;1;Junior Suite;Confirmée
+10/02/2026;FR;PARIS;26/02/2026;28/02/2026;2;1;Junior Suite;Confirmée
+07/01/2026;FR;Marseille;05/02/2026;08/02/2026;2;1;Appartement;Annulée
+18/01/2026;FR;Paris;04/03/2026;09/03/2026;2;1;Chambre Classique;Confirmée
+22/01/2026;FR;PARIS;04/04/2026;07/04/2026;2;1;Chambre Classique;Confirmée
+26/12/2025;NL;Utrecht;26/01/2026;01/02/2026;1;1;Appartement;Confirmée
+17/12/2025;BE;BRUXELLES;10/01/2026;14/01/2026;2;1;Chambre Classique;Annulée
+03/09/2025;BE;ANVERS;25/12/2025;29/12/2025;3;1;Suite;Confirmée
+02/11/2025;BE;Bruxelles;01/01/2026;07/01/2026;6;2;Suite;Confirmée
+13/01/2026;FR;PARIS;15/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+04/02/2026;FR;Marseille;25/02/2026;02/03/2026;6;3;Chambre Supérieure;Confirmée
+10/11/2025;US;Miami;26/02/2026;01/03/2026;3;1;Chambre Supérieure;Confirmée
+13/12/2025;BE;Bruxelles;05/02/2026;10/02/2026;2;1;Appartement;Confirmée
+03/03/2026;FR;LYON;04/04/2026;06/04/2026;6;3;Junior Suite;Confirmée
+20/03/2026;CH;Genève;30/03/2026;02/04/2026;3;1;Suite;Confirmée
+20/12/2025;FR;Bordeaux;21/02/2026;25/02/2026;6;3;Chambre Supérieure;Confirmée
+14/11/2025;FR;Bordeaux;28/12/2025;01/01/2026;2;1;Chambre Classique;Annulée
+12/02/2026;BE;Bruxelles;28/03/2026;01/04/2026;2;1;Chambre Supérieure;Confirmée
+26/09/2025;France;Lyon;26/12/2025;31/12/2025;8;2;Chambre Supérieure;Confirmée
+27/10/2025;DE;Munich;06/01/2026;08/01/2026;2;1;Junior Suite;Confirmée
+28/10/2025;BE;Gand;24/12/2025;29/12/2025;4;1;Chambre Classique;Confirmée
+02/12/2025;FR;BORDEAUX;17/01/2026;21/01/2026;2;1;Chambre Supérieure;Confirmée
+08/09/2025;NL;Amsterdam;24/12/2025;30/12/2025;6;2;Chambre Supérieure;Confirmée
+30/09/2025;FR;Nantes;23/12/2025;28/12/2025;6;3;Chambre Classique;Confirmée
+23/11/2025;CH;Genève;18/12/2025;20/12/2025;1;1;Suite;Confirmée
+01/01/2026;FR;PARIS;20/02/2026;24/02/2026;2;1;Chambre Supérieure;Confirmée
+13/12/2025;FR;Paris;17/01/2026;21/01/2026;1;1;Chambre Classique;Confirmée
+15/09/2025;US;Miami;06/03/2026;09/03/2026;2;1;Junior Suite;Confirmée
+21/01/2026;GB;Edinburgh;05/03/2026;11/03/2026;2;1;Chambre Supérieure;Confirmée
+31/10/2025;CH;Genève;03/01/2026;09/01/2026;4;1;Chambre Supérieure;Confirmée
+26/10/2025;GB;LONDON;09/02/2026;11/02/2026;3;1;Chambre Classique;Confirmée
+16/11/2025;BE;BRUXELLES;13/01/2026;19/01/2026;2;1;Chambre Supérieure;Confirmée
+28/02/2026;CH;Zurich;09/03/2026;13/03/2026;6;3;Suite;Annulée
+07/12/2025;FR;Bordeaux;08/02/2026;13/02/2026;2;1;Suite;Confirmée
+27/08/2025;FR;Paris;19/12/2025;23/12/2025;2;1;Chambre Classique;Confirmée
+06/01/2026;FR;Paris;10/02/2026;12/02/2026;2;1;Chambre Supérieure;Confirmée
+15/01/2026;FR;Marseille;28/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
+11/12/2025;CH;GENÈVE;30/12/2025;06/01/2026;4;2;Chambre Supérieure;Confirmée
+18/02/2026;FR;Lyon;02/04/2026;07/04/2026;1;1;Junior Suite;Confirmée
+25/01/2026;FR;Paris;03/03/2026;09/03/2026;3;1;Chambre Classique;Confirmée
+27/09/2025;GB;London;16/12/2025;19/12/2025;2;1;Suite;Confirmée
+18/08/2025;BE;Anvers;24/12/2025;26/12/2025;2;1;Suite;Confirmée
+26/11/2025;GB;London;01/02/2026;06/02/2026;3;1;Suite;Confirmée
+21/01/2026;CH;Lausanne;12/02/2026;17/02/2026;3;1;Junior Suite;Confirmée
+30/11/2025;FR;LILLE;07/01/2026;11/01/2026;1;1;Chambre Classique;Confirmée
+15/12/2025;Suisse;GENÈVE;01/01/2026;07/01/2026;2;1;Suite;Confirmée
+09/02/2026;CH;Genève;07/03/2026;09/03/2026;2;1;Appartement;Confirmée
+17/12/2025;FR;Lille;06/02/2026;08/02/2026;6;2;Chambre Classique;Confirmée
+10/09/2025;NL;Amsterdam;21/12/2025;23/12/2025;12;3;Junior Suite;Confirmée
+08/01/2026;IT;Milan;12/02/2026;16/02/2026;2;1;Chambre Supérieure;Confirmée
+05/11/2025;FR;Lyon;27/12/2025;29/12/2025;2;1;Chambre Supérieure;Annulée
+05/10/2025;FR;Lyon;19/12/2025;22/12/2025;6;2;Junior Suite;Confirmée
+10/03/2026;CH;Lausanne;31/03/2026;05/04/2026;3;1;Junior Suite;Confirmée
+11/01/2026;GB;London;27/02/2026;01/03/2026;3;1;Appartement;Confirmée
+29/12/2025;DE;Berlin;05/03/2026;07/03/2026;2;1;Junior Suite;Confirmée
+15/11/2025;FR;Paris;30/12/2025;06/01/2026;1;1;Appartement;Confirmée
+10/11/2025;FR;Paris;22/01/2026;26/01/2026;1;1;Appartement;Confirmée
+14/02/2026;CH;Zurich;25/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
+31/10/2025;Suisse;ZURICH;23/12/2025;30/12/2025;2;1;Chambre Classique;Confirmée
+17/10/2025;US;Miami;03/04/2026;08/04/2026;3;1;Chambre Supérieure;Confirmée
+31/08/2025;NL;Rotterdam;22/12/2025;28/12/2025;2;1;Appartement;Annulée
+01/01/2026;GB;BRISTOL;09/03/2026;13/03/2026;4;2;Junior Suite;Confirmée
+03/12/2025;FR;Lyon;11/02/2026;15/02/2026;4;1;Chambre Supérieure;Confirmée
+04/03/2026;FR;PARIS;27/03/2026;30/03/2026;1;1;Suite;Confirmée
+14/01/2026;BE;Anvers;04/02/2026;09/02/2026;4;1;Chambre Classique;Confirmée
+13/09/2025;FR;PARIS;23/12/2025;25/12/2025;2;1;Junior Suite;Confirmée
+01/12/2025;Suisse;Zurich;19/12/2025;23/12/2025;2;1;Junior Suite;Confirmée
+28/12/2025;FR;Bordeaux;25/01/2026;31/01/2026;2;1;Suite;Confirmée
+29/11/2025;CH;Genève;24/12/2025;30/12/2025;4;1;Junior Suite;Confirmée
+29/01/2026;CH;GENÈVE;10/02/2026;15/02/2026;3;1;Junior Suite;Confirmée
+18/02/2026;FR;PARIS;09/03/2026;13/03/2026;3;1;Suite;Annulée
+17/03/2026;FR;Bordeaux;05/04/2026;07/04/2026;3;1;Chambre Supérieure;Confirmée
+27/12/2025;FR;Lille;10/03/2026;13/03/2026;2;1;Chambre Supérieure;Confirmée
+21/06/2025;NL;Rotterdam;26/12/2025;01/01/2026;1;1;Chambre Classique;Confirmée
+24/11/2025;GB;London;05/03/2026;08/03/2026;3;1;Chambre Classique;Confirmée
+28/12/2025;FR;Lyon;17/01/2026;21/01/2026;2;1;Chambre Classique;Confirmée
+18/01/2026;GB;LONDON;19/02/2026;23/02/2026;6;3;Chambre Classique;Confirmée
+30/12/2025;FR;Lyon;05/02/2026;11/02/2026;2;1;Chambre Classique;Confirmée
+09/10/2025;France;NANTES;20/12/2025;24/12/2025;6;3;Appartement;Confirmée
+14/12/2025;FR;Paris;17/02/2026;20/02/2026;3;1;Suite;Confirmée
+21/12/2025;GB;Edinburgh;17/03/2026;21/03/2026;2;1;Chambre Supérieure;Confirmée
+05/12/2025;FR;Nantes;05/02/2026;09/02/2026;4;1;Suite;Confirmée
+03/07/2025;GB;EDINBURGH;22/12/2025;26/12/2025;2;1;Suite;Confirmée
+01/12/2025;FR;Paris;13/02/2026;16/02/2026;3;1;Chambre Classique;Confirmée
+07/10/2025;GB;London;22/12/2025;25/12/2025;1;1;Chambre Classique;Confirmée
+04/08/2025;GB;London;22/12/2025;29/12/2025;4;1;Chambre Supérieure;Confirmée
+26/11/2025;FR;Lyon;03/02/2026;05/02/2026;2;1;Suite;Confirmée
+27/12/2025;FR;Lille;22/02/2026;27/02/2026;2;1;Chambre Classique;Confirmée
+27/12/2025;FR;Nantes;15/01/2026;18/01/2026;4;1;Chambre Classique;Confirmée
+20/12/2025;DE;Munich;03/02/2026;07/02/2026;4;1;Suite;Confirmée
+31/12/2025;FR;Paris;23/01/2026;29/01/2026;6;3;Appartement;Confirmée
+07/02/2026;FR;Bordeaux;19/03/2026;23/03/2026;4;1;Suite;Confirmée
+12/01/2026;FR;Paris;19/02/2026;21/02/2026;3;1;Chambre Supérieure;Confirmée
+01/11/2025;FR;LYON;05/01/2026;10/01/2026;2;1;Appartement;Confirmée
+22/11/2025;GB;London;20/01/2026;24/01/2026;2;1;Chambre Classique;Confirmée
+13/12/2025;GB;London;03/04/2026;08/04/2026;3;1;Chambre Classique;Confirmée
+07/01/2026;BE;Bruxelles;06/02/2026;11/02/2026;2;1;Junior Suite;Confirmée
+10/08/2025;FR;Bordeaux;19/12/2025;21/12/2025;2;1;Chambre Classique;Confirmée
+07/12/2025;France;Bordeaux;17/01/2026;22/01/2026;2;1;Chambre Supérieure;Confirmée
+21/01/2026;FR;Paris;14/02/2026;20/02/2026;2;1;Chambre Supérieure;Annulée
+18/02/2026;Suisse;Zurich;02/03/2026;08/03/2026;2;1;Suite;Confirmée
+28/10/2025;FR;Nantes;12/12/2025;18/12/2025;4;1;Chambre Classique;Confirmée
+27/12/2025;FR;Nantes;11/02/2026;15/02/2026;12;3;Chambre Supérieure;Confirmée
+29/01/2026;CH;Zurich;10/02/2026;14/02/2026;4;2;Junior Suite;Confirmée
+06/10/2025;US;NEW YORK;26/12/2025;02/01/2026;2;1;Appartement;Confirmée
+20/11/2025;GB;London;04/03/2026;10/03/2026;3;1;Chambre Classique;Confirmée
+14/02/2026;CH;ZURICH;23/02/2026;27/02/2026;2;1;Suite;Confirmée
+14/11/2025;France;Paris;14/01/2026;20/01/2026;3;1;Chambre Classique;Confirmée
+16/03/2026;CH;Lausanne;07/04/2026;12/04/2026;4;1;Junior Suite;Confirmée
+25/01/2026;FR;Lyon;14/02/2026;18/02/2026;4;2;Chambre Supérieure;Confirmée
+10/12/2025;CH;Genève;29/12/2025;04/01/2026;3;1;Chambre Classique;Confirmée
+20/01/2026;FR;Paris;07/02/2026;11/02/2026;2;1;Chambre Supérieure;Confirmée
+29/11/2025;US;BOSTON;06/01/2026;09/01/2026;2;1;Junior Suite;Confirmée
+17/01/2026;CH;Genève;27/01/2026;30/01/2026;2;1;Chambre Classique;Confirmée
+10/01/2026;FR;PARIS;15/02/2026;19/02/2026;4;2;Appartement;Confirmée
+20/01/2026;DE;Munich;14/02/2026;16/02/2026;3;1;Suite;Confirmée
+22/09/2025;GB;London;07/02/2026;10/02/2026;12;3;Chambre Supérieure;Confirmée
+27/11/2025;NL;ROTTERDAM;07/01/2026;09/01/2026;6;2;Junior Suite;Confirmée
+19/12/2025;GB;Manchester;21/02/2026;26/02/2026;2;1;Chambre Classique;Confirmée
+14/02/2026;NL;Amsterdam;24/03/2026;29/03/2026;2;1;Chambre Classique;Confirmée
+28/11/2025;US;Boston;05/02/2026;07/02/2026;2;1;Chambre Supérieure;Confirmée
+23/09/2025;FR;Marseille;28/12/2025;30/12/2025;2;1;Suite;Confirmée
+25/03/2026;CH;Lausanne;02/04/2026;06/04/2026;2;1;Appartement;Confirmée
+27/12/2025;DE;Berlin;29/01/2026;02/02/2026;3;1;Junior Suite;Confirmée
+06/12/2025;US;NEW YORK;02/03/2026;06/03/2026;2;1;Chambre Supérieure;Confirmée
+03/09/2025;GB;London;06/01/2026;11/01/2026;1;1;Chambre Supérieure;Confirmée
+03/11/2025;GB;London;28/01/2026;30/01/2026;9;3;Suite;Confirmée
+16/12/2025;FR;Paris;07/02/2026;10/02/2026;3;1;Chambre Classique;Confirmée
+27/12/2025;US;New York;03/02/2026;05/02/2026;4;2;Suite;Confirmée
+27/11/2025;US;New York;06/01/2026;08/01/2026;4;2;Chambre Classique;Confirmée
+23/01/2026;FR;Paris;26/03/2026;28/03/2026;3;1;Appartement;Confirmée
+13/10/2025;GB;LONDON;31/12/2025;03/01/2026;4;1;Chambre Classique;Confirmée
+30/12/2025;FR;Lyon;15/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+27/02/2026;CH;Genève;08/03/2026;10/03/2026;3;1;Suite;Confirmée
+24/09/2025;BE;Gand;30/12/2025;05/01/2026;4;1;Chambre Classique;Confirmée
+23/01/2026;FR;Paris;12/02/2026;16/02/2026;6;3;Chambre Classique;Confirmée
+14/03/2026;CH;Genève;25/03/2026;27/03/2026;6;2;Chambre Supérieure;Confirmée
+20/01/2026;Suisse;Genève;17/02/2026;20/02/2026;4;1;Chambre Classique;Confirmée
+01/08/2025;US;NEW YORK;24/12/2025;29/12/2025;2;1;Appartement;Confirmée
+13/11/2025;FR;LYON;23/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
+20/12/2025;CH;Genève;09/01/2026;12/01/2026;1;1;Chambre Supérieure;Annulée
+18/01/2026;DE;Munich;24/02/2026;26/02/2026;2;1;Junior Suite;Confirmée
+06/12/2025;GB;London;27/01/2026;01/02/2026;12;3;Chambre Supérieure;Confirmée
+17/10/2025;FR;PARIS;01/01/2026;04/01/2026;4;1;Chambre Supérieure;Confirmée
+27/01/2026;CH;Genève;17/02/2026;23/02/2026;4;2;Appartement;Confirmée
+06/10/2025;FR;Paris;20/12/2025;23/12/2025;2;1;Suite;Confirmée
+29/01/2026;FR;Marseille;26/02/2026;03/03/2026;4;2;Chambre Classique;Confirmée
+23/07/2025;US;NEW YORK;24/12/2025;28/12/2025;2;1;Chambre Supérieure;Confirmée
+20/10/2025;Suisse;Zurich;20/12/2025;25/12/2025;4;2;Chambre Supérieure;Confirmée
+20/09/2025;GB;Manchester;12/12/2025;14/12/2025;2;1;Chambre Supérieure;Confirmée
+11/11/2025;FR;PARIS;26/12/2025;31/12/2025;2;1;Suite;Confirmée
+11/12/2025;NL;UTRECHT;18/01/2026;23/01/2026;3;1;Chambre Classique;Confirmée
+02/10/2025;FR;Paris;31/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
+20/10/2025;BE;Bruxelles;17/12/2025;23/12/2025;1;1;Appartement;Confirmée
+14/12/2025;GB;Bristol;14/03/2026;18/03/2026;2;1;Chambre Supérieure;Confirmée
+09/11/2025;France;Paris;24/12/2025;30/12/2025;2;1;Appartement;Confirmée
+29/01/2026;CH;GENÈVE;21/02/2026;27/02/2026;2;1;Chambre Supérieure;Confirmée
+21/12/2025;US;New York;05/02/2026;08/02/2026;3;1;Appartement;Confirmée
+28/12/2025;FR;PARIS;14/02/2026;16/02/2026;6;2;Chambre Supérieure;Confirmée
+22/02/2026;FR;PARIS;12/03/2026;18/03/2026;3;1;Chambre Classique;Confirmée
+22/11/2025;FR;Lille;12/12/2025;15/12/2025;2;1;Chambre Classique;Confirmée
+26/01/2026;FR;Lyon;12/04/2026;18/04/2026;4;1;Appartement;Confirmée
+29/01/2026;FR;Paris;11/03/2026;15/03/2026;2;1;Junior Suite;Confirmée
+26/11/2025;FR;Lille;25/01/2026;29/01/2026;3;1;Junior Suite;Confirmée
+12/01/2026;FR;Bordeaux;29/01/2026;01/02/2026;8;2;Junior Suite;Confirmée
+01/10/2025;FR;PARIS;27/12/2025;29/12/2025;2;1;Chambre Classique;Confirmée
+25/12/2025;DE;Berlin;16/02/2026;22/02/2026;2;1;Chambre Classique;Confirmée
+13/02/2026;FR;Paris;30/03/2026;01/04/2026;2;1;Chambre Classique;Confirmée
+05/01/2026;US;New York;22/03/2026;26/03/2026;8;2;Junior Suite;Annulée
+13/10/2025;FR;MARSEILLE;20/12/2025;26/12/2025;3;1;Suite;Confirmée
+08/11/2025;CH;Genève;30/12/2025;01/01/2026;12;3;Chambre Classique;Confirmée
+11/12/2025;FR;BORDEAUX;28/01/2026;31/01/2026;6;3;Chambre Classique;Confirmée
+29/01/2026;BE;Bruxelles;19/02/2026;25/02/2026;3;1;Chambre Classique;Confirmée
+24/12/2025;DE;MUNICH;06/02/2026;08/02/2026;9;3;Appartement;Confirmée
+15/01/2026;FR;Lille;24/02/2026;01/03/2026;2;1;Chambre Supérieure;Confirmée
+31/01/2026;CH;GENÈVE;25/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
+04/11/2025;FR;Paris;16/12/2025;20/12/2025;2;1;Chambre Supérieure;Confirmée
+12/01/2026;DE;Munich;01/02/2026;07/02/2026;2;1;Suite;Confirmée
+14/11/2025;FR;Bordeaux;19/01/2026;21/01/2026;2;1;Suite;Confirmée
+22/12/2025;FR;Paris;12/02/2026;14/02/2026;2;1;Chambre Classique;Confirmée
+21/12/2025;FR;Paris;03/03/2026;05/03/2026;4;2;Chambre Classique;Confirmée
+03/11/2025;FR;Paris;28/12/2025;04/01/2026;2;1;Chambre Supérieure;Confirmée
+19/11/2025;FR;Lyon;29/12/2025;31/12/2025;4;2;Junior Suite;Confirmée
+09/12/2025;GB;LONDON;08/01/2026;12/01/2026;4;1;Suite;Confirmée
+06/10/2025;US;MIAMI;11/02/2026;13/02/2026;2;1;Junior Suite;Confirmée
+16/12/2025;CH;Genève;31/12/2025;02/01/2026;2;1;Chambre Classique;Confirmée
+03/11/2025;US;BOSTON;18/02/2026;23/02/2026;3;1;Appartement;Confirmée
+16/10/2025;GB;London;21/12/2025;24/12/2025;4;2;Chambre Classique;Confirmée
+06/02/2026;CH;Genève;28/02/2026;05/03/2026;3;1;Chambre Supérieure;Confirmée
+13/12/2025;FR;PARIS;08/02/2026;13/02/2026;2;1;Chambre Supérieure;Annulée
+21/11/2025;FR;BORDEAUX;21/01/2026;27/01/2026;4;1;Chambre Classique;Confirmée
+24/10/2025;BE;Bruxelles;25/12/2025;27/12/2025;2;1;Chambre Classique;Confirmée
+02/01/2026;CH;Genève;04/02/2026;07/02/2026;3;1;Chambre Classique;Confirmée
+13/09/2025;France;Paris;24/12/2025;29/12/2025;3;1;Suite;Confirmée
+04/02/2026;CH;LAUSANNE;26/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
+01/02/2026;FR;Paris;22/02/2026;24/02/2026;1;1;Chambre Classique;Annulée
+05/10/2025;FR;Lyon;27/12/2025;29/12/2025;6;2;Chambre Classique;Confirmée
+25/11/2025;US;New York;10/04/2026;12/04/2026;2;1;Chambre Supérieure;Confirmée
+03/11/2025;GB;London;11/02/2026;16/02/2026;2;1;Chambre Classique;Confirmée
+08/08/2025;GB;LONDON;16/12/2025;22/12/2025;2;1;Chambre Classique;Confirmée
+30/09/2025;GB;Manchester;09/01/2026;12/01/2026;2;1;Suite;Confirmée
+14/12/2025;FR;Paris;06/01/2026;08/01/2026;2;1;Suite;Confirmée
+26/12/2025;GB;LONDON;03/04/2026;07/04/2026;4;1;Junior Suite;Confirmée
+31/12/2025;GB;London;16/02/2026;21/02/2026;3;1;Junior Suite;Confirmée
+18/11/2025;CH;Genève;30/12/2025;04/01/2026;9;3;Chambre Classique;Confirmée
+20/11/2025;GB;London;08/01/2026;13/01/2026;8;2;Chambre Supérieure;Confirmée
+26/12/2025;GB;London;12/02/2026;16/02/2026;3;1;Chambre Classique;Confirmée
+16/11/2025;France;Paris;29/01/2026;31/01/2026;1;1;Chambre Classique;Annulée
+29/11/2025;BE;Bruxelles;25/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
+15/08/2025;BE;GAND;26/12/2025;31/12/2025;4;1;Chambre Classique;Confirmée
+29/01/2026;GB;EDINBURGH;27/02/2026;03/03/2026;3;1;Suite;Confirmée
+20/10/2025;US;New York;30/12/2025;06/01/2026;3;1;Chambre Classique;Confirmée
+27/10/2025;FR;PARIS;09/01/2026;13/01/2026;2;1;Chambre Classique;Confirmée
+28/11/2025;France;Lyon;02/01/2026;04/01/2026;3;1;Appartement;Confirmée
+14/02/2026;IT;Milan;28/02/2026;02/03/2026;2;1;Junior Suite;Confirmée
+12/09/2025;France;PARIS;02/01/2026;05/01/2026;2;1;Appartement;Confirmée
+10/12/2025;FR;BORDEAUX;05/02/2026;09/02/2026;8;2;Chambre Classique;Confirmée
+15/02/2026;CH;GENÈVE;26/02/2026;01/03/2026;6;3;Junior Suite;Confirmée
+23/12/2025;NL;Amsterdam;04/02/2026;08/02/2026;2;1;Chambre Classique;Confirmée
+31/12/2025;FR;MARSEILLE;19/01/2026;23/01/2026;4;1;Junior Suite;Confirmée
+14/11/2025;France;Bordeaux;27/12/2025;30/12/2025;6;2;Suite;Confirmée
+03/02/2026;BE;Gand;27/02/2026;01/03/2026;3;1;Chambre Classique;Confirmée
+31/01/2026;FR;Paris;03/04/2026;09/04/2026;2;1;Chambre Classique;Confirmée
+24/12/2025;FR;NANTES;25/02/2026;03/03/2026;1;1;Junior Suite;Confirmée
+11/01/2026;FR;Bordeaux;03/02/2026;08/02/2026;2;1;Chambre Classique;Confirmée
+14/01/2026;CH;Zurich;22/01/2026;28/01/2026;4;2;Junior Suite;Confirmée
+06/11/2025;France;LYON;28/12/2025;01/01/2026;2;1;Junior Suite;Confirmée
+31/03/2026;CH;GENÈVE;12/04/2026;14/04/2026;2;1;Chambre Supérieure;Confirmée
+22/12/2025;CH;Genève;05/01/2026;09/01/2026;4;1;Chambre Classique;Confirmée
+12/02/2026;FR;Lyon;21/03/2026;24/03/2026;2;1;Chambre Classique;Annulée
+20/12/2025;FR;PARIS;05/01/2026;11/01/2026;3;1;Junior Suite;Confirmée
+29/10/2025;CH;LAUSANNE;20/12/2025;25/12/2025;3;1;Chambre Supérieure;Confirmée
+22/01/2026;FR;Lille;15/02/2026;20/02/2026;3;1;Chambre Classique;Annulée
+27/11/2025;CH;Genève;12/12/2025;18/12/2025;2;1;Chambre Classique;Confirmée
+26/02/2026;Suisse;ZURICH;06/03/2026;11/03/2026;2;1;Suite;Confirmée
+27/01/2026;Suisse;Lausanne;04/02/2026;06/02/2026;2;1;Appartement;Confirmée
+07/12/2025;CH;Genève;22/12/2025;25/12/2025;2;1;Chambre Classique;Confirmée
+25/12/2025;NL;Amsterdam;05/02/2026;07/02/2026;2;1;Chambre Supérieure;Confirmée
+01/03/2026;CH;Genève;13/03/2026;19/03/2026;2;1;Junior Suite;Annulée
+02/01/2026;GB;LONDON;27/03/2026;01/04/2026;2;1;Appartement;Confirmée
+17/11/2025;FR;Lyon;21/12/2025;27/12/2025;6;3;Chambre Classique;Confirmée
+13/10/2025;FR;PARIS;18/12/2025;24/12/2025;3;1;Junior Suite;Confirmée
+12/02/2026;GB;London;01/04/2026;07/04/2026;1;1;Chambre Classique;Confirmée
+17/02/2026;CH;Zurich;05/03/2026;08/03/2026;2;1;Chambre Classique;Annulée
+20/02/2026;Suisse;Genève;20/03/2026;25/03/2026;2;1;Suite;Confirmée
+09/11/2025;GB;London;05/01/2026;10/01/2026;4;2;Appartement;Confirmée
+30/10/2025;France;Bordeaux;20/12/2025;23/12/2025;4;1;Junior Suite;Confirmée
+26/12/2025;FR;Paris;13/01/2026;18/01/2026;2;1;Appartement;Confirmée
+25/09/2025;FR;Marseille;02/01/2026;09/01/2026;3;1;Junior Suite;Confirmée
+29/12/2025;Suisse;Zurich;07/01/2026;12/01/2026;1;1;Chambre Supérieure;Confirmée
+02/02/2026;FR;Lyon;03/04/2026;07/04/2026;2;1;Chambre Supérieure;Confirmée
+11/02/2026;FR;Lille;05/04/2026;10/04/2026;2;1;Chambre Supérieure;Confirmée
+20/11/2025;CH;Lausanne;22/12/2025;27/12/2025;3;1;Chambre Supérieure;Confirmée
+26/10/2025;FR;Paris;25/12/2025;31/12/2025;8;2;Junior Suite;Confirmée
+31/01/2026;CH;Genève;05/03/2026;10/03/2026;2;1;Chambre Supérieure;Annulée
+01/12/2025;GB;London;25/02/2026;03/03/2026;2;1;Chambre Classique;Confirmée
+03/03/2026;FR;Paris;21/03/2026;23/03/2026;4;2;Suite;Confirmée
+14/11/2025;NL;Rotterdam;13/12/2025;18/12/2025;4;2;Chambre Supérieure;Annulée
+17/09/2025;US;BOSTON;12/12/2025;14/12/2025;2;1;Chambre Supérieure;Confirmée
+28/01/2026;FR;Paris;26/03/2026;28/03/2026;12;3;Chambre Supérieure;Confirmée
+20/11/2025;FR;Nantes;30/12/2025;01/01/2026;2;1;Chambre Classique;Confirmée
+19/01/2026;FR;Lyon;20/02/2026;22/02/2026;4;1;Junior Suite;Confirmée
+16/01/2026;FR;Lyon;16/03/2026;21/03/2026;6;3;Chambre Classique;Confirmée
+11/03/2026;CH;Genève;31/03/2026;03/04/2026;3;1;Chambre Supérieure;Confirmée
+05/01/2026;BE;Bruxelles;19/02/2026;21/02/2026;4;2;Chambre Classique;Confirmée
+21/02/2026;GB;LONDON;22/03/2026;24/03/2026;8;2;Chambre Classique;Confirmée
+16/12/2025;GB;LONDON;26/02/2026;04/03/2026;2;1;Chambre Supérieure;Confirmée
+30/12/2025;GB;Manchester;15/03/2026;21/03/2026;6;3;Chambre Classique;Confirmée
+25/02/2026;FR;PARIS;19/03/2026;21/03/2026;6;2;Chambre Supérieure;Confirmée
+22/12/2025;France;Paris;07/01/2026;13/01/2026;2;1;Chambre Supérieure;Confirmée
+26/12/2025;FR;Lyon;02/02/2026;05/02/2026;2;1;Chambre Supérieure;Confirmée
+13/10/2025;DE;MUNICH;23/12/2025;25/12/2025;3;1;Junior Suite;Confirmée
+18/10/2025;GB;EDINBURGH;28/01/2026;31/01/2026;2;1;Chambre Supérieure;Confirmée
+27/02/2026;FR;BORDEAUX;20/03/2026;24/03/2026;2;1;Chambre Supérieure;Confirmée
+13/02/2026;CH;ZURICH;04/03/2026;10/03/2026;3;1;Junior Suite;Confirmée
+30/01/2026;BE;Gand;02/03/2026;06/03/2026;4;2;Chambre Classique;Confirmée
+20/11/2025;US;New York;30/03/2026;05/04/2026;3;1;Chambre Classique;Annulée
+20/03/2026;CH;Genève;02/04/2026;04/04/2026;6;2;Junior Suite;Annulée
+26/12/2025;DE;MUNICH;07/03/2026;11/03/2026;3;1;Chambre Supérieure;Annulée
+27/12/2025;GB;London;11/02/2026;13/02/2026;2;1;Chambre Classique;Confirmée
+26/12/2025;GB;Manchester;05/04/2026;08/04/2026;4;1;Chambre Classique;Confirmée
+14/01/2026;NL;Rotterdam;06/02/2026;09/02/2026;2;1;Junior Suite;Confirmée
+13/11/2025;FR;PARIS;12/12/2025;14/12/2025;3;1;Chambre Supérieure;Confirmée
+16/01/2026;CH;Genève;14/02/2026;20/02/2026;2;1;Chambre Supérieure;Confirmée
+16/12/2025;FR;LYON;02/02/2026;06/02/2026;2;1;Chambre Supérieure;Confirmée
+28/12/2025;FR;Lyon;07/02/2026;10/02/2026;3;1;Chambre Classique;Confirmée
+08/11/2025;CH;Lausanne;23/12/2025;28/12/2025;2;1;Chambre Supérieure;Confirmée
+20/01/2026;FR;Paris;17/02/2026;22/02/2026;2;1;Chambre Classique;Confirmée
+21/02/2026;NL;Utrecht;12/04/2026;14/04/2026;4;1;Chambre Classique;Confirmée
+27/10/2025;GB;London;22/12/2025;29/12/2025;2;1;Chambre Classique;Annulée
+27/02/2026;FR;Paris;19/03/2026;22/03/2026;3;1;Junior Suite;Confirmée
+10/02/2026;France;Paris;07/03/2026;13/03/2026;3;1;Suite;Confirmée
+08/02/2026;FR;Paris;31/03/2026;03/04/2026;3;1;Chambre Classique;Confirmée
+01/11/2025;FR;Paris;01/01/2026;07/01/2026;3;1;Chambre Supérieure;Confirmée
+08/02/2026;CH;Genève;05/03/2026;09/03/2026;4;1;Chambre Classique;Confirmée
+09/10/2025;GB;LONDON;07/02/2026;11/02/2026;1;1;Appartement;Confirmée
+14/03/2026;FR;Paris;06/04/2026;10/04/2026;4;1;Chambre Supérieure;Confirmée
+03/02/2026;GB;Edinburgh;13/03/2026;18/03/2026;4;2;Appartement;Confirmée
+19/11/2025;GB;MANCHESTER;20/02/2026;23/02/2026;2;1;Chambre Supérieure;Confirmée
+15/01/2026;CH;Genève;26/01/2026;31/01/2026;2;1;Chambre Supérieure;Confirmée
+14/10/2025;GB;LONDON;24/12/2025;28/12/2025;3;1;Junior Suite;Confirmée
+12/01/2026;CH;Lausanne;05/02/2026;11/02/2026;3;1;Junior Suite;Confirmée
+30/01/2026;NL;Amsterdam;01/03/2026;06/03/2026;4;1;Chambre Classique;Confirmée
+13/10/2025;GB;Bristol;25/12/2025;28/12/2025;4;1;Chambre Classique;Confirmée
+26/09/2025;US;New York;24/12/2025;29/12/2025;3;1;Chambre Classique;Confirmée
+01/02/2026;CH;Lausanne;24/02/2026;26/02/2026;4;1;Junior Suite;Confirmée
+01/03/2026;CH;Lausanne;16/03/2026;22/03/2026;3;1;Junior Suite;Confirmée
+14/01/2026;FR;Paris;26/02/2026;04/03/2026;6;3;Suite;Confirmée
+02/01/2026;FR;Paris;17/02/2026;23/02/2026;2;1;Junior Suite;Confirmée
+28/10/2025;FR;Paris;01/01/2026;03/01/2026;1;1;Chambre Classique;Confirmée
+20/02/2026;FR;Paris;29/03/2026;31/03/2026;3;1;Chambre Classique;Confirmée
+28/12/2025;CH;Lausanne;28/01/2026;02/02/2026;3;1;Junior Suite;Confirmée
+01/03/2026;FR;PARIS;18/03/2026;23/03/2026;2;1;Junior Suite;Confirmée
+30/01/2026;FR;Paris;19/03/2026;22/03/2026;9;3;Appartement;Confirmée
+02/11/2025;NL;Utrecht;24/12/2025;30/12/2025;3;1;Junior Suite;Confirmée
+29/01/2026;FR;Paris;31/03/2026;06/04/2026;4;1;Chambre Supérieure;Confirmée
+27/11/2025;CH;Lausanne;19/12/2025;26/12/2025;2;1;Junior Suite;Confirmée
+27/12/2025;FR;Paris;12/01/2026;17/01/2026;6;2;Appartement;Confirmée
+13/01/2026;GB;London;04/03/2026;06/03/2026;2;1;Junior Suite;Confirmée
+17/01/2026;FR;Bordeaux;12/03/2026;14/03/2026;3;1;Chambre Supérieure;Confirmée
+11/01/2026;FR;Nantes;08/02/2026;12/02/2026;6;2;Chambre Classique;Confirmée
+30/01/2026;FR;PARIS;17/02/2026;23/02/2026;4;1;Junior Suite;Confirmée
+24/12/2025;GB;London;24/02/2026;28/02/2026;2;1;Chambre Supérieure;Confirmée
+14/01/2026;FR;PARIS;10/02/2026;14/02/2026;2;1;Chambre Supérieure;Confirmée
+16/11/2025;CH;Genève;19/12/2025;21/12/2025;2;1;Chambre Classique;Confirmée
+13/03/2026;FR;Paris;09/04/2026;12/04/2026;3;1;Chambre Supérieure;Confirmée
+12/03/2026;France;Marseille;06/04/2026;09/04/2026;3;1;Chambre Classique;Confirmée
+03/02/2026;FR;Bordeaux;24/02/2026;26/02/2026;2;1;Chambre Supérieure;Confirmée
+11/11/2025;FR;PARIS;01/01/2026;03/01/2026;4;2;Chambre Supérieure;Confirmée
+27/09/2025;FR;LYON;12/12/2025;18/12/2025;2;1;Junior Suite;Confirmée
+23/01/2026;FR;Paris;13/02/2026;18/02/2026;2;1;Suite;Confirmée
+11/08/2025;US;Miami;22/12/2025;27/12/2025;2;1;Appartement;Annulée
+08/02/2026;FR;Lyon;08/03/2026;13/03/2026;3;1;Suite;Confirmée
+07/01/2026;Suisse;Genève;16/01/2026;22/01/2026;6;2;Junior Suite;Confirmée
+15/11/2025;FR;Lyon;01/01/2026;05/01/2026;2;1;Chambre Supérieure;Confirmée
+09/01/2026;Suisse;Genève;05/02/2026;09/02/2026;6;2;Junior Suite;Confirmée
+17/01/2026;GB;BRISTOL;15/02/2026;17/02/2026;4;1;Chambre Classique;Confirmée
+16/09/2025;NL;Amsterdam;14/12/2025;17/12/2025;2;1;Suite;Confirmée
+08/01/2026;FR;Lyon;03/02/2026;07/02/2026;2;1;Junior Suite;Confirmée
+02/11/2025;FR;PARIS;28/12/2025;01/01/2026;2;1;Junior Suite;Confirmée
+29/12/2025;BE;BRUXELLES;19/01/2026;21/01/2026;2;1;Appartement;Confirmée
+09/12/2025;BE;Gand;09/01/2026;14/01/2026;2;1;Chambre Supérieure;Confirmée
+19/12/2025;NL;AMSTERDAM;09/02/2026;13/02/2026;3;1;Suite;Confirmée
+14/02/2026;NL;Amsterdam;27/03/2026;31/03/2026;2;1;Chambre Supérieure;Confirmée
+05/02/2026;FR;Nantes;25/03/2026;28/03/2026;6;3;Chambre Classique;Confirmée
+23/02/2026;CH;Zurich;11/03/2026;13/03/2026;4;2;Chambre Supérieure;Confirmée
+12/11/2025;FR;Bordeaux;21/12/2025;27/12/2025;2;1;Junior Suite;Confirmée
+12/03/2026;CH;Lausanne;24/03/2026;28/03/2026;2;1;Chambre Supérieure;Confirmée
+24/10/2025;CH;GENÈVE;30/12/2025;06/01/2026;3;1;Suite;Confirmée
+27/11/2025;BE;Anvers;03/02/2026;07/02/2026;4;2;Chambre Supérieure;Confirmée
+29/12/2025;US;Boston;20/02/2026;22/02/2026;6;2;Junior Suite;Confirmée
+02/11/2025;GB;London;31/01/2026;03/02/2026;4;1;Chambre Classique;Confirmée
+23/12/2025;GB;Bristol;20/02/2026;23/02/2026;12;3;Chambre Classique;Confirmée
+26/02/2026;FR;LYON;20/03/2026;26/03/2026;2;1;Chambre Supérieure;Confirmée
+04/12/2025;GB;London;06/02/2026;11/02/2026;2;1;Junior Suite;Confirmée
+15/01/2026;FR;Paris;11/02/2026;13/02/2026;6;3;Junior Suite;Confirmée
+09/09/2025;FR;Nantes;03/01/2026;10/01/2026;2;1;Chambre Classique;Confirmée
+30/12/2025;GB;MANCHESTER;25/03/2026;31/03/2026;2;1;Appartement;Confirmée
+13/01/2026;CH;Zurich;08/02/2026;10/02/2026;6;3;Chambre Classique;Confirmée
+04/12/2025;CH;Genève;16/12/2025;19/12/2025;2;1;Suite;Confirmée
+13/09/2025;NL;Rotterdam;23/12/2025;26/12/2025;2;1;Junior Suite;Confirmée
+01/01/2026;NL;UTRECHT;06/02/2026;09/02/2026;1;1;Appartement;Confirmée
+02/07/2025;GB;BRISTOL;22/12/2025;27/12/2025;3;1;Chambre Classique;Confirmée
+02/01/2026;BE;BRUXELLES;02/04/2026;04/04/2026;2;1;Chambre Classique;Confirmée
+25/02/2026;GB;London;01/04/2026;07/04/2026;2;1;Appartement;Confirmée
+06/01/2026;NL;AMSTERDAM;08/02/2026;11/02/2026;2;1;Suite;Confirmée
+29/10/2025;NL;Amsterdam;16/12/2025;19/12/2025;4;1;Chambre Classique;Confirmée
+22/10/2025;GB;Manchester;28/12/2025;02/01/2026;4;1;Chambre Classique;Confirmée
+03/11/2025;IT;Milan;25/12/2025;28/12/2025;2;1;Chambre Classique;Confirmée
+11/11/2025;FR;PARIS;30/12/2025;02/01/2026;6;3;Suite;Confirmée
+12/12/2025;FR;Bordeaux;10/02/2026;12/02/2026;2;1;Chambre Classique;Confirmée
+17/12/2025;CH;Lausanne;01/01/2026;06/01/2026;2;1;Chambre Classique;Confirmée
+13/12/2025;BE;Bruxelles;08/02/2026;10/02/2026;4;2;Junior Suite;Confirmée
+14/12/2025;FR;Bordeaux;22/02/2026;25/02/2026;2;1;Chambre Classique;Confirmée
+01/10/2025;NL;Amsterdam;09/01/2026;12/01/2026;4;2;Chambre Classique;Confirmée
+28/10/2025;FR;Paris;23/12/2025;26/12/2025;4;2;Chambre Classique;Confirmée
+09/10/2025;US;MIAMI;23/01/2026;26/01/2026;8;2;Chambre Classique;Confirmée
+17/12/2025;CH;Genève;13/01/2026;19/01/2026;4;1;Suite;Confirmée
+29/12/2025;FR;Lyon;28/01/2026;03/02/2026;4;2;Appartement;Confirmée
+18/12/2025;GB;London;27/03/2026;02/04/2026;4;1;Appartement;Confirmée
+27/11/2025;CH;GENÈVE;20/12/2025;26/12/2025;2;1;Appartement;Confirmée
+20/01/2026;BE;Anvers;18/02/2026;20/02/2026;2;1;Appartement;Confirmée
+30/09/2025;FR;Paris;26/12/2025;31/12/2025;3;1;Chambre Supérieure;Confirmée
+27/11/2025;US;New York;16/02/2026;21/02/2026;2;1;Suite;Confirmée
+14/11/2025;CH;GENÈVE;19/12/2025;21/12/2025;6;2;Junior Suite;Confirmée
+14/12/2025;GB;London;03/02/2026;06/02/2026;2;1;Appartement;Confirmée
+23/01/2026;FR;PARIS;12/02/2026;17/02/2026;2;1;Chambre Classique;Confirmée
+01/02/2026;FR;Marseille;08/03/2026;12/03/2026;2;1;Appartement;Confirmée
+17/11/2025;FR;PARIS;29/12/2025;05/01/2026;2;1;Chambre Classique;Confirmée
+16/12/2025;FR;PARIS;01/02/2026;07/02/2026;3;1;Chambre Supérieure;Confirmée
+16/03/2026;FR;Lyon;03/04/2026;06/04/2026;2;1;Suite;Confirmée
+13/02/2026;BE;Anvers;07/03/2026;12/03/2026;2;1;Chambre Supérieure;Confirmée
+13/08/2025;US;NEW YORK;01/01/2026;06/01/2026;4;1;Chambre Supérieure;Confirmée
+17/09/2025;US;New York;01/01/2026;05/01/2026;3;1;Chambre Classique;Annulée
+13/03/2026;CH;Lausanne;25/03/2026;27/03/2026;6;2;Chambre Classique;Confirmée
+28/12/2025;BE;BRUXELLES;19/02/2026;22/02/2026;6;3;Chambre Supérieure;Confirmée
+25/11/2025;FR;Lyon;28/12/2025;30/12/2025;8;2;Appartement;Confirmée
+08/02/2026;CH;Genève;02/03/2026;05/03/2026;3;1;Chambre Supérieure;Confirmée
+14/01/2026;BE;Bruxelles;13/02/2026;19/02/2026;6;3;Chambre Classique;Confirmée
+30/11/2025;NL;AMSTERDAM;14/02/2026;19/02/2026;4;2;Suite;Confirmée
+05/02/2026;BE;BRUXELLES;27/02/2026;04/03/2026;3;1;Suite;Confirmée
+07/01/2026;FR;Paris;28/02/2026;05/03/2026;4;1;Suite;Confirmée
+26/11/2025;GB;LONDON;10/04/2026;16/04/2026;2;1;Chambre Classique;Confirmée
+11/12/2025;CH;ZURICH;26/12/2025;31/12/2025;2;1;Junior Suite;Confirmée
+06/01/2026;NL;Amsterdam;14/03/2026;18/03/2026;3;1;Appartement;Confirmée
+12/01/2026;FR;Paris;19/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+15/12/2025;FR;PARIS;27/02/2026;02/03/2026;2;1;Chambre Classique;Confirmée
+18/11/2025;FR;LYON;20/12/2025;25/12/2025;2;1;Suite;Confirmée
+17/12/2025;FR;Lyon;23/02/2026;28/02/2026;2;1;Junior Suite;Confirmée
+21/01/2026;France;Paris;07/02/2026;10/02/2026;4;1;Chambre Classique;Confirmée
+25/10/2025;US;New York;10/01/2026;15/01/2026;1;1;Chambre Classique;Confirmée
+29/01/2026;FR;PARIS;26/02/2026;28/02/2026;1;1;Chambre Supérieure;Confirmée
+14/12/2025;France;Lyon;17/01/2026;20/01/2026;4;1;Chambre Classique;Confirmée
+14/06/2025;GB;BRISTOL;31/12/2025;06/01/2026;2;1;Junior Suite;Confirmée
+27/11/2025;FR;Lyon;30/12/2025;03/01/2026;2;1;Suite;Confirmée
+17/01/2026;FR;Paris;04/03/2026;06/03/2026;2;1;Chambre Supérieure;Confirmée
+11/01/2026;FR;Paris;05/02/2026;08/02/2026;2;1;Junior Suite;Confirmée
+18/01/2026;FR;Lyon;21/02/2026;27/02/2026;2;1;Junior Suite;Confirmée
+03/02/2026;Suisse;Genève;13/02/2026;16/02/2026;2;1;Suite;Confirmée
+12/12/2025;CH;Genève;26/12/2025;30/12/2025;4;2;Chambre Classique;Confirmée
+25/12/2025;FR;Lyon;23/01/2026;29/01/2026;2;1;Chambre Supérieure;Annulée
+30/06/2025;US;Boston;24/12/2025;26/12/2025;3;1;Chambre Supérieure;Confirmée
+09/02/2025;US;New York;20/12/2025;27/12/2025;3;1;Chambre Supérieure;Confirmée
+06/11/2025;GB;MANCHESTER;25/02/2026;03/03/2026;4;1;Chambre Classique;Confirmée
+25/07/2025;GB;EDINBURGH;20/12/2025;24/12/2025;2;1;Junior Suite;Confirmée
+08/11/2025;BE;Bruxelles;12/12/2025;16/12/2025;4;1;Junior Suite;Confirmée
+07/12/2025;GB;LONDON;13/01/2026;17/01/2026;2;1;Chambre Supérieure;Confirmée
+18/01/2026;FR;LYON;08/02/2026;11/02/2026;3;1;Chambre Classique;Confirmée
+27/02/2026;France;Paris;30/03/2026;04/04/2026;8;2;Chambre Classique;Confirmée
+28/09/2025;GB;LONDON;30/12/2025;03/01/2026;2;1;Chambre Supérieure;Confirmée
+30/01/2026;FR;Paris;21/02/2026;25/02/2026;2;1;Appartement;Annulée
+29/01/2026;FR;Marseille;24/02/2026;27/02/2026;2;1;Suite;Confirmée
+16/11/2025;FR;PARIS;29/12/2025;04/01/2026;2;1;Chambre Supérieure;Confirmée
+07/02/2026;FR;Lyon;09/03/2026;15/03/2026;2;1;Suite;Confirmée
+04/08/2025;FR;Lyon;21/12/2025;24/12/2025;2;1;Junior Suite;Confirmée
+01/01/2026;US;NEW YORK;13/03/2026;17/03/2026;2;1;Chambre Supérieure;Confirmée
+23/12/2025;NL;ROTTERDAM;26/02/2026;28/02/2026;2;1;Chambre Classique;Confirmée
+21/02/2026;FR;Paris;17/03/2026;21/03/2026;2;1;Chambre Classique;Confirmée
+07/11/2025;GB;London;15/02/2026;18/02/2026;2;1;Chambre Classique;Confirmée
+06/10/2025;FR;Paris;02/01/2026;09/01/2026;2;1;Chambre Classique;Confirmée
+27/12/2025;FR;Lyon;28/01/2026;03/02/2026;8;2;Chambre Classique;Confirmée
+30/11/2025;GB;London;15/02/2026;20/02/2026;2;1;Chambre Supérieure;Confirmée
+12/07/2025;BE;Bruxelles;19/12/2025;21/12/2025;3;1;Chambre Supérieure;Confirmée
+12/01/2026;NL;ROTTERDAM;07/02/2026;13/02/2026;3;1;Chambre Supérieure;Confirmée
+17/09/2025;NL;Rotterdam;21/12/2025;28/12/2025;8;2;Junior Suite;Confirmée
+23/01/2026;CH;Genève;04/02/2026;08/02/2026;2;1;Chambre Classique;Confirmée
+31/12/2025;FR;LYON;01/02/2026;03/02/2026;2;1;Chambre Classique;Confirmée
+07/11/2025;FR;Bordeaux;14/01/2026;17/01/2026;2;1;Chambre Classique;Confirmée
+14/10/2025;US;MIAMI;02/02/2026;04/02/2026;2;1;Chambre Supérieure;Confirmée
+05/01/2026;BE;BRUXELLES;03/02/2026;06/02/2026;6;3;Chambre Supérieure;Confirmée
+29/10/2025;US;New York;22/02/2026;26/02/2026;2;1;Chambre Supérieure;Confirmée
+17/03/2026;DE;BERLIN;06/04/2026;10/04/2026;2;1;Chambre Classique;Confirmée
+06/03/2026;BE;BRUXELLES;11/04/2026;15/04/2026;6;2;Appartement;Confirmée
+07/12/2025;DE;Munich;27/02/2026;02/03/2026;3;1;Chambre Supérieure;Confirmée
+18/12/2025;CH;Genève;02/01/2026;04/01/2026;3;1;Appartement;Confirmée
+30/10/2025;FR;Paris;22/12/2025;25/12/2025;2;1;Appartement;Confirmée
+06/01/2026;CH;Genève;05/02/2026;11/02/2026;2;1;Chambre Supérieure;Confirmée
+28/12/2025;FR;LYON;31/01/2026;04/02/2026;2;1;Suite;Confirmée
+23/11/2025;FR;Nantes;23/12/2025;25/12/2025;2;1;Chambre Supérieure;Confirmée
+10/03/2026;CH;Lausanne;24/03/2026;29/03/2026;3;1;Chambre Classique;Confirmée
+04/11/2025;FR;LYON;18/01/2026;22/01/2026;2;1;Chambre Supérieure;Confirmée
+28/01/2026;FR;LYON;17/02/2026;22/02/2026;4;2;Chambre Classique;Confirmée
+29/10/2025;CH;GENÈVE;29/12/2025;03/01/2026;2;1;Chambre Classique;Confirmée
+25/09/2025;FR;Nantes;20/12/2025;26/12/2025;3;1;Suite;Confirmée
+29/10/2025;FR;Paris;31/12/2025;07/01/2026;3;1;Appartement;Confirmée
+31/12/2025;CH;Lausanne;11/01/2026;16/01/2026;2;1;Chambre Supérieure;Annulée
+12/02/2026;FR;Bordeaux;13/03/2026;18/03/2026;4;1;Chambre Supérieure;Confirmée
+15/02/2026;NL;Amsterdam;12/04/2026;17/04/2026;2;1;Junior Suite;Confirmée
+11/12/2025;FR;Paris;05/01/2026;09/01/2026;9;3;Junior Suite;Confirmée
+31/07/2025;US;New York;22/12/2025;25/12/2025;2;1;Suite;Confirmée
+19/11/2025;FR;Paris;30/12/2025;06/01/2026;3;1;Chambre Supérieure;Confirmée
+04/02/2026;US;Boston;27/03/2026;29/03/2026;3;1;Chambre Supérieure;Confirmée
+21/11/2025;FR;LYON;16/01/2026;19/01/2026;4;1;Chambre Supérieure;Confirmée
+21/01/2026;CH;Zurich;18/02/2026;20/02/2026;2;1;Junior Suite;Confirmée
+19/02/2026;FR;Paris;14/03/2026;17/03/2026;4;1;Chambre Classique;Annulée
+30/01/2026;GB;LONDON;04/04/2026;07/04/2026;2;1;Chambre Supérieure;Confirmée
+05/03/2026;France;Lyon;23/03/2026;27/03/2026;4;1;Chambre Supérieure;Confirmée
+17/01/2026;CH;GENÈVE;01/02/2026;06/02/2026;3;1;Chambre Classique;Confirmée
+08/02/2026;FR;Paris;04/03/2026;09/03/2026;2;1;Chambre Supérieure;Confirmée
+13/12/2025;France;Lyon;10/02/2026;15/02/2026;2;1;Chambre Supérieure;Confirmée
+14/07/2025;US;NEW YORK;31/12/2025;02/01/2026;6;3;Junior Suite;Confirmée
+06/01/2026;CH;Zurich;22/01/2026;26/01/2026;4;1;Chambre Supérieure;Confirmée
+15/01/2026;GB;LONDON;06/04/2026;12/04/2026;2;1;Junior Suite;Confirmée
+17/02/2026;Suisse;Genève;13/03/2026;19/03/2026;4;2;Junior Suite;Confirmée
+02/01/2026;BE;Anvers;17/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+15/01/2026;FR;Lille;03/02/2026;09/02/2026;4;2;Suite;Confirmée
+03/01/2026;FR;NANTES;19/01/2026;25/01/2026;3;1;Chambre Supérieure;Confirmée
+01/04/2026;CH;Genève;11/04/2026;16/04/2026;3;1;Junior Suite;Confirmée
+23/01/2026;FR;LYON;23/02/2026;25/02/2026;4;2;Junior Suite;Confirmée
+05/11/2025;US;New York;10/02/2026;12/02/2026;3;1;Chambre Classique;Confirmée
+07/03/2026;BE;Gand;03/04/2026;08/04/2026;2;1;Junior Suite;Confirmée
+23/01/2026;DE;Munich;11/02/2026;16/02/2026;2;1;Junior Suite;Confirmée
+17/09/2025;GB;London;22/12/2025;28/12/2025;4;1;Chambre Classique;Confirmée
+26/01/2026;CH;Genève;22/02/2026;26/02/2026;4;1;Chambre Supérieure;Confirmée
+11/07/2025;GB;London;27/12/2025;02/01/2026;8;2;Chambre Supérieure;Confirmée
+06/11/2025;FR;Paris;09/01/2026;14/01/2026;2;1;Junior Suite;Confirmée
+14/12/2025;FR;PARIS;04/02/2026;10/02/2026;4;1;Suite;Confirmée
+13/02/2026;FR;Lyon;09/03/2026;12/03/2026;1;1;Appartement;Confirmée
+29/11/2025;DE;Munich;02/01/2026;07/01/2026;6;2;Suite;Confirmée
+24/12/2025;NL;Amsterdam;05/04/2026;09/04/2026;3;1;Suite;Confirmée
+23/11/2025;France;MARSEILLE;06/01/2026;11/01/2026;4;1;Chambre Classique;Confirmée
+16/12/2025;FR;Marseille;11/01/2026;16/01/2026;4;1;Junior Suite;Confirmée
+16/01/2026;FR;NANTES;18/02/2026;23/02/2026;4;1;Chambre Classique;Confirmée
+01/01/2026;GB;BRISTOL;11/04/2026;16/04/2026;4;1;Suite;Confirmée
+22/01/2026;France;Bordeaux;16/02/2026;22/02/2026;3;1;Chambre Classique;Confirmée
+02/12/2025;CH;Genève;28/12/2025;03/01/2026;8;2;Appartement;Confirmée
+15/02/2026;FR;BORDEAUX;26/03/2026;31/03/2026;4;1;Suite;Confirmée
+22/10/2025;FR;PARIS;30/12/2025;04/01/2026;2;1;Chambre Classique;Confirmée
+26/09/2025;IT;Milan;19/12/2025;22/12/2025;4;1;Chambre Classique;Confirmée
+23/10/2025;CH;GENÈVE;19/12/2025;24/12/2025;8;2;Suite;Confirmée
+27/02/2026;GB;London;27/03/2026;31/03/2026;1;1;Chambre Classique;Confirmée
+18/02/2026;Suisse;LAUSANNE;07/03/2026;12/03/2026;2;1;Chambre Supérieure;Confirmée
+30/12/2025;DE;MUNICH;09/02/2026;12/02/2026;2;1;Chambre Classique;Confirmée
+11/02/2026;Suisse;LAUSANNE;26/02/2026;01/03/2026;1;1;Chambre Supérieure;Confirmée
+26/11/2025;FR;Paris;26/12/2025;28/12/2025;3;1;Junior Suite;Confirmée
+06/11/2025;FR;PARIS;30/12/2025;02/01/2026;3;1;Junior Suite;Confirmée
+29/12/2025;NL;Amsterdam;14/02/2026;16/02/2026;2;1;Suite;Confirmée
+08/02/2025;US;New York;25/12/2025;28/12/2025;3;1;Chambre Classique;Confirmée
+29/12/2025;CH;Genève;31/01/2026;06/02/2026;9;3;Chambre Supérieure;Confirmée
+14/01/2026;FR;Paris;05/02/2026;10/02/2026;4;1;Chambre Classique;Confirmée
+15/01/2026;FR;MARSEILLE;20/02/2026;25/02/2026;4;1;Chambre Supérieure;Confirmée
+08/02/2026;CH;Genève;13/03/2026;15/03/2026;3;1;Chambre Supérieure;Confirmée
+03/12/2025;IT;MILAN;27/12/2025;01/01/2026;3;1;Chambre Supérieure;Confirmée
+20/02/2026;FR;PARIS;09/04/2026;14/04/2026;2;1;Chambre Supérieure;Confirmée
+17/11/2025;FR;Marseille;17/01/2026;23/01/2026;4;2;Chambre Supérieure;Confirmée
+23/12/2025;CH;Lausanne;16/01/2026;22/01/2026;3;1;Chambre Classique;Confirmée
+01/02/2026;DE;Munich;27/02/2026;03/03/2026;4;1;Chambre Supérieure;Confirmée
+30/09/2025;BE;Gand;22/12/2025;27/12/2025;6;2;Chambre Classique;Confirmée
+12/10/2025;NL;Amsterdam;20/12/2025;26/12/2025;2;1;Chambre Classique;Confirmée
+19/03/2026;CH;Zurich;09/04/2026;13/04/2026;2;1;Chambre Supérieure;Confirmée
+02/01/2026;BE;BRUXELLES;14/02/2026;17/02/2026;2;1;Chambre Classique;Confirmée
+16/11/2025;DE;Munich;15/12/2025;19/12/2025;2;1;Junior Suite;Confirmée
+23/08/2025;US;NEW YORK;23/01/2026;26/01/2026;2;1;Chambre Classique;Confirmée
+01/01/2026;FR;Paris;10/02/2026;16/02/2026;3;1;Chambre Classique;Confirmée
+11/10/2025;FR;Lille;20/12/2025;25/12/2025;2;1;Appartement;Confirmée
+11/12/2025;NL;Amsterdam;18/02/2026;22/02/2026;2;1;Chambre Classique;Confirmée
+10/02/2026;FR;Paris;02/03/2026;05/03/2026;3;1;Chambre Supérieure;Confirmée
+30/12/2025;DE;Munich;22/02/2026;26/02/2026;2;1;Junior Suite;Confirmée
+04/03/2026;CH;Lausanne;26/03/2026;31/03/2026;2;1;Chambre Classique;Confirmée
+20/01/2026;CH;LAUSANNE;04/02/2026;06/02/2026;3;1;Suite;Confirmée
+20/03/2026;France;LYON;08/04/2026;12/04/2026;2;1;Chambre Classique;Confirmée
+24/12/2025;GB;London;22/03/2026;27/03/2026;2;1;Chambre Classique;Annulée
+12/08/2025;NL;Rotterdam;24/12/2025;28/12/2025;3;1;Junior Suite;Confirmée
+08/12/2025;FR;Paris;16/02/2026;18/02/2026;4;1;Suite;Confirmée
+17/11/2025;BE;Bruxelles;25/01/2026;27/01/2026;3;1;Suite;Confirmée
+03/01/2026;FR;BORDEAUX;23/01/2026;29/01/2026;4;1;Chambre Classique;Confirmée
+01/01/2026;CH;Genève;05/02/2026;10/02/2026;3;1;Chambre Classique;Confirmée
+25/01/2026;FR;Lyon;10/04/2026;14/04/2026;3;1;Chambre Classique;Confirmée
+29/09/2025;GB;LONDON;05/02/2026;09/02/2026;2;1;Chambre Supérieure;Confirmée
+11/11/2025;CH;Genève;14/12/2025;16/12/2025;1;1;Chambre Classique;Confirmée
+23/10/2025;FR;Paris;12/12/2025;14/12/2025;4;1;Chambre Classique;Confirmée
+12/09/2025;FR;Bordeaux;30/12/2025;05/01/2026;1;1;Chambre Supérieure;Confirmée
+10/12/2025;CH;Genève;26/12/2025;28/12/2025;6;3;Chambre Classique;Confirmée
+08/01/2026;FR;Paris;07/02/2026;11/02/2026;2;1;Chambre Classique;Confirmée
+14/03/2026;CH;GENÈVE;25/03/2026;29/03/2026;8;2;Chambre Classique;Confirmée
+27/12/2025;US;New York;30/03/2026;03/04/2026;2;1;Chambre Supérieure;Confirmée
+24/02/2026;Suisse;GENÈVE;14/03/2026;19/03/2026;9;3;Chambre Classique;Confirmée
+18/02/2026;FR;Paris;09/03/2026;15/03/2026;2;1;Chambre Classique;Confirmée
+28/02/2026;France;Marseille;19/03/2026;25/03/2026;2;1;Chambre Classique;Confirmée
+15/01/2026;FR;Marseille;24/02/2026;28/02/2026;2;1;Appartement;Confirmée
+24/03/2026;CH;GENÈVE;02/04/2026;04/04/2026;2;1;Chambre Classique;Confirmée
+19/11/2025;FR;Lyon;03/02/2026;07/02/2026;6;2;Chambre Classique;Annulée
+22/12/2025;FR;Lyon;01/02/2026;07/02/2026;2;1;Junior Suite;Confirmée
+17/01/2026;FR;NANTES;23/03/2026;28/03/2026;2;1;Chambre Classique;Confirmée
+28/02/2026;CH;Genève;08/03/2026;11/03/2026;3;1;Junior Suite;Confirmée
+16/02/2026;BE;Gand;25/03/2026;28/03/2026;4;1;Chambre Classique;Confirmée
+22/11/2025;FR;Paris;28/01/2026;02/02/2026;2;1;Chambre Supérieure;Confirmée
+13/12/2025;FR;LYON;03/02/2026;07/02/2026;2;1;Suite;Annulée
+24/01/2026;DE;Berlin;17/02/2026;22/02/2026;3;1;Chambre Classique;Confirmée
+12/11/2025;FR;Paris;13/12/2025;15/12/2025;2;1;Chambre Supérieure;Confirmée
+02/02/2026;FR;PARIS;26/02/2026;02/03/2026;2;1;Chambre Supérieure;Confirmée
+19/03/2026;CH;Zurich;03/04/2026;08/04/2026;6;2;Chambre Classique;Confirmée
+23/02/2026;DE;Munich;26/03/2026;28/03/2026;3;1;Suite;Confirmée
+14/12/2025;FR;Paris;15/01/2026;18/01/2026;3;1;Junior Suite;Confirmée
+01/03/2026;FR;Paris;08/04/2026;13/04/2026;2;1;Chambre Supérieure;Confirmée
+07/02/2026;DE;MUNICH;09/03/2026;15/03/2026;3;1;Chambre Supérieure;Confirmée
+17/08/2025;FR;BORDEAUX;02/01/2026;08/01/2026;2;1;Suite;Confirmée
+10/10/2025;GB;London;05/02/2026;08/02/2026;2;1;Chambre Supérieure;Confirmée
+12/01/2026;FR;LYON;03/02/2026;07/02/2026;2;1;Chambre Classique;Confirmée
+27/12/2025;FR;NANTES;08/02/2026;11/02/2026;3;1;Chambre Supérieure;Confirmée
+30/09/2025;NL;Utrecht;30/12/2025;03/01/2026;2;1;Junior Suite;Confirmée
+06/03/2026;FR;Bordeaux;22/03/2026;28/03/2026;2;1;Suite;Confirmée
+02/01/2026;FR;Paris;22/01/2026;26/01/2026;2;1;Chambre Classique;Confirmée
+27/11/2025;CH;Lausanne;27/12/2025;31/12/2025;2;1;Chambre Supérieure;Confirmée
+22/10/2025;GB;Bristol;03/01/2026;09/01/2026;2;1;Chambre Supérieure;Confirmée
+27/08/2025;FR;Paris;30/12/2025;04/01/2026;4;1;Chambre Supérieure;Confirmée
+28/12/2025;GB;LONDON;26/01/2026;28/01/2026;2;1;Chambre Supérieure;Confirmée
+20/12/2025;BE;Bruxelles;02/02/2026;07/02/2026;4;1;Appartement;Confirmée
+10/11/2025;France;Paris;19/12/2025;22/12/2025;6;3;Appartement;Confirmée
+21/02/2026;FR;Paris;27/03/2026;01/04/2026;3;1;Junior Suite;Confirmée
+04/12/2025;FR;Paris;01/01/2026;06/01/2026;2;1;Junior Suite;Confirmée
+05/12/2025;Suisse;Genève;17/12/2025;22/12/2025;1;1;Chambre Supérieure;Confirmée
+20/02/2026;CH;Lausanne;26/03/2026;28/03/2026;2;1;Chambre Supérieure;Confirmée
+11/12/2025;US;MIAMI;11/02/2026;15/02/2026;3;1;Suite;Annulée
+06/12/2025;CH;Lausanne;29/12/2025;04/01/2026;3;1;Appartement;Confirmée
+24/12/2025;NL;UTRECHT;23/01/2026;28/01/2026;3;1;Chambre Supérieure;Confirmée
+30/01/2026;CH;GENÈVE;14/02/2026;16/02/2026;4;1;Suite;Confirmée
+22/09/2025;GB;Bristol;31/12/2025;03/01/2026;4;1;Junior Suite;Confirmée
+19/01/2026;FR;Lyon;15/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+19/11/2025;CH;Zurich;26/12/2025;28/12/2025;4;1;Chambre Supérieure;Confirmée
+14/12/2025;GB;London;12/01/2026;18/01/2026;4;1;Chambre Supérieure;Confirmée
+01/11/2025;GB;LONDON;11/02/2026;17/02/2026;3;1;Suite;Confirmée
+14/01/2026;CH;Genève;06/02/2026;08/02/2026;3;1;Chambre Classique;Confirmée
+03/03/2026;CH;GENÈVE;11/03/2026;13/03/2026;3;1;Junior Suite;Confirmée
+18/12/2025;US;New York;26/01/2026;29/01/2026;4;1;Chambre Supérieure;Confirmée
+26/01/2026;FR;LYON;20/02/2026;26/02/2026;2;1;Suite;Confirmée
+13/09/2025;FR;Lyon;30/12/2025;02/01/2026;1;1;Junior Suite;Confirmée
+01/02/2026;FR;Paris;16/03/2026;18/03/2026;6;2;Chambre Classique;Confirmée
+18/12/2025;FR;LYON;17/01/2026;22/01/2026;3;1;Chambre Classique;Confirmée
+27/10/2025;US;Miami;22/02/2026;24/02/2026;2;1;Suite;Confirmée
+01/01/2026;BE;Gand;14/02/2026;18/02/2026;2;1;Junior Suite;Confirmée
+31/01/2026;BE;Anvers;19/02/2026;22/02/2026;2;1;Chambre Supérieure;Confirmée
+22/11/2025;FR;Bordeaux;17/12/2025;22/12/2025;2;1;Appartement;Confirmée
+16/03/2026;Suisse;Genève;02/04/2026;08/04/2026;2;1;Chambre Classique;Confirmée
+15/06/2025;GB;London;03/01/2026;06/01/2026;1;1;Chambre Classique;Confirmée
+26/10/2025;FR;Paris;22/12/2025;24/12/2025;2;1;Junior Suite;Confirmée
+20/01/2026;FR;Bordeaux;23/02/2026;28/02/2026;1;1;Suite;Confirmée
+17/09/2025;GB;London;13/12/2025;18/12/2025;4;2;Chambre Classique;Confirmée
+23/01/2026;NL;AMSTERDAM;18/02/2026;22/02/2026;2;1;Chambre Supérieure;Confirmée
+17/02/2026;BE;Anvers;12/04/2026;15/04/2026;8;2;Chambre Classique;Confirmée
+27/11/2025;CH;GENÈVE;27/12/2025;29/12/2025;1;1;Junior Suite;Confirmée
+14/12/2025;CH;Genève;04/01/2026;06/01/2026;3;1;Chambre Supérieure;Confirmée
+05/02/2026;FR;Bordeaux;23/02/2026;26/02/2026;2;1;Chambre Supérieure;Confirmée
+26/01/2026;CH;GENÈVE;10/02/2026;13/02/2026;4;2;Suite;Confirmée
+11/12/2025;FR;Paris;19/01/2026;23/01/2026;1;1;Suite;Confirmée
+19/07/2025;BE;Bruxelles;28/12/2025;01/01/2026;2;1;Appartement;Confirmée
+10/08/2025;NL;Amsterdam;29/12/2025;31/12/2025;4;1;Chambre Supérieure;Confirmée
+24/02/2026;GB;London;02/04/2026;07/04/2026;3;1;Junior Suite;Confirmée
+30/12/2025;BE;Bruxelles;15/02/2026;21/02/2026;3;1;Junior Suite;Confirmée
+28/11/2025;GB;LONDON;05/01/2026;09/01/2026;9;3;Suite;Confirmée
+17/02/2026;CH;ZURICH;26/02/2026;01/03/2026;2;1;Junior Suite;Annulée
+31/12/2025;FR;Paris;09/02/2026;12/02/2026;2;1;Chambre Classique;Confirmée
+11/02/2026;FR;LYON;31/03/2026;05/04/2026;8;2;Suite;Confirmée
+04/12/2025;CH;Zurich;22/12/2025;29/12/2025;1;1;Junior Suite;Confirmée
+17/01/2026;FR;Nantes;26/02/2026;01/03/2026;4;1;Junior Suite;Confirmée
+25/11/2025;FR;Paris;01/02/2026;07/02/2026;2;1;Junior Suite;Confirmée
+10/11/2025;FR;PARIS;29/12/2025;03/01/2026;2;1;Suite;Confirmée
+03/02/2026;FR;Lyon;15/03/2026;18/03/2026;8;2;Suite;Confirmée
+07/01/2026;FR;Paris;05/02/2026;07/02/2026;4;2;Chambre Supérieure;Confirmée
+11/02/2026;US;MIAMI;28/03/2026;03/04/2026;4;2;Chambre Supérieure;Confirmée
+02/03/2026;CH;GENÈVE;01/04/2026;06/04/2026;1;1;Chambre Classique;Confirmée
+16/01/2026;BE;Anvers;09/02/2026;11/02/2026;3;1;Chambre Supérieure;Confirmée
+17/01/2026;CH;GENÈVE;09/02/2026;15/02/2026;2;1;Chambre Classique;Confirmée
+17/11/2025;FR;PARIS;01/02/2026;05/02/2026;4;1;Junior Suite;Confirmée
+11/02/2026;CH;Genève;22/02/2026;24/02/2026;2;1;Suite;Confirmée
+02/12/2025;FR;LYON;24/01/2026;27/01/2026;2;1;Suite;Confirmée
+17/01/2026;FR;Nantes;05/02/2026;08/02/2026;3;1;Chambre Supérieure;Confirmée
+20/12/2025;US;New York;18/02/2026;21/02/2026;2;1;Appartement;Confirmée
+21/09/2025;US;NEW YORK;20/03/2026;26/03/2026;2;1;Chambre Classique;Confirmée
+18/01/2026;FR;PARIS;05/03/2026;09/03/2026;3;1;Chambre Supérieure;Confirmée
+22/12/2025;GB;London;05/02/2026;10/02/2026;4;2;Suite;Confirmée
+06/11/2025;FR;Marseille;23/12/2025;25/12/2025;3;1;Chambre Classique;Confirmée
+10/02/2026;Suisse;ZURICH;19/02/2026;24/02/2026;2;1;Suite;Confirmée
+15/11/2025;FR;Paris;29/12/2025;02/01/2026;4;2;Chambre Supérieure;Confirmée
+20/11/2025;Suisse;GENÈVE;25/12/2025;27/12/2025;2;1;Suite;Confirmée
+20/02/2026;France;LYON;05/04/2026;08/04/2026;3;1;Junior Suite;Confirmée
+23/01/2026;BE;Bruxelles;12/02/2026;18/02/2026;4;2;Chambre Classique;Confirmée
+27/01/2026;GB;London;01/03/2026;03/03/2026;2;1;Junior Suite;Confirmée
+01/11/2025;FR;PARIS;23/12/2025;27/12/2025;2;1;Junior Suite;Confirmée
+06/11/2025;GB;Manchester;05/02/2026;08/02/2026;3;1;Chambre Supérieure;Confirmée
+04/03/2026;Suisse;Genève;14/03/2026;19/03/2026;4;1;Suite;Confirmée
+25/11/2025;FR;LYON;09/01/2026;15/01/2026;2;1;Chambre Supérieure;Confirmée
+06/02/2026;CH;Genève;25/02/2026;03/03/2026;3;1;Chambre Classique;Confirmée
+01/01/2026;BE;Bruxelles;06/02/2026;10/02/2026;4;2;Chambre Supérieure;Confirmée
+20/01/2026;Suisse;Genève;15/02/2026;20/02/2026;3;1;Chambre Classique;Confirmée
+29/01/2026;FR;PARIS;16/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+24/11/2025;US;New York;16/03/2026;19/03/2026;2;1;Junior Suite;Confirmée
+11/03/2026;CH;Zurich;09/04/2026;15/04/2026;8;2;Chambre Supérieure;Annulée
+06/09/2025;NL;Amsterdam;19/12/2025;26/12/2025;6;2;Chambre Supérieure;Confirmée
+20/01/2026;FR;Paris;27/02/2026;04/03/2026;2;1;Junior Suite;Annulée
+14/01/2026;FR;Paris;06/02/2026;11/02/2026;2;1;Junior Suite;Confirmée
+25/12/2025;BE;ANVERS;12/02/2026;16/02/2026;2;1;Appartement;Confirmée
+13/12/2025;GB;London;23/02/2026;01/03/2026;2;1;Chambre Classique;Confirmée
+24/01/2026;BE;Bruxelles;29/03/2026;01/04/2026;8;2;Chambre Supérieure;Confirmée
+19/06/2025;GB;Edinburgh;28/12/2025;31/12/2025;4;2;Chambre Supérieure;Confirmée
+24/02/2026;FR;Lyon;20/03/2026;22/03/2026;2;1;Suite;Confirmée
+10/08/2025;FR;Lyon;19/12/2025;23/12/2025;2;1;Chambre Supérieure;Confirmée
+12/02/2026;CH;LAUSANNE;01/03/2026;06/03/2026;2;1;Chambre Supérieure;Confirmée
+22/10/2025;US;NEW YORK;15/12/2025;21/12/2025;2;1;Chambre Classique;Confirmée
+13/12/2025;GB;London;25/01/2026;27/01/2026;2;1;Chambre Classique;Confirmée
+01/01/2026;France;Bordeaux;19/01/2026;22/01/2026;3;1;Chambre Supérieure;Confirmée
+09/01/2026;FR;Paris;28/02/2026;03/03/2026;6;2;Chambre Classique;Confirmée
+24/12/2025;FR;Paris;03/03/2026;06/03/2026;2;1;Chambre Supérieure;Confirmée
+07/01/2026;CH;GENÈVE;25/01/2026;31/01/2026;3;1;Chambre Supérieure;Confirmée
+20/01/2026;FR;LYON;14/02/2026;18/02/2026;2;1;Chambre Classique;Confirmée
+12/10/2025;US;MIAMI;27/01/2026;02/02/2026;2;1;Chambre Classique;Confirmée
+24/01/2026;CH;Lausanne;25/02/2026;02/03/2026;2;1;Chambre Classique;Confirmée
+28/12/2025;NL;Rotterdam;19/01/2026;22/01/2026;2;1;Chambre Supérieure;Confirmée
+17/10/2025;GB;London;21/12/2025;25/12/2025;4;1;Chambre Classique;Confirmée
+02/02/2026;CH;Genève;11/02/2026;15/02/2026;1;1;Chambre Classique;Confirmée
+13/01/2026;CH;GENÈVE;14/02/2026;16/02/2026;3;1;Chambre Classique;Confirmée
+20/09/2025;FR;Paris;01/01/2026;04/01/2026;2;1;Chambre Classique;Confirmée
+26/01/2026;IT;Milan;15/02/2026;21/02/2026;2;1;Chambre Classique;Confirmée
+14/09/2025;US;Boston;26/12/2025;28/12/2025;8;2;Chambre Supérieure;Confirmée
+16/03/2026;FR;Lyon;06/04/2026;09/04/2026;3;1;Appartement;Confirmée
+06/10/2025;FR;LYON;19/12/2025;22/12/2025;2;1;Chambre Supérieure;Confirmée
+28/06/2025;GB;LONDON;22/12/2025;27/12/2025;2;1;Appartement;Confirmée
+18/12/2025;Suisse;Genève;17/01/2026;23/01/2026;4;1;Junior Suite;Confirmée
+29/01/2026;CH;GENÈVE;07/02/2026;10/02/2026;2;1;Appartement;Confirmée
+29/01/2026;France;Bordeaux;17/02/2026;22/02/2026;4;1;Junior Suite;Confirmée
+25/10/2025;GB;London;03/03/2026;08/03/2026;2;1;Chambre Classique;Confirmée
+08/03/2026;FR;Paris;24/03/2026;26/03/2026;3;1;Chambre Classique;Annulée
+02/03/2026;FR;Paris;28/03/2026;30/03/2026;2;1;Suite;Confirmée
+16/08/2025;BE;Bruxelles;19/12/2025;23/12/2025;1;1;Chambre Classique;Confirmée
+16/09/2025;FR;Lyon;31/12/2025;02/01/2026;4;1;Junior Suite;Confirmée
+14/12/2025;FR;Paris;21/02/2026;25/02/2026;4;2;Junior Suite;Confirmée
+17/01/2026;FR;PARIS;04/02/2026;07/02/2026;2;1;Suite;Confirmée
+06/01/2026;GB;London;24/03/2026;27/03/2026;4;1;Junior Suite;Confirmée
+02/12/2025;GB;London;17/03/2026;20/03/2026;2;1;Chambre Supérieure;Confirmée
+03/01/2026;CH;Genève;17/01/2026;23/01/2026;3;1;Chambre Supérieure;Annulée
+17/12/2025;France;Lyon;17/02/2026;22/02/2026;4;2;Junior Suite;Confirmée
+14/06/2025;GB;London;29/12/2025;01/01/2026;6;3;Chambre Supérieure;Annulée
+22/10/2025;CH;Genève;20/12/2025;27/12/2025;4;2;Appartement;Confirmée
+12/12/2025;FR;LILLE;23/01/2026;29/01/2026;2;1;Chambre Supérieure;Confirmée
+28/02/2026;FR;Paris;25/03/2026;27/03/2026;3;1;Chambre Classique;Confirmée
+24/10/2025;US;New York;17/02/2026;20/02/2026;4;1;Chambre Classique;Confirmée
+02/10/2025;FR;Paris;23/12/2025;30/12/2025;3;1;Appartement;Confirmée
+23/01/2026;US;New York;28/03/2026;02/04/2026;2;1;Suite;Confirmée
+28/01/2026;CH;Genève;18/02/2026;22/02/2026;2;1;Appartement;Confirmée
+17/02/2026;GB;London;25/03/2026;27/03/2026;3;1;Chambre Classique;Confirmée
+20/11/2025;BE;Bruxelles;12/12/2025;17/12/2025;2;1;Chambre Supérieure;Confirmée
+08/11/2025;GB;London;15/12/2025;21/12/2025;2;1;Chambre Supérieure;Confirmée
+14/01/2026;France;Paris;13/02/2026;18/02/2026;2;1;Chambre Supérieure;Confirmée
+11/01/2026;FR;Lyon;01/02/2026;07/02/2026;2;1;Chambre Classique;Confirmée
+02/01/2026;CH;Genève;14/01/2026;20/01/2026;3;1;Suite;Annulée
+22/12/2025;FR;Paris;09/03/2026;15/03/2026;12;3;Chambre Classique;Confirmée
+16/02/2026;FR;Lyon;08/04/2026;14/04/2026;2;1;Chambre Classique;Confirmée
+17/01/2026;CH;Zurich;06/02/2026;11/02/2026;2;1;Suite;Confirmée
+31/01/2026;FR;Lyon;22/02/2026;24/02/2026;4;1;Junior Suite;Confirmée
+24/01/2026;FR;Paris;14/02/2026;19/02/2026;4;1;Chambre Classique;Confirmée
+23/06/2025;GB;LONDON;01/01/2026;08/01/2026;3;1;Junior Suite;Confirmée
+07/02/2026;FR;BORDEAUX;12/03/2026;14/03/2026;6;2;Appartement;Confirmée
+16/01/2026;FR;Nantes;16/02/2026;22/02/2026;12;3;Chambre Supérieure;Confirmée
+20/11/2025;CH;GENÈVE;27/12/2025;30/12/2025;2;1;Chambre Classique;Confirmée
+07/02/2026;CH;Lausanne;16/02/2026;18/02/2026;2;1;Suite;Confirmée
+20/08/2025;FR;Lyon;25/12/2025;28/12/2025;2;1;Chambre Classique;Confirmée
+07/12/2025;CH;Genève;01/01/2026;04/01/2026;2;1;Chambre Classique;Confirmée
+25/01/2026;CH;Genève;09/02/2026;12/02/2026;3;1;Chambre Supérieure;Confirmée
+06/02/2026;FR;BORDEAUX;23/02/2026;26/02/2026;2;1;Suite;Confirmée
+02/02/2026;GB;LONDON;09/03/2026;13/03/2026;2;1;Chambre Supérieure;Confirmée
+18/10/2025;GB;LONDON;01/02/2026;04/02/2026;6;2;Chambre Classique;Confirmée
+28/01/2026;FR;NANTES;18/02/2026;22/02/2026;2;1;Junior Suite;Confirmée
+12/03/2026;FR;Paris;08/04/2026;10/04/2026;2;1;Chambre Classique;Confirmée
+29/12/2025;GB;London;21/03/2026;25/03/2026;2;1;Chambre Supérieure;Confirmée
+29/11/2025;BE;Anvers;09/02/2026;13/02/2026;4;1;Chambre Supérieure;Confirmée
+25/12/2025;FR;LYON;06/03/2026;09/03/2026;3;1;Chambre Classique;Confirmée
+28/11/2025;FR;LYON;02/01/2026;09/01/2026;4;1;Appartement;Confirmée
+19/01/2026;GB;LONDON;28/02/2026;03/03/2026;6;3;Chambre Supérieure;Confirmée
+24/08/2025;GB;Edinburgh;21/12/2025;24/12/2025;8;2;Suite;Confirmée
+06/02/2026;FR;Paris;06/03/2026;08/03/2026;2;1;Appartement;Confirmée
+16/02/2026;FR;Lille;14/03/2026;18/03/2026;2;1;Chambre Classique;Confirmée
+10/01/2026;FR;Lille;02/03/2026;05/03/2026;2;1;Chambre Supérieure;Confirmée
+27/01/2026;FR;Nantes;18/02/2026;24/02/2026;4;1;Chambre Supérieure;Confirmée
+17/01/2026;FR;Lille;31/03/2026;05/04/2026;2;1;Chambre Classique;Confirmée
+23/03/2026;FR;Marseille;08/04/2026;14/04/2026;3;1;Chambre Supérieure;Confirmée
+20/02/2026;FR;Lyon;19/03/2026;25/03/2026;6;3;Chambre Classique;Confirmée
+12/11/2025;FR;Paris;30/12/2025;03/01/2026;2;1;Chambre Classique;Confirmée
+05/12/2025;CH;Genève;21/12/2025;25/12/2025;3;1;Chambre Classique;Confirmée
+04/03/2026;NL;Rotterdam;07/04/2026;10/04/2026;6;3;Suite;Confirmée
+21/02/2026;CH;Genève;03/03/2026;07/03/2026;2;1;Chambre Classique;Confirmée
+12/10/2025;FR;Nantes;30/12/2025;02/01/2026;3;1;Chambre Classique;Confirmée
+27/02/2026;FR;Paris;05/04/2026;07/04/2026;2;1;Chambre Supérieure;Confirmée
+29/09/2025;NL;ROTTERDAM;05/01/2026;10/01/2026;2;1;Chambre Classique;Confirmée
+05/01/2026;US;New York;26/02/2026;04/03/2026;2;1;Chambre Classique;Confirmée
+09/02/2026;CH;GENÈVE;23/02/2026;27/02/2026;4;2;Suite;Confirmée
+01/02/2026;CH;GENÈVE;10/02/2026;15/02/2026;3;1;Junior Suite;Confirmée
+01/02/2026;GB;London;12/03/2026;16/03/2026;3;1;Chambre Classique;Confirmée
+27/11/2025;CH;Genève;22/12/2025;25/12/2025;2;1;Suite;Confirmée
+22/02/2026;FR;LYON;13/03/2026;19/03/2026;2;1;Appartement;Confirmée
+21/01/2026;Suisse;Genève;31/01/2026;06/02/2026;8;2;Chambre Classique;Confirmée
+20/02/2026;FR;Marseille;18/03/2026;22/03/2026;3;1;Chambre Classique;Confirmée
+11/02/2026;FR;Paris;25/03/2026;28/03/2026;3;1;Chambre Classique;Confirmée
+16/11/2025;FR;Paris;22/01/2026;24/01/2026;2;1;Appartement;Confirmée
+22/11/2025;GB;London;04/02/2026;06/02/2026;2;1;Chambre Classique;Confirmée
+31/10/2025;France;Bordeaux;31/12/2025;05/01/2026;2;1;Junior Suite;Annulée
+10/12/2025;CH;Lausanne;27/12/2025;01/01/2026;2;1;Junior Suite;Confirmée
+26/02/2026;CH;Genève;21/03/2026;26/03/2026;2;1;Chambre Supérieure;Confirmée
+10/11/2025;CH;Genève;02/01/2026;08/01/2026;2;1;Chambre Supérieure;Annulée
+04/01/2026;FR;Nantes;30/01/2026;03/02/2026;3;1;Junior Suite;Confirmée
+19/11/2025;BE;Bruxelles;24/12/2025;31/12/2025;4;2;Junior Suite;Confirmée
+09/01/2026;FR;LYON;31/01/2026;05/02/2026;4;1;Chambre Supérieure;Confirmée
+14/01/2026;FR;Lyon;11/02/2026;13/02/2026;4;2;Chambre Supérieure;Confirmée
+07/11/2025;FR;PARIS;06/01/2026;10/01/2026;4;1;Chambre Classique;Confirmée
+20/08/2026;US;New York;12/02/2027;16/02/2027;2;1;Chambre Classique;Confirmée
+07/09/2026;US;New York;23/02/2027;25/02/2027;3;1;Junior Suite;Confirmée
+01/09/2026;BE;BRUXELLES;19/12/2026;25/12/2026;3;1;Chambre Classique;Confirmée
+30/09/2026;FR;Nantes;28/12/2026;31/12/2026;4;1;Junior Suite;Annulée
+18/09/2026;US;Miami;27/01/2027;30/01/2027;2;1;Chambre Supérieure;Confirmée
+28/07/2026;GB;Manchester;25/12/2026;29/12/2026;4;2;Junior Suite;Confirmée
+10/09/2026;FR;Bordeaux;28/12/2026;30/12/2026;3;1;Chambre Classique;Confirmée
+27/09/2026;FR;Lyon;01/01/2027;08/01/2027;2;1;Chambre Classique;Confirmée
+05/10/2026;BE;Bruxelles;21/12/2026;28/12/2026;2;1;Junior Suite;Confirmée
+31/08/2026;FR;Paris;19/12/2026;21/12/2026;3;1;Chambre Classique;Confirmée
+15/08/2026;GB;London;02/01/2027;05/01/2027;2;1;Junior Suite;Confirmée
+09/08/2026;BE;Gand;27/12/2026;03/01/2027;2;1;Chambre Supérieure;Confirmée
+22/09/2026;NL;Amsterdam;20/12/2026;22/12/2026;2;1;Suite;Confirmée
+12/09/2026;NL;Rotterdam;25/12/2026;31/12/2026;2;1;Chambre Classique;Confirmée
+11/07/2026;US;Boston;28/12/2026;01/01/2027;3;1;Chambre Supérieure;Confirmée
+02/10/2026;GB;LONDON;18/01/2027;21/01/2027;2;1;Junior Suite;Confirmée
+01/03/2026;US;New York;19/12/2026;21/12/2026;3;1;Chambre Classique;Annulée
+26/08/2026;US;New York;03/02/2027;08/02/2027;4;2;Chambre Classique;Confirmée
+26/04/2026;GB;LONDON;19/12/2026;23/12/2026;2;1;Chambre Classique;Confirmée
+14/08/2026;FR;BORDEAUX;20/12/2026;23/12/2026;4;1;Junior Suite;Confirmée
+30/05/2026;GB;London;25/12/2026;30/12/2026;2;1;Chambre Classique;Confirmée
+09/09/2026;FR;Paris;01/01/2027;03/01/2027;2;1;Chambre Classique;Confirmée
+01/08/2026;FR;Lyon;19/12/2026;23/12/2026;4;2;Chambre Supérieure;Confirmée
+05/09/2026;FR;Paris;24/12/2026;31/12/2026;1;1;Appartement;Confirmée
+23/09/2026;FR;Paris;19/12/2026;23/12/2026;2;1;Chambre Classique;Confirmée
+02/03/2026;US;MIAMI;23/12/2026;25/12/2026;4;1;Chambre Classique;Confirmée
+13/08/2026;GB;London;17/12/2026;19/12/2026;3;1;Appartement;Confirmée
+31/08/2026;DE;Munich;03/01/2027;07/01/2027;3;1;Chambre Classique;Confirmée
+20/09/2026;NL;Amsterdam;02/01/2027;04/01/2027;2;1;Appartement;Annulée
+10/08/2026;FR;Nantes;24/12/2026;26/12/2026;3;1;Junior Suite;Confirmée
+05/10/2026;GB;London;20/12/2026;27/12/2026;2;1;Chambre Classique;Confirmée
+02/10/2026;GB;LONDON;02/01/2027;05/01/2027;2;1;Chambre Classique;Confirmée
+31/08/2026;NL;Utrecht;27/12/2026;31/12/2026;2;1;Chambre Supérieure;Confirmée
+30/06/2026;GB;MANCHESTER;01/01/2027;05/01/2027;8;2;Chambre Classique;Confirmée
+10/08/2026;FR;PARIS;24/12/2026;29/12/2026;9;3;Chambre Classique;Confirmée
+24/09/2026;FR;Paris;24/12/2026;31/12/2026;2;1;Chambre Supérieure;Confirmée
+28/05/2026;US;New York;31/12/2026;04/01/2027;3;1;Junior Suite;Confirmée
+30/09/2026;NL;UTRECHT;16/01/2027;20/01/2027;2;1;Junior Suite;Confirmée
+06/10/2026;US;New York;30/12/2026;01/01/2027;3;1;Chambre Classique;Confirmée
+02/09/2026;US;NEW YORK;11/12/2026;14/12/2026;4;1;Suite;Confirmée
+28/07/2026;US;MIAMI;17/12/2026;23/12/2026;2;1;Suite;Confirmée
+02/09/2026;US;Boston;12/02/2027;17/02/2027;2;1;Chambre Classique;Confirmée
+23/09/2026;US;Miami;02/02/2027;06/02/2027;4;1;Chambre Supérieure;Confirmée
+27/09/2026;GB;London;11/02/2027;16/02/2027;3;1;Chambre Classique;Confirmée
+10/08/2026;DE;BERLIN;29/12/2026;03/01/2027;1;1;Suite;Confirmée
+04/09/2026;DE;Munich;20/12/2026;27/12/2026;2;1;Junior Suite;Confirmée
+02/07/2026;US;NEW YORK;20/12/2026;25/12/2026;2;1;Chambre Supérieure;Confirmée
+06/10/2026;BE;GAND;21/12/2026;27/12/2026;12;3;Chambre Supérieure;Confirmée
+05/10/2026;NL;Amsterdam;01/01/2027;06/01/2027;4;2;Chambre Classique;Confirmée
+22/08/2026;FR;Nantes;19/12/2026;24/12/2026;3;1;Chambre Classique;Confirmée
+28/08/2026;DE;BERLIN;30/12/2026;03/01/2027;3;1;Suite;Confirmée
+06/10/2026;FR;Nantes;26/12/2026;01/01/2027;2;1;Appartement;Confirmée
+17/07/2026;GB;LONDON;27/12/2026;01/01/2027;2;1;Chambre Supérieure;Confirmée
+22/07/2026;US;MIAMI;14/01/2027;20/01/2027;3;1;Chambre Supérieure;Confirmée
+06/09/2026;GB;Bristol;19/12/2026;25/12/2026;2;1;Chambre Supérieure;Confirmée
+08/08/2026;GB;London;25/12/2026;30/12/2026;4;1;Junior Suite;Confirmée
+28/07/2026;US;Boston;22/12/2026;28/12/2026;3;1;Chambre Classique;Confirmée
+16/09/2026;FR;Lyon;24/12/2026;27/12/2026;2;1;Chambre Classique;Confirmée
+01/10/2026;FR;Lyon;02/01/2027;04/01/2027;2;1;Appartement;Confirmée
+24/08/2026;FR;Lyon;22/12/2026;26/12/2026;3;1;Junior Suite;Confirmée
+27/09/2026;FR;Paris;31/12/2026;07/01/2027;6;2;Chambre Supérieure;Confirmée
+12/08/2026;US;BOSTON;28/12/2026;03/01/2027;2;1;Chambre Classique;Confirmée
+13/08/2026;FR;Bordeaux;28/12/2026;04/01/2027;2;1;Chambre Classique;Confirmée
+01/07/2026;GB;LONDON;30/12/2026;01/01/2027;2;1;Junior Suite;Confirmée
+05/08/2026;FR;Paris;21/12/2026;27/12/2026;3;1;Junior Suite;Confirmée
+12/06/2026;US;MIAMI;14/12/2026;17/12/2026;2;1;Chambre Supérieure;Confirmée
+07/07/2026;BE;Bruxelles;22/12/2026;29/12/2026;3;1;Chambre Supérieure;Confirmée
+20/09/2026;US;NEW YORK;30/12/2026;05/01/2027;6;3;Chambre Classique;Confirmée
+03/04/2026;US;New York;23/12/2026;30/12/2026;2;1;Chambre Supérieure;Annulée
+05/10/2026;DE;Berlin;20/12/2026;27/12/2026;4;1;Chambre Classique;Confirmée
+10/08/2026;NL;Amsterdam;20/12/2026;27/12/2026;4;1;Junior Suite;Confirmée
+21/08/2026;DE;Berlin;24/12/2026;29/12/2026;3;1;Suite;Confirmée
+23/08/2026;DE;Berlin;28/12/2026;31/12/2026;4;2;Chambre Classique;Confirmée
+26/08/2026;France;Paris;03/01/2027;05/01/2027;2;1;Chambre Supérieure;Confirmée
+06/09/2026;DE;Munich;23/12/2026;25/12/2026;12;3;Appartement;Annulée
+31/08/2026;FR;NANTES;26/12/2026;02/01/2027;2;1;Junior Suite;Confirmée
+01/09/2026;GB;London;25/12/2026;29/12/2026;2;1;Chambre Supérieure;Confirmée
+08/06/2026;GB;LONDON;20/12/2026;24/12/2026;2;1;Chambre Classique;Confirmée
+07/08/2026;FR;PARIS;25/12/2026;28/12/2026;2;1;Junior Suite;Confirmée
+20/08/2026;GB;London;14/12/2026;18/12/2026;2;1;Chambre Classique;Confirmée
+04/05/2026;GB;Manchester;21/12/2026;23/12/2026;3;1;Chambre Classique;Confirmée
+21/08/2026;FR;Marseille;29/12/2026;04/01/2027;6;2;Chambre Supérieure;Confirmée
+25/08/2026;FR;PARIS;26/12/2026;30/12/2026;2;1;Chambre Classique;Confirmée
+23/08/2026;NL;AMSTERDAM;19/12/2026;24/12/2026;2;1;Chambre Supérieure;Confirmée
+12/08/2026;BE;Gand;31/12/2026;07/01/2027;3;1;Appartement;Confirmée
+03/07/2026;GB;London;02/01/2027;07/01/2027;4;2;Appartement;Confirmée
+17/08/2026;FR;Paris;25/12/2026;28/12/2026;3;1;Chambre Classique;Confirmée
+24/04/2026;US;NEW YORK;29/12/2026;03/01/2027;3;1;Chambre Supérieure;Confirmée
+23/08/2026;BE;Anvers;03/01/2027;06/01/2027;2;1;Chambre Classique;Confirmée
+06/09/2026;FR;Paris;21/12/2026;25/12/2026;4;2;Chambre Classique;Annulée
+03/09/2026;France;Lyon;02/01/2027;08/01/2027;2;1;Chambre Classique;Confirmée
+29/09/2026;FR;NANTES;22/12/2026;26/12/2026;4;2;Junior Suite;Confirmée
+16/09/2026;FR;Lyon;24/12/2026;26/12/2026;4;1;Chambre Classique;Confirmée
+08/09/2026;US;Miami;13/12/2026;17/12/2026;3;1;Appartement;Confirmée
+11/09/2026;US;New York;19/12/2026;23/12/2026;2;1;Chambre Classique;Confirmée
+23/09/2026;BE;BRUXELLES;17/12/2026;19/12/2026;3;1;Chambre Classique;Confirmée
+09/09/2026;FR;Lille;02/01/2027;04/01/2027;4;1;Chambre Supérieure;Confirmée
+14/07/2026;US;Boston;06/01/2027;10/01/2027;6;3;Junior Suite;Confirmée
+26/09/2026;NL;Amsterdam;28/12/2026;31/12/2026;4;2;Chambre Supérieure;Confirmée
+03/10/2026;FR;LYON;12/12/2026;17/12/2026;1;1;Chambre Supérieure;Confirmée
+02/10/2026;GB;London;19/12/2026;23/12/2026;2;1;Chambre Classique;Confirmée
+06/07/2026;GB;London;19/12/2026;21/12/2026;3;1;Chambre Supérieure;Confirmée
+27/08/2026;NL;Amsterdam;24/12/2026;26/12/2026;2;1;Chambre Classique;Confirmée
+14/08/2026;DE;Berlin;20/12/2026;24/12/2026;3;1;Chambre Supérieure;Confirmée
+16/09/2026;DE;Berlin;27/12/2026;03/01/2027;2;1;Chambre Supérieure;Confirmée
+11/09/2026;France;Bordeaux;20/12/2026;27/12/2026;1;1;Chambre Classique;Confirmée
+06/10/2026;US;Boston;14/02/2027;16/02/2027;3;1;Chambre Classique;Confirmée
+01/09/2026;FR;Paris;20/12/2026;22/12/2026;3;1;Chambre Classique;Confirmée
+30/09/2026;BE;Bruxelles;13/12/2026;19/12/2026;3;1;Chambre Supérieure;Confirmée
+25/09/2026;FR;Lyon;19/12/2026;22/12/2026;1;1;Suite;Confirmée
+05/10/2026;FR;Paris;11/12/2026;14/12/2026;2;1;Junior Suite;Confirmée
+25/09/2026;FR;Paris;28/12/2026;01/01/2027;3;1;Chambre Supérieure;Confirmée

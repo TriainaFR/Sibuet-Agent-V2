@@ -22,7 +22,7 @@ Tout fonctionne sans base de données ni clé :
 | Page | Rôle |
 |---|---|
 | À faire | Les actions des six prochaines semaines, datées, avec ce qui les bloque. Ce qui a changé depuis le calcul précédent. |
-| Vos données | Chargement d'un fichier de réservations (Excel ou CSV : date de réservation, pays d'origine, dates de séjour, guests, chambres, type de chambre), agrégé à la lecture et jamais conservé : il fournit les délais par pays et le remplissage de chaque sujet contre l'an dernier. Puis saisie de ce qui manque : ouverture et fermeture, délais, remplissage, taux des newsletters, accès Ads. Recalcul immédiat, marquage « saisi » ou « estimation », remplacement automatique par un flux. |
+| Vos données | Chargement d'un fichier de réservations (Excel ou CSV : date de réservation, pays et ville d'origine, dates de séjour, guests, chambres, type de chambre), agrégé à la lecture et jamais conservé : il fournit les délais par pays et le remplissage de chaque sujet contre l'an dernier. Puis saisie de ce qui manque : ouverture et fermeture, délais, remplissage, taux des newsletters, accès Ads. Recalcul immédiat, marquage « saisi » ou « estimation », remplacement automatique par un flux. |
 | Calendrier | Une ligne par sujet : réservation en pointillés, séjour en plein, newsletters prévues, vacances scolaires, densité d'événements. |
 | Sujets | Classés par urgence puis intérêt. Fiche en cinq onglets : l'essentiel, par pays, actions (validation et brief), sur Google, pour aller plus loin. Export texte au gabarit P3. |
 | Mesure | Résultat de chaque action, les quatre cas, propositions de recalibrage (délais, CRM, coûts des canaux, seuil neige). |

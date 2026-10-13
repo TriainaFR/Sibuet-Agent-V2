@@ -15,7 +15,7 @@ interface Props {
 
 const COLONNES = [
   ["Date de réservation", "le jour où la réservation a été prise"],
-  ["Pays d'origine", "code (FR, CH, GB…) ou nom du pays"],
+  ["Pays et ville d'origine", "le pays (FR, CH, GB… ou en toutes lettres) et la ville, qui sert à la météo au départ"],
   ["Arrivée et départ", "les dates de séjour, ou l'arrivée et le nombre de nuits"],
   ["Nombre de guests", "adultes, et enfants si la colonne existe"],
   ["Nombre de chambres", "1 si la colonne manque"],
@@ -195,6 +195,20 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
                 </tbody>
               </table>
               <p className="mt-1 text-[0.7rem] text-ink-soft">« Réserve à » : délai médian entre la réservation et l&apos;arrivée. Un délai par marché demande au moins 5 réservations.</p>
+
+              {resume.villes && resume.villes.length > 0 && (
+                <>
+                  <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-taupe">Villes d&apos;origine</p>
+                  <ul className="mt-2 flex flex-wrap gap-1.5">
+                    {resume.villes.map((v) => (
+                      <li key={`${v.ville}-${v.pays}`} className="border border-line bg-white px-2 py-1 text-xs">
+                        {v.ville} <span className="text-ink-soft">· {v.reservations}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-1 text-[0.7rem] text-ink-soft">Chaque ville sera rapprochée de la météo du jour où ses clients ont réservé.</p>
+                </>
+              )}
 
               {resume.typesChambres.length > 0 && (
                 <>
