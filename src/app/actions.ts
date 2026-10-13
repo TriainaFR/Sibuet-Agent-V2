@@ -3,11 +3,14 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { today } from "@/lib/dates";
+import Papa from "papaparse";
+import { readSheet } from "read-excel-file/node";
 import { releve } from "@/connecteurs/types";
-import type { Decision, DonneesAsterio, Marche, Resultat, SaisieClient } from "@/lib/types";
+import { SOURCES_TRACE } from "@/lib/flux";
+import type { Decision, DonneesAsterio, Marche, Resultat, SaisieClient, TraceDepot } from "@/lib/types";
 import { construireContexte } from "@/services/contexte";
 import { agregerReservations } from "@/services/reservations";
-import { lireDecisions, lireParametres, lireResultats, lireSaisie, saisieVide } from "@/services/reference";
+import { lireDecisions, lireDepots, lireParametres, lireResultats, lireSaisie, saisieVide } from "@/services/reference";
 import { lancerRoutine } from "@/services/routine";
 import { depot } from "@/stockage/depot";
 
@@ -122,4 +125,36 @@ export async function importerReservations(_: unknown, formData: FormData): Prom
 export async function retirerReservations() {
   depot().ecrireReleve(releve<DonneesAsterio>("asterio", today(), "import", "Fichier de réservations retiré", "aucune réservation", { delais: {}, otb: [] }));
   rafraichir();
+}
+
+/**
+ * Dépôt d'un export pour une source pas encore branchée (page Sources).
+ * Seuls le nom du fichier, sa taille et ses en-têtes de colonnes sont gardés : de quoi préparer le connecteur
+ * sur le vrai format, sans conserver aucune donnée.
+ */
+export async function deposerTrace(_: unknown, formData: FormData): Promise<{ ok: boolean; message: string }> {
+  const source = String(formData.get("source") ?? "");
+  const fichier = formData.get("fichier");
+  if (!SOURCES_TRACE.includes(source)) return { ok: false, message: "Source inconnue." };
+  if (!(fichier instanceof File) || fichier.size === 0) return { ok: false, message: "Choisissez un fichier." };
+  if (!/\.(xlsx|csv|txt)$/i.test(fichier.name)) return { ok: false, message: "Format non pris en charge : enregistrez le fichier en .xlsx ou .csv." };
+  if (fichier.size > 7 * 1024 * 1024) return { ok: false, message: "Fichier trop lourd (7 Mo au plus)." };
+  try {
+    const contenu = Buffer.from(await fichier.arrayBuffer());
+    const lignes = /\.xlsx$/i.test(fichier.name)
+      ? ((await readSheet(contenu)) as unknown[][]).slice(0, 10)
+      : Papa.parse<string[]>(contenu.toString("utf8").replace(/^﻿/, ""), { preview: 10, skipEmptyLines: true }).data;
+    // L'en-tête est la ligne la plus remplie parmi les premières (les exports ont parfois un titre au-dessus).
+    const entete = [...lignes].sort((a, b) => b.filter((x) => String(x ?? "").trim()).length - a.filter((x) => String(x ?? "").trim()).length)[0] ?? [];
+    const colonnes = entete.map((x) => String(x ?? "").trim().slice(0, 60)).filter(Boolean).slice(0, 40);
+    const trace: TraceDepot = { source, fichier: fichier.name.slice(0, 120), taille: fichier.size, colonnes, recu_le: today() };
+    depot().ecrireEtat("depots", [trace, ...lireDepots()].slice(0, 50));
+    rafraichir();
+    return {
+      ok: true,
+      message: `Fichier reçu, ${colonnes.length} colonnes reconnues. Le format est noté pour brancher la source à la mise en service ; le contenu n'est pas conservé.`,
+    };
+  } catch {
+    return { ok: false, message: "Lecture du fichier impossible." };
+  }
 }

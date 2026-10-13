@@ -57,6 +57,14 @@ body {
     letter-spacing: 0.02em;
   }
 
+  /* En-tête de colonne du schéma « De vos données à vos actions » */
+  .titre-colonne {
+    margin-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    color: var(--color-ink);
+  }
+
   .carte {
     background: #fff;
     border: 1px solid var(--color-line);
@@ -175,4 +183,19 @@ details > summary::-webkit-details-marker {
 }
 .apparition {
   animation: apparition 0.5s ease-out both;
+}
+
+/* Liens animés du schéma des sources : la donnée circule vers l'agent */
+@keyframes flux-trait {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.flux-trait {
+  animation: flux-trait 1.4s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .flux-trait {
+    animation: none;
+  }
 }

@@ -1,6 +1,6 @@
 import "server-only";
 import { depot } from "@/stockage/depot";
-import type { Decision, Maison, Marche, Parametres, Resultat, ResumeCalcul, SaisieClient, SujetDef, VacancesMarche } from "@/lib/types";
+import type { Decision, Maison, Marche, Parametres, Resultat, ResumeCalcul, SaisieClient, SujetDef, TraceDepot, VacancesMarche } from "@/lib/types";
 
 // Accès à la connaissance (référence) et à l'état (décisions), via le dépôt.
 
@@ -61,6 +61,11 @@ export function lireParametres(): Parametres {
 
 export function lireResultats(): Resultat[] {
   return depot().lireEtat<Resultat[]>("resultats", []);
+}
+
+/** Exports déposés sur la page Sources (en-têtes seulement), du plus récent au plus ancien. */
+export function lireDepots(): TraceDepot[] {
+  return depot().lireEtat<TraceDepot[]>("depots", []);
 }
 
 export function lireCalculs(): ResumeCalcul[] {

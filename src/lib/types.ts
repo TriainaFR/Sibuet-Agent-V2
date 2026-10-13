@@ -384,3 +384,12 @@ export interface Resultat {
 export interface Parametres {
   donneesFictives: boolean;
 }
+
+/** Trace d'un export déposé pour une source pas encore branchée : en-têtes seulement, aucune donnée. */
+export interface TraceDepot {
+  source: string;
+  fichier: string;
+  taille: number;
+  colonnes: string[];
+  recu_le: string;
+}

@@ -1,10 +1,13 @@
 import { connection } from "next/server";
 import { connecteurs } from "@/connecteurs";
+import { FluxDonnees, type EtatSource } from "@/components/flux-donnees";
 import { BoutonRoutine, InterrupteurFictif } from "@/components/pilotage";
 import { Bandeau, Puce, type Ton } from "@/components/ui";
 import { REGLES } from "@/lib/engine/regles";
 import { formatDate } from "@/lib/dates";
-import { lireCalculs, lireJournal, lireParametres } from "@/services/reference";
+import { SOURCES_FLUX } from "@/lib/flux";
+import { construireContexte } from "@/services/contexte";
+import { lireCalculs, lireDepots, lireJournal, lireParametres } from "@/services/reference";
 import { depot } from "@/stockage/depot";
 
 const tonStatut: Record<string, Ton> = { branché: "vert", import: "ocre", "à brancher": "gris" };
@@ -16,19 +19,40 @@ export default async function Sources() {
   const calculs = [...lireCalculs()].reverse();
   const journal = lireJournal()[0];
 
+  // État réel de chaque source du schéma : dernier relevé, fichier de réservations chargé, dernier export déposé.
+  const ctx = construireContexte();
+  const depots = lireDepots();
+  const etats: Record<string, EtatSource> = {};
+  for (const s of SOURCES_FLUX) {
+    const releves = (s.connecteurs ?? []).map((c) => d.lireReleve(c)).filter((r) => r && (r.mode !== "fictif" || donneesFictives));
+    const dernier = releves.sort((a, b) => b!.collecte_le.localeCompare(a!.collecte_le))[0];
+    etats[s.id] = {
+      etat: s.etat,
+      releve: dernier ? `Dernier relevé le ${formatDate(dernier.collecte_le, true)}${dernier.mode === "fictif" ? " (fictif)" : ""} : ${dernier.resume}.` : undefined,
+      depot: depots.find((x) => x.source === s.id),
+    };
+  }
+  const resa = ctx.asterio;
+  if (resa && resa.mode !== "fictif") {
+    etats.reservations = { ...etats.reservations, etat: "branche", releve: `${resa.origine}, le ${formatDate(resa.collecte_le, true)}.` };
+    etats.meteo_depart = { ...etats.meteo_depart, etat: "pret" };
+  }
+
   return (
     <>
-      <Bandeau eyebrow="Coulisses" titre="Sources et routine" sousTitre="Chaque lundi, les signaux de la semaine" filigrane="Sources" photo="/lodge/lp-3.jpg" photo2="/lodge/lp-18.jpg">
+      <Bandeau eyebrow="Coulisses" titre="Sources et routine" sousTitre="D'où vient chaque proposition" filigrane="Sources" photo="/lodge/lp-3.jpg" photo2="/lodge/lp-18.jpg">
         <p>
-          Chaque source entre dans le système sous forme de relevés datés, jamais écrasés. La routine du lundi collecte, recalcule les opportunités et signale ce
-        qui a changé. Pour brancher une source, il suffit de remplacer son connecteur : le reste ne bouge pas.
+          Chaque semaine, l&apos;agent lit ce que vous savez, ce que Google voit et ce qui se passe à Megève, puis le transforme en actions datées que vous
+          validez. Voici d&apos;où vient chaque information, et ce qu&apos;il en fait.
         </p>
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
+      <FluxDonnees etats={etats} />
 
-      <div className="mt-7 grid gap-5 lg:grid-cols-[1fr_380px]">
+      <div className="mt-10 grid gap-5 lg:grid-cols-[1fr_380px]">
         <section className="carte overflow-hidden">
           <div className="border-b border-line px-5 py-4">
+            <p className="eyebrow text-[0.62rem] text-taupe">Pour l&apos;équipe technique</p>
             <h2 className="font-display text-2xl">Les connecteurs</h2>
           </div>
           <ul className="divide-y divide-line">
@@ -95,7 +119,7 @@ export default async function Sources() {
               <InterrupteurFictif actif={donneesFictives} />
             </div>
             <p className="mt-3 text-xs text-ink-soft">
-              Les données fictives sont signalées partout. Elles ne servent qu&apos;à montrer le fonctionnement : besoin de remplissage, marge, lignes de base,
+              Les données fictives sont signalées partout. Elles ne servent qu&apos;à montrer le fonctionnement : besoin de remplissage, lignes de base,
               mesure.
             </p>
             {!d.persistant && <p className="mt-2 text-xs text-brick">Hébergement en lecture seule : les modifications sont gardées en mémoire, sans être conservées.</p>}
