@@ -50,7 +50,7 @@ Chaque connecteur renvoie un `Releve` au même format : le moteur et l'interface
 
 ### 4. Sécurité et accès
 
-- Connexion par mot de passe déjà en place (`src/proxy.ts`, `src/lib/session.ts`, page `/connexion`) : elle s'active dès que `APP_PASSWORD` est défini, et protège les pages, les actions serveur et les routes `/api`. Variables : `APP_USER` (facultatif), `APP_PASSWORD`, `SESSION_SECRET`. Pour plusieurs comptes nominatifs, passer ensuite à un SSO Google ou à des liens magiques.
+- Connexion par mot de passe déjà en place (`src/proxy.ts`, `src/lib/session.ts`, page `/connexion`) : elle s'active dès que `APP_PASSWORD` est défini, et protège les pages, les actions serveur et les routes `/api`. Variables : `APP_USER` et `APP_PASSWORD` pour le premier compte, `APP_USER_2` et `APP_PASSWORD_2` (jusqu'à 20) pour les suivants, `SESSION_SECRET`. Retirer un compte ou changer son mot de passe déconnecte ses sessions. Au-delà de quelques comptes, passer à un SSO Google ou à des liens magiques.
 - Clé Claude côté serveur uniquement (`ANTHROPIC_API_KEY`).
 - Rien de nominatif : agréger les réservations Asterio avant stockage.
 - Le dépôt GitHub doit être privé : il contient des données du client.

@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { COOKIE_SESSION, jetonValide, protectionActive } from "@/lib/session";
 
 // Protège toute l'application derrière la page de connexion, y compris les actions serveur
-// et les routes /api. Sans APP_PASSWORD défini (développement local), tout reste ouvert.
+// et les routes /api. Sans aucun mot de passe défini (développement local), tout reste ouvert.
 
 export async function proxy(request: NextRequest) {
   if (!protectionActive()) return NextResponse.next();

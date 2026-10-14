@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { identifiantDemande } from "@/lib/session";
 import { FormulaireConnexion } from "./formulaire";
 
 export const metadata = { title: "Connexion · Agent Sibuet" };
 
 export default async function Connexion({ searchParams }: PageProps<"/connexion">) {
   const { suite } = await searchParams;
-  const avecIdentifiant = Boolean(process.env.APP_USER);
+  const avecIdentifiant = identifiantDemande();
   return (
     <div className="grid min-h-screen lg:grid-cols-[1.1fr_1fr]">
       <div className="relative hidden overflow-hidden bg-greige lg:block">
