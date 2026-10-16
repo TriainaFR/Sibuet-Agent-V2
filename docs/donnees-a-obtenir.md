@@ -1,6 +1,8 @@
 # Ce qu'il reste à obtenir
 
-État au 5 octobre 2026, après le dossier de transfert de Jérôme Hoerlé (Allin Conseil).
+État au 16 octobre 2026, après le dossier de transfert de Jérôme Hoerlé (Allin Conseil) et les exports Asterio du 14 octobre.
+
+**Reçu le 14 octobre : exports Asterio « nuitées » des sept maisons** (nuits du 14 octobre 2024 au 14 octobre 2026). Ils donnent déjà les délais réels par pays, le rythme de remplissage, les canaux et la clientèle de chaque maison (page Maisons).
 
 ## Du poste de Jérôme (pour reprendre son travail sans le refaire)
 
@@ -25,7 +27,8 @@ Les connecteurs Semrush, Peec, ga4-gsc et Firecrawl sont rattachés à son compt
 |---|---|---|
 | Accès lecture Google Ads et Meta | 10 actions bloquées dans « À faire » au 5 octobre, dont la fenêtre américaine ouverte depuis le 2 octobre | Aucun |
 | Dates d'ouverture et de fermeture du Lodge Park | Coupe ou maintient les sujets d'ouverture, de printemps et de Pâques | Saisie dans Vos données |
-| Export des réservations (une ligne par réservation : date de réservation, pays et ville d'origine, arrivée et départ, guests, chambres, type de chambre), saison 2025-2026 et saison en cours | Facteur besoin, délais réels par pays, mesure finale. Se charge directement dans Vos données, sans nom ni e-mail | Remplissage et délais saisis dans Vos données |
+| Le même export Asterio « nuitées » que celui du 14 octobre, avec les nuits jusqu'au 30 avril 2027 (et non plus seulement jusqu'au 14 octobre) | Le remplissage à date de l'hiver 2026-2027 contre l'an dernier à la même date : le facteur besoin, sujet par sujet et pays par pays | Rythme de l'an dernier affiché dans chaque fiche |
+| La ville d'origine (ou le code postal) dans l'export | La météo au départ ; les zones de vacances françaises et les cantons suisses distingués | Le pays seul |
 | Réservations Asterio en flux (interface OnSite V3) | La même chose, mise à jour chaque lundi sans manipulation | Chargement manuel du fichier |
 | Performance des newsletters et calendrier 2026-2027 arrêté | Lignes de base CRM, dates réelles des envois | Taux saisis dans Vos données |
 | Accès Instagram | Résonance des sujets | Aucun |

@@ -1,5 +1,5 @@
 import "server-only";
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { Releve, SourceId } from "@/lib/types";
 
@@ -35,11 +35,19 @@ class DepotFichiers implements Depot {
   persistant = true;
   private memoire = new Map<string, unknown>();
 
+  /** Fichiers déjà lus, gardés tant qu'ils ne changent pas sur le disque (date de modification). */
+  private cache = new Map<string, { mtime: number; valeur: unknown }>();
+
   private lire<T>(rel: string, defaut: T): T {
     if (this.memoire.has(rel)) return this.memoire.get(rel) as T;
     const full = path.join(DATA, rel);
     if (!existsSync(full)) return defaut;
-    return JSON.parse(readFileSync(full, "utf8")) as T;
+    const mtime = statSync(full).mtimeMs;
+    const c = this.cache.get(rel);
+    if (c && c.mtime === mtime) return structuredClone(c.valeur) as T;
+    const valeur = JSON.parse(readFileSync(full, "utf8")) as T;
+    this.cache.set(rel, { mtime, valeur });
+    return structuredClone(valeur);
   }
 
   private ecrire(rel: string, valeur: unknown) {

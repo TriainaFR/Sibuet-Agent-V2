@@ -36,6 +36,14 @@ export interface Maison {
   ga4?: string;
   point_meteo?: { lat: number; lon: number; altitude: number };
   agenda?: string;
+  /** Nom de l'hôtel dans les exports Asterio. */
+  asterio?: string;
+  /** Nombre de chambres publié, pour le taux d'occupation. */
+  chambres?: number;
+  /** Saisons de la maison (jour et mois de début et de fin, « 12-01 » à « 04-30»). */
+  saisons?: { nom: string; debut: string; fin: string }[];
+  /** Ville et pays, pour la carte d'identité. */
+  lieu?: string;
 }
 
 export type Famille = "saisonnier" | "evenementiel" | "declencheur" | "b2b";
@@ -98,7 +106,8 @@ export type SourceId =
   | "asterio"
   | "google_ads"
   | "meta_ads"
-  | "instagram";
+  | "instagram"
+  | "asterio_historique";
 
 export type ModeReleve = "réel" | "import" | "fictif";
 
@@ -231,7 +240,7 @@ export interface Opportunite {
   libelle: string;
   sejour: { debut: string; fin: string } | null;
   fenetre: { debut: string; fin: string } | null;
-  delai: { mediane: number; q1: number; q3: number; origine: Origine };
+  delai: { mediane: number; q1: number; q3: number; origine: Origine; source?: string };
   facteurs: { demande: Facteur; visibilite: Facteur; besoin: Facteur };
   score: number;
   urgence: number;
@@ -324,6 +333,19 @@ export interface SujetCalcule {
   premiereAction: string | null;
   evenementsLies: Evenement[];
   autresEvenements: Evenement[];
+  /** Rythme de l'an dernier sur la même période (historique des réservations). */
+  reference: ReferenceRythme | null;
+}
+
+export interface ReferenceRythme {
+  periode: { debut: string; fin: string };
+  /** Date de l'an dernier correspondant à aujourd'hui. */
+  aLaDate: string;
+  final: number;
+  aDate: number;
+  part: number | null;
+  courbe: { date: string; part: number }[];
+  parPays: { pays: string; final: number; part: number | null }[];
 }
 
 export interface ActionAFaire {
@@ -394,4 +416,88 @@ export interface TraceDepot {
   taille: number;
   colonnes: string[];
   recu_le: string;
+}
+
+// ── Historique des réservations (exports Asterio agrégés) ────────────────────
+// Agrégé à l'import : aucune ligne de réservation n'est conservée, seulement des totaux
+// par maison, saison, pays, canal et mois. Seule la maison pilote garde un détail par nuit
+// (nuit, date de réservation, pays, chambres), sans rien de nominatif, pour le rythme de remplissage.
+
+/** Quartiles d'un délai de réservation, en jours, et nombre de séjours observés. */
+export interface Quartiles {
+  q1: number;
+  med: number;
+  q3: number;
+  n: number;
+}
+
+export type CanalGroupe = "direct" | "site" | "ota" | "agences" | "groupes" | "autre";
+
+export interface PaysHistorique {
+  pays: string;
+  /** Marché suivi par l'agent auquel le pays se rattache. */
+  marches: MarcheId[];
+  nuitees: number;
+  delai: Quartiles | null;
+  /** Part des nuitées avec enfants. */
+  familles: number | null;
+  /** Part des nuitées vendues en direct (téléphone, e-mail, site). */
+  direct: number;
+}
+
+export interface SaisonHistorique {
+  id: string;
+  nom: string;
+  debut: string;
+  fin: string;
+  /** Partie de la saison couverte par l'export. */
+  couverte: [string, string];
+  complete: boolean;
+  nuitees: number;
+  nuitsOuvertes: number;
+  occupation: number | null;
+  /** Part des nuitées vendues en direct (téléphone, e-mail, site). */
+  direct: number;
+  canaux: Partial<Record<CanalGroupe, number>>;
+  delai: Quartiles | null;
+  familles: number | null;
+  personnesParChambre: number | null;
+  pays: { pays: string; nuitees: number }[];
+  /** Saison précédente du même nom, sur la même fenêtre de dates. */
+  precedente: { id: string; nom: string; nuitees: number; memeFenetre: number | null } | null;
+  /** Part des nuitées déjà réservées j jours avant la nuit (rythme de remplissage). */
+  rythme: { j: number; part: number }[];
+}
+
+export interface HistoriqueMaison {
+  id: string;
+  /** Fenêtre des nuits couvertes par l'export. */
+  fenetre: [string, string];
+  nomAsterio: string;
+  chambres: number | null;
+  nuits: [string, string];
+  nuitees: number;
+  sejours: number;
+  mensuel: { mois: string; nuitees: number; direct: number; nuitsOuvertes: number }[];
+  saisons: SaisonHistorique[];
+  pays: PaysHistorique[];
+  /** Part des nuitées dont le pays est inconnu. */
+  paysInconnu: number;
+  canaux: Partial<Record<CanalGroupe, number>>;
+  /** Nuitées par mois de séjour (ligne, 1 à 12) et mois de réservation (colonne, 1 à 12). */
+  calendrierAchat: number[][];
+  delai: Quartiles | null;
+  /** Détail par nuit pour la maison pilote : [nuit, réservée le, pays, chambres, canal]. */
+  detail?: [string, string, string, number, CanalGroupe][];
+}
+
+export interface HistoriqueAsterio {
+  /** Fenêtre des nuits couvertes par l'export. */
+  nuits: [string, string];
+  reservations: [string, string];
+  fichiers: string[];
+  lignes: number;
+  maisons: HistoriqueMaison[];
+  /** Hôtels présents dans l'export mais inconnus de la référence. */
+  inconnus: string[];
 }

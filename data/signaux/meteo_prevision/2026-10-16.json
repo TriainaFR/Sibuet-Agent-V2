@@ -1,0 +1,137 @@
+{
+ "source": "meteo_prevision",
+ "collecte_le": "2026-10-16",
+ "horodatage": "2026-10-16T09:17:54.845Z",
+ "mode": "réel",
+ "origine": "Open-Meteo, prévision 16 jours au point Megève 1113 m",
+ "resume": "0 cm sur 5 jours, 0 cm sur 16 jours",
+ "donnees": {
+  "point": "Megève",
+  "jours": [
+   {
+    "date": "2026-10-16",
+    "neige_cm": 0,
+    "tmin": 9,
+    "tmax": 17.9
+   },
+   {
+    "date": "2026-10-17",
+    "neige_cm": 0,
+    "tmin": 7.5,
+    "tmax": 15.1
+   },
+   {
+    "date": "2026-10-18",
+    "neige_cm": 0,
+    "tmin": 7.1,
+    "tmax": 10.6
+   },
+   {
+    "date": "2026-10-19",
+    "neige_cm": 0,
+    "tmin": 4.2,
+    "tmax": 19
+   },
+   {
+    "date": "2026-10-20",
+    "neige_cm": 0,
+    "tmin": 8.2,
+    "tmax": 16.9
+   },
+   {
+    "date": "2026-10-21",
+    "neige_cm": 0,
+    "tmin": 5,
+    "tmax": 11.2
+   },
+   {
+    "date": "2026-10-22",
+    "neige_cm": 0,
+    "tmin": 3.8,
+    "tmax": 12.1
+   },
+   {
+    "date": "2026-10-23",
+    "neige_cm": 0,
+    "tmin": 3.3,
+    "tmax": 17.4
+   },
+   {
+    "date": "2026-10-24",
+    "neige_cm": 0,
+    "tmin": 4.3,
+    "tmax": 15.3
+   },
+   {
+    "date": "2026-10-25",
+    "neige_cm": 0,
+    "tmin": 3.3,
+    "tmax": 12.1
+   },
+   {
+    "date": "2026-10-26",
+    "neige_cm": 0,
+    "tmin": 3.3,
+    "tmax": 17.4
+   },
+   {
+    "date": "2026-10-27",
+    "neige_cm": 0,
+    "tmin": 4.6,
+    "tmax": 13.1
+   },
+   {
+    "date": "2026-10-28",
+    "neige_cm": 0,
+    "tmin": 0.6,
+    "tmax": 9.5
+   },
+   {
+    "date": "2026-10-29",
+    "neige_cm": 0,
+    "tmin": 0.1,
+    "tmax": 10.5
+   },
+   {
+    "date": "2026-10-30",
+    "neige_cm": 0,
+    "tmin": 0.9,
+    "tmax": 7
+   },
+   {
+    "date": "2026-10-31",
+    "neige_cm": 0,
+    "tmin": 3.7,
+    "tmax": 13.1
+   }
+  ],
+  "neige_5j": 0,
+  "neige_16j": 0
+ },
+ "signaux": [
+  {
+   "source": "meteo_prevision",
+   "type": "contexte",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "snow_prev_5j",
+   "valeur": 0,
+   "valeur_texte": null,
+   "observe_le": "2026-10-16"
+  },
+  {
+   "source": "meteo_prevision",
+   "type": "contexte",
+   "maison": "lodge-park",
+   "marche": null,
+   "sujet": null,
+   "semaine_sejour": null,
+   "cle": "snow_prev_16j",
+   "valeur": 0,
+   "valeur_texte": null,
+   "observe_le": "2026-10-16"
+  }
+ ]
+}

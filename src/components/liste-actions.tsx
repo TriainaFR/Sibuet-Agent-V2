@@ -58,7 +58,7 @@ export function ListeActions({
                 filtre === f.id ? "border-ink bg-ink text-white" : "border-line bg-white text-ink-soft hover:border-greige hover:text-ink"
               }`}
             >
-              {f.label} <span className={filtre === f.id ? "text-white/70" : "text-greige-dark"}>{n}</span>
+              {f.label} <span className={filtre === f.id ? "text-white/70" : "text-taupe"}>{n}</span>
             </button>
           );
         })}

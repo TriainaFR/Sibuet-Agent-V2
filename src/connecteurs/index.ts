@@ -1,6 +1,6 @@
 import { agenda } from "./agenda";
 import { asterioFictif, googleAdsFictif, newslettersPerfFictif } from "./fictifs";
-import { asterio, gsc, newsletters, semrush } from "./imports";
+import { asterio, asterioHistorique, gsc, newsletters, semrush } from "./imports";
 import { meteoHistorique, meteoPrevision } from "./meteo";
 import type { Connecteur } from "./types";
 import { releve } from "./types";
@@ -67,6 +67,7 @@ export const connecteurs: Connecteur[] = [
     },
     async (ctx) => (ctx.fictif ? newslettersPerfFictif(ctx) : null),
   ),
+  asterioHistorique,
   asterio,
   aBrancher(
     {

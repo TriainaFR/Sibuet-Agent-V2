@@ -4,7 +4,7 @@
 import type { SourceId } from "./types";
 
 export type EtatFlux = "branche" | "pret" | "a_fournir";
-export type SortieId = "afaire" | "calendrier" | "fiches" | "alertes" | "briefs" | "mesure";
+export type SortieId = "afaire" | "calendrier" | "fiches" | "alertes" | "briefs" | "mesure" | "portraits";
 export type FamilleFlux = "vous" | "google" | "contexte" | "campagnes";
 
 export interface SourceFlux {
@@ -58,6 +58,7 @@ export const SORTIES: { id: SortieId; nom: string; texte: string; lien: string }
   { id: "alertes", nom: "Alertes du lundi", texte: "Neige annoncée, nouvel événement, fenêtre qui s'ouvre.", lien: "/" },
   { id: "briefs", nom: "Briefs prêts à valider", texte: "Newsletter, page, annonce : le texte de départ.", lien: "/sujets" },
   { id: "mesure", nom: "Mesure et recalibrage", texte: "Ce qui a marché, et les hypothèses corrigées.", lien: "/mesure" },
+  { id: "portraits", nom: "Portraits des maisons", texte: "Saisons, pays, délais et canaux, maison par maison.", lien: "/maisons" },
 ];
 
 export const SOURCES_FLUX: SourceFlux[] = [
@@ -66,7 +67,7 @@ export const SOURCES_FLUX: SourceFlux[] = [
     nom: "Vos réservations",
     famille: "vous",
     question: "Qui réserve, d'où, et combien de temps avant ?",
-    recupere: ["Date de réservation", "Pays et ville d'origine", "Dates de séjour", "Nombre de guests", "Nombre de chambres", "Type de chambre"],
+    recupere: ["Date de réservation", "Nuits du séjour", "Pays et ville d'origine", "Canal de vente", "Nombre de chambres", "Adultes et enfants", "Type de chambre"],
     jamais: ["Nom", "E-mail", "Téléphone", "Numéro de réservation", "Montant payé"],
     pourquoi:
       "C'est la seule source qui dit ce qui est vraiment vendu. Le nombre de guests distingue un couple d'une famille ou d'un groupe d'amis, et donc le message à leur envoyer. La ville d'origine permet de savoir quel temps il faisait chez le client quand il a réservé.",
@@ -75,17 +76,18 @@ export const SOURCES_FLUX: SourceFlux[] = [
       "Nuitées déjà vendues contre l'an dernier à la même date : un sujet en retard passe devant.",
       "Composition des séjours par pays : famille pendant les vacances scolaires, couple en janvier.",
       "Ville d'origine : rapprochée de la météo du jour de la réservation (voir La météo au départ).",
+      "Canal de vente : la part vendue en direct, maison par maison, et ce qu'il reste à reprendre aux plateformes.",
       "Le fichier est lu puis oublié : seuls des totaux par pays et par semaine sont gardés.",
     ],
     exemple:
-      "Les Britanniques réservent les fêtes une dizaine de semaines avant : la newsletter anglaise doit partir fin septembre. En novembre, elle arriverait trop tard.",
-    nourrit: ["afaire", "calendrier", "fiches", "mesure"],
+      "Aux fêtes 2025, la plupart des Britanniques avaient réservé leur séjour deux mois avant : la newsletter anglaise doit partir mi-octobre. En novembre, elle arriverait trop tard.",
+    nourrit: ["afaire", "calendrier", "fiches", "mesure", "portraits"],
     etat: "a_fournir",
-    etatDetail: "Un export Excel du PMS suffit, en attendant le flux Asterio automatique.",
+    etatDetail: "Les exports Asterio « nuitées » suffisent, un fichier par hôtel. La ville d'origine reste à ajouter à l'extraction pour la météo au départ.",
     cadence: "chaque semaine, ou à chaque export",
     depot: "reservations",
-    formats: "Excel ou CSV, une ligne par réservation",
-    connecteurs: ["asterio"],
+    formats: "Exports Asterio ou tout export Excel ou CSV",
+    connecteurs: ["asterio_historique", "asterio"],
   },
   {
     id: "newsletters",

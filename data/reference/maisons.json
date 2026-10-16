@@ -1,5 +1,5 @@
 {
- "source": "maisonsethotels-sibuet.com et audit GSC/GA4 de Jérôme (24 août 2026)",
+ "source": "maisonsethotels-sibuet.com, audit GSC/GA4 de Jérôme (24 août 2026), exports Asterio (14 oct. 2026)",
  "pilote": "lodge-park",
  "maisons": [
   {
@@ -20,7 +20,22 @@
     "altitude": 1113
    },
    "agenda": "https://www.megeve-tourisme.fr/tout-lagenda/",
-   "base_de_marque": "à produire"
+   "base_de_marque": "à produire",
+   "asterio": "LODGE PARK",
+   "chambres": 35,
+   "saisons": [
+    {
+     "nom": "Hiver",
+     "debut": "12-01",
+     "fin": "04-30"
+    },
+    {
+     "nom": "Été",
+     "debut": "05-01",
+     "fin": "11-30"
+    }
+   ],
+   "lieu": "Megève, Haute-Savoie"
   },
   {
    "id": "fermes-de-marie",
@@ -31,7 +46,22 @@
    "site": "fermesdemarie.com",
    "image": "/hotels/les-fermes-de-marie.jpg",
    "pilote": false,
-   "base_de_marque": "disponible (14 blocs, 27 règles)"
+   "base_de_marque": "disponible (14 blocs, 27 règles)",
+   "asterio": "LES FERMES DE MARIE",
+   "chambres": 70,
+   "saisons": [
+    {
+     "nom": "Hiver",
+     "debut": "12-01",
+     "fin": "04-30"
+    },
+    {
+     "nom": "Été",
+     "debut": "05-01",
+     "fin": "11-30"
+    }
+   ],
+   "lieu": "Megève, Haute-Savoie"
   },
   {
    "id": "hotel-mont-blanc",
@@ -42,7 +72,22 @@
    "site": "hotelmontblanc.com",
    "image": "/hotels/hotel-mont-blanc.jpg",
    "pilote": false,
-   "base_de_marque": "disponible (27 sections)"
+   "base_de_marque": "disponible (27 sections)",
+   "asterio": "HOTEL MONT-BLANC",
+   "chambres": 38,
+   "saisons": [
+    {
+     "nom": "Hiver",
+     "debut": "12-01",
+     "fin": "04-30"
+    },
+    {
+     "nom": "Été",
+     "debut": "05-01",
+     "fin": "11-30"
+    }
+   ],
+   "lieu": "Megève, Haute-Savoie"
   },
   {
    "id": "bastide-de-marie",
@@ -53,7 +98,17 @@
    "site": "labastidedemarie.com",
    "image": "/hotels/la-bastide-de-marie.jpg",
    "pilote": false,
-   "base_de_marque": "à produire"
+   "base_de_marque": "à produire",
+   "asterio": "LA BASTIDE DE MARIE",
+   "chambres": 11,
+   "saisons": [
+    {
+     "nom": "Saison",
+     "debut": "03-01",
+     "fin": "11-30"
+    }
+   ],
+   "lieu": "Ménerbes, Luberon"
   },
   {
    "id": "villa-marie",
@@ -64,7 +119,17 @@
    "site": "villamarie-saint-tropez.com",
    "image": "/hotels/villa-marie-saint-tropez.jpg",
    "pilote": false,
-   "base_de_marque": "à produire"
+   "base_de_marque": "à produire",
+   "asterio": "VILLA MARIE ST TROPEZ",
+   "chambres": 45,
+   "saisons": [
+    {
+     "nom": "Saison",
+     "debut": "03-01",
+     "fin": "11-30"
+    }
+   ],
+   "lieu": "Ramatuelle, Saint-Tropez"
   },
   {
    "id": "gyp-sea",
@@ -73,9 +138,50 @@
    "tagline": "Tropical chic boutique hotel",
    "capacite": "20 bungalows et villas",
    "site": "gypsea-stbarth.com",
-   "image": "/hotels/gyp-sea-hotel.jpg",
+   "image": "/hotels/saint-barth.jpg",
    "pilote": false,
-   "base_de_marque": "à produire"
+   "base_de_marque": "à produire",
+   "asterio": "GYP SEA",
+   "chambres": 20,
+   "saisons": [
+    {
+     "nom": "Hiver",
+     "debut": "11-01",
+     "fin": "04-30"
+    },
+    {
+     "nom": "Été",
+     "debut": "05-01",
+     "fin": "10-31"
+    }
+   ],
+   "lieu": "Saint-Barthélemy, Antilles"
+  },
+  {
+   "id": "chalets",
+   "nom": "Chalets et propriétés",
+   "destination": "Megève",
+   "tagline": "Chalets privés avec les services de l'hôtel",
+   "capacite": "chalets à la location",
+   "site": "maisonsethotels-sibuet.com/proprietes",
+   "image": "/hotels/megeve.jpg",
+   "url": "https://www.maisonsethotels-sibuet.com/proprietes",
+   "pilote": false,
+   "base_de_marque": "à produire",
+   "asterio": "CHALETS RENTAL",
+   "saisons": [
+    {
+     "nom": "Hiver",
+     "debut": "12-01",
+     "fin": "04-30"
+    },
+    {
+     "nom": "Été",
+     "debut": "05-01",
+     "fin": "11-30"
+    }
+   ],
+   "lieu": "Megève, Haute-Savoie"
   }
  ]
 }

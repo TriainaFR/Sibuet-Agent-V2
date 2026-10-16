@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
-/* Charte Maisons & Hôtels Sibuet, relevée sur maisonsethotels-sibuet.com :
-   fond crème, bandeaux greige, titres Garamond, capitales espacées, angles droits.
-   Accents du Lodge Park : bleu nuit des tissus et cognac du cuir. */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Design system Agent Sibuet (voir la page /charte).
+   1. Base groupe, relevée sur maisonsethotels-sibuet.com : fond ivoire, bandeaux greige,
+      texte ardoise, brun des Fermes, titres Garamond, capitales espacées, angles droits.
+   2. Thème de maison, relevé sur le site de chaque hôtel, activé par data-maison="…" :
+      accent, second accent, fond, encre et serif de titre. Tout composant qui lit
+      --maison-* (boutons, graphiques, bandeaux) prend la couleur de la maison qui l'entoure.
+   ───────────────────────────────────────────────────────────────────────────── */
 @theme {
   --color-cream: #f6f5f3;
   --color-sand: #eeebe6;
   --color-line: #e2ddd6;
   --color-greige: #aea79f;
   --color-greige-dark: #8f877e;
-  --color-taupe: #8a7f74;
+  --color-greige-fonce: #766e65;
+  --color-taupe: #776c61;
   --color-ink: #2f2f2b;
   --color-ink-soft: #66645f;
   --color-anthracite: #55534f;
@@ -21,8 +27,102 @@
   --color-sky: #5d7c95;
   --color-brown: #4c3327;
 
+  --color-ardoise: #616365;
+  --color-brun: #251209;
+
   --font-display: var(--font-garamond), "Garamond", Georgia, serif;
   --font-sans: var(--font-source-sans), "Source Sans Pro", system-ui, sans-serif;
+}
+
+/* Jetons de maison, utilisables en classes : bg-maison, text-maison, border-maison, font-maison… */
+@theme inline {
+  --color-maison: var(--maison-accent);
+  --color-maison-bandeau: var(--maison-bandeau);
+  --color-maison-2: var(--maison-second);
+  --color-maison-fond: var(--maison-fond);
+  --color-maison-encre: var(--maison-encre);
+  --font-maison: var(--maison-serif);
+}
+
+/* Groupe (par défaut) */
+:root,
+[data-maison="groupe"] {
+  --maison-accent: #4c3327;
+  --maison-second: #aa9b8e;
+  --maison-fond: #f6f5f3;
+  --maison-encre: #251209;
+  --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
+  --maison-bandeau: #766e65;
+}
+/* Lodge Park : bleu nuit et lin, Cardo (lodgepark.com) ; cognac du cuir en second */
+[data-maison="lodge-park"] {
+  --maison-accent: #0f182a;
+  --maison-second: #a46c45;
+  --maison-fond: #ebe8df;
+  --maison-encre: #0f182a;
+  --maison-serif: var(--font-cardo), "Cardo", Georgia, serif;
+  --maison-bandeau: #0f182a;
+  --font-display: var(--maison-serif);
+}
+/* Les Fermes de Marie : brun, taupe et ivoire, Garamond (fermesdemarie.com) */
+[data-maison="fermes-de-marie"] {
+  --maison-accent: #4c3327;
+  --maison-second: #aa9b8e;
+  --maison-fond: #f6f5f3;
+  --maison-encre: #251209;
+  --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
+  --maison-bandeau: #6e5f53;
+  --font-display: var(--maison-serif);
+}
+/* Hôtel Mont-Blanc : vert sapin et crème, serif contrastée (hotelmontblanc.com) */
+[data-maison="hotel-mont-blanc"] {
+  --maison-accent: #193805;
+  --maison-second: #34512f;
+  --maison-fond: #fff3e6;
+  --maison-encre: #193805;
+  --maison-serif: var(--font-dmserif), "DM Serif Display", Georgia, serif;
+  --maison-bandeau: #193805;
+  --font-display: var(--maison-serif);
+}
+/* La Bastide de Marie : bleu lavande grisé (labastidedemarie.com) */
+[data-maison="bastide-de-marie"] {
+  --maison-accent: #425e7a;
+  --maison-second: #aa9b8e;
+  --maison-fond: #f6f5f3;
+  --maison-encre: #2f4256;
+  --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
+  --maison-bandeau: #425e7a;
+  --font-display: var(--maison-serif);
+}
+/* Villa Marie Saint-Tropez : orange Riviera (villamarie-saint-tropez.com) */
+[data-maison="villa-marie"] {
+  --maison-accent: #c4390a;
+  --maison-second: #e74011;
+  --maison-fond: #f8f6f3;
+  --maison-encre: #616365;
+  --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
+  --maison-bandeau: #c4390a;
+  --font-display: var(--maison-serif);
+}
+/* Gyp Sea : bleu lagon et sable, Playfair (gypsea-stbarth.com) */
+[data-maison="gyp-sea"] {
+  --maison-accent: #305371;
+  --maison-second: #5f9bc6;
+  --maison-fond: #f1ece6;
+  --maison-encre: #305371;
+  --maison-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --maison-bandeau: #305371;
+  --font-display: var(--maison-serif);
+}
+/* Chalets et propriétés : palette du groupe, sable plus soutenu */
+[data-maison="chalets"] {
+  --maison-accent: #6b5544;
+  --maison-second: #aa9b8e;
+  --maison-fond: #eeebe6;
+  --maison-encre: #4c3327;
+  --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
+  --maison-bandeau: #6b5544;
+  --font-display: var(--maison-serif);
 }
 
 :root {
@@ -70,12 +170,19 @@ body {
     border: 1px solid var(--color-line);
   }
 
+  /* Titre dans la serif de la maison qui entoure l'élément */
+  .titre-maison {
+    font-family: var(--maison-serif);
+    color: var(--maison-encre);
+    letter-spacing: -0.005em;
+  }
+
   .bouton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: var(--color-anthracite);
+    background: var(--maison-accent);
     color: #fff;
     padding: 0.8rem 1.4rem;
     font-size: 0.74rem;
@@ -85,11 +192,30 @@ body {
     transition: background 0.2s;
   }
   .bouton:hover {
-    background: var(--color-ink);
+    background: color-mix(in srgb, var(--maison-accent) 82%, black);
   }
   .bouton:disabled {
     background: var(--color-greige);
     cursor: not-allowed;
+  }
+
+  /* Sur un bandeau de couleur : fond blanc, texte à l'encre de la maison */
+  .bouton-inverse {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #fff;
+    color: var(--maison-encre);
+    padding: 0.8rem 1.4rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .bouton-inverse:hover {
+    background: var(--maison-fond);
   }
 
   .bouton-clair {
@@ -107,7 +233,8 @@ body {
     transition: all 0.2s;
   }
   .bouton-clair:hover {
-    background: var(--color-ink);
+    background: var(--maison-accent);
+    border-color: var(--maison-accent);
     color: #fff;
   }
 
@@ -156,7 +283,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-nuit);
+  outline: 2px solid var(--maison-accent);
   outline-offset: 2px;
 }
 
@@ -197,5 +324,15 @@ details > summary::-webkit-details-marker {
 @media (prefers-reduced-motion: reduce) {
   .flux-trait {
     animation: none;
+  }
+}
+
+/* Graphiques : hairlines et transitions discrètes */
+.graphique text {
+  font-family: var(--font-sans);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .graphique-entree {
+    animation: apparition 0.6s ease-out both;
   }
 }

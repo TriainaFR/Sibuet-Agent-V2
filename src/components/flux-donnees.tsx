@@ -4,6 +4,7 @@ import {
   ArrowDown,
   ArrowRight,
   BedDouble,
+  Building2,
   Bell,
   CalendarDays,
   CalendarRange,
@@ -55,7 +56,7 @@ const ICONES: Record<string, LucideIcon> = {
   google_ads: MousePointerClick,
   meta: Camera,
 };
-const ICONES_SORTIE: Record<SortieId, LucideIcon> = { afaire: ListChecks, calendrier: CalendarRange, fiches: FileText, alertes: Bell, briefs: PenLine, mesure: Gauge };
+const ICONES_SORTIE: Record<SortieId, LucideIcon> = { afaire: ListChecks, calendrier: CalendarRange, fiches: FileText, alertes: Bell, briefs: PenLine, mesure: Gauge, portraits: Building2 };
 const COULEUR_ETAT: Record<EtatFlux, string> = { branche: "bg-sage", pret: "bg-ochre", a_fournir: "bg-brick" };
 
 interface Trace {
@@ -433,10 +434,10 @@ function DepotSource({ source, trace }: { source: SourceFlux; trace?: TraceDepot
   const input = useRef<HTMLInputElement>(null);
   const form = useRef<HTMLFormElement>(null);
 
-  const choisir = (f: File | undefined) => {
-    if (!f || !input.current) return;
+  const choisir = (liste: FileList) => {
+    if (!liste.length || !input.current) return;
     const dt = new DataTransfer();
-    dt.items.add(f);
+    for (const f of reservations ? [...liste] : [liste[0]]) dt.items.add(f);
     input.current.files = dt.files;
     form.current?.requestSubmit();
   };
@@ -446,7 +447,7 @@ function DepotSource({ source, trace }: { source: SourceFlux; trace?: TraceDepot
       <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-taupe">Déposer un fichier</p>
       <form ref={form} action={envoyer}>
         <input type="hidden" name="source" value={source.id} />
-        <input ref={input} type="file" name="fichier" accept=".xlsx,.csv,.txt" className="sr-only" onChange={(e) => e.target.files?.[0] && form.current?.requestSubmit()} />
+        <input ref={input} type="file" name="fichier" accept=".xlsx,.csv,.txt" multiple={reservations} className="sr-only" onChange={(e) => e.target.files?.[0] && form.current?.requestSubmit()} />
         <button
           type="button"
           disabled={envoi}
@@ -459,7 +460,7 @@ function DepotSource({ source, trace }: { source: SourceFlux; trace?: TraceDepot
           onDrop={(e) => {
             e.preventDefault();
             setSurvol(false);
-            choisir(e.dataTransfer.files[0]);
+            choisir(e.dataTransfer.files);
           }}
           className={`flex w-full flex-col items-center gap-1.5 border border-dashed px-4 py-6 text-center transition disabled:opacity-60 ${
             survol ? "border-cognac bg-white" : "border-greige bg-white/60 hover:bg-white"

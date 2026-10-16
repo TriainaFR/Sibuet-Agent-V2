@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarDays, Gauge, LayoutList, Layers, PencilLine, Radio } from "lucide-react";
+import { Building2, CalendarDays, Gauge, LayoutList, Layers, PencilLine, Radio } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -8,6 +8,7 @@ const liens = [
   { href: "/", label: "À faire", icone: LayoutList },
   { href: "/sujets", label: "Sujets", icone: Layers },
   { href: "/calendrier", label: "Calendrier", icone: CalendarDays },
+  { href: "/maisons", label: "Maisons", icone: Building2 },
   { href: "/donnees", label: "Vos données", icone: PencilLine },
   { href: "/mesure", label: "Mesure", icone: Gauge },
   { href: "/sources", label: "Sources", icone: Radio },

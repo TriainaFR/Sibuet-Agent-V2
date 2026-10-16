@@ -446,5 +446,211 @@
     "detail": "Voir le calendrier."
    }
   ]
+ },
+ {
+  "numero": 3,
+  "date": "2026-10-16",
+  "horodatage": "2026-10-16T09:18:04.353Z",
+  "sources": {
+   "semrush": "2026-09-19",
+   "gsc": "2026-09-23",
+   "meteo": "2026-10-16",
+   "agenda": "2026-10-16",
+   "newsletters": "2026-09-16",
+   "asterio": "2026-10-14"
+  },
+  "sujets": [
+   {
+    "id": "fetes",
+    "ordre": 25.5,
+    "score": 25.5,
+    "urgence": 1,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "fetes:uk:2026-12-19",
+     "fetes:be:2026-12-19",
+     "fetes:nl:2026-12-19"
+    ]
+   },
+   {
+    "id": "early",
+    "ordre": 23.21,
+    "score": 25.5,
+    "urgence": 0.91,
+    "besoin": [
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "sapin",
+    "ordre": 14.18,
+    "score": 15.58,
+    "urgence": 0.91,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": [
+     "sapin:uk:2026-12-04",
+     "sapin:be:2026-12-04",
+     "sapin:nl:2026-12-04",
+     "sapin:us:2026-12-04"
+    ]
+   },
+   {
+    "id": "fevrier",
+    "ordre": 19.22,
+    "score": 32.39,
+    "urgence": 0.77,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "janvier",
+    "ordre": 10.67,
+    "score": 15.93,
+    "urgence": 0.73,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "spa",
+    "ordre": 14.98,
+    "score": 20.81,
+    "urgence": 0.72,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "neige",
+    "ordre": 7.57,
+    "score": 12.61,
+    "urgence": 0.6,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "paques",
+    "ordre": 10.19,
+    "score": 24.85,
+    "urgence": 0.41,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "mice",
+    "ordre": 4.48,
+    "score": 10.92,
+    "urgence": 0.41,
+    "besoin": [
+     0.5
+    ],
+    "fenetresOuvertes": []
+   },
+   {
+    "id": "printemps",
+    "ordre": 11.78,
+    "score": 31,
+    "urgence": 0.4,
+    "besoin": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "fenetresOuvertes": []
+   }
+  ],
+  "alertes": [
+   {
+    "type": "fenetre",
+    "gravite": "action",
+    "sujetId": "fetes",
+    "titre": "Fêtes de fin d'année : une fenêtre s'ouvre",
+    "detail": "Royaume-Uni le 16 oct."
+   },
+   {
+    "type": "rang",
+    "gravite": "info",
+    "sujetId": "fetes",
+    "titre": "Fêtes de fin d'année passe en tête",
+    "detail": "C'est désormais le sujet le plus urgent à travailler."
+   },
+   {
+    "type": "evenement",
+    "gravite": "info",
+    "titre": "Nouvel événement : Hockey sur Glace – Coupe de France Mont-Blanc VS Nice",
+    "detail": "20 oct. 2026."
+   }
+  ]
  }
 ]

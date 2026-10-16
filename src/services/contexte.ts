@@ -1,7 +1,7 @@
 import "server-only";
 import { today } from "@/lib/dates";
 import type { Contexte, Source } from "@/lib/engine/calcul";
-import type { DonneesAsterio, Releve, SourceId } from "@/lib/types";
+import type { DonneesAsterio, HistoriqueAsterio, HistoriqueMaison, Releve, SourceId } from "@/lib/types";
 import { depot } from "@/stockage/depot";
 import { lireMaison, lireMarches, lireParametres, lireSaisie, lireSujets, lireVacances } from "./reference";
 
@@ -26,6 +26,7 @@ export function construireContexte(date = today()): Contexte {
   // Un relevé de réservations vide signifie « fichier retiré » : on revient aux saisies et estimations.
   const asterio = dernier<DonneesAsterio>("asterio", donneesFictives, date);
   return {
+    historique: historiqueMaison(sujets.maison, date),
     date,
     maison: lireMaison(sujets.maison),
     marches: lireMarches(),
@@ -42,4 +43,18 @@ export function construireContexte(date = today()): Contexte {
     ads: dernier("google_ads", donneesFictives, date),
     saisie: lireSaisie(),
   };
+}
+
+/** Historique des réservations (exports Asterio agrégés), toutes maisons. */
+export function lireHistorique(date = today()): Source<HistoriqueAsterio> | null {
+  const h = dernier<HistoriqueAsterio>("asterio_historique", false, date);
+  // Un relevé sans maison signifie « historique retiré ».
+  return h && h.donnees.maisons.length ? h : null;
+}
+
+/** Historique d'une maison, au format attendu par le moteur. */
+export function historiqueMaison(id: string, date = today()): Source<HistoriqueMaison> | null {
+  const h = lireHistorique(date);
+  const m = h?.donnees.maisons.find((x) => x.id === id);
+  return h && m ? { ...h, donnees: m } : null;
 }

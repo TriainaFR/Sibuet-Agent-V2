@@ -96,7 +96,7 @@ function regrouper(occ: Occurrence[], collecte: string): Evenement[] {
     const categorie = liste[0].categorie;
     const type =
       categorie === "Marché" || categorie === "Exposition" || duree > 60 ? "décor" : duree <= 1 ? "ponctuel" : duree <= 4 ? "temps fort" : "période";
-    out.push({ nom: liste[0].titre, debut, fin, type, confirme: true, categorie, cle, source: `megeve-tourisme.fr, agenda, collecte du ${collecte}` });
+    out.push({ nom: liste[0].titre.replace(/\s*[–—]\s*/g, ", "), debut, fin, type, confirme: true, categorie, cle, source: `megeve-tourisme.fr, agenda, collecte du ${collecte}` });
   }
   return out.sort((a, b) => a.debut.localeCompare(b.debut));
 }

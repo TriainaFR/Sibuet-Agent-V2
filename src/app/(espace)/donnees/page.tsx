@@ -10,8 +10,8 @@ export default async function VosDonnees() {
   const ctx = construireContexte();
   const flux: Record<string, { med: number; mode: string }> = {};
   const a = ctx.asterio;
-  const charge = a?.origine.startsWith("Fichier") ? a : null;
-  const libelleFlux = a?.mode === "fictif" ? "fictif" : charge ? "réservations" : "Asterio";
+  const charge = a && a.mode !== "fictif" && a.donnees.resume ? a : null;
+  const libelleFlux = a?.mode === "fictif" ? "fictif" : a?.origine.startsWith("Exports Asterio") ? "Asterio" : "réservations";
   for (const [m, d] of Object.entries(a?.donnees.delais ?? {})) if (d) flux[m] = { med: d.med, mode: libelleFlux };
   // Remplissage mesuré par sujet (nuitées-chambres à date contre l'an dernier à la même date), chaque réservation comptée une fois
   const fluxRemplissage: Record<string, string> = {};

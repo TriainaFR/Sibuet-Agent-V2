@@ -19,6 +19,21 @@ src/connecteurs   src/stockage           src/lib/engine          src/services   
 4. **Services** (`src/services/`). Assemblent le contexte (dernier relevé de chaque source et saisie), lancent la routine, produisent les briefs et la mesure. `reservations.ts` lit un export de réservations chargé depuis « Vos données » (Excel ou CSV, en-têtes français ou anglais reconnus), l'agrège en mémoire (délais par marché sur les séjours passés, nuitées-chambres à date par sujet et marché contre l'an dernier à la même date) et n'enregistre que ces totaux, comme un relevé `asterio` en mode import. Le fichier n'est jamais écrit sur disque.
 5. **Pages** (`src/app/`). Calculées depuis la base à chaque chargement, jamais saisies à la main. Les actions serveur sont dans `src/app/actions.ts`.
 
+## Historique des réservations
+
+`src/services/asterio-historique.ts` lit les exports Asterio « nuitées » (une ligne par date de réservation, nuit, canal, segment et pays), via `src/lib/xlsx.ts` qui lit aussi les fichiers sans adresse de cellule. Il agrège par maison : saisons (définies dans `maisons.json`), comparaison à la saison précédente sur les mêmes dates, occupation sur les chambres publiées, pays, canaux, délais (quartiles par séjour), calendrier d'achat (mois de séjour × mois de réservation), rythme de remplissage. Pour la maison pilote seulement, il garde un détail par nuit (nuit, date de réservation, pays, chambres, canal), sans rien de nominatif.
+
+Le moteur s'en sert de trois façons (`src/lib/engine/historique.ts`) :
+- **délai par période** : pour chaque sujet et chaque pays, délai mesuré sur la même période les deux saisons précédentes (8 séjours au moins), sinon délai du pays toutes périodes, sinon hypothèse ;
+- **rythme de référence** : part de la période déjà vendue l'an dernier à la même date, courbe et détail par pays (fiche sujet) ;
+- **besoin** : dès qu'un export couvre les nuits de la saison en cours, nuitées réservées à date contre l'an dernier à la même date.
+
+`src/lib/engine/portrait.ts` rédige les six constats de chaque maison.
+
+## Design system
+
+Base groupe et un thème par maison, dans `src/app/globals.css` : un attribut `data-maison="…"` sur un bloc active l'accent, le second accent, le fond, l'encre, le bandeau et la serif de titre de la maison. Les composants (`src/components/ds.tsx`, `src/components/graphiques.tsx`, boutons, bandeaux) lisent ces jetons. Le cadre (en-tête, navigation, pied de page) reste à la charte du groupe. La page /charte documente l'ensemble ; la palette des canaux est validée pour le daltonisme.
+
 ## Passer en production
 
 ### 1. Base de données

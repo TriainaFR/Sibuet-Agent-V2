@@ -2,7 +2,7 @@ import Image from "next/image";
 import { identifiantDemande } from "@/lib/session";
 import { FormulaireConnexion } from "./formulaire";
 
-export const metadata = { title: "Connexion · Agent Sibuet" };
+export const metadata = { title: "Connexion" };
 
 export default async function Connexion({ searchParams }: PageProps<"/connexion">) {
   const { suite } = await searchParams;

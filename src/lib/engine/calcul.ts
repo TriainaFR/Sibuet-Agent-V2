@@ -1,5 +1,5 @@
-import { addDays, diffDays, formatDate, formatRange, maxDate, minDate, monthName } from "@/lib/dates";
-import { canalCourt, nombre } from "@/lib/format";
+import { addDays, diffDays, formatDate, formatRange, maxDate, minDate, monthName, shiftYears } from "@/lib/dates";
+import { canalCourt, clientsDe, nombre } from "@/lib/format";
 import type {
   ActionAFaire,
   Activation,
@@ -9,6 +9,7 @@ import type {
   Envoi,
   Evenement,
   Facteur,
+  HistoriqueMaison,
   LigneSemrush,
   Maison,
   Marche,
@@ -24,6 +25,7 @@ import type {
   Vague,
   Verdict,
 } from "@/lib/types";
+import { PAYS_DU_MARCHE, courbePeriode, delaiMesure, rythmePeriode } from "./historique";
 import { REGLES, VOCABULAIRE_INTERDIT } from "./regles";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -59,6 +61,8 @@ export interface Contexte {
   agenda: Source<{ evenements: Evenement[] }> | null;
   envois: Source<{ envois: Envoi[]; statut: string }> | null;
   asterio: Source<DonneesAsterio> | null;
+  /** Historique des réservations de la maison pilote (exports Asterio agrégés). */
+  historique: Source<HistoriqueMaison> | null;
   perfNl: Source<{ envois: PerfNewsletter[] }> | null;
   ads: Source<DonneesAds> | null;
   saisie: SaisieClient;
@@ -88,6 +92,28 @@ export function delaiMarche(ctx: Contexte, m: Marche) {
   const h = m.delai_semaines;
   return { mediane: h, q1: h * REGLES.q1SurMediane, q3: h * REGLES.q3SurMediane, origine: "estimation" as Origine };
 }
+
+/**
+ * Délai pour une période précise : mesuré sur la même période les deux années précédentes
+ * (historique des réservations), sinon délai du marché toutes périodes confondues, sinon hypothèse.
+ */
+export function delaiPeriode(ctx: Contexte, m: Marche, sejour: { debut: string; fin: string } | null): ReturnType<typeof delaiMarche> & { source?: string } {
+  const detail = ctx.historique?.donnees.detail;
+  if (detail && sejour) {
+    const d = delaiMesure(detail, sejour, PAYS_DU_MARCHE[m.id]);
+    if (d)
+      return {
+        mediane: d.mediane,
+        q1: d.q1,
+        q3: d.q3,
+        origine: origineMode(ctx.historique!.mode),
+        source: `mesuré sur la même période en ${d.annees.join(" et ")}, ${d.sejours} séjours de clients ${ADJECTIF_PAYS[PAYS_DU_MARCHE[m.id]]}`,
+      };
+  }
+  const base = delaiMarche(ctx, m);
+  return { ...base, source: base.origine === "estimation" ? "hypothèse de départ" : base.origine === "saisi" ? "saisi dans Vos données" : "mesuré sur toutes les périodes" };
+}
+const ADJECTIF_PAYS: Record<string, string> = { France: "français", Suisse: "suisses", "Royaume-Uni": "britanniques", Belgique: "belges", "Pays-Bas": "néerlandais", "États-Unis": "américains" };
 
 // ── Demande (Semrush) ────────────────────────────────────────────────────────
 
@@ -179,7 +205,28 @@ function facteurVisibilite(ctx: Contexte, s: SujetDef, m: Marche): Facteur {
 
 // ── Besoin (Asterio ou saisie) ───────────────────────────────────────────────
 
-function facteurBesoin(ctx: Contexte, s: SujetDef, m: Marche): { f: Facteur; otb?: { otb: number; otb_n1: number } } {
+function facteurBesoin(ctx: Contexte, s: SujetDef, m: Marche, sejour: { debut: string; fin: string } | null): { f: Facteur; otb?: { otb: number; otb_n1: number } } {
+  // Historique des réservations : si l'export couvre la période de cette saison, on compare
+  // les nuitées réservées à date à celles de l'an dernier à la même date.
+  const h = ctx.historique?.donnees;
+  if (h?.detail && sejour && h.fenetre && h.fenetre[1] >= sejour.fin) {
+    const pays = PAYS_DU_MARCHE[m.id];
+    const otb = rythmePeriode(h.detail, sejour.debut, sejour.fin, ctx.date, pays).aDate;
+    const otb_n1 = rythmePeriode(h.detail, shiftYears(sejour.debut, -1), shiftYears(sejour.fin, -1), shiftYears(ctx.date, -1), pays).aDate;
+    if (otb_n1 > 0) {
+      const pct = Math.round((otb / otb_n1 - 1) * 100);
+      return {
+        f: {
+          valeur: r2(clamp(1 - otb / otb_n1, REGLES.besoinPlancher, 1)),
+          manquant: false,
+          origine: origineMode(ctx.historique!.mode),
+          detail: `${otb} nuitées réservées contre ${otb_n1} l'an dernier à la même date (${pct >= 0 ? "+" : ""}${pct} %).`,
+          source: src(ctx.historique!, "Asterio"),
+        },
+        otb: { otb, otb_n1 },
+      };
+    }
+  }
   const ligne = ctx.asterio?.donnees.otb.find((o) => o.sujet === s.id && o.marche === m.id);
   if (ligne && ligne.otb_n1 > 0) {
     const v = clamp(1 - ligne.otb / ligne.otb_n1, REGLES.besoinPlancher, 1);
@@ -269,7 +316,7 @@ export function opportunites(ctx: Contexte, s: SujetDef, volumeMax: number): Opp
   const out: Opportunite[] = [];
   for (const m of marches) {
     for (const p of periodesDuMarche(ctx, s, m)) {
-      const delai = delaiMarche(ctx, m);
+      const delai = delaiPeriode(ctx, m, p.sejour);
       const fenetre = s.fenetre_fixe
         ? { ...s.fenetre_fixe }
         : p.sejour && s.famille !== "declencheur"
@@ -278,7 +325,7 @@ export function opportunites(ctx: Contexte, s: SujetDef, volumeMax: number): Opp
       const jours = diffDays(p.sejour?.debut ?? fenetre?.fin ?? ctx.date, ctx.date);
       const demande = facteurDemande(ctx, s, m, volumeMax);
       const visibilite = facteurVisibilite(ctx, s, m);
-      const { f: besoin, otb } = facteurBesoin(ctx, s, m);
+      const { f: besoin, otb } = facteurBesoin(ctx, s, m, p.sejour);
       const score = r2(demande.valeur * visibilite.valeur * besoin.valeur * 100);
       const urgence = r2(urgenceDe(ctx.date, fenetre));
       const demandeDetectee = demande.valeur > REGLES.demandePlancher || (demande.manquant && !ctx.semrush);
@@ -290,7 +337,7 @@ export function opportunites(ctx: Contexte, s: SujetDef, volumeMax: number): Opp
         libelle: p.libelle,
         sejour: p.sejour,
         fenetre,
-        delai: { mediane: r2(delai.mediane), q1: r2(delai.q1), q3: r2(delai.q3), origine: delai.origine },
+        delai: { mediane: r2(delai.mediane), q1: r2(delai.q1), q3: r2(delai.q3), origine: delai.origine, source: delai.source },
         facteurs: { demande, visibilite, besoin },
         score,
         urgence,
@@ -441,7 +488,7 @@ export function activations(ctx: Contexte, s: SujetDef, ops: Opportunite[], ouve
     declencheur: "Ouverture de la fenêtre d'achat de chaque marché.",
     justification: `Dates placées au premier tiers de chaque fenêtre d'achat ; les marchés dont les dates tombent à moins de ${REGLES.ecartVagueJours} jours sont regroupés en une vague, datée sur la fenêtre la plus contraignante.`,
     changement: envoisLies.length
-      ? `${garde.length ? `L'envoi du ${formatDate(garde[0].envoi!.date)} est conservé pour ${libelleMarches(garde)}. ` : ""}${trop.length ? `L'envoi du ${formatDate(trop[0].envoi!.date)} arrive après la fenêtre de ${libelleMarches(trop)}. ` : ""}${creees.length ? `${creees.length} vague${creees.length > 1 ? "s" : ""} créée${creees.length > 1 ? "s" : ""}, la première le ${formatDate(creees[0].debut, true)}.` : ""}`.trim()
+      ? `${garde.length ? `L'envoi du ${formatDate(garde[0].envoi!.date)} est conservé pour les ${clientsDe(garde.map((o) => o.marche))}. ` : ""}${trop.length ? `L'envoi du ${formatDate(trop[0].envoi!.date)} arrive après la fenêtre des ${clientsDe(trop.map((o) => o.marche))}. ` : ""}${creees.length ? `${creees.length} vague${creees.length > 1 ? "s" : ""} créée${creees.length > 1 ? "s" : ""}, la première le ${formatDate(creees[0].debut, true)}.` : ""}`.trim()
       : `Aucun envoi du plan ne porte ce sujet : ${crmVagues.length} vague${crmVagues.length > 1 ? "s" : ""} à créer.`,
     effort: "Interne : un envoi décliné par marché.",
     kpi: "Ouvertures, clics, réservations directes à J+10 par marché.",
@@ -621,7 +668,7 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
     const plan = envoisLies.length
       ? `Le plan d'envois porte le sujet ${envoisLies.length === 1 ? "une fois" : `${envoisLies.length} fois`} (${envoisLies.map((e) => `${formatDate(e.date)}, ${e.cible}`).join(" ; ")}) : ${couvertes} fenêtre${couvertes > 1 ? "s" : ""} sur ${actives.length} ${couvertes > 1 ? "sont couvertes" : "est couverte"}.`
       : "Aucun envoi du plan ne porte ce sujet.";
-    pourquoi = `La fenêtre d'achat ${tete.libelle === "tous marchés" ? "" : `de ${tete.libelle} `}${etat}. ${plan}`;
+    pourquoi = `La fenêtre d'achat ${tete.libelle === "tous marchés" ? "" : `des ${clientsDe([tete.marche])} `}${etat}. ${plan}`;
   }
   const dem = tete ? tete.facteurs.demande : null;
   const gscTop = s.requetes
@@ -629,7 +676,11 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
     .map((q) => ({ q, g: ctx.gsc?.donnees.requetes[q.requete] }))
     .filter((x) => x.g)
     .sort((a, b) => (b.g!.impressions ?? 0) - (a.g!.impressions ?? 0))[0];
+  const reference = referenceRythme(ctx, s);
   const maintenant = [
+    reference?.part !== null && reference?.part !== undefined && reference.final >= 30
+      ? `L'an dernier à la même date, ${Math.round(reference.part * 100)} % des nuitées de la période étaient déjà réservées.`
+      : null,
     dem && !dem.manquant ? dem.detail : null,
     gscTop
       ? gscTop.g!.impressions
@@ -645,9 +696,18 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
 
   // Ce qui manque pour trancher.
   const manque: string[] = [];
-  if (ops.some((o) => o.facteurs.besoin.manquant))
+  const h = ctx.historique?.donnees;
+  if (h && s.sejour && ops.some((o) => o.facteurs.besoin.manquant))
+    manque.push(
+      `Le remplissage à date de cette saison : l'historique Asterio s'arrête aux nuits du ${formatDate(h.fenetre[1], true)}. Le même export, avec les nuits jusqu'à la fin de la saison, donne immédiatement les nuitées déjà vendues contre l'an dernier.`,
+    );
+  else if (ops.some((o) => o.facteurs.besoin.manquant))
     manque.push("Le remplissage : on the books et rythme contre l'an dernier par semaine et par marché (Asterio), ou à défaut le remplissage saisi dans Vos données. Sans lui, rien ne distingue une semaine à remplir d'une semaine déjà vendue.");
-  if (ops.some((o) => o.delai.origine === "estimation"))
+  if (ops.some((o) => o.delai.origine === "estimation" && o.demandeDetectee) && h)
+    manque.push(
+      `Les délais de ${[...new Set(ops.filter((o) => o.delai.origine === "estimation" && o.demandeDetectee).map((o) => o.libelle))].join(", ")} : trop peu de réservations de ces pays dans l'historique, leurs fenêtres restent estimées.`,
+    );
+  else if (ops.some((o) => o.delai.origine === "estimation"))
     manque.push("Les délais de réservation réels par pays (Asterio) : toutes les fenêtres reposent sur des estimations ; deux semaines d'écart déplacent la moitié des dates proposées.");
   const sansVisibilite = [...new Set(ops.filter((o) => o.facteurs.visibilite.manquant && o.demandeDetectee).map((o) => o.libelle))];
   if (sansVisibilite.length) manque.push(`Requêtes d'achat suivies dans la Search Console pour ${sansVisibilite.join(", ")} : la visibilité y est estimée.`);
@@ -681,6 +741,34 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
     premiereAction: premiere,
     evenementsLies,
     autresEvenements,
+    reference,
+  };
+}
+
+/** Rythme de l'an dernier sur la période du sujet : part déjà vendue à la même date, courbe, par pays. */
+export function referenceRythme(ctx: Contexte, s: SujetDef): SujetCalcule["reference"] {
+  const detail = ctx.historique?.donnees.detail;
+  if (!detail || !s.sejour) return null;
+  const debut = shiftYears(s.sejour.debut, -1);
+  const fin = shiftYears(s.sejour.fin, -1);
+  const aLaDate = shiftYears(ctx.date, -1);
+  const r = rythmePeriode(detail, debut, fin, aLaDate);
+  if (!r.final) return null;
+  const pays = [...new Set(detail.filter(([n]) => n >= debut && n <= fin).map(([, , p]) => p))].filter(Boolean);
+  return {
+    periode: { debut, fin },
+    aLaDate,
+    final: r.final,
+    aDate: r.aDate,
+    part: r.part,
+    courbe: courbePeriode(detail, debut, fin),
+    parPays: pays
+      .map((p) => {
+        const x = rythmePeriode(detail, debut, fin, aLaDate, p);
+        return { pays: p, final: x.final, part: x.part };
+      })
+      .sort((a, b) => b.final - a.final)
+      .slice(0, 6),
   };
 }
 
@@ -712,23 +800,23 @@ export function aFaire(ctx: Contexte, sujets: SujetCalcule[]): ActionAFaire[] {
           a.canal === "seo"
             ? `${canalCourt.seo} ${s.def.nom.toLowerCase()} : ${v.note.charAt(0).toLowerCase()}${v.note.slice(1)}`
             : `${canalCourt[a.canal]} ${s.def.nom.toLowerCase()}${a.vagues.length > 1 ? `, vague ${v.numero}` : ""}`;
-        const qui = v.libelleMarches;
+        const qui = clientsDe(v.marches);
         const seo = s.activations.find((x) => x.canal === "seo");
         const titre =
           a.canal === "crm"
             ? v.statut.code === "existant"
-              ? `Garder l'envoi prévu, pour ${qui}`
-              : `Envoyer la newsletter${a.vagues.length > 1 ? ` (vague ${v.numero})` : ""} à ${qui}`
+              ? `Garder l'envoi prévu pour les ${qui}`
+              : `Envoyer la newsletter${a.vagues.length > 1 ? ` (vague ${v.numero})` : ""} aux ${qui}`
             : a.canal === "agences"
-              ? `Écrire aux agences et entreprises, ${qui}`
+              ? `Écrire aux agences et entreprises (${v.libelleMarches})`
               : a.canal === "seo"
                 ? seo?.assets.startsWith("Mettre à jour")
                   ? `Mettre à jour la page ${seo.assets.split(" ")[3]}, en ligne au plus tard le ${formatDate(v.fin)}`
                   : `Créer la page « ${s.def.nom} », en ligne au plus tard le ${formatDate(v.fin)}`
                 : a.canal === "sea"
-                  ? `Lancer Google Ads pour ${qui}`
+                  ? `Lancer Google Ads pour les ${qui}`
                   : a.canal === "meta"
-                    ? `Lancer Meta Ads pour ${qui}`
+                    ? `Lancer Meta Ads pour les ${qui}`
                     : a.canal === "social"
                       ? `Publier sur Instagram${s.evenementsLies[0] ? ` autour de « ${s.evenementsLies[0].nom} »` : ""}`
                       : "Activer le déclencheur neige";

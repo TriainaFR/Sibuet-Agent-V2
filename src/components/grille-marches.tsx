@@ -162,7 +162,9 @@ export function TableauMarches({ sujet, marches, interet }: { sujet: SujetCalcul
                 </td>
                 <td className="px-3 py-2.5">
                   {o.fenetre ? `${formatDate(o.fenetre.debut)} au ${formatDate(o.fenetre.fin)}` : "sur prévision"} <Origine origine={o.delai.origine} />
-                  <span className="block text-xs text-ink-soft">environ {String(o.delai.mediane).replace(".", ",")} semaines avant l&apos;arrivée</span>
+                  <span className="block text-xs text-ink-soft">
+                    environ {String(o.delai.mediane).replace(".", ",")} semaines avant l&apos;arrivée{o.delai.source ? `, ${o.delai.source}` : ""}
+                  </span>
                 </td>
                 <td className="px-3 py-2.5">
                   <Niveau libelle={interet(o.facteurs.demande.valeur * o.facteurs.visibilite.valeur)} />

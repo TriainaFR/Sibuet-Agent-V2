@@ -33,12 +33,12 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
   const input = useRef<HTMLInputElement>(null);
   const form = useRef<HTMLFormElement>(null);
 
-  const choisir = (f: File | undefined) => {
-    if (!f || !input.current) return;
+  const choisir = (liste: FileList | null) => {
+    if (!liste?.length || !input.current) return;
     const dt = new DataTransfer();
-    dt.items.add(f);
+    for (const f of liste) dt.items.add(f);
     input.current.files = dt.files;
-    setNom(f.name);
+    setNom(liste.length > 1 ? `${liste.length} fichiers` : liste[0].name);
     form.current?.requestSubmit();
   };
 
@@ -50,8 +50,8 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
           <p className="eyebrow text-[0.62rem] text-taupe">Le plus efficace</p>
           <h2 className="titre-capitales mt-1 text-xl leading-tight">Charger vos réservations</h2>
           <p className="mt-2 text-sm text-ink-soft">
-            Un export du PMS suffit, en Excel ou en CSV. L&apos;outil en déduit les délais de réservation par pays et le remplissage de chaque sujet par rapport à
-            l&apos;an dernier : les étapes 4 et 5 ci-dessous se remplissent seules.
+            Les exports Asterio « nuitées » (un par hôtel, plusieurs à la fois) ou tout export du PMS, en Excel ou en CSV. L&apos;outil en déduit les délais de
+            réservation par pays et le rythme de remplissage : les étapes 4 et 5 ci-dessous se remplissent seules.
           </p>
 
           <form ref={form} action={envoyer}>
@@ -60,10 +60,12 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
               type="file"
               name="fichier"
               accept=".xlsx,.csv,.txt"
+              multiple
               className="sr-only"
               onChange={(e) => {
-                setNom(e.target.files?.[0]?.name ?? "");
-                if (e.target.files?.[0]) form.current?.requestSubmit();
+                const l = e.target.files;
+                setNom(l && l.length > 1 ? `${l.length} fichiers` : (l?.[0]?.name ?? ""));
+                if (l?.length) form.current?.requestSubmit();
               }}
             />
             <button
@@ -77,7 +79,7 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
               onDrop={(e) => {
                 e.preventDefault();
                 setSurvol(false);
-                choisir(e.dataTransfer.files[0]);
+                choisir(e.dataTransfer.files);
               }}
               disabled={envoi}
               className={`mt-4 flex w-full flex-col items-center gap-2 border border-dashed px-4 py-7 text-center transition ${
@@ -85,8 +87,8 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
               } disabled:opacity-60`}
             >
               {envoi ? <FileSpreadsheet className="h-6 w-6 animate-pulse text-greige" /> : <Upload className="h-6 w-6 text-greige" />}
-              <span className="text-sm font-semibold">{envoi ? `Lecture de ${nom || "votre fichier"}…` : "Déposez le fichier ici, ou cliquez pour le choisir"}</span>
-              <span className="text-xs text-ink-soft">.xlsx ou .csv, 7 Mo au plus, une ligne par réservation</span>
+              <span className="text-sm font-semibold">{envoi ? `Lecture de ${nom || "vos fichiers"}…` : "Déposez les fichiers ici, ou cliquez pour les choisir"}</span>
+              <span className="text-xs text-ink-soft">.xlsx ou .csv, un ou plusieurs fichiers, 7 Mo au plus en tout</span>
             </button>
           </form>
 
@@ -157,7 +159,7 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
                   <p className="text-[0.65rem] uppercase tracking-wide text-ink-soft">délais mesurés</p>
                 </div>
               </div>
-              {resume.arrivees && <p className="mt-2 text-xs text-ink-soft">Arrivées du {dateFr(resume.arrivees[0])} au {dateFr(resume.arrivees[1])}.</p>}
+              {resume.arrivees && <p className="mt-2 text-xs text-ink-soft">Séjours du {dateFr(resume.arrivees[0])} au {dateFr(resume.arrivees[1])}.</p>}
               {resume.ignorees.length > 0 && (
                 <p className="mt-1 text-xs text-ink-soft">Lignes écartées : {resume.ignorees.map((i) => `${i.nombre} ${i.raison}`).join(", ")}.</p>
               )}

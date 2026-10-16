@@ -8,6 +8,8 @@ import { formatDate, jourSemaine, relatif } from "@/lib/dates";
 import { urgenceLibelle } from "@/lib/format";
 import type { Alerte } from "@/lib/types";
 import { etatSaison } from "@/services/etat";
+import { Chiffre } from "@/components/ds";
+import { delaSaison, laSaison, nomSaison, portrait } from "@/lib/engine/portrait";
 
 const iconeAlerte: Record<Alerte["type"], typeof Sparkles> = {
   evenement: CalendarPlus,
@@ -26,10 +28,19 @@ export default async function AFaire() {
   const images = Object.fromEntries(sujets.map((s) => [s.def.id, s.def.image ?? ""]));
   const tete = kpis.tete;
   const saisie = ctx.saisie;
+  const h = ctx.historique?.donnees ?? null;
+  const p = h ? portrait(h) : null;
+  const ps = p?.saison ?? null;
+  const britanniques = h?.pays.find((x) => x.pays === "Royaume-Uni")?.delai ?? null;
+  const fetesUk = sujets.find((s) => s.def.id === "fetes")?.opportunites.find((o) => o.marche === "uk" && o.delai.origine === "mesuré")?.delai ?? null;
+  const remplissageMesure = sujets.some((s) => s.opportunites.some((o) => !o.facteurs.besoin.manquant && o.facteurs.besoin.origine !== "saisi"));
   const manquants = [
     { ok: Boolean(saisie.ouverture && saisie.fermeture), label: "Dates d'ouverture et de fermeture" },
-    { ok: Object.values(saisie.delais).some((v) => Number(v) > 0) || Boolean(ctx.asterio), label: "Délais de réservation par pays" },
-    { ok: Object.values(saisie.rempl).some((v) => v !== "inconnu") || Boolean(ctx.asterio), label: "Remplissage par sujet" },
+    { ok: Object.values(saisie.delais).some((v) => Number(v) > 0) || Boolean(ctx.asterio) || Boolean(h), label: "Délais de réservation par pays" },
+    {
+      ok: Object.values(saisie.rempl).some((v) => v !== "inconnu") || remplissageMesure,
+      label: h ? "Réservations de l'hiver à date (export Asterio jusqu'à fin avril)" : "Remplissage par sujet",
+    },
     { ok: saisie.acces_google_ads && saisie.acces_meta, label: "Accès Google Ads et Meta" },
   ];
   const faits = manquants.filter((m) => m.ok).length;
@@ -48,7 +59,7 @@ export default async function AFaire() {
           pas au moment où ils séjournent.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href="#actions" className="bouton">
+          <a href="#actions" className="bouton-inverse">
             Voir les actions
           </a>
           <Link href="/donnees" className="inline-flex items-center border border-white px-5 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white hover:text-ink">
@@ -70,7 +81,7 @@ export default async function AFaire() {
               <p className="eyebrow flex items-center gap-2 text-[0.62rem] text-taupe">
                 <I className="h-3.5 w-3.5" strokeWidth={1.6} /> {label}
               </p>
-              <p className={`mt-2 font-display text-5xl leading-none ${ton}`}>{valeur}</p>
+              <p className={`mt-2 text-[2.6rem] font-semibold leading-none ${ton}`}>{valeur}</p>
               <p className="mt-2 text-sm text-ink-soft">{texte}</p>
             </div>
           ))}
@@ -94,6 +105,35 @@ export default async function AFaire() {
                   Ouvrir la fiche
                 </Link>
               </div>
+            </div>
+          </section>
+        )}
+
+        {/* Ce que disent les réservations */}
+        {h && p && ps && (
+          <section className="mt-14 border-y border-line py-10">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <p className="eyebrow text-taupe">Ce que disent vos réservations</p>
+                <h2 className="mt-1 font-display text-4xl leading-tight">Deux hivers d&apos;historique, déjà dans le calcul</h2>
+                <p className="mt-2 text-sm text-ink-soft">
+                  Les dates proposées reposent désormais sur les délais réels de vos clients, pays par pays, mesurés sur la même période des deux hivers précédents.
+                </p>
+              </div>
+              <Link href="/maisons/lodge-park" className="lien-charme text-maison">
+                Portrait de la clientèle
+              </Link>
+            </div>
+            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4">
+              <Chiffre
+                libelle={nomSaison(ps)}
+                valeur={new Intl.NumberFormat("fr-FR").format(ps.nuitees)}
+                ecart={p.evolution !== null ? { texte: `${Math.abs(Math.round(p.evolution * 100))} %`, sens: p.evolution >= 0 ? "hausse" : "baisse" } : undefined}
+                note={ps.precedente?.memeFenetre ? `nuitées, contre ${new Intl.NumberFormat("fr-FR").format(ps.precedente.memeFenetre)} sur les mêmes dates ${delaSaison(ps.precedente.nom)}` : "nuitées"}
+              />
+              <Chiffre libelle="Délai médian" valeur={ps.delai ? `${ps.delai.med} j` : "n.d."} note={`entre la réservation et l'arrivée, sur ${laSaison(ps.nom)}`} />
+              <Chiffre libelle="Britanniques" valeur={britanniques ? `${britanniques.med} j` : "n.d."} note={fetesUk ? `délai médian sur deux ans ; pour les fêtes, ${Math.round(fetesUk.mediane * 7)} jours` : "délai médian sur deux ans"} />
+              <Chiffre libelle="Vendu en direct" valeur={`${Math.round(ps.direct * 100)} %`} note={`dont ${Math.round(((ps.canaux.site ?? 0) / Math.max(1, ps.nuitees)) * 100)} % par le site`} />
             </div>
           </section>
         )}

@@ -23,6 +23,8 @@ Tout fonctionne sans base de données ni clé :
 |---|---|
 | À faire | Les actions des six prochaines semaines, datées, avec ce qui les bloque. Ce qui a changé depuis le calcul précédent. |
 | Vos données | Chargement d'un fichier de réservations (Excel ou CSV : date de réservation, pays et ville d'origine, dates de séjour, guests, chambres, type de chambre), agrégé à la lecture et jamais conservé : il fournit les délais par pays et le remplissage de chaque sujet contre l'an dernier. Puis saisie de ce qui manque : ouverture et fermeture, délais, remplissage, taux des newsletters, accès Ads. Recalcul immédiat, marquage « saisi » ou « estimation », remplacement automatique par un flux. |
+| Maisons | Portrait de chaque maison du groupe tiré des exports Asterio (nuits du 14 oct. 2024 au 14 oct. 2026) : saison contre saison, pays, délais de réservation, calendrier d'achat, canaux, rythme de remplissage, six constats rédigés. Vue groupe et comparaison des sept maisons. Chaque portrait prend la charte de sa maison. |
+| Charte graphique | Le design system : principes, identité de chaque maison relevée sur son site, typographie, couleurs fonctionnelles, composants et graphiques. |
 | Calendrier | Une ligne par sujet : réservation en pointillés, séjour en plein, newsletters prévues, vacances scolaires, densité d'événements. |
 | Sujets | Classés par urgence puis intérêt. Fiche en cinq onglets : l'essentiel, par pays, actions (validation et brief), sur Google, pour aller plus loin. Export texte au gabarit P3. |
 | Mesure | Résultat de chaque action, les quatre cas, propositions de recalibrage (délais, CRM, coûts des canaux, seuil neige). |
@@ -36,10 +38,13 @@ Aucun chiffre d'indice n'est affiché au client : urgence élevée, moyenne ou b
 npm run routine                    # collecte complète, calcul, alertes (à planifier chaque lundi à 6 h)
 npm run routine -- --rapide        # agenda limité aux prochaines semaines
 npm run routine -- --sans-collecte # recalcul seul
-npm run controle                   # rejoue le calcul du 23 sept. et le compare au calcul n° 5 de Jérôme
+npm run controle                   # rejoue le calcul et le compare au calcul n° 5 de Jérôme
+npm run asterio                    # importe les exports Asterio déposés dans data/depot/asterio-historique/
 ```
 
-Chaque collecte produit un relevé daté dans `data/signaux/<source>/<date>.json`, jamais écrasé. Le contrôle donne aujourd'hui 67 fenêtres d'achat identiques sur 67 au calcul de Jérôme.
+Chaque collecte produit un relevé daté dans `data/signaux/<source>/<date>.json`, jamais écrasé. Avant l'historique Asterio, le contrôle donnait 67 fenêtres d'achat identiques sur 67 au calcul de Jérôme ; depuis, les délais sont mesurés par période et par pays sur les deux hivers précédents, et les fenêtres s'en écartent logiquement.
+
+Les exports Asterio bruts ne sont jamais versionnés (`.gitignore`) : seuls leurs agrégats le sont (`data/signaux/asterio_historique/`).
 
 ## Modifier sans galère
 
@@ -51,7 +56,8 @@ Chaque collecte produit un relevé daté dans `data/signaux/<source>/<date>.json
 | Ajuster une règle du calcul (délais, seuils, vagues, neige) | `src/lib/engine/regles.ts` |
 | Modifier les prompts de Jérôme (P0 à P5) | `prompts/` |
 | Brancher une source | `src/connecteurs/` (voir `docs/ARCHITECTURE.md`) |
-| Couleurs et typographies | `src/app/globals.css` |
+| Couleurs et typographies (groupe et thèmes de maison) | `src/app/globals.css`, décrits dans `src/lib/da.ts` et sur la page /charte |
+| Saisons, chambres et nom Asterio d'une maison | `data/reference/maisons.json` |
 
 ## Documentation
 

@@ -10,7 +10,8 @@ import { GrilleMarches, TableauMarches } from "@/components/grille-marches";
 import { Onglets } from "@/components/onglets";
 import { Aide, Champ, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
 import { Validation } from "@/components/validation";
-import { formatDate, formatRange, monthName, relatif } from "@/lib/dates";
+import { diffDays, formatDate, formatRange, monthName, relatif } from "@/lib/dates";
+import { BarresH, Courbes } from "@/components/graphiques";
 import { canalLibelle, interetLibelle, nombre, urgenceLibelle, visibiliteLibelle } from "@/lib/format";
 import type { LigneSemrush } from "@/lib/types";
 import { etatSaison } from "@/services/etat";
@@ -48,9 +49,12 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
     ctx.neige && `Neige historique : ${ctx.neige.origine}`,
     ctx.prevision && `Prévision neige : relevé du ${formatDate(ctx.prevision.collecte_le, true)}`,
     ctx.envois && `Newsletters : ${ctx.envois.donnees.statut}`,
-    ctx.asterio && `Réservations : ${ctx.asterio.origine}`,
+    ctx.historique && `Réservations : ${ctx.historique.origine}, relevé du ${formatDate(ctx.historique.collecte_le, true)}`,
+    !ctx.historique && ctx.asterio && `Réservations : ${ctx.asterio.origine}`,
     "Vacances scolaires : sites officiels par marché, vérifiés sauf Belgique et Pays-Bas",
-    "Délais de réservation : hypothèses tant qu'Asterio n'est pas branché, sauf saisie dans Vos données",
+    ctx.historique
+      ? "Délais de réservation : mesurés sur la même période des deux saisons précédentes, pays par pays ; hypothèse de départ là où les séjours manquent"
+      : "Délais de réservation : hypothèses tant qu'Asterio n'est pas branché, sauf saisie dans Vos données",
   ].filter(Boolean) as string[];
 
   const essentiel = (
@@ -86,6 +90,55 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           </div>
         ))}
       </div>
+      {s.reference && s.reference.final >= 30 && (
+        <div className="grid gap-4 lg:grid-cols-[1.5fr_1fr]">
+          <div className="carte p-5 sm:p-6">
+            <p className="eyebrow text-taupe">Le rythme de l&apos;an dernier</p>
+            <h3 className="titre-maison mt-1 text-2xl leading-tight">
+              Au {formatDate(s.reference.aLaDate, true)}, {Math.round((s.reference.part ?? 0) * 100)} % de la période était vendue
+            </h3>
+            <p className="mt-1 text-sm text-ink-soft">
+              Même période un an plus tôt, du {formatRange(s.reference.periode.debut, s.reference.periode.fin)} : part des {nombre(s.reference.final)} nuitées finales déjà réservées, semaine après semaine.
+            </p>
+            <div className="mt-4">
+              <Courbes
+                ariaLabel={`Remplissage de la même période l'an dernier pour ${d.nom}`}
+                hauteur={210}
+                unite="pourcent"
+                yMax={1}
+                series={[
+                  {
+                    id: "n1",
+                    nom: "L'an dernier",
+                    couleur: "var(--maison-accent)",
+                    aire: true,
+                    points: s.reference.courbe.map((c) => ({ x: Math.round(diffDays(c.date, s.reference!.periode.debut) / 7), y: c.part })),
+                  },
+                ]}
+                ticksX={s.reference.courbe
+                  .filter((_, i, t) => i % 4 === 0 || (i === t.length - 1 && i % 4 >= 2))
+                  .map((c) => ({ x: Math.round(diffDays(c.date, s.reference!.periode.debut) / 7), libelle: formatDate(c.date) }))}
+                libellesX={s.reference.courbe.map((c) => ({ x: Math.round(diffDays(c.date, s.reference!.periode.debut) / 7), libelle: `Au ${formatDate(c.date, true)}` }))}
+                repere={{ x: Math.round(diffDays(s.reference.aLaDate, s.reference.periode.debut) / 7), libelle: "aujourd'hui, un an plus tôt" }}
+              />
+            </div>
+          </div>
+          <div className="carte p-5 sm:p-6">
+            <p className="eyebrow text-taupe">Vendu à la même date, par pays</p>
+            <p className="mt-1 mb-4 text-sm text-ink-soft">Part des nuitées finales de chaque pays déjà réservée au {formatDate(s.reference.aLaDate, true)}.</p>
+            <BarresH
+              unite="pourcent"
+              max={1}
+              items={s.reference.parPays
+                .filter((x) => x.final >= 10)
+                .map((x) => ({ id: x.pays || "inconnu", libelle: x.pays || "Pays inconnu", valeur: x.part ?? 0, note: `${nombre(x.final)} nuitées au final` }))}
+            />
+            <p className="mt-4 text-xs text-ink-soft">
+              Le remplissage à date de cette saison viendra du même export Asterio étendu aux nuits de l&apos;hiver : l&apos;agent comparera alors les deux courbes.
+            </p>
+          </div>
+        </div>
+      )}
       <div className="grid gap-4 lg:grid-cols-2">
         <div className="carte p-5">
           <p className="eyebrow text-taupe">Événements rattachés</p>

@@ -44,3 +44,18 @@ export function controlerTexte(texte: string) {
   if (/\*/.test(texte)) problemes.push("astérisque");
   return problemes;
 }
+
+const ADJ_MARCHE: Record<string, string> = { ge: "genevois", vd: "vaudois", uk: "britanniques", be: "belges", nl: "néerlandais", us: "américains" };
+const ZONES: Record<string, string> = { fra: "A", frb: "B", frc: "C" };
+
+/** « clients britanniques », « clients français (zones A et C) et genevois ». */
+export function clientsDe(ids: string[]) {
+  const uniques = [...new Set(ids)];
+  const zones = uniques.filter((i) => ZONES[i]).map((i) => ZONES[i]).sort();
+  const mots: string[] = [];
+  if (zones.length === 3) mots.push("français");
+  else if (zones.length) mots.push(`français (zone${zones.length > 1 ? "s" : ""} ${zones.join(" et ")})`);
+  for (const i of uniques) if (ADJ_MARCHE[i]) mots.push(ADJ_MARCHE[i]);
+  if (!mots.length) return "clients";
+  return `clients ${mots.length > 1 ? `${mots.slice(0, -1).join(", ")} et ${mots.at(-1)}` : mots[0]}`;
+}

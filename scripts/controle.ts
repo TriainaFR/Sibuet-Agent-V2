@@ -1,5 +1,7 @@
 // Contrôle du moteur : rejoue le calcul à une date et le compare au calcul n° 5 de Jérôme (23 sept. 2026).
 // Usage : npm run controle [-- 2026-09-23]
+// Depuis l'import de l'historique Asterio (16 oct. 2026), les délais sont mesurés par période et par pays :
+// les fenêtres s'écartent donc de celles du calcul n° 5, qui reposaient sur des hypothèses.
 // Le calcul n° 5 multipliait encore par un facteur marge non mesuré (0,5). Ce facteur est retiré à la demande de Jérôme
 // (6 oct. 2026) : ses scores et ordres sont donc divisés par 0,5 pour rester comparables.
 const MARGE_N5 = 0.5;

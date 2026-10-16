@@ -109,7 +109,7 @@ export function Bandeau({
   filigrane?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-greige text-white">
+    <section className="relative overflow-hidden bg-maison-bandeau text-white">
       <span className="filigrane absolute -bottom-6 left-0 text-[9rem] sm:text-[13rem]">{filigrane}</span>
       <div className="relative mx-auto grid max-w-[1320px] items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:py-16">
         <div className="apparition">

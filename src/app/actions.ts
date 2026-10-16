@@ -2,15 +2,16 @@
 
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-import { today } from "@/lib/dates";
+import { formatDate, today } from "@/lib/dates";
 import Papa from "papaparse";
 import { readSheet } from "read-excel-file/node";
 import { releve } from "@/connecteurs/types";
 import { SOURCES_TRACE } from "@/lib/flux";
-import type { Decision, DonneesAsterio, Marche, Resultat, SaisieClient, TraceDepot } from "@/lib/types";
+import type { Decision, DonneesAsterio, HistoriqueAsterio, Marche, Resultat, SaisieClient, TraceDepot } from "@/lib/types";
 import { construireContexte } from "@/services/contexte";
 import { agregerReservations } from "@/services/reservations";
-import { lireDecisions, lireDepots, lireParametres, lireResultats, lireSaisie, saisieVide } from "@/services/reference";
+import { enregistrerHistorique, estFichierAsterio, importerExportsAsterio } from "@/services/asterio-historique";
+import { lireDecisions, lireDepots, lireMaisons, lireParametres, lireResultats, lireSaisie, saisieVide } from "@/services/reference";
 import { lancerRoutine } from "@/services/routine";
 import { depot } from "@/stockage/depot";
 
@@ -104,11 +105,24 @@ export async function exempleMesure(cles: string[]) {
  * jamais les lignes ni le fichier lui-même.
  */
 export async function importerReservations(_: unknown, formData: FormData): Promise<{ ok: boolean; message: string }> {
-  const fichier = formData.get("fichier");
-  if (!(fichier instanceof File) || fichier.size === 0) return { ok: false, message: "Choisissez un fichier Excel (.xlsx) ou CSV." };
-  if (!/\.(xlsx|csv|txt)$/i.test(fichier.name)) return { ok: false, message: "Format non pris en charge : enregistrez le fichier en .xlsx ou .csv." };
-  if (fichier.size > 7 * 1024 * 1024) return { ok: false, message: "Fichier trop lourd (7 Mo au plus). Exportez seulement les colonnes utiles." };
+  const fichiers = formData.getAll("fichier").filter((f): f is File => f instanceof File && f.size > 0);
+  if (!fichiers.length) return { ok: false, message: "Choisissez un fichier Excel (.xlsx) ou CSV." };
+  if (fichiers.some((f) => !/\.(xlsx|csv|txt)$/i.test(f.name))) return { ok: false, message: "Format non pris en charge : enregistrez les fichiers en .xlsx ou .csv." };
+  if (fichiers.reduce((t, f) => t + f.size, 0) > 7 * 1024 * 1024) return { ok: false, message: "Fichiers trop lourds (7 Mo au plus en tout). Exportez seulement les colonnes utiles." };
+  const fichier = fichiers[0];
   try {
+    // Exports Asterio « nuitées » (un par hôtel, ou un seul) : historique de toutes les maisons.
+    const contenus = await Promise.all(fichiers.map(async (f) => ({ nom: f.name.slice(0, 120), contenu: Buffer.from(await f.arrayBuffer()) })));
+    if (/\.xlsx$/i.test(fichier.name) && (await estFichierAsterio(contenus[0].contenu))) {
+      const { maisons, pilote } = lireMaisons();
+      const h = await importerExportsAsterio(contenus, maisons, pilote);
+      enregistrerHistorique(h, contenus.map((c) => c.nom), pilote);
+      rafraichir();
+      return {
+        ok: true,
+        message: `Historique chargé : ${h.maisons.length} maison${h.maisons.length > 1 ? "s" : ""}, nuits du ${formatDate(h.nuits[0], true)} au ${formatDate(h.nuits[1], true)}.${h.inconnus.length ? ` Hôtels non reconnus : ${h.inconnus.join(", ")}.` : ""}`,
+      };
+    }
     const ctx = construireContexte();
     const { donnees, resume } = await agregerReservations(Buffer.from(await fichier.arrayBuffer()), fichier.name, ctx);
     const nom = fichier.name.slice(0, 120);
@@ -123,6 +137,10 @@ export async function importerReservations(_: unknown, formData: FormData): Prom
 }
 
 export async function retirerReservations() {
+  // Si les réservations viennent des exports Asterio, l'historique de toutes les maisons est retiré aussi.
+  if (depot().lireReleve("asterio")?.origine.startsWith("Exports Asterio")) {
+    depot().ecrireReleve(releve<HistoriqueAsterio>("asterio_historique", today(), "import", "Historique retiré", "aucune maison", { nuits: [today(), today()], reservations: [today(), today()], fichiers: [], lignes: 0, maisons: [], inconnus: [] }));
+  }
   depot().ecrireReleve(releve<DonneesAsterio>("asterio", today(), "import", "Fichier de réservations retiré", "aucune réservation", { delais: {}, otb: [] }));
   rafraichir();
 }

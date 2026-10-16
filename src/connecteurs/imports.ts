@@ -126,3 +126,37 @@ export const asterio: Connecteur = {
     return null;
   },
 };
+
+/**
+ * Historique des réservations : exports Asterio « nuitées » (un fichier par hôtel ou un seul),
+ * déposés dans data/depot/asterio-historique/. Agrégés à l'import, jamais conservés tels quels.
+ * Produit aussi le relevé asterio de la maison pilote (délais mesurés) pour le calcul.
+ */
+export const asterioHistorique: Connecteur = {
+  id: "asterio_historique",
+  nom: "Historique des réservations (exports Asterio)",
+  categorie: "réservations",
+  cadence: "à chaque export",
+  statut: "import",
+  apporte: "Nuitées par maison, saison, pays, canal et mois ; délais réels par pays ; rythme de remplissage. Toutes les maisons.",
+  pourBrancher:
+    "Export Asterio « nuitées » (hôtel, date de réservation, date de nuitée, canal, segment, chambres, pays, personnes), à déposer dans data/depot/asterio-historique/ ou depuis Vos données. Pour le remplissage à date, étendre les nuits jusqu'à la fin de la saison.",
+  async collecter(ctx) {
+    const fichiers = ctx.depot.listerDepot("asterio-historique").filter((f) => /\.xlsx$/i.test(f.nom) && !f.nom.startsWith("~$"));
+    if (!fichiers.length) return null;
+    const precedent = ctx.depot.lireReleve("asterio_historique");
+    const recent = Math.max(...fichiers.map((f) => statSync(f.chemin).mtimeMs));
+    if (precedent && !ctx.forcer && precedent.horodatage >= new Date(recent).toISOString()) {
+      ctx.journal("historique Asterio : aucun nouvel export");
+      return null;
+    }
+    const { importerExportsAsterio, enregistrerHistorique } = await import("@/services/asterio-historique");
+    const { lireMaisons } = await import("@/services/reference");
+    const { maisons, pilote } = lireMaisons();
+    const h = await importerExportsAsterio(fichiers.map((f) => ({ nom: f.nom, contenu: readFileSync(f.chemin) })), maisons, pilote);
+    // Les deux relevés (historique et maison pilote) sont écrits ici ; la routine n'a rien d'autre à enregistrer.
+    const origine = enregistrerHistorique(h, fichiers.map((f) => f.nom), pilote);
+    ctx.journal(`historique Asterio : ${h.lignes} lignes, ${h.maisons.length} maisons (${origine})`);
+    return null;
+  },
+};
