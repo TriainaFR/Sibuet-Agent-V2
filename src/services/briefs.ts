@@ -17,7 +17,7 @@ const marchesDe = (ctx: Contexte, ids: string[]) => ids.map((id) => ctx.marches.
 export function contexteBrief(ctx: Contexte, s: SujetCalcule, a: Activation) {
   const gsc = ctx.gsc?.donnees;
   return [
-    `Sujet : ${s.def.nom} (famille ${s.def.famille}). Maison : ${ctx.maison.nom}, ${ctx.maison.destination}. Saison hiver 2026-2027.`,
+    `Sujet : ${s.def.nom} (famille ${s.def.famille}). Maison : ${ctx.maison.nom}, ${ctx.maison.destination}. Saison ${ctx.saison.nom.toLowerCase()}.`,
     s.def.sejour ? `Période de séjour : du ${formatRange(s.def.sejour.debut, s.def.sejour.fin)}.` : "",
     `Thème : ${s.def.theme}`,
     `Cibles : ${s.def.cibles}`,
@@ -110,7 +110,7 @@ export function ficheTexte(ctx: Contexte, s: SujetCalcule) {
   const out = [
     "FICHE DE THEME",
     `Sujet : ${s.def.nom} (id ${s.def.id})`,
-    `Famille : ${s.def.famille}. Maison : ${ctx.maison.nom}, ${ctx.maison.destination}. Saison : hiver 2026-2027.`,
+    `Famille : ${s.def.famille}. Maison : ${ctx.maison.nom}, ${ctx.maison.destination}. Saison : ${ctx.saison.nom.toLowerCase()}.`,
     s.def.sejour ? `Période de séjour : du ${formatRange(s.def.sejour.debut, s.def.sejour.fin)}. Cibles : ${s.def.cibles}` : `Cibles : ${s.def.cibles}`,
     `Produite le ${formatDate(ctx.date, true)} par l'Agent Sibuet. Les délais de réservation sont des hypothèses tant qu'Asterio n'est pas branché, sauf mention.`,
     "",

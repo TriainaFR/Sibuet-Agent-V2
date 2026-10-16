@@ -13,7 +13,7 @@ const date = process.argv[2] ?? "2026-09-23";
 const ref = JSON.parse(readFileSync("data/reference/calcul_5_2026-09-23.json", "utf8")) as {
   id: string; nom: string; grille: { marche: string; fenetre: [string, string] | null; score: number; urgence: number; ordre: number; ecart: number }[];
 }[];
-const ctx = construireContexte(date);
+const ctx = construireContexte(date, "hiver-2026-2027");
 const sujets = calculerSaison(ctx);
 let ecartsFenetre = 0;
 let n = 0;

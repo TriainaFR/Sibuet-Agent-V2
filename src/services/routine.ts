@@ -7,7 +7,7 @@ import { calculerSaison } from "@/lib/engine/calcul";
 import type { Evenement, ResumeCalcul } from "@/lib/types";
 import { depot } from "@/stockage/depot";
 import { construireContexte } from "./contexte";
-import { lireCalculs, lireJournal, lireMaison, lireParametres, lireSujets } from "./reference";
+import { lireCalculs, lireJournal, lireMaison, lireParametres, lireSujets, saisonCourante } from "./reference";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Routine du lundi : collecte → relevés datés → calcul des opportunités → alertes.
@@ -30,7 +30,9 @@ export async function lancerRoutine(opts: OptionsRoutine = {}) {
     if (process.env.ROUTINE_VERBEUSE) console.log(l);
   };
   const d = depot();
-  const sujets = lireSujets();
+  // La routine travaille toujours sur la saison en cours, quelle que soit la saison affichée.
+  const saisonId = saisonCourante().id;
+  const sujets = lireSujets(undefined, saisonId);
   const ctxCollecte: ContexteCollecte = {
     date,
     rapide: opts.rapide ?? false,
@@ -61,7 +63,7 @@ export async function lancerRoutine(opts: OptionsRoutine = {}) {
   }
 
   // 2. Calcul et alertes
-  const ctx = construireContexte(date);
+  const ctx = construireContexte(date, saisonId);
   const saison = calculerSaison(ctx);
   const calculs = lireCalculs();
   const precedent = [...calculs].reverse().find((c) => c.date < date) ?? null;

@@ -30,6 +30,10 @@ Le moteur s'en sert de trois façons (`src/lib/engine/historique.ts`) :
 
 `src/lib/engine/portrait.ts` rédige les six constats de chaque maison.
 
+## Saisons et rejeu
+
+`data/reference/saisons.json` liste les saisons de la maison pilote. Une saison marquée `rejeu` est recalculée à une date passée (`construireContexte(date, saison)` dans `src/services/contexte.ts`) : réservations comptées seulement si elles sont enregistrées avant la date, plan d'envois de la saison, vacances de la saison, ouverture et fermeture déduites des réservations, ni agenda ni prévision. `src/lib/engine/rejeu.ts` en tire le bilan à date et le verdict de fin de saison. La saison affichée et la date sont des paramètres (`data/etat/parametres.json`), modifiables depuis l'en-tête ; la routine travaille toujours sur la saison en cours (`courante`).
+
 ## Design system
 
 Base groupe et un thème par maison, dans `src/app/globals.css` : un attribut `data-maison="…"` sur un bloc active l'accent, le second accent, le fond, l'encre, le bandeau et la serif de titre de la maison. Les composants (`src/components/ds.tsx`, `src/components/graphiques.tsx`, boutons, bandeaux) lisent ces jetons. Le cadre (en-tête, navigation, pied de page) reste à la charte du groupe. La page /charte documente l'ensemble ; la palette des canaux est validée pour le daltonisme.

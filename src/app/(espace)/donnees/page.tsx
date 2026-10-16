@@ -3,11 +3,12 @@ import { connection } from "next/server";
 import { ChargementReservations } from "@/components/chargement-reservations";
 import { FormulaireDonnees } from "@/components/formulaire-donnees";
 import { construireContexte } from "@/services/contexte";
-import { lireSaisie } from "@/services/reference";
+import { lireSaisie, saisonActive, saisonCourante } from "@/services/reference";
 
 export default async function VosDonnees() {
   await connection();
-  const ctx = construireContexte();
+  // La saisie et les fichiers concernent toujours la saison en cours, même quand une saison passée est rejouée.
+  const ctx = construireContexte(undefined, saisonCourante().id);
   const flux: Record<string, { med: number; mode: string }> = {};
   const a = ctx.asterio;
   const charge = a && a.mode !== "fictif" && a.donnees.resume ? a : null;
@@ -22,13 +23,19 @@ export default async function VosDonnees() {
   }
   return (
     <>
-      <Bandeau eyebrow="Lodge Park, hiver 2026-2027" titre="Vos données" sousTitre="Ce que vous savez et pas nous" filigrane="Vos données" photo="/lodge/lp-12.jpg" photo2="/lodge/bar-1.jpg">
+      <Bandeau eyebrow={`Lodge Park, ${saisonCourante().nom.toLowerCase()}`} titre="Vos données" sousTitre="Ce que vous savez et pas nous" filigrane="Vos données" photo="/lodge/lp-12.jpg" photo2="/lodge/bar-1.jpg">
         <p>
           Ce que nous n&apos;avons pas encore et que vous connaissez. Chaque saisie recalcule la page. Le jour où un flux existe, il remplace la saisie sans rien
         changer d&apos;autre. Ce qui est marqué « estimation » est notre hypothèse, ce qui est marqué « saisi » vient de vous.
         </p>
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
+      {saisonActive().rejeu && (
+        <p className="mb-6 border-l-2 border-cognac bg-white px-4 py-3 text-sm text-ink-soft">
+          Vous regardez l&apos;{saisonActive().nom.toLowerCase()} rejoué : l&apos;agent y utilise les réservations réelles. Cette page prépare la saison en cours,
+          l&apos;{saisonCourante().nom.toLowerCase()}.
+        </p>
+      )}
       <ChargementReservations resume={charge?.donnees.resume ?? null} chargeLe={charge?.collecte_le ?? null} marches={ctx.marches} delais={charge?.donnees.delais ?? {}} />
       <div className="mt-7">
         <FormulaireDonnees

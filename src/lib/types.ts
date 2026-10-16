@@ -407,6 +407,22 @@ export interface Resultat {
 
 export interface Parametres {
   donneesFictives: boolean;
+  /** Saison affichée : la saison en cours, ou une saison passée rejouée. */
+  saison?: string;
+  /** Date à laquelle la saison passée est rejouée. */
+  dateRejeu?: string;
+}
+
+/** Saison de la maison pilote (data/reference/saisons.json). */
+export interface Saison {
+  id: string;
+  nom: string;
+  debut: string;
+  fin: string;
+  /** Saison passée, recalculée à une date passée avec les réservations connues à cette date. */
+  rejeu: boolean;
+  dateDefaut?: string;
+  datesProposees?: string[];
 }
 
 /** Trace d'un export déposé pour une source pas encore branchée : en-têtes seulement, aucune donnée. */

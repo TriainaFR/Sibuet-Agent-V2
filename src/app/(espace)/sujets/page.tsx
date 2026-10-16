@@ -14,7 +14,7 @@ export default async function Sujets() {
   const [premier, ...autres] = sujets;
   return (
     <>
-      <Bandeau eyebrow="Lodge Park, hiver 2026-2027" titre="Les sujets de la saison" sousTitre={`${sujets.length} sujets, classés par urgence puis intérêt`} filigrane="Sujets">
+      <Bandeau eyebrow={`Lodge Park, ${ctx.saison.nom.toLowerCase()}${ctx.saison.rejeu ? `, rejoué au ${formatDate(ctx.date, true)}` : ""}`} titre="Les sujets de la saison" sousTitre={`${sujets.length} sujets, classés par urgence puis intérêt`} filigrane="Sujets">
         <p>Un sujet très intéressant mais lointain passe après un sujet moyen qu&apos;il faut lancer cette semaine.</p>
       </Bandeau>
 

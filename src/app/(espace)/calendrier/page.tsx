@@ -27,7 +27,7 @@ export default async function Calendrier() {
   await connection();
   const { sujets, ctx } = etatSaison();
   const debut = `${ctx.date.slice(0, 7)}-01`;
-  const fin = "2027-05-01";
+  const fin = addDays(ctx.saison.fin, 1);
   const span = diffDays(fin, debut);
   const x = (d: string) => (Math.max(0, Math.min(span, diffDays(d, debut))) / span) * 100;
   const w = (a: string, b: string) => Math.max(0.5, x(minDate(b, fin)) - x(maxDate(a, debut)));
@@ -50,7 +50,7 @@ export default async function Calendrier() {
 
   return (
     <>
-      <Bandeau eyebrow="Lodge Park, hiver 2026-2027" titre="Le calendrier de la saison" sousTitre="Quand ils réservent, quand ils séjournent" filigrane="Calendrier" photo="/lodge/megeve-village.jpg" photo2="/lodge/lp-7.jpg">
+      <Bandeau eyebrow={`Lodge Park, ${ctx.saison.nom.toLowerCase()}${ctx.saison.rejeu ? ", rejoué" : ""}`} titre="Le calendrier de la saison" sousTitre="Quand ils réservent, quand ils séjournent" filigrane="Calendrier" photo="/lodge/megeve-village.jpg" photo2="/lodge/lp-7.jpg">
         <p>
           Pour chaque sujet : en pointillés, le moment où les clients réservent ; en plein, le moment où ils séjournent. Les losanges sont les newsletters déjà
         prévues. Cliquez un sujet pour ouvrir sa fiche.

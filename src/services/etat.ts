@@ -1,6 +1,8 @@
 import "server-only";
 import { addDays } from "@/lib/dates";
+import { detecterAlertes, resumer } from "@/lib/engine/alertes";
 import { aFaire, calculerSaison, interet } from "@/lib/engine/calcul";
+import { bilanADate, verdictSaison } from "@/lib/engine/rejeu";
 import { REGLES } from "@/lib/engine/regles";
 import { depot } from "@/stockage/depot";
 import { construireContexte } from "./contexte";
@@ -17,6 +19,13 @@ export function etatSaison() {
   const calculs = lireCalculs();
   const dernierCalcul = calculs.at(-1) ?? null;
 
+  // Saison rejouée : les alertes « depuis la semaine dernière » sont recalculées pour la date choisie.
+  let alertes = dernierCalcul?.alertes ?? [];
+  if (ctx.saison.rejeu) {
+    const avant = construireContexte(addDays(ctx.date, -7), ctx.saison.id);
+    alertes = detecterAlertes(ctx, sujets, { ...resumer(avant, calculerSaison(avant), 0, {}), alertes: [] }, null);
+  }
+
   const ouverts = sujets.filter((s) => s.ouvert);
   const tete = [...ouverts].sort((a, b) => b.ordre - a.ordre)[0];
   const teteLigne = tete?.opportunites.find((o) => o.demandeDetectee && !o.close);
@@ -31,6 +40,9 @@ export function etatSaison() {
     decisions,
     dernierCalcul,
     calculs,
+    alertes,
+    bilan: bilanADate(ctx),
+    verdict: () => verdictSaison(ctx, sujets),
     parametres: lireParametres(),
     persistant: depot().persistant,
     horizon: addDays(ctx.date, REGLES.horizonAFaireJours),

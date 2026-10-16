@@ -11,7 +11,7 @@ import type { Decision, DonneesAsterio, HistoriqueAsterio, Marche, Resultat, Sai
 import { construireContexte } from "@/services/contexte";
 import { agregerReservations } from "@/services/reservations";
 import { enregistrerHistorique, estFichierAsterio, importerExportsAsterio } from "@/services/asterio-historique";
-import { lireDecisions, lireDepots, lireMaisons, lireParametres, lireResultats, lireSaisie, saisieVide } from "@/services/reference";
+import { lireDecisions, lireDepots, lireMaisons, lireParametres, lireResultats, lireSaisie, lireSaisons, saisieVide, saisonCourante } from "@/services/reference";
 import { lancerRoutine } from "@/services/routine";
 import { depot } from "@/stockage/depot";
 
@@ -123,7 +123,7 @@ export async function importerReservations(_: unknown, formData: FormData): Prom
         message: `Historique chargé : ${h.maisons.length} maison${h.maisons.length > 1 ? "s" : ""}, nuits du ${formatDate(h.nuits[0], true)} au ${formatDate(h.nuits[1], true)}.${h.inconnus.length ? ` Hôtels non reconnus : ${h.inconnus.join(", ")}.` : ""}`,
       };
     }
-    const ctx = construireContexte();
+    const ctx = construireContexte(undefined, saisonCourante().id);
     const { donnees, resume } = await agregerReservations(Buffer.from(await fichier.arrayBuffer()), fichier.name, ctx);
     const nom = fichier.name.slice(0, 120);
     depot().ecrireReleve(
@@ -175,4 +175,13 @@ export async function deposerTrace(_: unknown, formData: FormData): Promise<{ ok
   } catch {
     return { ok: false, message: "Lecture du fichier impossible." };
   }
+}
+
+/** Choix de la saison affichée : saison en cours, ou saison passée rejouée à une date donnée. */
+export async function choisirSaison(saison: string, dateRejeu?: string) {
+  const s = lireSaisons().saisons.find((x) => x.id === saison);
+  if (!s) return;
+  const date = dateRejeu && /^\d{4}-\d{2}-\d{2}$/.test(dateRejeu) ? dateRejeu : s.dateDefaut;
+  depot().ecrireEtat("parametres", { ...lireParametres(), saison: s.id, ...(s.rejeu && date ? { dateRejeu: date } : {}) });
+  rafraichir();
 }

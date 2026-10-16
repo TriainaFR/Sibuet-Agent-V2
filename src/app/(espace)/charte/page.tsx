@@ -1,3 +1,4 @@
+import { connection } from "next/server";
 import { ArrowRight, Bell, CalendarRange, Check, FileText, Gauge, ListChecks } from "lucide-react";
 import { Chiffre, EnTete, Nuancier } from "@/components/ds";
 import { BarresH, Courbes, Delais, Empile } from "@/components/graphiques";
@@ -16,7 +17,8 @@ const PRINCIPES = [
 
 const demoMois = ["oct.", "nov.", "déc.", "janv.", "févr.", "mars"];
 
-export default function Charte() {
+export default async function Charte() {
+  await connection();
   return (
     <div data-maison="groupe">
       <Bandeau eyebrow="Design system" titre="Charte graphique" sousTitre="Le groupe, les maisons, les règles" filigrane="Charte" photo="/hotels/toutes.jpg" photo2="/brand/stamp.png">

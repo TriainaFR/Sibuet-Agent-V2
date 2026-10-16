@@ -1,11 +1,38 @@
 import "server-only";
 import { depot } from "@/stockage/depot";
-import type { Decision, Maison, Marche, Parametres, Resultat, ResumeCalcul, SaisieClient, SujetDef, TraceDepot, VacancesMarche } from "@/lib/types";
+import { today } from "@/lib/dates";
+import type { Decision, Maison, Marche, Parametres, Resultat, ResumeCalcul, SaisieClient, Saison, SujetDef, TraceDepot, VacancesMarche } from "@/lib/types";
 
 // Accès à la connaissance (référence) et à l'état (décisions), via le dépôt.
 
 export const MAISON_PILOTE = "lodge-park";
-export const SAISON = "hiver-2026-2027";
+
+// ── Saisons ──────────────────────────────────────────────────────────────────
+// La saison en cours se calcule à la date du jour. Une saison passée peut être rejouée :
+// l'agent la recalcule à une date passée, avec les réservations réellement enregistrées à cette date.
+
+export function lireSaisons(): { courante: string; saisons: Saison[] } {
+  return depot().lireReference("saisons.json", { courante: "hiver-2026-2027", saisons: [] as Saison[] });
+}
+
+/** Saison en cours (celle de la routine du lundi). */
+export function saisonCourante(): Saison {
+  const { courante, saisons } = lireSaisons();
+  return saisons.find((s) => s.id === courante) ?? { id: courante, nom: "Hiver 2026-2027", debut: "2026-12-01", fin: "2027-04-30", rejeu: false };
+}
+
+/** Saison affichée (paramètre), par défaut la saison rejouée si elle existe, sinon la saison en cours. */
+export function saisonActive(): Saison {
+  const { saisons } = lireSaisons();
+  const choisie = lireParametres().saison;
+  return saisons.find((s) => s.id === choisie) ?? saisons.find((s) => s.rejeu) ?? saisonCourante();
+}
+
+/** Date de calcul : la date de rejeu pour une saison passée, sinon aujourd'hui. */
+export function dateDeTravail(saison = saisonActive()): string {
+  if (!saison.rejeu) return today();
+  return lireParametres().dateRejeu ?? saison.dateDefaut ?? today();
+}
 
 export function lireMarches(): Marche[] {
   return depot().lireReference<{ marches: Marche[] }>("marches.json", { marches: [] }).marches;
@@ -26,12 +53,12 @@ export interface FichierSujets {
   note: string;
   sujets: SujetDef[];
 }
-export function lireSujets(maison = MAISON_PILOTE): FichierSujets {
-  return depot().lireReference<FichierSujets>(`sujets/${maison}_${SAISON}.json`, { maison, saison: "", version: "", note: "", sujets: [] });
+export function lireSujets(maison = MAISON_PILOTE, saison = saisonActive().id): FichierSujets {
+  return depot().lireReference<FichierSujets>(`sujets/${maison}_${saison}.json`, { maison, saison: "", version: "", note: "", sujets: [] });
 }
 
-export function lireVacances(): { note: string; marches: VacancesMarche[] } {
-  return depot().lireReference("vacances_scolaires_2026-2027.json", { note: "", marches: [] as VacancesMarche[] });
+export function lireVacances(saison = saisonActive().id): { note: string; marches: VacancesMarche[] } {
+  return depot().lireReference(`vacances_scolaires_${saison.replace(/^hiver-/, "")}.json`, { note: "", marches: [] as VacancesMarche[] });
 }
 
 export const saisieVide = (maison = MAISON_PILOTE): SaisieClient => ({

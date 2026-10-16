@@ -1,0 +1,187 @@
+{
+ "saison": "2025-2026",
+ "note": "FR : arrêté officiel (zones A, B, C), recoupé avec OpenHolidays. Genève, Vaud, Belgique (Fédération Wallonie-Bruxelles), Pays-Bas : OpenHolidays (16 oct. 2026). Angleterre : semaine majoritaire des conseils locaux. États-Unis : dates typiques. Convention : du samedi de départ au jour de reprise.",
+ "marches": [
+  {
+   "id": "frc",
+   "nom": "France zone C",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-05"
+    },
+    {
+     "nom": "Hiver",
+     "debut": "2026-02-21",
+     "fin": "2026-03-09"
+    }
+   ],
+   "zone_fr": "C",
+   "source": "education.gouv.fr",
+   "verifie": true
+  },
+  {
+   "id": "fra",
+   "nom": "France zone A",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-05"
+    },
+    {
+     "nom": "Hiver",
+     "debut": "2026-02-07",
+     "fin": "2026-02-23"
+    }
+   ],
+   "zone_fr": "A",
+   "source": "education.gouv.fr",
+   "verifie": true
+  },
+  {
+   "id": "frb",
+   "nom": "France zone B",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-05"
+    },
+    {
+     "nom": "Hiver",
+     "debut": "2026-02-14",
+     "fin": "2026-03-02"
+    }
+   ],
+   "zone_fr": "B",
+   "source": "education.gouv.fr",
+   "verifie": true
+  },
+  {
+   "id": "ge",
+   "nom": "Genève",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    },
+    {
+     "nom": "Février",
+     "debut": "2026-02-21",
+     "fin": "2026-03-01"
+    }
+   ],
+   "source": "ge.ch DIP",
+   "verifie": true
+  },
+  {
+   "id": "vd",
+   "nom": "Vaud",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    },
+    {
+     "nom": "Relâches",
+     "debut": "2026-02-14",
+     "fin": "2026-02-22"
+    }
+   ],
+   "source": "vd.ch",
+   "verifie": true
+  },
+  {
+   "id": "uk",
+   "nom": "Royaume-Uni",
+   "periodes": [
+    {
+     "nom": "Christmas",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    },
+    {
+     "nom": "Half-term",
+     "debut": "2026-02-14",
+     "fin": "2026-02-22"
+    },
+    {
+     "nom": "Easter",
+     "debut": "2026-03-28",
+     "fin": "2026-04-12"
+    }
+   ],
+   "source": "conseils locaux, gov.uk",
+   "verifie": true
+  },
+  {
+   "id": "be",
+   "nom": "Belgique",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    },
+    {
+     "nom": "Détente carnaval",
+     "debut": "2026-02-14",
+     "fin": "2026-03-01"
+    }
+   ],
+   "ecart_controle": "Flandre : congé de détente du 16 au 22 février seulement (OpenHolidays).",
+   "source": "enseignement.be",
+   "verifie": false
+  },
+  {
+   "id": "nl",
+   "nom": "Pays-Bas",
+   "periodes": [
+    {
+     "nom": "Kerst",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    },
+    {
+     "nom": "Voorjaar Zuid",
+     "debut": "2026-02-14",
+     "fin": "2026-02-22"
+    },
+    {
+     "nom": "Voorjaar Midden",
+     "debut": "2026-02-14",
+     "fin": "2026-02-22"
+    },
+    {
+     "nom": "Voorjaar Noord",
+     "debut": "2026-02-21",
+     "fin": "2026-03-01"
+    }
+   ],
+   "source": "rijksoverheid.nl",
+   "verifie": false
+  },
+  {
+   "id": "us",
+   "nom": "États-Unis",
+   "periodes": [
+    {
+     "nom": "Christmas",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    },
+    {
+     "nom": "Presidents Day",
+     "debut": "2026-02-14",
+     "fin": "2026-02-22"
+    }
+   ],
+   "source": "calendrier fédéral",
+   "verifie": true
+  }
+ ]
+}

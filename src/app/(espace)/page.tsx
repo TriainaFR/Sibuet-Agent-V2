@@ -1,10 +1,10 @@
-import { CalendarPlus, CloudSnow, Lock, Mail, Snowflake, Sparkles, TrendingDown, Trophy } from "lucide-react";
+import { BedDouble, CalendarPlus, CloudSnow, Lock, Mail, Snowflake, Sparkles, TrendingDown, Trophy } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { connection } from "next/server";
 import { ListeActions } from "@/components/liste-actions";
 import { Bandeau, Niveau } from "@/components/ui";
-import { formatDate, jourSemaine, relatif } from "@/lib/dates";
+import { addDays, formatDate, jourSemaine, relatif } from "@/lib/dates";
 import { urgenceLibelle } from "@/lib/format";
 import type { Alerte } from "@/lib/types";
 import { etatSaison } from "@/services/etat";
@@ -22,9 +22,11 @@ const iconeAlerte: Record<Alerte["type"], typeof Sparkles> = {
 
 export default async function AFaire() {
   await connection();
-  const { ctx, sujets, actions, kpis, dernierCalcul, decisions, horizon } = etatSaison();
+  const { ctx, sujets, actions, kpis, alertes, bilan, decisions, horizon } = etatSaison();
   const prev = ctx.prevision;
-  const alertes = dernierCalcul?.alertes ?? [];
+  const rejeu = ctx.saison.rejeu;
+  const fmt = new Intl.NumberFormat("fr-FR");
+  const ecartBilan = bilan && bilan.aDateN1 ? bilan.aDate / bilan.aDateN1 - 1 : null;
   const images = Object.fromEntries(sujets.map((s) => [s.def.id, s.def.image ?? ""]));
   const tete = kpis.tete;
   const saisie = ctx.saisie;
@@ -50,7 +52,7 @@ export default async function AFaire() {
       <Bandeau
         eyebrow={`${jourSemaine(ctx.date)} ${formatDate(ctx.date, true)}`}
         titre="Votre semaine au Lodge Park"
-        sousTitre="À faire dans les six semaines"
+        sousTitre={rejeu ? `${ctx.saison.nom}, rejoué à cette date` : "À faire dans les six semaines"}
         photo="/lodge/lp-4.jpg"
         photo2="/lodge/bar-1.jpg"
       >
@@ -58,6 +60,12 @@ export default async function AFaire() {
           {kpis.aLancer} action{kpis.aLancer > 1 ? "s" : ""} à lancer d&apos;ici le {formatDate(horizon, true)}, chacune datée au moment où les clients réservent,
           pas au moment où ils séjournent.
         </p>
+        {rejeu && (
+          <p className="mt-4 border-l-2 border-white/60 pl-4 text-[0.95rem] text-white/90">
+            Démonstration sur données réelles : l&apos;agent tel qu&apos;il aurait travaillé le {formatDate(ctx.date, true)}, avec les réservations Asterio
+            enregistrées à cette date et le plan d&apos;envois de la saison. Changez de date en haut à droite pour voir les propositions évoluer.
+          </p>
+        )}
         <div className="mt-6 flex flex-wrap gap-3">
           <a href="#actions" className="bouton-inverse">
             Voir les actions
@@ -75,7 +83,15 @@ export default async function AFaire() {
             { icone: Sparkles, label: "À lancer", valeur: kpis.aLancer, texte: `avant le ${formatDate(horizon)}`, ton: "" },
             { icone: Lock, label: "En attente d'un accès", valeur: kpis.enAttente, texte: kpis.enAttente ? `${kpis.enAttenteDetail}` : "aucune", ton: "text-cognac" },
             { icone: Mail, label: "Envois déjà prévus", valeur: kpis.conserves, texte: kpis.conservesDates.length ? `conservés : ${kpis.conservesDates.map((d) => formatDate(d)).join(", ")}` : "aucun dans la période", ton: "" },
-            { icone: CloudSnow, label: "Neige annoncée", valeur: prev ? `${prev.donnees.neige_16j}` : "n.d.", texte: "cm sur 16 jours à Megève", ton: "" },
+            rejeu && bilan
+              ? {
+                  icone: BedDouble,
+                  label: "Réservé à date",
+                  valeur: fmt.format(bilan.aDate),
+                  texte: `nuitées de l'hiver, contre ${fmt.format(bilan.aDateN1)} un an plus tôt${ecartBilan !== null ? ` (${ecartBilan >= 0 ? "+" : "−"}${Math.abs(Math.round(ecartBilan * 100))} %)` : ""}`,
+                  ton: ecartBilan !== null && ecartBilan < 0 ? "text-brick" : "",
+                }
+              : { icone: CloudSnow, label: "Neige annoncée", valeur: prev ? `${prev.donnees.neige_16j}` : "n.d.", texte: "cm sur 16 jours à Megève", ton: "" },
           ].map(({ icone: I, label, valeur, texte, ton }, i) => (
             <div key={label} className={`p-5 sm:p-6 ${i % 2 ? "border-l border-line" : ""} ${i >= 2 ? "border-t border-line lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}>
               <p className="eyebrow flex items-center gap-2 text-[0.62rem] text-taupe">
@@ -110,7 +126,58 @@ export default async function AFaire() {
         )}
 
         {/* Ce que disent les réservations */}
-        {h && p && ps && (
+        {rejeu && bilan && (
+          <section className="mt-14 border-y border-line py-10">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <p className="eyebrow text-taupe">Ce que l&apos;agent sait au {formatDate(ctx.date, true)}</p>
+                <h2 className="mt-1 font-display text-4xl leading-tight">
+                  {ecartBilan === null ? "L'hiver à date" : ecartBilan < 0 ? "L'hiver est en retard sur l'an dernier" : "L'hiver est en avance sur l'an dernier"}
+                </h2>
+                <p className="mt-2 text-sm text-ink-soft">
+                  Nuitées de l&apos;{ctx.saison.nom.toLowerCase()} déjà réservées à cette date, comparées à l&apos;hiver précédent au même moment. L&apos;hiver
+                  précédent avait fini à {fmt.format(bilan.finalN1)} nuitées.
+                </p>
+              </div>
+              <Link href="/mesure#verdict" className="lien-charme text-maison">
+                Ce qui s&apos;est passé ensuite
+              </Link>
+            </div>
+            <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.3fr]">
+              <div className="grid grid-cols-2 gap-6">
+                <Chiffre
+                  grand
+                  libelle="Réservé à date"
+                  valeur={fmt.format(bilan.aDate)}
+                  ecart={ecartBilan !== null ? { texte: `${Math.abs(Math.round(ecartBilan * 100))} %`, sens: ecartBilan >= 0 ? "hausse" : "baisse" } : undefined}
+                  note={`contre ${fmt.format(bilan.aDateN1)} au ${formatDate(addDays(ctx.date, -364), true)}`}
+                />
+                <Chiffre grand libelle="Déjà vendu" valeur={`${Math.round((bilan.aDate / Math.max(1, bilan.finalN1)) * 100)} %`} note="de ce que l'hiver précédent a fait au total" />
+              </div>
+              <div>
+                <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-taupe">Par pays, à date, contre l&apos;an dernier</p>
+                <ul className="divide-y divide-line border-y border-line text-sm">
+                  {bilan.parPays.map((x) => {
+                    const e = x.aDateN1 ? x.aDate / x.aDateN1 - 1 : null;
+                    return (
+                      <li key={x.pays} className="grid grid-cols-[1fr_auto_auto_4.5rem] items-center gap-4 py-2">
+                        <span>{x.pays}</span>
+                        <span className="tabular-nums">{fmt.format(x.aDate)}</span>
+                        <span className="tabular-nums text-ink-soft">{fmt.format(x.aDateN1)}</span>
+                        <span className={`text-right text-xs font-semibold tabular-nums ${e === null ? "text-sage" : e < 0 ? "text-brick" : "text-sage"}`}>
+                          {e === null ? "nouveau" : `${e >= 0 ? "+" : "−"}${Math.abs(Math.round(e * 100))} %`}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p className="mt-2 text-xs text-ink-soft">Nuitées réservées à date cette saison, puis un an plus tôt. Source : Asterio, réservations enregistrées avant chaque date.</p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {!rejeu && h && p && ps && (
           <section className="mt-14 border-y border-line py-10">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div className="max-w-2xl">
@@ -145,7 +212,7 @@ export default async function AFaire() {
             <h2 className="mt-1 font-display text-4xl">Les actions, semaine par semaine</h2>
             <p className="mt-2 text-sm text-ink-soft">Cliquez une action pour ouvrir sa fiche, la valider et obtenir son brief.</p>
             <div className="mt-6">
-              <ListeActions actions={actions} images={images} marches={ctx.marches} decisions={decisions} date={ctx.date} />
+              <ListeActions actions={actions.filter((a) => a.statut.code !== "ferme")} images={images} marches={ctx.marches} decisions={decisions} date={ctx.date} />
             </div>
           </section>
 
@@ -198,34 +265,58 @@ export default async function AFaire() {
                     </p>
                   </>
                 ) : (
-                  <p className="text-sm text-ink-soft">Prévision non chargée.</p>
+                  <p className="text-sm text-ink-soft">
+                    {rejeu ? "La prévision à 16 jours n'est pas rejouée : le déclencheur neige se juge sur la prévision du jour." : "Prévision non chargée."}
+                  </p>
                 )}
               </div>
             </section>
 
+            {rejeu ? (
+              <section className="carte p-6">
+                <p className="eyebrow text-taupe">Démonstration</p>
+                <h2 className="mt-1 font-display text-2xl">Ce qui est réel, ce qui ne l&apos;est pas</h2>
+                <ul className="mt-4 space-y-2.5 text-sm leading-snug">
+                  {[
+                    { ok: true, texte: "Réservations Asterio enregistrées à cette date, et l'an dernier à la même date" },
+                    { ok: true, texte: "Délais de réservation mesurés sur l'hiver précédent, pays par pays" },
+                    { ok: true, texte: "Plan d'envois 2025-2026 de Sibuet et vacances scolaires de la saison" },
+                    { ok: true, texte: "Ouverture et fermeture de la maison, lues dans les réservations" },
+                    { ok: false, texte: "Demande Google : relevés de septembre 2026, utilisés comme profil de saison" },
+                    { ok: false, texte: "Non rejoués : agenda de la station et prévision neige du jour" },
+                  ].map((x) => (
+                    <li key={x.texte} className="flex gap-2.5">
+                      <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${x.ok ? "bg-sage" : "bg-ochre"}`} />
+                      <span className={x.ok ? "" : "text-ink-soft"}>{x.texte}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : (
             <section className="carte p-6">
-              <p className="eyebrow text-taupe">Pour des propositions plus justes</p>
-              <h2 className="mt-1 font-display text-2xl">Ce que vous savez et pas nous</h2>
-              <div className="mt-4 flex items-center gap-3">
-                <div className="h-1.5 flex-1 bg-sand">
-                  <div className="h-full bg-cognac transition-all" style={{ width: `${(faits / manquants.length) * 100}%` }} />
+                <p className="eyebrow text-taupe">Pour des propositions plus justes</p>
+                <h2 className="mt-1 font-display text-2xl">Ce que vous savez et pas nous</h2>
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="h-1.5 flex-1 bg-sand">
+                    <div className="h-full bg-cognac transition-all" style={{ width: `${(faits / manquants.length) * 100}%` }} />
+                  </div>
+                  <span className="text-xs text-ink-soft">
+                    {faits} sur {manquants.length}
+                  </span>
                 </div>
-                <span className="text-xs text-ink-soft">
-                  {faits} sur {manquants.length}
-                </span>
-              </div>
-              <ul className="mt-4 space-y-2 text-sm">
-                {manquants.map((m) => (
-                  <li key={m.label} className={`flex items-center gap-2 ${m.ok ? "text-ink-soft line-through" : ""}`}>
-                    <span className={`h-1.5 w-1.5 rounded-full ${m.ok ? "bg-sage" : "bg-cognac"}`} />
-                    {m.label}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/donnees" className="lien-charme mt-5 text-ink">
-                Compléter
-              </Link>
-            </section>
+                <ul className="mt-4 space-y-2 text-sm">
+                  {manquants.map((m) => (
+                    <li key={m.label} className={`flex items-center gap-2 ${m.ok ? "text-ink-soft line-through" : ""}`}>
+                      <span className={`h-1.5 w-1.5 rounded-full ${m.ok ? "bg-sage" : "bg-cognac"}`} />
+                      {m.label}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/donnees" className="lien-charme mt-5 text-ink">
+                  Compléter
+                </Link>
+              </section>
+            )}
 
             <section className="carte p-6">
               <p className="eyebrow text-taupe">Les sujets les plus urgents</p>

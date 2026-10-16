@@ -32,6 +32,14 @@ Tout fonctionne sans base de données ni clé :
 
 Aucun chiffre d'indice n'est affiché au client : urgence élevée, moyenne ou basse ; intérêt haut, moyen ou bas ; visibilité peu visible, visible mais peu cliquée, bien placée.
 
+## Rejouer une saison passée
+
+Les exports Asterio s'arrêtent aux nuits déjà passées : pas encore de réservations à date pour l'hiver qui vient. La démonstration rejoue donc l'**hiver 2025-2026** : l'agent recalculé à une date passée (16 octobre 2025 par défaut, autres dates au choix dans l'en-tête), avec les seules réservations enregistrées à cette date, comparées à l'an dernier au même moment, le plan d'envois 2025-2026 et les vacances de la saison. La page Mesure montre ensuite ce qui s'est réellement passé, sujet par sujet.
+
+Réel en rejeu : réservations à date, délais mesurés sur l'hiver précédent, plan d'envois, vacances, ouverture et fermeture lues dans les réservations. Approché : demande Google (relevés de septembre 2026). Non rejoués : agenda de la station, prévision neige. La saison en cours (hiver 2026-2027) reste un clic plus loin, et la routine du lundi travaille toujours sur elle.
+
+Saisons et dates proposées : `data/reference/saisons.json` ; sujets et vacances par saison : `data/reference/sujets/`, `data/reference/vacances_scolaires_<saison>.json`.
+
 ## La routine du lundi
 
 ```bash

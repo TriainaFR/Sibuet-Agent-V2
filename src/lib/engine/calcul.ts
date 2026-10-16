@@ -18,6 +18,7 @@ import type {
   Origine,
   PerfNewsletter,
   SaisieClient,
+  Saison,
   Statut,
   SujetCalcule,
   SujetDef,
@@ -63,6 +64,8 @@ export interface Contexte {
   asterio: Source<DonneesAsterio> | null;
   /** Historique des réservations de la maison pilote (exports Asterio agrégés). */
   historique: Source<HistoriqueMaison> | null;
+  /** Saison calculée ; rejeu : saison passée recalculée à une date passée. */
+  saison: Saison;
   perfNl: Source<{ envois: PerfNewsletter[] }> | null;
   ads: Source<DonneesAds> | null;
   saisie: SaisieClient;
@@ -226,6 +229,13 @@ function facteurBesoin(ctx: Contexte, s: SujetDef, m: Marche, sejour: { debut: s
         otb: { otb, otb_n1 },
       };
     }
+    // Rien l'an dernier à la même date : on le dit, plutôt que de déclarer la donnée manquante.
+    const n1Final = rythmePeriode(h.detail, shiftYears(sejour.debut, -1), shiftYears(sejour.fin, -1), shiftYears(sejour.fin, -1), pays).final;
+    const f = (valeur: number, detail: string): Facteur => ({ valeur, manquant: false, origine: origineMode(ctx.historique!.mode), detail, source: src(ctx.historique!, "Asterio") });
+    if (otb > 0)
+      return { f: f(REGLES.besoinPlancher * 3, `${otb} nuitées déjà réservées, aucune l'an dernier à la même date : en avance.`), otb: { otb, otb_n1 } };
+    if (n1Final > 0)
+      return { f: f(REGLES.facteurAbsent, `Rien de réservé à cette date, comme l'an dernier ; la période avait fini à ${n1Final} nuitées. Trop tôt pour comparer.`) };
   }
   const ligne = ctx.asterio?.donnees.otb.find((o) => o.sujet === s.id && o.marche === m.id);
   if (ligne && ligne.otb_n1 > 0) {
@@ -283,9 +293,16 @@ export function periodesDuMarche(ctx: Contexte, s: SujetDef, m: Marche): { libel
   if (s.periode_par_marche && s.sejour) {
     const v = ctx.vacances.find((x) => x.id === m.id);
     const noms = s.periode_par_marche.vacances.map(norm);
-    const per = (v?.periodes ?? []).filter(
+    const brutes = (v?.periodes ?? []).filter(
       (p) => noms.some((n) => norm(p.nom).startsWith(n)) && p.fin >= addDays(s.sejour!.debut, -20) && p.debut <= addDays(s.sejour!.fin, 20),
     );
+    // Deux zones aux mêmes dates (Pays-Bas Zuid et Midden en 2026) : une seule période.
+    const per = brutes
+      .filter((p, i) => brutes.findIndex((q) => q.debut === p.debut && q.fin === p.fin) === i)
+      .map((p) => {
+        const memes = brutes.filter((q) => q.debut === p.debut && q.fin === p.fin);
+        return memes.length > 1 ? { ...p, nom: `${p.nom.split(" ")[0]} ${memes.map((q) => q.nom.split(" ").slice(1).join(" ")).join(" et ")}` } : p;
+      });
     if (per.length) {
       return per.map((p) => ({
         libelle: per.length > 1 ? `${m.nom} ${p.nom.split(" ").slice(1).join(" ") || p.nom}` : m.nom,
@@ -697,7 +714,11 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
   // Ce qui manque pour trancher.
   const manque: string[] = [];
   const h = ctx.historique?.donnees;
-  if (h && s.sejour && ops.some((o) => o.facteurs.besoin.manquant))
+  if (h && s.sejour && h.fenetre[1] >= s.sejour.fin && ops.some((o) => o.facteurs.besoin.manquant))
+    manque.push(
+      `Le remplissage de ${[...new Set(ops.filter((o) => o.facteurs.besoin.manquant).map((o) => o.libelle))].join(", ")} : aucune réservation de ces pays l'an dernier à la même date, rien à comparer.`,
+    );
+  else if (h && s.sejour && ops.some((o) => o.facteurs.besoin.manquant))
     manque.push(
       `Le remplissage à date de cette saison : l'historique Asterio s'arrête aux nuits du ${formatDate(h.fenetre[1], true)}. Le même export, avec les nuits jusqu'à la fin de la saison, donne immédiatement les nuitées déjà vendues contre l'an dernier.`,
     );
@@ -717,8 +738,8 @@ export function calculerSujet(ctx: Contexte, s: SujetDef, volumeMax: number): Su
   if (acts.some((a) => a.canal === "sea") && !ctx.saisie.acces_google_ads) manque.push("L'accès en lecture à Google Ads.");
   if (acts.some((a) => a.canal === "meta") && !ctx.saisie.acces_meta) manque.push("L'accès au compte Meta Ads.");
   if (s.conditionne_fermeture && !ctx.saisie.fermeture) manque.push("La date de fermeture de la maison : le sujet la suppose ouverte jusqu'au bout.");
-  if (!ctx.saisie.ouverture && s.sejour && s.sejour.debut < "2026-12-20") manque.push("La date de réouverture de la maison : une maison fermée sur la période coupe toutes les actions.");
-  for (const e of evenementsLies.filter((x) => !x.confirme)) manque.push(`La date 2027 de « ${e.nom} », à confirmer avant toute production.`);
+  if (!ctx.saisie.ouverture && s.sejour && s.sejour.debut < `${ctx.saison.debut.slice(0, 4)}-12-20`) manque.push("La date de réouverture de la maison : une maison fermée sur la période coupe toutes les actions.");
+  for (const e of evenementsLies.filter((x) => !x.confirme)) manque.push(`La date ${s.sejour?.fin.slice(0, 4) ?? ""} de « ${e.nom} », à confirmer avant toute production.`);
   for (const v of ctx.vacances.filter((v) => v.ecart_controle && ops.some((o) => o.marche === v.id && o.demandeDetectee))) manque.push(`${v.nom} : ${v.ecart_controle}`);
   if (ctx.maison.base_de_marque === "à produire") manque.push("La base de marque Lodge Park : sans elle, les messages restent descriptifs et le vocabulaire autorisé n'est pas fixé.");
 

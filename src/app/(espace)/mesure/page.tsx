@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { connection } from "next/server";
 import { BoutonAppliquer, BoutonExemple, FormResultat } from "@/components/mesure-ui";
+import { EnTete, Source } from "@/components/ds";
 import { Bandeau, Puce, Vide } from "@/components/ui";
+import { CourbeVerdict, TableauVerdict } from "@/components/verdict";
 import { formatDate } from "@/lib/dates";
 import { canalLibelle } from "@/lib/format";
 import { etatSaison } from "@/services/etat";
@@ -10,7 +12,8 @@ import { lireResultats } from "@/services/reference";
 
 export default async function Mesure() {
   await connection();
-  const { sujets, ctx, decisions, parametres } = etatSaison();
+  const { sujets, ctx, decisions, parametres, verdict: calculerVerdict } = etatSaison();
+  const verdict = ctx.saison.rejeu ? calculerVerdict() : [];
   const resultats = lireResultats();
   const validees = new Set(Object.entries(decisions).filter(([, d]) => d.etat === "validee").map(([k]) => k));
   const liste = aMesurer(sujets, ctx.date, validees);
@@ -25,6 +28,27 @@ export default async function Mesure() {
         </p>
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
+      {verdict.length > 0 && (
+        <section id="verdict" className="mb-14 scroll-mt-32">
+          <EnTete surtitre={`${ctx.saison.nom}, rejoué au ${formatDate(ctx.date, true)}`} titre="Ce qui s'est passé ensuite">
+            La saison est terminée : on sait ce que chaque période a donné. À gauche, ce que l&apos;agent voyait à la date rejouée ; à droite, le résultat final,
+            chaque fois comparé à l&apos;hiver précédent. C&apos;est la boucle de mesure, sur des données réelles.
+          </EnTete>
+          <TableauVerdict verdict={verdict} date={ctx.date} />
+          <div className="mt-6 grid gap-5 lg:grid-cols-2">
+            {verdict.slice(0, 2).map((v) => (
+              <div key={v.id} className="carte p-5 sm:p-6">
+                <p className="eyebrow text-[0.62rem] text-taupe">Nuitées réservées, cumulées</p>
+                <h3 className="titre-maison mt-1 text-xl">{v.nom}</h3>
+                <div className="mt-3">
+                  <CourbeVerdict v={v} date={ctx.date} />
+                </div>
+              </div>
+            ))}
+          </div>
+          <Source>Asterio, réservations enregistrées à chaque date, nuits des périodes des sujets.</Source>
+        </section>
+      )}
 
       <div className="mt-7 grid gap-6 lg:grid-cols-[1fr_400px]">
         <section className="space-y-4">

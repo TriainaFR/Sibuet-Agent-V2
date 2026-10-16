@@ -10,6 +10,7 @@ import { GrilleMarches, TableauMarches } from "@/components/grille-marches";
 import { Onglets } from "@/components/onglets";
 import { Aide, Champ, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
 import { Validation } from "@/components/validation";
+import { CourbeVerdict } from "@/components/verdict";
 import { diffDays, formatDate, formatRange, monthName, relatif } from "@/lib/dates";
 import { BarresH, Courbes } from "@/components/graphiques";
 import { canalLibelle, interetLibelle, nombre, urgenceLibelle, visibiliteLibelle } from "@/lib/format";
@@ -32,7 +33,7 @@ function Tendance({ l }: { l: LigneSemrush }) {
 export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) {
   await connection();
   const { id } = await params;
-  const { sujets, ctx, decisions, interet } = etatSaison();
+  const { sujets, ctx, decisions, interet, verdict: calculerVerdict } = etatSaison();
   const s = sujets.find((x) => x.def.id === id);
   if (!s) notFound();
   const d = s.def;
@@ -90,6 +91,29 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           </div>
         ))}
       </div>
+      {(() => {
+        const v = ctx.saison.rejeu ? calculerVerdict().find((x) => x.id === d.id) : null;
+        if (!v) return null;
+        const e = v.finalN1 ? v.final / v.finalN1 - 1 : null;
+        return (
+          <div className="grid gap-4 border-l-2 border-cognac bg-white p-5 sm:p-6 lg:grid-cols-[1fr_1.5fr]">
+            <div>
+              <p className="eyebrow text-cognac">Et ensuite ? Connu depuis, la saison est passée</p>
+              <h3 className="titre-maison mt-1 text-2xl leading-tight">
+                {nombre(v.final)} nuitées au final, {e === null ? "" : `${e >= 0 ? "+" : "−"}${Math.abs(Math.round(e * 100))} % sur l'an dernier`}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                Au {formatDate(ctx.date, true)}, l&apos;agent voyait {nombre(v.aDate)} nuitées réservées, contre {nombre(v.aDateN1)} un an plus tôt. La période a fini à{" "}
+                {nombre(v.final)} nuitées, contre {nombre(v.finalN1)} l&apos;hiver précédent.
+              </p>
+              <Link href="/mesure#verdict" className="lien-charme mt-4 text-maison">
+                Tous les sujets
+              </Link>
+            </div>
+            <CourbeVerdict v={v} date={ctx.date} hauteur={200} />
+          </div>
+        );
+      })()}
       {s.reference && s.reference.final >= 30 && (
         <div className="grid gap-4 lg:grid-cols-[1.5fr_1fr]">
           <div className="carte p-5 sm:p-6">
@@ -133,9 +157,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                 .filter((x) => x.final >= 10)
                 .map((x) => ({ id: x.pays || "inconnu", libelle: x.pays || "Pays inconnu", valeur: x.part ?? 0, note: `${nombre(x.final)} nuitées au final` }))}
             />
-            <p className="mt-4 text-xs text-ink-soft">
-              Le remplissage à date de cette saison viendra du même export Asterio étendu aux nuits de l&apos;hiver : l&apos;agent comparera alors les deux courbes.
-            </p>
+            {!ctx.saison.rejeu && (
+              <p className="mt-4 text-xs text-ink-soft">
+                Le remplissage à date de cette saison viendra du même export Asterio étendu aux nuits de l&apos;hiver : l&apos;agent comparera alors les deux courbes.
+              </p>
+            )}
           </div>
         </div>
       )}
@@ -437,7 +463,8 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           </Link>
           <div className="apparition mt-24 max-w-3xl sm:mt-32">
             <p className="eyebrow text-white/85">
-              {familles[d.famille]} · Lodge Park · hiver 2026-2027
+              {familles[d.famille]} · Lodge Park · {ctx.saison.nom.toLowerCase()}
+              {ctx.saison.rejeu ? `, rejoué au ${formatDate(ctx.date, true)}` : ""}
             </p>
             <h1 className="mt-3 font-display text-[2.6rem] leading-[1.02] sm:text-6xl">{d.nom}</h1>
             <p className="mt-4 text-lg leading-relaxed text-white/90">{d.theme}</p>
