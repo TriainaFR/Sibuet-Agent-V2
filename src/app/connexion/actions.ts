@@ -1,6 +1,6 @@
 "use server";
 
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { COOKIE_SESSION, DUREE_SESSION_JOURS, creerJeton, verifier } from "@/lib/session";
 
@@ -10,6 +10,10 @@ export async function seConnecter(_etat: { erreur: string } | null, form: FormDa
   const suite = String(form.get("suite") ?? "/");
 
   const compte = verifier(identifiant, motDePasse);
+  // Journal de connexion (visible dans les logs Railway) : identifiant, résultat, adresse. Jamais le mot de passe.
+  const h = await headers();
+  const ip = (h.get("x-forwarded-for") ?? h.get("x-real-ip") ?? "inconnue").split(",")[0].trim();
+  console.log(`[connexion] ${compte ? "réussie" : "échec"} identifiant=${JSON.stringify(identifiant.slice(0, 40))} ip=${ip} agent=${JSON.stringify((h.get("user-agent") ?? "").slice(0, 80))}`);
   if (!compte) {
     // Petit délai pour freiner les essais répétés.
     await new Promise((r) => setTimeout(r, 800));
