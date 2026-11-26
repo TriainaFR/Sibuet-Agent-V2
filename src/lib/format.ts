@@ -9,8 +9,10 @@ export const urgenceTon = (u: number) => (u >= 0.85 ? "fort" : u >= 0.6 ? "moyen
 /** Intérêt = demande × reste à gagner en visibilité, ramené à l'échelle du score sans le besoin. */
 export const interetLibelle = (demandeFoisVisibilite: number) => (demandeFoisVisibilite >= 0.48 ? "Haut" : demandeFoisVisibilite >= 0.28 ? "Moyen" : "Bas");
 
-export const visibiliteLibelle = (ecart: number | null) =>
-  ecart === null ? "Non mesurée" : ecart >= 0.75 ? "Peu visible" : ecart >= 0.45 ? "Visible mais peu cliquée" : "Bien placée";
+/** Reste à gagner sur Google : haut quand la maison est peu visible (même sens que l'urgence et l'intérêt). */
+export const visibiliteLibelle = (ecart: number | null) => (ecart === null ? "Non mesuré" : ecart >= 0.75 ? "Haut" : ecart >= 0.45 ? "Moyen" : "Bas");
+export const visibiliteExplication = (ecart: number | null) =>
+  ecart === null ? "pas de requête suivie" : ecart >= 0.75 ? "la maison est peu ou pas visible" : ecart >= 0.45 ? "visible, mais peu cliquée" : "déjà bien placée";
 
 export const origineLibelle: Record<Origine, string> = { estimation: "estimation", saisi: "saisi", mesuré: "mesuré", fictif: "fictif" };
 
@@ -45,17 +47,14 @@ export function controlerTexte(texte: string) {
   return problemes;
 }
 
-const ADJ_MARCHE: Record<string, string> = { ge: "genevois", vd: "vaudois", uk: "britanniques", be: "belges", nl: "néerlandais", us: "américains" };
-const ZONES: Record<string, string> = { fra: "A", frb: "B", frc: "C" };
+const ADJ_MARCHE: Record<string, string> = {
+  fr: "français", ch: "suisses", uk: "britanniques", us: "américains", be: "belges", tr: "turcs", ru: "russes", sa: "saoudiens",
+  ae: "émiriens", gr: "grecs", pt: "portugais", it: "italiens", br: "brésiliens", il: "israéliens", nl: "néerlandais",
+};
 
-/** « clients britanniques », « clients français (zones A et C) et genevois ». */
+/** « clients britanniques », « clients français et suisses ». */
 export function clientsDe(ids: string[]) {
-  const uniques = [...new Set(ids)];
-  const zones = uniques.filter((i) => ZONES[i]).map((i) => ZONES[i]).sort();
-  const mots: string[] = [];
-  if (zones.length === 3) mots.push("français");
-  else if (zones.length) mots.push(`français (zone${zones.length > 1 ? "s" : ""} ${zones.join(" et ")})`);
-  for (const i of uniques) if (ADJ_MARCHE[i]) mots.push(ADJ_MARCHE[i]);
+  const mots = [...new Set(ids)].map((i) => ADJ_MARCHE[i]).filter(Boolean);
   if (!mots.length) return "clients";
   return `clients ${mots.length > 1 ? `${mots.slice(0, -1).join(", ")} et ${mots.at(-1)}` : mots[0]}`;
 }

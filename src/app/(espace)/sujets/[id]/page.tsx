@@ -9,11 +9,14 @@ import { Brief } from "@/components/brief";
 import { GrilleMarches, TableauMarches } from "@/components/grille-marches";
 import { Onglets } from "@/components/onglets";
 import { Aide, Champ, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
-import { Validation } from "@/components/validation";
+import { BlocDecision } from "@/components/bloc-decision";
+import { DecisionRapide } from "@/components/decision-rapide";
+import { OuvrirAncre } from "@/components/ouvrir-ancre";
+import { decisionSujet, messageMarche, recommandation } from "@/lib/engine/leviers";
 import { CourbeVerdict } from "@/components/verdict";
 import { diffDays, formatDate, formatRange, monthName, relatif } from "@/lib/dates";
 import { BarresH, Courbes } from "@/components/graphiques";
-import { canalLibelle, interetLibelle, nombre, urgenceLibelle, visibiliteLibelle } from "@/lib/format";
+import { canalLibelle, interetLibelle, nombre, urgenceLibelle, visibiliteExplication, visibiliteLibelle } from "@/lib/format";
 import type { LigneSemrush } from "@/lib/types";
 import { etatSaison } from "@/services/etat";
 
@@ -37,6 +40,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
   const s = sujets.find((x) => x.def.id === id);
   if (!s) notFound();
   const d = s.def;
+  const decision = decisionSujet(ctx, s);
   const gsc = ctx.gsc?.donnees;
   const pages = gsc?.pages_par_sujet[d.id] ?? [];
   const lignesSemrush = d.requetes
@@ -63,8 +67,8 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       <div className="grid grid-cols-2 border border-line bg-white lg:grid-cols-4">
         {[
           { label: "Urgence", contenu: <Niveau libelle={urgenceLibelle(s.urgence)} />, texte: s.fenetre ? `Les clients réservent du ${formatRange(s.fenetre.debut, s.fenetre.fin)}` : "Sur prévision de neige" },
-          { label: "Intérêt", contenu: <Niveau libelle={interetLibelle(interet(s))} />, texte: "Demande mesurée sur Google, par pays" },
-          { label: "Sur Google, la maison est", contenu: <Niveau libelle={visibiliteLibelle(s.ecart)} />, texte: "Sur les requêtes d'achat du sujet" },
+          { label: "Intérêt", contenu: <Niveau libelle={interetLibelle(interet(s))} />, texte: "Ventes, visites du site et recherches, par marché" },
+          { label: "Reste à gagner sur Google", contenu: <Niveau libelle={visibiliteLibelle(s.ecart)} />, texte: `Pour le marché en tête : ${visibiliteExplication(s.ecart)}` },
           {
             label: "Première action",
             contenu: <span className="font-display text-2xl leading-none">{s.premiereAction ? (s.premiereAction <= ctx.date ? "Maintenant" : formatDate(s.premiereAction, true)) : "Aucune"}</span>,
@@ -207,8 +211,29 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
         </div>
       </div>
       <div className="carte p-5">
-        <h3 className="font-display text-xl">Pays par pays</h3>
+        <h3 className="font-display text-xl">Marché par marché</h3>
         <TableauMarches sujet={s} marches={ctx.marches} interet={interetLibelle} />
+      </div>
+      <div>
+        <h3 className="font-display text-xl">Le message clé, décliné par marché</h3>
+        <p className="mt-1 text-sm text-ink-soft">Même sujet, même angle. L&apos;accroche change selon ce qui parle à chaque clientèle, dans la langue réellement disponible sur le site.</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {(d.marches ?? [...new Set(s.opportunites.filter((o) => !o.close).map((o) => o.marche))])
+            .map((id) => ctx.marches.find((m) => m.id === id))
+            .filter((m): m is NonNullable<typeof m> => Boolean(m))
+            .map((m) => {
+              const msg = messageMarche(s, m);
+              return (
+                <Link key={m.id} href={`/marches/${m.id}`} className="group relative block border border-line bg-white p-4 pl-5 transition hover:border-ink/30">
+                  <span aria-hidden className="absolute inset-y-0 left-0 w-1" style={{ background: m.couleur }} />
+                  <p className="flex items-center justify-between text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">
+                    {m.nom} <span className="normal-case tracking-normal">{msg.langue}</span>
+                  </p>
+                  <p className="mt-2 font-display text-lg leading-snug">« {msg.accroche} »</p>
+                </Link>
+              );
+            })}
+        </div>
       </div>
     </div>
   );
@@ -217,22 +242,23 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
     <div className="space-y-5">
       {s.activations.length === 0 && <Vide>Aucune activation proposée à cette date : aucune fenêtre ouverte ou à venir avec une demande mesurée.</Vide>}
       <Aide>
-        Chaque canal est une proposition, en brouillon. Dépliez-la pour lire l&apos;objectif, le message, les dates de chaque vague et ce qui change par rapport au
-        plan existant. Une fois validée, l&apos;activation donne accès à son brief exécutable.
+        Chaque levier est une proposition. Dépliez-la pour lire, marché par marché, ce qu&apos;il faut faire, dans quelle langue, quand et avec quel objectif. Validez,
+        reportez ou rejetez sur place : rien ne part sans validation.
       </Aide>
       {s.activations.map((a, index) => {
         const dec = decisions[a.cle];
         const premiere = a.vagues[0];
         const derniere = a.vagues.at(-1)!;
         return (
-          <details key={a.cle} open={index === 0} className="group/act border border-line bg-white open:shadow-sm">
+          <details key={a.cle} id={a.cle} open={index === 0} className="group/act scroll-mt-40 border border-line bg-white open:shadow-sm">
             <summary className="flex cursor-pointer flex-wrap items-center gap-4 px-5 py-4 transition hover:bg-cream/60">
               <IconeCanal canal={a.canal} taille="h-11 w-11" />
               <div className="min-w-0 flex-1">
                 <p className="titre-capitales text-xl leading-tight">{canalLibelle[a.canal]}</p>
                 <p className="mt-0.5 text-sm text-ink-soft">
-                  {a.vagues.length} vague{a.vagues.length > 1 ? "s" : ""}, {premiere.debut === derniere.fin ? formatDate(premiere.debut, true) : `du ${formatDate(premiere.debut)} au ${formatDate(derniere.fin, true)}`}
-                  {dec?.etat === "validee" ? ` · validée par ${dec.par}` : dec?.etat === "rejetee" ? " · rejetée" : " · brouillon"}
+                  {a.vagues.length > 1 ? `${a.vagues.length} envois, ` : ""}
+                  {premiere.debut === derniere.fin ? formatDate(premiere.debut, true) : `du ${formatDate(premiere.debut)} au ${formatDate(derniere.fin, true)}`}
+                  {dec?.etat === "validee" ? " · validée" : dec?.etat === "reportee" ? " · reportée" : dec?.etat === "rejetee" ? " · rejetée" : " · à décider"}
                 </p>
               </div>
               <PuceStatut code={a.statut.code} libelle={a.statut.libelle} />
@@ -240,11 +266,33 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
             </summary>
             <div className="border-t border-line">
               <div className="flex flex-wrap items-center justify-between gap-3 bg-cream/60 px-5 py-3">
-                <p className="text-sm text-ink-soft">
-                  Type <strong className="text-ink">{a.type}</strong>. Rien ne part sans validation.
-                </p>
-                <Validation cle={a.cle} decision={dec} />
+                <p className="text-sm text-ink-soft">Rien ne part sans validation.</p>
+                <DecisionRapide cle={a.cle} decision={dec} compact />
               </div>
+              {(() => {
+                const recos = recommandation(ctx, s, a);
+                if (!recos.length) return null;
+                return (
+                  <div className="grid gap-px border-b border-line bg-line md:grid-cols-2">
+                    {recos.map((r) => (
+                      <div key={r.levier} className="bg-white p-5">
+                        <p className="flex items-center justify-between gap-2 font-display text-lg">
+                          {r.levier}
+                          {r.estime && <span className="rounded-full bg-ochre/12 px-2 py-0.5 font-sans text-[0.62rem] font-semibold uppercase tracking-wide text-[#86672f]">objectif estimé</span>}
+                        </p>
+                        <dl className="mt-3 space-y-2 text-sm">
+                          {r.lignes.map((l) => (
+                            <div key={l.libelle} className="grid grid-cols-[8.5rem_1fr] gap-3">
+                              <dt className="text-xs font-semibold uppercase tracking-wide text-taupe">{l.libelle}</dt>
+                              <dd className="leading-snug">{l.valeur}</dd>
+                            </div>
+                          ))}
+                        </dl>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })()}
               <div className="grid gap-6 p-5 lg:grid-cols-2">
                 <Champ label="Objectif">{a.objectif}</Champ>
                 <Champ label="Marché et segment">{a.cible}</Champ>
@@ -273,11 +321,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                 </Champ>
               </div>
               <div className="border-t border-line px-5 py-5">
-                <p className="eyebrow text-[0.62rem] text-taupe">Les vagues</p>
+                <p className="eyebrow text-[0.62rem] text-taupe">{a.vagues.length > 1 ? "Les envois, par groupe de marchés" : "Quand"}</p>
                 <ol className="mt-3 space-y-3">
                   {a.vagues.map((v) => (
                     <li key={v.numero} className="grid items-start gap-3 sm:grid-cols-[110px_190px_1fr_auto]">
-                      <span className="titre-capitales text-base">Vague {v.numero}</span>
+                      <span className="titre-capitales text-base">{a.vagues.length > 1 ? `Envoi ${v.numero}` : "Date"}</span>
                       <span className="text-sm">{v.debut === v.fin ? formatDate(v.debut, true) : `${formatDate(v.debut)} au ${formatDate(v.fin, true)}`}</span>
                       <span>
                         <Marches ids={v.marches} marches={ctx.marches} max={5} />
@@ -379,7 +427,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                       {nombre(p.impressions)} impr. · {nombre(p.clics)} clics
                     </td>
                     <td className="py-2 pl-3 text-right">
-                      {p.decision.startsWith("mettre") ? <Puce ton="ocre">mettre à jour</Puce> : p.decision === "creer" ? <Puce ton="vert">créer</Puce> : <Puce>conserver</Puce>}
+                      {p.decision.startsWith("mettre") ? <Puce ton="ocre">mettre à jour</Puce> : p.decision === "creer" ? <Puce ton="vert">créer une page dédiée à côté</Puce> : <Puce>conserver</Puce>}
                     </td>
                   </tr>
                 ))}
@@ -457,11 +505,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       <header className="relative isolate overflow-hidden bg-ink text-white">
         <Image src={d.image ?? "/hotels/lodge-park.jpg"} alt="" fill priority className="-z-10 object-cover opacity-75" sizes="100vw" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
-        <div className="mx-auto max-w-[1320px] px-4 pb-12 pt-6 sm:px-6">
+        <div className="mx-auto max-w-[1320px] px-4 pb-10 pt-6 sm:px-6">
           <Link href="/sujets" className="eyebrow inline-flex items-center gap-2 text-white/85 hover:text-white">
             <ArrowLeft className="h-3.5 w-3.5" /> Tous les sujets
           </Link>
-          <div className="apparition mt-24 max-w-3xl sm:mt-32">
+          <div className="apparition mt-10 max-w-3xl sm:mt-14">
             <p className="eyebrow text-white/85">
               {familles[d.famille]} · Lodge Park · {ctx.saison.nom.toLowerCase()}
               {ctx.saison.rejeu ? `, rejoué au ${formatDate(ctx.date, true)}` : ""}
@@ -483,15 +531,35 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       {s.ouvert && s.remplissage === "bas" && (
         <p className="mt-5 border border-brick/30 bg-brick/5 px-4 py-3 text-sm">Vous indiquez un remplissage bas : sujet prioritaire, les actions sont à lancer en premier.</p>
       )}
-      <div className="mt-6">
+      <OuvrirAncre />
+      <BlocDecision decision={decision} />
+      <div className="mt-8">
         <Suspense>
           <Onglets
             onglets={[
-              { id: "essentiel", label: "L'essentiel", contenu: essentiel },
-              { id: "pays", label: "Par pays", contenu: parPays },
-              { id: "actions", label: `Actions (${s.activations.length})`, contenu: actions },
-              { id: "google", label: "Sur Google", contenu: surGoogle },
-              { id: "plus", label: "Pour aller plus loin", contenu: plusLoin },
+              {
+                id: "essentiel",
+                label: "L'essentiel",
+                contenu: (
+                  <div className="space-y-6">
+                    {essentiel}
+                    <details className="group border border-line bg-white">
+                      <summary className="flex cursor-pointer items-center justify-between px-5 py-4 font-display text-xl">
+                        Sur Google, marché par marché <ChevronDown className="h-4 w-4 text-taupe transition group-open:rotate-180" />
+                      </summary>
+                      <div className="border-t border-line p-5">{surGoogle}</div>
+                    </details>
+                    <details className="group border border-line bg-white">
+                      <summary className="flex cursor-pointer items-center justify-between px-5 py-4 font-display text-xl">
+                        Pour aller plus loin : ce qui manque, les sources <ChevronDown className="h-4 w-4 text-taupe transition group-open:rotate-180" />
+                      </summary>
+                      <div className="border-t border-line p-5">{plusLoin}</div>
+                    </details>
+                  </div>
+                ),
+              },
+              { id: "pays", label: "Par marché", contenu: parPays },
+              { id: "actions", label: `Actions par levier (${s.activations.length})`, contenu: actions },
             ]}
           />
         </Suspense>

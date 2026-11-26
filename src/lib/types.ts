@@ -6,13 +6,20 @@
 
 // ── Connaissance ─────────────────────────────────────────────────────────────
 
-export type MarcheId = "frc" | "fra" | "frb" | "ge" | "vd" | "uk" | "be" | "nl" | "us";
+/** Identifiant de marché (data/reference/marches.json) : fr, uk, tr, us, ru, sa, be, ch, ae, gr, pt, it, br, il. */
+export type MarcheId = string;
 
 export interface Marche {
   id: MarcheId;
   nom: string;
+  /** Pays tel qu'il apparaît dans les exports Asterio (« France », « Turquie »…). */
   pays: string;
-  langue: "fr" | "en" | "nl";
+  /** Langue des messages : fr ou en. */
+  langue: string;
+  /** Langue du pays (tr, ar, ru…), et si le site existe dans cette langue. */
+  langue_locale?: string;
+  langue_site?: boolean;
+  region?: string;
   semrush_db: string;
   /** Délai de réservation médian, en semaines. Hypothèse tant qu'Asterio n'est pas branché. */
   delai_semaines: number;
@@ -304,7 +311,7 @@ export interface Activation {
   statut: Statut;
 }
 
-export type EtatValidation = "brouillon" | "validee" | "rejetee";
+export type EtatValidation = "brouillon" | "validee" | "reportee" | "rejetee";
 
 export interface Decision {
   etat: EtatValidation;
@@ -411,6 +418,11 @@ export interface Parametres {
   saison?: string;
   /** Date à laquelle la saison passée est rejouée. */
   dateRejeu?: string;
+  /** Marché choisi dans le sélecteur global (null : tous les marchés). */
+  marche?: string | null;
+  /** Vue par canal : taux de commission des plateformes et prix moyen d'une nuitée, saisis par l'équipe. */
+  commissionOta?: number;
+  prixMoyenNuitee?: number;
 }
 
 /** Saison de la maison pilote (data/reference/saisons.json). */
@@ -504,7 +516,10 @@ export interface HistoriqueMaison {
   calendrierAchat: number[][];
   delai: Quartiles | null;
   /** Détail par nuit pour la maison pilote : [nuit, réservée le, pays, chambres, canal]. */
-  detail?: [string, string, string, number, CanalGroupe][];
+  /** Détail par nuit (maison pilote) : [nuit, réservée le, pays, chambres, canal, 1 si groupe]. */
+  detail?: [string, string, string, number, CanalGroupe, number?][];
+  /** Délais par marché, en jours, pondérés par les nuitées, hors groupes, deux derniers hivers (décembre à mars). */
+  delaisMarches?: Record<string, { q1: number; med: number; q3: number; nuitees: number; medAvecGroupes: number | null; hivers: string[] }>;
 }
 
 export interface HistoriqueAsterio {

@@ -1,59 +1,95 @@
 {
  "source": "asterio",
  "collecte_le": "2026-10-14",
- "horodatage": "2026-10-16T09:11:23.223Z",
+ "horodatage": "2026-11-26T13:56:22.524Z",
  "mode": "import",
  "origine": "Exports Asterio (7 fichiers), nuits du 14 oct. 2024 au 14 oct. 2026, LODGE PARK",
- "resume": "8 délais mesurés, 1201 séjours",
+ "resume": "14 délais mesurés, 1201 séjours",
  "donnees": {
   "delais": {
-   "frc": {
-    "q1": 0.3,
-    "med": 1.4,
-    "q3": 4.4,
-    "n": 426
-   },
-   "fra": {
-    "q1": 0.3,
-    "med": 1.4,
-    "q3": 4.4,
-    "n": 426
-   },
-   "frb": {
-    "q1": 0.3,
-    "med": 1.4,
-    "q3": 4.4,
-    "n": 426
+   "fr": {
+    "q1": 1.3,
+    "med": 3.9,
+    "q3": 6.1,
+    "n": 1147
    },
    "uk": {
-    "q1": 0.9,
-    "med": 2.7,
-    "q3": 7.6,
-    "n": 124
+    "q1": 2.3,
+    "med": 5.1,
+    "q3": 9.3,
+    "n": 522
+   },
+   "tr": {
+    "q1": 1.7,
+    "med": 5.3,
+    "q3": 11.7,
+    "n": 204
    },
    "us": {
-    "q1": 0.7,
-    "med": 2.4,
-    "q3": 7.1,
-    "n": 64
+    "q1": 1.7,
+    "med": 2.9,
+    "q3": 7.6,
+    "n": 267
+   },
+   "ru": {
+    "q1": 2.6,
+    "med": 5,
+    "q3": 20.9,
+    "n": 243
+   },
+   "sa": {
+    "q1": 1.6,
+    "med": 3,
+    "q3": 5.6,
+    "n": 216
    },
    "be": {
+    "q1": 4,
+    "med": 6,
+    "q3": 9.7,
+    "n": 185
+   },
+   "ch": {
     "q1": 0.7,
-    "med": 5,
-    "q3": 9.4,
-    "n": 43
+    "med": 1.7,
+    "q3": 6.3,
+    "n": 184
    },
-   "ge": {
-    "q1": 0.4,
-    "med": 0.9,
-    "q3": 3.1,
-    "n": 90
+   "ae": {
+    "q1": 1.3,
+    "med": 2.7,
+    "q3": 4.4,
+    "n": 179
    },
-   "vd": {
-    "q1": 0.4,
-    "med": 0.9,
-    "q3": 3.1,
-    "n": 90
+   "gr": {
+    "q1": 1.9,
+    "med": 8.1,
+    "q3": 15.1,
+    "n": 170
+   },
+   "pt": {
+    "q1": 2.7,
+    "med": 3.7,
+    "q3": 10.7,
+    "n": 106
+   },
+   "it": {
+    "q1": 0.6,
+    "med": 2.6,
+    "q3": 5.4,
+    "n": 85
+   },
+   "br": {
+    "q1": 0.9,
+    "med": 3.7,
+    "q3": 4.3,
+    "n": 65
+   },
+   "il": {
+    "q1": 2.9,
+    "med": 5.4,
+    "q3": 10.3,
+    "n": 60
    }
   },
   "otb": [],
@@ -77,99 +113,99 @@
    "parPays": [
     {
      "pays": "France",
-     "marche": "frc",
-     "reservations": 426,
+     "marche": "fr",
+     "reservations": 1583,
      "nuitees": 1583,
-     "personnesMoyennes": null,
-     "delaiMedianSemaines": 1.4
-    },
-    {
-     "pays": "Royaume-Uni",
-     "marche": "uk",
-     "reservations": 124,
-     "nuitees": 586,
-     "personnesMoyennes": null,
-     "delaiMedianSemaines": 2.7
-    },
-    {
-     "pays": "Arabie saoudite",
-     "marche": null,
-     "reservations": 44,
-     "nuitees": 315,
-     "personnesMoyennes": null,
-     "delaiMedianSemaines": 1.4
-    },
-    {
-     "pays": "États-Unis",
-     "marche": "us",
-     "reservations": 64,
-     "nuitees": 290,
-     "personnesMoyennes": null,
-     "delaiMedianSemaines": 2.4
-    },
-    {
-     "pays": "Turquie",
-     "marche": null,
-     "reservations": 41,
-     "nuitees": 276,
-     "personnesMoyennes": null,
-     "delaiMedianSemaines": 4.9
-    },
-    {
-     "pays": "Russie",
-     "marche": null,
-     "reservations": 33,
-     "nuitees": 257,
      "personnesMoyennes": null,
      "delaiMedianSemaines": 3.3
     },
     {
+     "pays": "Royaume-Uni",
+     "marche": "uk",
+     "reservations": 586,
+     "nuitees": 586,
+     "personnesMoyennes": null,
+     "delaiMedianSemaines": 4.6
+    },
+    {
+     "pays": "Arabie saoudite",
+     "marche": "sa",
+     "reservations": 315,
+     "nuitees": 315,
+     "personnesMoyennes": null,
+     "delaiMedianSemaines": 2
+    },
+    {
+     "pays": "États-Unis",
+     "marche": "us",
+     "reservations": 290,
+     "nuitees": 290,
+     "personnesMoyennes": null,
+     "delaiMedianSemaines": 2.7
+    },
+    {
+     "pays": "Turquie",
+     "marche": "tr",
+     "reservations": 205,
+     "nuitees": 276,
+     "personnesMoyennes": null,
+     "delaiMedianSemaines": 5.3
+    },
+    {
+     "pays": "Russie",
+     "marche": "ru",
+     "reservations": 257,
+     "nuitees": 257,
+     "personnesMoyennes": null,
+     "delaiMedianSemaines": 4.9
+    },
+    {
      "pays": "Belgique",
      "marche": "be",
-     "reservations": 43,
+     "reservations": 207,
      "nuitees": 207,
      "personnesMoyennes": null,
-     "delaiMedianSemaines": 5
+     "delaiMedianSemaines": 5.7
     },
     {
      "pays": "Suisse",
-     "marche": "ge",
-     "reservations": 90,
+     "marche": "ch",
+     "reservations": 202,
      "nuitees": 202,
      "personnesMoyennes": null,
-     "delaiMedianSemaines": 0.9
+     "delaiMedianSemaines": 1.7
     },
     {
      "pays": "Émirats arabes unis",
-     "marche": null,
-     "reservations": 40,
+     "marche": "ae",
+     "reservations": 195,
      "nuitees": 195,
      "personnesMoyennes": null,
-     "delaiMedianSemaines": 1.9
+     "delaiMedianSemaines": 2.3
     },
     {
      "pays": "Grèce",
-     "marche": null,
-     "reservations": 32,
+     "marche": "gr",
+     "reservations": 173,
      "nuitees": 173,
      "personnesMoyennes": null,
-     "delaiMedianSemaines": 3.6
+     "delaiMedianSemaines": 8.1
     },
     {
      "pays": "Italie",
-     "marche": null,
-     "reservations": 30,
+     "marche": "it",
+     "reservations": 108,
      "nuitees": 108,
      "personnesMoyennes": null,
-     "delaiMedianSemaines": 1.4
+     "delaiMedianSemaines": 2.3
     },
     {
      "pays": "Portugal",
-     "marche": null,
-     "reservations": 17,
+     "marche": "pt",
+     "reservations": 106,
      "nuitees": 106,
      "personnesMoyennes": null,
-     "delaiMedianSemaines": 2.9
+     "delaiMedianSemaines": 3.7
     }
    ],
    "typesChambres": [],

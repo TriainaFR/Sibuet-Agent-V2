@@ -512,9 +512,9 @@
    },
    "legere": true,
    "marches": [
-    "fra",
-    "ge",
-    "vd"
+    "fr",
+    "ch",
+    "it"
    ],
    "cibles": "Marchés courts : Genève, Vaud, France zone A.",
    "theme": "Pas un thème de séjour, un déclencheur. Quand il neige ou qu'il va neiger, les marchés courts réservent.",
@@ -586,7 +586,10 @@
    },
    "legere": true,
    "marches": [
-    "uk"
+    "uk",
+    "us",
+    "ru",
+    "tr"
    ],
    "cibles": "Marchés qui réservent tôt, agences et clients fidèles.",
    "theme": "Vendre l'hiver prochain avant l'été, aux marchés qui réservent tôt. Séjour : hiver 2027-2028.",
@@ -614,7 +617,7 @@
    },
    "legere": true,
    "marches": [
-    "fra"
+    "fr"
    ],
    "cibles": "Entreprises et agences événementielles. Décident au printemps pour l'automne et l'hiver suivants.",
    "theme": "Le marché B2B décide au printemps pour l'automne et l'hiver suivants. Séjour : séminaires d'automne 2027 et d'hiver 2027-2028.",

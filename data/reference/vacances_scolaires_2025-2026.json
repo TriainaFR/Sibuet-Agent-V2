@@ -1,10 +1,10 @@
 {
  "saison": "2025-2026",
- "note": "FR : arrêté officiel (zones A, B, C), recoupé avec OpenHolidays. Genève, Vaud, Belgique (Fédération Wallonie-Bruxelles), Pays-Bas : OpenHolidays (16 oct. 2026). Angleterre : semaine majoritaire des conseils locaux. États-Unis : dates typiques. Convention : du samedi de départ au jour de reprise.",
+ "note": "FR : arrêté officiel (zones A, B, C), recoupé avec OpenHolidays. Genève, Vaud, Belgique (Fédération Wallonie-Bruxelles), Pays-Bas : OpenHolidays (16 oct. 2026). Angleterre : semaine majoritaire des conseils locaux. États-Unis : dates typiques. Convention : du samedi de départ au jour de reprise. Nouveaux marchés (Turquie, Russie, Golfe, Grèce, Italie, Portugal, Brésil, Israël) : principales périodes de fêtes, à confirmer.",
  "marches": [
   {
-   "id": "frc",
-   "nom": "France zone C",
+   "id": "fr",
+   "nom": "France",
    "periodes": [
     {
      "nom": "Noël",
@@ -12,56 +12,25 @@
      "fin": "2026-01-05"
     },
     {
-     "nom": "Hiver",
+     "nom": "Hiver zone A",
+     "debut": "2026-02-07",
+     "fin": "2026-02-23"
+    },
+    {
+     "nom": "Hiver zone B",
+     "debut": "2026-02-14",
+     "fin": "2026-03-02"
+    },
+    {
+     "nom": "Hiver zone C",
      "debut": "2026-02-21",
      "fin": "2026-03-09"
     }
-   ],
-   "zone_fr": "C",
-   "source": "education.gouv.fr",
-   "verifie": true
+   ]
   },
   {
-   "id": "fra",
-   "nom": "France zone A",
-   "periodes": [
-    {
-     "nom": "Noël",
-     "debut": "2025-12-20",
-     "fin": "2026-01-05"
-    },
-    {
-     "nom": "Hiver",
-     "debut": "2026-02-07",
-     "fin": "2026-02-23"
-    }
-   ],
-   "zone_fr": "A",
-   "source": "education.gouv.fr",
-   "verifie": true
-  },
-  {
-   "id": "frb",
-   "nom": "France zone B",
-   "periodes": [
-    {
-     "nom": "Noël",
-     "debut": "2025-12-20",
-     "fin": "2026-01-05"
-    },
-    {
-     "nom": "Hiver",
-     "debut": "2026-02-14",
-     "fin": "2026-03-02"
-    }
-   ],
-   "zone_fr": "B",
-   "source": "education.gouv.fr",
-   "verifie": true
-  },
-  {
-   "id": "ge",
-   "nom": "Genève",
+   "id": "ch",
+   "nom": "Suisse",
    "periodes": [
     {
      "nom": "Noël",
@@ -69,31 +38,16 @@
      "fin": "2026-01-04"
     },
     {
-     "nom": "Février",
+     "nom": "Février Genève",
      "debut": "2026-02-21",
      "fin": "2026-03-01"
-    }
-   ],
-   "source": "ge.ch DIP",
-   "verifie": true
-  },
-  {
-   "id": "vd",
-   "nom": "Vaud",
-   "periodes": [
-    {
-     "nom": "Noël",
-     "debut": "2025-12-20",
-     "fin": "2026-01-04"
     },
     {
-     "nom": "Relâches",
+     "nom": "Relâches Vaud",
      "debut": "2026-02-14",
      "fin": "2026-02-22"
     }
-   ],
-   "source": "vd.ch",
-   "verifie": true
+   ]
   },
   {
    "id": "uk",
@@ -138,34 +92,6 @@
    "verifie": false
   },
   {
-   "id": "nl",
-   "nom": "Pays-Bas",
-   "periodes": [
-    {
-     "nom": "Kerst",
-     "debut": "2025-12-20",
-     "fin": "2026-01-04"
-    },
-    {
-     "nom": "Voorjaar Zuid",
-     "debut": "2026-02-14",
-     "fin": "2026-02-22"
-    },
-    {
-     "nom": "Voorjaar Midden",
-     "debut": "2026-02-14",
-     "fin": "2026-02-22"
-    },
-    {
-     "nom": "Voorjaar Noord",
-     "debut": "2026-02-21",
-     "fin": "2026-03-01"
-    }
-   ],
-   "source": "rijksoverheid.nl",
-   "verifie": false
-  },
-  {
    "id": "us",
    "nom": "États-Unis",
    "periodes": [
@@ -182,6 +108,108 @@
    ],
    "source": "calendrier fédéral",
    "verifie": true
+  },
+  {
+   "id": "tr",
+   "nom": "Turquie",
+   "periodes": [
+    {
+     "nom": "Vacances semestrielles",
+     "debut": "2026-01-17",
+     "fin": "2026-02-01"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "ru",
+   "nom": "Russie",
+   "periodes": [
+    {
+     "nom": "Fêtes du Nouvel An",
+     "debut": "2025-12-31",
+     "fin": "2026-01-11"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "sa",
+   "nom": "Arabie saoudite",
+   "periodes": [],
+   "ecart_controle": "Aucune période de vacances retenue : le marché suit les dates du sujet."
+  },
+  {
+   "id": "ae",
+   "nom": "Émirats arabes unis",
+   "periodes": [
+    {
+     "nom": "Vacances d'hiver",
+     "debut": "2025-12-13",
+     "fin": "2026-01-04"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "gr",
+   "nom": "Grèce",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-24",
+     "fin": "2026-01-07"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "pt",
+   "nom": "Portugal",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-20",
+     "fin": "2026-01-04"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "it",
+   "nom": "Italie",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2025-12-23",
+     "fin": "2026-01-06"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "br",
+   "nom": "Brésil",
+   "periodes": [
+    {
+     "nom": "Carnaval",
+     "debut": "2026-02-14",
+     "fin": "2026-02-18"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "il",
+   "nom": "Israël",
+   "periodes": [
+    {
+     "nom": "Hanoukka",
+     "debut": "2025-12-14",
+     "fin": "2025-12-22"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
   }
  ]
 }

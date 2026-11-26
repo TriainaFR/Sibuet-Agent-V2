@@ -26,7 +26,8 @@ import type {
   Vague,
   Verdict,
 } from "@/lib/types";
-import { PAYS_DU_MARCHE, courbePeriode, delaiMesure, rythmePeriode } from "./historique";
+import { courbePeriode, rythmePeriode } from "./historique";
+import { indicateursDesMarches, unAnAvant, type AnalyseMarches, type IndicateursMarche } from "./marches";
 import { REGLES, VOCABULAIRE_INTERDIT } from "./regles";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -66,6 +67,8 @@ export interface Contexte {
   historique: Source<HistoriqueMaison> | null;
   /** Saison calculée ; rejeu : saison passée recalculée à une date passée. */
   saison: Saison;
+  /** Analyse par marché : Semrush, Search Console, GA4 et panier de mots-clés par langue. */
+  analyse: AnalyseMarches | null;
   perfNl: Source<{ envois: PerfNewsletter[] }> | null;
   ads: Source<DonneesAds> | null;
   saisie: SaisieClient;
@@ -87,36 +90,43 @@ const src = (s: Source<unknown>, nom: string) => `${nom}, relevé du ${formatDat
 
 // ── Délais de réservation ────────────────────────────────────────────────────
 
-export function delaiMarche(ctx: Contexte, m: Marche) {
-  const a = ctx.asterio?.donnees.delais[m.id];
-  if (a) return { mediane: a.med, q1: a.q1, q3: a.q3, origine: origineMode(ctx.asterio!.mode) };
-  const saisi = Number(ctx.saisie.delais[m.id]);
-  if (saisi > 0) return { mediane: saisi, q1: saisi * REGLES.q1SurMediane, q3: saisi * REGLES.q3SurMediane, origine: "saisi" as Origine };
-  const h = m.delai_semaines;
-  return { mediane: h, q1: h * REGLES.q1SurMediane, q3: h * REGLES.q3SurMediane, origine: "estimation" as Origine };
-}
+const sem = (j: number) => Math.round((j / 7) * 10) / 10;
 
 /**
- * Délai pour une période précise : mesuré sur la même période les deux années précédentes
- * (historique des réservations), sinon délai du marché toutes périodes confondues, sinon hypothèse.
+ * Délai de réservation d'un marché, en semaines : mesuré dans Asterio (date de la nuit moins date de
+ * réservation, pondéré par les nuitées, hors groupes, deux derniers hivers), sinon saisi, sinon hypothèse.
  */
-export function delaiPeriode(ctx: Contexte, m: Marche, sejour: { debut: string; fin: string } | null): ReturnType<typeof delaiMarche> & { source?: string } {
-  const detail = ctx.historique?.donnees.detail;
-  if (detail && sejour) {
-    const d = delaiMesure(detail, sejour, PAYS_DU_MARCHE[m.id]);
-    if (d)
-      return {
-        mediane: d.mediane,
-        q1: d.q1,
-        q3: d.q3,
-        origine: origineMode(ctx.historique!.mode),
-        source: `mesuré sur la même période en ${d.annees.join(" et ")}, ${d.sejours} séjours de clients ${ADJECTIF_PAYS[PAYS_DU_MARCHE[m.id]]}`,
-      };
-  }
-  const base = delaiMarche(ctx, m);
-  return { ...base, source: base.origine === "estimation" ? "hypothèse de départ" : base.origine === "saisi" ? "saisi dans Vos données" : "mesuré sur toutes les périodes" };
+export function delaiMarche(ctx: Contexte, m: Marche): { mediane: number; q1: number; q3: number; origine: Origine; source: string } {
+  const d = ctx.historique?.donnees.delaisMarches?.[m.id];
+  if (d && d.nuitees >= 15)
+    return {
+      mediane: sem(d.med),
+      q1: sem(d.q1),
+      q3: sem(d.q3),
+      origine: origineMode(ctx.historique!.mode),
+      source: `délai médian ${d.med} jours, mesuré sur ${nombre(d.nuitees)} nuitées hors groupes, ${d.hivers.join(" et ").toLowerCase()} (Asterio)`,
+    };
+  const a = ctx.asterio?.donnees.delais[m.id];
+  if (a) return { mediane: a.med, q1: a.q1, q3: a.q3, origine: origineMode(ctx.asterio!.mode), source: "mesuré dans le fichier de réservations chargé" };
+  const saisi = Number(ctx.saisie.delais[m.id]);
+  if (saisi > 0) return { mediane: saisi, q1: saisi * REGLES.q1SurMediane, q3: saisi * REGLES.q3SurMediane, origine: "saisi", source: "saisi dans Vos données" };
+  const h = m.delai_semaines;
+  return { mediane: h, q1: h * REGLES.q1SurMediane, q3: h * REGLES.q3SurMediane, origine: "estimation", source: "hypothèse de départ, trop peu de ventes pour mesurer" };
 }
-const ADJECTIF_PAYS: Record<string, string> = { France: "français", Suisse: "suisses", "Royaume-Uni": "britanniques", Belgique: "belges", "Pays-Bas": "néerlandais", "États-Unis": "américains" };
+
+/** Le délai ne dépend que du marché : celui que la cliente retrouve dans ses propres ventes. */
+export const delaiPeriode = (ctx: Contexte, m: Marche, _sejour: { debut: string; fin: string } | null) => delaiMarche(ctx, m);
+
+/** Indicateurs des marchés, calculés une fois par contexte. */
+const memo = new WeakMap<Contexte, Map<string, IndicateursMarche>>();
+export function indicateurs(ctx: Contexte): Map<string, IndicateursMarche> {
+  let m = memo.get(ctx);
+  if (!m) {
+    m = new Map(indicateursDesMarches(ctx).map((x) => [x.marche.id, x]));
+    memo.set(ctx, m);
+  }
+  return m;
+}
 
 // ── Demande (Semrush) ────────────────────────────────────────────────────────
 
@@ -154,15 +164,41 @@ function moisDePic(l: LigneSemrush) {
   return [...new Set(vals.filter(([, v]) => v >= REGLES.seuilPic * max).map(([k]) => Number(k.slice(5, 7))))];
 }
 
+export const LANGUES: Record<string, string> = { fr: "français", en: "anglais", tr: "turc", ar: "arabe", ru: "russe", el: "grec", it: "italien", pt: "portugais", he: "hébreu", nl: "néerlandais", de: "allemand", es: "espagnol" };
+
+/**
+ * Demande d'un marché pour un sujet : jamais une seule requête. Elle combine les ventes Asterio de
+ * l'hiver précédent, les sessions et débuts de réservation GA4 et un panier de mots-clés dans la
+ * langue du marché ; les requêtes d'achat propres au sujet, quand elles existent, l'affinent d'un quart.
+ */
 function facteurDemande(ctx: Contexte, s: SujetDef, m: Marche, volumeMax: number): Facteur {
-  if (!ctx.semrush) return { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: "Semrush non chargé.", source: "Semrush" };
+  const x = indicateurs(ctx).get(m.id);
+  const sujet = demandeSujetSemrush(ctx, s, m, volumeMax);
+  if (!x) return sujet ?? { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: "Marché sans données.", source: "" };
+  const a = x.analyse;
+  const morceaux = [
+    `${nombre(x.nuiteesN1)} nuitées l'hiver précédent (Asterio)`,
+    a?.sessions_ga4 ? `${nombre(a.sessions_ga4)} sessions et ${a.debuts_reservation ? `${nombre(a.debuts_reservation)} débuts de réservation` : "des débuts de réservation non mesurés"} sur le site (GA4, nov. 2025 à oct. 2026)` : null,
+    x.recherchesPanier ? `${nombre(x.recherchesPanier)} recherches par mois autour de Megève${x.panier.length ? ` sur ${x.panier.length} mots-clés` : ""} (Semrush, nov. 2026)` : null,
+  ].filter(Boolean);
+  const valeur = r2(clamp(sujet ? 0.75 * x.demande + 0.25 * sujet.valeur : x.demande, REGLES.demandePlancher, 1));
+  return {
+    valeur,
+    manquant: false,
+    origine: "mesuré",
+    detail: `${m.nom} : ${morceaux.join(", ")}.${sujet ? ` Pour ce sujet : ${sujet.detail}` : ""}`,
+    source: "Asterio, GA4 et Semrush (analyse par marché du 26 nov. 2026)",
+  };
+}
+
+/** Requêtes d'achat propres au sujet sur la base Semrush du marché (affinage, null s'il n'y en a pas). */
+function demandeSujetSemrush(ctx: Contexte, s: SujetDef, m: Marche, volumeMax: number): Facteur | null {
+  if (!ctx.semrush) return null;
   const qs = requetesAchat(s, m.semrush_db)
     .map((q) => volume(ctx, q.requete, m.semrush_db))
     .filter((l): l is LigneSemrush => Boolean(l && l.volume > 0));
   const source = src(ctx.semrush, "Semrush");
-  if (qs.length === 0) {
-    return { valeur: REGLES.demandePlancher, manquant: false, origine: "mesuré", detail: `Aucune requête d'achat sur la base ${m.semrush_db} : demande non détectée.`, source };
-  }
+  if (qs.length === 0) return null;
   const vol = qs.reduce((t, l) => t + l.volume, 0);
   const n = Math.log1p(vol) / Math.log1p(volumeMax);
   let poids = 0;
@@ -184,26 +220,56 @@ function facteurDemande(ctx: Contexte, s: SujetDef, m: Marche, volumeMax: number
 
 // ── Visibilité (Search Console) ──────────────────────────────────────────────
 
+/**
+ * Reste à gagner sur Google (plus c'est haut, plus il y a à gagner). Par les requêtes du sujet suivies
+ * dans la Search Console quand elles existent pour le marché, sinon par la couverture du marché :
+ * mots-clés positionnés pour 1 000 recherches, et existence du site dans la langue.
+ */
 function facteurVisibilite(ctx: Contexte, s: SujetDef, m: Marche): Facteur {
-  if (!ctx.gsc) return { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: "Search Console non chargée.", source: "Search Console" };
   const qs = requetesAchat(s, m.semrush_db).filter((q) => (volume(ctx, q.requete, m.semrush_db)?.volume ?? 0) > 0);
-  const suivies = qs.filter((q) => ctx.gsc!.donnees.requetes[q.requete]);
-  const source = src(ctx.gsc, "Search Console");
-  if (suivies.length === 0) {
-    return { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: `Aucune requête d'achat du marché suivie dans la Search Console.`, source };
+  const suivies = ctx.gsc ? qs.filter((q) => ctx.gsc!.donnees.requetes[q.requete]) : [];
+  if (ctx.gsc && suivies.length) {
+    let total = 0;
+    let poids = 0;
+    const lignes: string[] = [];
+    for (const q of suivies) {
+      const g = ctx.gsc.donnees.requetes[q.requete];
+      const vol = volume(ctx, q.requete, m.semrush_db)?.volume ?? 1;
+      // Une bonne position sur une page annexe ne vaut rien si presque personne ne voit le site.
+      const partVue = (g.impressions ?? 0) / Math.max(1, vol * 12);
+      let e = !g.impressions || g.position === null ? 1 : clamp((g.position - 1) / (REGLES.positionMax - 1), REGLES.ecartPlancher, 1);
+      if (g.impressions && partVue < 0.05) e = Math.max(e, 0.85);
+      total += e * vol;
+      poids += vol;
+      lignes.push(
+        !g.impressions
+          ? `« ${q.requete} » : le site n'apparaît jamais`
+          : partVue < 0.05
+            ? `« ${q.requete} » : ${nombre(g.impressions)} affichages sur l'année pour ${nombre(vol)} recherches par mois, presque invisible`
+            : `« ${q.requete} » : position ${String(g.position).replace(".", ",")}`,
+      );
+    }
+    return { valeur: r2(total / poids), manquant: false, origine: "mesuré", detail: `${lignes.join(" ; ")}.`, source: src(ctx.gsc, "Search Console") };
   }
-  let total = 0;
-  let poids = 0;
-  const lignes: string[] = [];
-  for (const q of suivies) {
-    const g = ctx.gsc.donnees.requetes[q.requete];
-    const e = !g.impressions || g.position === null ? 1 : clamp((g.position - 1) / (REGLES.positionMax - 1), REGLES.ecartPlancher, 1);
-    const w = volume(ctx, q.requete, m.semrush_db)?.volume ?? 1;
-    total += e * w;
-    poids += w;
-    lignes.push(g.impressions ? `« ${q.requete} » position ${String(g.position).replace(".", ",")}` : `« ${q.requete} » aucune impression`);
-  }
-  return { valeur: r2(total / poids), manquant: false, origine: "mesuré", detail: `${lignes.join(", ")} (tous pays, 12 mois).`, source };
+  const a = ctx.analyse?.marches[m.id];
+  const langue = LANGUES[m.langue_locale ?? m.langue] ?? m.langue_locale ?? m.langue;
+  if (m.langue_site === false)
+    return {
+      valeur: 1,
+      manquant: false,
+      origine: "mesuré",
+      detail: `Aucune page en ${langue} : ${a ? `${nombre(a.mots_cles ?? 0)} mots-clés positionnés pour ${nombre(a.recherches_megeve ?? 0)} recherches « megeve » par mois` : "le site est absent de Google dans la langue du marché"}. Langue manquante, à traiter avant tout contenu.`,
+      source: "Semrush, base du pays (nov. 2026)",
+    };
+  if (!a?.recherches_megeve) return { valeur: REGLES.facteurAbsent, manquant: true, origine: null, detail: "Visibilité du marché non mesurée.", source: "Search Console" };
+  const couverture = ((a.mots_cles ?? 0) / a.recherches_megeve) * 1000;
+  return {
+    valeur: r2(clamp(1 - couverture / 60, REGLES.ecartPlancher, 1)),
+    manquant: false,
+    origine: "mesuré",
+    detail: `${nombre(a.mots_cles ?? 0)} mots-clés positionnés pour ${nombre(a.recherches_megeve)} recherches « megeve » par mois${a.position_gsc ? `, position moyenne ${String(a.position_gsc).replace(".", ",")}` : ""}.`,
+    source: "Semrush et Search Console (analyse par marché du 26 nov. 2026)",
+  };
 }
 
 // ── Besoin (Asterio ou saisie) ───────────────────────────────────────────────
@@ -213,9 +279,9 @@ function facteurBesoin(ctx: Contexte, s: SujetDef, m: Marche, sejour: { debut: s
   // les nuitées réservées à date à celles de l'an dernier à la même date.
   const h = ctx.historique?.donnees;
   if (h?.detail && sejour && h.fenetre && h.fenetre[1] >= sejour.fin) {
-    const pays = PAYS_DU_MARCHE[m.id];
+    const pays = m.pays;
     const otb = rythmePeriode(h.detail, sejour.debut, sejour.fin, ctx.date, pays).aDate;
-    const otb_n1 = rythmePeriode(h.detail, shiftYears(sejour.debut, -1), shiftYears(sejour.fin, -1), shiftYears(ctx.date, -1), pays).aDate;
+    const otb_n1 = rythmePeriode(h.detail, shiftYears(sejour.debut, -1), shiftYears(sejour.fin, -1), unAnAvant(ctx.date), pays).aDate;
     if (otb_n1 > 0) {
       const pct = Math.round((otb / otb_n1 - 1) * 100);
       return {
@@ -391,7 +457,7 @@ function grouper<T>(items: T[], date: (t: T) => string): T[][] {
 
 const libelleMarches = (ops: Opportunite[]) => [...new Set(ops.map((o) => o.libelle))].join(", ");
 const langues = (ctx: Contexte, ops: Opportunite[]) =>
-  [...new Set(ops.map((o) => ctx.marches.find((m) => m.id === o.marche)!.langue))].map((l) => ({ fr: "français", en: "anglais", nl: "néerlandais" })[l]);
+  [...new Set(ops.map((o) => ctx.marches.find((m) => m.id === o.marche)!.langue))].map((l) => LANGUES[l] ?? l);
 
 function ligneBaseCrm(ctx: Contexte, s: SujetDef) {
   const perf = ctx.perfNl?.donnees.envois ?? [];
@@ -503,15 +569,15 @@ export function activations(ctx: Contexte, s: SujetDef, ops: Opportunite[], ouve
     semantique: semantiqueDe(ctx, s, actives),
     assets: `Un envoi maître décliné en ${crmVagues.length} version${crmVagues.length > 1 ? "s" : ""} datée${crmVagues.length > 1 ? "s" : ""}, ${langues(ctx, actives).join(", ")}.`,
     declencheur: "Ouverture de la fenêtre d'achat de chaque marché.",
-    justification: `Dates placées au premier tiers de chaque fenêtre d'achat ; les marchés dont les dates tombent à moins de ${REGLES.ecartVagueJours} jours sont regroupés en une vague, datée sur la fenêtre la plus contraignante.`,
+    justification: `Dates placées au premier tiers de chaque fenêtre d'achat ; les marchés dont les dates tombent à moins de ${REGLES.ecartVagueJours} jours partent dans le même envoi, daté sur la fenêtre la plus contraignante.`,
     changement: envoisLies.length
-      ? `${garde.length ? `L'envoi du ${formatDate(garde[0].envoi!.date)} est conservé pour les ${clientsDe(garde.map((o) => o.marche))}. ` : ""}${trop.length ? `L'envoi du ${formatDate(trop[0].envoi!.date)} arrive après la fenêtre des ${clientsDe(trop.map((o) => o.marche))}. ` : ""}${creees.length ? `${creees.length} vague${creees.length > 1 ? "s" : ""} créée${creees.length > 1 ? "s" : ""}, la première le ${formatDate(creees[0].debut, true)}.` : ""}`.trim()
-      : `Aucun envoi du plan ne porte ce sujet : ${crmVagues.length} vague${crmVagues.length > 1 ? "s" : ""} à créer.`,
+      ? `${garde.length ? `L'envoi du ${formatDate(garde[0].envoi!.date)} est conservé pour les ${clientsDe(garde.map((o) => o.marche))}. ` : ""}${trop.length ? `L'envoi du ${formatDate(trop[0].envoi!.date)} arrive après la fenêtre des ${clientsDe(trop.map((o) => o.marche))}. ` : ""}${creees.length ? `${creees.length} envoi${creees.length > 1 ? "s" : ""} à créer, le premier le ${formatDate(creees[0].debut, true)}.` : ""}`.trim()
+      : `Aucun envoi du plan ne porte ce sujet : ${crmVagues.length} envoi${crmVagues.length > 1 ? "s" : ""} à créer.`,
     effort: "Interne : un envoi décliné par marché.",
     kpi: "Ouvertures, clics, réservations directes à J+10 par marché.",
     ligneBase: ligneBaseCrm(ctx, s),
     vagues: crmVagues,
-    statut: reserve(creees.length ? statut("a_creer", `${creees.length} vague${creees.length > 1 ? "s" : ""} à créer`) : statut("existant", "Plan existant conservé")),
+    statut: reserve(creees.length ? statut("a_creer", `${creees.length} envoi${creees.length > 1 ? "s" : ""} à créer`) : statut("existant", "Plan existant conservé")),
   });
 
   // 2. SEO et GEO : en ligne au plus tard 6 semaines avant le pic, et avant l'ouverture des fenêtres proches.
@@ -530,7 +596,7 @@ export function activations(ctx: Contexte, s: SujetDef, ops: Opportunite[], ouve
   const decision = aMettreAJour
     ? `Mettre à jour ${aMettreAJour.page} (${nombre(aMettreAJour.impressions)} impressions, ${nombre(aMettreAJour.clics)} clics, position ${String(aMettreAJour.position).replace(".", ",")}).`
     : pages.length
-      ? "Créer une page dédiée : aucune page ne traite le sujet, les impressions tombent sur l'accueil et les pages de service."
+      ? `Créer une page dédiée : aucune page ne traite le sujet, les recherches tombent aujourd'hui sur ${pages.find((p) => p.decision === "creer")?.page ?? pages[0].page}, qui reste en place.`
       : "Créer ou mettre à jour : inventaire des contenus à faire (crawl de la Content Factory).";
   const gscReq = s.requetes.map((q) => ctx.gsc?.donnees.requetes[q.requete]).filter(Boolean) as { impressions: number; clics: number }[];
   out.push({
@@ -820,14 +886,14 @@ export function aFaire(ctx: Contexte, sujets: SujetCalcule[]): ActionAFaire[] {
         const quoi =
           a.canal === "seo"
             ? `${canalCourt.seo} ${s.def.nom.toLowerCase()} : ${v.note.charAt(0).toLowerCase()}${v.note.slice(1)}`
-            : `${canalCourt[a.canal]} ${s.def.nom.toLowerCase()}${a.vagues.length > 1 ? `, vague ${v.numero}` : ""}`;
+            : `${canalCourt[a.canal]} ${s.def.nom.toLowerCase()}${a.vagues.length > 1 ? `, envoi ${v.numero}` : ""}`;
         const qui = clientsDe(v.marches);
         const seo = s.activations.find((x) => x.canal === "seo");
         const titre =
           a.canal === "crm"
             ? v.statut.code === "existant"
               ? `Garder l'envoi prévu pour les ${qui}`
-              : `Envoyer la newsletter${a.vagues.length > 1 ? ` (vague ${v.numero})` : ""} aux ${qui}`
+              : `Envoyer la newsletter${a.vagues.length > 1 ? ` (${v.numero === 1 ? "1er" : `${v.numero}e`} envoi)` : ""} aux ${qui}`
             : a.canal === "agences"
               ? `Écrire aux agences et entreprises (${v.libelleMarches})`
               : a.canal === "seo"

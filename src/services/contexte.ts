@@ -1,8 +1,9 @@
 import "server-only";
-import { today } from "@/lib/dates";
+import { addDays, today } from "@/lib/dates";
 import type { Contexte, Source } from "@/lib/engine/calcul";
-import type { DonneesAsterio, Envoi, HistoriqueAsterio, HistoriqueMaison, Releve, SourceId } from "@/lib/types";
+import type { DonneesAsterio, Envoi, Evenement, HistoriqueAsterio, HistoriqueMaison, Releve, SourceId } from "@/lib/types";
 import { depot } from "@/stockage/depot";
+import type { AnalyseMarches } from "@/lib/engine/marches";
 import { dateDeTravail, lireMaison, lireMarches, lireParametres, lireSaisie, lireSaisons, lireSujets, lireVacances, saisieVide, saisonActive, saisonCourante } from "./reference";
 
 // Assemble le contexte de calcul : connaissance + dernier relevé de chaque source + saisie du client.
@@ -44,6 +45,7 @@ export function construireContexte(date?: string, saisonId?: string): Contexte {
     const ouverture = historique?.donnees.detail?.filter(([n]) => n >= saison.debut && n <= saison.fin).map(([n]) => n).sort() ?? [];
     return {
       saison,
+      analyse: lireAnalyse(),
       historique,
       date: jour,
       maison: lireMaison(sujets.maison),
@@ -54,7 +56,7 @@ export function construireContexte(date?: string, saisonId?: string): Contexte {
       gsc: dernier("gsc", donneesFictives, null),
       neige: dernier("meteo_historique", donneesFictives, null),
       prevision: null,
-      agenda: null,
+      agenda: agendaRamene(),
       envois: envois
         ? {
             ...envois,
@@ -76,6 +78,7 @@ export function construireContexte(date?: string, saisonId?: string): Contexte {
   const asterio = dernier<DonneesAsterio>("asterio", donneesFictives, jour);
   return {
     saison,
+    analyse: lireAnalyse(),
     historique,
     date: jour,
     maison: lireMaison(sujets.maison),
@@ -107,4 +110,24 @@ export function historiqueMaison(id: string, date: string | null = today()): Sou
   const h = lireHistorique(date);
   const m = h?.donnees.maisons.find((x) => x.id === id);
   return h && m ? { ...h, donnees: m } : null;
+}
+
+/** Analyse par marché (Semrush, Search Console, GA4, mots-clés par langue). */
+export function lireAnalyse(): AnalyseMarches | null {
+  return depot().lireReference<AnalyseMarches | null>("analyse_marches.json", null);
+}
+
+/**
+ * Agenda de la station pour une saison rejouée : le dernier relevé (saison suivante), dates ramenées
+ * de 364 jours (même jour de la semaine). Les événements de Megève sont récurrents : village de Noël,
+ * parade, descente aux flambeaux, Grande Odyssée.
+ */
+function agendaRamene(): Source<{ evenements: Evenement[] }> | null {
+  const a = dernier<{ evenements: Evenement[] }>("agenda", false, null);
+  if (!a) return null;
+  return {
+    ...a,
+    origine: `${a.origine}, dates de la saison suivante ramenées d'un an (événements récurrents)`,
+    donnees: { ...a.donnees, evenements: a.donnees.evenements.map((e) => ({ ...e, debut: addDays(e.debut, -364), fin: addDays(e.fin, -364) })) },
+  };
 }

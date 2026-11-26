@@ -28,6 +28,21 @@ export default async function Mesure() {
         </p>
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
+      {ctx.saison.rejeu && (
+        <section className="mb-10 grid gap-5 border border-line bg-white p-6 sm:grid-cols-[auto_1fr]">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#7a3f24] font-display text-xl text-white">i</span>
+          <div>
+            <p className="font-display text-2xl">Dans cette démonstration, aucune action n&apos;a été lancée</p>
+            <p className="mt-2 max-w-3xl text-[0.95rem] leading-relaxed text-ink-soft">
+              La saison est rejouée au {formatDate(ctx.date, true)} avec les ventes réelles. Ce que l&apos;agent propose n&apos;a jamais été envoyé : la suite de l&apos;hiver
+              montre donc ce qui s&apos;est passé <strong className="text-ink">sans</strong> ses actions. On ne peut pas en tirer le gain d&apos;une action. On peut vérifier
+              que l&apos;agent avait vu juste : l&apos;hiver a fini à 2 059 nuitées contre 2 430, alors que l&apos;agent signalait le 16 octobre une avance fragile, portée par
+              quelques marchés lointains, avec la France déjà en recul.
+            </p>
+            <p className="mt-2 text-sm text-ink-soft">En exploitation réelle, chaque action validée est mesurée après sa période de séjour, sur son indicateur et sur le remplissage de la semaine visée.</p>
+          </div>
+        </section>
+      )}
       {verdict.length > 0 && (
         <section id="verdict" className="mb-14 scroll-mt-32">
           <EnTete surtitre={`${ctx.saison.nom}, rejoué au ${formatDate(ctx.date, true)}`} titre="Ce qui s'est passé ensuite">

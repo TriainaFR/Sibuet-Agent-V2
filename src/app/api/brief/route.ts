@@ -16,9 +16,10 @@ export async function POST(request: Request) {
   const s = calculerSaison(ctx).find((x) => x.def.id === sujetId);
   const a = s?.activations.find((x) => x.cle === activationCle);
   if (!s || !a) return Response.json({ error: "Activation introuvable." }, { status: 404 });
-  if (lireDecisions()[a.cle]?.etat !== "validee") return Response.json({ error: "Le brief est produit après validation de l'activation." }, { status: 409 });
-
   const entetes = (source: string) => ({ "content-type": "text/plain; charset=utf-8", "cache-control": "no-store", "x-brief-source": encodeURIComponent(source) });
+  // Avant validation : aperçu au gabarit, pour décider en connaissance de cause. La rédaction par Claude vient après.
+  if (lireDecisions()[a.cle]?.etat !== "validee") return new Response(briefGabarit(ctx, s, a), { headers: entetes("Aperçu au gabarit, avant validation") });
+
   if (!process.env.ANTHROPIC_API_KEY && !process.env.ANTHROPIC_AUTH_TOKEN) {
     return new Response(briefGabarit(ctx, s, a), { headers: entetes("Gabarit P4, sans IA (aucune clé Claude configurée)") });
   }

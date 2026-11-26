@@ -1,22 +1,11 @@
 import { addDays, diffDays, shiftYears } from "@/lib/dates";
-import type { HistoriqueMaison, MarcheId } from "@/lib/types";
+import type { HistoriqueMaison } from "@/lib/types";
 
 // Calculs sur le détail par nuit de la maison pilote (exports Asterio agrégés) : fonctions pures.
 
 export type Detail = NonNullable<HistoriqueMaison["detail"]>;
 
-/** Pays d'origine de chaque marché suivi, tel qu'il apparaît dans les exports. */
-export const PAYS_DU_MARCHE: Record<MarcheId, string> = {
-  frc: "France",
-  fra: "France",
-  frb: "France",
-  ge: "Suisse",
-  vd: "Suisse",
-  uk: "Royaume-Uni",
-  be: "Belgique",
-  nl: "Pays-Bas",
-  us: "États-Unis",
-};
+/** Le pays Asterio d'un marché est porté par le marché lui-même (marches.json, champ pays). */
 
 /** Quartiles pondérés. */
 export function quartilesPonderes(valeurs: { v: number; poids: number }[]) {

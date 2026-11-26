@@ -8,9 +8,12 @@ import { etatSaison } from "@/services/etat";
 
 const familles: Record<string, string> = { saisonnier: "Saisonnier", evenementiel: "Événementiel", declencheur: "Déclencheur", b2b: "Séminaires et B2B" };
 
-export default async function Sujets() {
+export default async function Sujets(props: PageProps<"/sujets">) {
   await connection();
-  const { sujets, interet, ctx } = etatSaison();
+  const { fermes } = await props.searchParams;
+  const { sujets: tous, interet, ctx } = etatSaison();
+  const nbFermes = tous.filter((s) => !s.ouvert).length;
+  const sujets = fermes ? tous : tous.filter((s) => s.ouvert);
   const [premier, ...autres] = sujets;
   return (
     <>
@@ -40,7 +43,14 @@ export default async function Sujets() {
           </Link>
         )}
 
-        <div className="mt-10 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
+        {nbFermes > 0 && (
+          <p className="mt-6 text-right text-sm text-ink-soft">
+            <Link href={fermes ? "/sujets" : "/sujets?fermes=1"} className="underline-offset-4 hover:text-ink hover:underline">
+              {fermes ? "Masquer" : "Afficher"} {nbFermes} sujet{nbFermes > 1 ? "s" : ""} hors période d&apos;ouverture
+            </Link>
+          </p>
+        )}
+        <div className="mt-6 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-3">
           {autres.map((s, i) => {
             const nb = s.activations.reduce((t, a) => t + a.vagues.length, 0);
             return (

@@ -2,6 +2,7 @@ import { shiftYears } from "@/lib/dates";
 import type { SujetCalcule } from "@/lib/types";
 import type { Contexte } from "./calcul";
 import { courbePeriode, rythmePeriode } from "./historique";
+import { hiverDe, unAnAvant } from "./marches";
 
 // Saison rejouée : ce que l'agent savait à la date choisie, et ce qui s'est passé ensuite.
 // Tout vient du détail par nuit de l'historique Asterio de la maison pilote.
@@ -19,9 +20,10 @@ export interface BilanADate {
 export function bilanADate(ctx: Contexte): BilanADate | null {
   const detail = ctx.historique?.donnees.detail;
   if (!detail) return null;
-  const { debut, fin } = ctx.saison;
-  const n1 = [shiftYears(debut, -1), shiftYears(fin, -1)] as const;
-  const dN1 = shiftYears(ctx.date, -1);
+  // Hiver de décembre à mars, comparé au même jour du calendrier un an plus tôt.
+  const { debut, fin } = hiverDe(ctx);
+  const n1 = [unAnAvant(debut), unAnAvant(fin)] as const;
+  const dN1 = unAnAvant(ctx.date);
   const pays = [...new Set(detail.filter(([n]) => (n >= debut && n <= fin) || (n >= n1[0] && n <= n1[1])).map(([, , p]) => p))].filter(Boolean);
   return {
     date: ctx.date,
@@ -69,7 +71,7 @@ export function verdictSaison(ctx: Contexte, sujets: SujetCalcule[]): VerdictSuj
         nom: s.def.nom,
         periode: { debut, fin },
         aDate: rythmePeriode(detail, debut, fin, ctx.date).aDate,
-        aDateN1: rythmePeriode(detail, d1, f1, shiftYears(ctx.date, -1)).aDate,
+        aDateN1: rythmePeriode(detail, d1, f1, unAnAvant(ctx.date)).aDate,
         final,
         finalN1,
         urgence: s.urgence,

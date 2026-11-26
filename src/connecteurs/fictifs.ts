@@ -59,7 +59,7 @@ export function newslettersPerfFictif(ctx: ContexteCollecte) {
 export function googleAdsFictif(ctx: ContexteCollecte, sujets: SujetDef[]) {
   const r = alea(`ads-${ctx.date}`);
   const campagnes: DonneesAds["campagnes"] = [];
-  for (const m of ["frc", "fra", "frb", "ge", "vd", "uk"] as MarcheId[]) {
+  for (const m of ["fr", "ch", "uk"] as MarcheId[]) {
     for (const s of sujets.filter((x) => ["fetes", "fevrier", "spa"].includes(x.id))) {
       const budget = Math.round(800 + r() * 2400);
       const clics = Math.round(budget / (0.9 + r() * 1.4));

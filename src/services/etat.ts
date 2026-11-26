@@ -1,7 +1,9 @@
 import "server-only";
 import { addDays } from "@/lib/dates";
 import { detecterAlertes, resumer } from "@/lib/engine/alertes";
-import { aFaire, calculerSaison, interet } from "@/lib/engine/calcul";
+import { aFaire, calculerSaison, indicateurs, interet } from "@/lib/engine/calcul";
+import { priorites } from "@/lib/engine/leviers";
+import { avanceFragile } from "@/lib/engine/marches";
 import { bilanADate, verdictSaison } from "@/lib/engine/rejeu";
 import { REGLES } from "@/lib/engine/regles";
 import { depot } from "@/stockage/depot";
@@ -42,6 +44,10 @@ export function etatSaison() {
     calculs,
     alertes,
     bilan: bilanADate(ctx),
+    marche: lireParametres().marche ?? null,
+    priorites: priorites(ctx, sujets, actions, lireParametres().marche ?? null),
+    avance: avanceFragile(ctx),
+    indicateurs: [...indicateurs(ctx).values()],
     verdict: () => verdictSaison(ctx, sujets),
     parametres: lireParametres(),
     persistant: depot().persistant,

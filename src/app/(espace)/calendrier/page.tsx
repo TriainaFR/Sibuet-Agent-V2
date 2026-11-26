@@ -23,9 +23,12 @@ function Grille({ children, h = "h-9", mois, vacances, x, w, date }: { children:
   );
 }
 
-export default async function Calendrier() {
+export default async function Calendrier(props: PageProps<"/calendrier">) {
   await connection();
-  const { sujets, ctx } = etatSaison();
+  const { fermes } = await props.searchParams;
+  const { sujets: tous, ctx } = etatSaison();
+  const nbFermes = tous.filter((s) => !s.ouvert).length;
+  const sujets = fermes ? tous : tous.filter((s) => s.ouvert);
   const debut = `${ctx.date.slice(0, 7)}-01`;
   const fin = addDays(ctx.saison.fin, 1);
   const span = diffDays(fin, debut);
@@ -57,8 +60,14 @@ export default async function Calendrier() {
         </p>
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
-
-      <div className="carte mt-7 overflow-x-auto p-5">
+      {nbFermes > 0 && (
+        <p className="text-right text-sm text-ink-soft">
+          <Link href={fermes ? "/calendrier" : "/calendrier?fermes=1"} className="underline-offset-4 hover:text-ink hover:underline">
+            {fermes ? "Masquer" : "Afficher"} {nbFermes} sujet{nbFermes > 1 ? "s" : ""} hors période d&apos;ouverture
+          </Link>
+        </p>
+      )}
+      <div className="carte mt-4 overflow-x-auto p-5">
         <div className="min-w-[980px]">
           <div className="grid grid-cols-[260px_1fr] gap-4">
             <div />

@@ -59,8 +59,8 @@ function reconnaitreColonnes(entetes: string[]) {
 // Pays → marchés suivis. Sans code postal ni canton, un client français compte pour les trois zones,
 // un client suisse pour Genève et Vaud.
 const PAYS: [string[], MarcheId[], string][] = [
-  [["fr", "fra", "france", "francais", "francaise"], ["frc", "fra", "frb"], "France"],
-  [["ch", "che", "suisse", "switzerland", "schweiz", "swiss"], ["ge", "vd"], "Suisse"],
+  [["fr", "fra", "france", "francais", "francaise"], ["fr"], "France"],
+  [["ch", "che", "suisse", "switzerland", "schweiz", "swiss"], ["ch"], "Suisse"],
   [["gb", "gbr", "uk", "royaume uni", "united kingdom", "angleterre", "england", "great britain", "britannique"], ["uk"], "Royaume-Uni"],
   [["be", "bel", "belgique", "belgium", "belgie", "belge"], ["be"], "Belgique"],
   [["nl", "nld", "pays bas", "netherlands", "nederland", "hollande", "holland", "neerlandais"], ["nl"], "Pays-Bas"],

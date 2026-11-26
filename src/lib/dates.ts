@@ -20,7 +20,7 @@ export const monthLabel = (key: string) => `${MONTHS[Number(key.slice(5, 7)) - 1
 
 export function formatDate(s: string, withYear = false) {
   const d = toDate(s);
-  const base = `${d.getUTCDate()} ${MONTHS_SHORT[d.getUTCMonth()]}`;
+  const base = `${d.getUTCDate() === 1 ? "1er" : d.getUTCDate()} ${MONTHS_SHORT[d.getUTCMonth()]}`;
   return withYear ? `${base} ${d.getUTCFullYear()}` : base;
 }
 

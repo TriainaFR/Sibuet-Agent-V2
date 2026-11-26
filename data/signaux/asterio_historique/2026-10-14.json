@@ -1,7 +1,7 @@
 {
  "source": "asterio_historique",
  "collecte_le": "2026-10-14",
- "horodatage": "2026-10-16T09:11:23.220Z",
+ "horodatage": "2026-11-26T13:56:22.522Z",
  "mode": "import",
  "origine": "Exports Asterio (7 fichiers), nuits du 14 oct. 2024 au 14 oct. 2026",
  "resume": "7 maisons, 50567 lignes agrégées",
@@ -123,10 +123,10 @@
        "site": 47
       },
       "delai": {
-       "q1": 4,
-       "med": 15,
-       "q3": 36,
-       "n": 549
+       "q1": 10,
+       "med": 25,
+       "q3": 48,
+       "n": 2430
       },
       "familles": 0.305,
       "personnesParChambre": 2.1,
@@ -298,10 +298,10 @@
        "groupes": 71
       },
       "delai": {
-       "q1": 8,
-       "med": 25,
-       "q3": 53,
-       "n": 433
+       "q1": 15,
+       "med": 36,
+       "q3": 66,
+       "n": 1988
       },
       "familles": 0.418,
       "personnesParChambre": 2.4,
@@ -477,10 +477,10 @@
        "site": 8
       },
       "delai": {
-       "q1": 1,
-       "med": 5,
-       "q3": 20,
-       "n": 219
+       "q1": 3,
+       "med": 10,
+       "q3": 25,
+       "n": 847
       },
       "familles": 0.388,
       "personnesParChambre": 2.2,
@@ -635,16 +635,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 1583,
       "delai": {
-       "q1": 2,
-       "med": 10,
-       "q3": 31,
-       "n": 426
+       "q1": 7,
+       "med": 23,
+       "q3": 41,
+       "n": 1583
       },
       "familles": 0.322,
       "direct": 0.786
@@ -656,23 +654,25 @@
       ],
       "nuitees": 586,
       "delai": {
-       "q1": 6,
-       "med": 19,
-       "q3": 53,
-       "n": 124
+       "q1": 12,
+       "med": 32,
+       "q3": 61,
+       "n": 586
       },
       "familles": 0.328,
       "direct": 0.408
      },
      {
       "pays": "Arabie saoudite",
-      "marches": [],
+      "marches": [
+       "sa"
+      ],
       "nuitees": 315,
       "delai": {
-       "q1": 3,
-       "med": 10,
-       "q3": 30,
-       "n": 44
+       "q1": 10,
+       "med": 14,
+       "q3": 35,
+       "n": 315
       },
       "familles": 0.556,
       "direct": 0.311
@@ -684,36 +684,40 @@
       ],
       "nuitees": 290,
       "delai": {
-       "q1": 5,
-       "med": 17,
-       "q3": 50,
-       "n": 64
+       "q1": 10,
+       "med": 19,
+       "q3": 52,
+       "n": 290
       },
       "familles": 0.176,
       "direct": 0.507
      },
      {
       "pays": "Turquie",
-      "marches": [],
+      "marches": [
+       "tr"
+      ],
       "nuitees": 276,
       "delai": {
-       "q1": 7,
-       "med": 34,
-       "q3": 83,
-       "n": 41
+       "q1": 12,
+       "med": 37,
+       "q3": 82,
+       "n": 205
       },
       "familles": 0.801,
       "direct": 0.424
      },
      {
       "pays": "Russie",
-      "marches": [],
+      "marches": [
+       "ru"
+      ],
       "nuitees": 257,
       "delai": {
-       "q1": 13,
-       "med": 23,
-       "q3": 78,
-       "n": 33
+       "q1": 18,
+       "med": 34,
+       "q3": 108,
+       "n": 257
       },
       "familles": 0.475,
       "direct": 0.198
@@ -725,10 +729,10 @@
       ],
       "nuitees": 207,
       "delai": {
-       "q1": 5,
-       "med": 35,
-       "q3": 66,
-       "n": 43
+       "q1": 18,
+       "med": 40,
+       "q3": 67,
+       "n": 207
       },
       "familles": 0.203,
       "direct": 0.749
@@ -736,67 +740,74 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 202,
       "delai": {
-       "q1": 3,
-       "med": 6,
-       "q3": 22,
-       "n": 90
+       "q1": 4,
+       "med": 12,
+       "q3": 39,
+       "n": 202
       },
       "familles": 0.431,
       "direct": 0.678
      },
      {
       "pays": "Émirats arabes unis",
-      "marches": [],
+      "marches": [
+       "ae"
+      ],
       "nuitees": 195,
       "delai": {
-       "q1": 4,
-       "med": 13,
-       "q3": 29,
-       "n": 40
+       "q1": 7,
+       "med": 16,
+       "q3": 30,
+       "n": 195
       },
       "familles": 0.297,
       "direct": 0.344
      },
      {
       "pays": "Grèce",
-      "marches": [],
+      "marches": [
+       "gr"
+      ],
       "nuitees": 173,
       "delai": {
-       "q1": 7,
-       "med": 25,
-       "q3": 82,
-       "n": 32
+       "q1": 13,
+       "med": 57,
+       "q3": 100,
+       "n": 173
       },
       "familles": 0.509,
       "direct": 0.451
      },
      {
       "pays": "Italie",
-      "marches": [],
+      "marches": [
+       "it"
+      ],
       "nuitees": 108,
       "delai": {
-       "q1": 1,
-       "med": 10,
-       "q3": 25,
-       "n": 30
+       "q1": 3,
+       "med": 16,
+       "q3": 35,
+       "n": 108
       },
       "familles": 0.324,
       "direct": 0.731
      },
      {
       "pays": "Portugal",
-      "marches": [],
+      "marches": [
+       "pt"
+      ],
       "nuitees": 106,
       "delai": {
-       "q1": 9,
-       "med": 20,
-       "q3": 51,
-       "n": 17
+       "q1": 19,
+       "med": 26,
+       "q3": 75,
+       "n": 106
       },
       "familles": 0.264,
       "direct": 0.566
@@ -806,10 +817,10 @@
       "marches": [],
       "nuitees": 1037,
       "delai": {
-       "q1": 6,
-       "med": 24,
-       "q3": 51,
-       "n": 216
+       "q1": 11,
+       "med": 31,
+       "q3": 62,
+       "n": 1037
       },
       "familles": 0.311,
       "direct": 0.438
@@ -994,10 +1005,166 @@
      ]
     ],
     "delai": {
-     "q1": 4,
-     "med": 15,
-     "q3": 40,
-     "n": 1201
+     "q1": 10,
+     "med": 25,
+     "q3": 53,
+     "n": 5265
+    },
+    "delaisMarches": {
+     "fr": {
+      "q1": 9,
+      "med": 27,
+      "q3": 43,
+      "nuitees": 1147,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "uk": {
+      "q1": 16,
+      "med": 36,
+      "q3": 65,
+      "nuitees": 522,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "tr": {
+      "q1": 12,
+      "med": 37,
+      "q3": 82,
+      "nuitees": 204,
+      "medAvecGroupes": 78,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "us": {
+      "q1": 12,
+      "med": 20,
+      "q3": 53,
+      "nuitees": 267,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ru": {
+      "q1": 18,
+      "med": 35,
+      "q3": 146,
+      "nuitees": 243,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "sa": {
+      "q1": 11,
+      "med": 21,
+      "q3": 39,
+      "nuitees": 216,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "be": {
+      "q1": 28,
+      "med": 42,
+      "q3": 68,
+      "nuitees": 185,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ch": {
+      "q1": 5,
+      "med": 12,
+      "q3": 44,
+      "nuitees": 184,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ae": {
+      "q1": 9,
+      "med": 19,
+      "q3": 31,
+      "nuitees": 179,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "gr": {
+      "q1": 13,
+      "med": 57,
+      "q3": 106,
+      "nuitees": 170,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "pt": {
+      "q1": 19,
+      "med": 26,
+      "q3": 75,
+      "nuitees": 106,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "it": {
+      "q1": 4,
+      "med": 18,
+      "q3": 38,
+      "nuitees": 85,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "br": {
+      "q1": 6,
+      "med": 26,
+      "q3": 30,
+      "nuitees": 65,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "il": {
+      "q1": 20,
+      "med": 38,
+      "q3": 72,
+      "nuitees": 60,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     }
     },
     "detail": [
      [
@@ -15621,56 +15788,64 @@
       "2025-10-24",
       "Turquie",
       10,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-16",
       "2025-10-24",
       "Turquie",
       10,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-17",
       "2025-10-24",
       "Turquie",
       10,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-18",
       "2025-10-24",
       "Turquie",
       9,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-19",
       "2025-10-24",
       "Turquie",
       9,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-20",
       "2025-10-24",
       "Turquie",
       8,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-21",
       "2025-10-24",
       "Turquie",
       8,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2026-01-22",
       "2025-10-24",
       "Turquie",
       7,
-      "groupes"
+      "groupes",
+      1
      ],
      [
       "2025-12-28",
@@ -29312,10 +29487,10 @@
        "agences": 15
       },
       "delai": {
-       "q1": 5,
-       "med": 23,
-       "q3": 61,
-       "n": 526
+       "q1": 7,
+       "med": 25,
+       "q3": 50,
+       "n": 1228
       },
       "familles": 0.356,
       "personnesParChambre": 2.2,
@@ -29487,10 +29662,10 @@
        "groupes": 447
       },
       "delai": {
-       "q1": 7,
-       "med": 30,
-       "q3": 156,
-       "n": 1400
+       "q1": 11,
+       "med": 35,
+       "q3": 95,
+       "n": 5878
       },
       "familles": 0.354,
       "personnesParChambre": 2.2,
@@ -29662,10 +29837,10 @@
        "agences": 214
       },
       "delai": {
-       "q1": 17,
-       "med": 139,
-       "q3": 265,
-       "n": 1839
+       "q1": 10,
+       "med": 42,
+       "q3": 115,
+       "n": 5230
       },
       "familles": 0.304,
       "personnesParChambre": 2,
@@ -29842,10 +30017,10 @@
        "groupes": 269
       },
       "delai": {
-       "q1": 11,
-       "med": 34,
-       "q3": 89,
-       "n": 1565
+       "q1": 23,
+       "med": 57,
+       "q3": 112,
+       "n": 6906
       },
       "familles": 0.41,
       "personnesParChambre": 2.3,
@@ -30022,10 +30197,10 @@
        "ota": 373
       },
       "delai": {
-       "q1": 41,
-       "med": 125,
-       "q3": 346,
-       "n": 1259
+       "q1": 39,
+       "med": 88,
+       "q3": 160,
+       "n": 4489
       },
       "familles": 0.341,
       "personnesParChambre": 2.1,
@@ -30185,16 +30360,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 15103,
       "delai": {
-       "q1": 14,
-       "med": 77,
-       "q3": 267,
-       "n": 3531
+       "q1": 16,
+       "med": 53,
+       "q3": 131,
+       "n": 12223
       },
       "familles": 0.34,
       "direct": 0.722
@@ -30206,10 +30379,10 @@
       ],
       "nuitees": 2194,
       "delai": {
-       "q1": 23,
-       "med": 64,
-       "q3": 140,
-       "n": 368
+       "q1": 24,
+       "med": 62,
+       "q3": 130,
+       "n": 1774
       },
       "familles": 0.433,
       "direct": 0.566
@@ -30217,15 +30390,14 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 2167,
       "delai": {
        "q1": 4,
-       "med": 25,
-       "q3": 116,
-       "n": 849
+       "med": 17,
+       "q3": 55,
+       "n": 1678
       },
       "familles": 0.222,
       "direct": 0.633
@@ -30237,10 +30409,10 @@
       ],
       "nuitees": 2008,
       "delai": {
-       "q1": 20,
+       "q1": 30,
        "med": 70,
-       "q3": 223,
-       "n": 496
+       "q3": 129,
+       "n": 1889
       },
       "familles": 0.335,
       "direct": 0.516
@@ -30252,38 +30424,38 @@
       ],
       "nuitees": 1190,
       "delai": {
-       "q1": 56,
-       "med": 194,
-       "q3": 196,
-       "n": 194
+       "q1": 24,
+       "med": 67,
+       "q3": 126,
+       "n": 910
       },
       "familles": 0.211,
       "direct": 0.682
      },
      {
       "pays": "Pays-Bas",
-      "marches": [
-       "nl"
-      ],
+      "marches": [],
       "nuitees": 594,
       "delai": {
-       "q1": 213,
-       "med": 215,
-       "q3": 216,
-       "n": 75
+       "q1": 24,
+       "med": 51,
+       "q3": 95,
+       "n": 298
       },
       "familles": 0.158,
       "direct": 0.343
      },
      {
       "pays": "Émirats arabes unis",
-      "marches": [],
+      "marches": [
+       "ae"
+      ],
       "nuitees": 512,
       "delai": {
-       "q1": 6,
-       "med": 24,
-       "q3": 54,
-       "n": 105
+       "q1": 13,
+       "med": 30,
+       "q3": 102,
+       "n": 512
       },
       "familles": 0.658,
       "direct": 0.688
@@ -30293,62 +30465,70 @@
       "marches": [],
       "nuitees": 368,
       "delai": {
-       "q1": 125,
-       "med": 158,
-       "q3": 231,
-       "n": 51
+       "q1": 17,
+       "med": 33,
+       "q3": 161,
+       "n": 139
       },
       "familles": 0.606,
       "direct": 0.307
      },
      {
       "pays": "Russie",
-      "marches": [],
+      "marches": [
+       "ru"
+      ],
       "nuitees": 366,
       "delai": {
-       "q1": 5,
-       "med": 37,
-       "q3": 86,
-       "n": 47
+       "q1": 22,
+       "med": 79,
+       "q3": 109,
+       "n": 366
       },
       "familles": 0.675,
       "direct": 0.421
      },
      {
       "pays": "Italie",
-      "marches": [],
+      "marches": [
+       "it"
+      ],
       "nuitees": 362,
       "delai": {
-       "q1": 3,
-       "med": 17,
-       "q3": 45,
-       "n": 118
+       "q1": 6,
+       "med": 32,
+       "q3": 63,
+       "n": 359
       },
       "familles": 0.246,
       "direct": 0.735
      },
      {
       "pays": "Turquie",
-      "marches": [],
+      "marches": [
+       "tr"
+      ],
       "nuitees": 251,
       "delai": {
-       "q1": 5,
-       "med": 23,
-       "q3": 52,
-       "n": 53
+       "q1": 11,
+       "med": 28,
+       "q3": 61,
+       "n": 251
       },
       "familles": 0.315,
       "direct": 0.518
      },
      {
       "pays": "Brésil",
-      "marches": [],
+      "marches": [
+       "br"
+      ],
       "nuitees": 236,
       "delai": {
-       "q1": 22,
-       "med": 63,
-       "q3": 129,
-       "n": 47
+       "q1": 33,
+       "med": 78,
+       "q3": 137,
+       "n": 236
       },
       "familles": 0.551,
       "direct": 0.212
@@ -30358,10 +30538,10 @@
       "marches": [],
       "nuitees": 3034,
       "delai": {
-       "q1": 8,
-       "med": 29,
-       "q3": 77,
-       "n": 639
+       "q1": 17,
+       "med": 51,
+       "q3": 97,
+       "n": 3018
       },
       "familles": 0.443,
       "direct": 0.589
@@ -30546,10 +30726,166 @@
      ]
     ],
     "delai": {
-     "q1": 13,
-     "med": 67,
-     "q3": 214,
-     "n": 6589
+     "q1": 16,
+     "med": 51,
+     "q3": 116,
+     "n": 23731
+    },
+    "delaisMarches": {
+     "fr": {
+      "q1": 14,
+      "med": 45,
+      "q3": 118,
+      "nuitees": 4874,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "uk": {
+      "q1": 22,
+      "med": 51,
+      "q3": 113,
+      "nuitees": 1314,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "tr": {
+      "q1": 11,
+      "med": 28,
+      "q3": 58,
+      "nuitees": 244,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "us": {
+      "q1": 27,
+      "med": 67,
+      "q3": 115,
+      "nuitees": 1158,
+      "medAvecGroupes": 65,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ru": {
+      "q1": 40,
+      "med": 81,
+      "q3": 110,
+      "nuitees": 311,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "sa": {
+      "q1": 16,
+      "med": 51,
+      "q3": 87,
+      "nuitees": 209,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "be": {
+      "q1": 26,
+      "med": 72,
+      "q3": 127,
+      "nuitees": 591,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ch": {
+      "q1": 4,
+      "med": 15,
+      "q3": 69,
+      "nuitees": 519,
+      "medAvecGroupes": 17,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ae": {
+      "q1": 13,
+      "med": 27,
+      "q3": 54,
+      "nuitees": 365,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "gr": {
+      "q1": 17,
+      "med": 32,
+      "q3": 63,
+      "nuitees": 114,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "pt": {
+      "q1": 25,
+      "med": 59,
+      "q3": 109,
+      "nuitees": 91,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "it": {
+      "q1": 7,
+      "med": 36,
+      "q3": 65,
+      "nuitees": 177,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "br": {
+      "q1": 34,
+      "med": 79,
+      "q3": 135,
+      "nuitees": 224,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "il": {
+      "q1": 37,
+      "med": 50,
+      "q3": 62,
+      "nuitees": 114,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     }
     }
    },
    {
@@ -30808,10 +31144,10 @@
        "autre": 71
       },
       "delai": {
-       "q1": 5,
-       "med": 20,
-       "q3": 56,
-       "n": 840
+       "q1": 14,
+       "med": 35,
+       "q3": 77,
+       "n": 3597
       },
       "familles": 0.271,
       "personnesParChambre": 2,
@@ -30984,10 +31320,10 @@
        "autre": 16
       },
       "delai": {
-       "q1": 6,
-       "med": 32,
-       "q3": 162,
-       "n": 493
+       "q1": 7,
+       "med": 29,
+       "q3": 118,
+       "n": 1544
       },
       "familles": 0.241,
       "personnesParChambre": 1.8,
@@ -31165,10 +31501,10 @@
        "groupes": 7
       },
       "delai": {
-       "q1": 11,
-       "med": 33,
-       "q3": 91,
-       "n": 879
+       "q1": 20,
+       "med": 63,
+       "q3": 135,
+       "n": 3809
       },
       "familles": 0.293,
       "personnesParChambre": 2,
@@ -31328,16 +31664,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 3769,
       "delai": {
-       "q1": 7,
-       "med": 36,
-       "q3": 102,
-       "n": 906
+       "q1": 12,
+       "med": 42,
+       "q3": 105,
+       "n": 3336
       },
       "familles": 0.295,
       "direct": 0.722
@@ -31349,10 +31683,10 @@
       ],
       "nuitees": 916,
       "delai": {
-       "q1": 10,
-       "med": 33,
-       "q3": 73,
-       "n": 192
+       "q1": 18,
+       "med": 47,
+       "q3": 99,
+       "n": 916
       },
       "familles": 0.255,
       "direct": 0.587
@@ -31364,10 +31698,10 @@
       ],
       "nuitees": 709,
       "delai": {
-       "q1": 14,
-       "med": 58,
-       "q3": 108,
-       "n": 150
+       "q1": 27,
+       "med": 82,
+       "q3": 164,
+       "n": 709
       },
       "familles": 0.307,
       "direct": 0.554
@@ -31375,15 +31709,14 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 441,
       "delai": {
-       "q1": 2,
-       "med": 9,
-       "q3": 30,
-       "n": 199
+       "q1": 5,
+       "med": 18,
+       "q3": 55,
+       "n": 441
       },
       "familles": 0.143,
       "direct": 0.669
@@ -31395,88 +31728,100 @@
       ],
       "nuitees": 328,
       "delai": {
-       "q1": 17,
-       "med": 45,
-       "q3": 85,
-       "n": 71
+       "q1": 28,
+       "med": 64,
+       "q3": 122,
+       "n": 328
       },
       "familles": 0.18,
       "direct": 0.799
      },
      {
       "pays": "Turquie",
-      "marches": [],
+      "marches": [
+       "tr"
+      ],
       "nuitees": 315,
       "delai": {
-       "q1": 15,
-       "med": 33,
-       "q3": 74,
-       "n": 67
+       "q1": 27,
+       "med": 55,
+       "q3": 125,
+       "n": 315
       },
       "familles": 0.34,
       "direct": 0.416
      },
      {
       "pays": "Russie",
-      "marches": [],
+      "marches": [
+       "ru"
+      ],
       "nuitees": 274,
       "delai": {
-       "q1": 20,
-       "med": 71,
-       "q3": 132,
-       "n": 33
+       "q1": 43,
+       "med": 123,
+       "q3": 153,
+       "n": 274
       },
       "familles": 0.551,
       "direct": 0.215
      },
      {
       "pays": "Arabie saoudite",
-      "marches": [],
+      "marches": [
+       "sa"
+      ],
       "nuitees": 253,
       "delai": {
-       "q1": 4,
-       "med": 15,
-       "q3": 26,
-       "n": 58
+       "q1": 8,
+       "med": 20,
+       "q3": 30,
+       "n": 253
       },
       "familles": 0.304,
       "direct": 0.478
      },
      {
       "pays": "Italie",
-      "marches": [],
+      "marches": [
+       "it"
+      ],
       "nuitees": 208,
       "delai": {
-       "q1": 4,
-       "med": 16,
-       "q3": 51,
-       "n": 67
+       "q1": 14,
+       "med": 25,
+       "q3": 106,
+       "n": 208
       },
       "familles": 0.207,
       "direct": 0.712
      },
      {
       "pays": "Émirats arabes unis",
-      "marches": [],
+      "marches": [
+       "ae"
+      ],
       "nuitees": 189,
       "delai": {
-       "q1": 4,
-       "med": 15,
-       "q3": 34,
-       "n": 53
+       "q1": 10,
+       "med": 23,
+       "q3": 49,
+       "n": 189
       },
       "familles": 0.36,
       "direct": 0.429
      },
      {
       "pays": "Portugal",
-      "marches": [],
+      "marches": [
+       "pt"
+      ],
       "nuitees": 158,
       "delai": {
-       "q1": 20,
-       "med": 38,
-       "q3": 82,
-       "n": 29
+       "q1": 26,
+       "med": 45,
+       "q3": 94,
+       "n": 158
       },
       "familles": 0.247,
       "direct": 0.316
@@ -31486,10 +31831,10 @@
       "marches": [],
       "nuitees": 152,
       "delai": {
-       "q1": 10,
-       "med": 28,
-       "q3": 86,
-       "n": 33
+       "q1": 19,
+       "med": 33,
+       "q3": 107,
+       "n": 152
       },
       "familles": 0.296,
       "direct": 0.737
@@ -31499,10 +31844,10 @@
       "marches": [],
       "nuitees": 1660,
       "delai": {
-       "q1": 10,
-       "med": 30,
-       "q3": 82,
-       "n": 351
+       "q1": 15,
+       "med": 47,
+       "q3": 112,
+       "n": 1660
       },
       "familles": 0.243,
       "direct": 0.492
@@ -31688,10 +32033,166 @@
      ]
     ],
     "delai": {
-     "q1": 7,
-     "med": 29,
-     "q3": 83,
-     "n": 2215
+     "q1": 15,
+     "med": 44,
+     "q3": 109,
+     "n": 8950
+    },
+    "delaisMarches": {
+     "fr": {
+      "q1": 16,
+      "med": 46,
+      "q3": 105,
+      "nuitees": 2430,
+      "medAvecGroupes": 48,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "uk": {
+      "q1": 19,
+      "med": 48,
+      "q3": 97,
+      "nuitees": 875,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "tr": {
+      "q1": 28,
+      "med": 55,
+      "q3": 125,
+      "nuitees": 314,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "us": {
+      "q1": 29,
+      "med": 81,
+      "q3": 151,
+      "nuitees": 605,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ru": {
+      "q1": 44,
+      "med": 123,
+      "q3": 143,
+      "nuitees": 262,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "sa": {
+      "q1": 9,
+      "med": 20,
+      "q3": 30,
+      "nuitees": 246,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "be": {
+      "q1": 27,
+      "med": 52,
+      "q3": 107,
+      "nuitees": 284,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ch": {
+      "q1": 5,
+      "med": 21,
+      "q3": 58,
+      "nuitees": 327,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ae": {
+      "q1": 8,
+      "med": 22,
+      "q3": 47,
+      "nuitees": 167,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "gr": {
+      "q1": 17,
+      "med": 37,
+      "q3": 85,
+      "nuitees": 131,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "pt": {
+      "q1": 27,
+      "med": 59,
+      "q3": 94,
+      "nuitees": 156,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "it": {
+      "q1": 15,
+      "med": 22,
+      "q3": 77,
+      "nuitees": 108,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "br": {
+      "q1": 78,
+      "med": 144,
+      "q3": 291,
+      "nuitees": 65,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "il": {
+      "q1": 4,
+      "med": 15,
+      "q3": 47,
+      "nuitees": 64,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     }
     }
    },
    {
@@ -31840,13 +32341,13 @@
        "agences": 16
       },
       "delai": {
-       "q1": 5,
-       "med": 29,
-       "q3": 65,
-       "n": 115
+       "q1": 13,
+       "med": 41,
+       "q3": 99,
+       "n": 286
       },
       "familles": 0.073,
-      "personnesParChambre": 2.5,
+      "personnesParChambre": 2,
       "pays": [
        {
         "pays": "France",
@@ -32015,13 +32516,13 @@
        "ota": 394
       },
       "delai": {
-       "q1": 19,
-       "med": 71,
-       "q3": 198,
-       "n": 853
+       "q1": 26,
+       "med": 72,
+       "q3": 150,
+       "n": 2389
       },
       "familles": 0.096,
-      "personnesParChambre": 2.4,
+      "personnesParChambre": 2.3,
       "pays": [
        {
         "pays": "France",
@@ -32195,13 +32696,13 @@
        "ota": 369
       },
       "delai": {
-       "q1": 21,
-       "med": 81,
-       "q3": 149,
-       "n": 712
+       "q1": 38,
+       "med": 92,
+       "q3": 151,
+       "n": 1953
       },
       "familles": 0.134,
-      "personnesParChambre": 2.6,
+      "personnesParChambre": 2.5,
       "pays": [
        {
         "pays": "États-Unis",
@@ -32362,10 +32863,10 @@
       ],
       "nuitees": 1882,
       "delai": {
-       "q1": 43,
+       "q1": 48,
        "med": 97,
-       "q3": 187,
-       "n": 509
+       "q3": 170,
+       "n": 1614
       },
       "familles": 0.11,
       "direct": 0.48
@@ -32373,16 +32874,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 1386,
       "delai": {
-       "q1": 8,
-       "med": 51,
-       "q3": 209,
-       "n": 511
+       "q1": 13,
+       "med": 54,
+       "q3": 119,
+       "n": 1185
       },
       "familles": 0.126,
       "direct": 0.711
@@ -32394,10 +32893,10 @@
       ],
       "nuitees": 561,
       "delai": {
-       "q1": 26,
-       "med": 92,
-       "q3": 213,
-       "n": 182
+       "q1": 33,
+       "med": 94,
+       "q3": 181,
+       "n": 509
       },
       "familles": 0.068,
       "direct": 0.69
@@ -32405,15 +32904,14 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 170,
       "delai": {
-       "q1": 5,
-       "med": 32,
-       "q3": 88,
-       "n": 72
+       "q1": 9,
+       "med": 40,
+       "q3": 98,
+       "n": 170
       },
       "familles": 0.141,
       "direct": 0.776
@@ -32423,10 +32921,10 @@
       "marches": [],
       "nuitees": 154,
       "delai": {
-       "q1": 22,
-       "med": 61,
-       "q3": 124,
-       "n": 57
+       "q1": 34,
+       "med": 84,
+       "q3": 143,
+       "n": 154
       },
       "familles": 0.11,
       "direct": 0.578
@@ -32436,10 +32934,10 @@
       "marches": [],
       "nuitees": 149,
       "delai": {
-       "q1": 76,
-       "med": 157,
-       "q3": 461,
-       "n": 32
+       "q1": 37,
+       "med": 97,
+       "q3": 157,
+       "n": 86
       },
       "familles": 0.067,
       "direct": 0.315
@@ -32451,10 +32949,10 @@
       ],
       "nuitees": 136,
       "delai": {
-       "q1": 3,
-       "med": 11,
-       "q3": 65,
-       "n": 53
+       "q1": 7,
+       "med": 25,
+       "q3": 116,
+       "n": 136
       },
       "familles": 0.051,
       "direct": 0.838
@@ -32463,7 +32961,12 @@
       "pays": "Koweït",
       "marches": [],
       "nuitees": 117,
-      "delai": null,
+      "delai": {
+       "q1": 239,
+       "med": 240,
+       "q3": 241,
+       "n": 57
+      },
       "familles": 0,
       "direct": 0.487
      },
@@ -32472,51 +32975,53 @@
       "marches": [],
       "nuitees": 95,
       "delai": {
-       "q1": 41,
-       "med": 73,
-       "q3": 123,
-       "n": 31
+       "q1": 61,
+       "med": 108,
+       "q3": 158,
+       "n": 95
       },
       "familles": 0.095,
       "direct": 0.579
      },
      {
       "pays": "Italie",
-      "marches": [],
+      "marches": [
+       "it"
+      ],
       "nuitees": 89,
       "delai": {
-       "q1": 5,
-       "med": 10,
-       "q3": 36,
-       "n": 37
+       "q1": 7,
+       "med": 32,
+       "q3": 75,
+       "n": 89
       },
       "familles": 0.146,
       "direct": 0.798
      },
      {
       "pays": "Pays-Bas",
-      "marches": [
-       "nl"
-      ],
+      "marches": [],
       "nuitees": 75,
       "delai": {
-       "q1": 9,
-       "med": 22,
-       "q3": 82,
-       "n": 24
+       "q1": 19,
+       "med": 58,
+       "q3": 88,
+       "n": 75
       },
       "familles": 0.213,
       "direct": 0.88
      },
      {
       "pays": "Brésil",
-      "marches": [],
+      "marches": [
+       "br"
+      ],
       "nuitees": 34,
       "delai": {
-       "q1": 8,
-       "med": 44,
-       "q3": 71,
-       "n": 15
+       "q1": 20,
+       "med": 55,
+       "q3": 133,
+       "n": 34
       },
       "familles": 0.088,
       "direct": 0.176
@@ -32526,10 +33031,10 @@
       "marches": [],
       "nuitees": 422,
       "delai": {
-       "q1": 17,
-       "med": 52,
-       "q3": 96,
-       "n": 152
+       "q1": 22,
+       "med": 60,
+       "q3": 112,
+       "n": 422
       },
       "familles": 0.156,
       "direct": 0.595
@@ -32714,10 +33219,10 @@
      ]
     ],
     "delai": {
-     "q1": 18,
-     "med": 71,
-     "q3": 170,
-     "n": 1680
+     "q1": 30,
+     "med": 78,
+     "q3": 148,
+     "n": 4628
     }
    },
    {
@@ -32831,10 +33336,10 @@
        "groupes": 282
       },
       "delai": {
-       "q1": 3,
-       "med": 18,
-       "q3": 95,
-       "n": 1212
+       "q1": 6,
+       "med": 20,
+       "q3": 70,
+       "n": 4349
       },
       "familles": 0.134,
       "personnesParChambre": 1.9,
@@ -33006,10 +33511,10 @@
        "groupes": 52
       },
       "delai": {
-       "q1": 3,
-       "med": 17,
-       "q3": 69,
-       "n": 1403
+       "q1": 8,
+       "med": 30,
+       "q3": 89,
+       "n": 4984
       },
       "familles": 0.117,
       "personnesParChambre": 1.9,
@@ -33173,10 +33678,10 @@
       ],
       "nuitees": 1813,
       "delai": {
-       "q1": 4,
-       "med": 23,
-       "q3": 58,
-       "n": 564
+       "q1": 10,
+       "med": 33,
+       "q3": 79,
+       "n": 1813
       },
       "familles": 0.078,
       "direct": 0.242
@@ -33184,16 +33689,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 1417,
       "delai": {
-       "q1": 2,
-       "med": 12,
-       "q3": 68,
-       "n": 396
+       "q1": 6,
+       "med": 24,
+       "q3": 88,
+       "n": 1324
       },
       "familles": 0.144,
       "direct": 0.663
@@ -33203,10 +33706,10 @@
       "marches": [],
       "nuitees": 867,
       "delai": {
-       "q1": 3,
-       "med": 27,
-       "q3": 81,
-       "n": 192
+       "q1": 12,
+       "med": 54,
+       "q3": 152,
+       "n": 867
       },
       "familles": 0.166,
       "direct": 0.667
@@ -33218,23 +33721,25 @@
       ],
       "nuitees": 848,
       "delai": {
-       "q1": 3,
-       "med": 17,
-       "q3": 80,
-       "n": 232
+       "q1": 7,
+       "med": 29,
+       "q3": 101,
+       "n": 848
       },
       "familles": 0.183,
       "direct": 0.581
      },
      {
       "pays": "Russie",
-      "marches": [],
+      "marches": [
+       "ru"
+      ],
       "nuitees": 627,
       "delai": {
-       "q1": 2,
-       "med": 7,
-       "q3": 25,
-       "n": 160
+       "q1": 5,
+       "med": 13,
+       "q3": 38,
+       "n": 627
       },
       "familles": 0.136,
       "direct": 0.214
@@ -33242,15 +33747,14 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 423,
       "delai": {
-       "q1": 5,
-       "med": 21,
-       "q3": 86,
-       "n": 114
+       "q1": 11,
+       "med": 36,
+       "q3": 114,
+       "n": 423
       },
       "familles": 0.083,
       "direct": 0.695
@@ -33260,10 +33764,10 @@
       "marches": [],
       "nuitees": 364,
       "delai": {
-       "q1": 142,
-       "med": 144,
-       "q3": 147,
-       "n": 40
+       "q1": 4,
+       "med": 8,
+       "q3": 13,
+       "n": 123
       },
       "familles": 0.066,
       "direct": 0.08
@@ -33275,51 +33779,53 @@
       ],
       "nuitees": 305,
       "delai": {
-       "q1": 4,
-       "med": 21,
-       "q3": 94,
-       "n": 79
+       "q1": 10,
+       "med": 56,
+       "q3": 123,
+       "n": 305
       },
       "familles": 0.046,
       "direct": 0.738
      },
      {
       "pays": "Pays-Bas",
-      "marches": [
-       "nl"
-      ],
+      "marches": [],
       "nuitees": 255,
       "delai": {
-       "q1": 7,
-       "med": 22,
-       "q3": 80,
-       "n": 62
+       "q1": 13,
+       "med": 36,
+       "q3": 121,
+       "n": 255
       },
       "familles": 0.039,
       "direct": 0.573
      },
      {
       "pays": "Brésil",
-      "marches": [],
+      "marches": [
+       "br"
+      ],
       "nuitees": 211,
       "delai": {
-       "q1": 10,
-       "med": 14,
-       "q3": 82,
-       "n": 45
+       "q1": 13,
+       "med": 21,
+       "q3": 90,
+       "n": 211
       },
       "familles": 0.313,
       "direct": 0.123
      },
      {
       "pays": "Italie",
-      "marches": [],
+      "marches": [
+       "it"
+      ],
       "nuitees": 210,
       "delai": {
-       "q1": 3,
-       "med": 10,
-       "q3": 27,
-       "n": 65
+       "q1": 5,
+       "med": 16,
+       "q3": 28,
+       "n": 210
       },
       "familles": 0.086,
       "direct": 0.49
@@ -33329,10 +33835,10 @@
       "marches": [],
       "nuitees": 149,
       "delai": {
-       "q1": 2,
-       "med": 26,
-       "q3": 71,
-       "n": 45
+       "q1": 11,
+       "med": 35,
+       "q3": 75,
+       "n": 149
       },
       "familles": 0.242,
       "direct": 0.477
@@ -33342,10 +33848,10 @@
       "marches": [],
       "nuitees": 2173,
       "delai": {
-       "q1": 2,
-       "med": 10,
-       "q3": 41,
-       "n": 618
+       "q1": 5,
+       "med": 17,
+       "q3": 53,
+       "n": 2173
       },
       "familles": 0.128,
       "direct": 0.414
@@ -33530,10 +34036,10 @@
      ]
     ],
     "delai": {
-     "q1": 3,
-     "med": 18,
-     "q3": 78,
-     "n": 2615
+     "q1": 7,
+     "med": 25,
+     "q3": 81,
+     "n": 9333
     }
    },
    {
@@ -33695,10 +34201,10 @@
        "groupes": 16
       },
       "delai": {
-       "q1": 7,
-       "med": 32,
-       "q3": 90,
-       "n": 703
+       "q1": 22,
+       "med": 59,
+       "q3": 146,
+       "n": 2804
       },
       "familles": 0.103,
       "personnesParChambre": 2.3,
@@ -33869,10 +34375,10 @@
        "agences": 174
       },
       "delai": {
-       "q1": 13,
-       "med": 49,
-       "q3": 93,
-       "n": 327
+       "q1": 24,
+       "med": 58,
+       "q3": 106,
+       "n": 1297
       },
       "familles": 0.104,
       "personnesParChambre": 2.3,
@@ -34044,10 +34550,10 @@
        "groupes": 45
       },
       "delai": {
-       "q1": 9,
-       "med": 36,
-       "q3": 99,
-       "n": 706
+       "q1": 20,
+       "med": 56,
+       "q3": 133,
+       "n": 2812
       },
       "familles": 0.106,
       "personnesParChambre": 2.3,
@@ -34223,10 +34729,10 @@
        "site": 342
       },
       "delai": {
-       "q1": 6,
-       "med": 26,
-       "q3": 59,
-       "n": 367
+       "q1": 15,
+       "med": 41,
+       "q3": 83,
+       "n": 1349
       },
       "familles": 0.097,
       "personnesParChambre": 2.2,
@@ -34390,10 +34896,10 @@
       ],
       "nuitees": 5873,
       "delai": {
-       "q1": 9,
-       "med": 36,
-       "q3": 88,
-       "n": 1574
+       "q1": 22,
+       "med": 53,
+       "q3": 116,
+       "n": 5873
       },
       "familles": 0.096,
       "direct": 0.348
@@ -34401,16 +34907,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 528,
       "delai": {
-       "q1": 7,
-       "med": 35,
-       "q3": 136,
-       "n": 113
+       "q1": 19,
+       "med": 82,
+       "q3": 156,
+       "n": 528
       },
       "familles": 0.188,
       "direct": 0.669
@@ -34422,10 +34926,10 @@
       ],
       "nuitees": 398,
       "delai": {
-       "q1": 6,
-       "med": 51,
-       "q3": 179,
-       "n": 68
+       "q1": 39,
+       "med": 105,
+       "q3": 223,
+       "n": 398
       },
       "familles": 0.055,
       "direct": 0.555
@@ -34435,51 +34939,53 @@
       "marches": [],
       "nuitees": 257,
       "delai": {
-       "q1": 4,
-       "med": 23,
-       "q3": 57,
-       "n": 61
+       "q1": 17,
+       "med": 32,
+       "q3": 88,
+       "n": 257
       },
       "familles": 0.031,
       "direct": 0.377
      },
      {
       "pays": "Brésil",
-      "marches": [],
+      "marches": [
+       "br"
+      ],
       "nuitees": 125,
       "delai": {
-       "q1": 8,
-       "med": 36,
-       "q3": 125,
-       "n": 30
+       "q1": 21,
+       "med": 55,
+       "q3": 137,
+       "n": 125
       },
       "familles": 0,
       "direct": 0.072
      },
      {
       "pays": "Italie",
-      "marches": [],
+      "marches": [
+       "it"
+      ],
       "nuitees": 105,
       "delai": {
-       "q1": 17,
-       "med": 62,
-       "q3": 91,
-       "n": 18
+       "q1": 44,
+       "med": 67,
+       "q3": 112,
+       "n": 105
       },
       "familles": 0.048,
       "direct": 0.581
      },
      {
       "pays": "Pays-Bas",
-      "marches": [
-       "nl"
-      ],
+      "marches": [],
       "nuitees": 92,
       "delai": {
-       "q1": 17,
-       "med": 27,
-       "q3": 72,
-       "n": 17
+       "q1": 29,
+       "med": 54,
+       "q3": 143,
+       "n": 92
       },
       "familles": 0.283,
       "direct": 0.761
@@ -34489,10 +34995,10 @@
       "marches": [],
       "nuitees": 89,
       "delai": {
-       "q1": 2,
-       "med": 5,
-       "q3": 21,
-       "n": 28
+       "q1": 5,
+       "med": 19,
+       "q3": 31,
+       "n": 89
       },
       "familles": 0.169,
       "direct": 0.921
@@ -34500,15 +35006,14 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 86,
       "delai": {
-       "q1": 4,
-       "med": 13,
-       "q3": 72,
-       "n": 20
+       "q1": 12,
+       "med": 72,
+       "q3": 165,
+       "n": 86
       },
       "familles": 0.267,
       "direct": 0.605
@@ -34518,10 +35023,10 @@
       "marches": [],
       "nuitees": 86,
       "delai": {
-       "q1": 32,
-       "med": 79,
-       "q3": 315,
-       "n": 20
+       "q1": 36,
+       "med": 83,
+       "q3": 318,
+       "n": 86
       },
       "familles": 0.116,
       "direct": 0.244
@@ -34531,10 +35036,10 @@
       "marches": [],
       "nuitees": 57,
       "delai": {
-       "q1": 1,
-       "med": 4,
-       "q3": 92,
-       "n": 10
+       "q1": 5,
+       "med": 11,
+       "q3": 96,
+       "n": 57
       },
       "familles": 0.333,
       "direct": 0.246
@@ -34544,10 +35049,10 @@
       "marches": [],
       "nuitees": 50,
       "delai": {
-       "q1": 19,
-       "med": 82,
-       "q3": 89,
-       "n": 10
+       "q1": 21,
+       "med": 43,
+       "q3": 90,
+       "n": 50
       },
       "familles": 0,
       "direct": 0.36
@@ -34557,10 +35062,10 @@
       "marches": [],
       "nuitees": 509,
       "delai": {
-       "q1": 4,
-       "med": 16,
-       "q3": 61,
-       "n": 131
+       "q1": 13,
+       "med": 34,
+       "q3": 78,
+       "n": 509
       },
       "familles": 0.128,
       "direct": 0.432
@@ -34745,10 +35250,122 @@
      ]
     ],
     "delai": {
-     "q1": 8,
-     "med": 34,
-     "q3": 89,
-     "n": 2103
+     "q1": 20,
+     "med": 53,
+     "q3": 123,
+     "n": 8262
+    },
+    "delaisMarches": {
+     "fr": {
+      "q1": 22,
+      "med": 77,
+      "q3": 153,
+      "nuitees": 259,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "uk": {
+      "q1": 49,
+      "med": 156,
+      "q3": 228,
+      "nuitees": 354,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "tr": {
+      "q1": 90,
+      "med": 92,
+      "q3": 93,
+      "nuitees": 7,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "us": {
+      "q1": 24,
+      "med": 60,
+      "q3": 140,
+      "nuitees": 3327,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "be": {
+      "q1": 269,
+      "med": 271,
+      "q3": 273,
+      "nuitees": 8,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ch": {
+      "q1": 4,
+      "med": 43,
+      "q3": 305,
+      "nuitees": 51,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ae": {
+      "q1": 1,
+      "med": 2,
+      "q3": 4,
+      "nuitees": 6,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "pt": {
+      "q1": 79,
+      "med": 84,
+      "q3": 131,
+      "nuitees": 20,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "it": {
+      "q1": 46,
+      "med": 93,
+      "q3": 118,
+      "nuitees": 61,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "br": {
+      "q1": 11,
+      "med": 59,
+      "q3": 137,
+      "nuitees": 50,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     }
     }
    },
    {
@@ -34911,7 +35528,12 @@
       "canaux": {
        "direct": 6
       },
-      "delai": null,
+      "delai": {
+       "q1": 11,
+       "med": 22,
+       "q3": 63,
+       "n": 6
+      },
       "familles": 0,
       "personnesParChambre": 3.3,
       "pays": [
@@ -35055,13 +35677,13 @@
        "agences": 67
       },
       "delai": {
-       "q1": 43,
-       "med": 93,
-       "q3": 156,
-       "n": 53
+       "q1": 46,
+       "med": 96,
+       "q3": 150,
+       "n": 371
       },
       "familles": 0.377,
-      "personnesParChambre": 4.7,
+      "personnesParChambre": 3.1,
       "pays": [
        {
         "pays": "France",
@@ -35227,13 +35849,13 @@
        "agences": 60
       },
       "delai": {
-       "q1": 17,
-       "med": 59,
-       "q3": 169,
-       "n": 42
+       "q1": 34,
+       "med": 97,
+       "q3": 176,
+       "n": 294
       },
       "familles": 0.187,
-      "personnesParChambre": 2,
+      "personnesParChambre": 1.8,
       "pays": [
        {
         "pays": "France",
@@ -35404,13 +36026,13 @@
        "agences": 43
       },
       "delai": {
-       "q1": 38,
-       "med": 77,
-       "q3": 131,
-       "n": 42
+       "q1": 64,
+       "med": 111,
+       "q3": 157,
+       "n": 344
       },
       "familles": 0.148,
-      "personnesParChambre": 3.3,
+      "personnesParChambre": 2,
       "pays": [
        {
         "pays": "France",
@@ -35581,13 +36203,13 @@
        "agences": 74
       },
       "delai": {
-       "q1": 41,
-       "med": 79,
-       "q3": 137,
-       "n": 12
+       "q1": 51,
+       "med": 85,
+       "q3": 140,
+       "n": 127
       },
       "familles": 0.441,
-      "personnesParChambre": 4,
+      "personnesParChambre": 3.7,
       "pays": [
        {
         "pays": "France",
@@ -35736,16 +36358,14 @@
      {
       "pays": "France",
       "marches": [
-       "frc",
-       "fra",
-       "frb"
+       "fr"
       ],
       "nuitees": 504,
       "delai": {
-       "q1": 34,
-       "med": 77,
-       "q3": 156,
-       "n": 74
+       "q1": 45,
+       "med": 91,
+       "q3": 155,
+       "n": 504
       },
       "familles": 0.256,
       "direct": 0.79
@@ -35757,10 +36377,10 @@
       ],
       "nuitees": 152,
       "delai": {
-       "q1": 31,
-       "med": 88,
-       "q3": 152,
-       "n": 17
+       "q1": 37,
+       "med": 125,
+       "q3": 170,
+       "n": 152
       },
       "familles": 0.237,
       "direct": 0.77
@@ -35772,10 +36392,10 @@
       ],
       "nuitees": 124,
       "delai": {
-       "q1": 43,
-       "med": 68,
-       "q3": 123,
-       "n": 16
+       "q1": 41,
+       "med": 70,
+       "q3": 124,
+       "n": 124
       },
       "familles": 0.403,
       "direct": 0.484
@@ -35783,28 +36403,29 @@
      {
       "pays": "Suisse",
       "marches": [
-       "ge",
-       "vd"
+       "ch"
       ],
       "nuitees": 84,
       "delai": {
-       "q1": 7,
-       "med": 46,
-       "q3": 135,
-       "n": 9
+       "q1": 139,
+       "med": 160,
+       "q3": 352,
+       "n": 84
       },
       "familles": 0.107,
       "direct": 1
      },
      {
       "pays": "Émirats arabes unis",
-      "marches": [],
+      "marches": [
+       "ae"
+      ],
       "nuitees": 62,
       "delai": {
-       "q1": 58,
-       "med": 116,
-       "q3": 242,
-       "n": 7
+       "q1": 66,
+       "med": 118,
+       "q3": 246,
+       "n": 62
       },
       "familles": 0.113,
       "direct": 1
@@ -35813,7 +36434,12 @@
       "pays": "Pologne",
       "marches": [],
       "nuitees": 29,
-      "delai": null,
+      "delai": {
+       "q1": 87,
+       "med": 94,
+       "q3": 101,
+       "n": 29
+      },
       "familles": 0,
       "direct": 1
      },
@@ -35823,7 +36449,12 @@
        "be"
       ],
       "nuitees": 25,
-      "delai": null,
+      "delai": {
+       "q1": 31,
+       "med": 67,
+       "q3": 110,
+       "n": 25
+      },
       "familles": 0,
       "direct": 0.84
      },
@@ -35831,7 +36462,12 @@
       "pays": "Canada",
       "marches": [],
       "nuitees": 22,
-      "delai": null,
+      "delai": {
+       "q1": 19,
+       "med": 33,
+       "q3": 235,
+       "n": 22
+      },
       "familles": 0,
       "direct": 0.682
      },
@@ -35839,33 +36475,55 @@
       "pays": "Sénégal",
       "marches": [],
       "nuitees": 22,
-      "delai": null,
+      "delai": {
+       "q1": 101,
+       "med": 106,
+       "q3": 166,
+       "n": 22
+      },
       "familles": 0,
       "direct": 1
      },
      {
       "pays": "Pays-Bas",
-      "marches": [
-       "nl"
-      ],
+      "marches": [],
       "nuitees": 21,
-      "delai": null,
+      "delai": {
+       "q1": 50,
+       "med": 124,
+       "q3": 129,
+       "n": 21
+      },
       "familles": 0.667,
       "direct": 1
      },
      {
       "pays": "Arabie saoudite",
-      "marches": [],
+      "marches": [
+       "sa"
+      ],
       "nuitees": 14,
-      "delai": null,
+      "delai": {
+       "q1": 38,
+       "med": 41,
+       "q3": 148,
+       "n": 14
+      },
       "familles": 1,
       "direct": 0.5
      },
      {
       "pays": "Russie",
-      "marches": [],
+      "marches": [
+       "ru"
+      ],
       "nuitees": 14,
-      "delai": null,
+      "delai": {
+       "q1": 76,
+       "med": 79,
+       "q3": 110,
+       "n": 14
+      },
       "familles": 0.5,
       "direct": 0.5
      },
@@ -35874,10 +36532,10 @@
       "marches": [],
       "nuitees": 69,
       "delai": {
-       "q1": 17,
-       "med": 68,
-       "q3": 95,
-       "n": 11
+       "q1": 22,
+       "med": 72,
+       "q3": 97,
+       "n": 69
       },
       "familles": 0.522,
       "direct": 0.797
@@ -36059,10 +36717,111 @@
      ]
     ],
     "delai": {
-     "q1": 32,
-     "med": 79,
-     "q3": 152,
-     "n": 152
+     "q1": 47,
+     "med": 98,
+     "q3": 158,
+     "n": 1142
+    },
+    "delaisMarches": {
+     "fr": {
+      "q1": 42,
+      "med": 105,
+      "q3": 156,
+      "nuitees": 304,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "uk": {
+      "q1": 32,
+      "med": 63,
+      "q3": 132,
+      "nuitees": 61,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "us": {
+      "q1": 59,
+      "med": 92,
+      "q3": 129,
+      "nuitees": 79,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ru": {
+      "q1": 76,
+      "med": 79,
+      "q3": 110,
+      "nuitees": 14,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "sa": {
+      "q1": 146,
+      "med": 148,
+      "q3": 150,
+      "nuitees": 7,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "be": {
+      "q1": 31,
+      "med": 67,
+      "q3": 110,
+      "nuitees": 25,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ch": {
+      "q1": 150,
+      "med": 167,
+      "q3": 356,
+      "nuitees": 70,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "ae": {
+      "q1": 64,
+      "med": 93,
+      "q3": 248,
+      "nuitees": 55,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     },
+     "pt": {
+      "q1": 89,
+      "med": 91,
+      "q3": 93,
+      "nuitees": 7,
+      "medAvecGroupes": null,
+      "hivers": [
+       "Hiver 2024-2025",
+       "Hiver 2025-2026"
+      ]
+     }
     }
    }
   ],

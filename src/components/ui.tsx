@@ -44,7 +44,8 @@ export function PuceStatut({ code, libelle }: { code: StatutCode; libelle: strin
 
 /** Niveau lisible (urgence, intérêt, visibilité) : trois points pleins ou vides et un mot. */
 export function Niveau({ libelle, compact = false }: { libelle: string; compact?: boolean }) {
-  const n = /Élevée|Haut|Peu visible|Jamais/.test(libelle) ? 3 : /Moyenne|Moyen|peu cliquée/.test(libelle) ? 2 : /Non mesurée/.test(libelle) ? 0 : 1;
+  // Une seule règle : plus de points veut toujours dire plus prioritaire (urgence, intérêt, reste à gagner).
+  const n = /^(Élevée|Haut|Haute)/.test(libelle) ? 3 : /^(Moyenne|Moyen)/.test(libelle) ? 2 : /^Non mesur/.test(libelle) ? 0 : 1;
   const couleur = n === 3 ? "bg-cognac" : n === 2 ? "bg-ochre" : "bg-greige";
   return (
     <span className="inline-flex items-center gap-2 whitespace-nowrap">

@@ -185,3 +185,17 @@ export async function choisirSaison(saison: string, dateRejeu?: string) {
   depot().ecrireEtat("parametres", { ...lireParametres(), saison: s.id, ...(s.rejeu && date ? { dateRejeu: date } : {}) });
   rafraichir();
 }
+
+/** Marché choisi dans le sélecteur global ; null pour tous les marchés. */
+export async function choisirMarche(marche: string | null) {
+  depot().ecrireEtat("parametres", { ...lireParametres(), marche: marche || null });
+  rafraichir();
+}
+
+/** Vue par canal : taux de commission des plateformes (en %) et prix moyen d'une nuitée (en euros). */
+export async function enregistrerCanaux(commissionOta: number, prixMoyenNuitee: number) {
+  const c = Math.min(40, Math.max(0, Number(commissionOta) || 0));
+  const p = Math.min(5000, Math.max(0, Number(prixMoyenNuitee) || 0));
+  depot().ecrireEtat("parametres", { ...lireParametres(), commissionOta: c, prixMoyenNuitee: p });
+  rafraichir();
+}

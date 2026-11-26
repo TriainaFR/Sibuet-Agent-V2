@@ -1,11 +1,10 @@
 {
  "saison": "2026-2027",
- "note": "FR: arrêté du 22 octobre 2025. Angleterre: semaine majoritaire des conseils locaux, certains 8 au 12 février. Genève et Vaud: calendriers cantonaux. Belgique, Pays-Bas, USA: dates typiques à vérifier avant usage.",
+ "note": "FR: arrêté du 22 octobre 2025. Angleterre: semaine majoritaire des conseils locaux, certains 8 au 12 février. Genève et Vaud: calendriers cantonaux. Belgique, Pays-Bas, USA: dates typiques à vérifier avant usage. Nouveaux marchés (Turquie, Russie, Golfe, Grèce, Italie, Portugal, Brésil, Israël) : principales périodes de fêtes, à confirmer.",
  "marches": [
   {
-   "id": "frc",
-   "nom": "France zone C",
-   "zone_fr": "C",
+   "id": "fr",
+   "nom": "France",
    "periodes": [
     {
      "nom": "Noël",
@@ -13,55 +12,25 @@
      "fin": "2027-01-04"
     },
     {
-     "nom": "Hiver",
+     "nom": "Hiver zone A",
+     "debut": "2027-02-13",
+     "fin": "2027-03-01"
+    },
+    {
+     "nom": "Hiver zone B",
+     "debut": "2027-02-20",
+     "fin": "2027-03-08"
+    },
+    {
+     "nom": "Hiver zone C",
      "debut": "2027-02-06",
      "fin": "2027-02-22"
     }
-   ],
-   "source": "education.gouv.fr",
-   "verifie": true
+   ]
   },
   {
-   "id": "fra",
-   "nom": "France zone A",
-   "zone_fr": "A",
-   "periodes": [
-    {
-     "nom": "Noël",
-     "debut": "2026-12-19",
-     "fin": "2027-01-04"
-    },
-    {
-     "nom": "Hiver",
-     "debut": "2027-02-13",
-     "fin": "2027-03-01"
-    }
-   ],
-   "source": "education.gouv.fr",
-   "verifie": true
-  },
-  {
-   "id": "frb",
-   "nom": "France zone B",
-   "zone_fr": "B",
-   "periodes": [
-    {
-     "nom": "Noël",
-     "debut": "2026-12-19",
-     "fin": "2027-01-04"
-    },
-    {
-     "nom": "Hiver",
-     "debut": "2027-02-20",
-     "fin": "2027-03-08"
-    }
-   ],
-   "source": "education.gouv.fr",
-   "verifie": true
-  },
-  {
-   "id": "ge",
-   "nom": "Genève",
+   "id": "ch",
+   "nom": "Suisse",
    "periodes": [
     {
      "nom": "Noël",
@@ -69,31 +38,16 @@
      "fin": "2027-01-10"
     },
     {
-     "nom": "Février",
+     "nom": "Février Genève",
      "debut": "2027-02-13",
      "fin": "2027-02-21"
-    }
-   ],
-   "source": "ge.ch DIP",
-   "verifie": true
-  },
-  {
-   "id": "vd",
-   "nom": "Vaud",
-   "periodes": [
-    {
-     "nom": "Noël",
-     "debut": "2026-12-24",
-     "fin": "2027-01-10"
     },
     {
-     "nom": "Relâches",
+     "nom": "Relâches Vaud",
      "debut": "2027-02-06",
      "fin": "2027-02-14"
     }
-   ],
-   "source": "vd.ch",
-   "verifie": true
+   ]
   },
   {
    "id": "uk",
@@ -138,35 +92,6 @@
    "ecart_controle": "OpenHolidays : congé de détente du 8 au 14 février en Flandre et du 22 février au 7 mars en Fédération Wallonie-Bruxelles. La période saisie, 15 au 28 février, ne correspond à aucune des deux communautés."
   },
   {
-   "id": "nl",
-   "nom": "Pays-Bas",
-   "periodes": [
-    {
-     "nom": "Kerst",
-     "debut": "2026-12-19",
-     "fin": "2027-01-03"
-    },
-    {
-     "nom": "Voorjaar Zuid",
-     "debut": "2027-02-13",
-     "fin": "2027-02-21"
-    },
-    {
-     "nom": "Voorjaar Noord",
-     "debut": "2027-02-20",
-     "fin": "2027-02-28"
-    },
-    {
-     "nom": "Voorjaar Midden",
-     "debut": "2027-02-27",
-     "fin": "2027-03-07"
-    }
-   ],
-   "source": "rijksoverheid.nl",
-   "verifie": false,
-   "ecart_controle": "OpenHolidays : Noord et Midden du 20 au 28 février, Zuid à partir du 13 février. La période Midden saisie, 27 février au 7 mars, n'est pas confirmée."
-  },
-  {
    "id": "us",
    "nom": "États-Unis",
    "periodes": [
@@ -183,6 +108,108 @@
    ],
    "source": "calendrier fédéral",
    "verifie": true
+  },
+  {
+   "id": "tr",
+   "nom": "Turquie",
+   "periodes": [
+    {
+     "nom": "Vacances semestrielles",
+     "debut": "2027-01-23",
+     "fin": "2027-02-07"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "ru",
+   "nom": "Russie",
+   "periodes": [
+    {
+     "nom": "Fêtes du Nouvel An",
+     "debut": "2026-12-31",
+     "fin": "2027-01-10"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "sa",
+   "nom": "Arabie saoudite",
+   "periodes": [],
+   "ecart_controle": "Aucune période de vacances retenue : le marché suit les dates du sujet."
+  },
+  {
+   "id": "ae",
+   "nom": "Émirats arabes unis",
+   "periodes": [
+    {
+     "nom": "Vacances d'hiver",
+     "debut": "2026-12-12",
+     "fin": "2027-01-03"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "gr",
+   "nom": "Grèce",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-24",
+     "fin": "2027-01-07"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "pt",
+   "nom": "Portugal",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-19",
+     "fin": "2027-01-03"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "it",
+   "nom": "Italie",
+   "periodes": [
+    {
+     "nom": "Noël",
+     "debut": "2026-12-23",
+     "fin": "2027-01-06"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "br",
+   "nom": "Brésil",
+   "periodes": [
+    {
+     "nom": "Carnaval",
+     "debut": "2027-02-06",
+     "fin": "2027-02-10"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
+  },
+  {
+   "id": "il",
+   "nom": "Israël",
+   "periodes": [
+    {
+     "nom": "Hanoukka",
+     "debut": "2026-12-04",
+     "fin": "2026-12-12"
+    }
+   ],
+   "ecart_controle": "Dates de vacances à confirmer avec Sibuet (source : calendriers publics usuels)."
   }
  ],
  "controle_2026-10-05": "Recoupement automatique avec l'API OpenHolidays le 5 oct. 2026. Les écarts sont signalés, les dates saisies par Jérôme restent celles du calcul."

@@ -3,6 +3,7 @@ import { diffDays, formatDate, iso } from "@/lib/dates";
 import { dateExcel, lireFeuille } from "@/lib/xlsx";
 import { releve } from "@/connecteurs/types";
 import { depot } from "@/stockage/depot";
+import { lireMarches } from "@/services/reference";
 import type {
   CanalGroupe,
   DonneesAsterio,
@@ -36,6 +37,8 @@ export interface LigneAsterio {
   anticipation: number | null;
   personnes: number | null;
   enfants: number | null;
+  /** Segment groupe (« Groupe Events ») : écarté des calculs de demande et de délai. */
+  groupe: boolean;
 }
 
 const norm = (s: unknown) =>
@@ -56,6 +59,7 @@ const COLONNES = {
   anticipation: ["anticipation moyenne", "anticipation"],
   personnes: ["nb personnes"],
   enfants: ["nb enfants"],
+  segment: ["segments", "segment"],
 } as const;
 
 /** Un export Asterio « nuitées » se reconnaît à ses colonnes date de nuitée et chambres occupées. */
@@ -113,6 +117,7 @@ export async function lireExportAsterio(contenu: Buffer): Promise<{ lignes: Lign
       anticipation: col.anticipation >= 0 ? nombre(r[col.anticipation]) : null,
       personnes: col.personnes >= 0 ? nombre(r[col.personnes]) : null,
       enfants: col.enfants >= 0 ? nombre(r[col.enfants]) : null,
+      groupe: col.segment >= 0 && /groupe/.test(norm(r[col.segment])),
     });
   }
   return { lignes, nuitsMin, nuitsMax };
@@ -132,14 +137,12 @@ const NOMS_PAYS: Record<string, string> = {
   "hong kong": "Hong Kong",
   "chine": "Chine",
 };
-const MARCHES_PAYS: Record<string, MarcheId[]> = {
-  France: ["frc", "fra", "frb"],
-  Suisse: ["ge", "vd"],
-  "Royaume-Uni": ["uk"],
-  Belgique: ["be"],
-  "Pays-Bas": ["nl"],
-  "États-Unis": ["us"],
-};
+/** Pays Asterio vers marchés suivis : construit à partir de data/reference/marches.json. */
+let MARCHES_PAYS: Record<string, MarcheId[]> = {};
+export function definirMarches(marches: { id: string; pays: string }[]) {
+  MARCHES_PAYS = {};
+  for (const m of marches) MARCHES_PAYS[m.pays] = [...(MARCHES_PAYS[m.pays] ?? []), m.id];
+}
 
 export function nomPays(brut: string) {
   const n = norm(brut);
@@ -184,7 +187,7 @@ function quartiles(valeurs: { v: number; poids: number }[]): Quartiles | null {
     }
     return t.at(-1)!.v;
   };
-  return { q1: q(0.25), med: q(0.5), q3: q(0.75), n: valeurs.length };
+  return { q1: q(0.25), med: q(0.5), q3: q(0.75), n: Math.round(total) };
 }
 
 const r3 = (n: number) => Math.round(n * 1000) / 1000;
@@ -209,12 +212,15 @@ function familles(lignes: LigneAsterio[]) {
   return part(connues.filter((l) => l.enfants! > 0).reduce((s, l) => s + l.chambres, 0), connues.reduce((s, l) => s + l.chambres, 0));
 }
 function personnesParChambre(lignes: LigneAsterio[]) {
-  const connues = lignes.filter((l) => l.personnes !== null && l.personnes > 0 && l.personnes < 40 * l.chambres);
+  const connues = lignes.filter((l) => l.personnes !== null && l.personnes > 0 && l.personnes <= 8 * l.chambres);
   if (connues.length < 5) return null;
   return Math.round((connues.reduce((s, l) => s + l.personnes!, 0) / connues.reduce((s, l) => s + l.chambres, 0)) * 10) / 10;
 }
-/** Délai des séjours : la première nuit porte l'anticipation. */
-const delaiSejours = (lignes: LigneAsterio[]) => quartiles(lignes.filter((l) => l.anticipation !== null).map((l) => ({ v: l.anticipation!, poids: l.chambres })));
+/**
+ * Délai de réservation : date de la nuit moins date de réservation, pondéré par les nuitées, hors groupes.
+ * La colonne « Anticipation moyenne » d'Asterio n'est pas utilisée (vide sur trois lignes sur quatre).
+ */
+const delaiSejours = (lignes: LigneAsterio[]) => quartiles(lignes.filter((l) => !l.groupe).map((l) => ({ v: diffDays(l.nuit, l.reservee), poids: l.chambres })));
 const somme = (lignes: LigneAsterio[]) => lignes.reduce((s, l) => s + l.chambres, 0);
 
 // ── Agrégation ───────────────────────────────────────────────────────────────
@@ -340,15 +346,28 @@ export function agregerHistorique(
       calendrierAchat,
       delai: delaiSejours(ls),
     };
+    // Délais par marché : deux derniers hivers complets, nuits de décembre à mars, hors groupes.
+    const hivers = saisons.filter((x) => x.complete && /^hiver/i.test(x.nom)).slice(-2);
+    if (hivers.length) {
+      const dansHivers = ls.filter((l) => hivers.some((x) => l.nuit >= x.debut && l.nuit <= `${x.fin.slice(0, 4)}-03-31`));
+      h.delaisMarches = {};
+      for (const [paysNom, ids] of Object.entries(MARCHES_PAYS)) {
+        const duPays = dansHivers.filter((l) => l.pays && nomPays(l.pays) === paysNom);
+        const q = delaiSejours(duPays);
+        if (!q) continue;
+        const tous = quartiles(duPays.map((l) => ({ v: diffDays(l.nuit, l.reservee), poids: l.chambres })));
+        for (const id of ids) h.delaisMarches[id] = { q1: q.q1, med: q.med, q3: q.q3, nuitees: q.n, medAvecGroupes: tous && tous.med !== q.med ? tous.med : null, hivers: hivers.map((x) => x.nom) };
+      }
+    }
     if (maison.id === pilote) {
       const detail = new Map<string, number>();
       for (const l of ls) {
-        const cle = [l.nuit, l.reservee, l.pays ? nomPays(l.pays) : "", l.canal].join("|");
+        const cle = [l.nuit, l.reservee, l.pays ? nomPays(l.pays) : "", l.canal, l.groupe ? 1 : 0].join("|");
         detail.set(cle, (detail.get(cle) ?? 0) + l.chambres);
       }
       h.detail = [...detail.entries()].map(([cle, n]) => {
-        const [nuit, reservee, p, canal] = cle.split("|");
-        return [nuit, reservee, p, n, canal as CanalGroupe];
+        const [nuit, reservee, p, canal, g] = cle.split("|");
+        return Number(g) ? [nuit, reservee, p, n, canal as CanalGroupe, 1] : [nuit, reservee, p, n, canal as CanalGroupe];
       });
     }
     resultat.push(h);
@@ -367,6 +386,7 @@ export function agregerHistorique(
 
 /** Lit plusieurs exports et les agrège. */
 export async function importerExportsAsterio(fichiers: { nom: string; contenu: Buffer }[], maisons: Maison[], pilote: string) {
+  definirMarches(lireMarches());
   const toutes: LigneAsterio[] = [];
   let min: string | null = null;
   let max: string | null = null;
@@ -385,10 +405,7 @@ export async function importerExportsAsterio(fichiers: { nom: string; contenu: B
 /** Délais par marché suivi, en semaines, à partir des pays assez représentés (10 séjours au moins). */
 export function delaisPilote(h: HistoriqueMaison): DonneesAsterio["delais"] {
   const delais: DonneesAsterio["delais"] = {};
-  for (const p of h.pays) {
-    if (!p.delai || p.delai.n < 10) continue;
-    for (const m of p.marches) delais[m] = { q1: sem(p.delai.q1), med: sem(p.delai.med), q3: sem(p.delai.q3), n: p.delai.n };
-  }
+  for (const [m, d] of Object.entries(h.delaisMarches ?? {})) if (d.nuitees >= 15) delais[m] = { q1: sem(d.q1), med: sem(d.med), q3: sem(d.q3), n: d.nuitees };
   return delais;
 }
 const sem = (jours: number) => Math.round((jours / 7) * 10) / 10;

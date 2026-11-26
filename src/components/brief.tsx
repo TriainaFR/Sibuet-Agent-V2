@@ -53,16 +53,15 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
             </button>
           )}
           <button
-            disabled={!actif || etat === "encours"}
+            disabled={etat === "encours"}
             onClick={produire}
-            title={actif ? "" : "Le brief est produit après validation de l'activation"}
-            className="bouton !px-4 !py-2"
+            className={actif ? "bouton !px-4 !py-2" : "bouton-clair !px-4 !py-2"}
           >
-            {etat === "encours" ? "Rédaction…" : etat === "fini" ? "Refaire le brief" : "Produire le brief"}
+            {etat === "encours" ? "Rédaction…" : actif ? (etat === "fini" ? "Refaire le brief" : "Produire le brief") : etat === "fini" ? "Revoir l'aperçu" : "Aperçu du brief"}
           </button>
         </div>
       </div>
-      {!actif && etat === "repos" && <p className="mt-2 text-xs text-ink-soft">Disponible après validation de l&apos;activation.</p>}
+      {!actif && etat === "repos" && <p className="mt-2 text-xs text-ink-soft">Aperçu avant validation. Une fois l&apos;action validée, le brief complet est rédigé.</p>}
       {texte && (
         <div className="mt-3 max-h-[60vh] overflow-y-auto whitespace-pre-wrap border border-line bg-white p-4 text-sm leading-relaxed">{texte}</div>
       )}

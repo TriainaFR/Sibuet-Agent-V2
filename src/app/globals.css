@@ -336,3 +336,23 @@ details > summary::-webkit-details-marker {
     animation: apparition 0.6s ease-out both;
   }
 }
+
+/* Plan de la semaine : impression sur A4, sans le cadre de l'application. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 12mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  .carte-plan {
+    break-inside: avoid;
+  }
+}
+
+/* Action ciblée depuis « Cette semaine » : un filet de la couleur de la maison. */
+details:target {
+  box-shadow: 0 0 0 2px var(--maison-accent);
+}
