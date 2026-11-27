@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     siteName: "Agent Sibuet · Maisons & Hôtels Sibuet",
     title: "Agent Sibuet",
     description,
-    images: [{ url: "/brand/partage.jpg", width: 1200, height: 630, alt: "Agent Sibuet, Maisons & Hôtels Sibuet" }],
+    images: [{ url: "/brand/partage-sibuet.jpg", width: 1200, height: 630, alt: "Agent Sibuet, Maisons & Hôtels Sibuet" }],
   },
-  twitter: { card: "summary_large_image", title: "Agent Sibuet", description, images: ["/brand/partage.jpg"] },
+  twitter: { card: "summary_large_image", title: "Agent Sibuet", description, images: ["/brand/partage-sibuet.jpg"] },
   icons: { icon: "/brand/favicon.jpg" },
   robots: { index: false, follow: false },
 };

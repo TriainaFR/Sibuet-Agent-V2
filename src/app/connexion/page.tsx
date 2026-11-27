@@ -31,10 +31,10 @@ export default async function Connexion({ searchParams }: PageProps<"/connexion"
           <FormulaireConnexion suite={typeof suite === "string" ? suite : "/"} avecIdentifiant={avecIdentifiant} />
           <p className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-[#8a7a6c]">
             <ShieldCheck className="mt-px h-3.5 w-3.5 shrink-0" />
-            Accès réservé aux équipes Sibuet, Allin Conseil et Triaina. Chaque connexion est enregistrée.
+            Accès réservé aux équipes Sibuet et Allin Conseil. Chaque connexion est enregistrée.
           </p>
         </div>
-        <p className="text-xs text-[#8a7a6c]">Maisons &amp; Hôtels Sibuet · Allin Conseil · Triaina</p>
+        <p className="text-xs text-[#8a7a6c]">Maisons &amp; Hôtels Sibuet · Allin Conseil</p>
       </div>
 
       {/* Photo de maison et aperçu de l'agent. La photo reste sous sa taille d'origine (1 600 px) pour rester nette, même sur écran Retina. */}
