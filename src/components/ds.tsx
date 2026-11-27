@@ -65,10 +65,10 @@ export function Bloc({ children, className = "" }: { children: ReactNode; classN
 export function Nuancier({ nom, hex, role }: { nom: string; hex: string; role: string }) {
   return (
     <div className="min-w-0">
-      <div className="h-16 border border-black/5" style={{ background: hex }} />
-      <p className="mt-2 text-sm font-semibold">{nom}</p>
-      <p className="text-xs text-ink-soft">
-        <span className="font-mono">{hex}</span> · {role}
+      <div className="h-14 rounded-lg shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]" style={{ background: hex }} />
+      <p className="mt-2 text-[0.8125rem] font-medium">{nom}</p>
+      <p className="text-xs text-taupe">
+        <span className="tabular-nums">{hex}</span> · {role}
       </p>
     </div>
   );
