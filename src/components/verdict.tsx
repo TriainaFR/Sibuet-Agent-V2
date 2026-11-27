@@ -25,7 +25,7 @@ export function CourbeVerdict({ v, date, hauteur = 220 }: { v: VerdictSujet; dat
       ]}
       ticksX={v.courbe.filter((_, i, t) => i % 6 === 0 || (i === t.length - 1 && i % 6 >= 3)).map((p) => ({ x: x(p.date), libelle: formatDate(p.date) }))}
       libellesX={v.courbe.map((p) => ({ x: x(p.date), libelle: `Au ${formatDate(p.date, true)}` }))}
-      repere={{ x: x(date), libelle: `rejoué au ${formatDate(date)}` }}
+      repere={{ x: x(date), libelle: `démo au ${formatDate(date)}` }}
     />
   );
 }

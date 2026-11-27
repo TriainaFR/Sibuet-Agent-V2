@@ -35,7 +35,7 @@ export default async function PlanSemaine() {
               Semaine du {jourSemaine(ctx.date)} {formatDate(ctx.date, true)}
             </h1>
           </div>
-          {ctx.saison.rejeu && <p className="bg-[#7a3f24] px-3 py-1.5 text-xs font-semibold text-white">Démonstration rejouée, données réelles, rien n&apos;a été envoyé</p>}
+          {ctx.saison.rejeu && <p className="bg-[#7a3f24] px-3 py-1.5 text-xs font-semibold text-white">Démo au {formatDate(ctx.date, true)} : vraies ventes du Lodge Park, rien n&apos;est envoyé</p>}
         </header>
 
         {bilan && (

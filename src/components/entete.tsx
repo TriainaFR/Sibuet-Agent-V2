@@ -1,4 +1,4 @@
-import { BookOpen, History, LogOut, Wrench } from "lucide-react";
+import { BookOpen, LogOut, Wrench } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { seDeconnecter } from "@/app/connexion/actions";
@@ -6,6 +6,7 @@ import { formatDate, jourSemaine } from "@/lib/dates";
 import { protectionActive } from "@/lib/session";
 import { lireHistorique } from "@/services/contexte";
 import { dateDeTravail, lireCalculs, lireMaisons, lireMarches, lireParametres, lireSaisons, saisonActive } from "@/services/reference";
+import { BandeauDemo } from "./bandeau-demo";
 import { Coquille } from "./coquille";
 import { SelecteurMaison } from "./selecteur-maison";
 import { SelecteurMarche } from "./selecteur-marche";
@@ -54,19 +55,7 @@ export function Entete({ children }: { children: ReactNode }) {
           )}
         </div>
       }
-      bandeau={
-        saison.rejeu ? (
-          <div className="flex items-center gap-2 bg-[#8a4b2a] px-4 py-2 text-[0.8125rem] text-white print:hidden sm:px-6">
-            <History className="h-4 w-4 shrink-0 opacity-90" strokeWidth={1.8} />
-            <p className="min-w-0">
-              <span className="font-semibold">
-                Démonstration rejouée au {jourSemaine(date)} {formatDate(date, true)}, données réelles
-              </span>
-              <span className="hidden text-white/80 md:inline"> · ventes Asterio du Lodge Park, rien n&apos;a été envoyé</span>
-            </p>
-          </div>
-        ) : null
-      }
+      bandeau={saison.rejeu ? <BandeauDemo jour={jourSemaine(date)} date={formatDate(date, true)} saison={saison.nom} /> : null}
     >
       {children}
     </Coquille>

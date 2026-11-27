@@ -34,7 +34,7 @@ export default async function Mesure() {
           <div>
             <p className="text-base font-semibold">Dans cette démonstration, aucune action n&apos;a été lancée</p>
             <p className="mt-2 max-w-3xl text-[0.95rem] leading-relaxed text-ink-soft">
-              La saison est rejouée au {formatDate(ctx.date, true)} avec les ventes réelles. Ce que l&apos;agent propose n&apos;a jamais été envoyé : la suite de l&apos;hiver
+              La démo se place au {formatDate(ctx.date, true)}, avec les vraies ventes du Lodge Park. Ce que l&apos;agent propose n&apos;a jamais été envoyé : la suite de l&apos;hiver
               montre donc ce qui s&apos;est passé <strong className="text-ink">sans</strong> ses actions. On ne peut pas en tirer le gain d&apos;une action. On peut vérifier
               que l&apos;agent avait vu juste : l&apos;hiver a fini à 2 059 nuitées contre 2 430, alors que l&apos;agent signalait le 16 octobre une avance fragile, portée par
               quelques marchés lointains, avec la France déjà en recul.
@@ -45,8 +45,8 @@ export default async function Mesure() {
       )}
       {verdict.length > 0 && (
         <section id="verdict" className="mb-14 scroll-mt-32">
-          <EnTete surtitre={`${ctx.saison.nom}, rejoué au ${formatDate(ctx.date, true)}`} titre="Ce qui s'est passé ensuite">
-            La saison est terminée : on sait ce que chaque période a donné. À gauche, ce que l&apos;agent voyait à la date rejouée ; à droite, le résultat final,
+          <EnTete surtitre={`${ctx.saison.nom}, démo au ${formatDate(ctx.date, true)}`} titre="Ce qui s'est passé ensuite">
+            La saison est terminée : on sait ce que chaque période a donné. À gauche, ce que l&apos;agent voyait à la date de la démo ; à droite, le résultat final,
             chaque fois comparé à l&apos;hiver précédent. C&apos;est la boucle de mesure, sur des données réelles.
           </EnTete>
           <TableauVerdict verdict={verdict} date={ctx.date} />

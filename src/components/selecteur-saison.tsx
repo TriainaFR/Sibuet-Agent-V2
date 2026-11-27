@@ -51,7 +51,7 @@ export function SelecteurSaison({ saisons, active, date, majLe }: { saisons: Sai
         </span>
         <span className="min-w-0 flex-1">
           <span className="block truncate text-[0.8125rem] font-medium text-ink">{s.nom}</span>
-          <span className="block truncate text-xs text-taupe">{s.rejeu ? `Rejouée au ${dateCourte(date)}` : majLe ? `Calcul du ${dateCourte(majLe)}` : "En cours"}</span>
+          <span className="block truncate text-xs text-taupe">{s.rejeu ? `Démo au ${dateCourte(date)}` : majLe ? `Calcul du ${dateCourte(majLe)}` : "En cours"}</span>
         </span>
         <ChevronsUpDown className="h-3.5 w-3.5 shrink-0 text-taupe" />
       </button>
@@ -62,7 +62,7 @@ export function SelecteurSaison({ saisons, active, date, majLe }: { saisons: Sai
               {x.rejeu ? (
                 <>
                   <p className="flex items-center gap-2 text-sm font-semibold">
-                    <History className="h-3.5 w-3.5 text-cognac" /> {x.nom}, rejouée
+                    <History className="h-3.5 w-3.5 text-cognac" /> {x.nom}, en démo
                   </p>
                   <p className="mt-0.5 text-xs leading-snug text-ink-soft">
                     L&apos;agent comme il aurait travaillé à cette date, avec les réservations réellement enregistrées. Choisissez le jour :

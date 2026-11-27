@@ -32,7 +32,7 @@ export default async function VosDonnees() {
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
       {saisonActive().rejeu && (
         <p className="mb-5 rounded-lg bg-cognac/8 px-4 py-3 text-sm text-[#6e3c22]">
-          Vous regardez l&apos;{saisonActive().nom.toLowerCase()} rejoué : l&apos;agent y utilise les réservations réelles. Cette page prépare la saison en cours,
+          Vous êtes dans la démo de l&apos;{saisonActive().nom.toLowerCase()}, avec les vraies ventes. Cette page prépare la saison en cours,
           l&apos;{saisonCourante().nom.toLowerCase()}.
         </p>
       )}

@@ -84,7 +84,7 @@ export default async function Canaux() {
             ))}
           {ctx.saison.rejeu && (
             <p className="text-xs text-ink-soft">
-              L&apos;hiver {v.hiver.nom.replace("hiver ", "")} est affiché en entier parce que la démonstration est rejouée : au {formatDate(ctx.date, true)}, on n&apos;en connaissait que le
+              L&apos;hiver {v.hiver.nom.replace("hiver ", "")} est affiché en entier parce que la démo se place dans le passé : au {formatDate(ctx.date, true)}, on n&apos;en connaissait que le
               réservé à date.
             </p>
           )}

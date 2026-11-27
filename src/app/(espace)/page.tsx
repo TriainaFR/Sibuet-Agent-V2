@@ -326,7 +326,7 @@ export default async function CetteSemaine() {
                     { ok: true, t: "Ventes Asterio du Lodge Park, connues à cette date et un an plus tôt" },
                     { ok: true, t: "Délais de réservation mesurés par marché, hors groupes" },
                     { ok: true, t: "Plan d'envois 2025-2026 de Sibuet et vacances de chaque marché" },
-                    { ok: false, t: "Délais, GA4 et Semrush couvrent aussi la saison rejouée : un léger regard en arrière" },
+                    { ok: false, t: "Délais, GA4 et Semrush couvrent aussi l'hiver de la démo : un léger regard en arrière" },
                     { ok: false, t: "Agenda de Megève : dates de la saison suivante ramenées d'un an" },
                     { ok: false, t: "Aucune action n'a été envoyée" },
                   ].map((x) => (
