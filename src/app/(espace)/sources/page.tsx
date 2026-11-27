@@ -45,7 +45,7 @@ export default async function Sources() {
       <FluxDonnees etats={etats} />
 
       <section className="mt-10">
-        <h2 className="font-display text-2xl">Ce que chaque source apporte</h2>
+        <h2 className="text-base font-semibold">Ce que chaque source apporte</h2>
         <ul className="mt-4 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {connecteurs
             .filter((c) => c.statut !== "à brancher")
@@ -63,7 +63,7 @@ export default async function Sources() {
         </ul>
         <p className="mt-4 text-sm text-ink-soft">
           Le détail des connecteurs, la routine et les réglages du calcul sont dans les{" "}
-          <Link href="/admin" className="font-semibold text-maison underline-offset-4 hover:underline">
+          <Link href="/admin" className="font-semibold text-nav underline-offset-4 hover:underline">
             coulisses techniques
           </Link>
           .

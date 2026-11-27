@@ -1,4 +1,4 @@
-import { ArrowLeft, ChevronDown, Download } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import Image from "next/image";
 import { IconeCanal } from "@/components/icones";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import { Suspense } from "react";
 import { Brief } from "@/components/brief";
 import { GrilleMarches, TableauMarches } from "@/components/grille-marches";
 import { Onglets } from "@/components/onglets";
-import { Aide, Champ, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
+import { Aide, Champ, EnTetePage, Marches, Niveau, Origine, Puce, PuceStatut, Vide } from "@/components/ui";
 import { BlocDecision } from "@/components/bloc-decision";
 import { DecisionRapide } from "@/components/decision-rapide";
 import { OuvrirAncre } from "@/components/ouvrir-ancre";
@@ -64,34 +64,33 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
 
   const essentiel = (
     <div className="space-y-6">
-      <div className="grid grid-cols-2 border border-line bg-white lg:grid-cols-4">
+      <div className="grid grid-cols-2 rounded-xl border border-line bg-white lg:grid-cols-4">
         {[
           { label: "Urgence", contenu: <Niveau libelle={urgenceLibelle(s.urgence)} />, texte: s.fenetre ? `Les clients réservent du ${formatRange(s.fenetre.debut, s.fenetre.fin)}` : "Sur prévision de neige" },
           { label: "Intérêt", contenu: <Niveau libelle={interetLibelle(interet(s))} />, texte: "Ventes, visites du site et recherches, par marché" },
           { label: "Reste à gagner sur Google", contenu: <Niveau libelle={visibiliteLibelle(s.ecart)} />, texte: `Pour le marché en tête : ${visibiliteExplication(s.ecart)}` },
           {
             label: "Première action",
-            contenu: <span className="font-display text-2xl leading-none">{s.premiereAction ? (s.premiereAction <= ctx.date ? "Maintenant" : formatDate(s.premiereAction, true)) : "Aucune"}</span>,
+            contenu: <span className="text-base font-semibold leading-none">{s.premiereAction ? (s.premiereAction <= ctx.date ? "Maintenant" : formatDate(s.premiereAction, true)) : "Aucune"}</span>,
             texte: s.premiereAction && s.premiereAction > ctx.date ? relatif(s.premiereAction, ctx.date) : "Voir l'onglet Actions",
           },
         ].map((x, i) => (
           <div key={x.label} className={`p-5 ${i % 2 ? "border-l border-line" : ""} ${i >= 2 ? "border-t border-line lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}>
-            <p className="eyebrow text-[0.6rem] text-taupe">{x.label}</p>
+            <p className="text-xs font-medium text-taupe">{x.label}</p>
             <div className="mt-2.5">{x.contenu}</div>
             <p className="mt-2 text-sm text-ink-soft">{x.texte}</p>
           </div>
         ))}
       </div>
-      <div className="grid gap-px overflow-hidden border border-line bg-line lg:grid-cols-3">
+      <div className="grid gap-px overflow-hidden rounded-xl border border-line bg-line lg:grid-cols-3">
         {[
-          ["01", "Pourquoi ce sujet", s.pourquoi],
-          ["02", "Pourquoi maintenant", s.maintenant || "Rien de pressant à cette date."],
-          ["03", "Ce qui change dans le plan", s.changement],
-        ].map(([n, t, x]) => (
-          <div key={n} className="bg-white p-6">
-            <p className="font-display text-4xl text-greige">{n}</p>
-            <p className="titre-capitales mt-2 text-lg">{t}</p>
-            <p className="mt-2 leading-relaxed text-ink-soft">{x}</p>
+          ["Pourquoi ce sujet", s.pourquoi],
+          ["Pourquoi maintenant", s.maintenant || "Rien de pressant à cette date."],
+          ["Ce qui change dans le plan", s.changement],
+        ].map(([t, x]) => (
+          <div key={t} className="bg-white p-5">
+            <p className="text-[0.8125rem] font-semibold">{t}</p>
+            <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-ink-soft">{x}</p>
           </div>
         ))}
       </div>
@@ -100,17 +99,17 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
         if (!v) return null;
         const e = v.finalN1 ? v.final / v.finalN1 - 1 : null;
         return (
-          <div className="grid gap-4 border-l-2 border-cognac bg-white p-5 sm:p-6 lg:grid-cols-[1fr_1.5fr]">
+          <div className="grid gap-4 rounded-xl border border-cognac/25 bg-[#fdf9f6] p-5 lg:grid-cols-[1fr_1.5fr]">
             <div>
-              <p className="eyebrow text-cognac">Et ensuite ? Connu depuis, la saison est passée</p>
-              <h3 className="titre-maison mt-1 text-2xl leading-tight">
+              <h3 className="text-base font-semibold leading-snug">
                 {nombre(v.final)} nuitées au final, {e === null ? "" : `${e >= 0 ? "+" : "−"}${Math.abs(Math.round(e * 100))} % sur l'an dernier`}
               </h3>
+              <p className="mt-0.5 text-xs font-medium text-[#8a4b2a]">Connu depuis : la saison est passée</p>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 Au {formatDate(ctx.date, true)}, l&apos;agent voyait {nombre(v.aDate)} nuitées réservées, contre {nombre(v.aDateN1)} un an plus tôt. La période a fini à{" "}
                 {nombre(v.final)} nuitées, contre {nombre(v.finalN1)} l&apos;hiver précédent.
               </p>
-              <Link href="/mesure#verdict" className="lien-charme mt-4 text-maison">
+              <Link href="/mesure#verdict" className="mt-3 inline-flex text-xs font-medium text-nav hover:underline">
                 Tous les sujets
               </Link>
             </div>
@@ -121,10 +120,10 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       {s.reference && s.reference.final >= 30 && (
         <div className="grid gap-4 lg:grid-cols-[1.5fr_1fr]">
           <div className="carte p-5 sm:p-6">
-            <p className="eyebrow text-taupe">Le rythme de l&apos;an dernier</p>
-            <h3 className="titre-maison mt-1 text-2xl leading-tight">
+            <h3 className="text-base font-semibold leading-snug">
               Au {formatDate(s.reference.aLaDate, true)}, {Math.round((s.reference.part ?? 0) * 100)} % de la période était vendue
             </h3>
+            <p className="mt-0.5 text-xs font-medium text-taupe">Le rythme de l&apos;an dernier</p>
             <p className="mt-1 text-sm text-ink-soft">
               Même période un an plus tôt, du {formatRange(s.reference.periode.debut, s.reference.periode.fin)} : part des {nombre(s.reference.final)} nuitées finales déjà réservées, semaine après semaine.
             </p>
@@ -152,7 +151,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
             </div>
           </div>
           <div className="carte p-5 sm:p-6">
-            <p className="eyebrow text-taupe">Vendu à la même date, par pays</p>
+            <p className="text-xs font-medium text-taupe">Vendu à la même date, par pays</p>
             <p className="mt-1 mb-4 text-sm text-ink-soft">Part des nuitées finales de chaque pays déjà réservée au {formatDate(s.reference.aLaDate, true)}.</p>
             <BarresH
               unite="pourcent"
@@ -171,7 +170,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       )}
       <div className="grid gap-4 lg:grid-cols-2">
         <div className="carte p-5">
-          <p className="eyebrow text-taupe">Événements rattachés</p>
+          <p className="text-xs font-medium text-taupe">Événements rattachés</p>
           {s.evenementsLies.length === 0 ? (
             <p className="mt-2 text-sm text-ink-soft">Aucun événement rattaché à ce sujet.{d.evenements_candidats?.length ? ` Candidat à décider : ${d.evenements_candidats.join(", ")}.` : ""}</p>
           ) : (
@@ -188,15 +187,15 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           )}
           {s.autresEvenements.length > 0 && (
             <>
-              <p className="eyebrow mt-4 text-[0.6rem] text-taupe">Autres rendez-vous de la période, utiles au contenu</p>
+              <p className="mt-4 text-xs font-medium text-taupe">Autres rendez-vous de la période, utiles au contenu</p>
               <p className="mt-1 text-sm text-ink-soft">{s.autresEvenements.map((e) => `${e.nom} (${formatDate(e.debut)})`).join(" · ")}</p>
             </>
           )}
         </div>
         <div className="carte p-5">
-          <p className="eyebrow text-taupe">Cible et angle</p>
+          <p className="text-xs font-medium text-taupe">Cible et angle</p>
           <p className="mt-2 text-sm leading-relaxed">{d.cibles}</p>
-          <p className="mt-3 border-l-2 border-cognac pl-4 font-display text-xl italic leading-snug text-ink">« {d.angle} »</p>
+          <p className="mt-3 rounded-lg bg-cream px-4 py-3 text-[0.9375rem] font-medium leading-snug text-ink">« {d.angle} »</p>
           <p className="mt-3 text-xs text-ink-soft">Vocabulaire interdit : {[...new Set(s.activations.flatMap((a) => a.interdits))].join(", ") || "écrin, cocon, havre de paix, luxe ultime"}.</p>
         </div>
       </div>
@@ -211,11 +210,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
         </div>
       </div>
       <div className="carte p-5">
-        <h3 className="font-display text-xl">Marché par marché</h3>
+        <h3 className="text-[0.9375rem] font-semibold">Marché par marché</h3>
         <TableauMarches sujet={s} marches={ctx.marches} interet={interetLibelle} />
       </div>
       <div>
-        <h3 className="font-display text-xl">Le message clé, décliné par marché</h3>
+        <h3 className="text-[0.9375rem] font-semibold">Le message clé, décliné par marché</h3>
         <p className="mt-1 text-sm text-ink-soft">Même sujet, même angle. L&apos;accroche change selon ce qui parle à chaque clientèle, dans la langue réellement disponible sur le site.</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {(d.marches ?? [...new Set(s.opportunites.filter((o) => !o.close).map((o) => o.marche))])
@@ -224,12 +223,12 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
             .map((m) => {
               const msg = messageMarche(s, m);
               return (
-                <Link key={m.id} href={`/marches/${m.id}`} className="group relative block border border-line bg-white p-4 pl-5 transition hover:border-ink/30">
+                <Link key={m.id} href={`/marches/${m.id}`} className="group relative block rounded-xl border border-line bg-white p-4 pl-5 transition hover:border-ink/30">
                   <span aria-hidden className="absolute inset-y-0 left-0 w-1" style={{ background: m.couleur }} />
-                  <p className="flex items-center justify-between text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">
+                  <p className="flex items-center justify-between text-xs font-medium text-taupe">
                     {m.nom} <span className="normal-case tracking-normal">{msg.langue}</span>
                   </p>
-                  <p className="mt-2 font-display text-lg leading-snug">« {msg.accroche} »</p>
+                  <p className="mt-2 text-sm font-semibold leading-snug">« {msg.accroche} »</p>
                 </Link>
               );
             })}
@@ -250,11 +249,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
         const premiere = a.vagues[0];
         const derniere = a.vagues.at(-1)!;
         return (
-          <details key={a.cle} id={a.cle} open={index === 0} className="group/act scroll-mt-40 border border-line bg-white open:shadow-sm">
+          <details key={a.cle} id={a.cle} open={index === 0} className="group/act scroll-mt-40 rounded-xl border border-line bg-white open:shadow-sm">
             <summary className="flex cursor-pointer flex-wrap items-center gap-4 px-5 py-4 transition hover:bg-cream/60">
               <IconeCanal canal={a.canal} taille="h-11 w-11" />
               <div className="min-w-0 flex-1">
-                <p className="titre-capitales text-xl leading-tight">{canalLibelle[a.canal]}</p>
+                <p className="text-[0.9375rem] font-semibold leading-tight">{canalLibelle[a.canal]}</p>
                 <p className="mt-0.5 text-sm text-ink-soft">
                   {a.vagues.length > 1 ? `${a.vagues.length} envois, ` : ""}
                   {premiere.debut === derniere.fin ? formatDate(premiere.debut, true) : `du ${formatDate(premiere.debut)} au ${formatDate(derniere.fin, true)}`}
@@ -276,14 +275,14 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                   <div className="grid gap-px border-b border-line bg-line md:grid-cols-2">
                     {recos.map((r) => (
                       <div key={r.levier} className="bg-white p-5">
-                        <p className="flex items-center justify-between gap-2 font-display text-lg">
+                        <p className="flex items-center justify-between gap-2 text-sm font-semibold">
                           {r.levier}
-                          {r.estime && <span className="rounded-full bg-ochre/12 px-2 py-0.5 font-sans text-[0.62rem] font-semibold uppercase tracking-wide text-[#86672f]">objectif estimé</span>}
+                          {r.estime && <span className="rounded-full bg-ochre/12 px-2 py-0.5 font-sans text-xs font-medium text-[#86672f]">objectif estimé</span>}
                         </p>
                         <dl className="mt-3 space-y-2 text-sm">
                           {r.lignes.map((l) => (
                             <div key={l.libelle} className="grid grid-cols-[8.5rem_1fr] gap-3">
-                              <dt className="text-xs font-semibold uppercase tracking-wide text-taupe">{l.libelle}</dt>
+                              <dt className="text-xs font-medium text-taupe">{l.libelle}</dt>
                               <dd className="leading-snug">{l.valeur}</dd>
                             </div>
                           ))}
@@ -297,7 +296,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                 <Champ label="Objectif">{a.objectif}</Champ>
                 <Champ label="Marché et segment">{a.cible}</Champ>
                 <Champ label="Message clé">
-                  <span className="font-display text-lg italic">« {a.message} »</span>
+                  <span className="text-sm font-semibold italic">« {a.message} »</span>
                 </Champ>
                 <Champ label="Sémantique cible">
                   {a.semantique.length ? (
@@ -321,11 +320,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                 </Champ>
               </div>
               <div className="border-t border-line px-5 py-5">
-                <p className="eyebrow text-[0.62rem] text-taupe">{a.vagues.length > 1 ? "Les envois, par groupe de marchés" : "Quand"}</p>
+                <p className="text-xs font-medium text-taupe">{a.vagues.length > 1 ? "Les envois, par groupe de marchés" : "Quand"}</p>
                 <ol className="mt-3 space-y-3">
                   {a.vagues.map((v) => (
                     <li key={v.numero} className="grid items-start gap-3 sm:grid-cols-[110px_190px_1fr_auto]">
-                      <span className="titre-capitales text-base">{a.vagues.length > 1 ? `Envoi ${v.numero}` : "Date"}</span>
+                      <span className="text-sm font-semibold">{a.vagues.length > 1 ? `Envoi ${v.numero}` : "Date"}</span>
                       <span className="text-sm">{v.debut === v.fin ? formatDate(v.debut, true) : `${formatDate(v.debut)} au ${formatDate(v.fin, true)}`}</span>
                       <span>
                         <Marches ids={v.marches} marches={ctx.marches} max={5} />
@@ -337,11 +336,11 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                 </ol>
                 <div className="mt-5 grid gap-4 text-sm text-ink-soft lg:grid-cols-2">
                   <p>
-                    <span className="eyebrow block text-[0.6rem] text-taupe">Pourquoi ces dates</span>
+                    <span className="block text-xs font-medium text-taupe">Pourquoi ces dates</span>
                     {a.justification}
                   </p>
                   <p>
-                    <span className="eyebrow block text-[0.6rem] text-taupe">Ce qui change par rapport au plan</span>
+                    <span className="block text-xs font-medium text-taupe">Ce qui change par rapport au plan</span>
                     {a.changement}
                   </p>
                 </div>
@@ -359,7 +358,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
   const surGoogle = (
     <div className="grid gap-5 xl:grid-cols-2">
       <div className="carte p-5">
-        <h3 className="font-display text-xl">Ce que les gens cherchent</h3>
+        <h3 className="text-[0.9375rem] font-semibold">Ce que les gens cherchent</h3>
         <p className="text-xs text-ink-soft">{ctx.semrush ? `Semrush, volume mensuel moyen et tendance sur 12 mois (${ctx.semrush.origine}).` : "Semrush non chargé."}</p>
         <table className="mt-3 w-full text-sm">
           <tbody>
@@ -380,7 +379,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       </div>
       <div className="space-y-5">
         <div className="carte p-5">
-          <h3 className="font-display text-xl">Ce que la maison capte</h3>
+          <h3 className="text-[0.9375rem] font-semibold">Ce que la maison capte</h3>
           <p className="text-xs text-ink-soft">{gsc ? `Search Console ${gsc.site}, 12 mois du ${formatRange(gsc.periode[0], gsc.periode[1])}, tous pays.` : "Search Console non chargée."}</p>
           <table className="mt-3 w-full text-sm">
             <thead>
@@ -412,7 +411,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           </table>
         </div>
         <div className="carte p-5">
-          <h3 className="font-display text-xl">Pages qui captent ces requêtes</h3>
+          <h3 className="text-[0.9375rem] font-semibold">Pages qui captent ces requêtes</h3>
           {pages.length === 0 ? (
             <p className="mt-2 text-sm text-ink-soft">Inventaire à faire (crawl de la Content Factory).</p>
           ) : (
@@ -443,7 +442,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
   const plusLoin = (
     <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr]">
       <div className="carte p-5">
-        <h3 className="font-display text-xl">Ce qui manque pour trancher</h3>
+        <h3 className="text-[0.9375rem] font-semibold">Ce qui manque pour trancher</h3>
         <ul className="mt-3 space-y-2.5 text-sm leading-relaxed">
           {s.manque.map((m) => (
             <li key={m} className="flex gap-2">
@@ -455,7 +454,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
       </div>
       <div className="space-y-5">
         <div className="carte p-5">
-          <h3 className="font-display text-xl">Sur quoi repose le classement</h3>
+          <h3 className="text-[0.9375rem] font-semibold">Sur quoi repose le classement</h3>
           <p className="mt-1 text-xs text-ink-soft">Pour la ligne de marché la plus urgente. Un facteur non mesuré compte pour moitié et est déclaré manquant.</p>
           {(() => {
             const o = s.opportunites.find((x) => x.demandeDetectee && !x.close) ?? s.opportunites[0];
@@ -482,7 +481,7 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
           })()}
         </div>
         <div className="carte p-5">
-          <h3 className="font-display text-xl">Sources, datées</h3>
+          <h3 className="text-[0.9375rem] font-semibold">Sources, datées</h3>
           <ul className="mt-2 space-y-1 text-xs text-ink-soft">
             {sources.map((x) => (
               <li key={x}>{x}</li>
@@ -502,38 +501,34 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
 
   return (
     <>
-      <header className="relative isolate overflow-hidden bg-ink text-white">
-        <Image src={d.image ?? "/hotels/lodge-park.jpg"} alt="" fill priority className="-z-10 object-cover opacity-75" sizes="100vw" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
-        <div className="mx-auto max-w-[1320px] px-4 pb-10 pt-6 sm:px-6">
-          <Link href="/sujets" className="eyebrow inline-flex items-center gap-2 text-white/85 hover:text-white">
-            <ArrowLeft className="h-3.5 w-3.5" /> Tous les sujets
-          </Link>
-          <div className="apparition mt-10 max-w-3xl sm:mt-14">
-            <p className="eyebrow text-white/85">
-              {familles[d.famille]} · Lodge Park · {ctx.saison.nom.toLowerCase()}
-              {ctx.saison.rejeu ? `, rejoué au ${formatDate(ctx.date, true)}` : ""}
-            </p>
-            <h1 className="mt-3 font-display text-[2.6rem] leading-[1.02] sm:text-6xl">{d.nom}</h1>
-            <p className="mt-4 text-lg leading-relaxed text-white/90">{d.theme}</p>
-            <p className="eyebrow mt-5 text-white/80">
-              {d.sejour ? `Séjour du ${formatRange(d.sejour.debut, d.sejour.fin)}` : d.fenetre_fixe ? `Décision du ${formatRange(d.fenetre_fixe.debut, d.fenetre_fixe.fin)}` : ""}
-              {picsAchat.length ? ` · Recherches au plus haut en ${picsAchat.join(", ")}` : ""}
-            </p>
-          </div>
-        </div>
-      </header>
-      <div className="mx-auto max-w-[1320px] px-4 py-8 sm:px-6">
-      {!s.ouvert && <p className="mt-5 border border-line bg-sand px-4 py-3 text-sm">La maison est fermée sur cette période d&apos;après vos dates : aucune action n&apos;est proposée.</p>}
+      <EnTetePage
+        fil={[{ href: "/sujets", label: "Sujets" }, { label: familles[d.famille] }]}
+        titre={d.nom}
+        meta={[d.sejour ? `Séjour du ${formatRange(d.sejour.debut, d.sejour.fin)}` : d.fenetre_fixe ? `Décision du ${formatRange(d.fenetre_fixe.debut, d.fenetre_fixe.fin)}` : "", picsAchat.length ? `recherches au plus haut en ${picsAchat.join(", ")}` : ""].filter(Boolean).join(" · ")}
+        vignette={
+          <span className="relative hidden h-14 w-14 shrink-0 overflow-hidden rounded-lg border border-line sm:block">
+            <Image src={d.image ?? "/hotels/lodge-park.jpg"} alt="" fill className="object-cover" sizes="56px" />
+          </span>
+        }
+        actions={
+          <a href={`/api/fiche/${d.id}`} className="bouton-clair">
+            <Download className="h-3.5 w-3.5" /> Exporter la fiche
+          </a>
+        }
+      >
+        {d.theme}
+      </EnTetePage>
+      <div className="mx-auto max-w-[1320px] px-4 py-5 sm:px-6 lg:px-8">
+      {!s.ouvert && <p className="mb-4 rounded-lg bg-sand px-4 py-3 text-sm">La maison est fermée sur cette période d&apos;après vos dates : aucune action n&apos;est proposée.</p>}
       {s.ouvert && s.remplissage === "plein" && (
-        <p className="mt-5 border border-line bg-sand px-4 py-3 text-sm">Vous indiquez que ce sujet est déjà bien vendu : les actions payantes sont suspendues, on garde les newsletters prévues.</p>
+        <p className="mb-4 rounded-lg bg-sand px-4 py-3 text-sm">Vous indiquez que ce sujet est déjà bien vendu : les actions payantes sont suspendues, on garde les newsletters prévues.</p>
       )}
       {s.ouvert && s.remplissage === "bas" && (
-        <p className="mt-5 border border-brick/30 bg-brick/5 px-4 py-3 text-sm">Vous indiquez un remplissage bas : sujet prioritaire, les actions sont à lancer en premier.</p>
+        <p className="mb-4 rounded-lg bg-brick/8 px-4 py-3 text-sm">Vous indiquez un remplissage bas : sujet prioritaire, les actions sont à lancer en premier.</p>
       )}
       <OuvrirAncre />
       <BlocDecision decision={decision} />
-      <div className="mt-8">
+      <div className="mt-6">
         <Suspense>
           <Onglets
             onglets={[
@@ -543,14 +538,14 @@ export default async function FicheSujet({ params }: PageProps<"/sujets/[id]">) 
                 contenu: (
                   <div className="space-y-6">
                     {essentiel}
-                    <details className="group border border-line bg-white">
-                      <summary className="flex cursor-pointer items-center justify-between px-5 py-4 font-display text-xl">
+                    <details className="group rounded-xl border border-line bg-white">
+                      <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-[0.9375rem] font-semibold">
                         Sur Google, marché par marché <ChevronDown className="h-4 w-4 text-taupe transition group-open:rotate-180" />
                       </summary>
                       <div className="border-t border-line p-5">{surGoogle}</div>
                     </details>
-                    <details className="group border border-line bg-white">
-                      <summary className="flex cursor-pointer items-center justify-between px-5 py-4 font-display text-xl">
+                    <details className="group rounded-xl border border-line bg-white">
+                      <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-[0.9375rem] font-semibold">
                         Pour aller plus loin : ce qui manque, les sources <ChevronDown className="h-4 w-4 text-taupe transition group-open:rotate-180" />
                       </summary>
                       <div className="border-t border-line p-5">{plusLoin}</div>

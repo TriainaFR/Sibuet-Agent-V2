@@ -5,7 +5,7 @@ import { useState, useTransition } from "react";
 import { appliquerDelai, enregistrerResultat, exempleMesure } from "@/app/actions";
 import type { Resultat } from "@/lib/types";
 
-const champ = "w-full border border-line bg-white px-2.5 py-1.5 text-sm outline-none focus:border-greige";
+const champ = "w-full rounded-xl border border-line bg-white px-2.5 py-1.5 text-sm outline-none focus:border-greige";
 
 export function FormResultat({ cle, kpi, existant, date }: { cle: string; kpi: string; existant?: Resultat; date: string }) {
   const [r, setR] = useState<Resultat>(
@@ -82,7 +82,7 @@ export function BoutonAppliquer({ marche, valeur }: { marche: string; valeur: st
 export function BoutonExemple({ cles }: { cles: string[] }) {
   const [enCours, demarrer] = useTransition();
   return (
-    <button disabled={enCours || !cles.length} onClick={() => demarrer(() => exempleMesure(cles))} className="inline-flex items-center gap-1.5 border border-brick/40 bg-white px-3.5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-brick hover:bg-brick/5 disabled:opacity-50">
+    <button disabled={enCours || !cles.length} onClick={() => demarrer(() => exempleMesure(cles))} className="inline-flex items-center gap-1.5 border border-brick/40 bg-white px-3.5 py-2 text-xs font-medium text-brick hover:bg-brick/5 disabled:opacity-50">
       <FlaskConical className="h-3.5 w-3.5" /> Remplir un exemple fictif
     </button>
   );

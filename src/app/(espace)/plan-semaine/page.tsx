@@ -27,11 +27,11 @@ export default async function PlanSemaine() {
         <Imprimer />
       </div>
 
-      <article className="border border-line bg-white p-8 sm:p-10 print:border-0 print:p-0">
+      <article className="rounded-xl border border-line bg-white p-8 sm:p-10 print:border-0 print:p-0">
         <header className="flex flex-wrap items-end justify-between gap-4 border-b-2 border-ink pb-5">
           <div>
-            <p className="eyebrow text-taupe">{ctx.maison.nom} · plan de la semaine</p>
-            <h1 className="mt-2 font-display text-4xl leading-tight">
+            <p className="text-xs font-medium text-taupe">{ctx.maison.nom} · plan de la semaine</p>
+            <h1 className="mt-2 text-lg font-semibold leading-tight">
               Semaine du {jourSemaine(ctx.date)} {formatDate(ctx.date, true)}
             </h1>
           </div>
@@ -45,31 +45,31 @@ export default async function PlanSemaine() {
             <Chiffre l="Hiver précédent, final" v={fmt.format(bilan.finalN1)} d="nuitées de décembre à mars" />
           </section>
         )}
-        {avance?.phrase && <p className="carte-plan mt-5 border-l-4 border-brick bg-brick/5 px-4 py-3 text-[0.95rem] leading-relaxed">{avance.phrase}</p>}
-        <p className="mt-2 text-[0.7rem] text-taupe">Source : Asterio, réservations enregistrées à chaque date (export du 14 oct. 2026).</p>
+        {avance?.phrase && <p className="carte-plan mt-5 rounded-lg bg-brick/8 px-4 py-3 text-sm leading-relaxed">{avance.phrase}</p>}
+        <p className="mt-2 text-xs text-taupe">Source : Asterio, réservations enregistrées à chaque date (export du 14 oct. 2026).</p>
 
         <section className="mt-8">
-          <h2 className="font-display text-2xl">Les trois priorités</h2>
+          <h2 className="text-base font-semibold">Les trois priorités</h2>
           <ol className="mt-4 space-y-5">
             {priorites.map((p, i) => {
               const a = p.sujet.activations.find((x) => x.cle === p.action.activationCle);
               const reco = a ? recommandation(ctx, p.sujet, a).find((r) => r.levier.includes(p.marche.nom)) ?? recommandation(ctx, p.sujet, a)[0] : null;
               const dec = decisions[p.action.activationCle]?.etat ?? "brouillon";
               return (
-                <li key={p.action.activationCle + p.marche.id} className="carte-plan border border-line p-5" style={{ borderLeft: `4px solid ${p.marche.couleur}` }}>
+                <li key={p.action.activationCle + p.marche.id} className="carte-plan rounded-xl border border-line p-5">
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">
+                    <p className="text-xs font-medium text-taupe">
                       {i + 1}. {canalLibelle[p.action.canal]} · {p.marche.nom} · {p.sujet.def.nom}
                     </p>
                     <span className="text-xs font-semibold">{ETAT[dec]}</span>
                   </div>
-                  <p className="mt-1.5 font-display text-xl leading-snug">{p.titre}</p>
+                  <p className="mt-1.5 text-[0.9375rem] font-semibold leading-snug">{p.titre}</p>
                   <p className="mt-1.5 text-sm text-ink-soft">{p.raison}</p>
                   {reco && (
                     <dl className="mt-3 grid gap-x-4 gap-y-1 text-sm sm:grid-cols-[9rem_1fr]">
                       {reco.lignes.slice(0, 6).map((l) => (
                         <div key={l.libelle} className="contents">
-                          <dt className="text-xs font-semibold uppercase tracking-wide text-taupe">{l.libelle}</dt>
+                          <dt className="text-xs font-medium text-taupe">{l.libelle}</dt>
                           <dd>{l.valeur}</dd>
                         </div>
                       ))}
@@ -83,7 +83,7 @@ export default async function PlanSemaine() {
 
         {semaine.length > 0 && (
           <section className="carte-plan mt-8">
-            <h2 className="font-display text-2xl">Ensuite, d&apos;ici le {formatDate(addDays(ctx.date, 14), true)}</h2>
+            <h2 className="text-base font-semibold">Ensuite, d&apos;ici le {formatDate(addDays(ctx.date, 14), true)}</h2>
             <table className="mt-3 w-full text-sm">
               <tbody>
                 {semaine.map((a, i) => (
@@ -99,7 +99,7 @@ export default async function PlanSemaine() {
             </table>
           </section>
         )}
-        <footer className="mt-10 border-t border-line pt-3 text-[0.7rem] text-taupe">
+        <footer className="mt-10 border-t border-line pt-3 text-xs text-taupe">
           Agent Sibuet, calcul du {formatDate(ctx.date, true)}, horizon au {formatDate(horizon, true)}. Le système propose, l&apos;équipe valide.
         </footer>
       </article>
@@ -110,7 +110,7 @@ export default async function PlanSemaine() {
 function Chiffre({ l, v, d }: { l: string; v: string; d: string }) {
   return (
     <div className="border border-line p-4">
-      <p className="text-[0.64rem] font-semibold uppercase tracking-[0.12em] text-taupe">{l}</p>
+      <p className="text-xs font-medium text-taupe">{l}</p>
       <p className="mt-1 text-3xl font-semibold tabular-nums">{v}</p>
       <p className="mt-1 text-xs text-ink-soft">{d}</p>
     </div>

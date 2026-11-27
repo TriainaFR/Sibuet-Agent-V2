@@ -47,73 +47,75 @@ export function ListeActions({
 
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="inline-flex flex-wrap items-center gap-0.5 rounded-lg bg-cream p-0.5">
         {filtres.map((f) => {
           const n = actions.filter(f.test).length;
           return (
             <button
               key={f.id}
               onClick={() => setFiltre(f.id)}
-              className={`border px-3.5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] transition ${
-                filtre === f.id ? "border-ink bg-ink text-white" : "border-line bg-white text-ink-soft hover:border-greige hover:text-ink"
+              className={`h-7 rounded-md px-2.5 text-[0.8125rem] transition ${
+                filtre === f.id ? "bg-white font-medium text-ink shadow-[0_1px_2px_rgba(28,28,26,0.1)]" : "text-ink-soft hover:text-ink"
               }`}
             >
-              {f.label} <span className={filtre === f.id ? "text-white/70" : "text-taupe"}>{n}</span>
+              {f.label} <span className="ml-0.5 text-taupe tabular-nums">{n}</span>
             </button>
           );
         })}
       </div>
 
-      <div className="mt-6 space-y-8">
+      <div className="mt-4 space-y-5">
         {semaines.length === 0 && <Vide>Aucune action dans cette catégorie.</Vide>}
         {semaines.map(([s, liste]) => (
           <section key={s}>
-            <div className="flex items-baseline gap-3 border-b border-ink/80 pb-2">
-              <h3 className="titre-capitales text-lg">{s === cetteSemaine ? "Cette semaine" : s === addDays(cetteSemaine, 7) ? "La semaine prochaine" : `Semaine du ${formatDate(s)}`}</h3>
-              <span className="text-xs text-ink-soft">
+            <div className="flex items-baseline gap-2 pb-1.5">
+              <h3 className="text-xs font-semibold text-ink">{s === cetteSemaine ? "Cette semaine" : s === addDays(cetteSemaine, 7) ? "La semaine prochaine" : `Semaine du ${formatDate(s)}`}</h3>
+              <span className="text-xs text-taupe">
                 {liste.length} action{liste.length > 1 ? "s" : ""}
               </span>
             </div>
-            <ul>
+            <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line">
               {liste.map((a, i) => {
                 const d = decisions[a.activationCle];
                 const grise = ["suspendu", "ferme"].includes(a.statut.code);
                 const jours = diffDays(a.date, date);
                 return (
-                  <li key={i} className={`apparition border-b border-line ${grise ? "opacity-55" : ""}`} style={{ animationDelay: `${Math.min(i, 8) * 30}ms` }}>
+                  <li key={i} className={grise ? "opacity-55" : ""}>
                     <Link
                       href={`/sujets/${a.sujetId}?onglet=actions`}
-                      className="group grid grid-cols-[58px_1fr] items-center gap-4 py-4 transition hover:bg-white sm:grid-cols-[64px_auto_1fr_auto] sm:px-2"
+                      className="group grid grid-cols-[44px_1fr] items-center gap-3 px-3 py-2.5 transition hover:bg-cream/70 sm:grid-cols-[44px_auto_1fr_auto]"
                     >
                       <div className="text-center leading-none">
-                        <p className="font-display text-[2rem]">{a.date.slice(8, 10).replace(/^0/, "")}</p>
-                        <p className="eyebrow mt-1 text-[0.6rem] text-taupe">{MOIS[Number(a.date.slice(5, 7)) - 1]}</p>
+                        <p className="text-[0.9375rem] font-semibold tabular-nums">{a.date.slice(8, 10).replace(/^0/, "")}</p>
+                        <p className="mt-0.5 text-[0.6875rem] text-taupe">{MOIS[Number(a.date.slice(5, 7)) - 1]}</p>
                       </div>
                       <div className="hidden sm:block">
-                        <IconeCanal canal={a.canal} />
+                        <IconeCanal canal={a.canal} taille="h-7 w-7" />
                       </div>
                       <div className="min-w-0">
-                        <p className="eyebrow text-[0.6rem] text-taupe">
-                          {canalLibelle[a.canal]} · {a.enRetard ? "à faire dès maintenant" : jours <= 0 ? "aujourd'hui" : `${jourSemaine(a.date)}, ${relatif(a.date, date)}`}
-                        </p>
-                        <p className="mt-0.5 font-display text-[1.25rem] leading-snug group-hover:text-cognac">{a.titre}</p>
-                        <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-ink-soft">
+                        <p className="truncate text-[0.8125rem] font-medium leading-snug text-ink group-hover:text-nav">{a.titre}</p>
+                        <div className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-taupe">
+                          <span>
+                            {canalLibelle[a.canal]} · {a.enRetard ? "à faire dès maintenant" : jours <= 0 ? "aujourd'hui" : `${jourSemaine(a.date)}, ${relatif(a.date, date)}`}
+                          </span>
                           <span className="inline-flex items-center gap-2">
                             {images[a.sujetId] && (
-                              <span className="relative inline-block h-5 w-7 overflow-hidden">
+                              <span className="relative inline-block h-4 w-5 overflow-hidden rounded-sm">
                                 <Image src={images[a.sujetId]} alt="" fill className="object-cover" sizes="28px" />
                               </span>
                             )}
                             {a.sujetNom}
                           </span>
-                          <Marches ids={a.marches} marches={marches} max={3} />
+                          <span className="hidden md:inline">
+                            <Marches ids={a.marches} marches={marches} max={3} />
+                          </span>
                         </div>
                       </div>
-                      <div className="col-span-2 flex flex-wrap items-center gap-2 sm:col-span-1 sm:flex-col sm:items-end">
+                      <div className="col-span-2 flex flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end">
                         <PuceStatut code={a.statut.code} libelle={a.statut.libelle} />
                         {d?.etat === "validee" && (
                           <span className="inline-flex items-center gap-1 text-xs text-sage">
-                            <Check className="h-3.5 w-3.5" /> Validée par {d.par}
+                            <Check className="h-3.5 w-3.5" /> Validée
                           </span>
                         )}
                       </div>

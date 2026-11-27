@@ -9,29 +9,31 @@
       --maison-* (boutons, graphiques, bandeaux) prend la couleur de la maison qui l'entoure.
    ───────────────────────────────────────────────────────────────────────────── */
 @theme {
-  --color-cream: #f6f5f3;
-  --color-sand: #eeebe6;
-  --color-line: #e2ddd6;
+  --color-cream: #f5f4f0;
+  --color-sand: #eeece7;
+  --color-line: #e7e4de;
   --color-greige: #aea79f;
   --color-greige-dark: #8f877e;
   --color-greige-fonce: #766e65;
-  --color-taupe: #776c61;
-  --color-ink: #2f2f2b;
-  --color-ink-soft: #66645f;
+  --color-taupe: #74706a;
+  --color-ink: #1c1c1a;
+  --color-ink-soft: #5c5a55;
   --color-anthracite: #55534f;
   --color-nuit: #1f2a3c;
-  --color-cognac: #a46c45;
-  --color-brick: #a4553a;
-  --color-ochre: #b08a4a;
-  --color-sage: #6c8460;
+  --color-cognac: #a8683f;
+  --color-brick: #b0472f;
+  --color-ochre: #b7862c;
+  --color-sage: #4e7a4b;
   --color-sky: #5d7c95;
   --color-brown: #4c3327;
 
   --color-ardoise: #616365;
   --color-brun: #251209;
 
-  --font-display: var(--font-garamond), "Garamond", Georgia, serif;
-  --font-sans: var(--font-source-sans), "Source Sans Pro", system-ui, sans-serif;
+  --font-display: var(--font-inter), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --color-panneau: #ffffff;
+  --color-nav: #16213a;
 }
 
 /* Jetons de maison, utilisables en classes : bg-maison, text-maison, border-maison, font-maison… */
@@ -56,13 +58,12 @@
 }
 /* Lodge Park : bleu nuit et lin, Cardo (lodgepark.com) ; cognac du cuir en second */
 [data-maison="lodge-park"] {
-  --maison-accent: #0f182a;
+  --maison-accent: #16213a;
   --maison-second: #a46c45;
   --maison-fond: #ebe8df;
   --maison-encre: #0f182a;
   --maison-serif: var(--font-cardo), "Cardo", Georgia, serif;
   --maison-bandeau: #0f182a;
-  --font-display: var(--maison-serif);
 }
 /* Les Fermes de Marie : brun, taupe et ivoire, Garamond (fermesdemarie.com) */
 [data-maison="fermes-de-marie"] {
@@ -72,7 +73,6 @@
   --maison-encre: #251209;
   --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
   --maison-bandeau: #6e5f53;
-  --font-display: var(--maison-serif);
 }
 /* Hôtel Mont-Blanc : vert sapin et crème, serif contrastée (hotelmontblanc.com) */
 [data-maison="hotel-mont-blanc"] {
@@ -82,7 +82,6 @@
   --maison-encre: #193805;
   --maison-serif: var(--font-dmserif), "DM Serif Display", Georgia, serif;
   --maison-bandeau: #193805;
-  --font-display: var(--maison-serif);
 }
 /* La Bastide de Marie : bleu lavande grisé (labastidedemarie.com) */
 [data-maison="bastide-de-marie"] {
@@ -92,7 +91,6 @@
   --maison-encre: #2f4256;
   --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
   --maison-bandeau: #425e7a;
-  --font-display: var(--maison-serif);
 }
 /* Villa Marie Saint-Tropez : orange Riviera (villamarie-saint-tropez.com) */
 [data-maison="villa-marie"] {
@@ -102,7 +100,6 @@
   --maison-encre: #616365;
   --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
   --maison-bandeau: #c4390a;
-  --font-display: var(--maison-serif);
 }
 /* Gyp Sea : bleu lagon et sable, Playfair (gypsea-stbarth.com) */
 [data-maison="gyp-sea"] {
@@ -112,7 +109,6 @@
   --maison-encre: #305371;
   --maison-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
   --maison-bandeau: #305371;
-  --font-display: var(--maison-serif);
 }
 /* Chalets et propriétés : palette du groupe, sable plus soutenu */
 [data-maison="chalets"] {
@@ -122,7 +118,6 @@
   --maison-encre: #4c3327;
   --maison-serif: var(--font-garamond), "Garamond", Georgia, serif;
   --maison-bandeau: #6b5544;
-  --font-display: var(--maison-serif);
 }
 
 :root {
@@ -137,127 +132,124 @@ body {
 
 body {
   font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+/* Titres de l'application : sans, demi-gras, approche resserrée */
+.font-display {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-nav) 18%, transparent);
+}
+
+.tabular-nums,
+table {
+  font-variant-numeric: tabular-nums;
 }
 
 @layer components {
-  /* Capitales espacées, signature du site Sibuet */
+  /* Libellé de champ ou d'en-tête de colonne : petit, discret. Jamais au-dessus d'un titre. */
   .eyebrow {
     font-family: var(--font-sans);
-    font-size: 0.7rem;
+    font-size: 0.6875rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
-  /* Titres d'éléments en capitales Garamond (« LE BEEF LODGE ») */
   .titre-capitales {
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
-  /* En-tête de colonne du schéma « De vos données à vos actions » */
   .titre-colonne {
     margin-bottom: 0.75rem;
-    font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
     color: var(--color-ink);
   }
 
-  .carte {
+  /* Panneau : surface blanche de l'application */
+  .carte,
+  .panneau {
     background: #fff;
     border: 1px solid var(--color-line);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(28, 28, 26, 0.04);
   }
 
-  /* Titre dans la serif de la maison qui entoure l'élément */
   .titre-maison {
-    font-family: var(--maison-serif);
-    color: var(--maison-encre);
-    letter-spacing: -0.005em;
-  }
-
-  .bouton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: var(--maison-accent);
-    color: #fff;
-    padding: 0.8rem 1.4rem;
-    font-size: 0.74rem;
+    font-family: var(--font-sans);
     font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    transition: background 0.2s;
-  }
-  .bouton:hover {
-    background: color-mix(in srgb, var(--maison-accent) 82%, black);
-  }
-  .bouton:disabled {
-    background: var(--color-greige);
-    cursor: not-allowed;
+    color: var(--color-ink);
+    letter-spacing: -0.015em;
   }
 
-  /* Sur un bandeau de couleur : fond blanc, texte à l'encre de la maison */
-  .bouton-inverse {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: #fff;
-    color: var(--maison-encre);
-    padding: 0.8rem 1.4rem;
-    font-size: 0.74rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    transition: background 0.2s;
-  }
-  .bouton-inverse:hover {
-    background: var(--maison-fond);
-  }
-
+  .bouton,
+  .bouton-inverse,
   .bouton-clair {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    border: 1px solid var(--color-ink);
+    gap: 0.4rem;
+    height: 2rem;
+    padding: 0 0.8rem;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition:
+      background 0.15s,
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  .bouton {
+    background: var(--color-nav);
+    color: #fff;
+    box-shadow:
+      0 1px 2px rgba(22, 33, 58, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  .bouton:hover {
+    background: color-mix(in srgb, var(--color-nav) 86%, white);
+  }
+  .bouton:disabled {
+    background: var(--color-greige);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  .bouton-inverse {
+    background: #fff;
     color: var(--color-ink);
-    padding: 0.7rem 1.2rem;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    transition: all 0.2s;
+  }
+  .bouton-clair {
+    background: #fff;
+    border: 1px solid var(--color-line);
+    color: var(--color-ink);
+    box-shadow: 0 1px 2px rgba(28, 28, 26, 0.05);
   }
   .bouton-clair:hover {
-    background: var(--maison-accent);
-    border-color: var(--maison-accent);
-    color: #fff;
+    background: var(--color-cream);
+    border-color: color-mix(in srgb, var(--color-line) 60%, var(--color-ink));
   }
 
-  /* Lien « Laissez-vous charmer » du site : capitales et trait qui s'allonge */
   .lien-charme {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    gap: 0.3rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
   }
-  .lien-charme::after {
-    content: "";
-    width: 1.6rem;
-    height: 1px;
-    background: currentColor;
-    transition: width 0.25s;
-  }
-  .lien-charme:hover::after,
-  .group:hover .lien-charme::after {
-    width: 2.6rem;
+  .lien-charme:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   /* Fenêtre d'achat : pointillés (convention de la maquette de Jérôme) */
@@ -268,12 +260,20 @@ body {
   }
 
   .filigrane {
-    font-family: var(--font-display);
-    line-height: 0.8;
-    color: rgba(255, 255, 255, 0.13);
+    display: none;
+  }
+
+  /* Pastille d'état */
+  .pastille {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    height: 1.375rem;
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
     white-space: nowrap;
-    pointer-events: none;
-    user-select: none;
   }
 
   .scrollbar-thin {
@@ -283,8 +283,14 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--maison-accent);
+  outline: 2px solid color-mix(in srgb, var(--color-nav) 55%, transparent);
   outline-offset: 2px;
+  border-radius: 6px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d6d2ca transparent;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
@@ -300,8 +306,8 @@ details > summary::-webkit-details-marker {
 
 @keyframes apparition {
   from {
-    opacity: 0;
-    transform: translateY(6px);
+    opacity: 0.001;
+    transform: translateY(3px);
   }
   to {
     opacity: 1;
@@ -309,7 +315,7 @@ details > summary::-webkit-details-marker {
   }
 }
 .apparition {
-  animation: apparition 0.5s ease-out both;
+  animation: apparition 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* Liens animés du schéma des sources : la donnée circule vers l'agent */
@@ -355,4 +361,18 @@ details > summary::-webkit-details-marker {
 /* Action ciblée depuis « Cette semaine » : un filet de la couleur de la maison. */
 details:target {
   box-shadow: 0 0 0 2px var(--maison-accent);
+}
+
+/* Champs de formulaire : même rayon et même anneau de focus partout */
+@layer base {
+  input:not([type="range"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+  select,
+  textarea {
+    border-radius: 8px;
+  }
+  input[type="range"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--color-nav);
+  }
 }

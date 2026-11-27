@@ -49,7 +49,7 @@ function InfoBulle({ x, y, largeur, children }: { x: number; y: number; largeur:
   return (
     <div
       role="status"
-      className="pointer-events-none absolute z-10 min-w-36 border border-line bg-white px-3 py-2 text-xs shadow-[0_8px_24px_-12px_rgba(47,47,43,0.35)]"
+      className="pointer-events-none absolute z-10 min-w-36 rounded-xl border border-line bg-white px-3 py-2 text-xs shadow-[0_8px_24px_-12px_rgba(47,47,43,0.35)]"
       style={{ left: gauche ? undefined : x + 14, right: gauche ? largeur - x + 14 : undefined, top: Math.max(0, y - 10) }}
     >
       {children}
@@ -390,7 +390,7 @@ export function Chaleur({ matrice, lignes }: { matrice: number[][]; lignes: numb
         <table className="w-full min-w-[520px] border-separate" style={{ borderSpacing: 2 }}>
           <thead>
             <tr>
-              <th className="w-20 text-left text-[0.65rem] font-semibold uppercase tracking-wide text-taupe">Séjour ↓ Résa →</th>
+              <th className="w-20 text-left text-xs font-medium text-taupe">Séjour ↓ Résa →</th>
               {MOIS_COURTS.map((m, i) => (
                 <th key={m} className={`text-center text-[0.68rem] font-normal ${survol?.c === i ? "text-ink" : "text-ink-soft"}`}>
                   {m}

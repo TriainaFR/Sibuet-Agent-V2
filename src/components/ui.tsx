@@ -1,25 +1,26 @@
-import Image from "next/image";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Marche, Origine, StatutCode } from "@/lib/types";
 
-// Composants de base, dans l'esprit du site Sibuet : sobres, angles droits, capitales espacées.
+// Composants de base de l'application : pastilles, niveaux, en-têtes d'écran, champs.
 
 export type Ton = "vert" | "ocre" | "brique" | "gris" | "bleu" | "nuit" | "cognac";
 
 const tons: Record<Ton, string> = {
-  vert: "border-sage/40 bg-sage/8 text-sage",
-  ocre: "border-ochre/45 bg-ochre/8 text-[#86672f]",
-  brique: "border-brick/40 bg-brick/7 text-brick",
-  gris: "border-line bg-sand/60 text-ink-soft",
-  bleu: "border-sky/40 bg-sky/8 text-sky",
-  nuit: "border-nuit bg-nuit text-white",
-  cognac: "border-cognac/45 bg-cognac/8 text-cognac",
+  vert: "bg-sage/12 text-[#3d6639]",
+  ocre: "bg-ochre/14 text-[#7c5a17]",
+  brique: "bg-brick/10 text-brick",
+  gris: "bg-sand text-ink-soft",
+  bleu: "bg-sky/12 text-[#3f6380]",
+  nuit: "bg-nav/8 text-nav",
+  cognac: "bg-cognac/12 text-[#8a4b2a]",
 };
 
-/** Étiquette : petit texte en capitales, filet fin, angles droits. */
+/** Pastille d'état : fond teinté, coins arrondis, casse normale. */
 export function Puce({ ton = "gris", children, title }: { ton?: Ton; children: ReactNode; title?: string }) {
   return (
-    <span title={title} className={`inline-flex items-center gap-1.5 whitespace-nowrap border px-2 py-[3px] text-[0.66rem] font-semibold uppercase tracking-[0.1em] ${tons[ton]}`}>
+    <span title={title} className={`pastille ${tons[ton]}`}>
       {children}
     </span>
   );
@@ -60,9 +61,9 @@ export function Niveau({ libelle, compact = false }: { libelle: string; compact?
 }
 
 export function Origine({ origine }: { origine: Origine | null }) {
-  if (!origine) return <span className="border border-line px-1.5 py-[1px] text-[0.6rem] font-semibold uppercase tracking-wider text-ink-soft">manquant</span>;
-  const style = origine === "saisi" ? "border-sky/40 text-sky" : origine === "mesuré" ? "border-sage/40 text-sage" : origine === "fictif" ? "border-brick/40 text-brick" : "border-ochre/45 text-[#86672f]";
-  return <span className={`border px-1.5 py-[1px] text-[0.6rem] font-semibold uppercase tracking-wider ${style}`}>{origine}</span>;
+  if (!origine) return <span className="rounded-md bg-sand px-1.5 py-px text-[0.6875rem] font-medium text-ink-soft">manquant</span>;
+  const style = origine === "saisi" ? "bg-sky/12 text-[#3f6380]" : origine === "mesuré" ? "bg-sage/12 text-[#3d6639]" : origine === "fictif" ? "bg-brick/10 text-brick" : "bg-ochre/14 text-[#7c5a17]";
+  return <span className={`rounded-md px-1.5 py-px text-[0.6875rem] font-medium ${style}`}>{origine}</span>;
 }
 
 export function Marches({ ids, marches, max = 4 }: { ids: string[]; marches: Marche[]; max?: number }) {
@@ -70,7 +71,7 @@ export function Marches({ ids, marches, max = 4 }: { ids: string[]; marches: Mar
   return (
     <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
       {liste.slice(0, max).map((m) => (
-        <span key={m.id} className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm">
+        <span key={m.id} className="inline-flex items-center gap-1.5 whitespace-nowrap">
           <span className="h-2 w-2 rounded-full" style={{ background: m.couleur }} />
           {m.nom}
         </span>
@@ -84,76 +85,77 @@ export function Marches({ ids, marches, max = 4 }: { ids: string[]; marches: Mar
 export function TitreCentre({ eyebrow, titre, texte }: { eyebrow?: string; titre: string; texte?: ReactNode }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      {eyebrow && <p className="eyebrow text-taupe">{eyebrow}</p>}
-      <h2 className="mt-2 font-display text-[2.4rem] leading-[1.05] sm:text-5xl">{titre}</h2>
+      <h2 className="text-xl font-semibold tracking-tight">{titre}</h2>
+      {eyebrow && <p className="mt-1 text-sm text-taupe">{eyebrow}</p>}
       {texte && <p className="mt-3 text-ink-soft">{texte}</p>}
     </div>
   );
 }
 
-/** Bandeau greige du site, avec grand titre blanc, capitales et filigrane. */
-export function Bandeau({
-  eyebrow,
-  titre,
-  sousTitre,
-  children,
-  photo,
-  photo2,
-  filigrane = "Lodge Park",
-}: {
-  eyebrow?: string;
-  titre: string;
-  sousTitre?: string;
-  children?: ReactNode;
-  photo?: string;
-  photo2?: string;
-  filigrane?: string;
-}) {
+/** En-tête d'écran de l'application : fil d'Ariane, titre, description et actions. */
+export function EnTetePage({ fil, titre, meta, children, actions, vignette }: { fil?: { href?: string; label: string }[]; titre: ReactNode; meta?: ReactNode; children?: ReactNode; actions?: ReactNode; vignette?: ReactNode }) {
   return (
-    <section className="relative overflow-hidden bg-maison-bandeau text-white">
-      <span className="filigrane absolute -bottom-6 left-0 text-[9rem] sm:text-[13rem]">{filigrane}</span>
-      <div className="relative mx-auto grid max-w-[1320px] items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:py-16">
-        <div className="apparition">
-          {eyebrow && <p className="eyebrow text-white/85">{eyebrow}</p>}
-          <h1 className="mt-3 font-display text-[2.6rem] leading-[1.02] sm:text-6xl">{titre}</h1>
-          {sousTitre && <p className="eyebrow mt-4 text-[0.78rem] tracking-[0.2em]">{sousTitre}</p>}
-          {children && <div className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-white/95">{children}</div>}
-        </div>
-        {photo && (
-          <div className="relative hidden h-[300px] lg:block">
-            <div className="absolute left-0 top-0 h-[270px] w-[62%] overflow-hidden shadow-xl">
-              <Image src={photo} alt="" fill className="object-cover" sizes="400px" priority />
-            </div>
-            {photo2 && (
-              <div className="absolute bottom-0 right-0 h-[200px] w-[48%] overflow-hidden border-[6px] border-white shadow-xl">
-                <Image src={photo2} alt="" fill className="object-cover" sizes="300px" />
-              </div>
-            )}
-          </div>
+    <header className="border-b border-line px-4 pb-5 pt-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1320px]">
+        {fil && fil.length > 0 && (
+          <nav aria-label="Fil d'Ariane" className="mb-2 flex flex-wrap items-center gap-1 text-[0.8125rem] text-taupe">
+            {fil.map((f, i) => (
+              <span key={i} className="inline-flex items-center gap-1">
+                {i > 0 && <ChevronRight className="h-3.5 w-3.5 text-greige" />}
+                {f.href ? (
+                  <Link href={f.href} className="rounded px-0.5 hover:text-ink">
+                    {f.label}
+                  </Link>
+                ) : (
+                  <span>{f.label}</span>
+                )}
+              </span>
+            ))}
+          </nav>
         )}
+        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-3">
+          <div className="flex min-w-0 max-w-3xl gap-4">
+            {vignette}
+            <div className="min-w-0">
+            <h1 className="text-[1.375rem] font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-2xl">{titre}</h1>
+            {meta && <p className="mt-1 text-[0.8125rem] text-taupe">{meta}</p>}
+            {children && <div className="mt-2 text-sm leading-relaxed text-ink-soft">{children}</div>}
+            </div>
+          </div>
+          {actions && <div className="flex shrink-0 flex-wrap items-center gap-2">{actions}</div>}
+        </div>
       </div>
-    </section>
+    </header>
+  );
+}
+
+/** Ancien bandeau photo : devenu l'en-tête d'écran standard (les photos et le filigrane ne sont plus affichés). */
+export function Bandeau({ titre, sousTitre, children, actions }: { eyebrow?: string; titre: string; sousTitre?: string; children?: ReactNode; photo?: string; photo2?: string; filigrane?: string; actions?: ReactNode }) {
+  return (
+    <EnTetePage titre={titre} meta={sousTitre} actions={actions}>
+      {children}
+    </EnTetePage>
   );
 }
 
 export function Champ({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div>
-      <p className="eyebrow text-[0.62rem] text-taupe">{label}</p>
-      <div className="mt-1.5 text-[0.93rem] leading-relaxed">{children}</div>
+      <p className="text-xs font-medium text-taupe">{label}</p>
+      <div className="mt-1 text-sm leading-relaxed">{children}</div>
     </div>
   );
 }
 
 export function Vide({ children }: { children: ReactNode }) {
-  return <p className="border border-dashed border-line bg-white/50 px-4 py-8 text-center text-sm text-ink-soft">{children}</p>;
+  return <p className="rounded-xl border border-dashed border-line bg-cream/50 px-4 py-8 text-center text-sm text-ink-soft">{children}</p>;
 }
 
 /** Encadré d'aide : explique en une phrase comment lire un écran. */
 export function Aide({ children }: { children: ReactNode }) {
   return (
-    <details className="group border-l-2 border-greige bg-white/60 px-4 py-2.5 text-sm text-ink-soft">
-      <summary className="cursor-pointer select-none font-semibold text-ink">
+    <details className="group rounded-xl bg-cream px-4 py-2.5 text-sm text-ink-soft">
+      <summary className="cursor-pointer select-none font-medium text-ink">
         <span className="mr-1.5 inline-flex h-4 w-4 items-center justify-center rounded-full border border-ink-soft text-[0.62rem]">?</span>
         Comment lire cet écran
       </summary>

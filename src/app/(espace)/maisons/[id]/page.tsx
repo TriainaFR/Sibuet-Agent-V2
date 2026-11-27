@@ -55,11 +55,11 @@ export default async function PortraitMaison({ params }: PageProps<"/maisons/[id
             : "Aucun historique Asterio pour cette maison."}
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/maisons" className="inline-flex items-center gap-2 border border-white/60 px-3.5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white hover:text-ink">
+          <Link href="/maisons" className="inline-flex items-center gap-2 border border-white/60 px-3.5 py-2 text-xs font-medium text-white transition hover:bg-white hover:text-ink">
             <ArrowLeft className="h-3.5 w-3.5" /> Toutes les maisons
           </Link>
           {m.id === pilote && (
-            <Link href="/" className="inline-flex items-center gap-2 bg-white px-3.5 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-maison-encre transition hover:bg-maison-fond">
+            <Link href="/" className="inline-flex items-center gap-2 bg-white px-3.5 py-2 text-xs font-medium text-nav-encre transition hover:bg-maison-fond">
               Les actions de la semaine <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           )}
@@ -104,12 +104,12 @@ export default async function PortraitMaison({ params }: PageProps<"/maisons/[id
                 return (
                   <article key={c.theme} className="flex flex-col bg-white p-6">
                     <div className="flex items-center justify-between">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-maison-fond text-maison">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-maison-fond text-nav">
                         <I className="h-4 w-4" strokeWidth={1.6} />
                       </span>
                       <span className="text-2xl font-semibold text-ink">{c.chiffre}</span>
                     </div>
-                    <h3 className="titre-maison mt-4 text-xl leading-snug">{c.titre}</h3>
+                    <h3 className="mt-4 text-[0.9375rem] font-semibold leading-snug">{c.titre}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink-soft">{c.texte}</p>
                   </article>
                 );
@@ -149,7 +149,7 @@ export default async function PortraitMaison({ params }: PageProps<"/maisons/[id
                     <div className="flex items-baseline justify-between gap-3">
                       <span className="font-semibold">
                         {x.nom}
-                        {!x.complete && <span className="ml-2 text-[0.62rem] font-semibold uppercase tracking-wide text-taupe">partielle</span>}
+                        {!x.complete && <span className="ml-2 text-xs font-medium text-taupe">partielle</span>}
                       </span>
                       <span className="tabular-nums">{n(x.nuitees)} nuitées</span>
                     </div>
@@ -253,8 +253,8 @@ export default async function PortraitMaison({ params }: PageProps<"/maisons/[id
             {m.id === pilote ? (
               <div className="flex flex-wrap items-center justify-between gap-5">
                 <div className="max-w-2xl">
-                  <p className="eyebrow text-[0.64rem] text-taupe">L&apos;agent sur cette maison</p>
-                  <h2 className="titre-maison mt-1 text-[1.9rem] leading-tight">Ces délais fixent déjà les dates de l&apos;hiver 2026-2027</h2>
+                  <p className="text-xs font-medium text-taupe">L&apos;agent sur cette maison</p>
+                  <h2 className="mt-1 text-lg font-semibold leading-tight">Ces délais fixent déjà les dates de l&apos;hiver 2026-2027</h2>
                   <p className="mt-2 text-ink-soft">
                     Chaque fenêtre d&apos;achat de l&apos;agent est maintenant calculée sur les délais réels de la même période les deux hivers précédents, pays par pays.
                   </p>
@@ -266,8 +266,8 @@ export default async function PortraitMaison({ params }: PageProps<"/maisons/[id
               </div>
             ) : (
               <div className="max-w-2xl">
-                <p className="eyebrow text-[0.64rem] text-taupe">L&apos;agent sur cette maison</p>
-                <h2 className="titre-maison mt-1 text-[1.9rem] leading-tight">Le portrait est prêt, l&apos;agent peut suivre</h2>
+                <p className="text-xs font-medium text-taupe">L&apos;agent sur cette maison</p>
+                <h2 className="mt-1 text-lg font-semibold leading-tight">Le portrait est prêt, l&apos;agent peut suivre</h2>
                 <p className="mt-2 text-ink-soft">
                   Pour que l&apos;agent propose des actions datées à {m.nom}, il lui faut ses sujets de saison, son point météo et son agenda local. Les délais et le
                   rythme ci-dessus sont déjà mesurés.

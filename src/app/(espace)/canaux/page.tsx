@@ -1,5 +1,6 @@
 import { connection } from "next/server";
 import { SimulateurCanaux } from "@/components/simulateur-canaux";
+import { EnTetePage } from "@/components/ui";
 import { formatDate } from "@/lib/dates";
 import { canauxDeLaMaison } from "@/lib/engine/marches";
 import { etatSaison } from "@/services/etat";
@@ -24,19 +25,16 @@ export default async function Canaux() {
   const ota = v.canaux.find((c) => c.canal === "ota");
 
   return (
-    <div className="mx-auto max-w-[1320px] px-4 pb-14 sm:px-6">
-      <section className="border-b border-line py-8">
-        <p className="eyebrow text-taupe">Stratégie · {ctx.maison.nom}</p>
-        <h1 className="mt-2 font-display text-[2.6rem] leading-[1.05] sm:text-5xl">Par où se vend l&apos;hiver</h1>
-        <p className="mt-3 max-w-3xl text-ink-soft">
-          Les mêmes nuitées, vues par canal de vente. Le canal compte autant que le marché : une nuitée vendue en direct ne coûte pas de commission.
-        </p>
-      </section>
+    <>
+      <EnTetePage fil={[{ label: "Stratégie" }]} titre="Canaux de vente" meta={`${ctx.maison.nom} · ${v.hiverN1.nom} et ${v.hiver.nom}`}>
+        Les mêmes nuitées, vues par canal de vente. Une nuitée vendue en direct ne coûte pas de commission.
+      </EnTetePage>
+    <div className="mx-auto max-w-[1320px] px-4 py-5 sm:px-6 lg:px-8">
 
-      <section className="mt-8 grid gap-8 lg:grid-cols-[1.3fr_1fr]">
-        <div className="border border-line bg-white p-6">
+      <section className="grid gap-4 lg:grid-cols-[1.3fr_1fr]">
+        <div className="panneau p-5">
           <div className="flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="font-display text-2xl">Nuitées de décembre à mars</h2>
+            <h2 className="text-base font-semibold">Nuitées de décembre à mars</h2>
             <p className="text-sm text-ink-soft">
               <span className="mr-1 inline-block h-2 w-4 rounded-sm bg-greige align-middle" /> {v.hiverN1.nom}
               {v.couvert && (
@@ -72,14 +70,15 @@ export default async function Canaux() {
             Total : {fmt.format(total("n1"))}
             {v.couvert && <> → {fmt.format(total("n"))} nuitées</>}.
           </p>
-          <p className="mt-2 text-[0.72rem] text-taupe">Source : Asterio, nuitées par canal de vente, groupes comptés dans leur canal sauf la ligne « groupe » (export du 14 oct. 2026).</p>
+          <p className="mt-2 text-xs text-taupe">Source : Asterio, nuitées par canal de vente, groupes comptés dans leur canal sauf la ligne « groupe » (export du 14 oct. 2026).</p>
         </div>
         <div className="space-y-3">
-          <h2 className="font-display text-2xl">Ce que ça dit</h2>
+          <h2 className="text-base font-semibold">Ce que ça dit</h2>
           {v.canaux
             .filter((c) => LECTURE[c.canal] && c.n !== null)
             .map((c) => (
-              <p key={c.canal} className="border-l-2 bg-white px-4 py-3 text-sm leading-relaxed" style={{ borderColor: COULEUR[c.canal] }}>
+              <p key={c.canal} className="flex gap-3 rounded-lg border border-line bg-white px-4 py-3 text-sm leading-relaxed">
+                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full" style={{ background: COULEUR[c.canal] }} />
                 {LECTURE[c.canal](fmt.format(c.n1), fmt.format(c.n!))}
               </p>
             ))}
@@ -93,8 +92,8 @@ export default async function Canaux() {
       </section>
 
       {ota && (
-        <section className="mt-12">
-          <h2 className="font-display text-3xl">Le coût des plateformes</h2>
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold">Le coût des plateformes</h2>
           <p className="mt-2 max-w-3xl text-ink-soft">Réglez le taux de commission et le prix moyen : le coût et le gain d&apos;un passage en direct se recalculent.</p>
           <div className="mt-5">
             <SimulateurCanaux
@@ -106,9 +105,10 @@ export default async function Canaux() {
               saison={ota.n !== null ? v.hiver.nom : v.hiverN1.nom}
             />
           </div>
-          <p className="mt-2 text-[0.72rem] text-taupe">Commission par défaut : 18 %, taux courant des plateformes en hôtellerie de luxe, à remplacer par le taux du contrat.</p>
+          <p className="mt-2 text-xs text-taupe">Commission par défaut : 18 %, taux courant des plateformes en hôtellerie de luxe, à remplacer par le taux du contrat.</p>
         </section>
       )}
     </div>
+    </>
   );
 }

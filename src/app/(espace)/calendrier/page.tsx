@@ -167,7 +167,7 @@ export default async function Calendrier(props: PageProps<"/calendrier">) {
 
       <section className="mt-8 grid gap-5 lg:grid-cols-2">
         <div className="carte p-5">
-          <h2 className="font-display text-2xl">Plan d&apos;envois du client</h2>
+          <h2 className="text-base font-semibold">Plan d&apos;envois du client</h2>
           <p className="text-xs text-ink-soft">{ctx.envois?.donnees.statut}</p>
           <ul className="mt-3 divide-y divide-line/60 text-sm">
             {envois.map((e, i) => (
@@ -182,7 +182,7 @@ export default async function Calendrier(props: PageProps<"/calendrier">) {
           </ul>
         </div>
         <div className="carte p-5">
-          <h2 className="font-display text-2xl">Vacances scolaires par marché</h2>
+          <h2 className="text-base font-semibold">Vacances scolaires par marché</h2>
           <p className="text-xs text-ink-soft">Sites officiels de chaque pays. Recoupées avec OpenHolidays : les écarts sont signalés.</p>
           <ul className="mt-3 space-y-2.5 text-sm">
             {ctx.vacances.map((v) => (

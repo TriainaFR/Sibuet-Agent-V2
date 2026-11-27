@@ -36,7 +36,7 @@ export function TableauVerdict({ verdict, date }: { verdict: VerdictSujet[]; dat
     <div className="carte overflow-x-auto">
       <table className="w-full min-w-[820px] text-sm">
         <thead>
-          <tr className="border-b border-line text-left text-[0.64rem] uppercase tracking-[0.12em] text-taupe">
+          <tr className="border-b border-line text-left text-xs text-taupe">
             <th className="px-5 py-3 font-semibold">Sujet</th>
             <th className="px-3 py-3 font-semibold">L&apos;agent le classait</th>
             <th className="px-3 py-3 text-right font-semibold">Réservé au {formatDate(date)}</th>

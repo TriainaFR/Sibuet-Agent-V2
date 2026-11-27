@@ -14,8 +14,8 @@ export const iconeCanal: Record<Canal, LucideIcon> = {
 export function IconeCanal({ canal, taille = "h-9 w-9" }: { canal: Canal; taille?: string }) {
   const I = iconeCanal[canal];
   return (
-    <span className={`inline-flex shrink-0 items-center justify-center rounded-full border border-line bg-cream text-ink ${taille}`}>
-      <I className="h-4 w-4" strokeWidth={1.5} />
+    <span className={`inline-flex shrink-0 items-center justify-center rounded-lg border border-line bg-cream text-ink-soft ${taille}`}>
+      <I className="h-[15px] w-[15px]" strokeWidth={1.7} />
     </span>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, ChevronDown, History, Radio } from "lucide-react";
+import { Check, ChevronsUpDown, History, Radio } from "lucide-react";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { choisirSaison } from "@/app/actions";
 
@@ -45,32 +45,18 @@ export function SelecteurSaison({ saisons, active, date, majLe }: { saisons: Sai
 
   return (
     <div ref={zone} className="relative">
-      <button
-        onClick={() => setOuvert((o) => !o)}
-        aria-expanded={ouvert}
-        aria-haspopup="menu"
-        className={`flex items-center gap-2 border px-2.5 py-1.5 text-left transition sm:px-3 ${
-          s.rejeu ? "border-cognac/50 bg-cognac/8 hover:border-cognac" : "border-line bg-white hover:border-ink"
-        } ${enCours ? "opacity-60" : ""}`}
-      >
-        {s.rejeu ? <History className="hidden h-3.5 w-3.5 shrink-0 text-cognac sm:block" /> : <Radio className="hidden h-3.5 w-3.5 shrink-0 text-sage sm:block" />}
-        <span className="min-w-0">
-          <span className="block whitespace-nowrap text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-ink">
-            <span className="sm:hidden">{s.nom.replace(/20(\d\d)-20(\d\d)/, "$1-$2")}</span>
-            <span className="hidden sm:inline">
-              {s.nom}
-              {s.rejeu ? " · rejouée" : " · en cours"}
-            </span>
-          </span>
-          <span className="block whitespace-nowrap text-[0.68rem] text-ink-soft">
-            <span className="sm:hidden">{s.rejeu ? dateCourte(date).replace(/ \d{4}$/, "") : "en cours"}</span>
-            <span className="hidden sm:inline">{s.rejeu ? `au ${dateCourte(date)}` : majLe ? `calcul du ${dateCourte(majLe)}` : "aujourd'hui"}</span>
-          </span>
+      <button onClick={() => setOuvert((o) => !o)} aria-expanded={ouvert} aria-haspopup="menu" className={`flex w-full items-center gap-2.5 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-black/[0.04] ${enCours ? "opacity-60" : ""}`}>
+        <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-md ${s.rejeu ? "bg-cognac/12 text-cognac" : "bg-sage/12 text-sage"}`}>
+          {s.rejeu ? <History className="h-3.5 w-3.5" /> : <Radio className="h-3.5 w-3.5" />}
         </span>
-        <ChevronDown className={`h-3.5 w-3.5 shrink-0 text-ink-soft transition ${ouvert ? "rotate-180" : ""}`} />
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-[0.8125rem] font-medium text-ink">{s.nom}</span>
+          <span className="block truncate text-xs text-taupe">{s.rejeu ? `Rejouée au ${dateCourte(date)}` : majLe ? `Calcul du ${dateCourte(majLe)}` : "En cours"}</span>
+        </span>
+        <ChevronsUpDown className="h-3.5 w-3.5 shrink-0 text-taupe" />
       </button>
       {ouvert && (
-        <div role="menu" className="apparition absolute right-0 top-full z-40 mt-2 w-[min(19rem,calc(100vw-2rem))] border border-line bg-white py-2 text-left shadow-[0_18px_40px_-20px_rgba(47,47,43,0.45)]">
+        <div role="menu" className="apparition absolute left-0 top-full z-40 mt-1 w-[min(19rem,calc(100vw-2rem))] rounded-xl border border-line bg-white py-1.5 text-left rounded-xl shadow-[0_12px_32px_-12px_rgba(28,28,26,0.28),0_0_0_1px_rgba(28,28,26,0.04)]">
           {saisons.map((x) => (
             <div key={x.id} className="px-4 py-2">
               {x.rejeu ? (
@@ -91,7 +77,7 @@ export function SelecteurSaison({ saisons, active, date, majLe }: { saisons: Sai
                           aria-checked={actif}
                           disabled={enCours}
                           onClick={() => choisir(x.id, d)}
-                          className={`border px-2 py-1 text-xs transition ${actif ? "border-cognac bg-cognac text-white" : "border-line hover:border-ink"}`}
+                          className={`rounded-md border px-2 py-1 text-xs transition ${actif ? "border-cognac bg-cognac text-white" : "border-line hover:border-ink/40"}`}
                         >
                           {dateCourte(d).replace(/ \d{4}$/, "")}
                         </button>

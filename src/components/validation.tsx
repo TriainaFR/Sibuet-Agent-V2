@@ -27,12 +27,12 @@ export function Validation({ cle, decision }: { cle: string; decision?: Decision
   }
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="border border-line bg-sand px-3 py-1.5 text-[0.66rem] font-semibold uppercase tracking-[0.12em] text-ink-soft">Brouillon</span>
+      <span className="border border-line bg-sand px-3 py-1.5 text-xs font-medium text-ink-soft">Brouillon</span>
       <input
         value={nom}
         onChange={(e) => setNom(e.target.value)}
         placeholder="Validé par…"
-        className="w-36 border border-line bg-white px-3 py-2 text-sm outline-none focus:border-ink"
+        className="w-36 rounded-xl border border-line bg-white px-3 py-2 text-sm outline-none focus:border-ink"
       />
       <button disabled={enCours} onClick={() => decider("validee")} className="bouton !px-4 !py-2.5 disabled:opacity-50">
         <Check className="h-3.5 w-3.5" /> Valider

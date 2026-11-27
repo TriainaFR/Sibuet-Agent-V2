@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, ChevronDown, Globe2 } from "lucide-react";
+import { Check, ChevronsUpDown, Globe2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { choisirMarche } from "@/app/actions";
@@ -43,29 +43,29 @@ export function SelecteurMarche({ marches, actif }: { marches: MarcheMenu[]; act
 
   return (
     <div ref={zone} className="relative min-w-0">
-      <button
-        onClick={() => setOuvert((o) => !o)}
-        aria-expanded={ouvert}
-        aria-haspopup="menu"
-        className={`flex max-w-full items-center gap-2 rounded-full border px-2.5 py-1 text-left transition ${m ? "border-ink/30 bg-white" : "border-line bg-white/70 hover:border-ink/40"} ${enCours ? "opacity-60" : ""}`}
-      >
-        {m ? <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: m.couleur }} /> : <Globe2 className="h-3.5 w-3.5 shrink-0 text-ink-soft" />}
-        <span className="truncate text-[0.72rem] font-semibold text-ink">{m ? m.nom : "Tous les marchés"}</span>
-        <ChevronDown className={`h-3 w-3 shrink-0 text-ink-soft transition ${ouvert ? "rotate-180" : ""}`} />
+      <button onClick={() => setOuvert((o) => !o)} aria-expanded={ouvert} aria-haspopup="menu" className={`flex w-full items-center gap-2.5 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-black/[0.04] ${enCours ? "opacity-60" : ""}`}>
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-sand">
+          {m ? <span className="h-2.5 w-2.5 rounded-full" style={{ background: m.couleur }} /> : <Globe2 className="h-3.5 w-3.5 text-ink-soft" />}
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-[0.8125rem] font-medium text-ink">{m ? m.nom : "Tous les marchés"}</span>
+          <span className="block truncate text-xs text-taupe">{m ? `${m.nuitees} nuitées sur deux hivers` : "Filtre de marché"}</span>
+        </span>
+        <ChevronsUpDown className="h-3.5 w-3.5 shrink-0 text-taupe" />
       </button>
       {ouvert && (
-        <div role="menu" className="apparition absolute left-0 top-full z-40 mt-2 max-h-[70vh] w-72 overflow-y-auto border border-line bg-white py-2 shadow-[0_18px_40px_-20px_rgba(47,47,43,0.45)]">
-          <button role="menuitemradio" aria-checked={!m} onClick={() => choisir(null)} className="flex w-full items-center justify-between px-4 py-2 text-left text-sm hover:bg-sand/60">
+        <div role="menu" className="apparition absolute left-0 top-full z-40 mt-1 max-h-[70vh] w-72 overflow-y-auto rounded-xl border border-line bg-white p-1 rounded-xl shadow-[0_12px_32px_-12px_rgba(28,28,26,0.28),0_0_0_1px_rgba(28,28,26,0.04)]">
+          <button role="menuitemradio" aria-checked={!m} onClick={() => choisir(null)} className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm hover:bg-cream">
             <span className="font-semibold">Tous les marchés</span>
             {!m && <Check className="h-3.5 w-3.5" />}
           </button>
           {regions.map((r) => (
             <div key={r}>
-              <p className="mt-1 border-t border-line px-4 pb-1 pt-3 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-taupe">{r}</p>
+              <p className="mt-1 border-t border-line px-3 pb-1 pt-2.5 text-xs font-medium text-taupe">{r}</p>
               {marches
                 .filter((x) => (x.region ?? "Autres") === r)
                 .map((x) => (
-                  <button key={x.id} role="menuitemradio" aria-checked={actif === x.id} onClick={() => choisir(x.id)} className="flex w-full items-center gap-3 px-4 py-1.5 text-left text-sm hover:bg-sand/60">
+                  <button key={x.id} role="menuitemradio" aria-checked={actif === x.id} onClick={() => choisir(x.id)} className="flex w-full items-center gap-3 rounded-lg px-3 py-1.5 text-left text-sm hover:bg-cream">
                     <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: x.couleur }} />
                     <span className="flex-1">{x.nom}</span>
                     <span className="text-xs tabular-nums text-ink-soft">{x.nuitees} nuitées</span>
@@ -74,7 +74,7 @@ export function SelecteurMarche({ marches, actif }: { marches: MarcheMenu[]; act
                 ))}
             </div>
           ))}
-          <Link href={m ? `/marches/${m.id}` : "/marches"} onClick={() => setOuvert(false)} className="mx-4 mt-2 block border-t border-line pt-3 text-xs font-semibold text-maison hover:underline">
+          <Link href={m ? `/marches/${m.id}` : "/marches"} onClick={() => setOuvert(false)} className="mx-3 mb-1.5 mt-1.5 block border-t border-line pt-2.5 text-xs font-medium text-nav hover:underline">
             {m ? `Ouvrir la fiche ${m.nom}` : "Comparer les marchés"}
           </Link>
         </div>

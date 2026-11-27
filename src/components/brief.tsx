@@ -47,7 +47,7 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
                 setCopie(true);
                 setTimeout(() => setCopie(false), 1500);
               }}
-              className="inline-flex items-center gap-1 border border-line bg-white px-3 py-1.5 text-xs hover:border-ink"
+              className="inline-flex items-center gap-1 rounded-xl border border-line bg-white px-3 py-1.5 text-xs hover:border-ink"
             >
               {copie ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />} Copier
             </button>
@@ -63,7 +63,7 @@ export function Brief({ sujetId, activationCle, actif }: { sujetId: string; acti
       </div>
       {!actif && etat === "repos" && <p className="mt-2 text-xs text-ink-soft">Aperçu avant validation. Une fois l&apos;action validée, le brief complet est rédigé.</p>}
       {texte && (
-        <div className="mt-3 max-h-[60vh] overflow-y-auto whitespace-pre-wrap border border-line bg-white p-4 text-sm leading-relaxed">{texte}</div>
+        <div className="mt-3 max-h-[60vh] overflow-y-auto whitespace-pre-wrap rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">{texte}</div>
       )}
       {etat === "fini" && (
         <p className={`mt-2 flex items-center gap-1.5 text-xs ${problemes.length ? "text-brick" : "text-sage"}`}>

@@ -31,7 +31,7 @@ export default async function VosDonnees() {
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
       {saisonActive().rejeu && (
-        <p className="mb-6 border-l-2 border-cognac bg-white px-4 py-3 text-sm text-ink-soft">
+        <p className="mb-5 rounded-lg bg-cognac/8 px-4 py-3 text-sm text-[#6e3c22]">
           Vous regardez l&apos;{saisonActive().nom.toLowerCase()} rejoué : l&apos;agent y utilise les réservations réelles. Cette page prépare la saison en cours,
           l&apos;{saisonCourante().nom.toLowerCase()}.
         </p>

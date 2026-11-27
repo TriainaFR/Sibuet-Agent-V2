@@ -97,16 +97,16 @@ export default async function Maisons() {
                       key={hm.id}
                       href={`/maisons/${hm.id}`}
                       data-maison={hm.id}
-                      className="group flex flex-col overflow-hidden border border-line bg-white transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-28px_rgba(47,47,43,0.5)]"
+                      className="group flex flex-col overflow-hidden rounded-xl border border-line bg-white transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-28px_rgba(47,47,43,0.5)]"
                     >
                       <div className="relative h-44 overflow-hidden">
                         <Image src={m.image} alt="" fill sizes="(min-width: 1280px) 420px, (min-width: 640px) 50vw, 100vw" className="object-cover transition duration-700 group-hover:scale-[1.03]" />
                         <span className="absolute inset-x-0 bottom-0 h-1 bg-maison" />
-                        {hm.id === pilote && <span className="absolute left-3 top-3 bg-maison px-2 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-white">Agent actif</span>}
+                        {hm.id === pilote && <span className="absolute left-3 top-3 bg-maison px-2 py-1 text-xs font-medium text-white">Agent actif</span>}
                       </div>
                       <div className="flex flex-1 flex-col p-5">
-                        <p className="text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-taupe">{m.lieu ?? m.destination}</p>
-                        <h3 className="titre-maison mt-1 text-[1.6rem] leading-tight">{m.nom}</h3>
+                        <p className="text-xs font-medium text-taupe">{m.lieu ?? m.destination}</p>
+                        <h3 className="mt-1 text-base font-semibold">{m.nom}</h3>
                         {s && (
                           <div className="mt-4 grid grid-cols-3 gap-3 border-t border-line pt-4">
                             <div>
@@ -131,7 +131,7 @@ export default async function Maisons() {
                         <div className="mt-4">
                           <Tendance h={hm} />
                         </div>
-                        <span className="lien-charme mt-auto pt-4 text-maison">Voir le portrait</span>
+                        <span className="lien-charme mt-auto pt-4 text-nav">Voir le portrait</span>
                       </div>
                     </Link>
                   );
@@ -147,7 +147,7 @@ export default async function Maisons() {
               <div className="carte overflow-x-auto">
                 <table className="w-full min-w-[860px] text-sm">
                   <thead>
-                    <tr className="border-b border-line text-left text-[0.64rem] uppercase tracking-[0.12em] text-taupe">
+                    <tr className="border-b border-line text-left text-xs text-taupe">
                       <th className="px-5 py-3 font-semibold">Maison</th>
                       <th className="px-3 py-3 font-semibold">Saison</th>
                       <th className="px-3 py-3 text-right font-semibold">Nuitées</th>
@@ -197,16 +197,16 @@ export default async function Maisons() {
 
             <section className="mt-14 grid gap-5 lg:grid-cols-2">
               <div className="carte p-6">
-                <p className="eyebrow text-[0.64rem] text-taupe">Pour aller plus loin</p>
-                <h3 className="titre-maison mt-1 text-2xl">Le même export, jusqu&apos;à la fin de la saison</h3>
+                <p className="text-xs font-medium text-taupe">Pour aller plus loin</p>
+                <h3 className="mt-1 text-base font-semibold">Le même export, jusqu&apos;à la fin de la saison</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                   L&apos;export s&apos;arrête aux nuits du {formatDate(h.nuits[1], true)}. Le même extrait, avec les nuits jusqu&apos;à fin avril 2027, donne aussitôt les
                   réservations déjà prises pour l&apos;hiver qui vient : l&apos;agent les compare à l&apos;an dernier à la même date et sait quelles semaines remplir.
                 </p>
               </div>
               <div className="carte p-6">
-                <p className="eyebrow text-[0.64rem] text-taupe">Qualité des données</p>
-                <h3 className="titre-maison mt-1 text-2xl">Ce qu&apos;il faut savoir</h3>
+                <p className="text-xs font-medium text-taupe">Qualité des données</p>
+                <h3 className="mt-1 text-base font-semibold">Ce qu&apos;il faut savoir</h3>
                 <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-ink-soft">
                   <li>Aucun nom, aucun e-mail : l&apos;export ne contient que des dates, des pays, des canaux et des nombres de chambres.</li>
                   <li>

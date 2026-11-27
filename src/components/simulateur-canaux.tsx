@@ -23,16 +23,16 @@ export function SimulateurCanaux({ nuiteesOta, nuiteesOtaN1, commission, prix, p
     <div className="grid gap-px border border-line bg-line lg:grid-cols-[1fr_1.2fr]">
       <div className="space-y-5 bg-white p-6">
         <label className="block">
-          <span className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">Commission des plateformes</span>
+          <span className="text-xs font-medium text-taupe">Commission des plateformes</span>
           <div className="mt-2 flex items-center gap-3">
             <input type="range" min={10} max={30} step={0.5} value={c} onChange={(e) => setC(Number(e.target.value))} className="w-full accent-[var(--maison-accent)]" />
             <span className="w-16 text-right text-lg font-semibold tabular-nums">{String(c).replace(".", ",")} %</span>
           </div>
         </label>
         <label className="block">
-          <span className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">Prix moyen d&apos;une nuitée</span>
+          <span className="text-xs font-medium text-taupe">Prix moyen d&apos;une nuitée</span>
           <div className="mt-2 flex items-center gap-2">
-            <input type="number" min={0} step={10} value={p} onChange={(e) => setP(Number(e.target.value))} className="w-32 border border-line bg-cream/50 px-3 py-2 text-lg font-semibold tabular-nums focus:border-ink focus:outline-none" />
+            <input type="number" min={0} step={10} value={p} onChange={(e) => setP(Number(e.target.value))} className="h-9 w-32 border border-line bg-white px-3 text-base font-semibold tabular-nums focus:border-nav/50 focus:outline-none" />
             <span className="text-ink-soft">€ hors taxes</span>
           </div>
           {!prixSaisi && <span className="mt-1 block text-xs text-[#86672f]">Hypothèse de démonstration : remplacez-la par le prix moyen réel (chiffre d&apos;affaires hébergement divisé par les nuitées).</span>}
@@ -52,8 +52,8 @@ export function SimulateurCanaux({ nuiteesOta, nuiteesOtaN1, commission, prix, p
         </button>
       </div>
       <div className="bg-cream/60 p-6">
-        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">Ce que coûtent les plateformes, {saison}</p>
-        <p className="mt-2 text-[2.6rem] font-semibold leading-none tabular-nums">{eur.format(cout)}</p>
+        <p className="text-xs font-medium text-taupe">Ce que coûtent les plateformes, {saison}</p>
+        <p className="mt-2 text-[1.75rem] font-semibold leading-none tracking-tight tabular-nums">{eur.format(cout)}</p>
         <p className="mt-2 text-sm text-ink-soft">
           {fmt.format(nuiteesOta)} nuitées × {eur.format(p)} × {String(c).replace(".", ",")} %. L&apos;hiver précédent : {eur.format(coutN1)} pour {fmt.format(nuiteesOtaN1)} nuitées.
         </p>
@@ -64,7 +64,7 @@ export function SimulateurCanaux({ nuiteesOta, nuiteesOtaN1, commission, prix, p
             </span>
             <input type="range" min={5} max={50} step={5} value={part} onChange={(e) => setPart(Number(e.target.value))} className="mt-2 w-full accent-[var(--maison-accent)]" />
           </label>
-          <p className="mt-3 font-display text-2xl">
+          <p className="mt-3 text-base font-semibold">
             {eur.format(gain)} de commission économisée, soit {fmt.format(Math.round((nuiteesOta * part) / 100))} nuitées vendues sans intermédiaire.
           </p>
           <p className="mt-2 text-xs text-ink-soft">Simulation. Le coût des campagnes pour obtenir ce report n&apos;est pas déduit.</p>

@@ -15,11 +15,11 @@ interface Props {
   fluxRemplissage: Record<string, string>;
 }
 
-const champ = "w-full border border-line bg-white px-3 py-2 text-sm outline-none transition focus:border-greige focus:ring-2 focus:ring-sand";
+const champ = "w-full rounded-xl border border-line bg-white px-3 py-2 text-sm outline-none transition focus:border-greige focus:ring-2 focus:ring-sand";
 
 function Etiquette({ saisi }: { saisi: boolean }) {
   return (
-    <span className={`px-1.5 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide ${saisi ? "bg-sky/12 text-sky" : "bg-ochre/12 text-[#8a6a32]"}`}>{saisi ? "saisi" : "estimation"}</span>
+    <span className={`px-1.5 py-0.5 text-xs font-medium ${saisi ? "bg-sky/12 text-sky" : "bg-ochre/12 text-[#8a6a32]"}`}>{saisi ? "saisi" : "estimation"}</span>
   );
 }
 
@@ -67,9 +67,9 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
 
   return (
     <div className="space-y-5">
-      <div className="border border-line bg-white p-5">
+      <div className="rounded-xl border border-line bg-white p-5">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <p className="titre-capitales text-lg">
+          <p className="text-sm font-semibold">
             {faits === etapes.length ? "Tout est renseigné, merci." : `${faits} sur ${etapes.length} renseignés`}
           </p>
           <p className="text-xs text-ink-soft">Chaque information remplace une estimation et affine les dates proposées.</p>
@@ -101,7 +101,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
               setCopie(true);
               setTimeout(() => setCopie(false), 1500);
             }}
-            className="inline-flex items-center gap-1.5 border border-line bg-white px-3.5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] hover:border-ink"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-white px-3.5 py-2 text-xs font-medium hover:border-ink"
           >
             {copie ? <Check className="h-3.5 w-3.5" /> : <ClipboardCopy className="h-3.5 w-3.5" />} Copier la saisie
           </button>
@@ -114,7 +114,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
                 setV(vide);
               })
             }
-            className="inline-flex items-center gap-1.5 border border-line bg-white px-3.5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] hover:border-ink"
+            className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-white px-3.5 py-2 text-xs font-medium hover:border-ink"
           >
             <RotateCcw className="h-3.5 w-3.5" /> Revenir aux estimations
           </button>
@@ -125,7 +125,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
         {/* Colonne 1 */}
         <div className="space-y-5">
           <section className="carte p-6">
-            <p className="flex items-center gap-3"><Numero n={1} ok={etapes[0].ok} /><span className="titre-capitales text-lg leading-tight">La maison</span></p>
+            <p className="flex items-center gap-3"><Numero n={1} ok={etapes[0].ok} /><span className="text-sm font-semibold leading-tight">La maison</span></p>
             <div className="mt-3 grid grid-cols-2 gap-3">
               <label className="text-sm">
                 Ouverture
@@ -144,7 +144,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
           </section>
 
           <section className="carte p-6">
-            <p className="flex items-center gap-3"><Numero n={2} ok={etapes[1].ok} /><span className="titre-capitales text-lg leading-tight">Vos newsletters</span></p>
+            <p className="flex items-center gap-3"><Numero n={2} ok={etapes[1].ok} /><span className="text-sm font-semibold leading-tight">Vos newsletters</span></p>
             <div className="mt-3 grid grid-cols-2 gap-3">
               <label className="text-sm">
                 Taux d&apos;ouverture moyen, %
@@ -159,7 +159,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
           </section>
 
           <section className="carte p-6">
-            <p className="flex items-center gap-3"><Numero n={3} ok={etapes[2].ok} /><span className="titre-capitales text-lg leading-tight">Accès ouverts</span></p>
+            <p className="flex items-center gap-3"><Numero n={3} ok={etapes[2].ok} /><span className="text-sm font-semibold leading-tight">Accès ouverts</span></p>
             {(
               [
                 ["acces_google_ads", "Google Ads, en lecture"],
@@ -177,7 +177,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
 
         {/* Colonne 2 */}
         <section className="carte p-6">
-          <p className="flex items-center gap-3"><Numero n={4} ok={etapes[3].ok} /><span className="titre-capitales text-lg leading-tight">Combien de semaines avant l&apos;arrivée vos clients réservent-ils ?</span></p>
+          <p className="flex items-center gap-3"><Numero n={4} ok={etapes[3].ok} /><span className="text-sm font-semibold leading-tight">Combien de semaines avant l&apos;arrivée vos clients réservent-ils ?</span></p>
           <p className="mt-1 text-sm text-ink-soft">En médiane, par pays. Vide = notre estimation.</p>
           <div className="mt-4 space-y-2.5">
             {marches.map((m) => {
@@ -204,7 +204,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
                         value={v.delais[m.id] ?? ""}
                         placeholder={String(m.delai_semaines).replace(".", ",")}
                         onChange={(e) => maj("delais", { ...v.delais, [m.id]: e.target.value })}
-                        className="w-20 border border-line bg-white px-3 py-2 text-right outline-none focus:border-greige"
+                        className="w-20 rounded-xl border border-line bg-white px-3 py-2 text-right outline-none focus:border-greige"
                       />
                       <Etiquette saisi={saisi} />
                     </span>
@@ -218,7 +218,7 @@ export function FormulaireDonnees({ saisie, marches, sujets, flux, fluxRemplissa
 
         {/* Colonne 3 */}
         <section className="carte p-6">
-          <p className="flex items-center gap-3"><Numero n={5} ok={etapes[4].ok} /><span className="titre-capitales text-lg leading-tight">Où en est le remplissage, à ce jour ?</span></p>
+          <p className="flex items-center gap-3"><Numero n={5} ok={etapes[4].ok} /><span className="text-sm font-semibold leading-tight">Où en est le remplissage, à ce jour ?</span></p>
           <p className="mt-1 text-sm text-ink-soft">Un sujet déjà bien vendu voit ses actions payantes suspendues.</p>
           <div className="mt-4 space-y-3">
             {sujets.map((s) => (

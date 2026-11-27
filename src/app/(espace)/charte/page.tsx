@@ -35,7 +35,7 @@ export default async function Charte() {
           <div className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
             {PRINCIPES.map((p, i) => (
               <div key={p.titre} className="bg-white p-6">
-                <p className="font-display text-4xl text-greige">{i + 1}</p>
+                <p className="text-lg font-semibold text-greige">{i + 1}</p>
                 <h3 className="font-display mt-3 text-xl leading-snug">{p.titre}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{p.texte}</p>
               </div>
@@ -51,9 +51,9 @@ export default async function Charte() {
           </EnTete>
           <div className="grid gap-5 lg:grid-cols-2">
             {IDENTITES.map((id) => (
-              <article key={id.id} data-maison={id.id} className="flex flex-col overflow-hidden border border-line bg-white">
+              <article key={id.id} data-maison={id.id} className="flex flex-col overflow-hidden rounded-xl border border-line bg-white">
                 <div className="bg-maison-bandeau px-6 py-5 text-white">
-                  <p className="text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-white/75">{id.site}</p>
+                  <p className="text-xs font-medium text-white/75">{id.site}</p>
                   <p className="mt-1 text-[2rem] leading-tight" style={{ fontFamily: "var(--maison-serif)" }}>
                     {id.nom}
                   </p>
@@ -67,19 +67,19 @@ export default async function Charte() {
                   </div>
                   <div className="space-y-4 border-t border-line pt-4 sm:border-l sm:border-t-0 sm:pl-5 sm:pt-0">
                     <div>
-                      <p className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Serif de titre</p>
-                      <p className="titre-maison text-2xl">{id.serif.equivalent}</p>
+                      <p className="text-xs font-medium text-taupe">Serif de titre</p>
+                      <p className="text-base font-semibold">{id.serif.equivalent}</p>
                       <p className="text-xs text-ink-soft">
                         {id.serif.nom === id.serif.equivalent ? "celle du site" : `pour ${id.serif.nom}, police du site sous licence`}
                       </p>
                     </div>
                     <div>
-                      <p className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Texte</p>
+                      <p className="text-xs font-medium text-taupe">Texte</p>
                       <p className="text-sm">{id.sans}</p>
                     </div>
                     <div className="flex flex-wrap items-center gap-3">
                       <span className="bouton !px-3.5 !py-2">Valider</span>
-                      <span className="lien-charme text-maison">Voir</span>
+                      <span className="lien-charme text-nav">Voir</span>
                     </div>
                   </div>
                 </div>
@@ -97,12 +97,12 @@ export default async function Charte() {
           <div className="carte divide-y divide-line">
             {[
               { nom: "Titre de page", spec: "serif · 60 px · interlignage 1,02", rendu: <p className="font-display text-6xl leading-[1.02]">Les maisons</p> },
-              { nom: "Titre de section", spec: "serif de la maison · 30 px", rendu: <p className="titre-maison text-[1.9rem] leading-tight">Quand ils réservent</p> },
-              { nom: "Titre en capitales", spec: "serif · capitales · 20 px", rendu: <p className="titre-capitales text-xl">Charger vos réservations</p> },
-              { nom: "Surtitre", spec: "Source Sans 600 · 11 px · capitales · espacement 0,18 em", rendu: <p className="eyebrow text-taupe">Ce que disent les réservations</p> },
+              { nom: "Titre de section", spec: "serif de la maison · 30 px", rendu: <p className="text-lg font-semibold leading-tight">Quand ils réservent</p> },
+              { nom: "Titre en capitales", spec: "serif · capitales · 20 px", rendu: <p className="text-[0.9375rem] font-semibold">Charger vos réservations</p> },
+              { nom: "Surtitre", spec: "Source Sans 600 · 11 px · capitales · espacement 0,18 em", rendu: <p className="text-xs font-medium text-taupe">Ce que disent les réservations</p> },
               { nom: "Texte", spec: "Source Sans 400 · 16 px · interlignage 1,6", rendu: <p className="max-w-xl leading-relaxed">La moitié des séjours se réserve moins de quinze jours avant l&apos;arrivée.</p> },
               { nom: "Chiffre clé", spec: "Source Sans 600 · 42 px · chiffres proportionnels", rendu: <p className="text-[2.6rem] font-semibold leading-none">2 059</p> },
-              { nom: "Légende, source", spec: "Source Sans 400 · 12 px · taupe", rendu: <p className="text-[0.72rem] text-taupe">Source : Asterio, nuits du 14 oct. 2024 au 14 oct. 2026</p> },
+              { nom: "Légende, source", spec: "Source Sans 400 · 12 px · taupe", rendu: <p className="text-xs text-taupe">Source : Asterio, nuits du 14 oct. 2024 au 14 oct. 2026</p> },
             ].map((t) => (
               <div key={t.nom} className="grid items-center gap-3 px-6 py-5 md:grid-cols-[14rem_1fr]">
                 <div>
@@ -122,7 +122,7 @@ export default async function Charte() {
           </EnTete>
           <div className="grid gap-5 lg:grid-cols-2">
             <div className="carte p-6">
-              <p className="mb-3 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">États</p>
+              <p className="mb-3 text-xs font-medium text-taupe">États</p>
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <Nuancier nom="Favorable" hex="#6c8460" role="hausse, branché" />
                 <Nuancier nom="Attention" hex="#b08a4a" role="à vérifier" />
@@ -131,7 +131,7 @@ export default async function Charte() {
               </div>
             </div>
             <div className="carte p-6">
-              <p className="mb-3 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Origine d&apos;une donnée</p>
+              <p className="mb-3 text-xs font-medium text-taupe">Origine d&apos;une donnée</p>
               <div className="flex flex-wrap gap-2">
                 <Origine origine="mesuré" />
                 <Origine origine="saisi" />
@@ -139,7 +139,7 @@ export default async function Charte() {
                 <Origine origine="fictif" />
                 <Origine origine={null} />
               </div>
-              <p className="mb-3 mt-6 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Étiquettes et niveaux</p>
+              <p className="mb-3 mt-6 text-xs font-medium text-taupe">Étiquettes et niveaux</p>
               <div className="flex flex-wrap items-center gap-3">
                 <Puce ton="nuit">À lancer</Puce>
                 <Puce ton="ocre">Déjà prévu</Puce>
@@ -159,7 +159,7 @@ export default async function Charte() {
           <EnTete surtitre="05" titre="Composants" />
           <div className="grid gap-5 lg:grid-cols-3">
             <div className="carte space-y-4 p-6">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Boutons et liens</p>
+              <p className="text-xs font-medium text-taupe">Boutons et liens</p>
               <div className="flex flex-wrap gap-3">
                 <span className="bouton">
                   Valider l&apos;action <Check className="h-4 w-4" />
@@ -170,12 +170,12 @@ export default async function Charte() {
               <p className="text-xs text-ink-soft">Un seul bouton plein par écran : l&apos;action principale. Le reste en bouton clair ou en lien.</p>
             </div>
             <div className="carte space-y-5 p-6">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Chiffre clé</p>
+              <p className="text-xs font-medium text-taupe">Chiffre clé</p>
               <Chiffre libelle="Hiver 2025-2026" valeur="2 059" ecart={{ texte: "15 %", sens: "baisse" }} note="contre 2 430 sur les mêmes dates un an plus tôt" />
               <Chiffre libelle="Vendu en direct" valeur="52 %" ecart={{ texte: "1 pt", sens: "hausse" }} note="dont 6 % par le site" />
             </div>
             <div className="carte space-y-4 p-6">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Aide, vide, icônes</p>
+              <p className="text-xs font-medium text-taupe">Aide, vide, icônes</p>
               <Aide>Une phrase pour lire l&apos;écran, repliée par défaut.</Aide>
               <Vide>Rien ici pour l&apos;instant.</Vide>
               <div className="flex gap-3 text-ink">
@@ -198,7 +198,7 @@ export default async function Charte() {
           </EnTete>
           <div className="grid gap-5 lg:grid-cols-2" data-maison="lodge-park">
             <div className="carte p-6">
-              <p className="mb-3 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Comparaison de deux saisons</p>
+              <p className="mb-3 text-xs font-medium text-taupe">Comparaison de deux saisons</p>
               <Courbes
                 ariaLabel="Exemple de comparaison de deux saisons"
                 hauteur={200}
@@ -210,7 +210,7 @@ export default async function Charte() {
               />
             </div>
             <div className="carte p-6">
-              <p className="mb-3 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Part par catégorie</p>
+              <p className="mb-3 text-xs font-medium text-taupe">Part par catégorie</p>
               <BarresH
                 unite="pourcent"
                 items={[
@@ -222,7 +222,7 @@ export default async function Charte() {
               />
             </div>
             <div className="carte p-6">
-              <p className="mb-3 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Canaux : palette validée</p>
+              <p className="mb-3 text-xs font-medium text-taupe">Canaux : palette validée</p>
               <Empile
                 categories={CANAUX.map((c) => ({ id: c.id, nom: c.nom, couleur: c.couleur }))}
                 lignes={[{ id: "ex", libelle: "Exemple", valeurs: { direct: 46, site: 6, ota: 23, agences: 21, groupes: 4 } }]}
@@ -233,7 +233,7 @@ export default async function Charte() {
               </p>
             </div>
             <div className="carte p-6">
-              <p className="mb-3 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-taupe">Délais (quartiles)</p>
+              <p className="mb-3 text-xs font-medium text-taupe">Délais (quartiles)</p>
               <Delais
                 lignes={[
                   { id: "fr", libelle: "France", q1: 2, med: 10, q3: 31, n: 426 },

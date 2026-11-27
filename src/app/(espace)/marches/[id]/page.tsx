@@ -1,9 +1,9 @@
-import { ArrowLeft, ArrowRight, Globe2, Languages } from "lucide-react";
+import { ArrowRight, Globe2, Languages } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
 import { IconeCanal } from "@/components/icones";
-import { Niveau, PuceStatut } from "@/components/ui";
+import { EnTetePage, Niveau, PuceStatut } from "@/components/ui";
 import { formatDate, formatRange } from "@/lib/dates";
 import { LANGUES } from "@/lib/engine/calcul";
 import { lePays, messageMarche } from "@/lib/engine/leviers";
@@ -89,20 +89,18 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
   const maxPanier = Math.max(1, ...panier.map((k) => k.recherches));
 
   return (
-    <div className="mx-auto max-w-[1320px] px-4 pb-14 sm:px-6">
-      <section className="relative overflow-hidden border-b border-line py-8">
-        <span aria-hidden className="absolute -right-24 -top-24 h-72 w-72 rounded-full opacity-[0.12] blur-2xl" style={{ background: m.couleur }} />
-        <Link href="/marches" className="inline-flex items-center gap-1.5 text-sm text-ink-soft hover:text-ink">
-          <ArrowLeft className="h-3.5 w-3.5" /> Tous les marchés
-        </Link>
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <span className="h-4 w-4 rounded-full" style={{ background: m.couleur }} />
-          <p className="eyebrow text-taupe">
-            {m.region ?? "Marché"} · {m.court ? "marché proche" : "marché lointain"}
-          </p>
-        </div>
-        <h1 className="mt-2 font-display text-[2.8rem] leading-[1.02] sm:text-6xl">{m.nom}</h1>
-        <p className="mt-3 max-w-3xl text-lg text-ink-soft">
+    <>
+      <EnTetePage
+        fil={[{ href: "/marches", label: "Marchés" }, { label: m.region ?? "Marché" }]}
+        titre={
+          <span className="inline-flex items-center gap-2.5">
+            <span className="h-3 w-3 rounded-full" style={{ background: m.couleur }} />
+            {m.nom}
+          </span>
+        }
+        meta={m.court ? "Marché proche : il réserve tard" : "Marché lointain : il réserve tôt"}
+      >
+        <p>
           {x.nuiteesN1 ? (
             <>
               {fmt.format(x.nuiteesN1)} nuitées l&apos;hiver {an - 1}-{an}
@@ -118,10 +116,11 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
             `Aucune nuitée de ${lePays(m)} dans Asterio sur l'hiver de référence.`
           )}
         </p>
-      </section>
+      </EnTetePage>
+    <div className="mx-auto max-w-[1320px] px-4 py-5 sm:px-6 lg:px-8">
 
       {/* Chiffres clés */}
-      <section className="mt-8 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+      <section className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
         <Kpi titre="Réservé à date" valeur={`${x.aDate}`} unite="nuitées" detail={`contre ${x.aDateN1} au ${formatDate(unAnAvant(ctx.date), true)}`} ton={x.aDate >= x.aDateN1 ? "sage" : "brick"} source="Asterio" />
         <Kpi
           titre="Délai d'achat médian"
@@ -134,11 +133,11 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
         <Kpi titre="Demande" valeur={MOT[x.demandeMot]} detail="ventes, débuts de réservation et recherches combinés" source="Asterio, GA4, Semrush" niveau />
       </section>
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-[1.35fr_1fr]">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[1.35fr_1fr]">
         <div className="space-y-8">
           {/* Canaux */}
           <section>
-            <h2 className="font-display text-2xl">Par où ce marché réserve</h2>
+            <h2 className="text-base font-semibold">Par où ce marché réserve</h2>
             <ul className="mt-4 space-y-2.5">
               {x.canaux.map((c) => (
                 <li key={c.canal} className="grid grid-cols-[10rem_1fr_5rem] items-center gap-3 text-sm">
@@ -153,16 +152,16 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
               ))}
               {!x.canaux.length && <li className="text-sm text-ink-soft">Pas de vente sur l&apos;hiver de référence.</li>}
             </ul>
-            <p className="mt-3 text-[0.72rem] text-taupe">Source : Asterio, nuitées de décembre à mars, hiver {ctx.saison.rejeu && x.nuiteesN !== null ? `${an}-${an + 1}` : `${an - 1}-${an}`}.</p>
+            <p className="mt-3 text-xs text-taupe">Source : Asterio, nuitées de décembre à mars, hiver {ctx.saison.rejeu && x.nuiteesN !== null ? `${an}-${an + 1}` : `${an - 1}-${an}`}.</p>
           </section>
 
           {/* Recommandations */}
           <section>
-            <h2 className="font-display text-2xl">Ce qu&apos;on recommande, levier par levier</h2>
+            <h2 className="text-base font-semibold">Ce qu&apos;on recommande, levier par levier</h2>
             <div className="mt-4 grid gap-px border border-line bg-line sm:grid-cols-2">
               {reco.map((r) => (
                 <div key={r.levier} className="bg-white p-5">
-                  <p className="flex items-center gap-2.5 font-display text-lg">
+                  <p className="flex items-center gap-2.5 text-sm font-semibold">
                     <IconeCanal canal={r.canal} taille="h-8 w-8" /> {r.levier}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed">{r.texte}</p>
@@ -171,20 +170,20 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
               ))}
             </div>
             {exemple && (
-              <div className="mt-4 border-l-4 bg-white p-5" style={{ borderColor: m.couleur }}>
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-taupe">Message clé pour {m.nom}, {exemple.langue}</p>
-                <p className="mt-2 font-display text-xl">« {exemple.accroche} »</p>
+              <div className="mt-4 rounded-xl border border-line bg-cream/60 p-4">
+                <p className="text-xs font-medium text-taupe">Message clé pour {m.nom}, {exemple.langue}</p>
+                <p className="mt-2 text-[0.9375rem] font-semibold">« {exemple.accroche} »</p>
               </div>
             )}
           </section>
 
           {/* Sujets et actions */}
           <section>
-            <h2 className="font-display text-2xl">Les sujets qui visent {m.nom}</h2>
+            <h2 className="text-base font-semibold">Les sujets qui visent {m.nom}</h2>
             {lignes.length === 0 ? (
               <p className="mt-3 text-sm text-ink-soft">Aucune fenêtre d&apos;achat ouverte ou à venir pour ce marché.</p>
             ) : (
-              <ul className="mt-4 divide-y divide-line border border-line bg-white">
+              <ul className="mt-4 divide-y divide-line rounded-xl border border-line bg-white">
                 {lignes.slice(0, 8).map(({ s, o }) => (
                   <li key={o.cle}>
                     <Link href={`/sujets/${s.def.id}?onglet=pays`} className="group flex flex-wrap items-center gap-x-5 gap-y-1 px-5 py-3.5 hover:bg-cream/60">
@@ -202,11 +201,11 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
             )}
             {sesActions.length > 0 && (
               <>
-                <h3 className="mt-6 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-taupe">Actions en cours pour ce marché</h3>
+                <h3 className="mt-6 text-xs font-medium text-taupe">Actions en cours pour ce marché</h3>
                 <ul className="mt-2 space-y-2">
                   {sesActions.map((ac, i) => (
                     <li key={`${ac.activationCle}-${ac.date}-${i}`}>
-                      <Link href={`/sujets/${ac.sujetId}?onglet=actions#${encodeURIComponent(ac.activationCle)}`} className="flex flex-wrap items-center gap-3 border border-line bg-white px-4 py-3 text-sm hover:border-ink/30">
+                      <Link href={`/sujets/${ac.sujetId}?onglet=actions#${encodeURIComponent(ac.activationCle)}`} className="flex flex-wrap items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 text-sm hover:border-ink/30">
                         <IconeCanal canal={ac.canal} taille="h-7 w-7" />
                         <span className="flex-1">
                           <span className="font-semibold">{ac.titre}</span> <span className="text-ink-soft">· {ac.sujetNom}, {formatDate(ac.date)}</span>
@@ -222,8 +221,8 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
         </div>
 
         <aside className="space-y-6">
-          <section className="border border-line bg-white p-5">
-            <p className="flex items-center gap-2 font-display text-xl">
+          <section className="rounded-xl border border-line bg-white p-5">
+            <p className="flex items-center gap-2 text-[0.9375rem] font-semibold">
               <Globe2 className="h-4 w-4 text-taupe" /> Sur le site et sur Google
             </p>
             {a ? (
@@ -243,15 +242,15 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
               <Languages className="h-4 w-4 text-taupe" />
               {x.langueSite ? `Le site parle ${LANGUES[m.langue] ?? m.langue}.` : <span className="font-semibold text-brick">Aucune page en {LANGUES[m.langue_locale ?? ""] ?? m.langue_locale} : ce marché lit le site en anglais.</span>}
             </p>
-            <p className="mt-3 text-[0.72rem] text-taupe">
+            <p className="mt-3 text-xs text-taupe">
               Source : GA4 du 1er nov. 2025 au 31 oct. 2026, Search Console, analyse du 26 nov. 2026. Relevés postérieurs à la date rejouée : ils décrivent le marché, ils ne servent pas à
               juger la saison.
             </p>
           </section>
 
           {panier.length > 0 && (
-            <section className="border border-line bg-white p-5">
-              <p className="font-display text-xl">Ce que ce marché cherche</p>
+            <section className="rounded-xl border border-line bg-white p-5">
+              <p className="text-[0.9375rem] font-semibold">Ce que ce marché cherche</p>
               <ul className="mt-4 space-y-2">
                 {panier.map((k) => (
                   <li key={k.mot_cle} className="text-sm">
@@ -265,12 +264,12 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 text-[0.72rem] text-taupe">Source : Semrush, base {m.semrush_db ?? m.id}, recherches mensuelles, nov. 2026.</p>
+              <p className="mt-3 text-xs text-taupe">Source : Semrush, base {m.semrush_db ?? m.id}, recherches mensuelles, nov. 2026.</p>
             </section>
           )}
 
-          <section className="border border-line bg-white p-5">
-            <p className="font-display text-xl">Vacances scolaires</p>
+          <section className="rounded-xl border border-line bg-white p-5">
+            <p className="text-[0.9375rem] font-semibold">Vacances scolaires</p>
             {vac?.periodes.length ? (
               <ul className="mt-3 space-y-1.5 text-sm">
                 {vac.periodes.map((p) => (
@@ -284,7 +283,7 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
               <p className="mt-3 text-sm text-ink-soft">Pas de vacances d&apos;hiver qui orientent les séjours de ce marché.</p>
             )}
             {vac && (
-              <p className="mt-3 text-[0.72rem] text-taupe">
+              <p className="mt-3 text-xs text-taupe">
                 Source : {vac.source}
                 {vac.ecart_controle ? ` (${vac.ecart_controle})` : ""}.
               </p>
@@ -293,15 +292,16 @@ export default async function FicheMarche(props: PageProps<"/marches/[id]">) {
         </aside>
       </div>
     </div>
+    </>
   );
 }
 
 function Kpi({ titre, valeur, unite, detail, source, ton, niveau }: { titre: string; valeur: string; unite?: string; detail: string; source: string; ton?: "sage" | "brick"; niveau?: boolean }) {
   return (
     <div className="bg-white p-5">
-      <p className="text-[0.66rem] font-semibold uppercase tracking-[0.13em] text-taupe">{titre}</p>
+      <p className="text-xs font-medium text-taupe">{titre}</p>
       <div className="mt-2 flex items-baseline gap-2">
-        {niveau ? <Niveau libelle={valeur} /> : <span className={`text-[2.1rem] font-semibold leading-none ${ton === "sage" ? "text-sage" : ton === "brick" ? "text-brick" : ""}`}>{valeur}</span>}
+        {niveau ? <Niveau libelle={valeur} /> : <span className={`text-[1.625rem] font-semibold leading-none tracking-tight tabular-nums ${ton === "sage" ? "text-sage" : ton === "brick" ? "text-brick" : ""}`}>{valeur}</span>}
         {unite && <span className="text-sm text-ink-soft">{unite}</span>}
       </div>
       <p className="mt-2 text-sm text-ink-soft">{detail}</p>
@@ -313,7 +313,7 @@ function Kpi({ titre, valeur, unite, detail, source, ton, niveau }: { titre: str
 function Donnee({ l, v }: { l: string; v: string }) {
   return (
     <div>
-      <dt className="text-[0.66rem] font-semibold uppercase tracking-[0.1em] text-taupe">{l}</dt>
+      <dt className="text-xs font-medium text-taupe">{l}</dt>
       <dd className="mt-0.5 text-lg font-semibold tabular-nums">{v}</dd>
     </div>
   );

@@ -1,82 +1,68 @@
 "use client";
 
-import { Compass, Gauge, ListChecks } from "lucide-react";
+import { CalendarRange, Database, Gauge, Globe2, Home, Layers, Network, Route, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // Trois rubriques : ce qu'il faut lancer cette semaine, la stratégie de la saison, le pilotage.
-const RUBRIQUES = [
-  { id: "semaine", label: "Cette semaine", href: "/", icone: ListChecks, pages: [] as { href: string; label: string }[] },
+export const RUBRIQUES = [
+  { titre: null, pages: [{ href: "/", label: "Cette semaine", icone: Home }] },
   {
-    id: "strategie",
-    label: "Stratégie",
-    href: "/sujets",
-    icone: Compass,
+    titre: "Stratégie",
     pages: [
-      { href: "/sujets", label: "Sujets" },
-      { href: "/marches", label: "Marchés" },
-      { href: "/calendrier", label: "Calendrier" },
-      { href: "/canaux", label: "Canaux" },
+      { href: "/sujets", label: "Sujets", icone: Sparkles },
+      { href: "/marches", label: "Marchés", icone: Globe2 },
+      { href: "/calendrier", label: "Calendrier", icone: CalendarRange },
+      { href: "/canaux", label: "Canaux", icone: Route },
     ],
   },
   {
-    id: "pilotage",
-    label: "Pilotage",
-    href: "/mesure",
-    icone: Gauge,
+    titre: "Pilotage",
     pages: [
-      { href: "/mesure", label: "Mesure" },
-      { href: "/donnees", label: "Vos données" },
-      { href: "/maisons", label: "Maisons" },
-      { href: "/sources", label: "D'où viennent les données" },
+      { href: "/mesure", label: "Mesure", icone: Gauge },
+      { href: "/donnees", label: "Vos données", icone: Database },
+      { href: "/maisons", label: "Maisons", icone: Layers },
+      { href: "/sources", label: "Sources des données", icone: Network },
     ],
   },
 ];
 
-export function Navigation() {
+export const estDans = (chemin: string, href: string) =>
+  href === "/" ? chemin === "/" || chemin.startsWith("/plan-semaine") : chemin === href || chemin.startsWith(`${href}/`);
+
+/** Navigation latérale : une ligne par écran, l'écran courant marqué. */
+export function Navigation({ onNaviguer, compteurs }: { onNaviguer?: () => void; compteurs?: Record<string, number> }) {
   const chemin = usePathname();
-  const dans = (href: string) => (href === "/" ? chemin === "/" || chemin.startsWith("/plan-semaine") : chemin === href || chemin.startsWith(`${href}/`));
-  const active = RUBRIQUES.find((r) => (r.pages.length ? r.pages.some((p) => dans(p.href)) : dans(r.href))) ?? null;
   return (
-    <>
-      <nav aria-label="Rubriques" className="-mb-px mt-1 flex justify-center gap-1 sm:gap-6">
-        {RUBRIQUES.map((r) => {
-          const actif = active?.id === r.id;
-          const I = r.icone;
-          return (
-            <Link
-              key={r.id}
-              href={r.href}
-              aria-current={actif ? "page" : undefined}
-              className={`inline-flex items-center gap-2 whitespace-nowrap border-b-2 px-2.5 pb-3 pt-2 text-[0.72rem] font-semibold uppercase tracking-[0.16em] transition sm:px-3 ${
-                actif ? "border-maison text-ink" : "border-transparent text-ink-soft hover:text-ink"
-              }`}
-            >
-              <I className="h-3.5 w-3.5" strokeWidth={1.6} />
-              {r.label}
-            </Link>
-          );
-        })}
-      </nav>
-      {active && active.pages.length > 0 && (
-        <div className="-mx-4 border-t border-line bg-cream/80 px-4 sm:-mx-6 sm:px-6">
-          <nav aria-label={active.label} className="scrollbar-thin flex justify-start gap-1 overflow-x-auto py-2 sm:justify-center">
-            {active.pages.map((p) => {
-              const actif = dans(p.href);
+    <nav aria-label="Navigation principale" className="space-y-5">
+      {RUBRIQUES.map((r, i) => (
+        <div key={i}>
+          {r.titre && <p className="mb-1 px-2 text-[0.6875rem] font-medium text-taupe">{r.titre}</p>}
+          <ul className="space-y-px">
+            {r.pages.map((p) => {
+              const actif = estDans(chemin, p.href);
+              const I = p.icone;
               return (
-                <Link
-                  key={p.href}
-                  href={p.href}
-                  aria-current={actif ? "page" : undefined}
-                  className={`whitespace-nowrap rounded-full px-3.5 py-1.5 text-[0.78rem] transition ${actif ? "bg-ink text-white" : "text-ink-soft hover:bg-white hover:text-ink"}`}
-                >
-                  {p.label}
-                </Link>
+                <li key={p.href}>
+                  <Link
+                    href={p.href}
+                    onClick={onNaviguer}
+                    aria-current={actif ? "page" : undefined}
+                    className={`group flex h-8 items-center gap-2.5 rounded-lg px-2 text-[0.8125rem] transition-colors ${
+                      actif ? "bg-white font-medium text-ink shadow-[0_1px_2px_rgba(28,28,26,0.08),0_0_0_1px_rgba(28,28,26,0.06)]" : "text-ink-soft hover:bg-black/[0.04] hover:text-ink"
+                    }`}
+                  >
+                    <I className={`h-4 w-4 shrink-0 ${actif ? "text-nav" : "text-taupe group-hover:text-ink-soft"}`} strokeWidth={1.7} />
+                    <span className="flex-1 truncate">{p.label}</span>
+                    {compteurs?.[p.href] ? <span className="rounded-md bg-nav px-1.5 text-[0.6875rem] font-semibold leading-5 text-white tabular-nums">{compteurs[p.href]}</span> : null}
+                  </Link>
+                </li>
               );
             })}
-          </nav>
+          </ul>
         </div>
-      )}
-    </>
+      ))}
+    </nav>
   );
 }
+

@@ -53,8 +53,8 @@ export default async function Admin() {
       <div className="mt-10 grid gap-5 lg:grid-cols-[1fr_380px]">
         <section className="carte overflow-hidden">
           <div className="border-b border-line px-5 py-4">
-            <p className="eyebrow text-[0.62rem] text-taupe">Pour l&apos;équipe technique</p>
-            <h2 className="font-display text-2xl">Les connecteurs</h2>
+            <p className="text-xs font-medium text-taupe">Pour l&apos;équipe technique</p>
+            <h2 className="text-base font-semibold">Les connecteurs</h2>
           </div>
           <ul className="divide-y divide-line">
             {connecteurs.map((c) => {
@@ -99,7 +99,7 @@ export default async function Admin() {
 
         <aside className="space-y-5">
           <section className="carte p-5">
-            <h2 className="font-display text-xl">Routine du lundi</h2>
+            <h2 className="text-[0.9375rem] font-semibold">Routine du lundi</h2>
             <p className="mt-1 text-sm text-ink-soft">
               En production : <code className="rounded bg-sand px-1">npm run routine</code> chaque lundi à 6 h sur le serveur. Ici, une version rapide (agenda des
               prochaines semaines).
@@ -115,7 +115,7 @@ export default async function Admin() {
           </section>
 
           <section className="carte p-5">
-            <h2 className="font-display text-xl">Mode démonstration</h2>
+            <h2 className="text-[0.9375rem] font-semibold">Mode démonstration</h2>
             <div className="mt-3">
               <InterrupteurFictif actif={donneesFictives} />
             </div>
@@ -127,7 +127,7 @@ export default async function Admin() {
           </section>
 
           <section className="carte p-5">
-            <h2 className="font-display text-xl">Historique des calculs</h2>
+            <h2 className="text-[0.9375rem] font-semibold">Historique des calculs</h2>
             <ul className="mt-2 divide-y divide-line/60 text-sm">
               {calculs.map((c) => (
                 <li key={c.numero} className="py-2">
@@ -143,7 +143,7 @@ export default async function Admin() {
           </section>
 
           <section className="carte p-5">
-            <h2 className="font-display text-xl">Paramètres du calcul</h2>
+            <h2 className="text-[0.9375rem] font-semibold">Paramètres du calcul</h2>
             <ul className="mt-2 space-y-1.5 text-xs text-ink-soft">
               <li>Fenêtre d&apos;achat : début du séjour moins {REGLES.q3SurMediane} fois le délai médian, jusqu&apos;au début moins {REGLES.q1SurMediane} fois.</li>
               <li>Score : demande × reste à gagner sur Google × besoin de remplissage. Facteur absent : {REGLES.facteurAbsent}, déclaré manquant.</li>

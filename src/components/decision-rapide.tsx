@@ -21,36 +21,36 @@ export function DecisionRapide({ cle, decision, compact = false }: { cle: string
     });
 
   if (etat !== "brouillon") {
-    const style = etat === "validee" ? "bg-sage/12 text-sage" : etat === "reportee" ? "bg-ochre/12 text-[#86672f]" : "bg-sand text-ink-soft";
+    const style = etat === "validee" ? "bg-sage/12 text-[#3d6639]" : etat === "reportee" ? "bg-ochre/14 text-[#7c5a17]" : "bg-sand text-ink-soft";
     const I = etat === "validee" ? Check : etat === "reportee" ? Clock : X;
     return (
       <div className="flex flex-wrap items-center gap-2" aria-live="polite">
-        <span className={`inline-flex items-center gap-1.5 px-3 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.1em] ${style}`}>
+        <span className={`inline-flex h-8 items-center gap-1.5 rounded-lg px-2.5 text-[0.8125rem] font-medium ${style}`}>
           <I className="h-3.5 w-3.5" />
           {LIBELLE[etat]}
         </span>
-        <button disabled={enCours} onClick={() => decider("brouillon")} className="inline-flex items-center gap-1 px-2 py-2 text-xs text-ink-soft hover:text-ink">
+        <button disabled={enCours} onClick={() => decider("brouillon")} className="inline-flex h-8 items-center gap-1 rounded-lg px-2 text-xs text-ink-soft hover:bg-cream hover:text-ink">
           <RotateCcw className="h-3 w-3" /> Annuler
         </button>
       </div>
     );
   }
   return (
-    <div className="flex flex-wrap items-center gap-2" aria-live="polite">
-      <button disabled={enCours} onClick={() => decider("validee")} className={`bouton disabled:opacity-50 ${compact ? "!px-3 !py-2" : "!px-4 !py-2.5"}`}>
+    <div className="flex flex-wrap items-center gap-1.5" aria-live="polite">
+      <button disabled={enCours} onClick={() => decider("validee")} className={`bouton disabled:opacity-50 ${compact ? "" : "!h-9 !px-3.5"}`}>
         <Check className="h-3.5 w-3.5" /> Valider
       </button>
       <button
         disabled={enCours}
         onClick={() => decider("reportee")}
-        className="inline-flex items-center gap-1.5 border border-line bg-white px-3 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-ink transition hover:border-ink disabled:opacity-50"
+        className={`bouton-clair disabled:opacity-50 ${compact ? "" : "!h-9"}`}
       >
         <Clock className="h-3.5 w-3.5" /> Reporter
       </button>
       <button
         disabled={enCours}
         onClick={() => decider("rejetee")}
-        className="inline-flex items-center gap-1.5 px-2 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-ink-soft transition hover:text-brick disabled:opacity-50"
+        className={`inline-flex items-center gap-1.5 rounded-lg px-2 text-[0.8125rem] font-medium text-ink-soft transition hover:bg-brick/8 hover:text-brick disabled:opacity-50 ${compact ? "h-8" : "h-9"}`}
       >
         <X className="h-3.5 w-3.5" /> Rejeter
       </button>

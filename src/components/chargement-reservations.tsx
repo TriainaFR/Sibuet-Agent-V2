@@ -47,8 +47,8 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
       <div className="grid lg:grid-cols-[1.1fr_1fr]">
         {/* Dépôt du fichier */}
         <div className="border-b border-line p-5 sm:p-6 lg:border-b-0 lg:border-r">
-          <p className="eyebrow text-[0.62rem] text-taupe">Le plus efficace</p>
-          <h2 className="titre-capitales mt-1 text-xl leading-tight">Charger vos réservations</h2>
+          <p className="text-xs font-medium text-taupe">Le plus efficace</p>
+          <h2 className="mt-1 text-base font-semibold">Charger vos réservations</h2>
           <p className="mt-2 text-sm text-ink-soft">
             Les exports Asterio « nuitées » (un par hôtel, plusieurs à la fois) ou tout export du PMS, en Excel ou en CSV. L&apos;outil en déduit les délais de
             réservation par pays et le rythme de remplissage : les étapes 4 et 5 ci-dessous se remplissent seules.
@@ -100,7 +100,7 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
           )}
 
           <div className="mt-5">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-taupe">Colonnes attendues, dans n&apos;importe quel ordre</p>
+            <p className="text-xs font-medium text-taupe">Colonnes attendues, dans n&apos;importe quel ordre</p>
             <ul className="mt-2 grid gap-x-4 gap-y-1.5 text-sm sm:grid-cols-2">
               {COLONNES.map(([c, d]) => (
                 <li key={c}>
@@ -120,7 +120,7 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
             </div>
           </div>
 
-          <p className="mt-5 flex items-start gap-2 border-l-2 border-sage bg-sage/8 px-3 py-2 text-xs text-ink-soft">
+          <p className="mt-5 flex items-start gap-2 rounded-lg bg-sage/10 px-3 py-2 text-xs text-ink-soft">
             <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-sage" />
             Le fichier est lu puis oublié : seuls des totaux par pays et par période sont gardés. Aucun nom, e-mail ni numéro de réservation n&apos;est conservé.
             Retirez ces colonnes de l&apos;export si possible.
@@ -133,29 +133,29 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
             <>
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <div>
-                  <p className="eyebrow text-[0.62rem] text-taupe">Fichier pris en compte{chargeLe ? `, le ${dateFr(chargeLe)}` : ""}</p>
+                  <p className="text-xs font-medium text-taupe">Fichier pris en compte{chargeLe ? `, le ${dateFr(chargeLe)}` : ""}</p>
                   <p className="mt-1 break-all font-semibold">{resume.fichier}</p>
                 </div>
                 <button
                   disabled={retrait}
                   onClick={() => demarrer(() => retirerReservations())}
-                  className="inline-flex items-center gap-1.5 border border-line bg-white px-3 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.12em] hover:border-brick hover:text-brick disabled:opacity-50"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-white px-3 py-1.5 text-xs font-medium hover:border-brick hover:text-brick disabled:opacity-50"
                 >
                   <Trash2 className="h-3.5 w-3.5" /> Retirer
                 </button>
               </div>
 
               <div className="mt-4 grid grid-cols-3 gap-2 text-center">
-                <div className="border border-line bg-white px-2 py-3">
-                  <p className="font-display text-2xl">{resume.retenues}</p>
+                <div className="rounded-xl border border-line bg-white px-2 py-3">
+                  <p className="text-base font-semibold">{resume.retenues}</p>
                   <p className="text-[0.65rem] uppercase tracking-wide text-ink-soft">réservations</p>
                 </div>
-                <div className="border border-line bg-white px-2 py-3">
-                  <p className="font-display text-2xl">{resume.chambresMoyennes !== null ? fr(resume.chambresMoyennes) : "-"}</p>
+                <div className="rounded-xl border border-line bg-white px-2 py-3">
+                  <p className="text-base font-semibold">{resume.chambresMoyennes !== null ? fr(resume.chambresMoyennes) : "-"}</p>
                   <p className="text-[0.65rem] uppercase tracking-wide text-ink-soft">chambres par résa</p>
                 </div>
-                <div className="border border-line bg-white px-2 py-3">
-                  <p className="font-display text-2xl">{Object.keys(delais).length}</p>
+                <div className="rounded-xl border border-line bg-white px-2 py-3">
+                  <p className="text-base font-semibold">{Object.keys(delais).length}</p>
                   <p className="text-[0.65rem] uppercase tracking-wide text-ink-soft">délais mesurés</p>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
                 <p className="mt-1 text-xs text-ink-soft">Lignes écartées : {resume.ignorees.map((i) => `${i.nombre} ${i.raison}`).join(", ")}.</p>
               )}
 
-              <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-taupe">Par pays d&apos;origine</p>
+              <p className="mt-5 text-xs font-medium text-taupe">Par pays d&apos;origine</p>
               <table className="mt-2 w-full text-[0.8rem] sm:text-sm">
                 <thead>
                   <tr className="text-left text-[0.65rem] uppercase tracking-wide text-ink-soft">
@@ -200,10 +200,10 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
 
               {resume.villes && resume.villes.length > 0 && (
                 <>
-                  <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-taupe">Villes d&apos;origine</p>
+                  <p className="mt-5 text-xs font-medium text-taupe">Villes d&apos;origine</p>
                   <ul className="mt-2 flex flex-wrap gap-1.5">
                     {resume.villes.map((v) => (
-                      <li key={`${v.ville}-${v.pays}`} className="border border-line bg-white px-2 py-1 text-xs">
+                      <li key={`${v.ville}-${v.pays}`} className="rounded-xl border border-line bg-white px-2 py-1 text-xs">
                         {v.ville} <span className="text-ink-soft">· {v.reservations}</span>
                       </li>
                     ))}
@@ -214,7 +214,7 @@ export function ChargementReservations({ resume, chargeLe, marches, delais }: Pr
 
               {resume.typesChambres.length > 0 && (
                 <>
-                  <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-taupe">Types de chambres</p>
+                  <p className="mt-5 text-xs font-medium text-taupe">Types de chambres</p>
                   <div className="mt-2 space-y-1.5">
                     {resume.typesChambres.map((t) => (
                       <div key={t.type} className="flex items-center gap-3 text-sm">

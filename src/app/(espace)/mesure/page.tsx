@@ -29,10 +29,10 @@ export default async function Mesure() {
       </Bandeau>
     <div className="mx-auto max-w-[1320px] px-4 py-10 sm:px-6">
       {ctx.saison.rejeu && (
-        <section className="mb-10 grid gap-5 border border-line bg-white p-6 sm:grid-cols-[auto_1fr]">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#7a3f24] font-display text-xl text-white">i</span>
+        <section className="mb-10 grid gap-5 rounded-xl border border-line bg-white p-6 sm:grid-cols-[auto_1fr]">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#7a3f24] text-[0.9375rem] font-semibold text-white">i</span>
           <div>
-            <p className="font-display text-2xl">Dans cette démonstration, aucune action n&apos;a été lancée</p>
+            <p className="text-base font-semibold">Dans cette démonstration, aucune action n&apos;a été lancée</p>
             <p className="mt-2 max-w-3xl text-[0.95rem] leading-relaxed text-ink-soft">
               La saison est rejouée au {formatDate(ctx.date, true)} avec les ventes réelles. Ce que l&apos;agent propose n&apos;a jamais été envoyé : la suite de l&apos;hiver
               montre donc ce qui s&apos;est passé <strong className="text-ink">sans</strong> ses actions. On ne peut pas en tirer le gain d&apos;une action. On peut vérifier
@@ -53,8 +53,8 @@ export default async function Mesure() {
           <div className="mt-6 grid gap-5 lg:grid-cols-2">
             {verdict.slice(0, 2).map((v) => (
               <div key={v.id} className="carte p-5 sm:p-6">
-                <p className="eyebrow text-[0.62rem] text-taupe">Nuitées réservées, cumulées</p>
-                <h3 className="titre-maison mt-1 text-xl">{v.nom}</h3>
+                <p className="text-xs font-medium text-taupe">Nuitées réservées, cumulées</p>
+                <h3 className="mt-1 text-[0.9375rem] font-semibold">{v.nom}</h3>
                 <div className="mt-3">
                   <CourbeVerdict v={v} date={ctx.date} />
                 </div>
@@ -68,7 +68,7 @@ export default async function Mesure() {
       <div className="mt-7 grid gap-6 lg:grid-cols-[1fr_400px]">
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="font-display text-2xl">Actions à mesurer</h2>
+            <h2 className="text-base font-semibold">Actions à mesurer</h2>
             {parametres.donneesFictives && <BoutonExemple cles={liste.map((x) => x.activation.cle)} />}
           </div>
           {liste.length === 0 && (
@@ -83,7 +83,7 @@ export default async function Mesure() {
             return (
               <article key={activation.cle} className="carte p-5">
                 <div className="flex flex-wrap items-center gap-2">
-                  <Link href={`/sujets/${sujet.def.id}?onglet=actions`} className="font-display text-xl hover:text-brown">
+                  <Link href={`/sujets/${sujet.def.id}?onglet=actions`} className="text-[0.9375rem] font-semibold hover:text-brown">
                     {sujet.def.nom}
                   </Link>
                   <span className="text-ink-soft">·</span>
@@ -107,7 +107,7 @@ export default async function Mesure() {
 
         <aside className="space-y-5">
           <section className="carte p-5">
-            <h2 className="font-display text-xl">Recalibrages proposés</h2>
+            <h2 className="text-[0.9375rem] font-semibold">Recalibrages proposés</h2>
             {props.length === 0 && <p className="mt-2 text-sm text-ink-soft">Aucun recalibrage proposé pour l&apos;instant.</p>}
             <ul className="mt-3 space-y-4">
               {props.map((p) => (
@@ -127,7 +127,7 @@ export default async function Mesure() {
             </ul>
           </section>
           <section className="carte p-5">
-            <h2 className="font-display text-xl">En attente de données</h2>
+            <h2 className="text-[0.9375rem] font-semibold">En attente de données</h2>
             <ul className="mt-2 space-y-2 text-sm text-ink-soft">
               {attentes.map((a) => (
                 <li key={a}>{a}</li>

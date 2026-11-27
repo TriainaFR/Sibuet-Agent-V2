@@ -143,8 +143,8 @@ export function FluxDonnees({ etats }: { etats: Record<string, EtatSource> }) {
     <section className="carte overflow-hidden">
       <div className="flex flex-wrap items-end justify-between gap-4 border-b border-line px-5 py-5 sm:px-7">
         <div>
-          <p className="eyebrow text-[0.62rem] text-taupe">Comment fonctionne l&apos;agent</p>
-          <h2 className="titre-capitales mt-1 text-2xl leading-tight">De vos données à vos actions</h2>
+          <p className="text-xs font-medium text-taupe">Comment fonctionne l&apos;agent</p>
+          <h2 className="mt-1 text-base font-semibold">De vos données à vos actions</h2>
           <p className="mt-1 max-w-2xl text-sm text-ink-soft">
             Chaque source répond à une question simple. Cliquez sur l&apos;une d&apos;elles pour voir ce que l&apos;agent en tire, et y déposer un fichier.
           </p>
@@ -185,7 +185,7 @@ export function FluxDonnees({ etats }: { etats: Record<string, EtatSource> }) {
           <p className="titre-colonne">1 · Vos sources</p>
           {familles.map((f) => (
             <div key={f}>
-              <p className="mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-taupe">{FAMILLES[f]}</p>
+              <p className="mb-2 text-xs font-medium text-taupe">{FAMILLES[f]}</p>
               <div className="space-y-2">
                 {SOURCES_FLUX.filter((s) => s.famille === f).map((s) => {
                   const I = ICONES[s.id] ?? FileText;
@@ -230,8 +230,8 @@ export function FluxDonnees({ etats }: { etats: Record<string, EtatSource> }) {
           <div ref={agent} className="relative overflow-hidden bg-nuit px-5 py-6 text-cream">
             <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "url(/lodge/lp-3.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
             <div className="relative">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-cream/60">Chaque lundi, 6 h</p>
-              <p className="mt-1 font-display text-2xl">L&apos;agent Sibuet</p>
+              <p className="text-xs font-medium text-cream/60">Chaque lundi, 6 h</p>
+              <p className="mt-1 text-base font-semibold">L&apos;agent Sibuet</p>
               <ol className="mt-5 space-y-4">
                 {ETAPES_AGENT.map((e, i) => (
                   <li key={e.titre} className="flex gap-3">
@@ -326,9 +326,9 @@ function Tiroir({ source, etat, fermer }: { source: SourceFlux | null; etat?: Et
                 <I className="h-5 w-5" strokeWidth={1.6} />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="eyebrow text-[0.6rem] text-taupe">{FAMILLES[s.famille]}</p>
-                <h3 className="titre-capitales text-xl leading-tight">{s.nom}</h3>
-                <p className="mt-1 font-display text-lg italic text-ink-soft">« {s.question} »</p>
+                <p className="text-xs font-medium text-taupe">{FAMILLES[s.famille]}</p>
+                <h3 className="text-[0.9375rem] font-semibold leading-tight">{s.nom}</h3>
+                <p className="mt-1 text-sm font-semibold italic text-ink-soft">« {s.question} »</p>
               </div>
               <button ref={bouton} onClick={fermer} className="-mr-2 p-2 text-ink-soft hover:text-ink" aria-label="Fermer">
                 <X className="h-5 w-5" />
@@ -337,7 +337,7 @@ function Tiroir({ source, etat, fermer }: { source: SourceFlux | null; etat?: Et
 
             <div className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
               <div className="flex flex-wrap items-center gap-2 text-sm">
-                <span className="inline-flex items-center gap-1.5 border border-line bg-white px-2.5 py-1 text-xs font-semibold">
+                <span className="inline-flex items-center gap-1.5 rounded-xl border border-line bg-white px-2.5 py-1 text-xs font-semibold">
                   <span className={`h-2 w-2 rounded-full ${COULEUR_ETAT[e]}`} /> {LIBELLE_ETAT[e]}
                 </span>
                 <span className="text-xs text-ink-soft">Mise à jour : {s.cadence}</span>
@@ -348,7 +348,7 @@ function Tiroir({ source, etat, fermer }: { source: SourceFlux | null; etat?: Et
               <Bloc titre="Ce qu'on récupère">
                 <ul className="flex flex-wrap gap-1.5">
                   {s.recupere.map((x) => (
-                    <li key={x} className="border border-line bg-white px-2.5 py-1 text-xs">
+                    <li key={x} className="rounded-xl border border-line bg-white px-2.5 py-1 text-xs">
                       {x}
                     </li>
                   ))}
@@ -379,8 +379,8 @@ function Tiroir({ source, etat, fermer }: { source: SourceFlux | null; etat?: Et
                 </ol>
               </Bloc>
 
-              <div className="border-l-2 border-cognac bg-white px-4 py-3">
-                <p className="text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-cognac">Exemple de lecture</p>
+              <div className="rounded-lg bg-cognac/8 px-4 py-3">
+                <p className="text-xs font-medium text-cognac">Exemple de lecture</p>
                 <p className="mt-1 font-display text-[1.05rem] leading-snug">{s.exemple}</p>
               </div>
 
@@ -421,7 +421,7 @@ function Tiroir({ source, etat, fermer }: { source: SourceFlux | null; etat?: Et
 function Bloc({ titre, children }: { titre: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-taupe">{titre}</p>
+      <p className="mb-2 text-xs font-medium text-taupe">{titre}</p>
       {children}
     </div>
   );
@@ -444,7 +444,7 @@ function DepotSource({ source, trace }: { source: SourceFlux; trace?: TraceDepot
 
   return (
     <div>
-      <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-taupe">Déposer un fichier</p>
+      <p className="mb-2 text-xs font-medium text-taupe">Déposer un fichier</p>
       <form ref={form} action={envoyer}>
         <input type="hidden" name="source" value={source.id} />
         <input ref={input} type="file" name="fichier" accept=".xlsx,.csv,.txt" multiple={reservations} className="sr-only" onChange={(e) => e.target.files?.[0] && form.current?.requestSubmit()} />

@@ -21,8 +21,8 @@ export function Chiffre({
   const ton = !ecart || ecart.sens === "stable" ? "text-ink-soft" : (ecart.sens === "hausse") === (ecart.bon ?? true) ? "text-sage" : "text-brick";
   return (
     <div className="min-w-0">
-      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-taupe">{libelle}</p>
-      <p className={`mt-1.5 font-semibold leading-none text-ink ${grand ? "text-[2.6rem]" : "text-[1.85rem]"}`}>{valeur}</p>
+      <p className="text-xs font-medium text-taupe">{libelle}</p>
+      <p className={`mt-1.5 font-semibold leading-none tracking-tight text-ink tabular-nums ${grand ? "text-[1.75rem]" : "text-[1.375rem]"}`}>{valeur}</p>
       {(ecart || note) && (
         <p className="mt-2 text-xs leading-snug text-ink-soft">
           {ecart && (
@@ -42,9 +42,9 @@ export function EnTete({ surtitre, titre, children, action, id }: { surtitre?: s
   return (
     <div id={id} className="mb-5 flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
       <div className="max-w-2xl">
-        {surtitre && <p className="eyebrow text-[0.64rem] text-taupe">{surtitre}</p>}
-        <h2 className="titre-maison mt-1 text-[1.9rem] leading-tight">{titre}</h2>
-        {children && <div className="mt-2 text-[0.95rem] leading-relaxed text-ink-soft">{children}</div>}
+        <h2 className="text-base font-semibold tracking-tight text-ink">{titre}</h2>
+        {surtitre && <p className="mt-0.5 text-[0.8125rem] text-taupe">{surtitre}</p>}
+        {children && <div className="mt-1.5 text-sm leading-relaxed text-ink-soft">{children}</div>}
       </div>
       {action}
     </div>
@@ -53,7 +53,7 @@ export function EnTete({ surtitre, titre, children, action, id }: { surtitre?: s
 
 /** Mention de source, datée : chaque chiffre affiché dit d'où il vient. */
 export function Source({ children }: { children: ReactNode }) {
-  return <p className="mt-3 text-[0.72rem] text-taupe">Source : {children}</p>;
+  return <p className="mt-3 text-xs text-taupe">Source : {children}</p>;
 }
 
 /** Bloc de contenu : carte blanche à filet fin, angles droits. */

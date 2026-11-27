@@ -241,3 +241,40 @@ export function canauxDeLaMaison(ctx: Contexte) {
     canaux: [...parCanal.entries()].map(([canal, v]) => ({ canal, nom: NOM_CANAL[canal], ...v, n: couvert ? v.n : null })).sort((a, b) => b.n1 - a.n1),
   };
 }
+
+/**
+ * Courbe cumulée des nuitées de l'hiver (décembre à mars) selon la date de réservation, semaine par semaine,
+ * pour l'hiver de la saison (jusqu'à la date de calcul) et l'hiver précédent ramené au même calendrier.
+ */
+export function courbeCumulee(ctx: Contexte) {
+  const detail = ctx.historique?.donnees.detail ?? [];
+  const h = hiverDe(ctx);
+  const h1 = hiverPrecedent(h);
+  const an = Number(h.debut.slice(0, 4));
+  const debut = `${an}-06-01`;
+  const semaines: string[] = [];
+  for (let d = debut; d <= h.fin; d = addDays(d, 7)) semaines.push(d);
+  if (semaines.at(-1) !== h.fin) semaines.push(h.fin);
+  const plus1 = (d: string) => `${Number(d.slice(0, 4)) + 1}${d.slice(4) === "-02-29" ? "-02-28" : d.slice(4)}`;
+  const n: number[] = semaines.map(() => 0);
+  const n1: number[] = semaines.map(() => 0);
+  for (const [nuit, reservee, , q] of detail) {
+    if (nuit >= h.debut && nuit <= h.fin) {
+      const i = semaines.findIndex((s) => s >= reservee);
+      for (let k = i < 0 ? semaines.length : i; k < semaines.length; k++) n[k] += q;
+    } else if (nuit >= h1.debut && nuit <= h1.fin) {
+      const r = plus1(reservee);
+      const i = semaines.findIndex((s) => s >= r);
+      for (let k = i < 0 ? semaines.length : i; k < semaines.length; k++) n1[k] += q;
+    }
+  }
+  const coupe = semaines.findIndex((s) => s > ctx.date);
+  return {
+    semaines,
+    n: n.slice(0, coupe < 0 ? semaines.length : coupe),
+    n1,
+    debut,
+    fin: h.fin,
+    hiverDebut: h.debut,
+  };
+}
